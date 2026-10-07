@@ -1,0 +1,33 @@
+{
+ "gerado_em": "2026-10-07 10:13",
+ "sha256": "eb8a6e685703f486d781a357b3b7e963e412862f1328092a03252173857791c9",
+ "jogos": 4106,
+ "realizados": 3990,
+ "com_sumula": 3968,
+ "com_bordero": 3827,
+ "por_fonte": {
+  "cbf": 1828,
+  "faf": 77,
+  "fafa": 39,
+  "fbf": 48,
+  "fcf": 93,
+  "fcfsc_2026": 203,
+  "ferj": 210,
+  "fern": 38,
+  "fes_2026": 92,
+  "ffac": 34,
+  "ffdf": 50,
+  "ffer": 48,
+  "ffms": 55,
+  "ffp": 34,
+  "fgf": 64,
+  "fgfgo": 70,
+  "fmf": 112,
+  "fpf": 640,
+  "fpfpara": 87,
+  "fpfpe": 38,
+  "fpfpr_2026": 157,
+  "fsf": 55,
+  "ftf": 34
+ }
+}
