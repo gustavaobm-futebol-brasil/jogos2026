@@ -47,7 +47,7 @@ export const jogos = parseCsv(ler('jogos.csv')).map((r) => {
     comp: r.competicao_nome, compUrl: r.competicao_url, divisao: r.divisao, nivel: r.nivel, fase: r.fase, rodada: r.rodada,
     data: r.data, horario: r.horario,
     mandante: r.mandante_canonico || r.mandante, visitante: r.visitante_canonico || r.visitante,
-    estadio: r.estadio, status: r.status,
+    estadio: r.estadio.trim() === '/' ? '' : r.estadio, status: r.status,
     pm: num(r.placar_mandante), pv: num(r.placar_visitante),
     pub: num(r.publico_total_num), pag: num(r.publico_pagante_num), nao: num(r.publico_nao_pagante_num),
     bruta: num(r.arrecadacao_bruta_num), desp: num(r.despesas_totais_num), renda: num(r.renda_liquida_num),

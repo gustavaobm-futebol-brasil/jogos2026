@@ -27,9 +27,9 @@ const clubes = porClube(MINIMO).sort((a, b) => b.pubMedio - a.pubMedio);
       <tbody>
         {clubes.map((c) => (
           <tr>
-            <td>{c.clube}</td>
+            <td><a class="time" href={`/jogos?time=${encodeURIComponent(c.clube)}`} title="Ver todos os jogos deste time">{c.clube}</a></td>
             <td>{c.uf}</td>
-            <td class="n" data-v={c.n}>{fmtInt(c.n)}</td>
+            <td class="n" data-v={c.n}><a href={`/jogos?time=${encodeURIComponent(c.clube)}&papel=mandante`} title="Ver os jogos em que o time foi mandante">{fmtInt(c.n)}</a></td>
             <td class="n" data-v={c.pubMedio}>{fmtInt(c.pubMedio)}</td>
             <td class="n" data-v={c.maior}>{fmtInt(c.maior)}<small>contra {c.maiorContra}, {fmtData(c.maiorData)}</small></td>
             <td class="n" data-v={c.rendaMedia ?? ''}>{c.rendaMedia == null ? '—' : fmtBRL(c.rendaMedia)}<small>{c.nRenda} borderô{c.nRenda === 1 ? '' : 's'}</small></td>
@@ -38,7 +38,7 @@ const clubes = porClube(MINIMO).sort((a, b) => b.pubMedio - a.pubMedio);
       </tbody>
     </table>
   </div>
-  <p class="legenda">A renda líquida só considera os jogos com borderô lido. Valores negativos significam que as despesas do jogo superaram a bilheteria.</p>
+  <p class="legenda">Clique no nome do clube para ver todos os jogos dele, ou no número de jogos em casa para ver só os jogos como mandante. A renda líquida só considera os jogos com borderô lido. Valores negativos significam que as despesas do jogo superaram a bilheteria.</p>
 
   <script>import '../scripts/tabela.js';</script>
 </Base>

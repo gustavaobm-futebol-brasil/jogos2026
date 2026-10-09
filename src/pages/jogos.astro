@@ -6,7 +6,16 @@ import Base from '../layouts/Base.astro';
   <p class="lead">Filtre por clube, estádio, competição, estado ou período. Os links <b>S</b> (súmula) e <b>B</b> (borderô) abrem o documento original na federação.</p>
 
   <form class="filtros" id="filtros" autocomplete="off" onsubmit="return false">
-    <label>Clube ou estádio<input type="search" id="f-texto" placeholder="ex.: Flamengo, Mineirão" /></label>
+    <label>Clube<input type="search" id="f-clube" placeholder="ex.: Flamengo, Tombense" /></label>
+    <div class="papel" role="radiogroup" aria-label="Papel do clube no jogo">
+      <span>O clube joga como</span>
+      <div class="ops">
+        <label><input type="radio" name="papel" value="" checked /> Qualquer</label>
+        <label><input type="radio" name="papel" value="mandante" /> Mandante</label>
+        <label><input type="radio" name="papel" value="visitante" /> Visitante</label>
+      </div>
+    </div>
+    <label>Estádio ou cidade<input type="search" id="f-estadio" placeholder="ex.: Mineirão, Uberlândia" /></label>
     <label>Estado<select id="f-uf"><option value="">Todos</option></select></label>
     <label>Competição<select id="f-comp"><option value="">Todas</option></select></label>
     <label>De<input type="date" id="f-de" /></label>
@@ -20,6 +29,7 @@ import Base from '../layouts/Base.astro';
     </label>
     <label class="marcar"><input type="checkbox" id="f-bordero" /> só com borderô (valores)</label>
   </form>
+  <p class="nota" id="aviso-exato" hidden></p>
 
   <div class="paginacao">
     <span id="contagem" class="muted" role="status">Carregando…</span>
@@ -67,28 +77,80 @@ import Base from '../layouts/Base.astro';
     let filtrados = [];
     let pagina = 0;
     let ordem = { campo: 'data', dir: -1 };
+    // Quando se chega pelo ranking de clubes, o time vem pelo nome EXATO ("Flamengo" não pode trazer "Flamengo de Guarulhos").
+    // Digitar no campo Clube volta para a busca por parte do nome.
+    let nomeExato = '';
+
+    const papel = () => document.querySelector('input[name=papel]:checked').value;
 
     function carregar(d) {
-      const ix = Object.fromEntries(d.campos.map((c, i) => [c, i]));
       jogos = d.linhas.map((l) => {
         const o = Object.fromEntries(d.campos.map((c, i) => [c, l[i]]));
-        o.busca = semAcento(`${o.mandante} ${o.visitante} ${o.estadio} ${o.comp}`);
+        o.bMand = semAcento(o.mandante);
+        o.bVis = semAcento(o.visitante);
+        o.bEst = semAcento(o.estadio);
         return o;
       });
       const ufs = [...new Set(jogos.map((j) => j.uf))].filter(Boolean).sort();
       $('f-uf').insertAdjacentHTML('beforeend', ufs.map((u) => `<option>${esc(u)}</option>`).join(''));
       const comps = [...new Set(jogos.map((j) => j.comp))].filter(Boolean).sort((a, b) => a.localeCompare(b, 'pt-BR'));
       $('f-comp').insertAdjacentHTML('beforeend', comps.map((c) => `<option>${esc(c)}</option>`).join(''));
+      lerEndereco();
       aplicar();
     }
 
+    /** O endereço guarda os filtros (compartilhável): ?time=Flamengo&papel=mandante&uf=RJ ... */
+    function lerEndereco() {
+      const p = new URLSearchParams(location.search);
+      if (p.get('time')) { nomeExato = p.get('time'); $('f-clube').value = nomeExato; }
+      else if (p.get('clube')) $('f-clube').value = p.get('clube');
+      const r = document.querySelector(`input[name=papel][value="${p.get('papel') || ''}"]`);
+      if (r) r.checked = true;
+      if (p.get('estadio')) $('f-estadio').value = p.get('estadio');
+      if (p.get('uf')) $('f-uf').value = p.get('uf');
+      if (p.get('comp')) $('f-comp').value = p.get('comp');
+      if (p.get('de')) $('f-de').value = p.get('de');
+      if (p.get('ate')) $('f-ate').value = p.get('ate');
+      if (p.get('situacao') !== null) $('f-status').value = p.get('situacao') === 'todos' ? '' : p.get('situacao');
+      if (p.get('bordero')) $('f-bordero').checked = true;
+    }
+
+    function gravarEndereco() {
+      const p = new URLSearchParams();
+      const clube = $('f-clube').value.trim();
+      if (clube) p.set(nomeExato && clube === nomeExato ? 'time' : 'clube', clube);
+      if (papel() && clube) p.set('papel', papel());
+      if ($('f-estadio').value.trim()) p.set('estadio', $('f-estadio').value.trim());
+      if ($('f-uf').value) p.set('uf', $('f-uf').value);
+      if ($('f-comp').value) p.set('comp', $('f-comp').value);
+      if ($('f-de').value) p.set('de', $('f-de').value);
+      if ($('f-ate').value) p.set('ate', $('f-ate').value);
+      const st = $('f-status').value;
+      if (st !== 'realizado') p.set('situacao', st || 'todos');
+      if ($('f-bordero').checked) p.set('bordero', '1');
+      const q = p.toString();
+      history.replaceState(null, '', location.pathname + (q ? '?' + q : ''));
+    }
+
     function aplicar() {
-      const t = semAcento($('f-texto').value.trim());
+      const clube = $('f-clube').value.trim();
+      if (nomeExato && clube !== nomeExato) nomeExato = '';
+      const exato = !!nomeExato;
+      const t = semAcento(clube), est = semAcento($('f-estadio').value.trim()), pp = papel();
       const uf = $('f-uf').value, comp = $('f-comp').value, de = $('f-de').value, ate = $('f-ate').value;
       const st = $('f-status').value, soB = $('f-bordero').checked;
+      const casaClube = (j) => {
+        const mand = exato ? j.mandante === nomeExato : j.bMand.includes(t);
+        const vis = exato ? j.visitante === nomeExato : j.bVis.includes(t);
+        return pp === 'mandante' ? mand : pp === 'visitante' ? vis : mand || vis;
+      };
       filtrados = jogos.filter((j) =>
-        (!t || j.busca.includes(t)) && (!uf || j.uf === uf) && (!comp || j.comp === comp) && (!de || (j.data && j.data >= de)) &&
-        (!ate || (j.data && j.data <= ate)) && (!st || j.status === st) && (!soB || j.urlB));
+        (!clube || casaClube(j)) && (!est || j.bEst.includes(est)) && (!uf || j.uf === uf) && (!comp || j.comp === comp) &&
+        (!de || (j.data && j.data >= de)) && (!ate || (j.data && j.data <= ate)) && (!st || j.status === st) && (!soB || j.urlB));
+      const aviso = $('aviso-exato');
+      aviso.hidden = !exato;
+      if (exato) aviso.textContent = `Mostrando exatamente o time “${nomeExato}”. Para buscar por parte do nome, edite o campo Clube.`;
+      gravarEndereco();
       ordenar();
       pagina = 0;
       desenhar();
@@ -142,10 +204,11 @@ import Base from '../layouts/Base.astro';
       });
     }
 
-    ['f-texto', 'f-uf', 'f-comp', 'f-de', 'f-ate', 'f-status', 'f-bordero'].forEach((id) => $(id).addEventListener('input', aplicar));
+    ['f-clube', 'f-estadio', 'f-uf', 'f-comp', 'f-de', 'f-ate', 'f-status', 'f-bordero'].forEach((id) => $(id).addEventListener('input', aplicar));
+    document.querySelectorAll('input[name=papel]').forEach((r) => r.addEventListener('change', aplicar));
     $('ant').addEventListener('click', () => { pagina--; desenhar(); window.scrollTo({ top: 0 }); });
     $('prox').addEventListener('click', () => { pagina++; desenhar(); window.scrollTo({ top: 0 }); });
-    $('limpar').addEventListener('click', () => { $('filtros').reset(); aplicar(); });
+    $('limpar').addEventListener('click', () => { $('filtros').reset(); nomeExato = ''; aplicar(); });
     document.querySelectorAll('th[data-ord]').forEach((th) => th.addEventListener('click', () => {
       const c = th.dataset.ord;
       ordem = { campo: c, dir: ordem.campo === c ? -ordem.dir : -1 };

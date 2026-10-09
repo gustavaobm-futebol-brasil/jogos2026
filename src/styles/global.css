@@ -109,3 +109,10 @@ footer.rodape { border-top: 1px solid var(--border); padding: 20px 0 40px; color
 .prosa li { margin-bottom: 4px; }
 
 .placar { font-weight: 700; margin: 0 4px; font-variant-numeric: tabular-nums; white-space: nowrap; }
+
+.filtros .papel { display: flex; flex-direction: column; gap: 3px; font-size: .8rem; color: var(--muted); }
+.filtros .papel .ops { display: flex; flex-wrap: wrap; gap: 4px 14px; padding: 7px 0; }
+.filtros .papel label { flex-direction: row; align-items: center; gap: 5px; color: var(--fg); font-size: .92rem; }
+.filtros .papel input { width: auto; }
+td a.time { color: inherit; font-weight: 600; text-decoration-color: var(--border); }
+td a.time:hover { color: var(--accent); text-decoration-color: var(--accent); }
