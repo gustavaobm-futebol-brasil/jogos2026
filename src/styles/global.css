@@ -116,3 +116,12 @@ footer.rodape { border-top: 1px solid var(--border); padding: 20px 0 40px; color
 .filtros .papel input { width: auto; }
 td a.time { color: inherit; font-weight: 600; text-decoration-color: var(--border); }
 td a.time:hover { color: var(--accent); text-decoration-color: var(--accent); }
+
+.combo { position: relative; }
+.combo input { width: 100%; }
+#sugestoes { position: absolute; z-index: 20; left: 0; right: 0; top: 100%; margin: 3px 0 0; padding: 4px 0; list-style: none; max-height: 280px; overflow-y: auto;
+  background: var(--card); border: 1px solid var(--border); border-radius: 8px; box-shadow: 0 8px 22px rgba(0, 0, 0, .14); }
+#sugestoes li { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; padding: 7px 11px; cursor: pointer; font-size: .95rem; color: var(--fg); }
+#sugestoes li small { color: var(--muted); font-size: .76rem; white-space: nowrap; }
+#sugestoes li:hover, #sugestoes li[aria-selected='true'] { background: var(--accent-soft); }
+#aviso-exato button.acao { margin-left: 6px; padding: 3px 10px; font-size: .85rem; }

@@ -6,7 +6,12 @@ import Base from '../layouts/Base.astro';
   <p class="lead">Filtre por clube, estádio, competição, estado ou período. Os links <b>S</b> (súmula) e <b>B</b> (borderô) abrem o documento original na federação.</p>
 
   <form class="filtros" id="filtros" autocomplete="off" onsubmit="return false">
-    <label>Clube<input type="search" id="f-clube" placeholder="ex.: Flamengo, Tombense" /></label>
+    <label>Clube
+      <div class="combo">
+        <input type="text" id="f-clube" placeholder="ex.: Flamengo, Tombense" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="sugestoes" autocomplete="off" />
+        <ul id="sugestoes" role="listbox" aria-label="Clubes sugeridos" hidden></ul>
+      </div>
+    </label>
     <div class="papel" role="radiogroup" aria-label="Papel do clube no jogo">
       <span>O clube joga como</span>
       <div class="ops">
@@ -80,7 +85,10 @@ import Base from '../layouts/Base.astro';
     let ordem = { campo: 'data', dir: -1 };
     // Quando se chega pelo ranking de clubes, o time vem pelo nome EXATO ("Flamengo" não pode trazer "Flamengo de Guarulhos").
     // Digitar no campo Clube volta para a busca por parte do nome.
-    let nomeExato = '';
+    let nomeExato = '';        // derivado: nome canônico quando o texto do campo é o nome completo de um clube
+    let forcarParcial = false; // o usuário pediu "incluir nomes parecidos" (busca por parte do nome mesmo com nome completo)
+    let clubes = [];           // [{ nome, norm, n }] — n = jogos disputados
+    const clubePorNorm = new Map();
 
     const papel = () => document.querySelector('input[name=papel]:checked').value;
 
@@ -96,6 +104,13 @@ import Base from '../layouts/Base.astro';
       $('f-uf').insertAdjacentHTML('beforeend', ufs.map((u) => `<option>${esc(u)}</option>`).join(''));
       const comps = [...new Set(jogos.map((j) => j.comp))].filter(Boolean).sort((a, b) => a.localeCompare(b, 'pt-BR'));
       $('f-comp').insertAdjacentHTML('beforeend', comps.map((c) => `<option>${esc(c)}</option>`).join(''));
+      const cont = new Map();
+      for (const j of jogos) for (const nome of [j.mandante, j.visitante]) {
+        if (!cont.has(nome)) cont.set(nome, 0);
+        if (j.status === 'realizado') cont.set(nome, cont.get(nome) + 1);
+      }
+      clubes = [...cont.entries()].map(([nome, n]) => ({ nome, norm: semAcento(nome), n }));
+      clubes.forEach((c) => clubePorNorm.set(c.norm, c.nome));
       lerEndereco();
       aplicar();
     }
@@ -103,8 +118,8 @@ import Base from '../layouts/Base.astro';
     /** O endereço guarda os filtros (compartilhável): ?time=Flamengo&papel=mandante&uf=RJ ... */
     function lerEndereco() {
       const p = new URLSearchParams(location.search);
-      if (p.get('time')) { nomeExato = p.get('time'); $('f-clube').value = nomeExato; }
-      else if (p.get('clube')) $('f-clube').value = p.get('clube');
+      $('f-clube').value = p.get('time') || p.get('clube') || '';
+      forcarParcial = p.get('parcial') === '1';
       const r = document.querySelector(`input[name=papel][value="${p.get('papel') || ''}"]`);
       if (r) r.checked = true;
       if (p.get('estadio')) $('f-estadio').value = p.get('estadio');
@@ -119,7 +134,8 @@ import Base from '../layouts/Base.astro';
     function gravarEndereco() {
       const p = new URLSearchParams();
       const clube = $('f-clube').value.trim();
-      if (clube) p.set(nomeExato && clube === nomeExato ? 'time' : 'clube', clube);
+      if (clube) p.set(nomeExato ? 'time' : 'clube', nomeExato || clube);
+      if (clube && forcarParcial) p.set('parcial', '1');
       if (papel() && clube) p.set('papel', papel());
       if ($('f-estadio').value.trim()) p.set('estadio', $('f-estadio').value.trim());
       if ($('f-uf').value) p.set('uf', $('f-uf').value);
@@ -136,7 +152,7 @@ import Base from '../layouts/Base.astro';
     /** Filtro como função. `ignorar` ('uf' | 'comp') deixa aquele filtro de fora: é o que permite calcular as opções de cada lista. */
     function predicado(ignorar) {
       const clube = $('f-clube').value.trim();
-      const exato = !!nomeExato && clube === nomeExato;
+      const exato = !!nomeExato;
       const t = semAcento(clube), est = semAcento($('f-estadio').value.trim()), pp = papel();
       const uf = ignorar === 'uf' ? '' : $('f-uf').value;
       const comp = ignorar === 'comp' ? '' : $('f-comp').value;
@@ -169,13 +185,20 @@ import Base from '../layouts/Base.astro';
 
     function aplicar() {
       const clube = $('f-clube').value.trim();
-      if (nomeExato && clube !== nomeExato) nomeExato = '';
+      nomeExato = !clube || forcarParcial ? '' : clubePorNorm.get(semAcento(clube)) || '';
       const removidos = [];
       for (let i = 0; i < 3 && atualizarOpcoes(removidos); i++);   // limpar uma seleção pode mudar as opções da outra lista
       filtrados = jogos.filter(predicado(''));
       const aviso = $('aviso-exato');
-      aviso.hidden = !nomeExato;
-      if (nomeExato) aviso.textContent = `Mostrando exatamente o time “${nomeExato}”. Para buscar por parte do nome, edite o campo Clube.`;
+      const parecidos = nomeExato ? clubes.filter((c) => c.nome !== nomeExato && c.norm.includes(semAcento(nomeExato))).map((c) => c.nome) : [];
+      aviso.hidden = !nomeExato && !(clube && forcarParcial);
+      if (nomeExato) {
+        aviso.innerHTML = `Mostrando exatamente o time <b>${esc(nomeExato)}</b>.` + (parecidos.length
+          ? ` Também existem nomes parecidos: ${parecidos.slice(0, 4).map(esc).join(', ')}${parecidos.length > 4 ? '…' : ''}. <button type="button" class="acao" id="btn-parcial">Incluir nomes parecidos</button>`
+          : '');
+      } else if (clube && forcarParcial) {
+        aviso.innerHTML = `Buscando <b>${esc(clube)}</b> em qualquer parte do nome do clube. <button type="button" class="acao" id="btn-exato">Só o time exato</button>`;
+      }
       const limpo = $('aviso-limpo');
       limpo.hidden = !removidos.length;
       if (removidos.length) limpo.textContent = `Filtro removido porque não há jogos com essa combinação — ${removidos.join('; ')}.`;
@@ -233,11 +256,55 @@ import Base from '../layouts/Base.astro';
       });
     }
 
-    ['f-clube', 'f-estadio', 'f-uf', 'f-comp', 'f-de', 'f-ate', 'f-status', 'f-bordero'].forEach((id) => $(id).addEventListener('input', aplicar));
+    ['f-estadio', 'f-uf', 'f-comp', 'f-de', 'f-ate', 'f-status', 'f-bordero'].forEach((id) => $(id).addEventListener('input', aplicar));
+    $('f-clube').addEventListener('input', () => { forcarParcial = false; aplicar(); sugerir(); });
+    $('aviso-exato').addEventListener('click', (e) => {
+      if (e.target.id === 'btn-parcial') { forcarParcial = true; aplicar(); }
+      if (e.target.id === 'btn-exato') { forcarParcial = false; aplicar(); }
+    });
+
+    // ── sugestões de clube (busca sem acento; escolher uma sugestão fixa o time exato) ──
+    let ativa = -1;
+    let itens = [];
+    function sugerir() {
+      const n = semAcento($('f-clube').value.trim());
+      const ul = $('sugestoes');
+      ativa = -1;
+      if (!n) return fecharSugestoes();
+      itens = clubes.filter((c) => c.norm.includes(n))
+        .sort((a, b) => (b.norm.startsWith(n) - a.norm.startsWith(n)) || b.n - a.n || a.nome.localeCompare(b.nome, 'pt-BR')).slice(0, 8);
+      if (!itens.length || (itens.length === 1 && itens[0].norm === n)) return fecharSugestoes();
+      ul.innerHTML = itens.map((c, i) => `<li role="option" id="sug-${i}" data-i="${i}"><span>${esc(c.nome)}</span><small>${c.n} jogo${c.n === 1 ? '' : 's'}</small></li>`).join('');
+      ul.hidden = false;
+      $('f-clube').setAttribute('aria-expanded', 'true');
+    }
+    function fecharSugestoes() { $('sugestoes').hidden = true; $('f-clube').setAttribute('aria-expanded', 'false'); ativa = -1; }
+    function escolher(i) {
+      if (!itens[i]) return;
+      $('f-clube').value = itens[i].nome;
+      forcarParcial = false;
+      fecharSugestoes();
+      aplicar();
+    }
+    function marcar(i) {
+      document.querySelectorAll('#sugestoes li').forEach((li, k) => li.setAttribute('aria-selected', k === i ? 'true' : 'false'));
+      ativa = i;
+      if (i >= 0) $('f-clube').setAttribute('aria-activedescendant', `sug-${i}`); else $('f-clube').removeAttribute('aria-activedescendant');
+    }
+    $('sugestoes').addEventListener('mousedown', (e) => { const li = e.target.closest('li'); if (li) { e.preventDefault(); escolher(Number(li.dataset.i)); } });
+    $('f-clube').addEventListener('keydown', (e) => {
+      if ($('sugestoes').hidden) return;
+      if (e.key === 'ArrowDown') { e.preventDefault(); marcar((ativa + 1) % itens.length); }
+      else if (e.key === 'ArrowUp') { e.preventDefault(); marcar((ativa - 1 + itens.length) % itens.length); }
+      else if (e.key === 'Enter' && ativa >= 0) { e.preventDefault(); escolher(ativa); }
+      else if (e.key === 'Escape') fecharSugestoes();
+    });
+    $('f-clube').addEventListener('blur', () => setTimeout(fecharSugestoes, 120));
+    $('f-clube').addEventListener('focus', () => { if ($('f-clube').value.trim()) sugerir(); });
     document.querySelectorAll('input[name=papel]').forEach((r) => r.addEventListener('change', aplicar));
     $('ant').addEventListener('click', () => { pagina--; desenhar(); window.scrollTo({ top: 0 }); });
     $('prox').addEventListener('click', () => { pagina++; desenhar(); window.scrollTo({ top: 0 }); });
-    $('limpar').addEventListener('click', () => { $('filtros').reset(); nomeExato = ''; aplicar(); });
+    $('limpar').addEventListener('click', () => { $('filtros').reset(); forcarParcial = false; fecharSugestoes(); aplicar(); });
     document.querySelectorAll('th[data-ord]').forEach((th) => th.addEventListener('click', () => {
       const c = th.dataset.ord;
       ordem = { campo: c, dir: ordem.campo === c ? -ordem.dir : -1 };
