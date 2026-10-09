@@ -1,0 +1,28 @@
+---
+import Base from '../../layouts/Base.astro';
+
+// Ensaios = arquivos Markdown em src/ensaios/. Frontmatter: titulo, data (AAAA-MM-DD), resumo, rascunho (true esconde do site).
+const arquivos = import.meta.glob('../../ensaios/*.md', { eager: true });
+const ensaios = Object.entries(arquivos)
+  .map(([caminho, m]) => ({ slug: caminho.split('/').pop().replace(/\.md$/, ''), ...m.frontmatter }))
+  .filter((e) => !e.rascunho)
+  .sort((a, b) => String(b.data).localeCompare(String(a.data)));
+const fmt = (d) => String(d).slice(0, 10).split('-').reverse().join('/');
+---
+<Base titulo="Ensaios" descricao="Textos que interpretam os números do público e das finanças do futebol brasileiro.">
+  <h1>Ensaios</h1>
+  <p class="lead">Textos que olham para os números com calma: o que eles dizem, o que não dizem e o que mudou.</p>
+  {ensaios.length === 0 ? (
+    <p class="muted">Os primeiros ensaios chegam em breve.</p>
+  ) : (
+    <ul class="ensaios">
+      {ensaios.map((e) => (
+        <li>
+          <a class="t" href={`/ensaios/${e.slug}`}>{e.titulo}</a>
+          <div class="muted small">{fmt(e.data)}</div>
+          {e.resumo && <p>{e.resumo}</p>}
+        </li>
+      ))}
+    </ul>
+  )}
+</Base>

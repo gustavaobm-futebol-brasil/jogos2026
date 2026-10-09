@@ -1,0 +1,46 @@
+---
+import '../styles/global.css';
+import { meta } from '../lib/dados.js';
+const { titulo, descricao = 'Público e financeiro dos jogos do futebol brasileiro, extraídos de súmulas e borderôs das federações.' } = Astro.props;
+const atual = Astro.url.pathname.replace(/\/$/, '') || '/';
+const nav = [
+  ['/', 'Início'],
+  ['/jogos', 'Jogos'],
+  ['/competicoes', 'Competições'],
+  ['/clubes', 'Clubes'],
+  ['/ensaios', 'Ensaios'],
+  ['/metodologia', 'Metodologia'],
+];
+const dataMeta = meta.gerado_em ? meta.gerado_em.slice(0, 10).split('-').reverse().join('/') : '';
+---
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{titulo ? `${titulo} · Jogos 2026` : 'Jogos 2026 · público e financeiro do futebol brasileiro'}</title>
+    <meta name="description" content={descricao} />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  </head>
+  <body>
+    <header class="topo">
+      <div class="wrap">
+        <a class="marca" href="/">Jogos 2026</a>
+        <nav aria-label="Principal">
+          {nav.map(([href, nome]) => (
+            <a href={href} aria-current={atual === href || (href !== '/' && atual.startsWith(href)) ? 'page' : undefined}>{nome}</a>
+          ))}
+        </nav>
+      </div>
+    </header>
+    <main>
+      <div class="wrap"><slot /></div>
+    </main>
+    <footer class="rodape">
+      <div class="wrap">
+        Dados atualizados em {dataMeta}. Fonte: súmulas e borderôs publicados pelas federações; cada jogo aponta para o documento original.
+        <a href="https://github.com/gustavaobm-futebol-brasil/jogos2026">Dados e código no GitHub</a>.
+      </div>
+    </footer>
+  </body>
+</html>

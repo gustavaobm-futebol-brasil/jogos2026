@@ -1,0 +1,44 @@
+---
+import Base from '../layouts/Base.astro';
+import { porClube, fmtInt, fmtBRL, fmtData } from '../lib/dados.js';
+
+const MINIMO = 3;
+const clubes = porClube(MINIMO).sort((a, b) => b.pubMedio - a.pubMedio);
+---
+<Base titulo="Clubes" descricao="Ranking de público médio dos clubes jogando em casa.">
+  <h1>Clubes: público em casa</h1>
+  <p class="lead">Público médio de cada clube como mandante em 2026. Entram clubes com pelo menos {MINIMO} jogos em casa com público registrado.</p>
+
+  <input class="busca" id="busca-tabela" type="search" placeholder="Buscar clube ou estado" />
+  <span class="muted small" id="contagem-tabela">{clubes.length} linhas</span>
+
+  <div class="tabela">
+    <table class="ordenavel">
+      <thead>
+        <tr>
+          <th data-tipo="txt">Clube</th>
+          <th data-tipo="txt">UF</th>
+          <th class="n" data-tipo="num">Jogos em casa</th>
+          <th class="n desc" data-tipo="num">Público médio</th>
+          <th class="n" data-tipo="num">Maior público</th>
+          <th class="n" data-tipo="num">Renda líquida média</th>
+        </tr>
+      </thead>
+      <tbody>
+        {clubes.map((c) => (
+          <tr>
+            <td>{c.clube}</td>
+            <td>{c.uf}</td>
+            <td class="n" data-v={c.n}>{fmtInt(c.n)}</td>
+            <td class="n" data-v={c.pubMedio}>{fmtInt(c.pubMedio)}</td>
+            <td class="n" data-v={c.maior}>{fmtInt(c.maior)}<small>contra {c.maiorContra}, {fmtData(c.maiorData)}</small></td>
+            <td class="n" data-v={c.rendaMedia ?? ''}>{c.rendaMedia == null ? '—' : fmtBRL(c.rendaMedia)}<small>{c.nRenda} borderô{c.nRenda === 1 ? '' : 's'}</small></td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+  <p class="legenda">A renda líquida só considera os jogos com borderô lido. Valores negativos significam que as despesas do jogo superaram a bilheteria.</p>
+
+  <script>import '../scripts/tabela.js';</script>
+</Base>

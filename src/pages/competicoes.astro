@@ -1,0 +1,47 @@
+---
+import Base from '../layouts/Base.astro';
+import { porCompeticao, fmtInt, fmtBRL } from '../lib/dados.js';
+
+const comps = porCompeticao().sort((a, b) => b.pubTotal - a.pubTotal);
+---
+<Base titulo="Competições" descricao="Competições coletadas, com jogos disputados, público e arrecadação.">
+  <h1>Competições</h1>
+  <p class="lead">As competições que o projeto acompanha, com o link para a página oficial de cada uma na federação. Clique no cabeçalho para ordenar.</p>
+
+  <input class="busca" id="busca-tabela" type="search" placeholder="Filtrar por nome, estado ou divisão" />
+  <span class="muted small" id="contagem-tabela">{comps.length} linhas</span>
+
+  <div class="tabela">
+    <table class="ordenavel">
+      <thead>
+        <tr>
+          <th data-tipo="txt">Competição</th>
+          <th data-tipo="txt">UF</th>
+          <th data-tipo="txt">Divisão</th>
+          <th class="n" data-tipo="num">Jogos</th>
+          <th class="n" data-tipo="num">Com borderô</th>
+          <th class="n" data-tipo="num">Público médio</th>
+          <th class="n" data-tipo="num">Público total</th>
+          <th class="n" data-tipo="num">Arrecadação bruta</th>
+        </tr>
+      </thead>
+      <tbody>
+        {comps.map((c) => (
+          <tr>
+            <td>{c.compUrl ? <a href={c.compUrl} target="_blank" rel="noopener">{c.comp}</a> : c.comp}<small>{c.federacao}</small></td>
+            <td>{c.uf}</td>
+            <td>{c.divisao}</td>
+            <td class="n" data-v={c.n}>{fmtInt(c.n)}</td>
+            <td class="n" data-v={c.comBordero}>{fmtInt(c.comBordero)}</td>
+            <td class="n" data-v={c.pubMedio ?? ''}>{c.pubMedio == null ? '—' : fmtInt(c.pubMedio)}</td>
+            <td class="n" data-v={c.pubTotal}>{fmtInt(c.pubTotal)}</td>
+            <td class="n" data-v={c.brutaTotal}>{c.brutaTotal ? fmtBRL(c.brutaTotal) : '—'}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+  <p class="legenda">Só jogos já disputados. Competições da base (Sub-20 e menores) e femininas não fazem parte do projeto; a Sub-23 faz.</p>
+
+  <script>import '../scripts/tabela.js';</script>
+</Base>

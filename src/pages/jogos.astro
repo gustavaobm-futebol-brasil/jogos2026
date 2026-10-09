@@ -1,0 +1,159 @@
+---
+import Base from '../layouts/Base.astro';
+---
+<Base titulo="Jogos" descricao="Explore todos os jogos: público, arrecadação, despesas e link para a súmula e o borderô de cada um.">
+  <h1>Explorador de jogos</h1>
+  <p class="lead">Filtre por clube, estádio, competição, estado ou período. Os links <b>S</b> (súmula) e <b>B</b> (borderô) abrem o documento original na federação.</p>
+
+  <form class="filtros" id="filtros" autocomplete="off" onsubmit="return false">
+    <label>Clube ou estádio<input type="search" id="f-texto" placeholder="ex.: Flamengo, Mineirão" /></label>
+    <label>Estado<select id="f-uf"><option value="">Todos</option></select></label>
+    <label>Competição<select id="f-comp"><option value="">Todas</option></select></label>
+    <label>De<input type="date" id="f-de" /></label>
+    <label>Até<input type="date" id="f-ate" /></label>
+    <label>Situação
+      <select id="f-status">
+        <option value="realizado">Já disputados</option>
+        <option value="futuro">Ainda não disputados</option>
+        <option value="">Todos</option>
+      </select>
+    </label>
+    <label class="marcar"><input type="checkbox" id="f-bordero" /> só com borderô (valores)</label>
+  </form>
+
+  <div class="paginacao">
+    <span id="contagem" class="muted" role="status">Carregando…</span>
+    <button class="acao" id="ant" type="button">← Anterior</button>
+    <span id="pag" class="muted"></span>
+    <button class="acao" id="prox" type="button">Próxima →</button>
+    <button class="acao" id="limpar" type="button">Limpar filtros</button>
+  </div>
+
+  <div class="tabela">
+    <table id="tab">
+      <thead>
+        <tr>
+          <th data-ord="data" class="desc">Data</th>
+          <th>Jogo</th>
+          <th>Competição</th>
+          <th>Estádio</th>
+          <th data-ord="pub" class="n">Público</th>
+          <th data-ord="bruta" class="n">Arrecadação</th>
+          <th data-ord="renda" class="n">Renda líquida</th>
+          <th>Docs</th>
+        </tr>
+      </thead>
+      <tbody id="corpo"></tbody>
+    </table>
+  </div>
+
+  <p class="legenda">
+    Selos de atenção: <span class="sel">A</span> a conta do borderô não fecha (pode ser desconto legítimo) ·
+    <span class="sel">D</span> a data do documento difere da do calendário ·
+    <span class="sel">I</span> mandante e visitante estão trocados no documento ·
+    <span class="sel">F</span> documento ainda não publicado, ou indisponível na federação. Veja a <a href="/metodologia">metodologia</a>.
+  </p>
+
+  <script>
+    const POR_PAGINA = 50;
+    const SELOS = { A: 'A conta do borderô não fecha (pode ser desconto legítimo)', D: 'A data do documento difere da data do calendário', I: 'Mandante e visitante trocados no documento', F: 'Documento ainda não publicado ou indisponível na federação' };
+    const fmtInt = new Intl.NumberFormat('pt-BR', { maximumFractionDigits: 0 });
+    const fmtBRL = new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL', maximumFractionDigits: 0 });
+    const $ = (id) => document.getElementById(id);
+    const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+    const semAcento = (s) => String(s ?? '').normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
+
+    let jogos = [];
+    let filtrados = [];
+    let pagina = 0;
+    let ordem = { campo: 'data', dir: -1 };
+
+    function carregar(d) {
+      const ix = Object.fromEntries(d.campos.map((c, i) => [c, i]));
+      jogos = d.linhas.map((l) => {
+        const o = Object.fromEntries(d.campos.map((c, i) => [c, l[i]]));
+        o.busca = semAcento(`${o.mandante} ${o.visitante} ${o.estadio} ${o.comp}`);
+        return o;
+      });
+      const ufs = [...new Set(jogos.map((j) => j.uf))].filter(Boolean).sort();
+      $('f-uf').insertAdjacentHTML('beforeend', ufs.map((u) => `<option>${esc(u)}</option>`).join(''));
+      const comps = [...new Set(jogos.map((j) => j.comp))].filter(Boolean).sort((a, b) => a.localeCompare(b, 'pt-BR'));
+      $('f-comp').insertAdjacentHTML('beforeend', comps.map((c) => `<option>${esc(c)}</option>`).join(''));
+      aplicar();
+    }
+
+    function aplicar() {
+      const t = semAcento($('f-texto').value.trim());
+      const uf = $('f-uf').value, comp = $('f-comp').value, de = $('f-de').value, ate = $('f-ate').value;
+      const st = $('f-status').value, soB = $('f-bordero').checked;
+      filtrados = jogos.filter((j) =>
+        (!t || j.busca.includes(t)) && (!uf || j.uf === uf) && (!comp || j.comp === comp) && (!de || (j.data && j.data >= de)) &&
+        (!ate || (j.data && j.data <= ate)) && (!st || j.status === st) && (!soB || j.urlB));
+      ordenar();
+      pagina = 0;
+      desenhar();
+    }
+
+    function ordenar() {
+      const { campo, dir } = ordem;
+      filtrados.sort((a, b) => {
+        const x = a[campo], y = b[campo];
+        if (x == null && y == null) return 0;
+        if (x == null) return 1;          // vazios sempre no fim
+        if (y == null) return -1;
+        return (x < y ? -1 : x > y ? 1 : 0) * dir;
+      });
+    }
+
+    function celulaDocs(j) {
+      const s = j.urlS ? `<a href="${esc(j.urlS)}" target="_blank" rel="noopener" title="Súmula na federação">S</a>` : '';
+      const b = j.urlB ? `<a href="${esc(j.urlB)}" target="_blank" rel="noopener" title="Borderô na federação">B</a>` : '';
+      return s || b ? s + b : '<span class="sem">—</span>';
+    }
+
+    function desenhar() {
+      const total = filtrados.length;
+      const paginas = Math.max(1, Math.ceil(total / POR_PAGINA));
+      pagina = Math.min(pagina, paginas - 1);
+      const ini = pagina * POR_PAGINA;
+      $('corpo').innerHTML = filtrados.slice(ini, ini + POR_PAGINA).map((j) => {
+        const data = j.data ? j.data.split('-').reverse().join('/') : '—';
+        const placar = j.pm != null && j.pv != null ? `${j.pm} x ${j.pv}` : '—';
+        const selos = (j.flags || '').split('').map((f) => `<span class="sel" title="${esc(SELOS[f] || '')}">${f}</span>`).join('');
+        const comp = j.compUrl ? `<a href="${esc(j.compUrl)}" target="_blank" rel="noopener">${esc(j.comp)}</a>` : esc(j.comp);
+        const fase = [j.fase, j.rodada && !/^\d{4}$/.test(j.rodada) ? `rodada ${j.rodada}` : ''].filter(Boolean).join(' · ');
+        return `<tr>
+          <td>${data}<small>${esc(j.horario || '')}</small></td>
+          <td><b>${esc(j.mandante)}</b> <span class="placar">${placar}</span> <b>${esc(j.visitante)}</b>${selos ? `<small>${selos}</small>` : ''}</td>
+          <td>${comp}<small>${esc(j.uf)}${fase ? ' · ' + esc(fase) : ''}</small></td>
+          <td>${esc(j.estadio || '')}</td>
+          <td class="n">${j.pub != null ? fmtInt.format(j.pub) : '—'}</td>
+          <td class="n">${j.bruta != null ? fmtBRL.format(j.bruta) : '—'}</td>
+          <td class="n">${j.renda != null ? fmtBRL.format(j.renda) : '—'}</td>
+          <td class="docs">${celulaDocs(j)}</td></tr>`;
+      }).join('') || '<tr><td colspan="8" class="muted">Nenhum jogo com esses filtros.</td></tr>';
+      $('contagem').textContent = `${fmtInt.format(total)} jogo${total === 1 ? '' : 's'}`;
+      $('pag').textContent = `página ${pagina + 1} de ${paginas}`;
+      $('ant').disabled = pagina === 0;
+      $('prox').disabled = pagina >= paginas - 1;
+      document.querySelectorAll('th[data-ord]').forEach((th) => {
+        th.classList.toggle('asc', th.dataset.ord === ordem.campo && ordem.dir === 1);
+        th.classList.toggle('desc', th.dataset.ord === ordem.campo && ordem.dir === -1);
+      });
+    }
+
+    ['f-texto', 'f-uf', 'f-comp', 'f-de', 'f-ate', 'f-status', 'f-bordero'].forEach((id) => $(id).addEventListener('input', aplicar));
+    $('ant').addEventListener('click', () => { pagina--; desenhar(); window.scrollTo({ top: 0 }); });
+    $('prox').addEventListener('click', () => { pagina++; desenhar(); window.scrollTo({ top: 0 }); });
+    $('limpar').addEventListener('click', () => { $('filtros').reset(); aplicar(); });
+    document.querySelectorAll('th[data-ord]').forEach((th) => th.addEventListener('click', () => {
+      const c = th.dataset.ord;
+      ordem = { campo: c, dir: ordem.campo === c ? -ordem.dir : -1 };
+      ordenar(); pagina = 0; desenhar();
+    }));
+
+    fetch('/dados/jogos.json').then((r) => r.json()).then(carregar).catch(() => {
+      $('contagem').textContent = 'Não foi possível carregar os dados. Recarregue a página.';
+    });
+  </script>
+</Base>

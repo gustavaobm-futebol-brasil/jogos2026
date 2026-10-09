@@ -1,0 +1,61 @@
+---
+import Base from '../layouts/Base.astro';
+import { meta, fmtInt } from '../lib/dados.js';
+---
+<Base titulo="Metodologia" descricao="De onde vêm os números, como são lidos e o que significam os selos de atenção.">
+  <h1>Metodologia</h1>
+  <div class="prosa">
+    <p class="lead">Os números deste site não vêm de estimativas: são lidos dos documentos que as próprias federações publicam depois de cada jogo.</p>
+
+    <h2>De onde vêm os dados</h2>
+    <p>
+      Cada jogo tem, em geral, dois documentos oficiais: a <b>súmula</b> (placar, gols, cartões, árbitro) e o <b>borderô</b>, também chamado de
+      boletim financeiro (público, arrecadação e despesas). Reunimos os de {fmtInt(Object.keys(meta.por_fonte).length)} fontes: a CBF e federações estaduais.
+      O calendário de cada competição vem do site da própria federação, e cada linha da tabela aponta para o documento original.
+    </p>
+
+    <h2>O que está incluído</h2>
+    <ul>
+      <li>Competições profissionais masculinas e a Sub-23.</li>
+      <li>Ficam de fora a base (Sub-20 e menores) e o futebol feminino.</li>
+      <li>Competições amadoras e municipais não são coletadas: a lista de competições é escolhida à mão.</li>
+    </ul>
+
+    <h2>Como os documentos são lidos</h2>
+    <p>
+      PDFs com texto são lidos por programas que seguem o formato de cada federação. PDFs escaneados ou fotografados são lidos com
+      inteligência artificial, e os resultados passam por conferências automáticas (por exemplo, o placar lido é comparado com o texto do PDF e a
+      conta do borderô é refeita). Mesmo assim <b>erros são possíveis</b>, principalmente em documentos escritos à mão. Se encontrar um, o link para
+      o documento original está em cada jogo.
+    </p>
+
+    <h2>O que cada número significa</h2>
+    <ul>
+      <li><b>Público</b>: ingressos utilizados no jogo, somando pagantes e não pagantes (gratuidades, credenciados, convidados).</li>
+      <li><b>Arrecadação</b>: receita bruta de bilheteria registrada no borderô.</li>
+      <li><b>Renda líquida</b>: receita menos despesas do jogo (arbitragem, taxas, segurança etc.), como o borderô apresenta. Pode ser <b>negativa</b>, e
+        em jogos de portões fechados é só a despesa.</li>
+    </ul>
+
+    <h2>Selos de atenção</h2>
+    <ul>
+      <li><span class="sel">A</span> a conta do borderô não fecha; muitas vezes é um desconto legítimo (como o INSS retido), outras vezes uma leitura imperfeita.</li>
+      <li><span class="sel">D</span> a data escrita no documento é diferente da do calendário da federação.</li>
+      <li><span class="sel">I</span> o documento traz mandante e visitante trocados; o site usa a ordem do calendário.</li>
+      <li><span class="sel">F</span> o documento ainda não foi publicado pela federação (os mais recentes costumam sair em alguns dias) ou ela nunca o publica (por exemplo, o borderô de alguns jogos ou séries). O jogo continua na lista, sem os valores; a coleta tenta de novo a cada atualização.</li>
+    </ul>
+
+    <h2>Atualização</h2>
+    <p>
+      Os dados são coletados e conferidos automaticamente duas vezes por semana. Antes de publicar, o sistema valida a coleta (documentos com link,
+      valores plausíveis, o conjunto de jogos não pode encolher) e só então atualiza o site. Última atualização: <b>{meta.gerado_em}</b>.
+    </p>
+
+    <h2>Usar os dados</h2>
+    <p>
+      A tabela completa está aberta em <a href="https://github.com/gustavaobm-futebol-brasil/jogos2026/blob/main/data/jogos.csv">data/jogos.csv</a> no GitHub.
+      Os documentos originais pertencem às federações. Para apontar um erro ou sugerir uma competição, abra uma
+      <a href="https://github.com/gustavaobm-futebol-brasil/jogos2026/issues">pendência no GitHub</a>.
+    </p>
+  </div>
+</Base>

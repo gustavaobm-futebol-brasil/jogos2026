@@ -1,0 +1,76 @@
+---
+import Base from '../layouts/Base.astro';
+import { jogos, realizados, meta, porCompeticao, soma, fmtInt, fmtBRL, fmtBRLcompacto, fmtData } from '../lib/dados.js';
+
+const comPub = realizados.filter((j) => j.pub != null);
+const comBordero = realizados.filter((j) => j.temB);
+const comRenda = realizados.filter((j) => j.bruta != null);
+const federacoes = new Set(jogos.map((j) => j.fonte)).size;
+
+const maiores = [...comPub].sort((a, b) => b.pub - a.pub).slice(0, 10);
+const maxPub = maiores[0]?.pub || 1;
+
+const comps = porCompeticao().filter((c) => c.nPub >= 10).sort((a, b) => b.pubMedio - a.pubMedio).slice(0, 12);
+const maxMedio = comps[0]?.pubMedio || 1;
+
+const maioresRendas = [...comRenda].sort((a, b) => b.bruta - a.bruta).slice(0, 8);
+const maxBruta = maioresRendas[0]?.bruta || 1;
+---
+<Base titulo="" descricao="Quanto público e quanto dinheiro os jogos do futebol brasileiro movimentaram em 2026, a partir dos borderôs publicados pelas federações.">
+  <h1>Quanto o futebol brasileiro arrecada em 2026?</h1>
+  <p class="lead">
+    Público, arrecadação e despesas de cada jogo, lidos dos borderôs e súmulas que as federações publicam. Cada número aponta para o documento original.
+  </p>
+
+  <div class="kpis">
+    <div class="kpi"><div class="v">{fmtInt(realizados.length)}</div><div class="l">jogos já disputados, de {federacoes} fontes (CBF e federações estaduais)</div></div>
+    <div class="kpi"><div class="v">{fmtInt(soma(comPub.map((j) => j.pub)))}</div><div class="l">pessoas nos estádios em {fmtInt(comPub.length)} jogos com público registrado</div></div>
+    <div class="kpi"><div class="v">{fmtBRLcompacto(soma(comRenda.map((j) => j.bruta)))}</div><div class="l">de arrecadação bruta em bilheteria, em {fmtInt(comRenda.length)} borderôs</div></div>
+    <div class="kpi"><div class="v">{fmtInt(comBordero.length)}</div><div class="l">borderôs lidos ({Math.round((100 * comBordero.length) / realizados.length)}% dos jogos disputados)</div></div>
+  </div>
+  <p class="small muted">Nem toda federação publica o borderô de todos os jogos; onde ele não existe, o jogo aparece sem público e sem valores. Veja a <a href="/metodologia">metodologia</a>.</p>
+
+  <div class="duas">
+    <section>
+      <h2>Maiores públicos</h2>
+      <ol class="barras">
+        {maiores.map((j) => (
+          <li>
+            <span class="nome">{j.mandante} x {j.visitante}<small>{j.comp} · {fmtData(j.data)}</small></span>
+            <span class="trilho"><i style={`width:${(100 * j.pub) / maxPub}%`}></i></span>
+            <span class="valor">{fmtInt(j.pub)}</span>
+          </li>
+        ))}
+      </ol>
+    </section>
+    <section>
+      <h2>Público médio por competição</h2>
+      <ol class="barras">
+        {comps.map((c) => (
+          <li>
+            <span class="nome">{c.comp}<small>{c.uf} · {fmtInt(c.nPub)} jogos</small></span>
+            <span class="trilho"><i style={`width:${(100 * c.pubMedio) / maxMedio}%`}></i></span>
+            <span class="valor">{fmtInt(c.pubMedio)}</span>
+          </li>
+        ))}
+      </ol>
+    </section>
+  </div>
+
+  <section>
+    <h2>Maiores arrecadações em um jogo</h2>
+    <ol class="barras">
+      {maioresRendas.map((j) => (
+        <li>
+          <span class="nome">{j.mandante} x {j.visitante}<small>{j.comp} · {fmtData(j.data)} · público {fmtInt(j.pub)}</small></span>
+          <span class="trilho"><i style={`width:${(100 * j.bruta) / maxBruta}%`}></i></span>
+          <span class="valor">{fmtBRLcompacto(j.bruta)}</span>
+        </li>
+      ))}
+    </ol>
+  </section>
+
+  <div class="nota">
+    Quer ver os números de um jogo, um clube ou uma competição? Use o <a href="/jogos">explorador de jogos</a>, o <a href="/clubes">ranking de clubes</a> ou a lista de <a href="/competicoes">competições</a>.
+  </div>
+</Base>
