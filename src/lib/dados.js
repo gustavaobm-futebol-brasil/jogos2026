@@ -31,6 +31,16 @@ const num = (x) => {
   return Number.isFinite(v) ? v : null;
 };
 
+const SIGLAS_UF = new Set('AC AL AP AM BA CE DF ES GO MA MT MS MG PA PB PR PE PI RJ RN RS RO RR SC SP SE TO'.split(' '));
+
+/** Estado em que o jogo foi disputado: a sigla no fim do texto do estádio ("Maracanã - Rio de Janeiro - RJ"); se não houver,
+ *  o estado da competição estadual. Competições nacionais sempre trazem a sigla no estádio (conferido: 100% dos jogos). */
+function estadoDoJogo(estadio, ufCompeticao) {
+  const m = /\s-\s([A-Z]{2})\s*$/.exec(estadio || '');
+  if (m && SIGLAS_UF.has(m[1])) return m[1];
+  return ufCompeticao && ufCompeticao !== 'BR' ? ufCompeticao : '';
+}
+
 export const meta = JSON.parse(ler('meta.json'));
 export const competicoes = parseCsv(ler('competicoes.csv'));
 
@@ -47,7 +57,7 @@ export const jogos = parseCsv(ler('jogos.csv')).map((r) => {
     comp: r.competicao_nome, compUrl: r.competicao_url, divisao: r.divisao, nivel: r.nivel, fase: r.fase, rodada: r.rodada,
     data: r.data, horario: r.horario,
     mandante: r.mandante_canonico || r.mandante, visitante: r.visitante_canonico || r.visitante,
-    estadio: r.estadio.trim() === '/' ? '' : r.estadio, status: r.status,
+    estadio: r.estadio.trim() === '/' ? '' : r.estadio, ufJogo: estadoDoJogo(r.estadio, r.uf), status: r.status,
     pm: num(r.placar_mandante), pv: num(r.placar_visitante),
     pub: num(r.publico_total_num), pag: num(r.publico_pagante_num), nao: num(r.publico_nao_pagante_num),
     bruta: num(r.arrecadacao_bruta_num), desp: num(r.despesas_totais_num), renda: num(r.renda_liquida_num),
@@ -116,7 +126,7 @@ export function porClube(minimo = 3) {
 }
 
 /** Versão compacta para o explorador (/dados/jogos.json): arrays na ordem de CAMPOS_JSON. */
-export const CAMPOS_JSON = ['data', 'horario', 'uf', 'comp', 'compUrl', 'mandante', 'visitante', 'pm', 'pv', 'estadio', 'pub', 'bruta',
+export const CAMPOS_JSON = ['data', 'horario', 'uf', 'comp', 'compUrl', 'mandante', 'visitante', 'pm', 'pv', 'estadio', 'ufJogo', 'pub', 'bruta',
   'desp', 'renda', 'urlS', 'urlB', 'flags', 'status', 'fase', 'rodada', 'falt'];
 export function jogosCompactos() {
   const ordenados = [...jogos].sort((a, b) => (b.data || '').localeCompare(a.data || ''));
