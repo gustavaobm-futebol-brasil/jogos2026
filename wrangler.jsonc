@@ -1,0 +1,12 @@
+{
+  // Site 100% estático: o Cloudflare (Workers Builds) roda `npm run build` e publica a pasta dist/.
+  // O "name" precisa ser IGUAL ao nome do Worker criado no painel do Cloudflare.
+  "name": "jogos2026",
+  "compatibility_date": "2026-10-09",
+  "assets": {
+    "directory": "./dist",
+    // /jogos serve jogos.html e /jogos/ redireciona para /jogos (casa com trailingSlash: 'never' do Astro)
+    "html_handling": "drop-trailing-slash",
+    "not_found_handling": "404-page"
+  }
+}
