@@ -2,37 +2,43 @@
 import Base from '../layouts/Base.astro';
 import { porClube, fmtInt, fmtBRL, fmtData } from '../lib/dados.js';
 
+// Versão inicial (todas as competições), renderizada no build; o navegador a refaz a partir de /dados/clubes.json
+// quando se escolhe uma competição ou se ordena.
 const MINIMO = 3;
 const clubes = porClube(MINIMO).sort((a, b) => b.pubMedio - a.pubMedio);
 ---
 <Base titulo="Clubes" descricao="Ranking de público médio dos clubes jogando em casa.">
   <h1>Clubes: público em casa</h1>
-  <p class="lead">Público médio de cada clube como mandante em 2026. Entram clubes com pelo menos {MINIMO} jogos em casa com público registrado.</p>
+  <p class="lead" id="lead">Público médio de cada clube como mandante em 2026. Entram clubes com pelo menos {MINIMO} jogos em casa com público registrado.</p>
 
-  <input class="busca" id="busca-tabela" type="search" placeholder="Buscar clube ou estado" />
-  <span class="muted small" id="contagem-tabela">{clubes.length} linhas</span>
+  <div class="filtros" id="filtros-clubes">
+    <label>Clube ou estado<input type="search" id="busca-clube" placeholder="ex.: Cruzeiro, MG" autocomplete="off" /></label>
+    <label>Competição<select id="f-comp-clube"><option value="">Todas</option></select></label>
+  </div>
+  <p class="nota" id="nota-comp" hidden></p>
+  <p class="muted small" id="contagem-clubes" role="status">{clubes.length} clubes</p>
 
   <div class="tabela">
-    <table class="ordenavel">
+    <table id="tab-clubes">
       <thead>
         <tr>
-          <th data-tipo="txt">Clube</th>
-          <th data-tipo="txt">UF</th>
-          <th class="n" data-tipo="num">Jogos em casa</th>
-          <th class="n desc" data-tipo="num">Público médio</th>
-          <th class="n" data-tipo="num">Maior público</th>
-          <th class="n" data-tipo="num">Renda líquida média</th>
+          <th data-ord="nome">Clube</th>
+          <th data-ord="uf">UF</th>
+          <th class="n" data-ord="n">Jogos em casa</th>
+          <th class="n desc" data-ord="pubMedio">Público médio</th>
+          <th class="n" data-ord="maior">Maior público</th>
+          <th class="n" data-ord="rendaMedia">Renda líquida média</th>
         </tr>
       </thead>
-      <tbody>
+      <tbody id="corpo-clubes">
         {clubes.map((c) => (
           <tr>
             <td><a class="time" href={`/jogos?time=${encodeURIComponent(c.clube)}`} title="Ver todos os jogos deste time">{c.clube}</a></td>
             <td>{c.uf}</td>
-            <td class="n" data-v={c.n}><a href={`/jogos?time=${encodeURIComponent(c.clube)}&papel=mandante`} title="Ver os jogos em que o time foi mandante">{fmtInt(c.n)}</a></td>
-            <td class="n" data-v={c.pubMedio}>{fmtInt(c.pubMedio)}</td>
-            <td class="n" data-v={c.maior}>{fmtInt(c.maior)}<small>contra {c.maiorContra}, {fmtData(c.maiorData)}</small></td>
-            <td class="n" data-v={c.rendaMedia ?? ''}>{c.rendaMedia == null ? '—' : fmtBRL(c.rendaMedia)}<small>{c.nRenda} borderô{c.nRenda === 1 ? '' : 's'}</small></td>
+            <td class="n"><a href={`/jogos?time=${encodeURIComponent(c.clube)}&papel=mandante`} title="Ver os jogos em que o time foi mandante">{fmtInt(c.n)}</a></td>
+            <td class="n">{fmtInt(c.pubMedio)}</td>
+            <td class="n">{fmtInt(c.maior)}<small>contra {c.maiorContra}, {fmtData(c.maiorData)}</small></td>
+            <td class="n">{c.rendaMedia == null ? '—' : fmtBRL(c.rendaMedia)}<small>{c.nRenda} borderô{c.nRenda === 1 ? '' : 's'}</small></td>
           </tr>
         ))}
       </tbody>
@@ -40,5 +46,91 @@ const clubes = porClube(MINIMO).sort((a, b) => b.pubMedio - a.pubMedio);
   </div>
   <p class="legenda">Clique no nome do clube para ver todos os jogos dele, ou no número de jogos em casa para ver só os jogos como mandante. A renda líquida só considera os jogos com borderô lido. Valores negativos significam que as despesas do jogo superaram a bilheteria.</p>
 
-  <script>import '../scripts/tabela.js';</script>
+  <script>
+    const MINIMO_GERAL = 3;
+    const fmtInt = new Intl.NumberFormat('pt-BR', { maximumFractionDigits: 0 });
+    const fmtBRL = new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL', maximumFractionDigits: 0 });
+    const $ = (id) => document.getElementById(id);
+    const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+    const semAcento = (s) => String(s ?? '').normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
+    const fmtData = (iso) => (iso ? iso.split('-').reverse().join('/') : '');
+
+    let dados = null;          // resposta de /dados/clubes.json
+    let ordem = { campo: 'pubMedio', dir: -1 };
+
+    /** Soma as linhas do clube nas competições escolhidas (todas, ou só a selecionada). */
+    function agregar(comp) {
+      const iComp = comp ? dados.comps.indexOf(comp) : -1;
+      const porClube = new Map();
+      for (const [ic, icomp, n, pubTotal, maior, contra, dataMaior, rendaTotal, nRenda] of dados.linhas) {
+        if (iComp >= 0 && icomp !== iComp) continue;
+        const a = porClube.get(ic) || { n: 0, pubTotal: 0, maior: -1, contra: '', dataMaior: '', rendaTotal: 0, nRenda: 0 };
+        a.n += n; a.pubTotal += pubTotal; a.rendaTotal += rendaTotal; a.nRenda += nRenda;
+        if (maior > a.maior) { a.maior = maior; a.contra = contra; a.dataMaior = dataMaior; }
+        porClube.set(ic, a);
+      }
+      // com uma competição escolhida, basta 1 jogo em casa com público (numa copa, muitos clubes jogam 1 ou 2 vezes em casa)
+      const minimo = comp ? 1 : MINIMO_GERAL;
+      return [...porClube.entries()].filter(([, a]) => a.n >= minimo).map(([ic, a]) => ({
+        nome: dados.clubes[ic][0], uf: dados.clubes[ic][1], n: a.n, pubMedio: a.pubTotal / a.n, maior: a.maior, contra: a.contra, dataMaior: a.dataMaior,
+        rendaMedia: a.nRenda ? a.rendaTotal / a.nRenda : null, nRenda: a.nRenda,
+      }));
+    }
+
+    function desenhar() {
+      const comp = $('f-comp-clube').value;
+      const q = semAcento($('busca-clube').value.trim());
+      const { campo, dir } = ordem;
+      const linhas = agregar(comp).filter((c) => !q || semAcento(c.nome).includes(q) || semAcento(c.uf).includes(q)).sort((a, b) => {
+        const x = campo === 'nome' || campo === 'uf' ? semAcento(a[campo]) : a[campo], y = campo === 'nome' || campo === 'uf' ? semAcento(b[campo]) : b[campo];
+        if (x == null && y == null) return 0;
+        if (x == null) return 1;
+        if (y == null) return -1;
+        return (x < y ? -1 : x > y ? 1 : 0) * dir;
+      });
+      const extra = comp ? `&comp=${encodeURIComponent(comp)}` : '';
+      $('corpo-clubes').innerHTML = linhas.map((c) => `<tr>
+        <td><a class="time" href="/jogos?time=${encodeURIComponent(c.nome)}${extra}" title="Ver os jogos deste time${comp ? ' nesta competição' : ''}">${esc(c.nome)}</a></td>
+        <td>${esc(c.uf)}</td>
+        <td class="n"><a href="/jogos?time=${encodeURIComponent(c.nome)}&papel=mandante${extra}" title="Ver os jogos em que o time foi mandante">${fmtInt.format(c.n)}</a></td>
+        <td class="n">${fmtInt.format(c.pubMedio)}</td>
+        <td class="n">${fmtInt.format(c.maior)}<small>contra ${esc(c.contra)}, ${fmtData(c.dataMaior)}</small></td>
+        <td class="n">${c.rendaMedia == null ? '—' : fmtBRL.format(c.rendaMedia)}<small>${c.nRenda} borderô${c.nRenda === 1 ? '' : 's'}</small></td></tr>`).join('')
+        || '<tr><td colspan="6" class="muted">Nenhum clube com esses filtros.</td></tr>';
+      $('contagem-clubes').textContent = `${fmtInt.format(linhas.length)} clube${linhas.length === 1 ? '' : 's'}`;
+      const nota = $('nota-comp');
+      nota.hidden = !comp;
+      if (comp) nota.textContent = `Só os clubes que jogaram em casa em “${comp}”, com os números dessa competição. Entram clubes com pelo menos 1 jogo em casa com público registrado.`;
+      $('lead').hidden = !!comp;
+      document.querySelectorAll('th[data-ord]').forEach((th) => {
+        th.classList.toggle('asc', th.dataset.ord === campo && dir === 1);
+        th.classList.toggle('desc', th.dataset.ord === campo && dir === -1);
+      });
+      const p = new URLSearchParams();
+      if (comp) p.set('comp', comp);
+      if ($('busca-clube').value.trim()) p.set('q', $('busca-clube').value.trim());
+      history.replaceState(null, '', location.pathname + (p.toString() ? '?' + p : ''));
+    }
+
+    fetch('/dados/clubes.json').then((r) => r.json()).then((d) => {
+      dados = d;
+      // opções: competições com o número de clubes (com pelo menos 1 jogo em casa com público)
+      const nClubes = new Map();
+      for (const l of d.linhas) nClubes.set(l[1], (nClubes.get(l[1]) || 0) + 1);
+      $('f-comp-clube').insertAdjacentHTML('beforeend', d.comps.map((c, i) => `<option value="${esc(c)}">${esc(c)} (${nClubes.get(i) || 0})</option>`).join(''));
+      const p = new URLSearchParams(location.search);
+      if (p.get('comp') && d.comps.includes(p.get('comp'))) $('f-comp-clube').value = p.get('comp');
+      if (p.get('q')) $('busca-clube').value = p.get('q');
+      desenhar();
+    }).catch(() => { /* fica a tabela renderizada no build (todas as competições) */ });
+
+    $('f-comp-clube').addEventListener('input', () => dados && desenhar());
+    $('busca-clube').addEventListener('input', () => dados && desenhar());
+    document.querySelectorAll('th[data-ord]').forEach((th) => th.addEventListener('click', () => {
+      if (!dados) return;
+      const c = th.dataset.ord;
+      ordem = { campo: c, dir: ordem.campo === c ? -ordem.dir : (c === 'nome' || c === 'uf' ? 1 : -1) };
+      desenhar();
+    }));
+  </script>
 </Base>

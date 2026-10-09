@@ -132,3 +132,36 @@ export function jogosCompactos() {
   const ordenados = [...jogos].sort((a, b) => (b.data || '').localeCompare(a.data || ''));
   return { campos: CAMPOS_JSON, gerado_em: meta.gerado_em, linhas: ordenados.map((j) => CAMPOS_JSON.map((c) => j[c] ?? null)) };
 }
+
+/** Público/renda dos clubes COMO MANDANTE, por competição (jogos disputados com público). Alimenta /clubes (/dados/clubes.json):
+ *  o navegador soma as linhas de todas as competições ou só as da competição escolhida no filtro. */
+export function clubesPorCompeticao() {
+  const grupos = new Map(); // `${clube}\u0000${comp}` -> jogos
+  const doClube = new Map(); // clube -> jogos (todas as competições), para descobrir a UF
+  for (const j of realizados) {
+    if (j.pub == null) continue;
+    const k = `${j.mandante}\u0000${j.comp}`;
+    if (!grupos.has(k)) grupos.set(k, []);
+    grupos.get(k).push(j);
+    if (!doClube.has(j.mandante)) doClube.set(j.mandante, []);
+    doClube.get(j.mandante).push(j);
+  }
+  const nomes = [...doClube.keys()].sort((a, b) => a.localeCompare(b, 'pt-BR'));
+  const comps = [...new Set(realizados.filter((j) => j.pub != null).map((j) => j.comp))].sort((a, b) => a.localeCompare(b, 'pt-BR'));
+  const ufDe = (js) => {
+    const cont = {};
+    for (const j of js) if (j.uf && j.uf !== 'BR') cont[j.uf] = (cont[j.uf] || 0) + 1;
+    return Object.entries(cont).sort((a, b) => b[1] - a[1])[0]?.[0] ?? 'BR';
+  };
+  const iClube = new Map(nomes.map((n, i) => [n, i]));
+  const iComp = new Map(comps.map((n, i) => [n, i]));
+  const linhas = [...grupos.entries()].map(([k, js]) => {
+    const [clube, comp] = k.split('\u0000');
+    const maior = js.reduce((a, b) => (b.pub > a.pub ? b : a));
+    const comRenda = js.filter((j) => j.renda != null);
+    return [iClube.get(clube), iComp.get(comp), js.length, soma(js.map((j) => j.pub)), maior.pub, maior.visitante, maior.data,
+      soma(comRenda.map((j) => j.renda)), comRenda.length];
+  });
+  return { clubes: nomes.map((n) => [n, ufDe(doClube.get(n))]), comps, linhas,
+    campos: ['clube', 'comp', 'n', 'pubTotal', 'maior', 'maiorContra', 'maiorData', 'rendaTotal', 'nRenda'] };
+}
