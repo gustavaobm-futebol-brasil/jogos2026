@@ -80,7 +80,7 @@ function fmtEixoBRL(v) {
 /**
  * @param {object[]} jogos  jogos com data (ordenados ou não)
  * @param {number} largura  largura do SVG em px
- * @param {{valor:(j)=>number, eixo:(v:number)=>string, dica:(j)=>string[], aria:string, ref?:{valor:number, rotulo:string}, cor?:(j)=>string}} cfg
+ * @param {{valor:(j)=>number, eixo:(v:number)=>string, dica:(j)=>string[], aria:string, ref?:{valor:number, rotulo:string}, cor?:(j)=>string, destacarZero?:boolean}} cfg
  */
 function dispersao(jogos, largura, cfg) {
   const altura = 280, mr = 14, mt = 14, mb = 30;
@@ -99,8 +99,9 @@ function dispersao(jogos, largura, cfg) {
   const Y = (v) => mt + (1 - (v - yMin) / (yMax - yMin)) * (altura - mt - mb);
   const svg = s('svg', { class: 'gr-svg', width: largura, height: altura, role: 'img', 'aria-label': `${cfg.aria}; os mesmos números estão na tabela` });
   for (const v of ticks) {
-    svg.append(s('line', { class: v === 0 ? 'gr-eixo' : 'gr-grade', x1: ml, x2: largura - mr, y1: Y(v), y2: Y(v) }),
-      s('text', { class: 'gr-txt', x: ml - 8, y: Y(v) + 4, 'text-anchor': 'end' }, cfg.eixo(v)));
+    const destaque0 = v === 0 && cfg.destacarZero;   // a linha do zero separa "bilheteria cobriu a despesa" de "não cobriu"
+    svg.append(s('line', { class: destaque0 ? 'gr-zero' : v === 0 ? 'gr-eixo' : 'gr-grade', x1: ml, x2: largura - mr, y1: Y(v), y2: Y(v) }),
+      s('text', { class: destaque0 ? 'gr-txt zero' : 'gr-txt', x: ml - 8, y: Y(v) + 4, 'text-anchor': 'end' }, cfg.eixo(v)));
   }
   for (let k = 0; k < 5; k++) {
     const tv = t0 + ((t1 - t0) * k) / 4, d = new Date(tv);
@@ -249,7 +250,7 @@ export function renderGraficos(alvo, jogos, tentativa = 0) {
     const card = cartao('Renda líquida jogo a jogo',
       `${plural(comRenda.length, 'jogo com borderô', 'jogos com borderô')}: ${fmtInt.format(neg)} com despesa maior que a bilheteria (abaixo da linha do zero). Renda líquida = arrecadação − despesas.`,
       h('div', null, legenda(true), dispersao(ordenados, largura, {
-        valor: (j) => j.renda, eixo: fmtEixoBRL, aria: 'Dispersão da renda líquida de cada jogo ao longo do tempo', cor: (j) => (j.renda < 0 ? 'neg' : 'pos'),
+        valor: (j) => j.renda, eixo: fmtEixoBRL, destacarZero: true, aria: 'Dispersão da renda líquida de cada jogo ao longo do tempo', cor: (j) => (j.renda < 0 ? 'neg' : 'pos'),
         dica: (j) => [`${fmtBRL(j.renda)} de renda líquida`, `${j.mandante} x ${j.visitante}`, `${semDia(j)}, ${fmtData(j.data)} · ${j.comp}`,
           `arrecadação ${fmtBRL(j.bruta)} · despesas ${fmtBRL(j.desp)}`],
       })),

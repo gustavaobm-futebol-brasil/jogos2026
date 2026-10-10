@@ -186,3 +186,7 @@ button.acao.pequeno { font-size: .8rem; padding: 4px 10px; }
 .gr-legenda { display: flex; flex-wrap: wrap; gap: 4px 18px; margin: 0 0 8px; font-size: .82rem; color: var(--muted); }
 .gr-legenda .item { display: inline-flex; align-items: center; gap: 6px; }
 .gr-legenda svg { flex: none; }
+
+/* linha do zero do gráfico de renda: o eixo que separa lucro de prejuízo do jogo */
+.gr-zero { stroke: var(--fg); stroke-width: 2; opacity: .75; }
+.gr-txt.zero { fill: var(--fg); font-weight: 700; }
