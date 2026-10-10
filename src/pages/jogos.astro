@@ -119,7 +119,8 @@ import Base from '../layouts/Base.astro';
         const o = Object.fromEntries(d.campos.map((c, i) => [c, l[i]]));
         o.bMand = semAcento(o.mandante);
         o.bVis = semAcento(o.visitante);
-        o.bEst = semAcento(o.estadio);
+        o.estNome = o.estId != null && o.estId >= 0 && estadios[o.estId] ? estadios[o.estId][0] : (o.estadio || '');   // nome uniforme do estádio
+        o.bEst = semAcento(`${o.estadio || ''} ${o.estNome}`);                                                       // a busca acha pelos dois nomes
         return o;
       });
       const ufs = [...new Set(jogos.map((j) => j.ufJogo))].filter(Boolean).sort();
@@ -277,7 +278,7 @@ import Base from '../layouts/Base.astro';
           <td>${data}<small>${esc(j.horario || '')}</small></td>
           <td><b>${esc(j.mandante)}</b> <span class="placar">${placar}</span> <b>${esc(j.visitante)}</b>${selos ? `<small>${selos}</small>` : ''}</td>
           <td>${comp}<small>${esc(j.uf)}${fase ? ' · ' + esc(fase) : ''}</small></td>
-          <td>${esc(j.estadio || '')}</td>
+          <td${j.estadio && j.estNome !== j.estadio ? ` title="Como a federação escreve: ${esc(j.estadio)}"` : ''}>${esc(j.estNome || '')}</td>
           <td class="n">${j.pub != null ? fmtInt.format(j.pub) : '—'}</td>
           <td class="n">${j.bruta != null ? fmtBRL.format(j.bruta) : '—'}</td>
           <td class="n">${j.renda != null ? fmtBRL.format(j.renda) : '—'}</td>

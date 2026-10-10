@@ -165,14 +165,29 @@ function partesEstadio(texto) {
 const fichaTokens = (nome) => new Set((semAcentoBuild(nome).match(/[a-z]{4,}/g) || []).filter((x) => !PALAVRAS_COMUNS.has(x)));
 const contido = (a, b) => a.size > 0 && [...a].every((x) => b.has(x)) && (a.size > 1 || [...a][0].length >= 5);
 
+/** Apelidos/abreviações que nenhuma regra deduz (ex.: "Pv" = Presidente Vargas), em src/lib/estadios_alias.csv:
+ *  texto (como a federação escreve), uf (estado do jogo; vazio = qualquer) e estadio (outra grafia que existe nos dados). */
+const APELIDOS = (() => {
+  try {
+    const arq = fs.readFileSync(path.join(process.cwd(), 'src', 'lib', 'estadios_alias.csv'), 'utf-8').replace(/^\uFEFF/, '');
+    return parseCsv(arq).map((r) => ({ texto: semAcentoBuild(r.texto), uf: r.uf.trim().toUpperCase(), estadio: r.estadio.trim() }));
+  } catch { return []; }
+})();
+function textoComApelido(estadio, uf) {
+  const n = semAcentoBuild(estadio);
+  const a = APELIDOS.find((x) => x.texto === n && (!x.uf || x.uf === uf));
+  return a ? a.estadio : estadio;
+}
+
 /** Une as grafias do mesmo estádio. 1) mesma grafia normalizada (caixa, acento); 2) nomes contidos um no outro ("Mineirão" e
  *  'Governador Magalhães Pinto "Mineirão"'), desde que a cidade seja a mesma, ou desconhecida de um dos lados e o estado coincida.
  *  Estádios de mesmo nome em cidades diferentes (ex.: "Estádio Municipal") continuam separados, e um nome sem cidade que casaria
  *  com estádios de cidades diferentes não é unido a nenhum (ambíguo). */
 function agruparEstadios() {
   const info = jogos.map((j) => {
-    const q = partesEstadio(j.estadio);
-    return q && { ...q, nomeN: semAcentoBuild(q.nome), cidadeN: semAcentoBuild(q.cidade), texto: j.estadio, uf: j.ufJogo };
+    const texto = textoComApelido(j.estadio, j.ufJogo);
+    const q = partesEstadio(texto);
+    return q && { ...q, nomeN: semAcentoBuild(q.nome), cidadeN: semAcentoBuild(q.cidade), texto, uf: j.ufJogo };
   });
   // 1) grupos por nome normalizado (+ cidade quando o mesmo nome existe em cidades diferentes)
   const cidadesDoNome = new Map();
