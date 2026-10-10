@@ -9,6 +9,8 @@
   --warn: #9a5b00;
   --warn-soft: #fbefd9;
   --bar: #2f8f66;
+  --div-pos: #2a78d6;
+  --div-neg: #e34948;
   --bar-bg: #e9eee9;
   --font: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   --serif: Georgia, 'Iowan Old Style', 'Times New Roman', serif;
@@ -25,6 +27,8 @@
     --warn: #f0b95a;
     --warn-soft: #3a2d12;
     --bar: #4cb083;
+    --div-pos: #3987e5;
+    --div-neg: #e66767;
     --bar-bg: #26302a;
   }
 }
@@ -175,3 +179,10 @@ button.acao.pequeno { font-size: .8rem; padding: 4px 10px; }
 .dica-txt { color: var(--muted); line-height: 1.35; }
 .grafico.vazio h3 { color: var(--muted); }
 .gr-tabela .tabela { max-height: 340px; overflow: auto; }
+
+.gr-ponto.pos { fill: var(--div-pos); }
+.gr-ponto.neg { fill: var(--div-neg); }
+.gr-ponto.neutro { fill: var(--muted); }
+.gr-legenda { display: flex; flex-wrap: wrap; gap: 4px 18px; margin: 0 0 8px; font-size: .82rem; color: var(--muted); }
+.gr-legenda .item { display: inline-flex; align-items: center; gap: 6px; }
+.gr-legenda svg { flex: none; }

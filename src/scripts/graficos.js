@@ -1,6 +1,6 @@
 // Aba "Gráficos" do explorador. Todos os gráficos respondem aos filtros do topo da página e têm uma tabela equivalente
 // (botão "Ver como tabela"). Uma série por gráfico: uma só cor, sem legenda; o título diz o que está plotado.
-import { h, s, fmtInt, fmtDec, fmtPct, fmtData, plural, media, mediana, comDica, mostrarDica, esconderDica, escalaBonita } from './util.js';
+import { h, s, fmtInt, fmtDec, fmtPct, fmtBRL, fmtData, plural, media, mediana, comDica, mostrarDica, esconderDica, escalaBonita } from './util.js';
 
 const MAX_JOGOS_JOGO_A_JOGO = 160;
 const MESES = ['jan', 'fev', 'mar', 'abr', 'mai', 'jun', 'jul', 'ago', 'set', 'out', 'nov', 'dez'];
@@ -63,42 +63,85 @@ function colunas(itens, largura, fmtValor) {
 }
 
 // ── dispersão jogo a jogo (SVG): ponto mais próximo ganha a dica ──
-function dispersao(jogos, largura) {
-  const altura = 270, ml = 54, mr = 14, mt = 14, mb = 30;
+// Forma = dia da semana (bolinha: sábado/domingo; quadrado: segunda a sexta). Cor, quando `cor` é dado = sinal do valor.
+const DIAS = ['domingo', 'segunda-feira', 'terça-feira', 'quarta-feira', 'quinta-feira', 'sexta-feira', 'sábado'];
+const diaDaSemana = (iso) => new Date(`${iso}T12:00:00`).getDay();
+const fimDeSemana = (iso) => [0, 6].includes(diaDaSemana(iso));
+
+/** Valor monetário curto para o eixo: "R$ 10 mil", "−R$ 5 mil", "R$ 0". */
+function fmtEixoBRL(v) {
+  if (v === 0) return 'R$ 0';
+  const a = Math.abs(v), sinal = v < 0 ? '−' : '';
+  if (a >= 1e6) return `${sinal}R$ ${fmtDec.format(a / 1e6)} mi`;
+  if (a >= 1e3) return `${sinal}R$ ${fmtInt.format(a / 1e3)} mil`;
+  return `${sinal}R$ ${fmtInt.format(a)}`;
+}
+
+/**
+ * @param {object[]} jogos  jogos com data (ordenados ou não)
+ * @param {number} largura  largura do SVG em px
+ * @param {{valor:(j)=>number, eixo:(v:number)=>string, dica:(j)=>string[], aria:string, ref?:{valor:number, rotulo:string}, cor?:(j)=>string}} cfg
+ */
+function dispersao(jogos, largura, cfg) {
+  const altura = 280, mr = 14, mt = 14, mb = 30;
   const t = (iso) => Date.parse(`${iso}T12:00:00`);
+  const valores = jogos.map(cfg.valor);
+  const minV = Math.min(0, ...valores), maxV = Math.max(0, ...valores);
+  const { passo } = escalaBonita(maxV - minV || 1, 4);
+  const yMin = Math.floor(minV / passo) * passo, yMax = Math.max(Math.ceil(maxV / passo) * passo, yMin + passo);
+  const ticks = [];
+  for (let v = yMin; v <= yMax + passo / 1e6; v += passo) ticks.push(Math.round(v * 1e6) / 1e6);
+  const ml = Math.max(...ticks.map((v) => cfg.eixo(v).length)) * 6.3 + 16;
   const tempos = jogos.map((j) => t(j.data));
   let t0 = Math.min(...tempos), t1 = Math.max(...tempos);
   if (t1 === t0) { t0 -= 86400000 * 3; t1 += 86400000 * 3; }
-  const { max, passo } = escalaBonita(Math.max(...jogos.map((j) => j.pub)), 4);
   const X = (v) => ml + ((v - t0) / (t1 - t0)) * (largura - ml - mr);
-  const Y = (v) => mt + (1 - v / max) * (altura - mt - mb);
-  const svg = s('svg', { class: 'gr-svg', width: largura, height: altura, role: 'img', 'aria-label': 'Dispersão do público de cada jogo ao longo do tempo; os mesmos números estão na tabela' });
-  for (let v = 0; v <= max + 1e-9; v += passo) {
+  const Y = (v) => mt + (1 - (v - yMin) / (yMax - yMin)) * (altura - mt - mb);
+  const svg = s('svg', { class: 'gr-svg', width: largura, height: altura, role: 'img', 'aria-label': `${cfg.aria}; os mesmos números estão na tabela` });
+  for (const v of ticks) {
     svg.append(s('line', { class: v === 0 ? 'gr-eixo' : 'gr-grade', x1: ml, x2: largura - mr, y1: Y(v), y2: Y(v) }),
-      s('text', { class: 'gr-txt', x: ml - 8, y: Y(v) + 4, 'text-anchor': 'end' }, fmtInt.format(v)));
+      s('text', { class: 'gr-txt', x: ml - 8, y: Y(v) + 4, 'text-anchor': 'end' }, cfg.eixo(v)));
   }
   for (let k = 0; k < 5; k++) {
     const tv = t0 + ((t1 - t0) * k) / 4, d = new Date(tv);
     svg.append(s('text', { class: 'gr-txt', x: X(tv), y: altura - 8, 'text-anchor': k === 0 ? 'start' : k === 4 ? 'end' : 'middle' },
       `${String(d.getDate()).padStart(2, '0')}/${String(d.getMonth() + 1).padStart(2, '0')}`));
   }
-  const med = mediana(jogos.map((j) => j.pub));
-  svg.append(s('line', { class: 'gr-ref', x1: ml, x2: largura - mr, y1: Y(med), y2: Y(med) }),
-    s('text', { class: 'gr-txt', x: largura - mr, y: Y(med) - 5, 'text-anchor': 'end' }, `mediana ${fmtInt.format(med)}`));
-  const pts = jogos.map((j) => ({ j, x: X(t(j.data)), y: Y(j.pub) }));
-  pts.forEach((p) => svg.append(s('circle', { class: 'gr-ponto', cx: p.x, cy: p.y, r: 4 })));
-  const destaque = s('circle', { class: 'gr-destaque', r: 8, cx: -20, cy: -20 });
+  if (cfg.ref) {
+    svg.append(s('line', { class: 'gr-ref', x1: ml, x2: largura - mr, y1: Y(cfg.ref.valor), y2: Y(cfg.ref.valor) }),
+      s('text', { class: 'gr-txt', x: largura - mr, y: Y(cfg.ref.valor) - 5, 'text-anchor': 'end' }, cfg.ref.rotulo));
+  }
+  const pts = jogos.map((j) => ({ j, x: X(t(j.data)), y: Y(cfg.valor(j)) }));
+  for (const q of pts) {
+    const cls = `gr-ponto ${cfg.cor ? cfg.cor(q.j) : ''}`.trim();
+    svg.append(fimDeSemana(q.j.data)
+      ? s('circle', { class: cls, cx: q.x, cy: q.y, r: 4 })                                         // fim de semana: bolinha
+      : s('rect', { class: cls, x: q.x - 4, y: q.y - 4, width: 8, height: 8, rx: 1 }));            // meio de semana: quadrado
+  }
+  const destaque = s('circle', { class: 'gr-destaque', r: 9, cx: -20, cy: -20 });
   svg.append(destaque);
   svg.addEventListener('pointermove', (e) => {
     const r = svg.getBoundingClientRect(), px = e.clientX - r.left, py = e.clientY - r.top;
     let melhor = null, dm = 28 * 28;
-    for (const p of pts) { const d = (p.x - px) ** 2 + (p.y - py) ** 2; if (d < dm) { dm = d; melhor = p; } }
+    for (const q of pts) { const d = (q.x - px) ** 2 + (q.y - py) ** 2; if (d < dm) { dm = d; melhor = q; } }
     if (!melhor) { destaque.setAttribute('cx', -20); esconderDica(); return; }
     destaque.setAttribute('cx', melhor.x); destaque.setAttribute('cy', melhor.y);
-    mostrarDica(e.clientX, e.clientY, [`${fmtInt.format(melhor.j.pub)} pessoas`, `${melhor.j.mandante} x ${melhor.j.visitante}`, `${fmtData(melhor.j.data)} · ${melhor.j.comp}`]);
+    mostrarDica(e.clientX, e.clientY, cfg.dica(melhor.j));
   });
   svg.addEventListener('pointerleave', () => { destaque.setAttribute('cx', -20); esconderDica(); });
   return svg;
+}
+
+/** Legenda: forma = dia da semana; cor = sinal (só no gráfico de renda). Sempre visível: a forma sozinha não se explica. */
+function legenda(comSinal) {
+  const icone = (forma, classe) => s('svg', { width: 12, height: 12, viewBox: '0 0 12 12', 'aria-hidden': 'true' },
+    forma === 'bola' ? s('circle', { class: `gr-ponto ${classe}`, cx: 6, cy: 6, r: 4 }) : s('rect', { class: `gr-ponto ${classe}`, x: 2, y: 2, width: 8, height: 8, rx: 1 }));
+  const item = (ic, txt) => h('span', { class: 'item' }, ic, txt);
+  return h('div', { class: 'gr-legenda', role: 'group', 'aria-label': 'Legenda do gráfico' },
+    item(icone('bola', comSinal ? 'neutro' : ''), 'fim de semana (sábado e domingo)'),
+    item(icone('quad', comSinal ? 'neutro' : ''), 'meio de semana (segunda a sexta)'),
+    comSinal ? item(icone('bola', 'pos'), 'renda positiva') : null,
+    comSinal ? item(icone('bola', 'neg'), 'renda negativa (despesa maior que a bilheteria)') : null);
 }
 
 // ── os cinco gráficos ──
@@ -179,18 +222,42 @@ export function renderGraficos(alvo, jogos, tentativa = 0) {
     grade.append(vazio('Jogos em que a despesa superou a bilheteria', 'Há poucas competições com 8 ou mais borderôs lidos nos filtros atuais.'));
   }
 
-  // 5. jogo a jogo (só com poucos jogos, para cada ponto ser legível)
+  // 5. público jogo a jogo (só com poucos jogos, para cada ponto ser legível)
+  const semDia = (j) => DIAS[diaDaSemana(j.data)];
+  const nJogoAJogo = (n, quem) => `Disponível quando os filtros deixam até ${MAX_JOGOS_JOGO_A_JOGO} jogos ${quem} (agora há ${fmtInt.format(n)}). Filtre por um clube ou uma competição.`;
+  const larga = (el) => { el.classList.add('larga'); grade.append(el); };
   if (comPub.length <= MAX_JOGOS_JOGO_A_JOGO && comPub.length >= 3) {
     const ordenados = [...comPub].sort((x, y) => x.data.localeCompare(y.data));
+    const med = mediana(ordenados.map((j) => j.pub));
     const card = cartao('Público jogo a jogo', `Cada ponto é um jogo (${plural(comPub.length, 'jogo', 'jogos')}). A linha marca a mediana; passe o mouse para ver o jogo.`,
-      dispersao(ordenados, largura),
-      { colunas: ['Data', 'Jogo', 'Competição', 'Público'], linhas: ordenados.map((j) => [fmtData(j.data), `${j.mandante} x ${j.visitante}`, j.comp, fmtInt.format(j.pub)]) });
-    card.classList.add('larga');
-    grade.append(card);
+      h('div', null, legenda(false), dispersao(ordenados, largura, {
+        valor: (j) => j.pub, eixo: (v) => fmtInt.format(v), aria: 'Dispersão do público de cada jogo ao longo do tempo',
+        ref: { valor: med, rotulo: `mediana ${fmtInt.format(med)}` },
+        dica: (j) => [`${fmtInt.format(j.pub)} pessoas`, `${j.mandante} x ${j.visitante}`, `${semDia(j)}, ${fmtData(j.data)} · ${j.comp}`],
+      })),
+      { colunas: ['Data', 'Dia', 'Jogo', 'Competição', 'Público'], linhas: ordenados.map((j) => [fmtData(j.data), semDia(j), `${j.mandante} x ${j.visitante}`, j.comp, fmtInt.format(j.pub)]) });
+    larga(card);
   } else {
-    const v = vazio('Público jogo a jogo', `Disponível quando os filtros deixam até ${MAX_JOGOS_JOGO_A_JOGO} jogos com público (agora há ${fmtInt.format(comPub.length)}). Filtre por um clube ou uma competição.`);
-    v.classList.add('larga');
-    grade.append(v);
+    larga(vazio('Público jogo a jogo', nJogoAJogo(comPub.length, 'com público')));
+  }
+
+  // 6. renda líquida jogo a jogo (mesmos filtros; só jogos com borderô lido)
+  const comRenda = jogos.filter((j) => j.renda != null);
+  if (comRenda.length <= MAX_JOGOS_JOGO_A_JOGO && comRenda.length >= 3) {
+    const ordenados = [...comRenda].sort((x, y) => x.data.localeCompare(y.data));
+    const neg = ordenados.filter((j) => j.renda < 0).length;
+    const card = cartao('Renda líquida jogo a jogo',
+      `${plural(comRenda.length, 'jogo com borderô', 'jogos com borderô')}: ${fmtInt.format(neg)} com despesa maior que a bilheteria (abaixo da linha do zero). Renda líquida = arrecadação − despesas.`,
+      h('div', null, legenda(true), dispersao(ordenados, largura, {
+        valor: (j) => j.renda, eixo: fmtEixoBRL, aria: 'Dispersão da renda líquida de cada jogo ao longo do tempo', cor: (j) => (j.renda < 0 ? 'neg' : 'pos'),
+        dica: (j) => [`${fmtBRL(j.renda)} de renda líquida`, `${j.mandante} x ${j.visitante}`, `${semDia(j)}, ${fmtData(j.data)} · ${j.comp}`,
+          `arrecadação ${fmtBRL(j.bruta)} · despesas ${fmtBRL(j.desp)}`],
+      })),
+      { colunas: ['Data', 'Dia', 'Jogo', 'Competição', 'Arrecadação', 'Despesas', 'Renda líquida'],
+        linhas: ordenados.map((j) => [fmtData(j.data), semDia(j), `${j.mandante} x ${j.visitante}`, j.comp, fmtBRL(j.bruta), fmtBRL(j.desp), fmtBRL(j.renda)]) });
+    larga(card);
+  } else {
+    larga(vazio('Renda líquida jogo a jogo', comRenda.length < 3 ? 'Poucos jogos com borderô lido nos filtros atuais para desenhar este gráfico.' : nJogoAJogo(comRenda.length, 'com borderô')));
   }
   alvo.append(grade);
   // a barra de rolagem da página pode aparecer só depois do primeiro desenho e mudar a largura útil: mede de novo uma vez
