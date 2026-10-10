@@ -37,12 +37,25 @@ import Base from '../layouts/Base.astro';
   <p class="nota" id="aviso-exato" hidden></p>
   <p class="aviso" id="aviso-limpo" hidden></p>
 
-  <div class="paginacao">
+  <div class="barra-topo">
     <span id="contagem" class="muted" role="status">Carregando…</span>
+    <button class="acao" id="limpar" type="button">Limpar filtros</button>
+  </div>
+
+  <div class="abas" role="tablist" aria-label="Formas de ver os jogos">
+    <button type="button" role="tab" id="aba-lista" data-aba="lista" aria-selected="true" aria-controls="painel-lista">Lista</button>
+    <button type="button" role="tab" id="aba-resumo" data-aba="resumo" aria-selected="false" aria-controls="painel-resumo" tabindex="-1">Resumo</button>
+    <button type="button" role="tab" id="aba-graficos" data-aba="graficos" aria-selected="false" aria-controls="painel-graficos" tabindex="-1">Gráficos</button>
+  </div>
+
+  <div id="painel-resumo" role="tabpanel" aria-labelledby="aba-resumo" hidden></div>
+  <div id="painel-graficos" role="tabpanel" aria-labelledby="aba-graficos" hidden></div>
+
+  <div id="painel-lista" role="tabpanel" aria-labelledby="aba-lista">
+  <div class="paginacao">
     <button class="acao" id="ant" type="button">← Anterior</button>
     <span id="pag" class="muted"></span>
     <button class="acao" id="prox" type="button">Próxima →</button>
-    <button class="acao" id="limpar" type="button">Limpar filtros</button>
   </div>
 
   <div class="tabela">
@@ -69,8 +82,12 @@ import Base from '../layouts/Base.astro';
     <span class="sel">I</span> mandante e visitante estão trocados no documento ·
     <span class="sel">F</span> documento ainda não publicado, ou indisponível na federação. Veja a <a href="/metodologia">metodologia</a>.
   </p>
+  </div>
 
   <script>
+    import { renderResumo } from '../scripts/resumo.js';
+    import { renderGraficos } from '../scripts/graficos.js';
+
     const POR_PAGINA = 50;
     const SELOS = { A: 'A conta do borderô não fecha (pode ser desconto legítimo)', D: 'A data do documento difere da data do calendário', I: 'Mandante e visitante trocados no documento', F: 'Documento ainda não publicado ou indisponível na federação' };
     const fmtInt = new Intl.NumberFormat('pt-BR', { maximumFractionDigits: 0 });
@@ -80,6 +97,8 @@ import Base from '../layouts/Base.astro';
     const semAcento = (s) => String(s ?? '').normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
 
     let jogos = [];
+    let estadios = [];         // [[texto de exibição, nome para busca]], indexada por estId
+    let aba = 'lista';
     let filtrados = [];
     let pagina = 0;
     let ordem = { campo: 'data', dir: -1 };
@@ -93,6 +112,7 @@ import Base from '../layouts/Base.astro';
     const papel = () => document.querySelector('input[name=papel]:checked').value;
 
     function carregar(d) {
+      estadios = d.estadios || [];
       jogos = d.linhas.map((l) => {
         const o = Object.fromEntries(d.campos.map((c, i) => [c, l[i]]));
         o.bMand = semAcento(o.mandante);
@@ -113,6 +133,7 @@ import Base from '../layouts/Base.astro';
       clubes.forEach((c) => clubePorNorm.set(c.norm, c.nome));
       lerEndereco();
       aplicar();
+      mudarAba(aba, false);
     }
 
     /** O endereço guarda os filtros (compartilhável): ?time=Flamengo&papel=mandante&uf=RJ ... */
@@ -129,6 +150,7 @@ import Base from '../layouts/Base.astro';
       if (p.get('ate')) $('f-ate').value = p.get('ate');
       if (p.get('situacao') !== null) $('f-status').value = p.get('situacao') === 'todos' ? '' : p.get('situacao');
       if (p.get('bordero')) $('f-bordero').checked = true;
+      if (['resumo', 'graficos'].includes(p.get('aba'))) aba = p.get('aba');
     }
 
     function gravarEndereco() {
@@ -145,6 +167,7 @@ import Base from '../layouts/Base.astro';
       const st = $('f-status').value;
       if (st !== 'realizado') p.set('situacao', st || 'todos');
       if ($('f-bordero').checked) p.set('bordero', '1');
+      if (aba !== 'lista') p.set('aba', aba);
       const q = p.toString();
       history.replaceState(null, '', location.pathname + (q ? '?' + q : ''));
     }
@@ -206,6 +229,7 @@ import Base from '../layouts/Base.astro';
       ordenar();
       pagina = 0;
       desenhar();
+      desenharAba();
     }
 
     function ordenar() {
@@ -310,6 +334,45 @@ import Base from '../layouts/Base.astro';
       ordem = { campo: c, dir: ordem.campo === c ? -ordem.dir : -1 };
       ordenar(); pagina = 0; desenhar();
     }));
+
+    // ── abas: a lista, o resumo e os gráficos mostram os mesmos jogos filtrados ──
+    const ABAS = ['lista', 'resumo', 'graficos'];
+    const aoFiltrar = {
+      competicao: (nome) => { $('f-comp').value = nome; aplicar(); },
+      estadio: (nome) => { $('f-estadio').value = nome; aplicar(); },
+    };
+    function desenharAba() {
+      if (aba === 'resumo') renderResumo($('painel-resumo'), filtrados, estadios, aoFiltrar);
+      if (aba === 'graficos') renderGraficos($('painel-graficos'), filtrados);
+    }
+    function mudarAba(nova, gravar = true) {
+      aba = nova;
+      ABAS.forEach((a) => {
+        const sel = a === aba;
+        $(`aba-${a}`).setAttribute('aria-selected', String(sel));
+        $(`aba-${a}`).tabIndex = sel ? 0 : -1;
+        $(`painel-${a}`).hidden = !sel;
+      });
+      desenharAba();
+      if (gravar) gravarEndereco();
+    }
+    document.querySelectorAll('[role=tab]').forEach((b) => {
+      b.addEventListener('click', () => mudarAba(b.dataset.aba));
+      b.addEventListener('keydown', (e) => {
+        const i = ABAS.indexOf(aba);
+        const j = e.key === 'ArrowRight' ? (i + 1) % 3 : e.key === 'ArrowLeft' ? (i + 2) % 3 : e.key === 'Home' ? 0 : e.key === 'End' ? 2 : -1;
+        if (j < 0) return;
+        e.preventDefault();
+        mudarAba(ABAS[j]);
+        $(`aba-${ABAS[j]}`).focus();
+      });
+    });
+    let tamanhoAnterior = window.innerWidth;
+    let adiar = 0;
+    window.addEventListener('resize', () => {   // gráficos em SVG têm largura fixa: redesenha ao mudar o tamanho da janela
+      clearTimeout(adiar);
+      adiar = setTimeout(() => { if (aba === 'graficos' && window.innerWidth !== tamanhoAnterior) desenharAba(); tamanhoAnterior = window.innerWidth; }, 200);
+    });
 
     fetch('/dados/jogos.json').then((r) => r.json()).then(carregar).catch(() => {
       $('contagem').textContent = 'Não foi possível carregar os dados. Recarregue a página.';

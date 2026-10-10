@@ -29,7 +29,7 @@
   }
 }
 * { box-sizing: border-box; }
-html { -webkit-text-size-adjust: 100%; }
+html { -webkit-text-size-adjust: 100%; overflow-y: scroll; }
 body { margin: 0; background: var(--bg); color: var(--fg); font: 16px/1.55 var(--font); }
 a { color: var(--accent); text-underline-offset: 2px; }
 a:hover { text-decoration-thickness: 2px; }
@@ -125,3 +125,53 @@ td a.time:hover { color: var(--accent); text-decoration-color: var(--accent); }
 #sugestoes li small { color: var(--muted); font-size: .76rem; white-space: nowrap; }
 #sugestoes li:hover, #sugestoes li[aria-selected='true'] { background: var(--accent-soft); }
 #aviso-exato button.acao { margin-left: 6px; padding: 3px 10px; font-size: .85rem; }
+
+/* ── abas do explorador ── */
+.barra-topo { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px; margin: 14px 0 6px; }
+.abas { display: flex; gap: 2px; border-bottom: 1px solid var(--border); margin: 10px 0 16px; overflow-x: auto; overflow-y: hidden; }
+.abas button { font: inherit; font-size: .98rem; font-weight: 600; background: none; border: 0; border-bottom: 3px solid transparent; padding: 9px 16px; color: var(--muted); cursor: pointer; white-space: nowrap; }
+.abas button:hover { color: var(--fg); }
+.abas button[aria-selected='true'] { color: var(--fg); border-bottom-color: var(--accent); }
+.abas button:focus-visible, button.acao:focus-visible, .link-filtro:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+/* ── resumo ── */
+.kpi.sans .v { font-family: var(--font); font-weight: 650; font-variant-numeric: normal; }
+.kpi .d { color: var(--muted); font-size: .8rem; margin-top: 6px; line-height: 1.35; }
+#painel-resumo h2 { margin-top: 28px; }
+.duas.largas { grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr)); gap: 8px 32px; }
+.link-filtro { font: inherit; text-align: left; background: none; border: 0; padding: 0; color: var(--fg); cursor: pointer; text-decoration: underline; text-decoration-color: var(--border); text-underline-offset: 3px; }
+.link-filtro:hover { color: var(--accent); text-decoration-color: var(--accent); }
+.mais { margin-top: 10px; }
+
+/* ── gráficos ── */
+.grade-graficos { display: grid; grid-template-columns: 1fr; gap: 16px; }
+@media (min-width: 900px) { .grade-graficos { grid-template-columns: 1fr 1fr; } }
+.grafico { margin: 0; background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 14px 16px 12px; min-width: 0; }
+.grafico.larga { grid-column: 1 / -1; }
+.grafico h3 { margin: 0 0 2px; font-size: 1rem; }
+.grafico figcaption p { margin: 0 0 10px; line-height: 1.4; }
+.gr-corpo { min-width: 0; }
+.gr-rodape { display: flex; justify-content: flex-end; margin-top: 8px; }
+button.acao.pequeno { font-size: .8rem; padding: 4px 10px; }
+.gr-svg { display: block; max-width: 100%; overflow: visible; }
+.gr-eixo { stroke: var(--border); stroke-width: 1; }
+.gr-grade { stroke: var(--border); stroke-width: 1; opacity: .6; }
+.gr-ref { stroke: var(--muted); stroke-width: 1; opacity: .7; }
+.gr-txt { fill: var(--muted); font-size: 11px; font-family: var(--font); }
+.gr-val { fill: var(--fg); font-size: 11px; font-weight: 600; font-family: var(--font); }
+.gr-barra { fill: var(--bar); }
+.col { outline: none; }
+.col:hover .gr-barra, .col:focus-visible .gr-barra { opacity: .72; }
+.col:focus-visible .gr-hit { stroke: var(--accent); stroke-width: 2; }
+.gr-hit { fill: transparent; }
+.gr-ponto { fill: var(--bar); stroke: var(--card); stroke-width: 2; }
+.gr-destaque { fill: none; stroke: var(--fg); stroke-width: 2; pointer-events: none; }
+.barras.fina .trilho { height: 12px; }
+.barras.fina .trilho i { border-radius: 0 4px 4px 0; }
+.barras.fina li { cursor: default; border-radius: 4px; }
+.barras.fina li:hover, .barras.fina li:focus-visible { background: var(--accent-soft); outline: none; }
+.dica { position: absolute; z-index: 50; display: none; pointer-events: none; max-width: 280px; background: var(--card); color: var(--fg); border: 1px solid var(--border); border-radius: 8px; padding: 7px 10px; box-shadow: 0 6px 18px rgba(0, 0, 0, .18); font-size: .82rem; }
+.dica-valor { font-weight: 700; font-size: .95rem; }
+.dica-txt { color: var(--muted); line-height: 1.35; }
+.grafico.vazio h3 { color: var(--muted); }
+.gr-tabela .tabela { max-height: 340px; overflow: auto; }

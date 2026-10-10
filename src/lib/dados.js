@@ -127,10 +127,56 @@ export function porClube(minimo = 3) {
 
 /** Versão compacta para o explorador (/dados/jogos.json): arrays na ordem de CAMPOS_JSON. */
 export const CAMPOS_JSON = ['data', 'horario', 'uf', 'comp', 'compUrl', 'mandante', 'visitante', 'pm', 'pv', 'estadio', 'ufJogo', 'pub', 'bruta',
-  'desp', 'renda', 'urlS', 'urlB', 'flags', 'status', 'fase', 'rodada', 'falt'];
+  'desp', 'renda', 'urlS', 'urlB', 'flags', 'status', 'fase', 'rodada', 'falt', 'estId'];
+const semAcentoBuild = (s) => String(s ?? '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/\s+/g, ' ').trim();
+
+/** Nome e cidade de um estádio a partir do texto da federação: "Arena Condá - Chapecó - SC" ou "Arena Condá / Chapecó". */
+function partesEstadio(texto) {
+  const e = (texto || '').trim();
+  if (!e) return null;
+  if (e.includes(' / ')) {
+    const [nome, ...resto] = e.split(' / ');
+    return { nome: nome.trim(), cidade: resto.join(' / ').trim() };
+  }
+  const p = e.split(' - ').map((x) => x.trim());
+  if (p.length >= 3) return { nome: p.slice(0, -2).join(' - '), cidade: p[p.length - 2] };
+  if (p.length === 2) return { nome: p[0], cidade: SIGLAS_UF.has(p[1]) ? '' : p[1] };
+  return { nome: p[0], cidade: '' };
+}
+
+/** Une as grafias do mesmo estádio (caixa, acento, "- Cidade - UF" x "/ Cidade"). Estádios de mesmo nome em cidades diferentes
+ *  (ex.: "Estádio Municipal") continuam separados; sem cidade, junta-se ao único estádio de mesmo nome. */
+function agruparEstadios() {
+  const info = jogos.map((j) => {
+    const q = partesEstadio(j.estadio);
+    return q && { ...q, nomeN: semAcentoBuild(q.nome), cidadeN: semAcentoBuild(q.cidade), texto: j.estadio };
+  });
+  const cidadesDoNome = new Map();
+  for (const i of info) if (i && i.cidadeN) (cidadesDoNome.get(i.nomeN) || cidadesDoNome.set(i.nomeN, new Set()).get(i.nomeN)).add(i.cidadeN);
+  const grupos = new Map(); // chave -> { grafias: Map(texto -> n), nomes: Map(nome -> n) }
+  const chaves = info.map((i) => {
+    if (!i) return null;
+    const cidades = cidadesDoNome.get(i.nomeN);
+    const chave = cidades && cidades.size > 1 ? `${i.nomeN}|${i.cidadeN}` : i.nomeN;
+    const g = grupos.get(chave) || grupos.set(chave, { grafias: new Map(), nomes: new Map() }).get(chave);
+    g.grafias.set(i.texto, (g.grafias.get(i.texto) || 0) + 1);
+    g.nomes.set(i.nome, (g.nomes.get(i.nome) || 0) + 1);
+    return chave;
+  });
+  const maisFrequente = (m) => [...m.entries()].sort((a, b) => b[1] - a[1])[0][0];
+  // textos todo em CAIXA ALTA (como algumas federações publicam) são exibidos com iniciais maiúsculas
+  const bonito = (s) => (s !== s.toUpperCase() ? s : s.toLowerCase().replace(/(^|[\s\-/])(\p{L})/gu, (m, a, b) => a + b.toUpperCase()).replace(/ (D[aeo]s?|E) /g, (x) => x.toLowerCase()));
+  const ids = new Map();
+  const estadios = []; // [texto para exibir, nome para buscar]
+  for (const [chave, g] of grupos) { ids.set(chave, estadios.length); estadios.push([bonito(maisFrequente(g.grafias)), bonito(maisFrequente(g.nomes))]); }
+  return { estadios, estIdPorJogo: chaves.map((c) => (c == null ? -1 : ids.get(c))) };
+}
+
 export function jogosCompactos() {
-  const ordenados = [...jogos].sort((a, b) => (b.data || '').localeCompare(a.data || ''));
-  return { campos: CAMPOS_JSON, gerado_em: meta.gerado_em, linhas: ordenados.map((j) => CAMPOS_JSON.map((c) => j[c] ?? null)) };
+  const { estadios, estIdPorJogo } = agruparEstadios();
+  const comId = jogos.map((j, i) => ({ ...j, estId: estIdPorJogo[i] }));
+  const ordenados = comId.sort((a, b) => (b.data || '').localeCompare(a.data || ''));
+  return { campos: CAMPOS_JSON, gerado_em: meta.gerado_em, estadios, linhas: ordenados.map((j) => CAMPOS_JSON.map((c) => j[c] ?? null)) };
 }
 
 /** Público/renda dos clubes COMO MANDANTE, por competição (jogos disputados com público). Alimenta /clubes (/dados/clubes.json):
