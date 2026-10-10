@@ -19,9 +19,9 @@ fcfsc_2026,686,FCF-SC,Federação Catarinense de Futebol,SC,Campeonato Catarinen
 fcfsc_2026,695,FCF-SC,Federação Catarinense de Futebol,SC,Recopa Catarinense,Supercopa,Estadual,2026,https://fcf.com.br/competicoes/profissionais/2026/695/
 fcfsc_2026,698,FCF-SC,Federação Catarinense de Futebol,SC,Campeonato Catarinense – Série B,Série B,Estadual,2026,https://fcf.com.br/competicoes/profissionais/2026/698/
 fcfsc_2026,723,FCF-SC,Federação Catarinense de Futebol,SC,Copa Santa Catarina,Copa,Estadual,2026,https://fcf.com.br/competicoes/profissionais/2026/723/
-ferj,serie-a,FERJ,Federação de Futebol do Estado do Rio de Janeiro,RJ,Campeonato Carioca – Série A1,Série A,Estadual,2026,https://www.fferj.com.br/campeonatos/estadual/profissional/serie-a?genero=MASCULINO
-ferj,serie-a2,FERJ,Federação de Futebol do Estado do Rio de Janeiro,RJ,Campeonato Carioca – Série A2,Série B,Estadual,2026,https://www.fferj.com.br/campeonatos/estadual/profissional/serie-a2?genero=MASCULINO
-ferj,serie-c,FERJ,Federação de Futebol do Estado do Rio de Janeiro,RJ,Campeonato Carioca – Série C,Série C,Estadual,2026,https://www.fferj.com.br/campeonatos/estadual/profissional/serie-c?genero=MASCULINO
+ferj,serie-a,FERJ,Federação de Futebol do Estado do Rio de Janeiro,RJ,Campeonato Carioca – Série A1,Série A,Estadual,2026,https://ferj360.azurewebsites.net/futebolcarioca/portal.html?competicao=83#jogos
+ferj,serie-a2,FERJ,Federação de Futebol do Estado do Rio de Janeiro,RJ,Campeonato Carioca – Série A2,Série B,Estadual,2026,https://ferj360.azurewebsites.net/futebolcarioca/portal.html?competicao=112#jogos
+ferj,serie-c,FERJ,Federação de Futebol do Estado do Rio de Janeiro,RJ,Campeonato Carioca – Série C,Série D,Estadual,2026,https://ferj360.azurewebsites.net/futebolcarioca/portal.html?competicao=115#jogos
 fern,Potiguar_A1_2026,FNF,Federação Norte-Riograndense de Futebol,RN,Campeonato Potiguar – Série A,Série A,Estadual,2026,https://www.fnf.org.br/tabela/195/estadual-primeira-divisao-2026
 fes_2026,capixabao_2026,FES,Federação de Futebol do Espírito Santo,ES,Campeonato Capixaba – Série A,Série A,Estadual,2026,https://futebolcapixaba.com/campeonatos/capixabao-2026/
 fes_2026,copa_es_2026,FES,Federação de Futebol do Espírito Santo,ES,Copa Espírito Santo,Copa,Estadual,2026,https://futebolcapixaba.com/campeonatos/copa-es-2026/
@@ -50,3 +50,6 @@ fpfpr_2026,segundona_2026,FPF-PR,Federação Paranaense de Futebol,PR,Campeonato
 fpfpr_2026,terceirona_2026,FPF-PR,Federação Paranaense de Futebol,PR,Campeonato Paranaense – Série C (Terceirona),Série C,Estadual,2026,https://federacaopr.com.br/campeonato/profissional/2026/66/
 fsf,CampSergipanoA1_2026,FSF,Federação Sergipana de Futebol,SE,Campeonato Sergipano – Série A1,Série A,Estadual,2026,https://fsf-se.com.br/campeonatos/sergipano-a1-2026/
 ftf,ftf_tocantinense_a1_2026,FTF,Federação Tocantinense de Futebol,TO,Campeonato Tocantinense – Série A,Série A,Estadual,2026,https://www.ftf.org.br/federacao;page=Competi%C3%A7%C3%B5es;id=45
+ferj,serie-b1,FERJ,Federação de Futebol do Estado do Rio de Janeiro,RJ,Campeonato Carioca – Série B1,Série C,Estadual,2026,https://ferj360.azurewebsites.net/futebolcarioca/portal.html?competicao=79#jogos
+ferj,serie-b2,FERJ,Federação de Futebol do Estado do Rio de Janeiro,RJ,Campeonato Carioca – Série B2,Série D,Estadual,2026,https://ferj360.azurewebsites.net/futebolcarioca/portal.html?competicao=80#jogos
+ferj,copa-rio,FERJ,Federação de Futebol do Estado do Rio de Janeiro,RJ,Copa Rio de Profissionais,Copa,Estadual,2026,https://ferj360.azurewebsites.net/futebolcarioca/portal.html?competicao=113#jogos
