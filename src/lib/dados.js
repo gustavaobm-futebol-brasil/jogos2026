@@ -130,46 +130,106 @@ export const CAMPOS_JSON = ['data', 'horario', 'uf', 'comp', 'compUrl', 'mandant
   'desp', 'renda', 'urlS', 'urlB', 'flags', 'status', 'fase', 'rodada', 'falt', 'estId'];
 const semAcentoBuild = (s) => String(s ?? '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/\s+/g, ' ').trim();
 
-/** Nome e cidade de um estádio a partir do texto da federação: "Arena Condá - Chapecó - SC" ou "Arena Condá / Chapecó". */
+// Palavras que não distinguem um estádio (título, tipo de praça, prenomes comuns): ficam de fora da comparação de nomes.
+const PALAVRAS_COMUNS = new Set(`estadio arena municipal parque complexo centro esportivo governador prefeito presidente doutor professor major coronel
+  general vereador deputado senador campo gigante estadual jornalista engenheiro comendador capitao tenente
+  jose joao luiz luis antonio carlos pedro paulo francisco manoel manuel maria nilton jorge portoes fechados`.split(/\s+/));
+
+const siglaUF = (x) => SIGLAS_UF.has(x.toUpperCase()) && x.length === 2;
+
+/** Nome e cidade de um estádio a partir do texto da federação: "Arena Condá - Chapecó - SC", "Arena Condá / Chapecó" ou
+ *  "Kleber Andrade, Cariacica". Observações como "(Portões Fechados)" são descartadas; apelidos entre parênteses ou aspas
+ *  ficam no nome (ajudam a reconhecer o mesmo estádio). */
 function partesEstadio(texto) {
-  const e = (texto || '').trim();
+  let e = (texto || '').replace(/\((?=[^)]*(port[oõ]es|fechad))[^)]*\)/gi, '').replace(/\s+/g, ' ').trim();
   if (!e) return null;
+  let nome = e, cidade = '';
   if (e.includes(' / ')) {
-    const [nome, ...resto] = e.split(' / ');
-    return { nome: nome.trim(), cidade: resto.join(' / ').trim() };
+    const [n, ...resto] = e.split(' / ');
+    nome = n.trim();
+    cidade = resto.join(' / ').trim();
+  } else if (e.includes(' - ')) {
+    const p = e.split(' - ').map((x) => x.trim());
+    if (p.length >= 3) { nome = p.slice(0, -2).join(' - '); cidade = p[p.length - 2]; }
+    else { nome = p[0]; cidade = siglaUF(p[1]) ? '' : p[1]; }
+  } else if (e.includes(', ')) {
+    const k = e.lastIndexOf(', ');
+    nome = e.slice(0, k).trim();
+    cidade = e.slice(k + 2).trim();
   }
-  const p = e.split(' - ').map((x) => x.trim());
-  if (p.length >= 3) return { nome: p.slice(0, -2).join(' - '), cidade: p[p.length - 2] };
-  if (p.length === 2) return { nome: p[0], cidade: SIGLAS_UF.has(p[1]) ? '' : p[1] };
-  return { nome: p[0], cidade: '' };
+  nome = nome.replace(/\s+-\s+([A-Za-z]{2})$/, (m, uf) => (siglaUF(uf) ? '' : m)).trim();   // "JOÃO Saldanha - RJ" -> "JOÃO Saldanha"
+  if (!/[a-zA-ZÀ-ÿ]{3}/.test(cidade)) cidade = '';                                           // "....." não é cidade
+  return { nome, cidade };
 }
 
-/** Une as grafias do mesmo estádio (caixa, acento, "- Cidade - UF" x "/ Cidade"). Estádios de mesmo nome em cidades diferentes
- *  (ex.: "Estádio Municipal") continuam separados; sem cidade, junta-se ao único estádio de mesmo nome. */
+const fichaTokens = (nome) => new Set((semAcentoBuild(nome).match(/[a-z]{4,}/g) || []).filter((x) => !PALAVRAS_COMUNS.has(x)));
+const contido = (a, b) => a.size > 0 && [...a].every((x) => b.has(x)) && (a.size > 1 || [...a][0].length >= 5);
+
+/** Une as grafias do mesmo estádio. 1) mesma grafia normalizada (caixa, acento); 2) nomes contidos um no outro ("Mineirão" e
+ *  'Governador Magalhães Pinto "Mineirão"'), desde que a cidade seja a mesma, ou desconhecida de um dos lados e o estado coincida.
+ *  Estádios de mesmo nome em cidades diferentes (ex.: "Estádio Municipal") continuam separados, e um nome sem cidade que casaria
+ *  com estádios de cidades diferentes não é unido a nenhum (ambíguo). */
 function agruparEstadios() {
   const info = jogos.map((j) => {
     const q = partesEstadio(j.estadio);
-    return q && { ...q, nomeN: semAcentoBuild(q.nome), cidadeN: semAcentoBuild(q.cidade), texto: j.estadio };
+    return q && { ...q, nomeN: semAcentoBuild(q.nome), cidadeN: semAcentoBuild(q.cidade), texto: j.estadio, uf: j.ufJogo };
   });
+  // 1) grupos por nome normalizado (+ cidade quando o mesmo nome existe em cidades diferentes)
   const cidadesDoNome = new Map();
   for (const i of info) if (i && i.cidadeN) (cidadesDoNome.get(i.nomeN) || cidadesDoNome.set(i.nomeN, new Set()).get(i.nomeN)).add(i.cidadeN);
-  const grupos = new Map(); // chave -> { grafias: Map(texto -> n), nomes: Map(nome -> n) }
-  const chaves = info.map((i) => {
+  const grupos = new Map();
+  const chaveDoJogo = info.map((i) => {
     if (!i) return null;
     const cidades = cidadesDoNome.get(i.nomeN);
     const chave = cidades && cidades.size > 1 ? `${i.nomeN}|${i.cidadeN}` : i.nomeN;
-    const g = grupos.get(chave) || grupos.set(chave, { grafias: new Map(), nomes: new Map() }).get(chave);
+    const g = grupos.get(chave) || grupos.set(chave, { chave, grafias: new Map(), nomes: new Map(), cidades: new Map(), ufs: new Map(), jogos: 0, tokens: new Set() }).get(chave);
     g.grafias.set(i.texto, (g.grafias.get(i.texto) || 0) + 1);
     g.nomes.set(i.nome, (g.nomes.get(i.nome) || 0) + 1);
+    if (i.cidadeN) g.cidades.set(i.cidadeN, (g.cidades.get(i.cidadeN) || 0) + 1);
+    if (i.uf) g.ufs.set(i.uf, (g.ufs.get(i.uf) || 0) + 1);
+    g.jogos++;
+    for (const tk of fichaTokens(i.nome)) g.tokens.add(tk);
     return chave;
   });
-  const maisFrequente = (m) => [...m.entries()].sort((a, b) => b[1] - a[1])[0][0];
-  // textos todo em CAIXA ALTA (como algumas federações publicam) são exibidos com iniciais maiúsculas
+  const lista = [...grupos.values()];
+  const maisFrequente = (m) => (m.size ? [...m.entries()].sort((a, b) => b[1] - a[1])[0][0] : '');
+  for (const g of lista) { g.cidade = maisFrequente(g.cidades); g.uf = maisFrequente(g.ufs); }
+
+  // 2) uniões por nome contido
+  const pai = new Map(lista.map((g) => [g.chave, g.chave]));
+  const raiz = (k) => { while (pai.get(k) !== k) { pai.set(k, pai.get(pai.get(k))); k = pai.get(k); } return k; };
+  const unir = (a, b) => { const ra = raiz(a), rb = raiz(b); if (ra !== rb) pai.set(ra, rb); };
+  const parecidos = (a, b) => contido(a.tokens, b.tokens) || contido(b.tokens, a.tokens);
+  for (let x = 0; x < lista.length; x++) {
+    for (let y = x + 1; y < lista.length; y++) {
+      const a = lista[x], b = lista[y];
+      if (a.cidade && b.cidade && a.cidade === b.cidade && parecidos(a, b)) unir(a.chave, b.chave);
+    }
+  }
+  for (const g of lista.filter((z) => !z.cidade)) {                      // sem cidade: precisa de destino único
+    const alvos = lista.filter((o) => o !== g && o.cidade && o.uf === g.uf && parecidos(g, o));
+    if (alvos.length && new Set(alvos.map((o) => o.cidade)).size === 1) alvos.forEach((o) => unir(g.chave, o.chave));
+    else if (!alvos.length) for (const o of lista) if (o !== g && !o.cidade && o.uf === g.uf && parecidos(g, o)) unir(g.chave, o.chave);
+  }
+
+  // 3) um rótulo por grupo final: prefere a grafia com cidade ("Nome - Cidade - UF") e, entre elas, a mais frequente
+  const finais = new Map();
+  for (const g of lista) {
+    const r = raiz(g.chave);
+    const f = finais.get(r) || finais.set(r, { grafias: new Map(), nomes: new Map(), jogos: 0 }).get(r);
+    for (const [k, v] of g.grafias) f.grafias.set(k, (f.grafias.get(k) || 0) + v);
+    for (const [k, v] of g.nomes) f.nomes.set(k, (f.nomes.get(k) || 0) + v);
+    f.jogos += g.jogos;
+  }
+  const comCidade = (txt) => { const q = partesEstadio(txt); return q && q.cidade ? 1 : 0; };
   const bonito = (s) => (s !== s.toUpperCase() ? s : s.toLowerCase().replace(/(^|[\s\-/])(\p{L})/gu, (m, a, b) => a + b.toUpperCase()).replace(/ (D[aeo]s?|E) /g, (x) => x.toLowerCase()));
-  const ids = new Map();
-  const estadios = []; // [texto para exibir, nome para buscar]
-  for (const [chave, g] of grupos) { ids.set(chave, estadios.length); estadios.push([bonito(maisFrequente(g.grafias)), bonito(maisFrequente(g.nomes))]); }
-  return { estadios, estIdPorJogo: chaves.map((c) => (c == null ? -1 : ids.get(c))) };
+  const ids = new Map(), estadios = [];
+  for (const [r, f] of finais) {
+    const melhor = [...f.grafias.entries()].sort((a, b) => comCidade(b[0]) - comCidade(a[0]) || b[1] - a[1])[0][0];
+    ids.set(r, estadios.length);
+    estadios.push([bonito(melhor), bonito(partesEstadio(melhor).nome)]);
+  }
+  return { estadios, estIdPorJogo: chaveDoJogo.map((c) => (c == null ? -1 : ids.get(raiz(c)))), membros: finais };
 }
 
 export function jogosCompactos() {
@@ -210,4 +270,11 @@ export function clubesPorCompeticao() {
   });
   return { clubes: nomes.map((n) => [n, ufDe(doClube.get(n))]), comps, linhas,
     campos: ['clube', 'comp', 'n', 'pubTotal', 'maior', 'maiorContra', 'maiorData', 'rendaTotal', 'nRenda'] };
+}
+
+/** Só para conferência no build: grupos com mais de uma grafia. */
+export function estadiosUnidos() {
+  const { estadios, membros } = agruparEstadios();
+  return [...membros.values()].filter((f) => f.grafias.size > 1).map((f) => ({ jogos: f.jogos, grafias: [...f.grafias.entries()].sort((a, b) => b[1] - a[1]) }))
+    .sort((a, b) => b.jogos - a.jogos);
 }

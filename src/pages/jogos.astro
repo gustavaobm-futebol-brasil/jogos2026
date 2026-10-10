@@ -35,6 +35,7 @@ import Base from '../layouts/Base.astro';
     <label class="marcar"><input type="checkbox" id="f-bordero" /> só com borderô (valores)</label>
   </form>
   <p class="nota" id="aviso-exato" hidden></p>
+  <p class="nota" id="aviso-estadio" hidden></p>
   <p class="aviso" id="aviso-limpo" hidden></p>
 
   <div class="barra-topo">
@@ -99,6 +100,7 @@ import Base from '../layouts/Base.astro';
     let jogos = [];
     let estadios = [];         // [[texto de exibição, nome para busca]], indexada por estId
     let aba = 'lista';
+    let estFiltro = -1;        // estádio escolhido no Resumo (índice em `estadios`): vale para todas as grafias do mesmo estádio
     let filtrados = [];
     let pagina = 0;
     let ordem = { campo: 'data', dir: -1 };
@@ -151,6 +153,7 @@ import Base from '../layouts/Base.astro';
       if (p.get('situacao') !== null) $('f-status').value = p.get('situacao') === 'todos' ? '' : p.get('situacao');
       if (p.get('bordero')) $('f-bordero').checked = true;
       if (['resumo', 'graficos'].includes(p.get('aba'))) aba = p.get('aba');
+      if (p.get('est')) estFiltro = estadios.findIndex((e) => e[0] === p.get('est'));
     }
 
     function gravarEndereco() {
@@ -167,6 +170,7 @@ import Base from '../layouts/Base.astro';
       const st = $('f-status').value;
       if (st !== 'realizado') p.set('situacao', st || 'todos');
       if ($('f-bordero').checked) p.set('bordero', '1');
+      if (estFiltro >= 0) p.set('est', estadios[estFiltro][0]);
       if (aba !== 'lista') p.set('aba', aba);
       const q = p.toString();
       history.replaceState(null, '', location.pathname + (q ? '?' + q : ''));
@@ -185,7 +189,7 @@ import Base from '../layouts/Base.astro';
         const vis = exato ? j.visitante === nomeExato : j.bVis.includes(t);
         return pp === 'mandante' ? mand : pp === 'visitante' ? vis : mand || vis;
       };
-      return (j) => (!clube || casaClube(j)) && (!est || j.bEst.includes(est)) && (!uf || j.ufJogo === uf) && (!comp || j.comp === comp) &&
+      return (j) => (!clube || casaClube(j)) && (!est || j.bEst.includes(est)) && (estFiltro < 0 || j.estId === estFiltro) && (!uf || j.ufJogo === uf) && (!comp || j.comp === comp) &&
         (!de || (j.data && j.data >= de)) && (!ate || (j.data && j.data <= ate)) && (!st || j.status === st) && (!soB || j.urlB);
     }
 
@@ -225,6 +229,15 @@ import Base from '../layouts/Base.astro';
       const limpo = $('aviso-limpo');
       limpo.hidden = !removidos.length;
       if (removidos.length) limpo.textContent = `Filtro removido porque não há jogos com essa combinação — ${removidos.join('; ')}.`;
+      const avEst = $('aviso-estadio');
+      avEst.hidden = estFiltro < 0;
+      if (estFiltro >= 0) {
+        avEst.replaceChildren(document.createTextNode('Mostrando só os jogos no estádio '));
+        const b = document.createElement('b'); b.textContent = estadios[estFiltro][0]; avEst.append(b, document.createTextNode('. '));
+        const x = document.createElement('button'); x.type = 'button'; x.className = 'acao'; x.textContent = 'Remover este filtro';
+        x.addEventListener('click', () => { estFiltro = -1; aplicar(); });
+        avEst.append(x);
+      }
       gravarEndereco();
       ordenar();
       pagina = 0;
@@ -328,7 +341,7 @@ import Base from '../layouts/Base.astro';
     document.querySelectorAll('input[name=papel]').forEach((r) => r.addEventListener('change', aplicar));
     $('ant').addEventListener('click', () => { pagina--; desenhar(); window.scrollTo({ top: 0 }); });
     $('prox').addEventListener('click', () => { pagina++; desenhar(); window.scrollTo({ top: 0 }); });
-    $('limpar').addEventListener('click', () => { $('filtros').reset(); forcarParcial = false; fecharSugestoes(); aplicar(); });
+    $('limpar').addEventListener('click', () => { $('filtros').reset(); forcarParcial = false; estFiltro = -1; fecharSugestoes(); aplicar(); });
     document.querySelectorAll('th[data-ord]').forEach((th) => th.addEventListener('click', () => {
       const c = th.dataset.ord;
       ordem = { campo: c, dir: ordem.campo === c ? -ordem.dir : -1 };
@@ -339,7 +352,7 @@ import Base from '../layouts/Base.astro';
     const ABAS = ['lista', 'resumo', 'graficos'];
     const aoFiltrar = {
       competicao: (nome) => { $('f-comp').value = nome; aplicar(); },
-      estadio: (nome) => { $('f-estadio').value = nome; aplicar(); },
+      estadio: (id) => { estFiltro = id; aplicar(); },
     };
     function desenharAba() {
       if (aba === 'resumo') renderResumo($('painel-resumo'), filtrados, estadios, aoFiltrar);

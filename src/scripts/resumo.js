@@ -32,7 +32,7 @@ function jogoTxt(j) {
  * @param {HTMLElement} alvo      painel onde desenhar
  * @param {object[]} jogos        jogos filtrados (linhas do explorador)
  * @param {string[][]} estadios   tabela [texto de exibição, nome para busca] indexada por j.estId
- * @param {{competicao:(nome:string)=>void, estadio:(nome:string)=>void}} aoFiltrar  cliques nas tabelas aplicam o filtro
+ * @param {{competicao:(nome:string)=>void, estadio:(id:number)=>void}} aoFiltrar  cliques nas tabelas aplicam o filtro
  */
 export function renderResumo(alvo, jogos, estadios, aoFiltrar) {
   alvo.replaceChildren();
@@ -106,7 +106,7 @@ export function renderResumo(alvo, jogos, estadios, aoFiltrar) {
   const secEst = h('section', null, h('h2', { text: 'Jogos por estádio' }));
   const desenharEst = (tudo) => {
     secEst.querySelectorAll('.tabela, .mais, .muted').forEach((n) => n.remove());
-    secEst.append(tabela([['Estádio', false], ...cab.slice(1)], tudo ? linhasEst : linhasEst.slice(0, POR_ESTADIO_INICIAL), (l) => aoFiltrar.estadio(l.busca)));
+    secEst.append(tabela([['Estádio', false], ...cab.slice(1)], tudo ? linhasEst : linhasEst.slice(0, POR_ESTADIO_INICIAL), (l) => aoFiltrar.estadio(l.chave)));
     if (linhasEst.length > POR_ESTADIO_INICIAL) {
       secEst.append(h('button', { type: 'button', class: 'acao mais', onclick: () => desenharEst(!tudo) },
         tudo ? 'Mostrar só os 15 com mais jogos' : `Ver todos os ${fmtInt.format(linhasEst.length)} estádios`));
