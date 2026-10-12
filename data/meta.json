@@ -1,9 +1,9 @@
 {
- "gerado_em": "2026-10-12 12:44",
- "sha256": "aa2eeab19ebab880a14f4ff9b3c19ea8db7b8c63a6bb57443f350d8826b257a1",
- "jogos": 4535,
- "realizados": 4387,
- "com_sumula": 4309,
+ "gerado_em": "2026-10-12 13:05",
+ "sha256": "a06987d72f9a01d20b0a53296ac0ce3886a8cb6e039bce900dcc3d7102a7e495",
+ "jogos": 4548,
+ "realizados": 4400,
+ "com_sumula": 4319,
  "com_bordero": 4291,
  "por_fonte": {
   "cbf": 1868,
@@ -15,7 +15,7 @@
   "ferj": 356,
   "fern": 38,
   "fes_2026": 92,
-  "ffac": 34,
+  "ffac": 47,
   "ffdf": 50,
   "ffer": 48,
   "ffms": 55,
