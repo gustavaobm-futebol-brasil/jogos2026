@@ -136,6 +136,23 @@ const clubes = porClube(MINIMO).sort((a, b) => b.pubMedio - a.pubMedio);
       history.replaceState(null, '', location.pathname + (p.toString() ? '?' + p : ''));
     }
 
+    /** Opções do filtro de competição: as que têm algum clube com jogo em casa com público, com o número de clubes. Com um estado
+     *  escolhido, só as competições em que clubes DESSE estado jogaram em casa, contando só os clubes do estado. Mantém a
+     *  competição selecionada se ela ainda existir; senão volta para "Todas". */
+    function montarCompeticoes(atual) {
+      const uf = $('f-uf-clube').value;
+      const clubes = new Map();            // índice da competição -> clubes (índices) com jogo em casa nela
+      for (const l of dados.linhas) {
+        if (uf && dados.clubes[l[0]][1] !== uf) continue;
+        if (!clubes.has(l[1])) clubes.set(l[1], new Set());
+        clubes.get(l[1]).add(l[0]);
+      }
+      const sel = $('f-comp-clube');
+      sel.innerHTML = '<option value="">Todas</option>' + dados.comps.map((c, i) => (clubes.has(i)
+        ? `<option value="${esc(c)}">${esc(c)} (${clubes.get(i).size})</option>` : '')).join('');
+      sel.value = [...sel.options].some((o) => o.value === atual) ? atual : '';
+    }
+
     fetch('/dados/clubes.json').then((r) => r.json()).then((d) => {
       dados = d;
       participantes = d.participantes.map((l) => new Set(l));
@@ -143,21 +160,18 @@ const clubes = porClube(MINIMO).sort((a, b) => b.pubMedio - a.pubMedio);
       // estados: só os que têm clube com jogo em casa registrado
       const ufs = [...new Set(d.clubes.map((c) => c[1]).filter(Boolean))].sort((a, b) => a.localeCompare(b, 'pt-BR'));
       $('f-uf-clube').insertAdjacentHTML('beforeend', ufs.map((u) => `<option value="${esc(u)}">${esc(u)}</option>`).join(''));
-      // opções: competições com o número de clubes (com pelo menos 1 jogo em casa com público)
-      const nClubes = new Map();
-      for (const l of d.linhas) nClubes.set(l[1], (nClubes.get(l[1]) || 0) + 1);
-      $('f-comp-clube').insertAdjacentHTML('beforeend', d.comps.map((c, i) => `<option value="${esc(c)}">${esc(c)} (${nClubes.get(i) || 0})</option>`).join(''));
       const p = new URLSearchParams(location.search);
-      if (p.get('comp') && d.comps.includes(p.get('comp'))) $('f-comp-clube').value = p.get('comp');
-      if (p.get('q')) $('busca-clube').value = p.get('q');
       if (p.get('uf') && ufs.includes(p.get('uf'))) $('f-uf-clube').value = p.get('uf');
+      montarCompeticoes(p.get('comp') || '');
+      if (p.get('q')) $('busca-clube').value = p.get('q');
       $('f-todos-jogos').checked = p.get('todos') === '1';
       const sem = p.get('sem') || (p.get('semBr') === '1' ? 'ABCD' : '');   // (semBr=1: link antigo = as quatro séries)
       document.querySelectorAll('.f-sem-serie').forEach((i) => { i.checked = sem.includes(i.value); });
       desenhar();
     }).catch(() => { /* fica a tabela renderizada no build (todas as competições) */ });
 
-    for (const el of [$('f-comp-clube'), $('f-uf-clube'), $('f-todos-jogos'), ...document.querySelectorAll('.f-sem-serie')]) el.addEventListener('input', () => dados && desenhar());
+    for (const el of [$('f-comp-clube'), $('f-todos-jogos'), ...document.querySelectorAll('.f-sem-serie')]) el.addEventListener('input', () => dados && desenhar());
+    $('f-uf-clube').addEventListener('input', () => { if (!dados) return; montarCompeticoes($('f-comp-clube').value); desenhar(); });
     $('busca-clube').addEventListener('input', () => dados && desenhar());
     document.querySelectorAll('th[data-ord]').forEach((th) => th.addEventListener('click', () => {
       if (!dados) return;
