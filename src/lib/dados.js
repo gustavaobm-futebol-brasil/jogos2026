@@ -255,35 +255,49 @@ export function jogosCompactos() {
 }
 
 /** Público/renda dos clubes COMO MANDANTE, por competição (jogos disputados com público). Alimenta /clubes (/dados/clubes.json):
- *  o navegador soma as linhas de todas as competições ou só as da competição escolhida no filtro. */
+ *  o navegador soma as linhas de todas as competições, só as da competição escolhida, ou (opção) as de todas as competições dos
+ *  clubes que participam da escolhida (`participantes`). `brasileiro` marca os clubes que jogaram alguma série (A–D) do Brasileiro. */
 export function clubesPorCompeticao() {
-  const grupos = new Map(); // `${clube}\u0000${comp}` -> jogos
-  const doClube = new Map(); // clube -> jogos (todas as competições), para descobrir a UF
+  const grupos = new Map(); // `${clube} ${comp}` -> jogos
+  const doClube = new Map(); // clube -> jogos em casa (todas as competições), para descobrir a UF
+  const participa = new Map(); // comp -> Set de clubes (mandantes ou visitantes, com ou sem público)
+  const brasileiro = new Set();
+  const naSerieDoBrasileiro = (j) => j.fonte === 'cbf' && j.nivel === 'Nacional' && /^S[ée]rie [ABCD]$/.test(j.divisao) && /Brasileiro/.test(j.comp);
   for (const j of realizados) {
-    if (j.pub == null) continue;
-    const k = `${j.mandante}\u0000${j.comp}`;
-    if (!grupos.has(k)) grupos.set(k, []);
-    grupos.get(k).push(j);
+    for (const c of [j.mandante, j.visitante]) {
+      if (!c) continue;
+      if (!participa.has(j.comp)) participa.set(j.comp, new Set());
+      participa.get(j.comp).add(c);
+      if (naSerieDoBrasileiro(j)) brasileiro.add(c);
+    }
     if (!doClube.has(j.mandante)) doClube.set(j.mandante, []);
     doClube.get(j.mandante).push(j);
+    if (j.pub == null) continue;
+    const k = `${j.mandante} ${j.comp}`;
+    if (!grupos.has(k)) grupos.set(k, []);
+    grupos.get(k).push(j);
   }
-  const nomes = [...doClube.keys()].sort((a, b) => a.localeCompare(b, 'pt-BR'));
+  const todos = new Set([...doClube.keys(), ...[...participa.values()].flatMap((s) => [...s])]);
+  const nomes = [...todos].sort((a, b) => a.localeCompare(b, 'pt-BR'));
   const comps = [...new Set(realizados.filter((j) => j.pub != null).map((j) => j.comp))].sort((a, b) => a.localeCompare(b, 'pt-BR'));
+  // UF do clube = estado em que mais jogou em casa (pelo estádio; sem sigla no estádio, vale o estado da competição estadual)
   const ufDe = (js) => {
     const cont = {};
-    for (const j of js) if (j.uf && j.uf !== 'BR') cont[j.uf] = (cont[j.uf] || 0) + 1;
-    return Object.entries(cont).sort((a, b) => b[1] - a[1])[0]?.[0] ?? 'BR';
+    for (const j of js) if (j.ufJogo) cont[j.ufJogo] = (cont[j.ufJogo] || 0) + 1;
+    return Object.entries(cont).sort((a, b) => b[1] - a[1])[0]?.[0] ?? '';
   };
   const iClube = new Map(nomes.map((n, i) => [n, i]));
   const iComp = new Map(comps.map((n, i) => [n, i]));
   const linhas = [...grupos.entries()].map(([k, js]) => {
-    const [clube, comp] = k.split('\u0000');
+    const [clube, comp] = k.split(' ');
     const maior = js.reduce((a, b) => (b.pub > a.pub ? b : a));
     const comRenda = js.filter((j) => j.renda != null);
     return [iClube.get(clube), iComp.get(comp), js.length, soma(js.map((j) => j.pub)), maior.pub, maior.visitante, maior.data,
       soma(comRenda.map((j) => j.renda)), comRenda.length];
   });
-  return { clubes: nomes.map((n) => [n, ufDe(doClube.get(n))]), comps, linhas,
+  return { clubes: nomes.map((n) => [n, ufDe(doClube.get(n) || [])]), comps, linhas,
+    participantes: comps.map((c) => [...(participa.get(c) || [])].map((n) => iClube.get(n))),
+    brasileiro: [...brasileiro].map((n) => iClube.get(n)),
     campos: ['clube', 'comp', 'n', 'pubTotal', 'maior', 'maiorContra', 'maiorData', 'rendaTotal', 'nRenda'] };
 }
 

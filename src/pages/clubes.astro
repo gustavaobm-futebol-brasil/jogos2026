@@ -14,6 +14,11 @@ const clubes = porClube(MINIMO).sort((a, b) => b.pubMedio - a.pubMedio);
   <div class="filtros" id="filtros-clubes">
     <label>Clube ou estado<input type="search" id="busca-clube" placeholder="ex.: Cruzeiro, MG" autocomplete="off" /></label>
     <label>Competição<select id="f-comp-clube"><option value="">Todas</option></select></label>
+    <label>Estado<select id="f-uf-clube"><option value="">Todos</option></select></label>
+  </div>
+  <div class="filtros" id="opcoes-clubes">
+    <label class="marcar" id="lbl-todos-jogos" hidden><input type="checkbox" id="f-todos-jogos" /> Incluir os jogos dos clubes em todas as competições (não só nesta)</label>
+    <label class="marcar"><input type="checkbox" id="f-sem-br" /> Ocultar clubes que jogaram o Brasileiro (Séries A, B, C e D)</label>
   </div>
   <p class="nota" id="nota-comp" hidden></p>
   <p class="muted small" id="contagem-clubes" role="status">{clubes.length} clubes</p>
@@ -56,14 +61,19 @@ const clubes = porClube(MINIMO).sort((a, b) => b.pubMedio - a.pubMedio);
     const fmtData = (iso) => (iso ? iso.split('-').reverse().join('/') : '');
 
     let dados = null;          // resposta de /dados/clubes.json
+    let participantes = [];    // por competição: Set dos índices de clube que a disputam (mandante ou visitante)
+    let doBrasileiro = new Set();
     let ordem = { campo: 'pubMedio', dir: -1 };
 
     /** Soma as linhas do clube nas competições escolhidas (todas, ou só a selecionada). */
-    function agregar(comp) {
+    function agregar(comp, todosJogos) {
       const iComp = comp ? dados.comps.indexOf(comp) : -1;
+      // "todosJogos": os mesmos clubes que disputam a competição, mas somando os jogos em casa de TODAS as competições
+      const doGrupo = comp && todosJogos ? participantes[iComp] : null;
       const porClube = new Map();
       for (const [ic, icomp, n, pubTotal, maior, contra, dataMaior, rendaTotal, nRenda] of dados.linhas) {
-        if (iComp >= 0 && icomp !== iComp) continue;
+        if (doGrupo) { if (!doGrupo.has(ic)) continue; }
+        else if (iComp >= 0 && icomp !== iComp) continue;
         const a = porClube.get(ic) || { n: 0, pubTotal: 0, maior: -1, contra: '', dataMaior: '', rendaTotal: 0, nRenda: 0 };
         a.n += n; a.pubTotal += pubTotal; a.rendaTotal += rendaTotal; a.nRenda += nRenda;
         if (maior > a.maior) { a.maior = maior; a.contra = contra; a.dataMaior = dataMaior; }
@@ -73,24 +83,29 @@ const clubes = porClube(MINIMO).sort((a, b) => b.pubMedio - a.pubMedio);
       const minimo = comp ? 1 : MINIMO_GERAL;
       return [...porClube.entries()].filter(([, a]) => a.n >= minimo).map(([ic, a]) => ({
         nome: dados.clubes[ic][0], uf: dados.clubes[ic][1], n: a.n, pubMedio: a.pubTotal / a.n, maior: a.maior, contra: a.contra, dataMaior: a.dataMaior,
-        rendaMedia: a.nRenda ? a.rendaTotal / a.nRenda : null, nRenda: a.nRenda,
+        rendaMedia: a.nRenda ? a.rendaTotal / a.nRenda : null, nRenda: a.nRenda, ic,
       }));
     }
 
     function desenhar() {
       const comp = $('f-comp-clube').value;
+      const todos = !!comp && $('f-todos-jogos').checked;
+      const uf = $('f-uf-clube').value;
+      const semBr = $('f-sem-br').checked;
+      $('lbl-todos-jogos').hidden = !comp;
       const q = semAcento($('busca-clube').value.trim());
       const { campo, dir } = ordem;
-      const linhas = agregar(comp).filter((c) => !q || semAcento(c.nome).includes(q) || semAcento(c.uf).includes(q)).sort((a, b) => {
+      const linhas = agregar(comp, todos).filter((c) => (!q || semAcento(c.nome).includes(q) || semAcento(c.uf).includes(q))
+        && (!uf || c.uf === uf) && (!semBr || !doBrasileiro.has(c.ic))).sort((a, b) => {
         const x = campo === 'nome' || campo === 'uf' ? semAcento(a[campo]) : a[campo], y = campo === 'nome' || campo === 'uf' ? semAcento(b[campo]) : b[campo];
         if (x == null && y == null) return 0;
         if (x == null) return 1;
         if (y == null) return -1;
         return (x < y ? -1 : x > y ? 1 : 0) * dir;
       });
-      const extra = comp ? `&comp=${encodeURIComponent(comp)}` : '';
+      const extra = comp && !todos ? `&comp=${encodeURIComponent(comp)}` : '';
       $('corpo-clubes').innerHTML = linhas.map((c) => `<tr>
-        <td><a class="time" href="/jogos?time=${encodeURIComponent(c.nome)}${extra}" title="Ver os jogos deste time${comp ? ' nesta competição' : ''}">${esc(c.nome)}</a></td>
+        <td><a class="time" href="/jogos?time=${encodeURIComponent(c.nome)}${extra}" title="Ver os jogos deste time${comp && !todos ? ' nesta competição' : ''}">${esc(c.nome)}</a></td>
         <td>${esc(c.uf)}</td>
         <td class="n"><a href="/jogos?time=${encodeURIComponent(c.nome)}&papel=mandante${extra}" title="Ver os jogos em que o time foi mandante">${fmtInt.format(c.n)}</a></td>
         <td class="n">${fmtInt.format(c.pubMedio)}</td>
@@ -100,7 +115,9 @@ const clubes = porClube(MINIMO).sort((a, b) => b.pubMedio - a.pubMedio);
       $('contagem-clubes').textContent = `${fmtInt.format(linhas.length)} clube${linhas.length === 1 ? '' : 's'}`;
       const nota = $('nota-comp');
       nota.hidden = !comp;
-      if (comp) nota.textContent = `Só os clubes que jogaram em casa em “${comp}”, com os números dessa competição. Entram clubes com pelo menos 1 jogo em casa com público registrado.`;
+      if (comp) nota.textContent = todos
+        ? `Os clubes que disputam “${comp}”, com os números de todos os jogos deles em casa, em qualquer competição (não só nesta). Entram clubes com pelo menos 1 jogo em casa com público registrado.`
+        : `Só os clubes que jogaram em casa em “${comp}”, com os números dessa competição. Entram clubes com pelo menos 1 jogo em casa com público registrado.`;
       $('lead').hidden = !!comp;
       document.querySelectorAll('th[data-ord]').forEach((th) => {
         th.classList.toggle('asc', th.dataset.ord === campo && dir === 1);
@@ -108,12 +125,20 @@ const clubes = porClube(MINIMO).sort((a, b) => b.pubMedio - a.pubMedio);
       });
       const p = new URLSearchParams();
       if (comp) p.set('comp', comp);
+      if (todos) p.set('todos', '1');
+      if (uf) p.set('uf', uf);
+      if (semBr) p.set('semBr', '1');
       if ($('busca-clube').value.trim()) p.set('q', $('busca-clube').value.trim());
       history.replaceState(null, '', location.pathname + (p.toString() ? '?' + p : ''));
     }
 
     fetch('/dados/clubes.json').then((r) => r.json()).then((d) => {
       dados = d;
+      participantes = d.participantes.map((l) => new Set(l));
+      doBrasileiro = new Set(d.brasileiro);
+      // estados: só os que têm clube com jogo em casa registrado
+      const ufs = [...new Set(d.clubes.map((c) => c[1]).filter(Boolean))].sort((a, b) => a.localeCompare(b, 'pt-BR'));
+      $('f-uf-clube').insertAdjacentHTML('beforeend', ufs.map((u) => `<option value="${esc(u)}">${esc(u)}</option>`).join(''));
       // opções: competições com o número de clubes (com pelo menos 1 jogo em casa com público)
       const nClubes = new Map();
       for (const l of d.linhas) nClubes.set(l[1], (nClubes.get(l[1]) || 0) + 1);
@@ -121,10 +146,13 @@ const clubes = porClube(MINIMO).sort((a, b) => b.pubMedio - a.pubMedio);
       const p = new URLSearchParams(location.search);
       if (p.get('comp') && d.comps.includes(p.get('comp'))) $('f-comp-clube').value = p.get('comp');
       if (p.get('q')) $('busca-clube').value = p.get('q');
+      if (p.get('uf') && ufs.includes(p.get('uf'))) $('f-uf-clube').value = p.get('uf');
+      $('f-todos-jogos').checked = p.get('todos') === '1';
+      $('f-sem-br').checked = p.get('semBr') === '1';
       desenhar();
     }).catch(() => { /* fica a tabela renderizada no build (todas as competições) */ });
 
-    $('f-comp-clube').addEventListener('input', () => dados && desenhar());
+    for (const id of ['f-comp-clube', 'f-uf-clube', 'f-todos-jogos', 'f-sem-br']) $(id).addEventListener('input', () => dados && desenhar());
     $('busca-clube').addEventListener('input', () => dados && desenhar());
     document.querySelectorAll('th[data-ord]').forEach((th) => th.addEventListener('click', () => {
       if (!dados) return;

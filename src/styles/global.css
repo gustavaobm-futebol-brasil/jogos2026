@@ -80,6 +80,7 @@ p { margin: 0 0 12px; }
 .filtros input, .filtros select, .busca { font: inherit; font-size: .95rem; padding: 7px 9px; border: 1px solid var(--border); border-radius: 7px; background: var(--bg); color: var(--fg); min-width: 0; }
 .filtros .marcar { flex-direction: row; align-items: center; gap: 8px; font-size: .9rem; color: var(--fg); }
 .filtros .marcar input { width: auto; }
+.filtros [hidden] { display: none; }
 .busca { width: 100%; max-width: 360px; margin: 8px 0; }
 button.acao { font: inherit; font-size: .9rem; padding: 7px 14px; border: 1px solid var(--border); border-radius: 7px; background: var(--card); color: var(--fg); cursor: pointer; }
 button.acao:hover:not(:disabled) { border-color: var(--accent); color: var(--accent); }
