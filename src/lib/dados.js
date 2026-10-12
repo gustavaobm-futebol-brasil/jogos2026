@@ -256,19 +256,20 @@ export function jogosCompactos() {
 
 /** Público/renda dos clubes COMO MANDANTE, por competição (jogos disputados com público). Alimenta /clubes (/dados/clubes.json):
  *  o navegador soma as linhas de todas as competições, só as da competição escolhida, ou (opção) as de todas as competições dos
- *  clubes que participam da escolhida (`participantes`). `brasileiro` marca os clubes que jogaram alguma série (A–D) do Brasileiro. */
+ *  clubes que participam da escolhida (`participantes`). `brasileiro` lista, por série (A–D), os clubes que a jogaram. */
 export function clubesPorCompeticao() {
   const grupos = new Map(); // `${clube} ${comp}` -> jogos
   const doClube = new Map(); // clube -> jogos em casa (todas as competições), para descobrir a UF
   const participa = new Map(); // comp -> Set de clubes (mandantes ou visitantes, com ou sem público)
-  const brasileiro = new Set();
-  const naSerieDoBrasileiro = (j) => j.fonte === 'cbf' && j.nivel === 'Nacional' && /^S[ée]rie [ABCD]$/.test(j.divisao) && /Brasileiro/.test(j.comp);
+  const brasileiro = { A: new Set(), B: new Set(), C: new Set(), D: new Set() }; // clubes que jogaram cada série do Brasileiro
+  const serieDoBrasileiro = (j) => (j.fonte === 'cbf' && j.nivel === 'Nacional' && /Brasileiro/.test(j.comp) ? /^S[ée]rie ([ABCD])$/.exec(j.divisao)?.[1] : undefined);
   for (const j of realizados) {
     for (const c of [j.mandante, j.visitante]) {
       if (!c) continue;
       if (!participa.has(j.comp)) participa.set(j.comp, new Set());
       participa.get(j.comp).add(c);
-      if (naSerieDoBrasileiro(j)) brasileiro.add(c);
+      const s = serieDoBrasileiro(j);
+      if (s) brasileiro[s].add(c);
     }
     if (!doClube.has(j.mandante)) doClube.set(j.mandante, []);
     doClube.get(j.mandante).push(j);
@@ -297,7 +298,7 @@ export function clubesPorCompeticao() {
   });
   return { clubes: nomes.map((n) => [n, ufDe(doClube.get(n) || [])]), comps, linhas,
     participantes: comps.map((c) => [...(participa.get(c) || [])].map((n) => iClube.get(n))),
-    brasileiro: [...brasileiro].map((n) => iClube.get(n)),
+    brasileiro: Object.fromEntries(Object.entries(brasileiro).map(([s, set]) => [s, [...set].map((n) => iClube.get(n))])),
     campos: ['clube', 'comp', 'n', 'pubTotal', 'maior', 'maiorContra', 'maiorData', 'rendaTotal', 'nRenda'] };
 }
 
