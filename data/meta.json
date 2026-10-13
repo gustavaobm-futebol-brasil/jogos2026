@@ -1,9 +1,9 @@
 {
- "gerado_em": "2026-10-13 09:25",
- "sha256": "2c60ecaca62d6d752b80c81297965dc41fdbb025c8327444e070bef741a99712",
- "jogos": 5400,
- "realizados": 5198,
- "com_sumula": 4939,
+ "gerado_em": "2026-10-13 11:13",
+ "sha256": "18c2b893128822a2b1dd31f32c7797c61b1312dad085bfd60c8d54ac06b918bf",
+ "jogos": 5428,
+ "realizados": 5222,
+ "com_sumula": 4963,
  "com_bordero": 4920,
  "por_fonte": {
   "cbf": 1868,
@@ -30,7 +30,7 @@
   "fpfpe": 38,
   "fpfpr_2026": 185,
   "fsf": 74,
-  "ftf": 34,
+  "ftf": 62,
   "ge": 90
  }
 }
