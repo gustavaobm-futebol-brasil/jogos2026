@@ -234,7 +234,7 @@ export function renderGraficos(alvo, jogos, tentativa = 0) {
       h('div', null, legenda(false), dispersao(ordenados, largura, {
         valor: (j) => j.pub, eixo: (v) => fmtInt.format(v), aria: 'Dispersão do público de cada jogo ao longo do tempo',
         ref: { valor: med, rotulo: `mediana ${fmtInt.format(med)}` },
-        dica: (j) => [`${fmtInt.format(j.pub)} pessoas`, `${j.mandante} x ${j.visitante}`, `${semDia(j)}, ${fmtData(j.data)} · ${j.comp}`],
+        dica: (j) => [`${fmtInt.format(j.pub)} pessoas`, { jogo: [j.mandante, j.visitante] }, `${semDia(j)}, ${fmtData(j.data)} · ${j.comp}`],
       })),
       { colunas: ['Data', 'Dia', 'Jogo', 'Competição', 'Público'], linhas: ordenados.map((j) => [fmtData(j.data), semDia(j), `${j.mandante} x ${j.visitante}`, j.comp, fmtInt.format(j.pub)]) });
     larga(card);
@@ -251,7 +251,7 @@ export function renderGraficos(alvo, jogos, tentativa = 0) {
       `${plural(comRenda.length, 'jogo com borderô', 'jogos com borderô')}: ${fmtInt.format(neg)} com despesa maior que a bilheteria (abaixo da linha do zero). Renda líquida = arrecadação − despesas.`,
       h('div', null, legenda(true), dispersao(ordenados, largura, {
         valor: (j) => j.renda, eixo: fmtEixoBRL, destacarZero: true, aria: 'Dispersão da renda líquida de cada jogo ao longo do tempo', cor: (j) => (j.renda < 0 ? 'neg' : 'pos'),
-        dica: (j) => [`${fmtBRL(j.renda)} de renda líquida`, `${j.mandante} x ${j.visitante}`, `${semDia(j)}, ${fmtData(j.data)} · ${j.comp}`,
+        dica: (j) => [`${fmtBRL(j.renda)} de renda líquida`, { jogo: [j.mandante, j.visitante] }, `${semDia(j)}, ${fmtData(j.data)} · ${j.comp}`,
           `arrecadação ${fmtBRL(j.bruta)} · despesas ${fmtBRL(j.desp)}`],
       })),
       { colunas: ['Data', 'Dia', 'Jogo', 'Competição', 'Arrecadação', 'Despesas', 'Renda líquida'],

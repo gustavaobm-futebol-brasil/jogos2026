@@ -1,6 +1,8 @@
 // Utilidades compartilhadas pelo Resumo e pelos Gráficos do explorador: formatação pt-BR, estatística e criação de elementos
 // (sempre por DOM/textContent, nunca por concatenação de HTML: nomes de clubes e estádios vêm dos dados).
 
+import { jogoComEscudos } from './escudos.js';
+
 export const fmtInt = new Intl.NumberFormat('pt-BR', { maximumFractionDigits: 0 });
 export const fmtDec = new Intl.NumberFormat('pt-BR', { maximumFractionDigits: 1 });
 export const fmtPct = new Intl.NumberFormat('pt-BR', { style: 'percent', maximumFractionDigits: 0 });
@@ -62,7 +64,16 @@ export function mostrarDica(clientX, clientY, linhas) {
     dica = h('div', { class: 'dica', role: 'tooltip' });
     document.body.append(dica);
   }
-  dica.replaceChildren(...linhas.map((t, i) => h('div', { class: i === 0 ? 'dica-valor' : 'dica-txt', text: t })));
+  // uma linha pode ser { jogo: [mandante, visitante] }: com os escudos ligados vira "[escudo] Mandante x Visitante [escudo]"
+  dica.replaceChildren(...linhas.map((t, i) => {
+    if (t && typeof t === 'object' && t.jogo) {
+      const html = jogoComEscudos(t.jogo[0], t.jogo[1]);
+      const d = h('div', { class: 'dica-txt', text: html ? null : `${t.jogo[0]} x ${t.jogo[1]}` });
+      if (html) d.innerHTML = html;   // html vem de jogoComEscudos, que escapa os nomes
+      return d;
+    }
+    return h('div', { class: i === 0 ? 'dica-valor' : 'dica-txt', text: t });
+  }));
   dica.style.display = 'block';
   const w = dica.offsetWidth, hh = dica.offsetHeight;
   const x = Math.min(clientX + 14, window.innerWidth - w - 8);

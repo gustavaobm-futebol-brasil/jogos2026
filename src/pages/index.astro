@@ -1,6 +1,6 @@
 ---
 import Base from '../layouts/Base.astro';
-import { jogos, realizados, meta, porCompeticao, soma, fmtInt, fmtBRL, fmtBRLcompacto, fmtData } from '../lib/dados.js';
+import { escudoHtml, jogoComEscudos, jogos, realizados, meta, porCompeticao, soma, fmtInt, fmtBRL, fmtBRLcompacto, fmtData } from '../lib/dados.js';
 
 const comPub = realizados.filter((j) => j.pub != null);
 const comBordero = realizados.filter((j) => j.temB);
@@ -15,6 +15,7 @@ const maxMedio = comps[0]?.pubMedio || 1;
 
 const maioresRendas = [...comRenda].sort((a, b) => b.bruta - a.bruta).slice(0, 8);
 const maxBruta = maioresRendas[0]?.bruta || 1;
+const clsJogos = escudoHtml('Flamengo') ? 'barras com-jogos' : 'barras';   // com escudos, a coluna do jogo é mais larga
 ---
 <Base titulo="" descricao="Quanto público e quanto dinheiro os jogos do futebol brasileiro movimentaram em 2026, a partir dos borderôs publicados pelas federações.">
   <h1>Quanto o futebol brasileiro arrecada em 2026?</h1>
@@ -33,10 +34,10 @@ const maxBruta = maioresRendas[0]?.bruta || 1;
   <div class="duas">
     <section>
       <h2>Maiores públicos</h2>
-      <ol class="barras">
+      <ol class={clsJogos}>
         {maiores.map((j) => (
           <li>
-            <span class="nome">{j.mandante} x {j.visitante}<small>{j.comp} · {fmtData(j.data)}</small></span>
+            <span class="nome">{jogoComEscudos(j.mandante, j.visitante) ? <Fragment set:html={jogoComEscudos(j.mandante, j.visitante)} /> : <>{j.mandante} x {j.visitante}</>}<small>{j.comp} · {fmtData(j.data)}</small></span>
             <span class="trilho"><i style={`width:${(100 * j.pub) / maxPub}%`}></i></span>
             <span class="valor">{fmtInt(j.pub)}</span>
           </li>
@@ -59,10 +60,10 @@ const maxBruta = maioresRendas[0]?.bruta || 1;
 
   <section>
     <h2>Maiores arrecadações em um jogo</h2>
-    <ol class="barras">
+    <ol class={clsJogos}>
       {maioresRendas.map((j) => (
         <li>
-          <span class="nome">{j.mandante} x {j.visitante}<small>{j.comp} · {fmtData(j.data)} · público {fmtInt(j.pub)}</small></span>
+          <span class="nome">{jogoComEscudos(j.mandante, j.visitante) ? <Fragment set:html={jogoComEscudos(j.mandante, j.visitante)} /> : <>{j.mandante} x {j.visitante}</>}<small>{j.comp} · {fmtData(j.data)} · público {fmtInt(j.pub)}</small></span>
           <span class="trilho"><i style={`width:${(100 * j.bruta) / maxBruta}%`}></i></span>
           <span class="valor">{fmtBRLcompacto(j.bruta)}</span>
         </li>

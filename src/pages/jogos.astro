@@ -38,6 +38,8 @@ import Base from '../layouts/Base.astro';
   <p class="nota" id="aviso-estadio" hidden></p>
   <p class="aviso" id="aviso-limpo" hidden></p>
 
+  <div id="cartao-clube" class="cartao-clube" hidden></div>
+
   <div class="barra-topo">
     <span id="contagem" class="muted" role="status">Carregando…</span>
     <button class="acao" id="limpar" type="button">Limpar filtros</button>
@@ -88,6 +90,7 @@ import Base from '../layouts/Base.astro';
   <script>
     import { renderResumo } from '../scripts/resumo.js';
     import { renderGraficos } from '../scripts/graficos.js';
+    import { definirEscudos, escudoHtml, nomeComEscudo, temEscudos } from '../scripts/escudos.js';
 
     const POR_PAGINA = 50;
     const SELOS = { A: 'A conta do borderô não fecha (pode ser desconto legítimo)', D: 'A data do documento difere da data do calendário', I: 'Mandante e visitante trocados no documento', F: 'Documento ainda não publicado ou indisponível na federação' };
@@ -114,6 +117,7 @@ import Base from '../layouts/Base.astro';
     const papel = () => document.querySelector('input[name=papel]:checked').value;
 
     function carregar(d) {
+      definirEscudos(d.escudos);
       estadios = d.estadios || [];
       jogos = d.linhas.map((l) => {
         const o = Object.fromEntries(d.campos.map((c, i) => [c, l[i]]));
@@ -240,10 +244,29 @@ import Base from '../layouts/Base.astro';
         avEst.append(x);
       }
       gravarEndereco();
+      desenharCartao();
       ordenar();
       pagina = 0;
       desenhar();
       desenharAba();
+    }
+
+    /** Cartão do clube (escudo grande + números) quando o filtro é exatamente um clube; some com os escudos desligados. */
+    function desenharCartao() {
+      const el = $('cartao-clube');
+      el.hidden = !(nomeExato && temEscudos());
+      if (el.hidden) return;
+      const meus = jogos.filter((j) => j.status === 'realizado' && (j.mandante === nomeExato || j.visitante === nomeExato));
+      const emCasa = meus.filter((j) => j.mandante === nomeExato && j.pub != null);
+      const cont = {};
+      for (const j of meus) { const u = j.uf && j.uf !== 'BR' ? j.uf : ''; if (u) cont[u] = (cont[u] || 0) + 1; }
+      const uf = Object.entries(cont).sort((a, b) => b[1] - a[1])[0]?.[0] || '';
+      const maior = emCasa.reduce((a, b) => (!a || b.pub > a.pub ? b : a), null);
+      const num = (v) => `<span class="cc-num">${v}</span>`;
+      const partes = [uf ? esc(uf) : '', `${num(fmtInt.format(meus.length))} jogo${meus.length === 1 ? '' : 's'} disputados`];
+      if (emCasa.length) partes.push(`público médio em casa ${num(fmtInt.format(emCasa.reduce((s, j) => s + j.pub, 0) / emCasa.length))} (${emCasa.length} jogo${emCasa.length === 1 ? '' : 's'} com público)`,
+        `maior público ${num(fmtInt.format(maior.pub))} contra ${esc(maior.visitante)}`);
+      el.innerHTML = `${escudoHtml(nomeExato, 'g')}<div><h2>${esc(nomeExato)}</h2><p>${partes.filter(Boolean).join(' · ')}</p></div>`;
     }
 
     function ordenar() {
@@ -276,7 +299,9 @@ import Base from '../layouts/Base.astro';
         const fase = [j.fase, j.rodada && !/^\d{4}$/.test(j.rodada) ? `rodada ${j.rodada}` : ''].filter(Boolean).join(' · ');
         return `<tr>
           <td>${data}<small>${esc(j.horario || '')}</small></td>
-          <td><b>${esc(j.mandante)}</b> <span class="placar">${placar}</span> <b>${esc(j.visitante)}</b>${selos ? `<small>${selos}</small>` : ''}</td>
+          <td${temEscudos() ? ' class="cel-jogo"' : ''}>${temEscudos()
+            ? `<div class="jg"><span class="eq">${escudoHtml(j.mandante)}<b>${esc(j.mandante)}</b></span><span class="placar">${placar}</span><span class="eq"><b>${esc(j.visitante)}</b>${escudoHtml(j.visitante)}</span></div>`
+            : `<b>${esc(j.mandante)}</b> <span class="placar">${placar}</span> <b>${esc(j.visitante)}</b>`}${selos ? `<small>${selos}</small>` : ''}</td>
           <td>${comp}<small>${esc(j.uf)}${fase ? ' · ' + esc(fase) : ''}</small></td>
           <td${j.estadio && j.estNome !== j.estadio ? ` title="Como a federação escreve: ${esc(j.estadio)}"` : ''}>${esc(j.estNome || '')}</td>
           <td class="n">${j.pub != null ? fmtInt.format(j.pub) : '—'}</td>
@@ -312,7 +337,7 @@ import Base from '../layouts/Base.astro';
       itens = clubes.filter((c) => c.norm.includes(n))
         .sort((a, b) => (b.norm.startsWith(n) - a.norm.startsWith(n)) || b.n - a.n || a.nome.localeCompare(b.nome, 'pt-BR')).slice(0, 8);
       if (!itens.length || (itens.length === 1 && itens[0].norm === n)) return fecharSugestoes();
-      ul.innerHTML = itens.map((c, i) => `<li role="option" id="sug-${i}" data-i="${i}"><span>${esc(c.nome)}</span><small>${c.n} jogo${c.n === 1 ? '' : 's'}</small></li>`).join('');
+      ul.innerHTML = itens.map((c, i) => `<li role="option" id="sug-${i}" data-i="${i}"><span>${nomeComEscudo(c.nome, 'p')}</span><small>${c.n} jogo${c.n === 1 ? '' : 's'}</small></li>`).join('');
       ul.hidden = false;
       $('f-clube').setAttribute('aria-expanded', 'true');
     }

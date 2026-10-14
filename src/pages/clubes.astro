@@ -1,6 +1,6 @@
 ---
 import Base from '../layouts/Base.astro';
-import { porClube, fmtInt, fmtBRL, fmtData } from '../lib/dados.js';
+import { nomeComEscudo, porClube, fmtInt, fmtBRL, fmtData } from '../lib/dados.js';
 
 // Versão inicial (todas as competições), renderizada no build; o navegador a refaz a partir de /dados/clubes.json
 // quando se escolhe uma competição ou se ordena.
@@ -42,7 +42,7 @@ const clubes = porClube(MINIMO).sort((a, b) => b.pubMedio - a.pubMedio);
       <tbody id="corpo-clubes">
         {clubes.map((c) => (
           <tr>
-            <td><a class="time" href={`/jogos?time=${encodeURIComponent(c.clube)}`} title="Ver todos os jogos deste time">{c.clube}</a></td>
+            <td><a class="time" href={`/jogos?time=${encodeURIComponent(c.clube)}`} title="Ver todos os jogos deste time" set:html={nomeComEscudo(c.clube)} /></td>
             <td>{c.uf}</td>
             <td class="n"><a href={`/jogos?time=${encodeURIComponent(c.clube)}&papel=mandante`} title="Ver os jogos em que o time foi mandante">{fmtInt(c.n)}</a></td>
             <td class="n">{fmtInt(c.pubMedio)}</td>
@@ -56,6 +56,7 @@ const clubes = porClube(MINIMO).sort((a, b) => b.pubMedio - a.pubMedio);
   <p class="legenda">Clique no nome do clube para ver todos os jogos dele, ou no número de jogos em casa para ver só os jogos como mandante. A renda líquida só considera os jogos com borderô lido. Valores negativos significam que as despesas do jogo superaram a bilheteria.</p>
 
   <script>
+    import { definirEscudos, nomeComEscudo } from '../scripts/escudos.js';
     const MINIMO_GERAL = 3;
     const fmtInt = new Intl.NumberFormat('pt-BR', { maximumFractionDigits: 0 });
     const fmtBRL = new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL', maximumFractionDigits: 0 });
@@ -109,7 +110,7 @@ const clubes = porClube(MINIMO).sort((a, b) => b.pubMedio - a.pubMedio);
       });
       const extra = comp && !todos ? `&comp=${encodeURIComponent(comp)}` : '';
       $('corpo-clubes').innerHTML = linhas.map((c) => `<tr>
-        <td><a class="time" href="/jogos?time=${encodeURIComponent(c.nome)}${extra}" title="Ver os jogos deste time${comp && !todos ? ' nesta competição' : ''}">${esc(c.nome)}</a></td>
+        <td><a class="time" href="/jogos?time=${encodeURIComponent(c.nome)}${extra}" title="Ver os jogos deste time${comp && !todos ? ' nesta competição' : ''}">${nomeComEscudo(c.nome)}</a></td>
         <td>${esc(c.uf)}</td>
         <td class="n"><a href="/jogos?time=${encodeURIComponent(c.nome)}&papel=mandante${extra}" title="Ver os jogos em que o time foi mandante">${fmtInt.format(c.n)}</a></td>
         <td class="n">${fmtInt.format(c.pubMedio)}</td>
@@ -155,6 +156,7 @@ const clubes = porClube(MINIMO).sort((a, b) => b.pubMedio - a.pubMedio);
 
     fetch('/dados/clubes.json').then((r) => r.json()).then((d) => {
       dados = d;
+      definirEscudos(d.escudos);
       participantes = d.participantes.map((l) => new Set(l));
       doBrasileiro = Object.fromEntries(Object.entries(d.brasileiro).map(([s, l]) => [s, new Set(l)]));
       // estados: só os que têm clube com jogo em casa registrado

@@ -1,6 +1,8 @@
 // Leitura dos dados em tempo de build (data/*.csv e data/meta.json, escritos pelo Job B) e agregações usadas pelas páginas.
 import fs from 'node:fs';
 import path from 'node:path';
+import { ESCUDOS } from '../config.js';
+import { definirEscudos, escudoHtml, nomeComEscudo, jogoComEscudos } from '../scripts/escudos.js';
 
 const DIR = path.join(process.cwd(), 'data');
 const ler = (nome) => fs.readFileSync(path.join(DIR, nome), 'utf-8').replace(/^﻿/, '');
@@ -67,6 +69,16 @@ export const jogos = parseCsv(ler('jogos.csv')).map((r) => {
 });
 
 export const realizados = jogos.filter((j) => j.status === 'realizado');
+
+// ── escudos (data/escudos.json, gerado por publicar_escudos.py; desligáveis em src/config.js) ──
+const todosEscudos = (() => {
+  if (!ESCUDOS) return {};
+  try { return JSON.parse(ler('escudos.json')); } catch { return {}; }
+})();
+definirEscudos(todosEscudos);
+export { escudoHtml, nomeComEscudo, jogoComEscudos };
+/** Índice {nome: [slug, escuro]} só dos clubes pedidos (o que vai nos JSON do navegador); {} com os escudos desligados. */
+const escudosDe = (nomes) => (ESCUDOS ? Object.fromEntries([...new Set(nomes)].filter((n) => todosEscudos[n]).map((n) => [n, todosEscudos[n]])) : {});
 
 // ── formatação (pt-BR) ──────────────────────────────────────────────────────────────────────────────────────────────
 export const fmtInt = (v) => (v == null ? '—' : new Intl.NumberFormat('pt-BR').format(Math.round(v)));
@@ -251,7 +263,8 @@ export function jogosCompactos() {
   const { estadios, estIdPorJogo } = agruparEstadios();
   const comId = jogos.map((j, i) => ({ ...j, estId: estIdPorJogo[i] }));
   const ordenados = comId.sort((a, b) => (b.data || '').localeCompare(a.data || ''));
-  return { campos: CAMPOS_JSON, gerado_em: meta.gerado_em, estadios, linhas: ordenados.map((j) => CAMPOS_JSON.map((c) => j[c] ?? null)) };
+  return { campos: CAMPOS_JSON, gerado_em: meta.gerado_em, estadios, escudos: escudosDe(jogos.flatMap((j) => [j.mandante, j.visitante])),
+    linhas: ordenados.map((j) => CAMPOS_JSON.map((c) => j[c] ?? null)) };
 }
 
 /** Público/renda dos clubes COMO MANDANTE, por competição (jogos disputados com público). Alimenta /clubes (/dados/clubes.json):
@@ -296,7 +309,7 @@ export function clubesPorCompeticao() {
     return [iClube.get(clube), iComp.get(comp), js.length, soma(js.map((j) => j.pub)), maior.pub, maior.visitante, maior.data,
       soma(comRenda.map((j) => j.renda)), comRenda.length];
   });
-  return { clubes: nomes.map((n) => [n, ufDe(doClube.get(n) || [])]), comps, linhas,
+  return { escudos: escudosDe(nomes), clubes: nomes.map((n) => [n, ufDe(doClube.get(n) || [])]), comps, linhas,
     participantes: comps.map((c) => [...(participa.get(c) || [])].map((n) => iClube.get(n))),
     brasileiro: Object.fromEntries(Object.entries(brasileiro).map(([s, set]) => [s, [...set].map((n) => iClube.get(n))])),
     campos: ['clube', 'comp', 'n', 'pubTotal', 'maior', 'maiorContra', 'maiorData', 'rendaTotal', 'nRenda'] };

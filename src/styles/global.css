@@ -191,3 +191,35 @@ button.acao.pequeno { font-size: .8rem; padding: 4px 10px; }
 /* linha do zero do gráfico de renda: o eixo que separa lucro de prejuízo do jogo */
 .gr-zero { stroke: var(--fg); stroke-width: 2; opacity: .75; }
 .gr-txt.zero { fill: var(--fg); font-weight: 700; }
+
+/* ── escudos dos clubes (desligáveis em src/config.js) ── */
+.esc { display: inline-block; flex: none; width: var(--esc, 20px); height: var(--esc, 20px); object-fit: contain; vertical-align: middle; }
+.esc-p { --esc: 20px; }
+.esc-m { --esc: 28px; }
+.esc-g { --esc: 64px; }
+.esc-mono { display: inline-flex; align-items: center; justify-content: center; border-radius: 50%; background: var(--bar-bg); color: var(--muted);
+  font-size: calc(var(--esc) * .4); font-weight: 700; letter-spacing: -.02em; line-height: 1; user-select: none; }
+@media (prefers-color-scheme: dark) {
+  .esc-escuro { background: #eef1ee; border-radius: 50%; padding: calc(var(--esc) * .1); }   /* escudo escuro: círculo claro por trás */
+}
+/* nome com escudo: [escudo] Nome, e o jogo espelhado: [escudo] Mandante  1 x 0  Visitante [escudo] */
+.cl { display: inline-flex; align-items: center; gap: 8px; }
+.jg { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 6px; }
+.jg .placar { margin: 0 2px; }
+.cel-jogo { min-width: 20rem; }
+@media (max-width: 640px) { .cel-jogo { min-width: 0; } }
+.eq { display: inline-flex; align-items: center; gap: 6px; }
+.barras .nome .jg { font-weight: 600; }
+.barras.com-jogos li { grid-template-columns: minmax(250px, 52%) 1fr auto; }
+@media (max-width: 560px) { .barras.com-jogos li { grid-template-columns: 1fr auto; } }
+.barras .nome .jg + small { margin-top: 2px; }
+
+/* cartão do clube no topo do explorador (quando um clube está filtrado) */
+.cartao-clube { display: flex; align-items: center; gap: 16px; background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 14px 18px; margin: 14px 0 6px; }
+.cartao-clube h2 { margin: 0; font-size: 1.35rem; line-height: 1.2; }
+.cartao-clube p { margin: 3px 0 0; color: var(--muted); font-size: .88rem; }
+.cartao-clube .cc-num { color: var(--fg); font-weight: 600; font-variant-numeric: tabular-nums; }
+
+/* dica dos gráficos: o jogo com escudos */
+.dica .jg { gap: 3px 5px; flex-wrap: nowrap; }
+#sugestoes li > span { display: inline-flex; align-items: center; gap: 8px; }
