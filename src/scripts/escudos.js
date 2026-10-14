@@ -17,7 +17,7 @@ export function iniciais(nome) {
 
 /** HTML do escudo (decorativo: o nome do clube sempre está ao lado). tam: 'p' 20px, 'm' 28px, 'g' 64px. '' se os escudos estão desligados. */
 export function escudoHtml(nome, tam = 'p') {
-  if (!temEscudos()) return '';
+  if (!temEscudos() || !nome) return '';   // sem nome (time ainda indefinido em jogo futuro): nada a desenhar
   const e = indice[nome];
   if (!e) return `<span class="esc esc-${tam} esc-mono" aria-hidden="true">${esc(iniciais(nome))}</span>`;
   return `<img class="esc esc-${tam}${e[1] ? ' esc-escuro' : ''}" src="/escudos/${e[0]}.webp" alt="" loading="lazy" decoding="async">`;
