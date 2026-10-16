@@ -174,6 +174,8 @@ function partesEstadio(texto) {
   return { nome, cidade };
 }
 
+// Estádio já no padrão "Nome - Cidade - UF" (estadios_padrao.csv do projeto): o nome é definitivo, não se une a outro por semelhança.
+const PADRAO_ESTADIO = /^.+ - .+ - [A-Z]{2}$/;
 const fichaTokens = (nome) => new Set((semAcentoBuild(nome).match(/[a-z]{4,}/g) || []).filter((x) => !PALAVRAS_COMUNS.has(x)));
 const contido = (a, b) => a.size > 0 && [...a].every((x) => b.has(x)) && (a.size > 1 || [...a][0].length >= 5);
 
@@ -204,12 +206,16 @@ function agruparEstadios() {
   // 1) grupos por nome normalizado (+ cidade quando o mesmo nome existe em cidades diferentes)
   const cidadesDoNome = new Map();
   for (const i of info) if (i && i.cidadeN) (cidadesDoNome.get(i.nomeN) || cidadesDoNome.set(i.nomeN, new Set()).get(i.nomeN)).add(i.cidadeN);
+  const ufsDoNome = new Map();                  // mesmo nome em estados diferentes (ex.: "Mirandão" no CE e no TO) = estádios diferentes
+  for (const i of info) if (i && i.uf) (ufsDoNome.get(i.nomeN) || ufsDoNome.set(i.nomeN, new Set()).get(i.nomeN)).add(i.uf);
   const grupos = new Map();
   const chaveDoJogo = info.map((i) => {
     if (!i) return null;
     const cidades = cidadesDoNome.get(i.nomeN);
-    const chave = cidades && cidades.size > 1 ? `${i.nomeN}|${i.cidadeN}` : i.nomeN;
-    const g = grupos.get(chave) || grupos.set(chave, { chave, grafias: new Map(), nomes: new Map(), cidades: new Map(), ufs: new Map(), jogos: 0, tokens: new Set() }).get(chave);
+    let chave = cidades && cidades.size > 1 ? `${i.nomeN}|${i.cidadeN}` : i.nomeN;
+    if (!i.cidadeN && ufsDoNome.get(i.nomeN)?.size > 1 && i.uf) chave = `${i.nomeN}||${i.uf}`;   // sem cidade: o estado separa os homônimos
+    const g = grupos.get(chave) || grupos.set(chave, { chave, grafias: new Map(), nomes: new Map(), cidades: new Map(), ufs: new Map(), jogos: 0, tokens: new Set(), padrao: true }).get(chave);
+    g.padrao = g.padrao && PADRAO_ESTADIO.test(i.texto);
     g.grafias.set(i.texto, (g.grafias.get(i.texto) || 0) + 1);
     g.nomes.set(i.nome, (g.nomes.get(i.nome) || 0) + 1);
     if (i.cidadeN) g.cidades.set(i.cidadeN, (g.cidades.get(i.cidadeN) || 0) + 1);
@@ -230,6 +236,7 @@ function agruparEstadios() {
   for (let x = 0; x < lista.length; x++) {
     for (let y = x + 1; y < lista.length; y++) {
       const a = lista[x], b = lista[y];
+      if (a.padrao && b.padrao) continue;
       if (a.cidade && b.cidade && a.cidade === b.cidade && parecidos(a, b)) unir(a.chave, b.chave);
     }
   }
