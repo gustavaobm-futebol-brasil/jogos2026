@@ -28,7 +28,7 @@ const comps = porCompeticao().sort((a, b) => b.pubTotal - a.pubTotal);
       <tbody>
         {comps.map((c) => (
           <tr>
-            <td>{c.compUrl ? <a href={c.compUrl} target="_blank" rel="noopener">{c.comp}</a> : c.comp}<small>{c.federacao}</small></td>
+            <td><div class={c.logo ? 'cel-comp' : undefined}>{c.logo ? <Fragment set:html={c.logo} /> : null}<span>{c.compUrl ? <a href={c.compUrl} target="_blank" rel="noopener">{c.comp}</a> : c.comp}<small>{c.federacao}</small></span></div></td>
             <td>{c.uf}</td>
             <td>{c.divisao}</td>
             <td class="n" data-v={c.n}>{fmtInt(c.n)}</td>

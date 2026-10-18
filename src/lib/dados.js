@@ -1,7 +1,7 @@
 // Leitura dos dados em tempo de build (data/*.csv e data/meta.json, escritos pelo Job B) e agregações usadas pelas páginas.
 import fs from 'node:fs';
 import path from 'node:path';
-import { ESCUDOS } from '../config.js';
+import { ESCUDOS, LOGOS } from '../config.js';
 import { definirEscudos, escudoHtml, nomeComEscudo, jogoComEscudos } from '../scripts/escudos.js';
 
 const DIR = path.join(process.cwd(), 'data');
@@ -77,6 +77,19 @@ const todosEscudos = (() => {
 })();
 definirEscudos(todosEscudos);
 export { escudoHtml, nomeComEscudo, jogoComEscudos };
+// ── logos das competições (data/logos.json, gerado por publicar_logos.py; desligáveis em src/config.js) ──
+const todosLogos = (() => {
+  if (!LOGOS) return {};
+  try { return JSON.parse(ler('logos.json')); } catch { return {}; }
+})();
+const escH = (x) => String(x ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+/** HTML do logo de uma competição ("fonte/comp_id"): o da própria competição ou o da federação; '' se não houver (ou com os logos desligados).
+ *  claro/escuro: o logo some no tema claro/escuro e ganha um fundo (classes lg-claro / lg-escuro). */
+export function logoHtml(chaveComp) {
+  const l = todosLogos[chaveComp];
+  return l ? `<img class="lg${l[2] ? ' lg-claro' : ''}${l[3] ? ' lg-escuro' : ''}" src="/logos/${l[0]}.webp" alt="" loading="lazy" decoding="async">` : '';
+}
+
 /** Índice {nome: [slug, escuro]} só dos clubes pedidos (o que vai nos JSON do navegador); {} com os escudos desligados. */
 const escudosDe = (nomes) => (ESCUDOS ? Object.fromEntries([...new Set(nomes)].filter((n) => todosEscudos[n]).map((n) => [n, todosEscudos[n]])) : {});
 
@@ -100,14 +113,14 @@ export function porCompeticao() {
   const mapa = new Map();
   for (const j of realizados) {
     const k = `${j.fonte}/${j.comp}`;
-    if (!mapa.has(k)) mapa.set(k, { comp: j.comp, compUrl: j.compUrl, uf: j.uf, federacao: j.federacao, divisao: j.divisao, nivel: j.nivel, jogos: [] });
+    if (!mapa.has(k)) mapa.set(k, { chaveComp: j.chave.slice(0, j.chave.lastIndexOf('/')), comp: j.comp, compUrl: j.compUrl, uf: j.uf, federacao: j.federacao, divisao: j.divisao, nivel: j.nivel, jogos: [] });
     mapa.get(k).jogos.push(j);
   }
   return [...mapa.values()].map((c) => {
     const cp = c.jogos.filter((j) => j.pub != null);
     const cb = c.jogos.filter((j) => j.bruta != null);
     return {
-      ...c, n: c.jogos.length, comBordero: c.jogos.filter((j) => j.temB).length, nPub: cp.length,
+      ...c, logo: logoHtml(c.chaveComp), n: c.jogos.length, comBordero: c.jogos.filter((j) => j.temB).length, nPub: cp.length,
       pubTotal: soma(cp.map((j) => j.pub)), pubMedio: cp.length ? soma(cp.map((j) => j.pub)) / cp.length : null,
       brutaTotal: soma(cb.map((j) => j.bruta)), rendaTotal: soma(c.jogos.filter((j) => j.renda != null).map((j) => j.renda)),
     };

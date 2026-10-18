@@ -223,3 +223,13 @@ button.acao.pequeno { font-size: .8rem; padding: 4px 10px; }
 /* dica dos gráficos: o jogo com escudos */
 .dica .jg { gap: 3px 5px; flex-wrap: nowrap; }
 #sugestoes li > span { display: inline-flex; align-items: center; gap: 8px; }
+
+/* ── logos das competições (desligáveis em src/config.js) ── */
+.cel-comp { display: flex; align-items: center; gap: 10px; }
+.cel-comp > span { min-width: 0; }
+.lg { flex: none; width: 32px; height: 32px; object-fit: contain; }
+.lg-claro { background: #2b3039; border-radius: 6px; padding: 3px; }                 /* logo claro some no tema claro: fundo escuro */
+@media (prefers-color-scheme: dark) {
+  .lg-claro { background: none; padding: 0; border-radius: 0; }
+  .lg-escuro { background: #eef1ee; border-radius: 6px; padding: 3px; }             /* logo escuro some no tema escuro: fundo claro */
+}
