@@ -227,7 +227,8 @@ button.acao.pequeno { font-size: .8rem; padding: 4px 10px; }
 /* ── logos das competições (desligáveis em src/config.js) ── */
 .cel-comp { display: flex; align-items: center; gap: 10px; }
 .cel-comp > span { min-width: 0; }
-.lg { flex: none; width: 32px; height: 32px; object-fit: contain; }
+.lg-box { flex: none; width: 68px; height: 34px; display: flex; align-items: center; justify-content: center; }
+.lg { max-width: 100%; max-height: 100%; width: auto; height: auto; object-fit: contain; box-sizing: border-box; }   /* proporção preservada: logos horizontais ocupam a largura da caixa */
 .lg-claro { background: #2b3039; border-radius: 6px; padding: 3px; }                 /* logo claro some no tema claro: fundo escuro */
 @media (prefers-color-scheme: dark) {
   .lg-claro { background: none; padding: 0; border-radius: 0; }

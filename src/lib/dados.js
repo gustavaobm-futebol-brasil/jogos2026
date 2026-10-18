@@ -87,7 +87,7 @@ const escH = (x) => String(x ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', 
  *  claro/escuro: o logo some no tema claro/escuro e ganha um fundo (classes lg-claro / lg-escuro). */
 export function logoHtml(chaveComp) {
   const l = todosLogos[chaveComp];
-  return l ? `<img class="lg${l[2] ? ' lg-claro' : ''}${l[3] ? ' lg-escuro' : ''}" src="/logos/${l[0]}.webp" alt="" loading="lazy" decoding="async">` : '';
+  return l ? `<span class="lg-box"><img class="lg${l[2] ? ' lg-claro' : ''}${l[3] ? ' lg-escuro' : ''}" src="/logos/${l[0]}.webp" alt="" loading="lazy" decoding="async"></span>` : '';
 }
 
 /** Índice {nome: [slug, escuro]} só dos clubes pedidos (o que vai nos JSON do navegador); {} com os escudos desligados. */
