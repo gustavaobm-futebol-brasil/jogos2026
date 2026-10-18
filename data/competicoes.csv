@@ -1,13 +1,13 @@
 fonte,comp_id,federacao_sigla,federacao,uf,competicao_nome,divisao,nivel,ano,link_pagina
-cbf,copa-do-brasil-f1,CBF,Confederação Brasileira de Futebol,BR,Copa do Brasil – 1ª e 2ª fases,Copa,Nacional,2026,https://www.cbf.com.br/futebol-brasileiro/competicoes/copa-do-brasil-masculino/2026
-cbf,copa-nordeste,CBF,Confederação Brasileira de Futebol,BR,Copa do Nordeste,Copa,Regional,2026,https://www.cbf.com.br/futebol-brasileiro/competicoes/copa-do-nordeste/2026
-cbf,copa-sul-sudeste,CBF,Confederação Brasileira de Futebol,BR,Copa Sul-Sudeste,Copa,Regional,2026,https://www.cbf.com.br/futebol-brasileiro/competicoes/copa-sul-sudeste/2026
-cbf,copa-verde,CBF,Confederação Brasileira de Futebol,BR,Copa Verde,Copa,Regional,2026,https://www.cbf.com.br/futebol-brasileiro/competicoes/copa-verde/2026
-cbf,serie-a,CBF,Confederação Brasileira de Futebol,BR,Campeonato Brasileiro – Série A,Série A,Nacional,2026,https://www.cbf.com.br/futebol-brasileiro/competicoes/campeonato-brasileiro-serie-a/2026
-cbf,serie-b,CBF,Confederação Brasileira de Futebol,BR,Campeonato Brasileiro – Série B,Série B,Nacional,2026,https://www.cbf.com.br/futebol-brasileiro/competicoes/campeonato-brasileiro-serie-b/2026
-cbf,serie-c,CBF,Confederação Brasileira de Futebol,BR,Campeonato Brasileiro – Série C,Série C,Nacional,2026,https://www.cbf.com.br/futebol-brasileiro/competicoes/campeonato-brasileiro-serie-c/2026
-cbf,serie-d,CBF,Confederação Brasileira de Futebol,BR,Campeonato Brasileiro – Série D,Série D,Nacional,2026,https://www.cbf.com.br/futebol-brasileiro/competicoes/campeonato-brasileiro-serie-d/2026
-cbf,supercopa,CBF,Confederação Brasileira de Futebol,BR,Supercopa do Brasil,Supercopa,Nacional,2026,https://www.cbf.com.br/futebol-brasileiro/competicoes/supercopa-do-brasil/2026
+cbf,copa-do-brasil-f1,CBF,Confederação Brasileira de Futebol,BR,Copa do Brasil – 1ª e 2ª fases,Copa,Nacional,2026,https://www.cbf.com.br/futebol-brasileiro/tabelas/copa-do-brasil/masculino/2026
+cbf,copa-nordeste,CBF,Confederação Brasileira de Futebol,BR,Copa do Nordeste,Copa,Regional,2026,https://www.cbf.com.br/futebol-brasileiro/tabelas/copa-do-nordeste/masculino/2026
+cbf,copa-sul-sudeste,CBF,Confederação Brasileira de Futebol,BR,Copa Sul-Sudeste,Copa,Regional,2026,https://www.cbf.com.br/futebol-brasileiro/tabelas/copa-sul-sudeste/masculino/2026
+cbf,copa-verde,CBF,Confederação Brasileira de Futebol,BR,Copa Verde,Copa,Regional,2026,https://www.cbf.com.br/futebol-brasileiro/tabelas/copa-verde/2026
+cbf,serie-a,CBF,Confederação Brasileira de Futebol,BR,Campeonato Brasileiro – Série A,Série A,Nacional,2026,https://www.cbf.com.br/futebol-brasileiro/tabelas/campeonato-brasileiro/serie-a/2026
+cbf,serie-b,CBF,Confederação Brasileira de Futebol,BR,Campeonato Brasileiro – Série B,Série B,Nacional,2026,https://www.cbf.com.br/futebol-brasileiro/tabelas/campeonato-brasileiro/serie-b/2026
+cbf,serie-c,CBF,Confederação Brasileira de Futebol,BR,Campeonato Brasileiro – Série C,Série C,Nacional,2026,https://www.cbf.com.br/futebol-brasileiro/tabelas/campeonato-brasileiro/serie-c/2026
+cbf,serie-d,CBF,Confederação Brasileira de Futebol,BR,Campeonato Brasileiro – Série D,Série D,Nacional,2026,https://www.cbf.com.br/futebol-brasileiro/tabelas/campeonato-brasileiro/serie-d/2026
+cbf,supercopa,CBF,Confederação Brasileira de Futebol,BR,Supercopa do Brasil,Supercopa,Nacional,2026,https://www.cbf.com.br/futebol-brasileiro/tabelas/supercopa-do-brasil/masculino/2026
 faf,AlagoanoSerieA_2026,FAF,Federação Alagoana de Futebol,AL,Campeonato Alagoano – Série A,Série A,Estadual,2026,https://www.futeboldealagoas.net/novo/tabela?ID=1633
 faf,AlagoanoSerieB_Sub23_2026,FAF,Federação Alagoana de Futebol,AL,Campeonato Alagoano – Série B (Sub-23),Série B,Estadual,2026,https://www.futeboldealagoas.net/novo/tabela?ID=1675
 faf,CopaAlagoas_2026,FAF,Federação Alagoana de Futebol,AL,Copa Alagoas,Copa,Estadual,2026,https://www.futeboldealagoas.net/novo/tabela?ID=1642
