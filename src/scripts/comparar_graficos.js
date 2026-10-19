@@ -87,7 +87,7 @@ function faixasAgrupadas(series, largura) {
 }
 
 // ── público médio por mês: uma linha por time ──
-function linhasPorMes(series, largura) {
+function linhasPorMes(series, largura, agg, nome) {
   const porSerie = series.map((sr) => {
     const m = new Map();
     for (const j of sr.jogos) if (j.pub != null) { const k = j.data.slice(0, 7); (m.get(k) || m.set(k, []).get(k)).push(j.pub); }
@@ -102,7 +102,7 @@ function linhasPorMes(series, largura) {
   const doisAnos = chaves[0].slice(0, 4) !== chaves[chaves.length - 1].slice(0, 4);
   const rot = (k) => (doisAnos ? `${MESES[Number(k.slice(5)) - 1]}/${k.slice(2, 4)}` : MESES[Number(k.slice(5)) - 1]);
   const altura = 236, mt = 14, mb = 28, mr = 14;
-  const valores = porSerie.flatMap((x) => [...x.m.values()].map((v) => media(v)));
+  const valores = porSerie.flatMap((x) => [...x.m.values()].map((v) => agg(v)));
   const { max, passo } = escalaBonita(Math.max(...valores, 1), 4);
   const ml = String(fmtInt.format(max)).length * 6.5 + 16;
   const X = (i) => ml + (meses.length === 1 ? 0 : (i / (meses.length - 1)) * (largura - ml - mr));
@@ -118,7 +118,7 @@ function linhasPorMes(series, largura) {
     meses.forEach((k, i) => {
       const v = m.get(k);
       if (!v) { caneta = false; return; }
-      const val = media(v);
+      const val = agg(v);
       d += `${caneta ? 'L' : 'M'}${X(i)},${Y(val)} `;
       caneta = true;
       pts.push({ sr, k, i, val, n: v.length, x: X(i), y: Y(val) });
@@ -134,11 +134,11 @@ function linhasPorMes(series, largura) {
     for (const q of pts) { const dd = (q.x - px) ** 2 + (q.y - py) ** 2; if (dd < dm) { dm = dd; melhor = q; } }
     if (!melhor) { destaque.setAttribute('cx', -20); esconderDica(); return; }
     destaque.setAttribute('cx', melhor.x); destaque.setAttribute('cy', melhor.y);
-    mostrarDica(e.clientX, e.clientY, [`${fmtInt.format(melhor.val)} de público médio`, melhor.sr.nome, `${MESES[Number(melhor.k.slice(5)) - 1]} de ${melhor.k.slice(0, 4)} · ${plural(melhor.n, 'jogo', 'jogos')}`]);
+    mostrarDica(e.clientX, e.clientY, [`${fmtInt.format(melhor.val)} de público ${nome}`, melhor.sr.nome, `${MESES[Number(melhor.k.slice(5)) - 1]} de ${melhor.k.slice(0, 4)} · ${plural(melhor.n, 'jogo', 'jogos')}`]);
   });
   svg.addEventListener('pointerleave', () => { destaque.setAttribute('cx', -20); esconderDica(); });
-  const tabela = { colunas: ['Mês', ...porSerie.map((x) => `${x.sr.nome} (médio · jogos)`)],
-    linhas: meses.map((k) => [`${MESES[Number(k.slice(5)) - 1]} de ${k.slice(0, 4)}`, ...porSerie.map((x) => { const v = x.m.get(k); return v ? `${fmtInt.format(media(v))} · ${v.length}` : '—'; })]) };
+  const tabela = { colunas: ['Mês', ...porSerie.map((x) => `${x.sr.nome} (${nome} · jogos)`)],
+    linhas: meses.map((k) => [`${MESES[Number(k.slice(5)) - 1]} de ${k.slice(0, 4)}`, ...porSerie.map((x) => { const v = x.m.get(k); return v ? `${fmtInt.format(agg(v))} · ${v.length}` : '—'; })]) };
   return { svg, tabela };
 }
 
@@ -170,7 +170,9 @@ const nJogoAJogo = (maior) => `Disponível quando cada time tem até ${MAX_JOGOS
  * @param {HTMLElement} alvo
  * @param {{nome:string,i:number,jogos:object[]}[]} series  um por time escolhido (cada jogo traz `_s` = índice da série)
  */
-export function renderComparacao(alvo, series, tentativa = 0) {
+export function renderComparacao(alvo, series, modo = 'media', tentativa = 0) {
+  const mediana_ = modo === 'mediana';
+  const agg = mediana_ ? mediana : media, nome = mediana_ ? 'mediano' : 'médio';   // medida dos gráficos de público por mês e por competição
   const medida = alvo.clientWidth;
   alvo.replaceChildren();
   const com = series.filter((sr) => sr.jogos.length);
@@ -192,16 +194,16 @@ export function renderComparacao(alvo, series, tentativa = 0) {
     h('div', null, legendaTimes(series), f.svg), f.tabela));
 
   // 2. público médio por mês
-  const l = linhasPorMes(series, larguraCard);
-  grade.append(l ? cartao('Público médio por mês', 'Um ponto por mês em que o time jogou (a linha se interrompe nos meses sem jogos).', h('div', null, legendaTimes(series), l.svg), l.tabela)
-    : vazio('Público médio por mês', 'Os jogos filtrados cabem num único mês; amplie o período para ver a evolução.'));
+  const l = linhasPorMes(series, larguraCard, agg, nome);
+  grade.append(l ? cartao(`Público ${nome} por mês`, `Um ponto por mês em que o time jogou, com o público ${nome} dos jogos do mês (a linha se interrompe nos meses sem jogos).`, h('div', null, legendaTimes(series), l.svg), l.tabela)
+    : vazio(`Público ${nome} por mês`, 'Os jogos filtrados cabem num único mês; amplie o período para ver a evolução.'));
 
   // 3. público médio por competição
-  const pc = porCompeticao(series, 2, (v) => media(v), (j) => j.pub);
-  grade.append(pc.length ? cartao('Público médio por competição', 'Só competições disputadas por pelo menos dois dos times, com pelo menos 2 jogos de cada um com público registrado (até 10).',
-    h('div', null, legendaTimes(series), barrasAgrupadas(pc, (v) => fmtInt.format(v), Math.max(...pc.map((g) => g.ref)), 'de público médio')),
-    { colunas: ['Competição', 'Time', 'Público médio', 'Jogos'], linhas: pc.flatMap((g) => g.itens.map((it) => [g.nome, it.sr.nome, fmtInt.format(it.valor), fmtInt.format(it.n)])) })
-    : vazio('Público médio por competição', 'Os times escolhidos não têm uma competição em comum com jogos suficientes nos filtros atuais.'));
+  const pc = porCompeticao(series, 2, (v) => agg(v), (j) => j.pub);
+  grade.append(pc.length ? cartao(`Público ${nome} por competição`, 'Só competições disputadas por pelo menos dois dos times, com pelo menos 2 jogos de cada um com público registrado (até 10).',
+    h('div', null, legendaTimes(series), barrasAgrupadas(pc, (v) => fmtInt.format(v), Math.max(...pc.map((g) => g.ref)), `de público ${nome}`)),
+    { colunas: ['Competição', 'Time', `Público ${nome}`, 'Jogos'], linhas: pc.flatMap((g) => g.itens.map((it) => [g.nome, it.sr.nome, fmtInt.format(it.valor), fmtInt.format(it.n)])) })
+    : vazio(`Público ${nome} por competição`, 'Os times escolhidos não têm uma competição em comum com jogos suficientes nos filtros atuais.'));
 
   // 4. despesa maior que a bilheteria, por competição
   const dc = porCompeticao(series, 5, (v) => v.filter((x) => x < 0).length / v.length, (j) => j.renda);
@@ -236,5 +238,5 @@ export function renderComparacao(alvo, series, tentativa = 0) {
   } else larga(vazio('Renda líquida jogo a jogo', rendas.length < 3 ? 'Poucos jogos com borderô lido nos filtros atuais para desenhar este gráfico.' : nJogoAJogo(maiorRenda)));
 
   alvo.append(grade);
-  if (tentativa < 2) requestAnimationFrame(() => { if (!alvo.hidden && Math.abs(alvo.clientWidth - medida) > 2) renderComparacao(alvo, series, tentativa + 1); });
+  if (tentativa < 2) requestAnimationFrame(() => { if (!alvo.hidden && Math.abs(alvo.clientWidth - medida) > 2) renderComparacao(alvo, series, modo, tentativa + 1); });
 }
