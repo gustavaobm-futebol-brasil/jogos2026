@@ -2,11 +2,11 @@
 // (botão "Ver como tabela"). Uma série por gráfico: uma só cor, sem legenda; o título diz o que está plotado.
 import { h, s, fmtInt, fmtDec, fmtPct, fmtBRL, fmtData, plural, media, mediana, comDica, mostrarDica, esconderDica, escalaBonita } from './util.js';
 
-const MAX_JOGOS_JOGO_A_JOGO = 160;
-const MESES = ['jan', 'fev', 'mar', 'abr', 'mai', 'jun', 'jul', 'ago', 'set', 'out', 'nov', 'dez'];
+export const MAX_JOGOS_JOGO_A_JOGO = 160;
+export const MESES = ['jan', 'fev', 'mar', 'abr', 'mai', 'jun', 'jul', 'ago', 'set', 'out', 'nov', 'dez'];
 
 // ── cartão: título, resumo em uma frase, gráfico e a tabela equivalente ──
-function cartao(titulo, frase, corpo, tabela) {
+export function cartao(titulo, frase, corpo, tabela) {
   const area = h('div', { class: 'gr-corpo' }, corpo);
   const vista = h('div', { class: 'gr-tabela', hidden: true }, h('div', { class: 'tabela' }, h('table', null,
     h('thead', null, h('tr', null, tabela.colunas.map((c, i) => h('th', { class: i ? 'n' : '', text: c })))),
@@ -25,7 +25,7 @@ function cartao(titulo, frase, corpo, tabela) {
     area, vista, h('div', { class: 'gr-rodape' }, botao));
 }
 
-const vazio = (titulo, motivo) => h('figure', { class: 'grafico vazio' }, h('figcaption', null, h('h3', { text: titulo })), h('p', { class: 'muted small', text: motivo }));
+export const vazio = (titulo, motivo) => h('figure', { class: 'grafico vazio' }, h('figcaption', null, h('h3', { text: titulo })), h('p', { class: 'muted small', text: motivo }));
 
 // ── barras horizontais (HTML: o texto quebra linha e funciona em tela estreita) ──
 function barrasH(itens, fmtValor) {
@@ -64,12 +64,12 @@ function colunas(itens, largura, fmtValor) {
 
 // ── dispersão jogo a jogo (SVG): ponto mais próximo ganha a dica ──
 // Forma = dia da semana (bolinha: sábado/domingo; quadrado: segunda a sexta). Cor, quando `cor` é dado = sinal do valor.
-const DIAS = ['domingo', 'segunda-feira', 'terça-feira', 'quarta-feira', 'quinta-feira', 'sexta-feira', 'sábado'];
-const diaDaSemana = (iso) => new Date(`${iso}T12:00:00`).getDay();
-const fimDeSemana = (iso) => [0, 6].includes(diaDaSemana(iso));
+export const DIAS = ['domingo', 'segunda-feira', 'terça-feira', 'quarta-feira', 'quinta-feira', 'sexta-feira', 'sábado'];
+export const diaDaSemana = (iso) => new Date(`${iso}T12:00:00`).getDay();
+export const fimDeSemana = (iso) => [0, 6].includes(diaDaSemana(iso));
 
 /** Valor monetário curto para o eixo: "R$ 10 mil", "−R$ 5 mil", "R$ 0". */
-function fmtEixoBRL(v) {
+export function fmtEixoBRL(v) {
   if (v === 0) return 'R$ 0';
   const a = Math.abs(v), sinal = v < 0 ? '−' : '';
   if (a >= 1e6) return `${sinal}R$ ${fmtDec.format(a / 1e6)} mi`;
@@ -82,7 +82,7 @@ function fmtEixoBRL(v) {
  * @param {number} largura  largura do SVG em px
  * @param {{valor:(j)=>number, eixo:(v:number)=>string, dica:(j)=>string[], aria:string, ref?:{valor:number, rotulo:string}, cor?:(j)=>string, destacarZero?:boolean}} cfg
  */
-function dispersao(jogos, largura, cfg) {
+export function dispersao(jogos, largura, cfg) {
   const altura = 280, mr = 14, mt = 14, mb = 30;
   const t = (iso) => Date.parse(`${iso}T12:00:00`);
   const valores = jogos.map(cfg.valor);
@@ -146,9 +146,9 @@ function legenda(comSinal) {
 }
 
 // ── os cinco gráficos ──
-const FAIXAS = [0, 500, 1000, 2000, 5000, 10000, 20000, 40000, Infinity];
-const ROTULO_FAIXA = ['0', '500', '1 mil', '2 mil', '5 mil', '10 mil', '20 mil', '40 mil'];
-const textoFaixa = (a, b) => (b === Infinity ? `${fmtInt.format(a)} ou mais` : `de ${fmtInt.format(a)} a ${fmtInt.format(b - 1)}`);
+export const FAIXAS = [0, 500, 1000, 2000, 5000, 10000, 20000, 40000, Infinity];
+export const ROTULO_FAIXA = ['0', '500', '1 mil', '2 mil', '5 mil', '10 mil', '20 mil', '40 mil'];
+export const textoFaixa = (a, b) => (b === Infinity ? `${fmtInt.format(a)} ou mais` : `de ${fmtInt.format(a)} a ${fmtInt.format(b - 1)}`);
 
 export function renderGraficos(alvo, jogos, tentativa = 0) {
   const medida = alvo.clientWidth;   // medido ANTES de limpar: sem o conteúdo a página encolhe e a barra de rolagem some

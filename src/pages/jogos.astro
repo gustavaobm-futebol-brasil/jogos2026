@@ -266,7 +266,8 @@ import Base from '../layouts/Base.astro';
       const partes = [uf ? esc(uf) : '', `${num(fmtInt.format(meus.length))} jogo${meus.length === 1 ? '' : 's'} disputados`];
       if (emCasa.length) partes.push(`público médio em casa ${num(fmtInt.format(emCasa.reduce((s, j) => s + j.pub, 0) / emCasa.length))} (${emCasa.length} jogo${emCasa.length === 1 ? '' : 's'} com público)`,
         `maior público ${num(fmtInt.format(maior.pub))} contra ${esc(maior.visitante)}`);
-      el.innerHTML = `${escudoHtml(nomeExato, 'g')}<div><h2>${esc(nomeExato)}</h2><p>${partes.filter(Boolean).join(' · ')}</p></div>`;
+      el.innerHTML = `${escudoHtml(nomeExato, 'g')}<div><h2>${esc(nomeExato)}</h2><p>${partes.filter(Boolean).join(' · ')}</p>`
+        + `<p><a href="/comparar?t=${encodeURIComponent(nomeExato)}">Comparar com outros times →</a></p></div>`;
     }
 
     function ordenar() {

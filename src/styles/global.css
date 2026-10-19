@@ -234,3 +234,32 @@ button.acao.pequeno { font-size: .8rem; padding: 4px 10px; }
   .lg-claro { background: none; padding: 0; border-radius: 0; }
   .lg-escuro { background: #eef1ee; border-radius: 6px; padding: 3px; }             /* logo escuro some no tema escuro: fundo claro */
 }
+
+/* ── página Comparar: até 4 times, uma cor por time (paleta distinguível por daltônicos; não são as cores dos clubes) ── */
+:root { --s0: #0072b2; --s1: #e69f00; --s2: #cc79a7; --s3: #009e73; }
+@media (prefers-color-scheme: dark) { :root { --s0: #4aa3df; --s1: #f2b134; --s2: #dc92bd; --s3: #2fbf94; } }
+.sw { display: inline-block; flex: none; width: 10px; height: 10px; border-radius: 50%; }
+.sw.s0 { background: var(--s0); } .sw.s1 { background: var(--s1); } .sw.s2 { background: var(--s2); } .sw.s3 { background: var(--s3); }
+.gr-ponto.s0 { fill: var(--s0); } .gr-ponto.s1 { fill: var(--s1); } .gr-ponto.s2 { fill: var(--s2); } .gr-ponto.s3 { fill: var(--s3); }
+.gr-barra.s0 { fill: var(--s0); } .gr-barra.s1 { fill: var(--s1); } .gr-barra.s2 { fill: var(--s2); } .gr-barra.s3 { fill: var(--s3); }
+.gr-linha { fill: none; stroke-width: 2.2; stroke-linejoin: round; stroke-linecap: round; }
+.gr-linha.s0 { stroke: var(--s0); } .gr-linha.s1 { stroke: var(--s1); } .gr-linha.s2 { stroke: var(--s2); } .gr-linha.s3 { stroke: var(--s3); }
+.barras.agrupadas li { grid-template-columns: minmax(120px, 34%) 1fr; align-items: start; }
+.agrupadas .grupo { display: grid; gap: 3px; }
+.agrupadas .linha { display: grid; grid-template-columns: 1fr auto; gap: 10px; align-items: center; padding: 1px 4px; border-radius: 4px; cursor: default; }
+.agrupadas .linha:hover, .agrupadas .linha:focus-visible { background: var(--accent-soft); outline: none; }
+.agrupadas .trilho i.s0 { background: var(--s0); } .agrupadas .trilho i.s1 { background: var(--s1); } .agrupadas .trilho i.s2 { background: var(--s2); } .agrupadas .trilho i.s3 { background: var(--s3); }
+@media (max-width: 560px) { .barras.agrupadas li { grid-template-columns: 1fr; } }
+.comparar-sel .col-times { grid-column: 1 / -1; }
+.comparar-sel .rotulo { display: block; font-size: .8rem; color: var(--muted); margin-bottom: 2px; }
+.fichas { list-style: none; display: flex; flex-wrap: wrap; gap: 8px; margin: 6px 0 10px; padding: 0; }
+.fichas:empty { display: none; }
+.ficha { display: inline-flex; align-items: center; gap: 8px; border: 1px solid var(--border); border-radius: 999px; padding: 4px 6px 4px 10px; background: var(--bg); font-weight: 600; }
+.ficha .x { border: 0; background: none; color: var(--muted); font-size: 1.15rem; line-height: 1; cursor: pointer; padding: 0 6px; }
+.ficha .x:hover { color: var(--div-neg); }
+.sec-graficos { margin-top: 28px; }
+table.comparativo tbody th { text-transform: none; font-size: .9rem; letter-spacing: 0; position: static; background: none; color: var(--fg); font-weight: 600; white-space: normal; }
+table.comparativo thead th.n { vertical-align: bottom; }
+.cab-time { display: inline-flex; align-items: center; gap: 6px; text-transform: none; letter-spacing: 0; font-size: .9rem; color: var(--fg); }
+.gr-legenda .item.muted { color: var(--muted); }
+.gr-destaque[cx='-20'] { visibility: hidden; }      /* marcador de destaque parado fora do gráfico: some até haver um ponto em foco */

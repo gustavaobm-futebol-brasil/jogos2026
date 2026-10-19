@@ -1,0 +1,202 @@
+---
+import Base from '../layouts/Base.astro';
+---
+<Base titulo="Comparar times" descricao="Compare até 4 times lado a lado: público, arrecadação e renda dos jogos, nos mesmos gráficos do explorador.">
+  <h1>Comparar times</h1>
+  <p class="lead">
+    Escolha até 4 times e veja os jogos de cada um nos mesmos gráficos do <a href="/jogos">explorador</a>, cada time com sua cor. Por padrão entram só os jogos em que o time foi <b>mandante</b>, porque o público e a renda do jogo são de quem joga em casa.
+  </p>
+
+  <section class="filtros comparar-sel" aria-label="Times a comparar">
+    <div class="col-times">
+      <span class="rotulo">Times (até 4)</span>
+      <ul id="fichas" class="fichas" aria-live="polite"></ul>
+      <div class="combo" id="bloco-add">
+        <input type="text" id="f-time" placeholder="Adicionar time: ex.: Inter de Limeira" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="sugestoes" autocomplete="off" />
+        <ul id="sugestoes" role="listbox" aria-label="Times sugeridos" hidden></ul>
+      </div>
+      <p class="muted small" id="aviso-max" hidden>Limite de 4 times. Remova um para trocar.</p>
+    </div>
+  </section>
+
+  <form class="filtros" id="filtros" autocomplete="off" onsubmit="return false">
+    <div class="papel" role="radiogroup" aria-label="Jogos de cada time">
+      <span>Jogos de cada time</span>
+      <div class="ops">
+        <label><input type="radio" name="papel" value="mandante" checked /> Só como mandante</label>
+        <label><input type="radio" name="papel" value="qualquer" /> Mandante e visitante</label>
+      </div>
+    </div>
+    <label>Competição<select id="f-comp"><option value="">Todas</option></select></label>
+    <label>Estado do jogo<select id="f-uf"><option value="">Todos</option></select></label>
+    <label>De<input type="date" id="f-de" /></label>
+    <label>Até<input type="date" id="f-ate" /></label>
+    <label class="marcar"><input type="checkbox" id="f-bordero" /> só com borderô (valores)</label>
+  </form>
+  <p class="nota" id="aviso-qualquer" hidden>Com mandante e visitante, o jogo entre dois dos times escolhidos aparece nos dois. Público e renda são do jogo, não de cada time.</p>
+  <p class="muted small" id="contagem" role="status">Carregando…</p>
+
+  <div id="resultado"></div>
+
+  <script>
+    import { renderComparacao } from '../scripts/comparar_graficos.js';
+    import { definirEscudos, escudoHtml, nomeComEscudo, temEscudos } from '../scripts/escudos.js';
+
+    const MAX_TIMES = 4;
+    const fmtInt = new Intl.NumberFormat('pt-BR', { maximumFractionDigits: 0 });
+    const $ = (id) => document.getElementById(id);
+    const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+    const semAcento = (s) => String(s ?? '').normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
+
+    let jogos = [];            // só os já disputados (os números e os gráficos usam jogos realizados)
+    let clubes = [];           // [{ nome, norm, n }]
+    let times = [];            // nomes canônicos escolhidos, na ordem (a posição define a cor)
+    const papel = () => document.querySelector('input[name=papel]:checked').value;
+
+    function carregar(d) {
+      definirEscudos(d.escudos);
+      jogos = d.linhas.map((l) => Object.fromEntries(d.campos.map((c, i) => [c, l[i]]))).filter((j) => j.status === 'realizado' && j.data);
+      const cont = new Map();
+      for (const j of jogos) for (const nome of [j.mandante, j.visitante]) if (nome) cont.set(nome, (cont.get(nome) || 0) + 1);
+      clubes = [...cont.entries()].map(([nome, n]) => ({ nome, norm: semAcento(nome), n }));
+      lerEndereco();
+      desenharFichas();
+      atualizarOpcoes();
+      desenhar();
+    }
+
+    function lerEndereco() {
+      const p = new URLSearchParams(location.search);
+      const validos = new Set(clubes.map((c) => c.nome));
+      times = [...new Set(p.getAll('t'))].filter((n) => validos.has(n)).slice(0, MAX_TIMES);
+      const r = document.querySelector(`input[name=papel][value="${p.get('papel') === 'qualquer' ? 'qualquer' : 'mandante'}"]`);
+      if (r) r.checked = true;
+      if (p.get('uf')) $('f-uf').dataset.inicial = p.get('uf');
+      if (p.get('comp')) $('f-comp').dataset.inicial = p.get('comp');
+      if (p.get('de')) $('f-de').value = p.get('de');
+      if (p.get('ate')) $('f-ate').value = p.get('ate');
+      if (p.get('bordero')) $('f-bordero').checked = true;
+    }
+
+    function gravarEndereco() {
+      const p = new URLSearchParams();
+      for (const t of times) p.append('t', t);
+      if (papel() !== 'mandante') p.set('papel', papel());
+      if ($('f-comp').value) p.set('comp', $('f-comp').value);
+      if ($('f-uf').value) p.set('uf', $('f-uf').value);
+      if ($('f-de').value) p.set('de', $('f-de').value);
+      if ($('f-ate').value) p.set('ate', $('f-ate').value);
+      if ($('f-bordero').checked) p.set('bordero', '1');
+      const q = p.toString();
+      history.replaceState(null, '', location.pathname + (q ? '?' + q : ''));
+    }
+
+    /** Filtro como função. `ignorar` ('uf' | 'comp') deixa aquele filtro de fora: é o que permite calcular as opções de cada lista. */
+    function predicado(nome, ignorar) {
+      const pp = papel(), uf = ignorar === 'uf' ? '' : $('f-uf').value, comp = ignorar === 'comp' ? '' : $('f-comp').value;
+      const de = $('f-de').value, ate = $('f-ate').value, soB = $('f-bordero').checked;
+      return (j) => (pp === 'mandante' ? j.mandante === nome : j.mandante === nome || j.visitante === nome) && (!uf || j.ufJogo === uf) && (!comp || j.comp === comp)
+        && (!de || j.data >= de) && (!ate || j.data <= ate) && (!soB || j.urlB);
+    }
+
+    /** Competição e Estado só oferecem o que existe nos jogos dos times escolhidos pelos OUTROS filtros, com a contagem. */
+    function atualizarOpcoes() {
+      for (const [campo, id, ignorar] of [['ufJogo', 'f-uf', 'uf'], ['comp', 'f-comp', 'comp']]) {
+        const sel = $(id), atual = sel.value || sel.dataset.inicial || '';
+        delete sel.dataset.inicial;
+        const cont = new Map();
+        for (const t of times) for (const j of jogos) if (j[campo] && predicado(t, ignorar)(j)) cont.set(j[campo], (cont.get(j[campo]) || 0) + 1);
+        sel.length = 1;
+        for (const k of [...cont.keys()].sort((a, b) => a.localeCompare(b, 'pt-BR'))) sel.add(new Option(`${k} (${fmtInt.format(cont.get(k))})`, k));
+        sel.value = atual && cont.has(atual) ? atual : '';
+      }
+    }
+
+    function desenharFichas() {
+      $('fichas').innerHTML = times.map((t, i) => `<li class="ficha"><span class="sw s${i}"></span>${temEscudos() ? escudoHtml(t, 'p') : ''}<span class="nome">${esc(t)}</span>`
+        + `<button type="button" class="x" data-t="${esc(t)}" aria-label="Remover ${esc(t)}" title="Remover">×</button></li>`).join('');
+      const cheio = times.length >= MAX_TIMES;
+      $('f-time').disabled = cheio;
+      $('f-time').placeholder = cheio ? 'Limite de 4 times' : times.length ? 'Adicionar outro time' : 'Adicionar time: ex.: Inter de Limeira';
+      $('aviso-max').hidden = !cheio;
+    }
+
+    function desenhar() {
+      gravarEndereco();
+      $('aviso-qualquer').hidden = papel() !== 'qualquer' || times.length < 2;
+      const alvo = $('resultado');
+      if (!times.length) {
+        $('contagem').textContent = '';
+        alvo.replaceChildren();
+        const p = document.createElement('p');
+        p.className = 'nota';
+        p.textContent = 'Escolha pelo menos um time no campo acima para começar. Para comparar, adicione até 4.';
+        alvo.append(p);
+        return;
+      }
+      const series = times.map((nome, i) => ({ nome, i, jogos: jogos.filter(predicado(nome, '')).map((j) => ({ ...j, _s: i, _nome: nome })) }));
+      $('contagem').textContent = series.map((sr) => `${sr.nome}: ${fmtInt.format(sr.jogos.length)} jogo${sr.jogos.length === 1 ? '' : 's'}`).join(' · ');
+      renderComparacao(alvo, series);
+    }
+
+    function mudou() { atualizarOpcoes(); desenhar(); }
+
+    // ── fichas: remover ──
+    $('fichas').addEventListener('click', (e) => {
+      const b = e.target.closest('button.x');
+      if (!b) return;
+      times = times.filter((t) => t !== b.dataset.t);
+      desenharFichas(); mudou();
+    });
+
+    // ── sugestões de time (busca sem acento) ──
+    let ativa = -1, itens = [];
+    function sugerir() {
+      const n = semAcento($('f-time').value.trim());
+      ativa = -1;
+      if (!n) return fechar();
+      itens = clubes.filter((c) => !times.includes(c.nome) && c.norm.includes(n))
+        .sort((a, b) => (b.norm.startsWith(n) - a.norm.startsWith(n)) || b.n - a.n || a.nome.localeCompare(b.nome, 'pt-BR')).slice(0, 8);
+      if (!itens.length) return fechar();
+      $('sugestoes').innerHTML = itens.map((c, i) => `<li role="option" id="sug-${i}" data-i="${i}"><span>${nomeComEscudo(c.nome, 'p')}</span><small>${c.n} jogo${c.n === 1 ? '' : 's'}</small></li>`).join('');
+      $('sugestoes').hidden = false;
+      $('f-time').setAttribute('aria-expanded', 'true');
+    }
+    function fechar() { $('sugestoes').hidden = true; $('f-time').setAttribute('aria-expanded', 'false'); ativa = -1; }
+    function adicionar(i) {
+      const c = itens[i];
+      if (!c || times.length >= MAX_TIMES || times.includes(c.nome)) return;
+      times.push(c.nome);
+      $('f-time').value = '';
+      fechar(); desenharFichas(); mudou();
+    }
+    function marcar(i) {
+      document.querySelectorAll('#sugestoes li').forEach((li, k) => li.setAttribute('aria-selected', k === i ? 'true' : 'false'));
+      ativa = i;
+      if (i >= 0) $('f-time').setAttribute('aria-activedescendant', `sug-${i}`); else $('f-time').removeAttribute('aria-activedescendant');
+    }
+    $('f-time').addEventListener('input', sugerir);
+    $('f-time').addEventListener('focus', () => { if ($('f-time').value.trim()) sugerir(); });
+    $('f-time').addEventListener('blur', () => setTimeout(fechar, 120));
+    $('sugestoes').addEventListener('mousedown', (e) => { const li = e.target.closest('li'); if (li) { e.preventDefault(); adicionar(Number(li.dataset.i)); } });
+    $('f-time').addEventListener('keydown', (e) => {
+      if ($('sugestoes').hidden) return;
+      if (e.key === 'ArrowDown') { e.preventDefault(); marcar((ativa + 1) % itens.length); }
+      else if (e.key === 'ArrowUp') { e.preventDefault(); marcar((ativa - 1 + itens.length) % itens.length); }
+      else if (e.key === 'Enter') { e.preventDefault(); adicionar(ativa >= 0 ? ativa : 0); }
+      else if (e.key === 'Escape') fechar();
+    });
+
+    // ── filtros ──
+    ['f-comp', 'f-uf', 'f-de', 'f-ate', 'f-bordero'].forEach((id) => $(id).addEventListener('input', mudou));
+    document.querySelectorAll('input[name=papel]').forEach((r) => r.addEventListener('change', mudou));
+
+    let larguraAnterior = window.innerWidth, adiar = 0;
+    window.addEventListener('resize', () => {   // gráficos em SVG têm largura fixa: redesenha ao mudar o tamanho da janela
+      clearTimeout(adiar);
+      adiar = setTimeout(() => { if (window.innerWidth !== larguraAnterior && times.length) desenhar(); larguraAnterior = window.innerWidth; }, 200);
+    });
+
+    fetch('/dados/jogos.json').then((r) => r.json()).then(carregar).catch(() => { $('contagem').textContent = 'Não foi possível carregar os dados. Recarregue a página.'; });
+  </script>
+</Base>
