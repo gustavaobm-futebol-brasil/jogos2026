@@ -81,6 +81,16 @@ p { margin: 0 0 12px; }
 .filtros .marcar { flex-direction: row; align-items: center; gap: 8px; font-size: .9rem; color: var(--fg); }
 .filtros .marcar input { width: auto; }
 .filtros [hidden] { display: none; }
+/* seletor de várias competições (clubes): <details> com caixas de seleção */
+.filtros .multi-campo { display: flex; flex-direction: column; font-size: .8rem; color: var(--muted); gap: 3px; position: relative; }
+.multi summary { font: inherit; font-size: .95rem; padding: 7px 9px; border: 1px solid var(--border); border-radius: 7px; background: var(--bg); color: var(--fg); cursor: pointer; list-style: none; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.multi summary::-webkit-details-marker { display: none; }
+.multi summary::after { content: '▾'; float: right; color: var(--muted); }
+.multi[open] summary { border-color: var(--fg); }
+.multi .painel { position: absolute; z-index: 20; left: 0; top: 100%; margin-top: 4px; min-width: 100%; width: max-content; max-width: min(92vw, 460px); max-height: 340px; overflow: auto; background: var(--card); border: 1px solid var(--border); border-radius: 8px; box-shadow: 0 6px 22px rgba(0, 0, 0, .18); padding: 6px; display: flex; flex-direction: column; gap: 2px; }
+.multi .painel label.marcar { padding: 5px 6px; border-radius: 5px; cursor: pointer; }
+.multi .painel label.marcar:hover, .multi .painel .limpar:hover { background: var(--bg); }
+.multi .painel .limpar { font: inherit; font-size: .85rem; text-align: left; padding: 5px 6px; border: 0; border-bottom: 1px solid var(--border); border-radius: 5px 5px 0 0; background: none; color: var(--muted); cursor: pointer; margin-bottom: 2px; }
 .busca { width: 100%; max-width: 360px; margin: 8px 0; }
 button.acao { font: inherit; font-size: .9rem; padding: 7px 14px; border: 1px solid var(--border); border-radius: 7px; background: var(--card); color: var(--fg); cursor: pointer; }
 button.acao:hover:not(:disabled) { border-color: var(--accent); color: var(--accent); }

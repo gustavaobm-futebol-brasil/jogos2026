@@ -13,7 +13,13 @@ const clubes = porClube(MINIMO).sort((a, b) => b.pubMedio - a.pubMedio);
 
   <div class="filtros" id="filtros-clubes">
     <label>Clube ou estado<input type="search" id="busca-clube" placeholder="ex.: Cruzeiro, MG" autocomplete="off" /></label>
-    <label>Competição<select id="f-comp-clube"><option value="">Todas</option></select></label>
+    <div class="multi-campo">
+      <span id="rot-comp">Competição</span>
+      <details class="multi" id="f-comp-clube">
+        <summary aria-labelledby="rot-comp" id="resumo-comp">Todas</summary>
+        <div class="painel" id="painel-comp"></div>
+      </details>
+    </div>
     <label>Estado<select id="f-uf-clube"><option value="">Todos</option></select></label>
   </div>
   <div class="filtros" id="opcoes-clubes">
@@ -76,23 +82,25 @@ const clubes = porClube(MINIMO).sort((a, b) => b.pubMedio - a.pubMedio);
     let participantes = [];    // por competição: Set dos índices de clube que a disputam (mandante ou visitante)
     let doBrasileiro = {};     // série -> Set dos clubes que a jogaram
     let ordem = { campo: 'pubMedio', dir: -1 };
+    /** Competições marcadas no filtro (vazio = todas). */
+    const compsMarcadas = () => [...document.querySelectorAll('#painel-comp input:checked')].map((i) => i.value);
 
-    /** Soma as linhas do clube nas competições escolhidas (todas, ou só a selecionada). */
-    function agregar(comp, todosJogos) {
-      const iComp = comp ? dados.comps.indexOf(comp) : -1;
-      // "todosJogos": os mesmos clubes que disputam a competição, mas somando os jogos em casa de TODAS as competições
-      const doGrupo = comp && todosJogos ? participantes[iComp] : null;
+    /** Soma as linhas do clube nas competições escolhidas (todas, ou só as selecionadas). */
+    function agregar(comps, todosJogos) {
+      const iComps = new Set(comps.map((c) => dados.comps.indexOf(c)).filter((i) => i >= 0));
+      // "todosJogos": os clubes que disputam alguma das competições, mas somando os jogos em casa de TODAS as competições
+      const doGrupo = comps.length && todosJogos ? new Set(comps.flatMap((c) => [...participantes[dados.comps.indexOf(c)] || []])) : null;
       const porClube = new Map();
       for (const [ic, icomp, n, pubTotal, maior, contra, dataMaior, rendaTotal, nRenda] of dados.linhas) {
         if (doGrupo) { if (!doGrupo.has(ic)) continue; }
-        else if (iComp >= 0 && icomp !== iComp) continue;
+        else if (iComps.size && !iComps.has(icomp)) continue;
         const a = porClube.get(ic) || { n: 0, pubTotal: 0, maior: -1, contra: '', dataMaior: '', rendaTotal: 0, nRenda: 0 };
         a.n += n; a.pubTotal += pubTotal; a.rendaTotal += rendaTotal; a.nRenda += nRenda;
         if (maior > a.maior) { a.maior = maior; a.contra = contra; a.dataMaior = dataMaior; }
         porClube.set(ic, a);
       }
-      // com uma competição escolhida, basta 1 jogo em casa com público (numa copa, muitos clubes jogam 1 ou 2 vezes em casa)
-      const minimo = comp ? 1 : MINIMO_GERAL;
+      // com competição escolhida, basta 1 jogo em casa com público (numa copa, muitos clubes jogam 1 ou 2 vezes em casa)
+      const minimo = comps.length ? 1 : MINIMO_GERAL;
       return [...porClube.entries()].filter(([, a]) => a.n >= minimo).map(([ic, a]) => ({
         nome: dados.clubes[ic][0], uf: dados.clubes[ic][1], n: a.n, pubMedio: a.pubTotal / a.n, maior: a.maior, contra: a.contra, dataMaior: a.dataMaior,
         rendaMedia: a.nRenda ? a.rendaTotal / a.nRenda : null, nRenda: a.nRenda, ic,
@@ -100,15 +108,16 @@ const clubes = porClube(MINIMO).sort((a, b) => b.pubMedio - a.pubMedio);
     }
 
     function desenhar() {
-      const comp = $('f-comp-clube').value;
-      const todos = !!comp && $('f-todos-jogos').checked;
+      const comps = compsMarcadas();
+      const comp = comps.length === 1 ? comps[0] : '';    // os links para /jogos só levam a competição quando é uma só
+      const todos = comps.length > 0 && $('f-todos-jogos').checked;
       const uf = $('f-uf-clube').value;
       const semSeries = [...document.querySelectorAll('.f-sem-serie:checked')].map((i) => i.value);
       const soSeries = [...document.querySelectorAll('.f-so-serie:checked')].map((i) => i.value);
-      $('lbl-todos-jogos').hidden = !comp;
+      $('lbl-todos-jogos').hidden = !comps.length;
       const q = semAcento($('busca-clube').value.trim());
       const { campo, dir } = ordem;
-      const linhas = agregar(comp, todos).filter((c) => (!q || semAcento(c.nome).includes(q) || semAcento(c.uf).includes(q))
+      const linhas = agregar(comps, todos).filter((c) => (!q || semAcento(c.nome).includes(q) || semAcento(c.uf).includes(q))
         && (!uf || c.uf === uf) && !semSeries.some((s) => doBrasileiro[s]?.has(c.ic))
         && (!soSeries.length || soSeries.some((s) => doBrasileiro[s]?.has(c.ic)))).sort((a, b) => {
         const x = campo === 'nome' || campo === 'uf' ? semAcento(a[campo]) : a[campo], y = campo === 'nome' || campo === 'uf' ? semAcento(b[campo]) : b[campo];
@@ -128,17 +137,19 @@ const clubes = porClube(MINIMO).sort((a, b) => b.pubMedio - a.pubMedio);
         || '<tr><td colspan="6" class="muted">Nenhum clube com esses filtros.</td></tr>';
       $('contagem-clubes').textContent = `${fmtInt.format(linhas.length)} clube${linhas.length === 1 ? '' : 's'}`;
       const nota = $('nota-comp');
-      nota.hidden = !comp;
-      if (comp) nota.textContent = todos
-        ? `Os clubes que disputam “${comp}”, com os números de todos os jogos deles em casa, em qualquer competição (não só nesta). Entram clubes com pelo menos 1 jogo em casa com público registrado.`
-        : `Só os clubes que jogaram em casa em “${comp}”, com os números dessa competição. Entram clubes com pelo menos 1 jogo em casa com público registrado.`;
-      $('lead').hidden = !!comp;
+      nota.hidden = !comps.length;
+      const nomes = comps.map((c) => `“${c}”`).join(', ');
+      if (comps.length) nota.textContent = todos
+        ? `Os clubes que disputam ${nomes}, com os números de todos os jogos deles em casa, em qualquer competição (não só ${comps.length > 1 ? 'nelas' : 'nesta'}). Entram clubes com pelo menos 1 jogo em casa com público registrado.`
+        : `Só os clubes que jogaram em casa em ${nomes}, com os números ${comps.length > 1 ? 'dessas competições somadas' : 'dessa competição'}. Entram clubes com pelo menos 1 jogo em casa com público registrado.`;
+      $('lead').hidden = !!comps.length;
+      $('resumo-comp').textContent = !comps.length ? 'Todas' : comps.length === 1 ? comps[0] : `${comps.length} competições`;
       document.querySelectorAll('th[data-ord]').forEach((th) => {
         th.classList.toggle('asc', th.dataset.ord === campo && dir === 1);
         th.classList.toggle('desc', th.dataset.ord === campo && dir === -1);
       });
       const p = new URLSearchParams();
-      if (comp) p.set('comp', comp);
+      comps.forEach((c) => p.append('comp', c));
       if (todos) p.set('todos', '1');
       if (uf) p.set('uf', uf);
       if (semSeries.length) p.set('sem', semSeries.join(''));
@@ -149,8 +160,8 @@ const clubes = porClube(MINIMO).sort((a, b) => b.pubMedio - a.pubMedio);
 
     /** Opções do filtro de competição: as que têm algum clube com jogo em casa com público, com o número de clubes. Com um estado
      *  escolhido, só as competições em que clubes DESSE estado jogaram em casa, contando só os clubes do estado. Mantém a
-     *  competição selecionada se ela ainda existir; senão volta para "Todas". */
-    function montarCompeticoes(atual) {
+     *  competições marcadas que ainda existirem; se nenhuma sobrar, volta para "Todas". */
+    function montarCompeticoes(atuais) {
       const uf = $('f-uf-clube').value;
       const clubes = new Map();            // índice da competição -> clubes (índices) com jogo em casa nela
       for (const l of dados.linhas) {
@@ -158,10 +169,8 @@ const clubes = porClube(MINIMO).sort((a, b) => b.pubMedio - a.pubMedio);
         if (!clubes.has(l[1])) clubes.set(l[1], new Set());
         clubes.get(l[1]).add(l[0]);
       }
-      const sel = $('f-comp-clube');
-      sel.innerHTML = '<option value="">Todas</option>' + dados.comps.map((c, i) => (clubes.has(i)
-        ? `<option value="${esc(c)}">${esc(c)} (${clubes.get(i).size})</option>` : '')).join('');
-      sel.value = [...sel.options].some((o) => o.value === atual) ? atual : '';
+      $('painel-comp').innerHTML = '<button type="button" class="limpar" id="limpar-comp">Todas (limpar seleção)</button>' + dados.comps.map((c, i) => (clubes.has(i)
+        ? `<label class="marcar"><input type="checkbox" value="${esc(c)}"${atuais.includes(c) ? ' checked' : ''} /> ${esc(c)} (${clubes.get(i).size})</label>` : '')).join('');
     }
 
     fetch('/dados/clubes.json').then((r) => r.json()).then((d) => {
@@ -174,7 +183,7 @@ const clubes = porClube(MINIMO).sort((a, b) => b.pubMedio - a.pubMedio);
       $('f-uf-clube').insertAdjacentHTML('beforeend', ufs.map((u) => `<option value="${esc(u)}">${esc(u)}</option>`).join(''));
       const p = new URLSearchParams(location.search);
       if (p.get('uf') && ufs.includes(p.get('uf'))) $('f-uf-clube').value = p.get('uf');
-      montarCompeticoes(p.get('comp') || '');
+      montarCompeticoes(p.getAll('comp'));
       if (p.get('q')) $('busca-clube').value = p.get('q');
       $('f-todos-jogos').checked = p.get('todos') === '1';
       const sem = p.get('sem') || (p.get('semBr') === '1' ? 'ABCD' : '');   // (semBr=1: link antigo = as quatro séries)
@@ -190,8 +199,16 @@ const clubes = porClube(MINIMO).sort((a, b) => b.pubMedio - a.pubMedio);
         if (el.checked) document.querySelectorAll(b).forEach((o) => { if (o.value === el.value) o.checked = false; });
       }));
     }
-    for (const el of [$('f-comp-clube'), $('f-todos-jogos'), ...document.querySelectorAll('.f-sem-serie, .f-so-serie')]) el.addEventListener('input', () => dados && desenhar());
-    $('f-uf-clube').addEventListener('input', () => { if (!dados) return; montarCompeticoes($('f-comp-clube').value); desenhar(); });
+    for (const el of [$('f-todos-jogos'), ...document.querySelectorAll('.f-sem-serie, .f-so-serie')]) el.addEventListener('input', () => dados && desenhar());
+    $('painel-comp').addEventListener('input', () => dados && desenhar());
+    $('painel-comp').addEventListener('click', (e) => {
+      if (!e.target.closest('#limpar-comp')) return;
+      document.querySelectorAll('#painel-comp input').forEach((i) => { i.checked = false; });
+      if (dados) desenhar();
+    });
+    document.addEventListener('click', (e) => { if (!e.target.closest('#f-comp-clube')) $('f-comp-clube').open = false; });
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') $('f-comp-clube').open = false; });
+    $('f-uf-clube').addEventListener('input', () => { if (!dados) return; montarCompeticoes(compsMarcadas()); desenhar(); });
     $('busca-clube').addEventListener('input', () => dados && desenhar());
     document.querySelectorAll('th[data-ord]').forEach((th) => th.addEventListener('click', () => {
       if (!dados) return;
