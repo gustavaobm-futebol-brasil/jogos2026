@@ -178,7 +178,7 @@ const clsJogos = 'barras com-jogos';
           definirEscudos(d.escudos);
           const js = d.linhas.map((l) => Object.fromEntries(d.campos.map((c, i) => [c, l[i]])))
             .filter((j) => j.comp === alvo.dataset.comp && j.status === 'realizado' && j.data);
-          renderGraficos(alvo, js);
+          renderGraficos(alvo, js, { daCompeticao: true });
         }).catch(() => { alvo.textContent = 'Não foi possível carregar os gráficos. Recarregue a página.'; });
       };
       new IntersectionObserver((es) => { if (es.some((e) => e.isIntersecting)) carregar(); }, { rootMargin: '400px' }).observe(alvo);

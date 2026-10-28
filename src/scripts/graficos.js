@@ -150,7 +150,10 @@ export const FAIXAS = [0, 500, 1000, 2000, 5000, 10000, 20000, 40000, Infinity];
 export const ROTULO_FAIXA = ['0', '500', '1 mil', '2 mil', '5 mil', '10 mil', '20 mil', '40 mil'];
 export const textoFaixa = (a, b) => (b === Infinity ? `${fmtInt.format(a)} ou mais` : `de ${fmtInt.format(a)} a ${fmtInt.format(b - 1)}`);
 
-export function renderGraficos(alvo, jogos, tentativa = 0) {
+/** opcoes.daCompeticao: para a página de UMA competição. Some com os gráficos que comparam competições e o jogo a jogo passa a mostrar
+ *  os MAX_JOGOS_JOGO_A_JOGO jogos mais recentes (em vez de pedir mais filtros), dizendo isso no título. */
+export function renderGraficos(alvo, jogos, opcoes = {}, tentativa = 0) {
+  const daCompeticao = !!opcoes.daCompeticao;
   const medida = alvo.clientWidth;   // medido ANTES de limpar: sem o conteúdo a página encolhe e a barra de rolagem some
   alvo.replaceChildren();
   const comPub = jogos.filter((j) => j.pub != null);
@@ -197,6 +200,7 @@ export function renderGraficos(alvo, jogos, tentativa = 0) {
 
   // 3. público médio por competição
   const porComp = new Map();
+  if (!daCompeticao) {
   for (const j of comPub) (porComp.get(j.comp) || porComp.set(j.comp, []).get(j.comp)).push(j.pub);
   const comps = [...porComp.entries()].filter(([, v]) => v.length >= 3).map(([nome, v]) => ({ nome, valor: media(v), n: v.length }))
     .sort((x, y) => y.valor - x.valor).slice(0, 12);
@@ -207,9 +211,11 @@ export function renderGraficos(alvo, jogos, tentativa = 0) {
   } else {
     grade.append(vazio('Público médio por competição', 'Só há uma competição (ou poucas com 3 jogos) nos filtros atuais. Tire o filtro de competição para comparar.'));
   }
+  }
 
   // 4. despesa maior que a bilheteria, por competição
   const rend = new Map();
+  if (!daCompeticao) {
   for (const j of jogos) if (j.renda != null) (rend.get(j.comp) || rend.set(j.comp, []).get(j.comp)).push(j.renda);
   const deficit = [...rend.entries()].filter(([, v]) => v.length >= 8).map(([nome, v]) => ({ nome, n: v.length, neg: v.filter((x) => x < 0).length }))
     .map((c) => ({ ...c, valor: c.neg / c.n })).sort((x, y) => y.valor - x.valor).slice(0, 12);
@@ -222,15 +228,20 @@ export function renderGraficos(alvo, jogos, tentativa = 0) {
   } else {
     grade.append(vazio('Jogos em que a despesa superou a bilheteria', 'Há poucas competições com 8 ou mais borderôs lidos nos filtros atuais.'));
   }
+  }
 
   // 5. público jogo a jogo (só com poucos jogos, para cada ponto ser legível)
   const semDia = (j) => DIAS[diaDaSemana(j.data)];
   const nJogoAJogo = (n, quem) => `Disponível quando os filtros deixam até ${MAX_JOGOS_JOGO_A_JOGO} jogos ${quem} (agora há ${fmtInt.format(n)}). Filtre por um clube ou uma competição.`;
   const larga = (el) => { el.classList.add('larga'); grade.append(el); };
-  if (comPub.length <= MAX_JOGOS_JOGO_A_JOGO && comPub.length >= 3) {
-    const ordenados = [...comPub].sort((x, y) => x.data.localeCompare(y.data));
+  const recortar = (js) => (daCompeticao && js.length > MAX_JOGOS_JOGO_A_JOGO ? [...js].sort((x, y) => y.data.localeCompare(x.data)).slice(0, MAX_JOGOS_JOGO_A_JOGO) : js);
+  if ((daCompeticao || comPub.length <= MAX_JOGOS_JOGO_A_JOGO) && comPub.length >= 3) {
+    const recorte = daCompeticao && comPub.length > MAX_JOGOS_JOGO_A_JOGO;
+    const ordenados = [...recortar(comPub)].sort((x, y) => x.data.localeCompare(y.data));
     const med = mediana(ordenados.map((j) => j.pub));
-    const card = cartao('Público jogo a jogo', `Cada ponto é um jogo (${plural(comPub.length, 'jogo', 'jogos')}). A linha marca a mediana; passe o mouse para ver o jogo.`,
+    const card = cartao(recorte ? `Público jogo a jogo: os ${MAX_JOGOS_JOGO_A_JOGO} jogos mais recentes` : 'Público jogo a jogo',
+      recorte ? `Cada ponto é um jogo: os ${MAX_JOGOS_JOGO_A_JOGO} mais recentes, de ${fmtInt.format(comPub.length)} com público registrado (de ${fmtData(ordenados[0].data)} a ${fmtData(ordenados[ordenados.length - 1].data)}). A linha marca a mediana desses jogos; passe o mouse para ver o jogo.`
+        : `Cada ponto é um jogo (${plural(comPub.length, 'jogo', 'jogos')}). A linha marca a mediana; passe o mouse para ver o jogo.`,
       h('div', null, legenda(false), dispersao(ordenados, largura, {
         valor: (j) => j.pub, eixo: (v) => fmtInt.format(v), aria: 'Dispersão do público de cada jogo ao longo do tempo',
         ref: { valor: med, rotulo: `mediana ${fmtInt.format(med)}` },
@@ -239,16 +250,17 @@ export function renderGraficos(alvo, jogos, tentativa = 0) {
       { colunas: ['Data', 'Dia', 'Jogo', 'Competição', 'Público'], linhas: ordenados.map((j) => [fmtData(j.data), semDia(j), `${j.mandante} x ${j.visitante}`, j.comp, fmtInt.format(j.pub)]) });
     larga(card);
   } else {
-    larga(vazio('Público jogo a jogo', nJogoAJogo(comPub.length, 'com público')));
+    larga(vazio('Público jogo a jogo', comPub.length < 3 ? 'Poucos jogos com público registrado nos filtros atuais para desenhar este gráfico.' : nJogoAJogo(comPub.length, 'com público')));
   }
 
   // 6. renda líquida jogo a jogo (mesmos filtros; só jogos com borderô lido)
   const comRenda = jogos.filter((j) => j.renda != null);
-  if (comRenda.length <= MAX_JOGOS_JOGO_A_JOGO && comRenda.length >= 3) {
-    const ordenados = [...comRenda].sort((x, y) => x.data.localeCompare(y.data));
+  if ((daCompeticao || comRenda.length <= MAX_JOGOS_JOGO_A_JOGO) && comRenda.length >= 3) {
+    const recorteR = daCompeticao && comRenda.length > MAX_JOGOS_JOGO_A_JOGO;
+    const ordenados = [...recortar(comRenda)].sort((x, y) => x.data.localeCompare(y.data));
     const neg = ordenados.filter((j) => j.renda < 0).length;
-    const card = cartao('Renda líquida jogo a jogo',
-      `${plural(comRenda.length, 'jogo com borderô', 'jogos com borderô')}: ${fmtInt.format(neg)} com despesa maior que a bilheteria (abaixo da linha do zero). Renda líquida = arrecadação − despesas.`,
+    const card = cartao(recorteR ? `Renda líquida jogo a jogo: os ${MAX_JOGOS_JOGO_A_JOGO} jogos mais recentes` : 'Renda líquida jogo a jogo',
+      `${recorteR ? `Os ${MAX_JOGOS_JOGO_A_JOGO} jogos com borderô mais recentes, de ${fmtInt.format(comRenda.length)} (de ${fmtData(ordenados[0].data)} a ${fmtData(ordenados[ordenados.length - 1].data)})` : plural(comRenda.length, 'jogo com borderô', 'jogos com borderô')}: ${fmtInt.format(neg)} com despesa maior que a bilheteria (abaixo da linha do zero). Renda líquida = arrecadação − despesas.`,
       h('div', null, legenda(true), dispersao(ordenados, largura, {
         valor: (j) => j.renda, eixo: fmtEixoBRL, destacarZero: true, aria: 'Dispersão da renda líquida de cada jogo ao longo do tempo', cor: (j) => (j.renda < 0 ? 'neg' : 'pos'),
         dica: (j) => [`${fmtBRL(j.renda)} de renda líquida`, { jogo: [j.mandante, j.visitante] }, `${semDia(j)}, ${fmtData(j.data)} · ${j.comp}`,
@@ -262,5 +274,5 @@ export function renderGraficos(alvo, jogos, tentativa = 0) {
   }
   alvo.append(grade);
   // a barra de rolagem da página pode aparecer só depois do primeiro desenho e mudar a largura útil: mede de novo uma vez
-  if (tentativa < 2) requestAnimationFrame(() => { if (!alvo.hidden && Math.abs(alvo.clientWidth - medida) > 2) renderGraficos(alvo, jogos, tentativa + 1); });
+  if (tentativa < 2) requestAnimationFrame(() => { if (!alvo.hidden && Math.abs(alvo.clientWidth - medida) > 2) renderGraficos(alvo, jogos, opcoes, tentativa + 1); });
 }
