@@ -304,3 +304,5 @@ a.tl:hover, a.tl:focus-visible { color: var(--accent); text-decoration: underlin
 .como-tabela { margin: 6px 0 14px; font-size: .9rem; }
 a.ext { font-size: .85em; margin-left: 2px; text-decoration: none; color: var(--muted); }
 a.ext:hover { color: var(--accent); }
+.rod-grade { stroke: var(--border); stroke-width: 1; stroke-dasharray: 3 3; }
+.rod-base { stroke: var(--muted); stroke-width: 1; }

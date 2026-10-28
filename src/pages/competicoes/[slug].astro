@@ -49,7 +49,14 @@ for (const j of comPub) {
 const rodadas = [...porRodada.entries()].sort((a, b) => a[0] - b[0]).map(([r, ps]) => ({ r, n: ps.length, medio: soma(ps) / ps.length }));
 const comGrafico = rodadas.length >= 3;
 const maxRod = Math.max(1, ...rodadas.map((x) => x.medio));
-const LARG = 720, ALT = 190, M = { e: 8, d: 8, t: 14, b: 26 };
+// eixo vertical: 4 intervalos iguais com passo "redondo" (1, 2, 2,5 ou 5 × 10^n), do 0 até o topo da escala
+const topoEixo = (() => {
+  const bruto = maxRod / 4, e = 10 ** Math.floor(Math.log10(bruto));
+  return 4 * ([1, 2, 2.5, 5, 10].map((m) => m * e).find((v) => v >= bruto) ?? bruto);
+})();
+const marcas = [0, 1, 2, 3, 4].map((i) => (topoEixo * i) / 4);
+const rotuloEixo = (v) => (v >= 1000 ? `${new Intl.NumberFormat('pt-BR', { maximumFractionDigits: 1 }).format(v / 1000)} mil` : fmtInt(v));
+const LARG = 720, ALT = 200, M = { e: 52, d: 8, t: 12, b: 26 };
 const passo = (LARG - M.e - M.d) / Math.max(1, rodadas.length);
 const salto = Math.ceil(rodadas.length / 20);   // rótulos do eixo: no máximo ~20
 
@@ -116,9 +123,17 @@ const clsJogos = 'barras com-jogos';
           <h2>Público médio por rodada</h2>
           <p class="small muted">Média dos jogos com público registrado em cada rodada. Passe o mouse (ou toque) numa coluna para ver os valores.</p>
           <svg class="rod-chart" viewBox={`0 0 ${LARG} ${ALT}`} role="img" aria-label={`Público médio por rodada em ${c.comp}: de ${fmtInt(Math.min(...rodadas.map((x) => x.medio)))} a ${fmtInt(maxRod)} pessoas.`}>
-            <text x={M.e} y={M.t - 3} class="rod-eixo">{fmtInt(maxRod)}</text>
+            {marcas.map((v) => {
+              const y = ALT - M.b - ((ALT - M.t - M.b) * v) / topoEixo;
+              return (
+                <g>
+                  <line x1={M.e} x2={LARG - M.d} y1={y} y2={y} class={v === 0 ? 'rod-base' : 'rod-grade'}></line>
+                  <text x={M.e - 6} y={y + 4} text-anchor="end" class="rod-eixo">{rotuloEixo(v)}</text>
+                </g>
+              );
+            })}
             {rodadas.map((x, i) => {
-              const alt = ((ALT - M.t - M.b) * x.medio) / maxRod;
+              const alt = ((ALT - M.t - M.b) * x.medio) / topoEixo;
               const bx = M.e + i * passo + passo * 0.12;
               return (
                 <g>
