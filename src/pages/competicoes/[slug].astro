@@ -1,0 +1,187 @@
+---
+import Base from '../../layouts/Base.astro';
+import { porCompeticao, nomeComEscudo, fmtInt, fmtBRLcompacto, fmtData, soma } from '../../lib/dados.js';
+import { jogoLinkado } from '../../scripts/escudos.js';
+import { slugComp } from '../../scripts/slug.js';
+
+export function getStaticPaths() {
+  const comps = porCompeticao();
+  const vistos = new Set();
+  for (const c of comps) {
+    const s = slugComp(c.comp);
+    if (vistos.has(s)) throw new Error(`Duas competições com o mesmo endereço: ${s}`);
+    vistos.add(s);
+  }
+  return comps.map((c) => ({ params: { slug: slugComp(c.comp) }, props: { c } }));
+}
+
+const { c } = Astro.props;
+const comPub = c.jogos.filter((j) => j.pub != null);
+const porPub = [...comPub].filter((j) => j.pub > 0).sort((a, b) => b.pub - a.pub);
+const maior = porPub[0];
+const q = (s) => encodeURIComponent(s);
+
+// maiores e menores públicos (com poucos jogos, uma lista só)
+const poucos = porPub.length <= 10;
+const topo = poucos ? porPub : porPub.slice(0, 5);
+const fundo = poucos ? [] : porPub.slice(-5).reverse();
+const maxPub = maior?.pub || 1;
+
+// clubes como mandante nesta competição
+const mapaClubes = new Map();
+for (const j of comPub) {
+  if (!mapaClubes.has(j.mandante)) mapaClubes.set(j.mandante, []);
+  mapaClubes.get(j.mandante).push(j);
+}
+const clubes = [...mapaClubes.entries()].map(([clube, js]) => {
+  const m = js.reduce((a, b) => (b.pub > a.pub ? b : a));
+  return { clube, n: js.length, medio: soma(js.map((j) => j.pub)) / js.length, maior: m.pub, contra: m.visitante, data: m.data };
+}).sort((a, b) => b.medio - a.medio);
+
+// público médio por rodada (só rodadas numéricas; nas copas de mata-mata a "rodada" não diz nada)
+const porRodada = new Map();
+for (const j of comPub) {
+  if (!/^\d{1,2}$/.test(String(j.rodada ?? ''))) continue;
+  const r = Number(j.rodada);
+  if (!porRodada.has(r)) porRodada.set(r, []);
+  porRodada.get(r).push(j.pub);
+}
+const rodadas = [...porRodada.entries()].sort((a, b) => a[0] - b[0]).map(([r, ps]) => ({ r, n: ps.length, medio: soma(ps) / ps.length }));
+const comGrafico = rodadas.length >= 3;
+const maxRod = Math.max(1, ...rodadas.map((x) => x.medio));
+const LARG = 720, ALT = 190, M = { e: 8, d: 8, t: 14, b: 26 };
+const passo = (LARG - M.e - M.d) / Math.max(1, rodadas.length);
+const salto = Math.ceil(rodadas.length / 20);   // rótulos do eixo: no máximo ~20
+
+const pctB = c.n ? Math.round((100 * c.comBordero) / c.n) : 0;
+const clsJogos = 'barras com-jogos';
+---
+<Base titulo={c.comp} descricao={`${c.comp}: público, arrecadação e jogos, a partir dos borderôs e súmulas publicados pela ${c.federacao}.`}>
+  <p class="small"><a href="/competicoes">← Todas as competições</a></p>
+  <div class="cartao-clube cartao-comp">
+    {c.logo ? <Fragment set:html={c.logo} /> : null}
+    <div>
+      <h1>{c.comp}</h1>
+      <p>{c.federacao} · {c.uf === 'BR' ? 'nacional' : c.uf} · {c.divisao}{c.compUrl ? <> · <a href={c.compUrl} target="_blank" rel="noopener" title="Página oficial da competição na federação">site oficial ↗</a></> : null}</p>
+      <p>
+        <a href={`/jogos?comp=${q(c.comp)}`}>Todos os jogos →</a>{' · '}
+        <a href={`/jogos?comp=${q(c.comp)}&aba=resumo`}>Resumo por estádio e dia →</a>{' · '}
+        <a href={`/clubes?comp=${q(c.comp)}`}>Ranking de clubes →</a>
+      </p>
+    </div>
+  </div>
+
+  <div class="kpis">
+    <div class="kpi"><div class="v">{fmtInt(c.n)}</div><div class="l">jogos já disputados ({fmtInt(c.comBordero)} com borderô, {pctB}%)</div></div>
+    <div class="kpi"><div class="v">{c.pubMedio == null ? '—' : fmtInt(c.pubMedio)}</div><div class="l">público médio, em {fmtInt(comPub.length)} jogos com público registrado</div></div>
+    <div class="kpi"><div class="v">{fmtInt(c.pubTotal)}</div><div class="l">pessoas nos estádios no total</div></div>
+    <div class="kpi"><div class="v">{c.brutaTotal ? fmtBRLcompacto(c.brutaTotal) : '—'}</div><div class="l">de arrecadação bruta em bilheteria</div></div>
+  </div>
+
+  {comPub.length === 0 ? (
+    <div class="nota">Esta competição ainda não tem nenhum jogo com público registrado: a federação não publicou borderôs, ou eles ainda não foram lidos.</div>
+  ) : (
+    <>
+      <div class="duas">
+        <section>
+          <h2>{poucos ? 'Públicos da competição' : 'Maiores públicos'}</h2>
+          <ol class={clsJogos}>
+            {topo.map((j) => (
+              <li>
+                <span class="nome"><Fragment set:html={jogoLinkado(j.mandante, j.visitante)} /><small>{fmtData(j.data)}{j.fase ? ` · ${j.fase}` : ''}</small></span>
+                <span class="trilho"><i style={`width:${(100 * j.pub) / maxPub}%`}></i></span>
+                <span class="valor">{fmtInt(j.pub)}</span>
+              </li>
+            ))}
+          </ol>
+        </section>
+        {fundo.length > 0 && (
+          <section>
+            <h2>Menores públicos</h2>
+            <ol class={clsJogos}>
+              {fundo.map((j) => (
+                <li>
+                  <span class="nome"><Fragment set:html={jogoLinkado(j.mandante, j.visitante)} /><small>{fmtData(j.data)}{j.fase ? ` · ${j.fase}` : ''}</small></span>
+                  <span class="trilho"><i style={`width:${(100 * j.pub) / maxPub}%`}></i></span>
+                  <span class="valor">{fmtInt(j.pub)}</span>
+                </li>
+              ))}
+            </ol>
+          </section>
+        )}
+      </div>
+
+      {comGrafico && (
+        <section>
+          <h2>Público médio por rodada</h2>
+          <p class="small muted">Média dos jogos com público registrado em cada rodada. Passe o mouse (ou toque) numa coluna para ver os valores.</p>
+          <svg class="rod-chart" viewBox={`0 0 ${LARG} ${ALT}`} role="img" aria-label={`Público médio por rodada em ${c.comp}: de ${fmtInt(Math.min(...rodadas.map((x) => x.medio)))} a ${fmtInt(maxRod)} pessoas.`}>
+            <text x={M.e} y={M.t - 3} class="rod-eixo">{fmtInt(maxRod)}</text>
+            {rodadas.map((x, i) => {
+              const alt = ((ALT - M.t - M.b) * x.medio) / maxRod;
+              const bx = M.e + i * passo + passo * 0.12;
+              return (
+                <g>
+                  <title>{`${x.r}ª rodada: ${fmtInt(x.medio)} em média (${x.n} jogo${x.n === 1 ? '' : 's'})`}</title>
+                  <rect x={bx} y={ALT - M.b - alt} width={passo * 0.76} height={Math.max(1, alt)} rx="2"></rect>
+                  {i % salto === 0 && <text x={bx + passo * 0.38} y={ALT - 8} text-anchor="middle" class="rod-eixo">{x.r}</text>}
+                </g>
+              );
+            })}
+          </svg>
+          <details class="como-tabela">
+            <summary>Ver como tabela</summary>
+            <div class="tabela"><table>
+              <thead><tr><th>Rodada</th><th class="n">Jogos com público</th><th class="n">Público médio</th></tr></thead>
+              <tbody>{rodadas.map((x) => <tr><td>{x.r}ª</td><td class="n">{fmtInt(x.n)}</td><td class="n">{fmtInt(x.medio)}</td></tr>)}</tbody>
+            </table></div>
+          </details>
+        </section>
+      )}
+
+      <section>
+        <h2>Clubes: público médio em casa nesta competição</h2>
+        <div class="tabela">
+          <table>
+            <thead><tr><th>Clube</th><th class="n">Jogos em casa</th><th class="n">Público médio</th><th class="n">Maior público</th></tr></thead>
+            <tbody>
+              {clubes.map((k) => (
+                <tr>
+                  <td><a class="time" href={`/jogos?time=${q(k.clube)}&comp=${q(c.comp)}`} title="Ver os jogos deste time nesta competição" set:html={nomeComEscudo(k.clube)} /></td>
+                  <td class="n">{fmtInt(k.n)}</td>
+                  <td class="n">{fmtInt(k.medio)}</td>
+                  <td class="n">{fmtInt(k.maior)}<small>contra {k.contra}, {fmtData(k.data)}</small></td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section>
+        <h2>Gráficos da competição</h2>
+        <div id="graficos-comp" data-comp={c.comp}><p class="muted">Os gráficos carregam ao chegar aqui…</p></div>
+      </section>
+    </>
+  )}
+
+  <script>
+    import { renderGraficos } from '../../scripts/graficos.js';
+    import { definirEscudos } from '../../scripts/escudos.js';
+    const alvo = document.getElementById('graficos-comp');
+    if (alvo) {
+      let feito = false;
+      const carregar = () => {
+        if (feito) return;
+        feito = true;
+        fetch('/dados/jogos.json').then((r) => r.json()).then((d) => {
+          definirEscudos(d.escudos);
+          const js = d.linhas.map((l) => Object.fromEntries(d.campos.map((c, i) => [c, l[i]])))
+            .filter((j) => j.comp === alvo.dataset.comp && j.status === 'realizado' && j.data);
+          renderGraficos(alvo, js);
+        }).catch(() => { alvo.textContent = 'Não foi possível carregar os gráficos. Recarregue a página.'; });
+      };
+      new IntersectionObserver((es) => { if (es.some((e) => e.isIntersecting)) carregar(); }, { rootMargin: '400px' }).observe(alvo);
+    }
+  </script>
+</Base>

@@ -90,6 +90,7 @@ import Base from '../layouts/Base.astro';
   <script>
     import { renderResumo } from '../scripts/resumo.js';
     import { renderGraficos } from '../scripts/graficos.js';
+    import { urlComp } from '../scripts/slug.js';
     import { definirEscudos, escudoHtml, nomeComEscudo, temEscudos } from '../scripts/escudos.js';
 
     const POR_PAGINA = 50;
@@ -296,7 +297,8 @@ import Base from '../layouts/Base.astro';
         const data = j.data ? j.data.split('-').reverse().join('/') : '—';
         const placar = j.pm != null && j.pv != null ? `${j.pm} x ${j.pv}` : '—';
         const selos = (j.flags || '').split('').map((f) => `<span class="sel" title="${esc(SELOS[f] || '')}">${f}</span>`).join('');
-        const comp = j.compUrl ? `<a href="${esc(j.compUrl)}" target="_blank" rel="noopener">${esc(j.comp)}</a>` : esc(j.comp);
+        const comp = `<a href="${urlComp(j.comp)}" title="Ver a página da competição">${esc(j.comp)}</a>`
+          + (j.compUrl ? ` <a class="ext" href="${esc(j.compUrl)}" target="_blank" rel="noopener" title="Página oficial da competição na federação" aria-label="Página oficial da competição na federação">↗</a>` : '');
         const fase = [j.fase, j.rodada && !/^\d{4}$/.test(j.rodada) ? `rodada ${j.rodada}` : ''].filter(Boolean).join(' · ');
         return `<tr>
           <td>${data}<small>${esc(j.horario || '')}</small></td>

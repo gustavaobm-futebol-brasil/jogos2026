@@ -2,6 +2,7 @@
 import Base from '../layouts/Base.astro';
 import { DESTAQUES } from '../config.js';
 import { jogoLinkado } from '../scripts/escudos.js';
+import { urlComp } from '../scripts/slug.js';
 import { destaquesDaRodada } from '../lib/destaques.js';
 import { escudoHtml, jogos, realizados, meta, porCompeticao, soma, fmtInt, fmtBRL, fmtBRLcompacto, fmtData } from '../lib/dados.js';
 
@@ -47,7 +48,7 @@ const clsJogos = escudoHtml('Flamengo') ? 'barras com-jogos' : 'barras';   // co
             {e.n === 0 ? <p class="vazio">Nenhum jogo com público registrado nesta janela.</p> : [['Maior', e.maior], ['Menor', e.menor]].filter(([, j]) => j).map(([rot, j]) => (
               <div class="lin">
                 <span class="rot">{rot}</span>
-                <span class="jogo"><Fragment set:html={jogoLinkado(j.mandante, j.visitante)} /><small>{j.comp} · {fmtData(j.data)}</small></span>
+                <span class="jogo"><Fragment set:html={jogoLinkado(j.mandante, j.visitante)} /><small><a class="tl" href={urlComp(j.comp)}>{j.comp}</a> · {fmtData(j.data)}</small></span>
                 <span class="val">{fmtInt(j.pub)}</span>
               </div>
             ))}
@@ -58,7 +59,7 @@ const clsJogos = escudoHtml('Flamengo') ? 'barras com-jogos' : 'barras';   // co
           {!dr.acima && !dr.abaixo ? <p class="vazio">Nenhum jogo da janela foge muito da média do mandante.</p> : [['Acima', dr.acima], ['Abaixo', dr.abaixo]].filter(([, c]) => c).map(([rot, c]) => (
             <div class="lin">
               <span class="rot">{rot}</span>
-              <span class="jogo"><Fragment set:html={jogoLinkado(c.jogo.mandante, c.jogo.visitante)} /><small>{c.jogo.comp} · {fmtData(c.jogo.data)}</small><small>{fmtInt(c.jogo.pub)} pessoas; média do {c.jogo.mandante} em casa: {fmtInt(c.media)}</small></span>
+              <span class="jogo"><Fragment set:html={jogoLinkado(c.jogo.mandante, c.jogo.visitante)} /><small><a class="tl" href={urlComp(c.jogo.comp)}>{c.jogo.comp}</a> · {fmtData(c.jogo.data)}</small><small>{fmtInt(c.jogo.pub)} pessoas; média do {c.jogo.mandante} em casa: {fmtInt(c.media)}</small></span>
               <span class="val">{razaoTxt(c.razao)}</span>
             </div>
           ))}
@@ -74,7 +75,7 @@ const clsJogos = escudoHtml('Flamengo') ? 'barras com-jogos' : 'barras';   // co
       <ol class={clsJogos}>
         {maiores.map((j) => (
           <li>
-            <span class="nome"><Fragment set:html={jogoLinkado(j.mandante, j.visitante)} /><small>{j.comp} · {fmtData(j.data)}</small></span>
+            <span class="nome"><Fragment set:html={jogoLinkado(j.mandante, j.visitante)} /><small><a class="tl" href={urlComp(j.comp)}>{j.comp}</a> · {fmtData(j.data)}</small></span>
             <span class="trilho"><i style={`width:${(100 * j.pub) / maxPub}%`}></i></span>
             <span class="valor">{fmtInt(j.pub)}</span>
           </li>
@@ -86,7 +87,7 @@ const clsJogos = escudoHtml('Flamengo') ? 'barras com-jogos' : 'barras';   // co
       <ol class="barras">
         {comps.map((c) => (
           <li>
-            <span class="nome">{c.comp}<small>{c.uf} · {fmtInt(c.nPub)} jogos</small></span>
+            <span class="nome"><a class="tl" href={urlComp(c.comp)}>{c.comp}</a><small>{c.uf} · {fmtInt(c.nPub)} jogos</small></span>
             <span class="trilho"><i style={`width:${(100 * c.pubMedio) / maxMedio}%`}></i></span>
             <span class="valor">{fmtInt(c.pubMedio)}</span>
           </li>
@@ -100,7 +101,7 @@ const clsJogos = escudoHtml('Flamengo') ? 'barras com-jogos' : 'barras';   // co
     <ol class={clsJogos}>
       {maioresRendas.map((j) => (
         <li>
-          <span class="nome"><Fragment set:html={jogoLinkado(j.mandante, j.visitante)} /><small>{j.comp} · {fmtData(j.data)} · público {fmtInt(j.pub)}</small></span>
+          <span class="nome"><Fragment set:html={jogoLinkado(j.mandante, j.visitante)} /><small><a class="tl" href={urlComp(j.comp)}>{j.comp}</a> · {fmtData(j.data)} · público {fmtInt(j.pub)}</small></span>
           <span class="trilho"><i style={`width:${(100 * j.bruta) / maxBruta}%`}></i></span>
           <span class="valor">{fmtBRLcompacto(j.bruta)}</span>
         </li>

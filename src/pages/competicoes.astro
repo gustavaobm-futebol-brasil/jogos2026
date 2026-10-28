@@ -1,12 +1,13 @@
 ---
 import Base from '../layouts/Base.astro';
+import { urlComp } from '../scripts/slug.js';
 import { porCompeticao, fmtInt, fmtBRL } from '../lib/dados.js';
 
 const comps = porCompeticao().sort((a, b) => b.pubTotal - a.pubTotal);
 ---
 <Base titulo="Competições" descricao="Competições coletadas, com jogos disputados, público e arrecadação.">
   <h1>Competições</h1>
-  <p class="lead">As competições que o projeto acompanha, com o link para a página oficial de cada uma na federação. Clique no cabeçalho para ordenar.</p>
+  <p class="lead">As competições que o projeto acompanha, com uma página para cada uma e o link (↗) para a página oficial na federação. Clique no cabeçalho para ordenar.</p>
 
   <input class="busca" id="busca-tabela" type="search" placeholder="Filtrar por nome, estado ou divisão" />
   <span class="muted small" id="contagem-tabela">{comps.length} linhas</span>
@@ -28,7 +29,7 @@ const comps = porCompeticao().sort((a, b) => b.pubTotal - a.pubTotal);
       <tbody>
         {comps.map((c) => (
           <tr>
-            <td><div class={c.logo ? 'cel-comp' : undefined}>{c.logo ? <Fragment set:html={c.logo} /> : null}<span>{c.compUrl ? <a href={c.compUrl} target="_blank" rel="noopener">{c.comp}</a> : c.comp}<small>{c.federacao}</small></span></div></td>
+            <td><div class={c.logo ? 'cel-comp' : undefined}>{c.logo ? <Fragment set:html={c.logo} /> : null}<span><a href={urlComp(c.comp)}>{c.comp}</a>{c.compUrl ? <> <a class="ext" href={c.compUrl} target="_blank" rel="noopener" title="Página oficial da competição na federação" aria-label="Página oficial da competição na federação">↗</a></> : null}<small>{c.federacao}</small></span></div></td>
             <td>{c.uf}</td>
             <td>{c.divisao}</td>
             <td class="n" data-v={c.n}>{fmtInt(c.n)}</td>
