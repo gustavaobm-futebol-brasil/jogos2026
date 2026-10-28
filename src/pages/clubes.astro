@@ -24,6 +24,13 @@ const clubes = porClube(MINIMO).sort((a, b) => b.pubMedio - a.pubMedio);
     <label class="marcar"><input type="checkbox" class="f-sem-serie" value="C" /> Série C</label>
     <label class="marcar"><input type="checkbox" class="f-sem-serie" value="D" /> Série D</label>
   </div>
+  <div class="filtros" id="opcoes-so-series">
+    <span class="muted small">Mostrar só clubes que jogaram o Brasileiro (mais de uma série = qualquer uma delas):</span>
+    <label class="marcar"><input type="checkbox" class="f-so-serie" value="A" /> Série A</label>
+    <label class="marcar"><input type="checkbox" class="f-so-serie" value="B" /> Série B</label>
+    <label class="marcar"><input type="checkbox" class="f-so-serie" value="C" /> Série C</label>
+    <label class="marcar"><input type="checkbox" class="f-so-serie" value="D" /> Série D</label>
+  </div>
   <p class="nota" id="nota-comp" hidden></p>
   <p class="muted small" id="contagem-clubes" role="status">{clubes.length} clubes</p>
 
@@ -97,11 +104,13 @@ const clubes = porClube(MINIMO).sort((a, b) => b.pubMedio - a.pubMedio);
       const todos = !!comp && $('f-todos-jogos').checked;
       const uf = $('f-uf-clube').value;
       const semSeries = [...document.querySelectorAll('.f-sem-serie:checked')].map((i) => i.value);
+      const soSeries = [...document.querySelectorAll('.f-so-serie:checked')].map((i) => i.value);
       $('lbl-todos-jogos').hidden = !comp;
       const q = semAcento($('busca-clube').value.trim());
       const { campo, dir } = ordem;
       const linhas = agregar(comp, todos).filter((c) => (!q || semAcento(c.nome).includes(q) || semAcento(c.uf).includes(q))
-        && (!uf || c.uf === uf) && !semSeries.some((s) => doBrasileiro[s]?.has(c.ic))).sort((a, b) => {
+        && (!uf || c.uf === uf) && !semSeries.some((s) => doBrasileiro[s]?.has(c.ic))
+        && (!soSeries.length || soSeries.some((s) => doBrasileiro[s]?.has(c.ic)))).sort((a, b) => {
         const x = campo === 'nome' || campo === 'uf' ? semAcento(a[campo]) : a[campo], y = campo === 'nome' || campo === 'uf' ? semAcento(b[campo]) : b[campo];
         if (x == null && y == null) return 0;
         if (x == null) return 1;
@@ -133,6 +142,7 @@ const clubes = porClube(MINIMO).sort((a, b) => b.pubMedio - a.pubMedio);
       if (todos) p.set('todos', '1');
       if (uf) p.set('uf', uf);
       if (semSeries.length) p.set('sem', semSeries.join(''));
+      if (soSeries.length) p.set('so', soSeries.join(''));
       if ($('busca-clube').value.trim()) p.set('q', $('busca-clube').value.trim());
       history.replaceState(null, '', location.pathname + (p.toString() ? '?' + p : ''));
     }
@@ -168,11 +178,19 @@ const clubes = porClube(MINIMO).sort((a, b) => b.pubMedio - a.pubMedio);
       if (p.get('q')) $('busca-clube').value = p.get('q');
       $('f-todos-jogos').checked = p.get('todos') === '1';
       const sem = p.get('sem') || (p.get('semBr') === '1' ? 'ABCD' : '');   // (semBr=1: link antigo = as quatro séries)
-      document.querySelectorAll('.f-sem-serie').forEach((i) => { i.checked = sem.includes(i.value); });
+      const so = p.get('so') || '';
+      document.querySelectorAll('.f-sem-serie').forEach((i) => { i.checked = sem.includes(i.value) && !so.includes(i.value); });
+      document.querySelectorAll('.f-so-serie').forEach((i) => { i.checked = so.includes(i.value); });
       desenhar();
     }).catch(() => { /* fica a tabela renderizada no build (todas as competições) */ });
 
-    for (const el of [$('f-comp-clube'), $('f-todos-jogos'), ...document.querySelectorAll('.f-sem-serie')]) el.addEventListener('input', () => dados && desenhar());
+    // "ocultar a série X" e "mostrar só a série X" se anulariam: marcar um desmarca o outro
+    for (const [a, b] of [['.f-sem-serie', '.f-so-serie'], ['.f-so-serie', '.f-sem-serie']]) {
+      document.querySelectorAll(a).forEach((el) => el.addEventListener('input', () => {
+        if (el.checked) document.querySelectorAll(b).forEach((o) => { if (o.value === el.value) o.checked = false; });
+      }));
+    }
+    for (const el of [$('f-comp-clube'), $('f-todos-jogos'), ...document.querySelectorAll('.f-sem-serie, .f-so-serie')]) el.addEventListener('input', () => dados && desenhar());
     $('f-uf-clube').addEventListener('input', () => { if (!dados) return; montarCompeticoes($('f-comp-clube').value); desenhar(); });
     $('busca-clube').addEventListener('input', () => dados && desenhar());
     document.querySelectorAll('th[data-ord]').forEach((th) => th.addEventListener('click', () => {
