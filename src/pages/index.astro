@@ -1,5 +1,7 @@
 ---
 import Base from '../layouts/Base.astro';
+import { DESTAQUES } from '../config.js';
+import { destaquesDaRodada } from '../lib/destaques.js';
 import { escudoHtml, jogoComEscudos, jogos, realizados, meta, porCompeticao, soma, fmtInt, fmtBRL, fmtBRLcompacto, fmtData } from '../lib/dados.js';
 
 const comPub = realizados.filter((j) => j.pub != null);
@@ -15,6 +17,8 @@ const maxMedio = comps[0]?.pubMedio || 1;
 
 const maioresRendas = [...comRenda].sort((a, b) => b.bruta - a.bruta).slice(0, 8);
 const maxBruta = maioresRendas[0]?.bruta || 1;
+const dr = DESTAQUES ? destaquesDaRodada() : null;
+const razaoTxt = (r) => (r >= 1 ? `${r.toFixed(1).replace('.', ',')}× a média` : `${Math.round(100 * r)}% da média`);
 const clsJogos = escudoHtml('Flamengo') ? 'barras com-jogos' : 'barras';   // com escudos, a coluna do jogo é mais larga
 ---
 <Base titulo="" descricao="Quanto público e quanto dinheiro os jogos do futebol brasileiro movimentaram em 2026, a partir dos borderôs publicados pelas federações.">
@@ -30,6 +34,38 @@ const clsJogos = escudoHtml('Flamengo') ? 'barras com-jogos' : 'barras';   // co
     <div class="kpi"><div class="v">{fmtInt(comBordero.length)}</div><div class="l">borderôs lidos ({Math.round((100 * comBordero.length) / realizados.length)}% dos jogos disputados)</div></div>
   </div>
   <p class="small muted">Nem toda federação publica o borderô de todos os jogos; onde ele não existe, o jogo aparece sem público e sem valores. Veja a <a href="/metodologia">metodologia</a>.</p>
+
+  {dr && dr.nJogos > 0 && (
+    <section class="rodada">
+      <h2>Na última rodada</h2>
+      <p class="periodo">{dr.janela.nome}, {dr.janela.periodo} · {fmtInt(dr.nComPub)} de {fmtInt(dr.nJogos)} jogos com público registrado até agora (os borderôs chegam com atraso, então estes números podem mudar).</p>
+      <div class="grade">
+        {[['Série A do Brasileiro', dr.serieA], ['Séries B, C e D do Brasileiro', dr.inferiores], ['Estaduais e copas estaduais', dr.estaduais]].map(([titulo, e]) => (
+          <div class="bloco">
+            <h3>{titulo}</h3>
+            {e.n === 0 ? <p class="vazio">Nenhum jogo com público registrado nesta janela.</p> : [['Maior', e.maior], ['Menor', e.menor]].filter(([, j]) => j).map(([rot, j]) => (
+              <div class="lin">
+                <span class="rot">{rot}</span>
+                <span class="jogo">{jogoComEscudos(j.mandante, j.visitante) ? <Fragment set:html={jogoComEscudos(j.mandante, j.visitante)} /> : <>{j.mandante} x {j.visitante}</>}<small>{j.comp} · {fmtData(j.data)}</small></span>
+                <span class="val">{fmtInt(j.pub)}</span>
+              </div>
+            ))}
+          </div>
+        ))}
+        <div class="bloco">
+          <h3>Mais fora do normal</h3>
+          {!dr.acima && !dr.abaixo ? <p class="vazio">Nenhum jogo da janela foge muito da média do mandante.</p> : [['Acima', dr.acima], ['Abaixo', dr.abaixo]].filter(([, c]) => c).map(([rot, c]) => (
+            <div class="lin">
+              <span class="rot">{rot}</span>
+              <span class="jogo">{jogoComEscudos(c.jogo.mandante, c.jogo.visitante) ? <Fragment set:html={jogoComEscudos(c.jogo.mandante, c.jogo.visitante)} /> : <>{c.jogo.mandante} x {c.jogo.visitante}</>}<small>{c.jogo.comp} · {fmtData(c.jogo.data)}</small><small>{fmtInt(c.jogo.pub)} pessoas; média do {c.jogo.mandante} em casa: {fmtInt(c.media)}</small></span>
+              <span class="val">{razaoTxt(c.razao)}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+      <p class="small muted">Rodada aproximada por data: fim de semana (sexta a segunda) ou meio de semana (terça a quinta). O “fora do normal” compara o público com a média do mandante nos outros jogos em casa (clubes com ao menos {5} jogos com público). O menor público ignora jogos com público 0.</p>
+    </section>
+  )}
 
   <div class="duas">
     <section>

@@ -273,3 +273,18 @@ table.comparativo thead th.n { vertical-align: bottom; }
 .cab-time { display: inline-flex; align-items: center; gap: 6px; text-transform: none; letter-spacing: 0; font-size: .9rem; color: var(--fg); }
 .gr-legenda .item.muted { color: var(--muted); }
 .gr-destaque[cx='-20'] { visibility: hidden; }      /* marcador de destaque parado fora do gráfico: some até haver um ponto em foco */
+
+/* destaques da última rodada (página inicial) */
+.rodada { margin: 26px 0 10px; }
+.rodada h2 { margin-bottom: 2px; }
+.rodada .periodo { color: var(--muted); font-size: .86rem; margin: 0 0 12px; }
+.rodada .grade { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 330px), 1fr)); gap: 12px; }
+.rodada .bloco { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 12px 14px; }
+.rodada .bloco h3 { margin: 0 0 4px; font-size: .95rem; }
+.rodada .lin { display: grid; grid-template-columns: 3.6rem 1fr auto; gap: 4px 10px; align-items: start; padding: 7px 0; border-top: 1px solid var(--border); font-size: .9rem; }
+.rodada .rot { color: var(--muted); font-size: .72rem; text-transform: uppercase; letter-spacing: .04em; padding-top: 3px; }
+.rodada .jogo .jg { font-weight: 600; }
+.rodada .jogo small, .rodada .val small { display: block; color: var(--muted); font-size: .78rem; font-weight: 400; margin-top: 2px; }
+.rodada .val { font-weight: 600; font-variant-numeric: tabular-nums; text-align: right; }
+.rodada .vazio { color: var(--muted); font-size: .88rem; margin: 6px 0 0; }
+@media (max-width: 480px) { .rodada .lin { grid-template-columns: 1fr auto; } .rodada .rot { grid-column: 1 / -1; padding: 0; } }
