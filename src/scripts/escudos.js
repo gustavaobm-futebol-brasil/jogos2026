@@ -35,6 +35,14 @@ export function jogoComEscudos(mandante, visitante, tam = 'p') {
   return a || b ? `<span class="jg"><span class="eq">${a}<span>${esc(mandante)}</span></span><span>x</span><span class="eq"><span>${esc(visitante)}</span>${b}</span></span>` : '';
 }
 
+/** Jogo espelhado com cada clube clicável (leva ao explorador filtrado no clube). Funciona com ou sem escudos. */
+export function jogoLinkado(mandante, visitante, tam = 'p') {
+  const lk = (nome, miolo) => `<a class="eq tl" href="/jogos?time=${encodeURIComponent(nome)}" title="Ver os jogos de ${esc(nome)}">${miolo}</a>`;
+  const m = mandante ? lk(mandante, `${escudoHtml(mandante, tam)}<span>${esc(mandante)}</span>`) : '<span>—</span>';
+  const v = visitante ? lk(visitante, `<span>${esc(visitante)}</span>${escudoHtml(visitante, tam)}`) : '<span>—</span>';
+  return `<span class="jg">${m}<span>x</span>${v}</span>`;
+}
+
 /** Mesmo escudo como elemento DOM (para quem monta tudo por createElement). null se desligado. */
 export function escudoEl(nome, tam = 'p') {
   const html = escudoHtml(nome, tam);
