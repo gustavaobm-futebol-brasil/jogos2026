@@ -45,13 +45,14 @@ const clsJogos = escudoHtml('Flamengo') ? 'barras com-jogos' : 'barras';   // co
         {[['Série A do Brasileiro', dr.serieA], ['Séries B, C e D do Brasileiro', dr.inferiores], ['Estaduais e copas estaduais', dr.estaduais]].map(([titulo, e]) => (
           <div class="bloco">
             <h3>{titulo}</h3>
-            {e.n === 0 ? <p class="vazio">Nenhum jogo com público registrado nesta janela.</p> : [['Maior', e.maior], ['Menor', e.menor]].filter(([, j]) => j).map(([rot, j]) => (
+            {e.n === 0 ? <p class="vazio">Nenhum jogo com público registrado nesta janela.</p> : [[e.n === 1 ? 'Único' : 'Maior', e.maior], ['Menor', e.menor]].filter(([, j]) => j).map(([rot, j]) => (
               <div class="lin">
                 <span class="rot">{rot}</span>
                 <span class="jogo"><Fragment set:html={jogoLinkado(j.mandante, j.visitante)} /><small><a class="tl" href={urlComp(j.comp)}>{j.comp}</a> · {fmtData(j.data)}</small></span>
                 <span class="val">{fmtInt(j.pub)}</span>
               </div>
             ))}
+            {e.n === 1 && <p class="vazio">Só um jogo deste grupo com público registrado na janela, então não há maior e menor.</p>}
           </div>
         ))}
         <div class="bloco">
