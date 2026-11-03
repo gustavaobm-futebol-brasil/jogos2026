@@ -24,9 +24,9 @@ Os PDFs nÃ£o ficam neste repositÃ³rio. Os dados sÃ£o gerados automaticamen
 - Página `/comparar` (`src/pages/comparar.astro` + `src/scripts/comparar_graficos.js`): até 4 times lado a lado nos mesmos gráficos do explorador, uma cor por time (`--s0..--s3`). Endereço compartilhável: `?t=Time1&t=Time2&papel=mandante|qualquer&comp=&uf=&de=&ate=&bordero=1`. Padrão: só jogos como mandante.
 - O cartão do clube em `/jogos` tem o atalho "Comparar com outros times".
 
-## Destaques da última rodada (página inicial)
+## Destaques dos últimos dias (página inicial)
 
 - `src/lib/destaques.js` calcula, em tempo de build, o maior e o menor público da Série A, das Séries B/C/D, dos estaduais (todas as divisões e copas estaduais) e o jogo mais fora da média do mandante (acima e abaixo). Só leva em conta jogos com público registrado; o menor ignora público 0.
-- **Rodada:** aproximada por data, em duas janelas por semana: fim de semana (sexta a segunda) e meio de semana (terça a quinta). Usa a última janela já encerrada na data em que os dados foram gerados (`meta.gerado_em`); o Job A de terça e sexta cai nas fronteiras.
+- **Janela:** os 14 dias corridos que terminam na véspera da data em que os dados foram gerados (`meta.gerado_em`); constante `DIAS_JANELA` em `src/lib/destaques.js`. Uma janela de poucos dias ficava cheia de jogos cujo borderô ainda não saiu.
 - **Fora do normal:** público ÷ média do mandante nos outros jogos em casa com público (≥ 5 jogos e média ≥ 500; "acima" exige público ≥ 1.000 e "abaixo" exige média ≥ 1.000).
 - **Interruptor:** `src/config.js` → `DESTAQUES = false` volta à página inicial anterior.

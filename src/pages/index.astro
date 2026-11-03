@@ -39,8 +39,8 @@ const clsJogos = escudoHtml('Flamengo') ? 'barras com-jogos' : 'barras';   // co
 
   {dr && dr.nJogos > 0 && (
     <section class="rodada">
-      <h2>Na última rodada</h2>
-      <p class="periodo">{dr.janela.nome}, {dr.janela.periodo} · {fmtInt(dr.nComPub)} de {fmtInt(dr.nJogos)} jogos com público registrado até agora (os borderôs chegam com atraso, então estes números podem mudar).</p>
+      <h2>Nos últimos {dr.janela.dias} dias</h2>
+      <p class="periodo">{dr.janela.periodo} · {fmtInt(dr.nComPub)} de {fmtInt(dr.nJogos)} jogos com público registrado até agora (os borderôs chegam com atraso, então estes números podem mudar).</p>
       <div class="grade">
         {[['Série A do Brasileiro', dr.serieA], ['Séries B, C e D do Brasileiro', dr.inferiores], ['Estaduais e copas estaduais', dr.estaduais]].map(([titulo, e]) => (
           <div class="bloco">
@@ -66,7 +66,7 @@ const clsJogos = escudoHtml('Flamengo') ? 'barras com-jogos' : 'barras';   // co
           ))}
         </div>
       </div>
-      <p class="small muted">Rodada aproximada por data: fim de semana (sexta a segunda) ou meio de semana (terça a quinta). O “fora do normal” compara o público com a média do mandante nos outros jogos em casa (clubes com ao menos {5} jogos com público). O menor público ignora jogos com público 0.</p>
+      <p class="small muted">Janela de {dr.janela.dias} dias terminando na véspera da última atualização dos dados (os borderôs demoram a sair, então uma janela curta ficaria cheia de jogos sem público). O “fora do normal” compara o público com a média do mandante nos outros jogos em casa (clubes com ao menos {5} jogos com público). O menor público ignora jogos com público 0.</p>
     </section>
   )}
 

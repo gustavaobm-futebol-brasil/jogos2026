@@ -1,32 +1,18 @@
-// Destaques da última "rodada" (página inicial). Como as competições têm calendários diferentes, a rodada é aproximada por data:
-// duas janelas por semana, "fim de semana" (sexta a segunda) e "meio de semana" (terça a quinta). O Job A roda na terça e na sexta,
-// exatamente quando uma janela acaba de fechar; a janela usada é a última que terminou ANTES da data da atualização dos dados.
+// Destaques dos últimos dias (página inicial). Os borderôs chegam com atraso (dias, às vezes semanas), então uma janela curta fica cheia de jogos
+// sem público; a janela é de DIAS_JANELA dias corridos, terminando no dia anterior à data em que os dados foram gerados.
 import { realizados, meta } from './dados.js';
 
 const DIA = 86400000;
+const DIAS_JANELA = 14;
 const utc = (iso) => new Date(`${iso}T00:00:00Z`);
 const iso = (d) => d.toISOString().slice(0, 10);
-const SEM = ['dom', 'seg', 'ter', 'qua', 'qui', 'sex', 'sáb'];
-const curto = (s) => `${SEM[utc(s).getUTCDay()]} ${s.slice(8)}/${s.slice(5, 7)}`;
+const dm = (s) => `${s.slice(8)}/${s.slice(5, 7)}`;
 
-/** Janela (fim de semana: sex–seg; meio de semana: ter–qui) que contém o dia `d`. */
-function janelaDe(d) {
-  const w = d.getUTCDay();                                   // 0 = domingo
-  if (w >= 2 && w <= 4) {
-    const ini = new Date(d - (w - 2) * DIA);
-    return { tipo: 'meio', ini, fim: new Date(+ini + 2 * DIA) };
-  }
-  const ini = new Date(d - ({ 5: 0, 6: 1, 0: 2, 1: 3 }[w]) * DIA);
-  return { tipo: 'fim', ini, fim: new Date(+ini + 3 * DIA) };
-}
-
-/** Última janela já encerrada em `refIso` (a data em que os dados foram gerados). */
+/** Os `DIAS_JANELA` dias que terminam na véspera de `refIso` (a data em que os dados foram gerados). */
 export function ultimaJanela(refIso) {
   const ref = utc(refIso);
-  let j = janelaDe(new Date(+ref - DIA));
-  if (j.fim >= ref) j = janelaDe(new Date(+j.ini - DIA));    // a janela de ontem ainda está em andamento: usa a anterior
-  const ini = iso(j.ini), fim = iso(j.fim);
-  return { tipo: j.tipo, ini, fim, nome: j.tipo === 'fim' ? 'Fim de semana' : 'Meio de semana', periodo: `${curto(ini)} a ${curto(fim)}` };
+  const ini = iso(new Date(+ref - DIAS_JANELA * DIA)), fim = iso(new Date(+ref - DIA));
+  return { dias: DIAS_JANELA, ini, fim, periodo: `${dm(ini)} a ${dm(fim)}` };
 }
 
 const serieDoBrasileiro = (j) => (j.fonte === 'cbf' && j.nivel === 'Nacional' && /Brasileiro/.test(j.comp) ? /^S[ée]rie ([ABCD])$/.exec(j.divisao)?.[1] : undefined);
