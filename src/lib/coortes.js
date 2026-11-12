@@ -90,6 +90,18 @@ export function pontosPorIdade() {
   return out;
 }
 
+/** Pontos de cada jogador em cada idade, com o clube do ano (nome do TM), para o gráfico empilhado de /base/idade:
+ *  { clubes: [nomes], linhas: [[tm, idade, pontos, jogos, índice do clube]] }. */
+export function pontosJogadorAno() {
+  const clubes = [], idx = new Map();
+  const linhas = csv(ler('pontos_por_ano.csv')).map((r) => {
+    const c = r.clube_ano || '';
+    if (!idx.has(c)) { idx.set(c, clubes.length); clubes.push(c); }
+    return [r.tm_id, Number(r.idade), Number(r.pontos), Number(r.jogos_pro), idx.get(c)];
+  });
+  return { clubes, linhas };
+}
+
 export const fmtInt = new Intl.NumberFormat('pt-BR', { maximumFractionDigits: 0 });
 export const fmtDec = new Intl.NumberFormat('pt-BR', { maximumFractionDigits: 1 });
 export const rotuloGeracao = (g) => `${g.ano}${g.completa ? '' : ' (em andamento)'}`;

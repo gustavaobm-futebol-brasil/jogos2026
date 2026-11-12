@@ -43,6 +43,7 @@ const padrao = completas.slice(-4).map((g) => g.ano);
   </div>
 
   <div id="grafico"></div>
+  <div id="grafico-empilhado" class="mais"></div>
 
   <div class="aviso">
     <b>Atenção ao calendário.</b> Idade é o ano do jogo menos o ano de nascimento. Os anos civis não são iguais: 2020 teve menos jogos
@@ -54,7 +55,7 @@ const padrao = completas.slice(-4).map((g) => g.ano);
 
   <script type="application/json" id="dados-idade" set:html={jsonEmbutido({ ...dados, padrao })}></script>
   <script>
-    import { h, s, fmtInt, fmtDec, mostrarDica, esconderDica, escalaBonita } from '../../scripts/util.js';
+    import { h, s, fmtInt, fmtDec, mostrarDica, esconderDica, escalaBonita, comDica } from '../../scripts/util.js';
     import { cartao } from '../../scripts/graficos.js';
     import { serieIdade } from '../../scripts/coortes_calc.js';
     const D = JSON.parse(document.getElementById('dados-idade').textContent);
@@ -148,9 +149,106 @@ const padrao = completas.slice(-4).map((g) => g.ano);
         linhas: idades.map((i) => [String(i), ...dados.map((d) => { const q = d.pts.find((x) => x.idade === i); return q ? fmtV(q.valor) : '—'; })]) };
       const titulo = `${acumulado ? 'Pontos acumulados' : 'Pontos no ano'} por idade${media ? ', por jogador' : ''}`;
       $('grafico').replaceChildren(cartao(titulo, 'Cada linha é uma geração (e, se escolhido, um clube). O ponto vazado é o ano em curso.', h('div', null, legenda, svg), tabela));
+      desenharEmpilhado();
+    }
+
+    // ── barras empilhadas: os 5 jogadores que mais somam em cada idade, e "Outros" ──
+    const TOP = 5;
+    let PJ = null, qualSerie = 0;
+    function carregarJogadores() {
+      Promise.all([fetch('/base/jogadores.json').then((r) => r.json()), fetch('/base/pontos.json').then((r) => r.json())]).then(([jog, pts]) => {
+        const info = new Map(jog.map(([tm, nome, ger, clube]) => [tm, { nome, ger, clube }]));
+        PJ = { info, linhas: pts.linhas.map(([tm, idade, p, j, ic]) => ({ tm, idade, p, j, clubeAno: pts.clubes[ic] || '' })) };
+        desenharEmpilhado();
+      });
+    }
+
+    function desenharEmpilhado() {
+      const alvo = $('grafico-empilhado');
+      if (!PJ) { alvo.replaceChildren(h('p', { class: 'muted small', text: 'Carregando os jogadores…' })); return; }
+      if (qualSerie >= series.length) qualSerie = 0;
+      const sr = series[qualSerie];
+      const acumulado = $('f-modo').value === 'acum', media = $('f-escala').value === 'media';
+      const div = media ? (D.nJog[sr.ger]?.[sr.clube] || 1) : 1;
+      const fmtV = (v) => (media ? fmtDec.format(v) : fmtInt.format(v));
+      const idadeMax = D.anoIncompleto - sr.ger;
+
+      // pontos por jogador e idade (e clube do ano), só da geração/clube da linha escolhida
+      const porJog = new Map();
+      for (const l of PJ.linhas) {
+        const i = PJ.info.get(l.tm);
+        if (!i || i.ger !== sr.ger || (sr.clube && i.clube !== sr.clube)) continue;
+        (porJog.get(l.tm) || porJog.set(l.tm, new Map()).get(l.tm)).set(l.idade, l);
+      }
+      const barras = [];
+      const acc = new Map();
+      for (let idade = 15; idade <= idadeMax; idade++) {
+        const contrib = [];
+        for (const [tm, anos] of porJog) {
+          const l = anos.get(idade);
+          const a = (acc.get(tm) || 0) + (l ? l.p : 0);
+          acc.set(tm, a);
+          const v = acumulado ? a : (l ? l.p : 0);
+          if (v > 0) contrib.push({ tm, v: v / div, clubeAno: l ? l.clubeAno : '', jogos: l ? l.j : 0 });
+        }
+        contrib.sort((x, y) => y.v - x.v);
+        const top = contrib.slice(0, TOP);
+        const resto = contrib.slice(TOP);
+        const total = contrib.reduce((t, c) => t + c.v, 0);
+        if (total > 0) barras.push({ idade, top, outros: resto.reduce((t, c) => t + c.v, 0), nOutros: resto.length, total });
+      }
+
+      const seletor = h('select', { 'aria-label': 'Linha mostrada nas barras' }, series.map((x, i) => h('option', { value: i, text: nome(x) })));
+      seletor.value = qualSerie;
+      seletor.addEventListener('change', () => { qualSerie = Number(seletor.value); desenharEmpilhado(); });
+      const topo = h('div', { class: 'emp-topo' }, h('label', null, 'Linha', seletor),
+        h('div', { class: 'gr-legenda' }, [...Array(TOP)].map((_, r) => h('span', { class: 'item' }, h('span', { class: `sw emp r${r}`, style: `background: var(--s${qualSerie})` }), `${r + 1}º`)),
+          h('span', { class: 'item' }, h('span', { class: 'sw emp-outros' }), 'Outros')));
+
+      const titulo = `Quem soma os pontos${acumulado ? ' acumulados' : ''}, idade a idade`;
+      const frase = `Os ${TOP} jogadores que mais somam em cada idade (o mais escuro é o 1º) e, em cinza, todos os outros. Passe o mouse para ver o jogador e o clube em que ele jogou naquele ano.`;
+      if (!barras.length) { alvo.replaceChildren(cartao(titulo, frase, h('div', null, topo, h('p', { class: 'muted small', text: 'Sem pontos para esta linha.' })), { colunas: [], linhas: [] })); return; }
+
+      const largura = Math.max(300, Math.min(alvo.clientWidth || 700, 1060) - 34);
+      const altura = 320, mt = 14, mb = 34, mr = 10;
+      const { max, passo } = escalaBonita(Math.max(...barras.map((b) => b.total)), 5);
+      const ml = String(fmtV(max)).length * 7 + 16;
+      const n = barras.length, larg = (largura - ml - mr) / n;
+      const bw = Math.max(6, Math.min(44, larg * 0.72));
+      const X = (k) => ml + k * larg + (larg - bw) / 2;
+      const Y = (v) => mt + (1 - v / max) * (altura - mt - mb);
+      const svg = s('svg', { class: 'gr-svg', width: largura, height: altura, role: 'img', 'aria-label': `Barras empilhadas: os ${TOP} jogadores que mais somam pontos em cada idade; os mesmos números estão na tabela` });
+      for (let v = 0; v <= max + 1e-9; v += passo) svg.append(s('line', { class: v === 0 ? 'gr-eixo' : 'gr-grade', x1: ml, x2: largura - mr, y1: Y(v), y2: Y(v) }),
+        s('text', { class: 'gr-txt', x: ml - 8, y: Y(v) + 4, 'text-anchor': 'end' }, fmtV(v)));
+      const passoRot = Math.max(1, Math.ceil(26 / larg));
+      barras.forEach((b, k) => {
+        if (k % passoRot === 0) svg.append(s('text', { class: 'gr-txt', x: X(k) + bw / 2, y: altura - 14, 'text-anchor': 'middle' }, String(b.idade)));
+        const ano = sr.ger + b.idade;
+        let base = 0;
+        const seg = (v, cls, linhas, estilo) => {
+          const y0 = Y(base), y1 = Y(base + v);
+          base += v;
+          const r = s('rect', { class: `emp-seg ${cls}`, x: X(k), y: y1, width: bw, height: Math.max(0.5, y0 - y1), style: estilo, tabindex: 0 });
+          svg.append(comDica(r, linhas));
+        };
+        b.top.forEach((c, r) => {
+          const j = PJ.info.get(c.tm);
+          seg(c.v, `r${r}`, [`${fmtV(c.v)} pontos${media ? ' por jogador' : ''}${acumulado ? ` até os ${b.idade} anos` : ` aos ${b.idade} anos`}`,
+            `${j.nome} (${r + 1}º da linha nessa idade)`, c.clubeAno ? `${c.clubeAno} em ${ano}` : `sem jogo profissional em ${ano}`,
+            `${fmtInt.format(c.jogos)} jogos pro em ${ano}`], `fill: var(--s${qualSerie})`);
+        });
+        if (b.outros > 0) seg(b.outros, 'outros', [`${fmtV(b.outros)} pontos`, `Outros ${fmtInt.format(b.nOutros)} jogadores`, `aos ${b.idade} anos (${ano})`]);
+      });
+      svg.append(s('text', { class: 'gr-txt', x: (ml + largura - mr) / 2, y: altura - 1, 'text-anchor': 'middle' }, 'idade'));
+
+      const celula = (c) => (c ? `${PJ.info.get(c.tm).nome} (${fmtV(c.v)})` : '—');
+      const tabela = { colunas: ['Idade', ...[...Array(TOP)].map((_, r) => `${r + 1}º`), 'Outros', 'Total'],
+        linhas: barras.map((b) => [String(b.idade), ...[...Array(TOP)].map((_, r) => celula(b.top[r])), fmtV(b.outros), fmtV(b.total)]) };
+      alvo.replaceChildren(cartao(`${titulo}: ${nome(sr)}`, frase, h('div', null, topo, svg), tabela));
     }
     controles();
     desenhar();
+    carregarJogadores();
     let t; addEventListener('resize', () => { clearTimeout(t); t = setTimeout(desenhar, 150); });
   </script>
 </BaseLayout>

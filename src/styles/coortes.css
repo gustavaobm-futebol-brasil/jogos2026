@@ -30,6 +30,18 @@ td.pts-barra .tr i { display: block; height: 100%; background: var(--bar); borde
 .gr-ponto.vazado.s2 { stroke: var(--s2); } .gr-ponto.vazado.s3 { stroke: var(--s3); }
 .gr-faixa { fill: var(--warn-soft); opacity: .7; }
 
+/* barras empilhadas: cor da linha escolhida, do 1º (cheio) ao 5º (claro); "Outros" em cinza */
+.emp-seg { stroke: var(--card); stroke-width: 1; outline: none; }
+.emp-seg.r0, .sw.emp.r0 { opacity: 1; } .emp-seg.r1, .sw.emp.r1 { opacity: .8; } .emp-seg.r2, .sw.emp.r2 { opacity: .64; }
+.emp-seg.r3, .sw.emp.r3 { opacity: .5; } .emp-seg.r4, .sw.emp.r4 { opacity: .38; }
+.emp-seg.outros { fill: var(--muted); opacity: .3; }
+.sw.emp-outros { background: var(--muted); opacity: .4; }
+.emp-seg:hover, .emp-seg:focus-visible { stroke: var(--fg); stroke-width: 2; }
+.emp-topo { display: flex; flex-wrap: wrap; align-items: end; gap: 8px 20px; margin-bottom: 8px; }
+.emp-topo label { display: flex; flex-direction: column; font-size: .8rem; color: var(--muted); gap: 3px; max-width: 100%; }
+.emp-topo select { font: inherit; font-size: .95rem; padding: 6px 8px; border: 1px solid var(--border); border-radius: 7px; background: var(--bg); color: var(--fg); max-width: 100%; }
+.emp-topo .gr-legenda { margin: 0; }
+
 .series { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr)); gap: 10px 12px; }
 .filtros > .series { grid-column: 1 / -1; }
 .serie { display: grid; grid-template-columns: auto minmax(0, 1fr) minmax(0, 1fr) auto; gap: 6px; align-items: end; }
