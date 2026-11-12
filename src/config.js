@@ -7,3 +7,7 @@ export const LOGOS = true;
 
 // Interruptor dos destaques da última rodada na página inicial. `false` volta à página inicial anterior.
 export const DESTAQUES = true;
+
+// Interruptor da seção Base (coortes do Sub-20: src/pages/base/, dados em data_coortes/). `false` tira o item do menu e as páginas
+// de /base passam a responder como a 404. Os dados ficam onde estão.
+export const BASE = true;

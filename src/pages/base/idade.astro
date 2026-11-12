@@ -1,0 +1,156 @@
+---
+import BaseLayout from '../../layouts/Base.astro';
+import Secao from './_Secao.astro';
+import { BASE } from '../../config.js';
+import { geracoes, completas, clubes, clubesGeracao, pontosPorIdade, jsonEmbutido, temDados, metaCoortes } from '../../lib/coortes.js';
+
+if (!BASE || !temDados) return Astro.redirect('/404');
+
+// jogadores por (geração, clube) e por geração ('' = todos), para a opção "por jogador"
+const nJog = {};
+for (const r of clubesGeracao) {
+  (nJog[r.ger] ??= { '': 0 })[r.clube] = r.jogadores;
+  nJog[r.ger][''] += r.jogadores;
+}
+const dados = { porIdade: pontosPorIdade(), nJog, geracoes, clubes, anoIncompleto: metaCoortes.ano_incompleto };
+const padrao = completas.slice(-4).map((g) => g.ano);
+---
+<BaseLayout titulo="Base: pontos por idade" descricao="Compare gerações e clubes pela idade dos jogadores: quantos pontos de carreira profissional cada geração somou até cada idade.">
+  <Secao atual="/base/idade" />
+  <h1>Pontos por idade</h1>
+  <p class="lead">
+    Gerações mais antigas têm mais anos de carreira, então comparar o total não é justo. Aqui cada geração aparece pela idade dos jogadores:
+    quanto ela tinha somado aos 20, aos 23, aos 25 anos.
+  </p>
+
+  <div class="filtros">
+    <label>Mostrar
+      <select id="f-modo">
+        <option value="acum">Pontos acumulados até a idade</option>
+        <option value="ano">Pontos na idade (ano a ano)</option>
+      </select>
+    </label>
+    <label>Escala
+      <select id="f-escala">
+        <option value="soma">Soma da geração</option>
+        <option value="media">Por jogador da geração</option>
+      </select>
+    </label>
+  </div>
+  <div class="filtros">
+    <div class="series" id="series"></div>
+    <div><button type="button" class="acao" id="mais-serie">+ comparar outra linha</button></div>
+  </div>
+
+  <div id="grafico"></div>
+
+  <div class="aviso">
+    <b>Atenção ao calendário.</b> Idade é o ano do jogo menos o ano de nascimento. Os anos civis não são iguais: 2020 teve menos jogos
+    (pandemia) e 2021 teve jogos a mais (o Brasileiro de 2020 terminou em fevereiro de 2021, mais Copa América e Olimpíada). Isso aparece
+    numa idade diferente para cada geração: aos 23 e 24 anos para quem nasceu em 1997, aos 22 e 23 para 1998. O ano em curso
+    ({metaCoortes.ano_incompleto}) ainda não terminou: o último ponto de cada linha (vazado) vai crescer.
+  </div>
+  <p class="legenda">"Por jogador" divide pela quantidade de jogadores que o clube (ou a geração inteira) usou nas competições de base, com ou sem jogo profissional.</p>
+
+  <script type="application/json" id="dados-idade" set:html={jsonEmbutido({ ...dados, padrao })}></script>
+  <script>
+    import { h, s, fmtInt, fmtDec, mostrarDica, esconderDica, escalaBonita } from '../../scripts/util.js';
+    import { cartao } from '../../scripts/graficos.js';
+    import { serieIdade } from '../../scripts/coortes_calc.js';
+    const D = JSON.parse(document.getElementById('dados-idade').textContent);
+    const $ = (id) => document.getElementById(id);
+    const MAX = 4;
+    const params = new URLSearchParams(location.search);
+    // séries: [{ ger, clube }]; na URL: ?s=1997&s=1998:Palmeiras
+    let series = params.getAll('s').map((x) => { const [g, c = ''] = x.split(':'); return { ger: Number(g), clube: c }; }).filter((x) => D.porIdade[x.ger]);
+    if (!series.length) series = D.padrao.map((g) => ({ ger: g, clube: '' }));
+    if (params.get('modo')) $('f-modo').value = params.get('modo');
+    if (params.get('escala')) $('f-escala').value = params.get('escala');
+
+    function controles() {
+      $('series').replaceChildren(...series.map((sr, i) => {
+        const ger = h('select', { 'aria-label': `Geração da linha ${i + 1}` }, D.geracoes.map((g) => h('option', { value: g.ano, text: `${g.ano}${g.completa ? '' : ' (em andamento)'}` })));
+        ger.value = sr.ger;
+        const cl = h('select', { 'aria-label': `Clube da linha ${i + 1}` }, h('option', { value: '', text: 'Todos os clubes' }), D.clubes.map((c) => h('option', { value: c, text: c })));
+        cl.value = sr.clube;
+        ger.addEventListener('change', () => { sr.ger = Number(ger.value); desenhar(); });
+        cl.addEventListener('change', () => { sr.clube = cl.value; desenhar(); });
+        const tirar = h('button', { type: 'button', class: 'tirar', title: 'Tirar esta linha', 'aria-label': `Tirar a linha ${i + 1}`, text: '×', disabled: series.length === 1 });
+        tirar.addEventListener('click', () => { series.splice(i, 1); controles(); desenhar(); });
+        return h('div', { class: 'serie' }, h('span', { class: `sw s${i}` }), h('label', null, 'Geração', ger), h('label', null, 'Clube', cl), tirar);
+      }));
+      $('mais-serie').disabled = series.length >= MAX;
+    }
+    $('mais-serie').addEventListener('click', () => {
+      const ult = series[series.length - 1];
+      const prox = D.geracoes.find((g) => !series.some((x) => x.ger === g.ano && x.clube === ult.clube));
+      series.push({ ger: prox ? prox.ano : ult.ger, clube: ult.clube });
+      controles(); desenhar();
+    });
+    $('f-modo').addEventListener('change', desenhar);
+    $('f-escala').addEventListener('change', desenhar);
+
+    const nome = (sr) => `${sr.ger}${sr.clube ? ` · ${sr.clube}` : ''}`;
+
+    function desenhar() {
+      const acumulado = $('f-modo').value === 'acum', media = $('f-escala').value === 'media';
+      const p = new URLSearchParams();
+      series.forEach((sr) => p.append('s', sr.clube ? `${sr.ger}:${sr.clube}` : String(sr.ger)));
+      if (!acumulado) p.set('modo', 'ano'); if (media) p.set('escala', 'media');
+      history.replaceState(null, '', `?${p}`);
+
+      const idadeMax = Math.max(...series.map((sr) => D.anoIncompleto - sr.ger));
+      const dados = series.map((sr, i) => {
+        const div = media ? (D.nJog[sr.ger]?.[sr.clube] || 1) : 1;
+        const pts = serieIdade(D.porIdade[sr.ger]?.[sr.clube], { acumulado, divisor: div, idadeMax: D.anoIncompleto - sr.ger });
+        return { sr, i, pts };
+      });
+      const fmtV = (v) => (media ? fmtDec.format(v) : fmtInt.format(v));
+      const largura = Math.max(300, Math.min($('grafico').clientWidth || 700, 1060) - 34);
+      const altura = 300, mt = 14, mb = 34, mr = 16;
+      const { max, passo } = escalaBonita(Math.max(...dados.flatMap((d) => d.pts.map((q) => q.valor)), media ? 0.1 : 1), 5);
+      const ml = String(fmtV(max)).length * 7 + 16;
+      const X = (idade) => ml + ((idade - 15) / Math.max(1, idadeMax - 15)) * (largura - ml - mr);
+      const Y = (v) => mt + (1 - v / max) * (altura - mt - mb);
+      const svg = s('svg', { class: 'gr-svg', width: largura, height: altura, role: 'img', 'aria-label': 'Linhas: pontos por idade de cada geração escolhida; os mesmos números estão na tabela' });
+      for (let v = 0; v <= max + 1e-9; v += passo) svg.append(s('line', { class: v === 0 ? 'gr-eixo' : 'gr-grade', x1: ml, x2: largura - mr, y1: Y(v), y2: Y(v) }),
+        s('text', { class: 'gr-txt', x: ml - 8, y: Y(v) + 4, 'text-anchor': 'end' }, fmtV(v)));
+      const passoRot = Math.max(1, Math.ceil(28 / ((largura - ml - mr) / Math.max(1, idadeMax - 15))));
+      for (let i = 15; i <= idadeMax; i++) if ((i - 15) % passoRot === 0) svg.append(s('text', { class: 'gr-txt', x: X(i), y: altura - 14, 'text-anchor': 'middle' }, String(i)));
+      svg.append(s('text', { class: 'gr-txt', x: (ml + largura - mr) / 2, y: altura - 1, 'text-anchor': 'middle' }, 'idade'));
+      const pts = [];
+      for (const d of dados) {
+        svg.append(s('path', { class: `gr-linha s${d.i}`, d: d.pts.map((q, k) => `${k ? 'L' : 'M'}${X(q.idade)},${Y(q.valor)}`).join(' ') }));
+        d.pts.forEach((q, k) => {
+          const ultimo = k === d.pts.length - 1;
+          const ponto = { ...q, d, x: X(q.idade), y: Y(q.valor), ultimo };
+          pts.push(ponto);
+          if (ultimo || d.pts.length <= 16) svg.append(s('circle', { class: `gr-ponto s${d.i} ${ultimo ? 'vazado' : ''}`, cx: ponto.x, cy: ponto.y, r: ultimo ? 4.5 : 3 }));
+        });
+      }
+      const destaque = s('circle', { class: 'gr-destaque', r: 8, cx: -20, cy: -20 });
+      svg.append(destaque);
+      svg.addEventListener('pointermove', (e) => {
+        const r = svg.getBoundingClientRect(), px = e.clientX - r.left, py = e.clientY - r.top;
+        let melhor = null, dm = 28 * 28;
+        for (const q of pts) { const dd = (q.x - px) ** 2 + (q.y - py) ** 2; if (dd < dm) { dm = dd; melhor = q; } }
+        if (!melhor) { destaque.setAttribute('cx', -20); esconderDica(); return; }
+        destaque.setAttribute('cx', melhor.x); destaque.setAttribute('cy', melhor.y);
+        const ano = melhor.d.sr.ger + melhor.idade;
+        mostrarDica(e.clientX, e.clientY, [`${fmtV(melhor.valor)} pontos${media ? ' por jogador' : ''}${acumulado ? ' até' : ' aos'} ${melhor.idade} anos`,
+          nome(melhor.d.sr), `ano de ${ano}${melhor.ultimo ? ' (em curso)' : ''} · ${fmtInt.format(melhor.jogos)} jogos pro no ano`]);
+      });
+      svg.addEventListener('pointerleave', () => { destaque.setAttribute('cx', -20); esconderDica(); });
+
+      const legenda = h('div', { class: 'gr-legenda' }, dados.map((d) => h('span', { class: 'item' }, h('span', { class: `sw s${d.i}` }), nome(d.sr))));
+      const idades = []; for (let i = 15; i <= idadeMax; i++) idades.push(i);
+      const tabela = { colunas: ['Idade', ...dados.map((d) => nome(d.sr))],
+        linhas: idades.map((i) => [String(i), ...dados.map((d) => { const q = d.pts.find((x) => x.idade === i); return q ? fmtV(q.valor) : '—'; })]) };
+      const titulo = `${acumulado ? 'Pontos acumulados' : 'Pontos no ano'} por idade${media ? ', por jogador' : ''}`;
+      $('grafico').replaceChildren(cartao(titulo, 'Cada linha é uma geração (e, se escolhido, um clube). O ponto vazado é o ano em curso.', h('div', null, legenda, svg), tabela));
+    }
+    controles();
+    desenhar();
+    let t; addEventListener('resize', () => { clearTimeout(t); t = setTimeout(desenhar, 150); });
+  </script>
+</BaseLayout>

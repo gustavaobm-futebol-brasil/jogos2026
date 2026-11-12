@@ -1,0 +1,46 @@
+/* Seção Base (coortes do Sub-20). Usa os tokens de global.css; nada aqui muda as outras páginas. */
+.base-abas { display: flex; gap: 2px; border-bottom: 1px solid var(--border); margin: 0 0 18px; overflow-x: auto; overflow-y: hidden; }
+.base-abas a { font-size: .95rem; font-weight: 600; text-decoration: none; color: var(--muted); padding: 8px 14px; border-bottom: 3px solid transparent; white-space: nowrap; }
+.base-abas a:hover { color: var(--fg); }
+.base-abas a[aria-current='page'] { color: var(--fg); border-bottom-color: var(--accent); }
+
+.ger-tag { display: inline-block; font-size: .72rem; font-weight: 700; border-radius: 4px; padding: 0 6px; margin-left: 4px; vertical-align: 1px; }
+.ger-tag.andamento { color: var(--warn); background: var(--warn-soft); }
+
+/* matriz clube x geração */
+.matriz td.cel { text-align: center; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.matriz td.cel b { display: block; font-size: .95rem; }
+.matriz td.cel small { display: block; }
+.matriz td.cel.t1 { background: var(--accent-soft); }
+.matriz td.cel.t1 b { color: var(--accent); }
+.matriz th.andamento, .matriz td.andamento { opacity: .6; }
+.matriz td.sem { color: var(--muted); text-align: center; }
+.matriz th.ger { text-align: center; }
+.matriz th small { display: block; font-size: .62rem; letter-spacing: 0; text-transform: none; font-weight: 400; }
+
+/* pontos com barra fininha na tabela de clubes */
+td.pts-barra { min-width: 140px; }
+td.pts-barra .tr { display: block; height: 6px; border-radius: 3px; background: var(--bar-bg); margin-top: 4px; overflow: hidden; }
+td.pts-barra .tr i { display: block; height: 100%; background: var(--bar); border-radius: 3px; }
+
+/* linhas por idade */
+.gr-linha { fill: none; stroke-width: 2.5; stroke-linejoin: round; stroke-linecap: round; }
+.gr-ponto.vazado { fill: var(--card); stroke-width: 2; }
+.gr-ponto.vazado.s0 { stroke: var(--s0); } .gr-ponto.vazado.s1 { stroke: var(--s1); }
+.gr-ponto.vazado.s2 { stroke: var(--s2); } .gr-ponto.vazado.s3 { stroke: var(--s3); }
+.gr-faixa { fill: var(--warn-soft); opacity: .7; }
+
+.series { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr)); gap: 10px 12px; }
+.filtros > .series { grid-column: 1 / -1; }
+.serie { display: grid; grid-template-columns: auto minmax(0, 1fr) minmax(0, 1fr) auto; gap: 6px; align-items: end; }
+.serie select { width: 100%; }
+.serie .sw { margin-bottom: 12px; }
+.serie button.tirar { font: inherit; font-size: 1.1rem; line-height: 1; border: 0; background: none; color: var(--muted); cursor: pointer; padding: 8px 4px; }
+.serie button.tirar:hover { color: var(--fg); }
+
+.jog-nome a { font-weight: 600; }
+.jog-nome small, td.principais small { color: var(--muted); display: block; font-size: .78rem; }
+td.principais { font-size: .82rem; color: var(--muted); max-width: 30ch; }
+@media (max-width: 640px) {
+  .esconde-celular { display: none; }
+}

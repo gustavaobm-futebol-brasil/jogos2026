@@ -1,0 +1,120 @@
+---
+import BaseLayout from '../../layouts/Base.astro';
+import Secao from './_Secao.astro';
+import { BASE } from '../../config.js';
+import { geracoes, clubes, escudosDosClubes, jsonEmbutido, temDados } from '../../lib/coortes.js';
+
+if (!BASE || !temDados) return Astro.redirect('/404');
+---
+<BaseLayout titulo="Base: jogadores" descricao="Os jogadores revelados pelos clubes nas competições de base e quantos pontos de carreira profissional já somaram.">
+  <Secao atual="/base/jogadores" />
+  <h1>Jogadores</h1>
+  <p class="lead">Todos os jogadores das bases que já entraram em campo como profissionais, com os pontos somados na carreira. Filtre por geração, clube ou nome.</p>
+
+  <div class="filtros">
+    <label>Geração
+      <select id="f-ger">
+        <option value="">Todas</option>
+        {geracoes.map((g) => <option value={g.ano}>{g.ano}{g.completa ? '' : ' (em andamento)'}</option>)}
+      </select>
+    </label>
+    <label>Clube
+      <select id="f-clube">
+        <option value="">Todos</option>
+        {clubes.map((c) => <option value={c}>{c}</option>)}
+      </select>
+    </label>
+    <label>Nome<input type="search" id="f-nome" placeholder="ex.: Vinícius" autocomplete="off" /></label>
+  </div>
+  <p class="muted small" id="contagem" role="status">carregando…</p>
+
+  <div class="tabela">
+    <table id="tab-jog">
+      <thead>
+        <tr>
+          <th class="n" data-ord="posGer" title="Posição na geração">#</th>
+          <th data-ord="nome">Jogador</th>
+          <th class="n" data-ord="ger">Geração</th>
+          <th data-ord="clube">Clube</th>
+          <th class="n desc" data-ord="pts">Pontos</th>
+          <th class="n" data-ord="jogos">Jogos pro</th>
+          <th class="n esconde-celular" data-ord="estreia">Estreia</th>
+          <th class="esconde-celular">Principais clubes</th>
+        </tr>
+      </thead>
+      <tbody id="corpo"></tbody>
+    </table>
+  </div>
+  <div class="paginacao"><button type="button" class="acao" id="mais" hidden>Mostrar mais 100</button></div>
+  <p class="legenda">
+    #: posição do jogador na sua geração. Clube: o clube em que ele tem mais minutos no Brasileiro Sub-20 (sem Sub-20, na Copinha; sem os dois,
+    o primeiro clube em que jogou nas Séries A/B). Jogos pro e principais clubes: carreira no Transfermarkt (o nome leva ao perfil).
+  </p>
+
+  <script type="application/json" id="dados-escudos" set:html={jsonEmbutido(escudosDosClubes)}></script>
+  <script>
+    import { h, fmtInt, fmtDec, semAcento } from '../../scripts/util.js';
+    import { definirEscudos, nomeComEscudo } from '../../scripts/escudos.js';
+    definirEscudos(JSON.parse(document.getElementById('dados-escudos').textContent));
+    const $ = (id) => document.getElementById(id);
+    const PASSO = 100;
+    let todos = [], vis = [], mostrar = PASSO, ordem = { campo: 'pts', dir: -1 };
+
+    const params = new URLSearchParams(location.search);
+    $('f-ger').value = params.get('ger') || '';
+    $('f-clube').value = params.get('clube') || '';
+    $('f-nome').value = params.get('q') || '';
+
+    function filtrar() {
+      const ger = Number($('f-ger').value) || null, clube = $('f-clube').value, q = semAcento($('f-nome').value.trim());
+      vis = todos.filter((j) => (!ger || j.ger === ger) && (!clube || j.clube === clube) && (!q || j.busca.includes(q)));
+      const { campo, dir } = ordem;
+      vis.sort((a, b) => {
+        const x = a[campo], y = b[campo];
+        if (x == null) return 1; if (y == null) return -1;
+        return (typeof x === 'string' ? x.localeCompare(y, 'pt-BR') : x - y) * dir || b.pts - a.pts;
+      });
+      const p = new URLSearchParams();
+      if (ger) p.set('ger', ger); if (clube) p.set('clube', clube); if (q) p.set('q', $('f-nome').value.trim());
+      history.replaceState(null, '', p.size ? `?${p}` : location.pathname);
+      mostrar = PASSO;
+      desenhar();
+    }
+
+    function desenhar() {
+      const linhas = vis.slice(0, mostrar).map((j) => {
+        const cl = h('span'); cl.innerHTML = nomeComEscudo(j.clube, 'p');
+        return h('tr', null,
+          h('td', { class: 'n', text: `${j.posGer}º` }),
+          h('td', { class: 'jog-nome' }, h('a', { href: `https://www.transfermarkt.com.br/-/profil/spieler/${j.tm}`, target: '_blank', rel: 'noopener', text: j.nome }),
+            h('small', { text: j.bases })),
+          h('td', { class: 'n', text: j.ger }),
+          h('td', null, cl),
+          h('td', { class: 'n', text: fmtDec.format(j.pts) }),
+          h('td', { class: 'n', text: fmtInt.format(j.jogos) }),
+          h('td', { class: 'n esconde-celular', text: j.estreia ?? '' }),
+          h('td', { class: 'principais esconde-celular', text: j.principais }));
+      });
+      $('corpo').replaceChildren(...linhas);
+      $('contagem').textContent = `${fmtInt.format(vis.length)} jogador${vis.length === 1 ? '' : 'es'}${vis.length > mostrar ? ` (mostrando ${fmtInt.format(mostrar)})` : ''}`;
+      $('mais').hidden = vis.length <= mostrar;
+    }
+
+    document.querySelectorAll('#tab-jog th[data-ord]').forEach((th) => th.addEventListener('click', () => {
+      const campo = th.dataset.ord;
+      ordem = { campo, dir: ordem.campo === campo ? -ordem.dir : (['nome', 'clube', 'posGer'].includes(campo) ? 1 : -1) };
+      document.querySelectorAll('#tab-jog th').forEach((x) => x.classList.remove('asc', 'desc'));
+      th.classList.add(ordem.dir === 1 ? 'asc' : 'desc');
+      filtrar();
+    }));
+    $('mais').addEventListener('click', () => { mostrar += PASSO; desenhar(); });
+    ['f-ger', 'f-clube'].forEach((id) => $(id).addEventListener('change', filtrar));
+    $('f-nome').addEventListener('input', filtrar);
+
+    fetch('/base/jogadores.json').then((r) => r.json()).then((ls) => {
+      todos = ls.map(([tm, nome, ger, clube, posGer, posClube, pts, jogos, estreia, principais, bases]) =>
+        ({ tm, nome, ger, clube, posGer, posClube, pts, jogos, estreia, principais, bases, busca: semAcento(nome) }));
+      filtrar();
+    });
+  </script>
+</BaseLayout>

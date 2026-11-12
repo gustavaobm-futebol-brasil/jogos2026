@@ -1,0 +1,134 @@
+{
+ "gerado_em": "2026-11-12T11:59",
+ "bases": [
+  2016,
+  2017,
+  2018
+ ],
+ "ano_incompleto": 2026,
+ "regra_pesos": {
+  "arquivo": "regra_nova.py",
+  "versao": "28b62d968b13",
+  "modificada_em": "2026-11-07"
+ },
+ "coortes": {
+  "1996": {
+   "situacao": "completa",
+   "bases": [
+    2016
+   ],
+   "bases_que_faltam": [],
+   "bases_antes_da_coleta": [
+    2012,
+    2013,
+    2014,
+    2015
+   ],
+   "jogadores": 257,
+   "com_jogo_pro": 247,
+   "pontos": 20678.7
+  },
+  "1997": {
+   "situacao": "completa",
+   "bases": [
+    2016,
+    2017
+   ],
+   "bases_que_faltam": [],
+   "bases_antes_da_coleta": [
+    2013,
+    2014,
+    2015
+   ],
+   "jogadores": 348,
+   "com_jogo_pro": 324,
+   "pontos": 29568.3
+  },
+  "1998": {
+   "situacao": "completa",
+   "bases": [
+    2016,
+    2017,
+    2018
+   ],
+   "bases_que_faltam": [],
+   "bases_antes_da_coleta": [
+    2014,
+    2015
+   ],
+   "jogadores": 398,
+   "com_jogo_pro": 371,
+   "pontos": 19514.0
+  },
+  "1999": {
+   "situacao": "em andamento",
+   "bases": [
+    2016,
+    2017,
+    2018
+   ],
+   "bases_que_faltam": [
+    2019
+   ],
+   "bases_antes_da_coleta": [
+    2015
+   ],
+   "jogadores": 348,
+   "com_jogo_pro": 322,
+   "pontos": 17571.5
+  },
+  "2000": {
+   "situacao": "em andamento",
+   "bases": [
+    2016,
+    2017,
+    2018
+   ],
+   "bases_que_faltam": [
+    2019,
+    2020
+   ],
+   "bases_antes_da_coleta": [],
+   "jogadores": 184,
+   "com_jogo_pro": 168,
+   "pontos": 11850.0
+  },
+  "2001": {
+   "situacao": "em andamento",
+   "bases": [
+    2017,
+    2018
+   ],
+   "bases_que_faltam": [
+    2019,
+    2020,
+    2021
+   ],
+   "bases_antes_da_coleta": [],
+   "jogadores": 51,
+   "com_jogo_pro": 45,
+   "pontos": 3876.0
+  },
+  "2002": {
+   "situacao": "em andamento",
+   "bases": [
+    2018
+   ],
+   "bases_que_faltam": [
+    2019,
+    2020,
+    2021,
+    2022
+   ],
+   "bases_antes_da_coleta": [],
+   "jogadores": 9,
+   "com_jogo_pro": 7,
+   "pontos": 1030.4
+  }
+ },
+ "totais": {
+  "jogadores_publicados": 1484,
+  "linhas_pontos_por_ano": 9502,
+  "avisos_internos": 3
+ }
+}

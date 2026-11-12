@@ -1,0 +1,137 @@
+---
+import BaseLayout from '../../layouts/Base.astro';
+import Secao from './_Secao.astro';
+import { BASE } from '../../config.js';
+import { nomeComEscudo } from '../../lib/dados.js';
+import { geracoes, completas, clubesGeracao, melhorDoClube, clubes, escudosDosClubes, jsonEmbutido, fmtInt, fmtDec, metaCoortes, temDados } from '../../lib/coortes.js';
+import { rankingClubes } from '../../scripts/coortes_calc.js';
+
+if (!BASE || !temDados) return Astro.redirect('/404');
+
+const melhor = Object.fromEntries(Object.entries(melhorDoClube).map(([k, j]) => [k, [j.nome, j.pts, j.tm]]));
+const linhas = clubesGeracao.map(({ ger, clube, jogadores, comPro, pts, top20 }) => ({ ger, clube, jogadores, comPro, pts, top20 }));
+const anosCompletas = completas.map((g) => g.ano);
+const inicial = rankingClubes(linhas, melhor, anosCompletas, 'todos');
+const maxPts = Math.max(...inicial.map((r) => r.pts), 1);
+const faixa = (xs) => (xs.length > 1 ? `${xs[0]}–${xs[xs.length - 1]}` : String(xs[0] ?? ''));
+const bases = metaCoortes.bases;
+
+// matriz clube x geração: posição do clube em cada geração (por pontos de todos os jogadores)
+const cel = Object.fromEntries(clubesGeracao.map((r) => [`${r.ger}|${r.clube}`, r]));
+const ordemMatriz = inicial.map((r) => r.clube).concat(clubes.filter((c) => !inicial.some((r) => r.clube === c)));
+const nClubes = (ger) => clubesGeracao.filter((r) => r.ger === ger).length;
+---
+<BaseLayout titulo="Base" descricao="Quanto os jogadores formados por cada clube renderam no futebol profissional, geração por geração.">
+  <Secao atual="/base" />
+  <h1>Base: o que cada clube revela</h1>
+  <p class="lead">
+    Para cada geração (ano de nascimento), somamos os pontos de carreira profissional de todos os jogadores que cada clube
+    colocou em campo na Copinha, no Brasileiro Sub-20 e, ainda jovens, nas Séries A e B. Pontos vêm de jogos profissionais,
+    com peso maior para competições mais fortes.
+  </p>
+
+  <div class="kpis">
+    <div class="kpi"><div class="v">{faixa(anosCompletas)}</div><div class="l">gerações completas ({completas.length})</div></div>
+    <div class="kpi"><div class="v">{fmtInt.format(geracoes.reduce((a, g) => a + g.jogadores, 0))}</div><div class="l">jogadores das bases {faixa(bases)}</div></div>
+    <div class="kpi"><div class="v">{fmtInt.format(geracoes.reduce((a, g) => a + g.comPro, 0))}</div><div class="l">já jogaram como profissionais</div></div>
+    <div class="kpi"><div class="v">{clubes.length}</div><div class="l">clubes acompanhados</div></div>
+  </div>
+
+  <h2>Ranking dos clubes</h2>
+  <div class="filtros">
+    <label>Geração
+      <select id="f-ger">
+        <option value="completas">Gerações completas ({faixa(anosCompletas)})</option>
+        {geracoes.map((g) => <option value={g.ano}>{g.ano}{g.completa ? '' : ' (em andamento)'}</option>)}
+      </select>
+    </label>
+    <label>Quem conta
+      <select id="f-medida">
+        <option value="todos">Todos os jogadores</option>
+        <option value="top20">Só os 20 melhores de cada clube em cada geração</option>
+      </select>
+    </label>
+  </div>
+  <p class="nota" id="nota-andamento" hidden></p>
+
+  <div class="tabela">
+    <table>
+      <thead>
+        <tr><th class="n">#</th><th>Clube</th><th class="n">Pontos</th><th class="n">Jogadores</th><th class="esconde-celular">Melhor jogador</th></tr>
+      </thead>
+      <tbody id="corpo-ranking">
+        {inicial.map((r) => (
+          <tr>
+            <td class="n">{r.pos}</td>
+            <td><a class="time" href={`/base/jogadores?clube=${encodeURIComponent(r.clube)}`} set:html={nomeComEscudo(r.clube)} /></td>
+            <td class="n pts-barra">{fmtInt.format(r.pts)}<span class="tr"><i style={`width:${(100 * r.pts / maxPts).toFixed(1)}%`}></i></span></td>
+            <td class="n">{fmtInt.format(r.comPro)}<small>de {fmtInt.format(r.jogadores)}</small></td>
+            <td class="esconde-celular">{r.melhor && <span>{r.melhor.nome}<small>{r.melhor.ger} · {fmtDec.format(r.melhor.pts)} pts</small></span>}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+  <p class="legenda">Jogadores: quantos já jogaram como profissionais, de quantos o clube usou nas competições de base dessa geração. Clique no clube para ver os jogadores.</p>
+
+  <h2>Clube por geração</h2>
+  <p class="muted">Posição de cada clube entre os {clubes.length} em cada geração (soma de todos os jogadores). Em destaque, os três primeiros.</p>
+  <div class="tabela">
+    <table class="matriz">
+      <thead>
+        <tr>
+          <th>Clube</th>
+          {geracoes.map((g) => <th class={`ger n ${g.completa ? '' : 'andamento'}`}>{g.ano}{!g.completa && <small>em andamento</small>}</th>)}
+        </tr>
+      </thead>
+      <tbody>
+        {ordemMatriz.map((c) => (
+          <tr>
+            <td><a class="time" href={`/base/jogadores?clube=${encodeURIComponent(c)}`} set:html={nomeComEscudo(c, 'p')} /></td>
+            {geracoes.map((g) => {
+              const r = cel[`${g.ano}|${c}`];
+              return r
+                ? <td class={`cel ${r.pos <= 3 ? 't1' : ''} ${g.completa ? '' : 'andamento'}`} title={`${c}, geração ${g.ano}: ${r.pos}º de ${nClubes(g.ano)} · ${fmtInt.format(r.pts)} pontos`}><b>{r.pos}º</b><small>{fmtInt.format(r.pts)}</small></td>
+                : <td class="sem">—</td>;
+            })}
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+  <p class="legenda">"Em andamento": geração cuja última edição do Sub-20 (o ano em que faz 20) ainda não está na base; ela ainda vai ganhar jogadores. Ver <a href="/base/metodologia">como é feito</a>.</p>
+
+  <script type="application/json" id="dados-base" set:html={jsonEmbutido({ linhas, melhor, completas: anosCompletas, geracoes, escudos: escudosDosClubes })}></script>
+  <script>
+    import { rankingClubes } from '../../scripts/coortes_calc.js';
+    import { definirEscudos, nomeComEscudo } from '../../scripts/escudos.js';
+    import { h, fmtInt, fmtDec } from '../../scripts/util.js';
+    const D = JSON.parse(document.getElementById('dados-base').textContent);
+    definirEscudos(D.escudos);
+    const fGer = document.getElementById('f-ger');
+    const fMed = document.getElementById('f-medida');
+    const corpo = document.getElementById('corpo-ranking');
+    const nota = document.getElementById('nota-andamento');
+
+    function desenhar() {
+      const gers = fGer.value === 'completas' ? D.completas : [Number(fGer.value)];
+      const g = D.geracoes.find((x) => x.ano === gers[0]);
+      const rs = rankingClubes(D.linhas, D.melhor, gers, fMed.value);
+      const max = Math.max(...rs.map((r) => r.pts), 1);
+      nota.hidden = !(gers.length === 1 && g && !g.completa);
+      if (!nota.hidden) nota.textContent = `A geração ${g.ano} está em andamento: ainda faltam as bases de ${g.faltam.join(', ')}. Os números vão crescer quando elas entrarem.`;
+      corpo.replaceChildren(...rs.map((r) => {
+        const link = h('a', { class: 'time', href: `/base/jogadores?clube=${encodeURIComponent(r.clube)}${gers.length === 1 ? `&ger=${gers[0]}` : ''}` });
+        link.innerHTML = nomeComEscudo(r.clube);   // nomeComEscudo escapa o nome
+        return h('tr', null,
+          h('td', { class: 'n', text: r.pos }),
+          h('td', null, link),
+          h('td', { class: 'n pts-barra' }, fmtInt.format(r.pts), h('span', { class: 'tr' }, h('i', { style: `width:${(100 * r.pts / max).toFixed(1)}%` }))),
+          h('td', { class: 'n' }, fmtInt.format(r.comPro), h('small', { text: `de ${fmtInt.format(r.jogadores)}` })),
+          h('td', { class: 'esconde-celular' }, r.melhor ? h('span', null, r.melhor.nome, h('small', { text: `${r.melhor.ger} · ${fmtDec.format(r.melhor.pts)} pts` })) : ''));
+      }));
+    }
+    fGer.addEventListener('change', desenhar);
+    fMed.addEventListener('change', desenhar);
+  </script>
+</BaseLayout>

@@ -1,6 +1,7 @@
 ---
 import '../styles/global.css';
 import { meta } from '../lib/dados.js';
+import { BASE } from '../config.js';
 const { titulo, descricao = 'Público e financeiro dos jogos do futebol brasileiro, extraídos de súmulas e borderôs das federações.' } = Astro.props;
 const atual = Astro.url.pathname.replace(/\/$/, '') || '/';
 const nav = [
@@ -9,6 +10,7 @@ const nav = [
   ['/comparar', 'Comparar'],
   ['/competicoes', 'Competições'],
   ['/clubes', 'Clubes'],
+  ...(BASE ? [['/base', 'Base']] : []),
   ['/ensaios', 'Ensaios'],
   ['/metodologia', 'Metodologia'],
 ];

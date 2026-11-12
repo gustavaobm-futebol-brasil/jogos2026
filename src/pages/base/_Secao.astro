@@ -1,0 +1,14 @@
+---
+// Abas da seção Base (componente: o "_" no nome tira este arquivo das rotas).
+import '../../styles/coortes.css';
+const { atual } = Astro.props;
+const abas = [
+  ['/base', 'Clubes'],
+  ['/base/jogadores', 'Jogadores'],
+  ['/base/idade', 'Por idade'],
+  ['/base/metodologia', 'Como é feito'],
+];
+---
+<nav class="base-abas" aria-label="Seção Base">
+  {abas.map(([href, nome]) => <a href={href} aria-current={atual === href ? 'page' : undefined}>{nome}</a>)}
+</nav>
