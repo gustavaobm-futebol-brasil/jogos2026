@@ -4737,14 +4737,14 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 447661,2016,18,15,7.1,Clube de Regatas Vasco da Gama
 447661,2017,19,37,33.7,Clube de Regatas Vasco da Gama / Girona FC
 447661,2018,20,15,14.0,Girona FC
-447661,2019,21,46,42.1,Aston Villa FC / Girona FC
-447661,2020,22,39,64.6,Aston Villa FC
-447661,2021,23,43,93.9,Aston Villa FC
-447661,2022,24,38,53.2,Aston Villa FC
-447661,2023,25,53,91.1,Aston Villa FC
-447661,2024,26,44,82.3,Aston Villa FC / Juventus FC
+447661,2019,21,46,42.1,Aston Villa / Girona FC
+447661,2020,22,39,64.6,Aston Villa
+447661,2021,23,43,93.9,Aston Villa
+447661,2022,24,38,53.2,Aston Villa
+447661,2023,25,53,91.1,Aston Villa
+447661,2024,26,44,82.3,Aston Villa / Juventus FC
 447661,2025,27,26,46.8,Juventus FC / Nottingham Forest
-447661,2026,28,39,67.5,Aston Villa FC / Juventus FC
+447661,2026,28,39,67.5,Aston Villa / Juventus FC
 408958,2015,17,1,1.0,Clube de Regatas Vasco da Gama
 408958,2016,18,5,2.5,Clube de Regatas Vasco da Gama
 408958,2017,19,30,31.7,Clube de Regatas Vasco da Gama
@@ -5581,11 +5581,6 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 692936,2024,24,7,1.4,Nacional AC
 692936,2025,25,15,2.7,Horizonte FC
 692936,2026,26,11,1.0,EC Democrata
-876744,2021,20,2,0.6,Ferroviário AC
-876744,2022,21,4,1.9,Lleida CF
-876744,2023,22,1,0.2,Lleida CF
-876744,2025,24,6,1.2,IAPE FC
-876744,2026,25,6,1.2,Santa Cruz FC (RN)
 873937,2017,20,1,0.1,Rio Branco Football Club (AC)
 873937,2018,21,1,0.1,Rio Branco Football Club (AC)
 873937,2020,23,10,1.2,Vilhenense EC
@@ -5903,7 +5898,7 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 480225,2022,23,40,26.2,Cuiabá Esporte Clube (MT)
 480225,2023,24,53,32.7,Goiás EC
 480225,2024,25,56,25.4,Vila Nova Futebol Clube (GO)
-480225,2025,26,33,38.4,Mirassol Futebol Clube (SP) / Torpedo Moscou
+480225,2025,26,33,38.4,Mirassol Futebol Clube (SP) / Torpedo Moscow
 480225,2026,27,46,46.1,Mirassol Futebol Clube (SP)
 603122,2018,19,2,2.1,Cruzeiro Esporte Clube
 603122,2019,20,20,13.8,Cruzeiro Esporte Clube
@@ -7025,6 +7020,11 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 674691,2019,20,5,1.0,Bosque Formosa EC (GO)
 674691,2020,21,9,5.1,Sport Club do Recife
 674691,2021,22,5,1.7,Santa Cruz FC (PE) / Sport Club do Recife
+876744,2021,20,2,0.6,Ferroviário AC
+876744,2022,21,4,1.9,Lleida CF
+876744,2023,22,1,0.2,Lleida CF
+876744,2025,24,6,1.2,IAPE FC
+876744,2026,25,6,1.2,Santa Cruz FC (RN)
 646403,2019,20,4,2.0,Associação Atlética Ponte Preta
 646403,2025,26,7,1.4,Aquidauanense FC
 646403,2026,27,9,1.3,CE Operário Várzea-Grandense
@@ -9640,7 +9640,7 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 739477,2020,19,11,5.7,Club Athletico Paranaense
 739477,2021,20,37,19.9,Clube de Regatas Brasil (AL) / Club Athletico Paranaense
 739477,2022,21,21,16.1,Cruzeiro Esporte Clube
-739477,2023,22,22,9.7,Casa Pia AC / Torpedo Moscou
+739477,2023,22,22,9.7,Casa Pia AC / Torpedo Moscow
 739477,2024,23,48,32.5,Pafos FC / Casa Pia AC
 739477,2025,24,44,35.7,Pafos FC
 739477,2026,25,27,17.7,Pafos FC
@@ -9725,7 +9725,6 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 658667,2022,21,4,0.3,Clube Náutico Marcílio Dias (SC)
 658667,2023,22,6,1.6,Clube Náutico Marcílio Dias (SC)
 658667,2026,25,9,2.7,CA Carlos Renaux
-1084950,2026,24,18,3.8,Rondoniense SC / Porto Velho EC
 1094385,2024,22,3,0.9,Azuriz FC
 1094385,2026,24,9,2.4,Castanhal EC
 547944,2023,24,2,0.3,SC Lusitânia dos Açores
@@ -9753,6 +9752,7 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 738539,2023,22,26,4.2,CE Operário Várzea-Grandense / GE Anápolis
 738539,2025,24,13,3.0,Agremiação Sportiva Arapiraquense (AL) / EC Água Santa (SP)
 738539,2026,25,11,1.2,Treze FC
+1084950,2026,24,18,3.8,Rondoniense SC / Porto Velho EC
 867847,2021,21,1,1.7,Clube Atlético Mineiro
 867847,2022,22,20,4.9,Houston Dynamo FC 2 / Clube Atlético Mineiro
 867847,2023,23,39,32.5,Houston Dynamo FC / Houston Dynamo FC 2
@@ -10130,6 +10130,9 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 931302,2024,23,10,5.0,Boavista SC
 931302,2025,24,27,7.0,Boavista SC / Hoang Anh Gia Lai FC
 931302,2026,25,15,1.4,Hoang Anh Gia Lai FC
+574761,2024,22,29,12.8,FC Alverca / CD Santa Clara
+574761,2025,23,20,11.3,FC Alverca / SC Farense
+574761,2026,24,14,5.2,SC Farense / Leixões SC
 884128,2021,20,2,1.2,Botafogo de Futebol e Regatas
 884128,2023,22,30,5.9,CF Canelas 2010
 884128,2024,23,37,11.4,Gwangju FC
@@ -10168,6 +10171,8 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 650518,2021,22,1,0.3,Maringá FC
 650518,2022,23,4,0.4,Moto Club (MA)
 650518,2023,24,7,2.1,Belo Jardim FC
+1083609,2025,23,4,0.8,Sport Club Capixaba
+1083609,2026,24,7,1.4,Sport Club Capixaba
 1307184,2019,19,2,1.4,CS Sergipe
 855568,2022,22,3,0.1,AA Caldense
 673830,2019,18,13,4.8,FC Liefering / Red Bull Bragantino
@@ -10403,7 +10408,7 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 867139,2023,21,14,7.5,Grêmio Novorizontino / Coritiba Foot Ball Club
 867139,2024,22,21,8.8,Paysandu SC
 867139,2025,23,34,9.2,Brusque Futebol Clube (SC)
-867139,2026,24,48,24.1,Sport Club do Recife / Brusque Futebol Clube (SC)
+867139,2026,24,49,24.7,Sport Club do Recife / Brusque Futebol Clube (SC)
 740294,2021,19,1,0.7,Coritiba Foot Ball Club
 740294,2022,20,26,17.2,Coritiba Foot Ball Club
 740294,2023,21,21,9.2,Guarani Futebol Clube (SP) / Coritiba Foot Ball Club
@@ -10497,8 +10502,8 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 739443,2020,19,26,13.0,Cruzeiro Esporte Clube
 739443,2021,20,30,14.4,Cruzeiro Esporte Clube
 739443,2022,21,46,26.8,Ludogorets Razgrad / Cruzeiro Esporte Clube
-739443,2023,22,55,46.6,Club Brugge / Ludogorets Razgrad
-739443,2024,23,25,29.3,Club Brugge / Brentford FC
+739443,2023,22,55,46.6,Club Brugge KV / Ludogorets Razgrad
+739443,2024,23,25,29.3,Club Brugge KV / Brentford FC
 739443,2025,24,23,34.7,Brentford FC
 739443,2026,25,38,63.0,Brentford FC
 687359,2020,20,10,1.3,Deportes La Serena
@@ -10563,9 +10568,6 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 739442,2024,23,4,2.9,Moreirense FC
 739442,2025,24,10,5.7,SC União Torreense
 739442,2026,25,29,19.0,SC União Torreense / Moreirense FC
-574761,2024,22,29,12.8,FC Alverca / CD Santa Clara
-574761,2025,23,20,11.3,FC Alverca / SC Farense
-574761,2026,24,14,5.2,SC Farense / Leixões SC
 738984,2020,21,8,2.8,Villa Nova AC / América FC
 738984,2022,23,34,8.2,Leixões SC / América FC
 738984,2023,24,8,1.5,Varzim SC / CS Sergipe
@@ -10597,8 +10599,6 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 530392,2023,24,1,0.2,Cuiabá Esporte Clube (MT)
 530392,2024,25,5,1.5,Figueirense Futebol Clube
 530392,2026,27,2,0.2,AA Portuguesa
-1083609,2025,23,4,0.8,Sport Club Capixaba
-1083609,2026,24,7,1.4,Sport Club Capixaba
 1529773,2021,21,5,1.0,SERC
 932292,2022,21,3,0.3,Moto Club (MA)
 932292,2026,25,6,0.2,ASD Angelana 1930
@@ -10650,7 +10650,7 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 735570,2023,22,30,33.4,Wolverhampton Wanderers
 735570,2024,23,47,72.8,Wolverhampton Wanderers
 735570,2025,24,43,41.7,Wolverhampton Wanderers
-735570,2026,25,32,31.2,Wolverhampton Wanderers / Aston Villa FC
+735570,2026,25,32,31.2,Wolverhampton Wanderers / Aston Villa
 735568,2020,19,13,18.8,CR Flamengo
 735568,2021,20,39,41.3,Red Bull Bragantino / CR Flamengo
 735568,2022,21,44,36.7,Red Bull Bragantino
@@ -11523,7 +11523,7 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 627232,2023,21,26,14.2,Botafogo FC / Santos FC
 627232,2024,22,5,1.1,Al-Bataeh CSC
 627232,2025,23,19,3.5,Al-Bataeh CSC
-627232,2026,24,22,3.1,Al-Bataeh CSC
+627232,2026,24,23,3.2,Al-Bataeh CSC
 573131,2020,18,14,3.1,Ajax Amsterdam U21
 573131,2021,19,16,4.8,Ajax Amsterdam U21
 573131,2022,20,22,6.5,SC Telstar / Ajax Amsterdam U21
@@ -11987,6 +11987,10 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 985351,2024,21,37,18.9,América Futebol Clube (MG)
 985351,2025,22,20,15.1,América Futebol Clube (MG) / Mirassol Futebol Clube (SP)
 985351,2026,23,16,12.5,Coritiba Foot Ball Club / Mirassol Futebol Clube (SP)
+819249,2023,21,9,4.9,Portimonense SAD / América Futebol Clube (MG)
+819249,2024,22,29,11.1,NK Veres Rivne / Portimonense SAD
+819249,2025,23,22,8.7,NK Veres Rivne / Sivasspor
+819249,2026,24,20,4.9,SC Otelul Galati / Hapoel Ramat Gan
 791721,2020,18,2,1.1,América Futebol Clube (MG)
 791721,2021,19,3,2.8,América Futebol Clube (MG)
 791721,2022,20,12,9.8,América Futebol Clube (MG)
@@ -11996,6 +12000,9 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 977717,2024,22,37,5.4,Anápolis FC
 977717,2025,23,15,3.2,Centro Sportivo Alagoano (AL) / Atlético Clube Goianiense
 977717,2026,24,5,0.6,Blumenau Esporte Clube (SC)
+985361,2024,21,19,1.5,FC Samgurali Tskaltubo
+985361,2025,22,31,2.6,FC Samgurali Tskaltubo
+985361,2026,23,32,2.9,FC Samgurali Tskaltubo
 902122,2022,20,2,0.8,América Futebol Clube (MG)
 902122,2026,24,25,5.7,Rondoniense SC / Guaporé FC
 1113954,2022,21,1,0.1,FC Rustavi
@@ -12017,6 +12024,8 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 875555,2023,21,2,0.3,Louletano DC
 902118,2023,20,2,0.9,América Futebol Clube (MG)
 902118,2024,21,6,0.5,EC Santo André
+599262,2023,20,2,0.7,Ituano Futebol Clube (SP)
+599262,2024,21,1,0.3,Hercílio Luz FC
 1093695,2023,21,2,0.6,Foz do Iguaçu FC
 957874,2021,19,1,0.9,Club Athletico Paranaense
 957874,2022,20,51,55.5,Club Athletico Paranaense
@@ -12158,6 +12167,8 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 867840,2024,23,20,3.2,Goiânia EC / Águia de Marabá FC
 867840,2025,24,6,1.2,Sociedade Esportiva do Gama (DF)
 867840,2026,25,19,2.9,AA Aparecidense
+1083074,2025,22,2,0.1,Porto Velho EC
+1083074,2026,23,34,8.1,Guaporé FC
 1096517,2024,22,7,1.4,Luverdense EC (MT)
 1096517,2025,23,6,1.6,SC Gjilani
 1096517,2026,24,26,2.3,FK Kukësi
@@ -12314,7 +12325,7 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 978146,2023,21,11,9.2,Botafogo de Futebol e Regatas
 978146,2024,22,15,9.5,Botafogo de Futebol e Regatas / Clube de Regatas Brasil (AL)
 978146,2025,23,42,15.4,Volta Redonda Futebol Clube (RJ) / Boavista SC
-978146,2026,24,42,26.2,Esporte Clube Juventude
+978146,2026,24,43,26.9,Esporte Clube Juventude
 834467,2024,20,21,25.0,Botafogo de Futebol e Regatas
 834467,2025,21,24,12.9,FC Porto B / Botafogo de Futebol e Regatas
 834467,2026,22,20,7.8,FC Porto B
@@ -12357,8 +12368,6 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 740050,2024,22,17,6.2,Clube Náutico Capibaribe
 740050,2025,23,9,2.7,IF São Joseense
 740050,2026,24,10,1.2,Madureira EC / Treze FC
-668233,2025,22,9,4.2,Madureira EC / AD Marco 09
-668233,2026,23,19,4.3,Madureira EC
 740049,2020,18,1,0.5,Botafogo de Futebol e Regatas
 740049,2023,21,11,2.4,Falcon FC / Centro Sportivo Alagoano (AL)
 740049,2024,22,3,0.9,Barcelona FC (BA)
@@ -12416,6 +12425,9 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 595168,2024,24,31,14.3,Buriram United / Portuguesa
 595168,2025,25,40,9.2,Selangor FC / PT Prachuap FC
 595168,2026,26,33,7.2,Selangor FC
+818019,2020,17,5,1.9,Figueirense Futebol Clube
+818019,2021,18,3,1.1,Figueirense Futebol Clube
+818019,2023,20,1,0.3,Figueirense Futebol Clube
 980464,2024,22,18,16.5,Dinamo Minsk
 980464,2025,23,20,9.3,Dinamo Minsk
 980464,2026,24,23,4.4,Botev Plovdiv / Septemvri Sofia
@@ -12468,6 +12480,11 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 689744,2021,21,1,0.3,Cascavel Clube Recreativo (PR)
 689744,2022,22,4,0.8,EC Águia Negra (MS)
 689744,2026,26,8,3.1,SD Juazeirense (BA)
+1012158,2022,20,1,0.7,Ceará Sporting Club
+1012158,2023,21,1,0.7,Sampaio Corrêa FC (MA)
+1012158,2024,22,8,3.6,Amazonas FC / SER Caxias do Sul (RS)
+1012158,2025,23,1,0.3,Amazonas FC
+1012158,2026,24,5,0.5,Singha Chiangrai United
 950394,2020,18,2,0.3,Clube Atlético Tubarão (SC)
 950394,2023,21,8,1.0,CE Aimoré
 950394,2026,24,11,3.2,Porto Vitória FC
@@ -12480,6 +12497,9 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 800229,2023,23,8,1.6,América FC
 1118234,2023,21,8,1.6,CE Operário Várzea-Grandense
 1118234,2024,22,8,1.6,Aquidauanense FC
+980857,2023,21,2,0.6,Azuriz FC
+980857,2024,22,5,1.4,FC Petrocub Hincesti
+980857,2025,23,2,0.5,NK Jarun
 834462,2021,17,3,0.9,Ceará Sporting Club
 834462,2022,18,1,0.7,Ceará Sporting Club
 834462,2026,22,3,0.8,Ferroviária
@@ -12636,11 +12656,6 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 1001063,2021,20,6,1.8,CA Metropolitano
 1001063,2023,22,1,0.4,EC Novo Hamburgo
 1001063,2026,25,19,3.0,CS Sinop / Luverdense EC (MT)
-1012158,2022,20,1,0.7,Ceará Sporting Club
-1012158,2023,21,1,0.7,Sampaio Corrêa FC (MA)
-1012158,2024,22,8,3.6,Amazonas FC / SER Caxias do Sul (RS)
-1012158,2025,23,1,0.3,Amazonas FC
-1012158,2026,24,5,0.5,Singha Chiangrai United
 1005645,2023,19,1,0.5,Sport Club Corinthians Paulista
 1005645,2024,20,9,3.9,Wydad Casablanca
 1005645,2025,21,3,1.2,Wydad Casablanca
@@ -12667,8 +12682,6 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 839814,2023,23,8,0.9,Athletic Club
 839814,2025,25,7,1.4,Batalhão FC
 839814,2026,26,11,2.8,Araguaína FR
-997462,2023,21,5,1.5,IF São Joseense
-997462,2024,22,5,1.5,IF São Joseense
 982009,2022,22,3,0.6,CS Sinop
 738502,2020,19,17,4.4,Criciúma EC
 738502,2021,20,12,3.5,Criciúma EC
@@ -12706,6 +12719,9 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 879217,2024,21,25,31.5,Cruzeiro Esporte Clube
 879217,2025,22,51,63.0,Cruzeiro Esporte Clube
 879217,2026,23,44,65.6,Cruzeiro Esporte Clube / Como 1907
+661856,2024,22,55,23.9,Club Always Ready / Bolivia
+661856,2025,23,52,36.8,Bolívar La Paz / Bolivia
+661856,2026,24,38,11.6,Bolívar La Paz / Bolivia
 792249,2020,20,23,10.3,Cruzeiro Esporte Clube / Ferroviária
 792249,2021,21,30,14.1,Cruzeiro Esporte Clube
 792249,2022,22,27,12.1,Associação Chapecoense de Futebol / Mirassol Futebol Clube (SP)
@@ -12772,9 +12788,6 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 1095494,2025,22,1,0.4,Betim Futebol
 874695,2022,22,1,0.2,SC Praiense
 1272748,2024,22,7,0.2,CA Patrocinense
-818019,2020,17,5,1.9,Figueirense Futebol Clube
-818019,2021,18,3,1.1,Figueirense Futebol Clube
-818019,2023,20,1,0.3,Figueirense Futebol Clube
 749559,2022,18,37,51.3,CR Flamengo
 749559,2023,19,46,60.3,CR Flamengo
 749559,2024,20,35,35.2,CR Flamengo / Göztepe
@@ -12835,10 +12848,6 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 987503,2024,21,16,11.2,Cruzeiro Esporte Clube / Mirassol Futebol Clube (SP)
 987503,2025,22,37,10.4,Tombense Futebol Clube (MG) / Volta Redonda Futebol Clube (RJ)
 987503,2026,23,37,8.2,AD Confiança / Londrina Esporte Clube (PR)
-997868,2023,21,11,6.0,Avs Futebol / Boavista SC
-997868,2024,22,26,5.4,CD Trofense
-997868,2025,23,31,6.6,AD Fafe / CD Trofense
-997868,2026,24,24,4.9,AD Fafe
 943237,2022,19,6,3.7,CR Flamengo
 943237,2023,20,3,1.5,CR Flamengo
 943237,2024,21,5,6.1,CR Flamengo
@@ -12861,8 +12870,6 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 887813,2023,21,14,5.4,Santa Cruz FC (PE)
 887813,2024,22,6,1.2,Serra Branca EC
 887813,2025,23,2,0.6,Afogados da Ingazeira FC
-1083074,2025,22,2,0.1,Porto Velho EC
-1083074,2026,23,34,8.1,Guaporé FC
 918663,2021,18,1,0.5,CR Flamengo
 918663,2023,20,2,0.8,Sport Club do Recife
 918663,2024,21,9,4.5,Sport Club do Recife
@@ -12971,6 +12978,10 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 792652,2024,23,21,8.3,ABC Futebol Clube (RN)
 792652,2025,24,29,5.6,Agremiação Sportiva Arapiraquense (AL)
 792652,2026,25,37,8.0,Agremiação Sportiva Arapiraquense (AL)
+997868,2023,21,11,6.0,Avs Futebol / Boavista SC
+997868,2024,22,26,5.4,CD Trofense
+997868,2025,23,31,6.6,AD Fafe / CD Trofense
+997868,2026,24,24,4.9,AD Fafe
 796351,2020,20,13,2.2,River AC
 796351,2021,21,9,1.8,Campinense Clube (PB) / Caucaia Esporte Clube (CE)
 796351,2023,23,3,0.6,GE Anápolis
@@ -12991,6 +13002,8 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 792645,2024,24,7,2.1,Barcelona FC (BA)
 792645,2025,25,8,1.6,Associação Jaguaré EC
 792645,2026,26,7,2.1,Cametá SC
+668233,2025,22,9,4.2,Madureira EC / AD Marco 09
+668233,2026,23,19,4.3,Madureira EC
 792642,2020,17,1,0.3,Guarany SC
 792642,2024,21,6,1.2,ACEC Baraúnas
 792642,2025,22,7,1.4,ACEC Baraúnas
@@ -13001,6 +13014,8 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 645611,2020,20,3,0.9,Guarany SC
 645611,2021,21,5,1.5,ADRC Icasa
 645611,2022,22,1,0.3,AD Iguatu
+1082767,2021,19,1,0.1,Retrô FC Brasil
+1082767,2023,21,5,1.5,Belo Jardim FC
 1082722,2023,22,1,0.7,Ferroviário AC
 825780,2021,21,4,0.5,Goianésia Esporte Clube (GO)
 825780,2022,22,10,1.9,CE Operário Várzea-Grandense
@@ -13141,6 +13156,8 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 858493,2024,23,6,1.2,Nova Mutum EC
 858493,2025,24,3,0.6,Legião FC (DF) / Aquidauanense FC
 858493,2026,25,5,1.5,SE Decisão Futebol Clube
+997462,2023,21,5,1.5,IF São Joseense
+997462,2024,22,5,1.5,IF São Joseense
 997471,2023,21,5,2.0,CE Aimoré
 997471,2025,23,3,0.6,Deportes Quindío
 905625,2022,21,8,1.1,CE Aimoré
@@ -13326,9 +13343,6 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 574758,2024,22,21,16.6,CD Nacional / Sociedade Esportiva Palmeiras
 574758,2025,23,23,15.4,CD Nacional / FC Famalicão
 574758,2026,24,15,11.7,FC Famalicão
-661856,2024,22,55,23.9,Club Always Ready / Bolivia
-661856,2025,23,52,36.8,Bolívar La Paz / Bolivia
-661856,2026,24,38,11.6,Bolívar La Paz / Bolivia
 813120,2020,18,2,2.1,Sociedade Esportiva Palmeiras
 813120,2021,19,3,2.1,Sociedade Esportiva Palmeiras
 813120,2022,20,7,3.3,Cruzeiro Esporte Clube / Ferroviária
@@ -13351,10 +13365,6 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 816135,2024,21,19,6.2,NK Osijek
 816135,2025,22,29,9.8,NK Osijek / Avs Futebol
 816135,2026,23,20,12.6,Avs Futebol / Sporting CP
-819249,2023,21,9,4.9,Portimonense SAD / América Futebol Clube (MG)
-819249,2024,22,29,11.1,NK Veres Rivne / Portimonense SAD
-819249,2025,23,22,8.7,NK Veres Rivne / Sivasspor
-819249,2026,24,20,4.9,SC Otelul Galati / Hapoel Ramat Gan
 964590,2024,21,1,0.5,SC Farense
 964590,2025,22,15,7.8,CD Nacional / SC Farense
 964590,2026,23,24,19.2,CD Nacional / Sporting CP
@@ -13410,11 +13420,11 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 796742,2024,21,1,0.5,Grêmio Novorizontino
 796742,2025,22,1,0.5,Grêmio Novorizontino
 1082584,2026,23,29,7.2,Esporte Clube Jacuipense (BA) / FK Liepaja
+886564,2023,20,2,3.9,Sociedade Esportiva Palmeiras
+886564,2026,23,9,2.2,Amarante FC
 866003,2021,21,6,1.1,NK Osijek II / GDSC Alvarenga Futebol SAD
 866003,2025,25,11,3.0,União Rondonópolis EC (MT) / Central SC
 866003,2026,26,9,2.0,AAD Vitória das Tabocas (PE) / Central SC
-886564,2023,20,2,3.9,Sociedade Esportiva Palmeiras
-886564,2026,23,8,1.9,Amarante FC
 813123,2022,20,10,0.8,Vitória Guimarães SC B
 813123,2023,21,1,0.1,Vitória Guimarães SC B
 813123,2024,22,8,0.6,Vilaverdense FC
@@ -13567,8 +13577,6 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 1087716,2024,21,2,1.3,Sport Club do Recife
 1087716,2025,22,12,1.2,Sociedade Imperatriz de Desportos (MA)
 1087716,2026,23,2,0.5,AA Internacional de Limeira
-599262,2023,20,2,0.7,Ituano Futebol Clube (SP)
-599262,2024,21,1,0.3,Hercílio Luz FC
 1090788,2025,22,2,0.6,Cariri FC (CE)
 984742,2021,21,9,0.5,Rio Branco SC / AD Atlética Gloriense
 884126,2023,23,1,0.3,Sport Club do Recife
@@ -13626,9 +13634,6 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 838143,2023,22,3,0.3,AA Internacional de Limeira
 838143,2024,23,4,2.0,Bangu Atlético Clube (RJ)
 894532,2025,23,3,3.2,São Paulo Futebol Clube
-980857,2023,21,2,0.6,Azuriz FC
-980857,2024,22,5,1.4,FC Petrocub Hincesti
-980857,2025,23,2,0.5,NK Jarun
 1126159,2026,25,2,0.2,SC Bettembourg
 743600,2021,17,2,1.0,Clube de Regatas Vasco da Gama
 743600,2022,18,36,21.7,Clube de Regatas Vasco da Gama
@@ -13677,9 +13682,6 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 992306,2024,22,15,2.2,FC Lugano II
 992306,2025,23,11,0.8,Barcelona FC (BA)
 992306,2026,24,10,2.4,Porto Vitória FC
-985361,2024,21,19,1.5,FC Samgurali Tskaltubo
-985361,2025,22,31,2.6,FC Samgurali Tskaltubo
-985361,2026,23,32,2.9,FC Samgurali Tskaltubo
 990595,2022,20,7,0.7,Paraná Clube
 990595,2023,21,3,0.6,Sociedade Esportiva do Gama (DF)
 990595,2025,23,6,1.8,Santa Catarina Clube (SC)
@@ -13696,8 +13698,6 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 999808,2026,23,26,1.2,FC Meshakhte Tkibuli
 668229,2024,21,3,1.1,Bangu Atlético Clube (RJ) / AA Portuguesa
 668229,2026,23,12,1.8,Falcon FC / CD Santa Clara B
-1082767,2021,19,1,0.1,Retrô FC Brasil
-1082767,2023,21,5,1.5,Belo Jardim FC
 977701,2025,22,8,1.6,Galvez EC
 1083963,2023,20,1,0.5,Clube de Regatas Vasco da Gama
 1083963,2025,22,3,0.3,Bulgan SP Falcons
@@ -13737,7 +13737,7 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 985345,2023,20,17,9.3,América Futebol Clube (MG)
 985345,2024,21,13,6.4,América Futebol Clube (MG)
 985345,2025,22,41,17.2,América Futebol Clube (MG)
-985345,2026,23,41,17.9,Ceará Sporting Club
+985345,2026,23,42,18.3,Ceará Sporting Club
 977467,2022,17,7,2.8,América Futebol Clube (MG)
 977467,2023,18,16,7.2,América Futebol Clube (MG)
 977467,2024,19,34,18.0,América Futebol Clube (MG)
@@ -13745,7 +13745,7 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 977467,2026,21,14,2.2,Al-Bataeh CSC / Kalba FC
 985359,2025,22,1,0.4,Betim Futebol
 985359,2026,23,24,4.7,Clube Náutico Marcílio Dias (SC)
-985208,2026,22,10,4.5,CD Tondela
+985208,2026,22,11,5.0,CD Tondela
 983979,2023,21,1,0.3,Clube Náutico Capibaribe
 983979,2025,23,3,1.3,América Futebol Clube (MG)
 1043005,2024,21,4,0.8,Nova Venécia FC
@@ -13777,20 +13777,11 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 1082524,2024,21,5,1.5,Associação Chapecoense de Futebol
 1082524,2025,22,10,2.0,FC Pantanal (MS)
 1082524,2026,23,31,6.2,Operário FC / Clube Recreativo e Atlético Catalano (GO)
-1083107,2023,20,1,0.3,Esporte Clube Bahia
-1083107,2024,21,12,2.7,FC Ararat Yerevan / Esporte Clube Bahia
-1083107,2025,22,13,1.3,FC Ararat Yerevan
-1083107,2026,23,29,6.0,FC Zimbru Chisinau
 867800,2021,19,6,2.1,Centro Sportivo Alagoano (AL)
 867800,2023,21,15,3.2,EC Cruzeiro / Centro Sportivo Alagoano (AL)
 867800,2024,22,4,0.8,EC Cruzeiro
 867800,2025,23,3,0.6,Murici Futebol Clube (AL)
 867800,2026,24,11,2.2,CS Sergipe
-813036,2020,17,4,0.8,Santa Cruz FC (RN)
-813036,2023,20,13,2.6,Santa Cruz FC (RN)
-813036,2024,21,6,0.2,FK Sloboda Tuzla
-813036,2025,22,2,0.8,NK Radnik Krizevci
-813036,2026,23,9,1.8,Santa Cruz FC (RN)
 869007,2024,21,4,2.5,Wydad Casablanca / Club Athletico Paranaense
 869007,2026,23,6,1.8,Club Athletico Paranaense
 1082525,2024,21,5,1.5,Flamengo de Arcoverde
@@ -13832,6 +13823,10 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 980968,2024,20,5,1.0,Iporá Esporte Clube
 980968,2025,21,9,0.9,Goiânia EC / Atlético Clube Goianiense
 980968,2026,22,24,3.0,Goiatuba EC / Varzim SC
+939295,2023,20,14,2.5,Iporá Esporte Clube / Atlético Clube Goianiense
+939295,2024,21,6,1.2,Iporá Esporte Clube
+939295,2025,22,3,0.7,Anápolis FC
+939295,2026,23,6,1.8,AD Bahia de Feira (BA)
 965636,2022,20,6,2.0,Atlético Clube Goianiense
 965636,2023,21,10,3.0,Operário Ferroviário Esporte Clube (PR)
 1306820,2021,18,9,3.6,Atlético Clube Goianiense
@@ -13925,6 +13920,7 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 829954,2021,19,1,0.2,Ituano Futebol Clube (SP)
 829954,2023,21,31,2.4,DFK Dainava Alytus
 829954,2024,22,6,1.8,Floresta Esporte Clube (CE)
+1083088,2026,23,34,4.1,Dinamo Tbilisi
 1523272,2026,23,6,1.1,Olympia Erewan
 1083071,2024,21,4,0.8,Samambaia FC
 1083603,2026,23,1,0.1,Baré EC
@@ -13960,6 +13956,10 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 869094,2023,22,6,1.7,Vila Nova Futebol Clube (GO)
 869094,2025,24,19,6.3,Amazonas FC
 869094,2026,25,13,4.0,Amazonas FC / América Futebol Clube (MG)
+1083107,2023,20,1,0.3,Esporte Clube Bahia
+1083107,2024,21,12,2.7,FC Ararat Yerevan / Esporte Clube Bahia
+1083107,2025,22,13,1.3,FC Ararat Yerevan
+1083107,2026,23,29,6.0,FC Zimbru Chisinau
 1029798,2022,19,3,0.4,EC Santo André
 1029798,2023,20,11,1.0,EC Santo André
 1029798,2024,21,14,2.1,EC Santo André
@@ -14023,7 +14023,7 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 678502,2023,21,15,16.3,Red Bull Bragantino
 678502,2024,22,30,27.8,Red Bull Bragantino
 678502,2025,23,20,16.5,Red Bull Bragantino
-678502,2026,24,53,23.8,Atlético Clube Goianiense
+678502,2026,24,54,24.3,Atlético Clube Goianiense
 668234,2021,18,5,5.6,Red Bull Bragantino
 668234,2022,19,5,3.5,Red Bull Bragantino
 668234,2023,20,34,34.5,Red Bull Bragantino
@@ -14078,10 +14078,11 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 1098399,2024,23,8,1.6,Ivinhema FC
 1098399,2025,24,14,1.6,Paide Linnameeskond
 1098399,2026,25,39,5.0,Paide Linnameeskond
-939295,2023,20,14,2.5,Iporá Esporte Clube / Atlético Clube Goianiense
-939295,2024,21,6,1.2,Iporá Esporte Clube
-939295,2025,22,3,0.7,Anápolis FC
-939295,2026,23,6,1.8,AD Bahia de Feira (BA)
+813036,2020,17,4,0.8,Santa Cruz FC (RN)
+813036,2023,20,13,2.6,Santa Cruz FC (RN)
+813036,2024,21,6,0.2,FK Sloboda Tuzla
+813036,2025,22,2,0.8,NK Radnik Krizevci
+813036,2026,23,9,1.8,Santa Cruz FC (RN)
 1008655,2023,20,1,0.4,Ceará Sporting Club
 1008655,2024,21,2,1.4,Ceará Sporting Club
 1008655,2025,22,6,2.3,Portimonense SAD
@@ -14111,7 +14112,9 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 1082825,2026,23,14,3.8,Figueirense Futebol Clube / Associação Chapecoense de Futebol
 1082707,2024,21,2,0.6,Aruko Sports Brasil
 1082707,2025,22,13,1.8,Goiânia EC
-1082707,2026,23,18,9.3,Associação Chapecoense de Futebol
+1082707,2026,23,19,9.8,Associação Chapecoense de Futebol
+1082703,2025,21,7,2.1,Clube Náutico Marcílio Dias (SC)
+1082703,2026,22,10,2.5,CA Carlos Renaux / CE Operário Várzea-Grandense
 978145,2025,24,2,0.4,Goianésia Esporte Clube (GO)
 978145,2026,25,6,2.4,Monsoon Futebol Clube
 964597,2022,20,6,1.8,Associação Chapecoense de Futebol
@@ -14158,7 +14161,6 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 1135708,2024,23,15,3.8,Centro Sportivo Alagoano (AL) / Retrô FC Brasil
 1135708,2025,24,16,4.8,Centro Sportivo Alagoano (AL)
 1135708,2026,25,13,3.7,FK Csikszereda Miercurea Ciuc
-1083088,2026,23,34,4.1,Dinamo Tbilisi
 1130651,2026,23,4,0.8,SC Genus
 1005648,2024,21,4,0.4,Manaus Futebol Clube
 943837,2021,16,5,2.5,Cruzeiro Esporte Clube
@@ -14240,7 +14242,6 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 978045,2026,23,20,1.9,North District
 876750,2025,23,3,0.3,O Elvas CAD
 876750,2026,24,3,0.5,CF Os Marialvas
-997860,2024,21,1,0.5,Bangu Atlético Clube (RJ)
 997714,2022,19,3,4.0,Fluminense Football Club
 997714,2023,20,37,42.8,Fluminense Football Club
 997714,2024,21,42,50.5,Fluminense Football Club / Al-Ahli SFC
@@ -14310,15 +14311,16 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 1082749,2024,21,5,1.0,ACEC Baraúnas
 1082749,2025,22,3,0.6,ACEC Baraúnas
 1225548,2025,23,5,1.0,CE Força e Luz
+997860,2024,21,1,0.5,Bangu Atlético Clube (RJ)
 1222223,2026,21,4,0.5,SC Humaitá
 891353,2023,20,14,16.2,Grêmio Foot-Ball Porto Alegrense
 891353,2024,21,34,54.6,Botafogo de Futebol e Regatas / Grêmio Foot-Ball Porto Alegrense
 891353,2025,22,47,69.0,Botafogo de Futebol e Regatas
-891353,2026,23,36,37.5,Clube de Regatas Vasco da Gama
+891353,2026,23,37,38.4,Clube de Regatas Vasco da Gama
 959092,2023,20,10,12.6,Grêmio Foot-Ball Porto Alegrense
 959092,2024,21,19,24.8,Grêmio Foot-Ball Porto Alegrense
 959092,2025,22,26,21.0,Atlético Clube Goianiense / Grêmio Foot-Ball Porto Alegrense
-959092,2026,23,30,16.1,Fortaleza Esporte Clube
+959092,2026,23,31,16.7,Fortaleza Esporte Clube
 1099718,2023,20,30,12.9,Cherno More Varna / Zulte Waregem
 1099718,2024,21,19,10.4,Zulte Waregem
 1099718,2025,22,34,14.4,Ludogorets Razgrad / Al-Fateh SC
@@ -14338,11 +14340,6 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 997465,2024,21,11,4.3,Associação Chapecoense de Futebol / Grêmio Foot-Ball Porto Alegrense
 997465,2025,22,8,3.8,Associação Chapecoense de Futebol
 997465,2026,23,27,13.2,Associação Chapecoense de Futebol
-942644,2021,19,14,3.5,ADRC Icasa / SE Picos
-942644,2023,21,34,8.7,Ferroviário AC
-942644,2024,22,21,5.0,Ferroviário AC
-942644,2025,23,9,1.0,Manauara EC
-942644,2026,24,18,2.8,CA Piauiense / Clube Náutico Marcílio Dias (SC)
 977534,2020,19,8,1.6,AD Perilima de Campina Grande (PB)
 977534,2022,21,10,2.7,Campinense Clube (PB)
 977534,2023,22,7,1.9,Goiás EC
@@ -14491,8 +14488,6 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 887479,2026,23,11,2.1,Uberlândia EC / Capivariano FC
 1082853,2025,22,3,1.5,Bangu Atlético Clube (RJ)
 1082853,2026,23,24,5.8,Independência FC
-1082703,2025,21,7,2.1,Clube Náutico Marcílio Dias (SC)
-1082703,2026,22,10,2.5,CA Carlos Renaux / CE Operário Várzea-Grandense
 1083792,2025,22,10,2.0,Clube Laguna (RN)
 984095,2025,23,9,1.8,Nacional AC
 984090,2023,21,1,0.3,Santa Cruz FC (PE)
@@ -14551,7 +14546,7 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 894527,2022,19,1,1.5,São Paulo Futebol Clube
 894527,2024,21,9,3.6,Real Murcia CF
 894527,2025,22,35,12.4,Real Murcia CF
-894527,2026,23,25,8.6,Real Murcia CF
+894527,2026,23,26,9.0,Real Murcia CF
 980853,2022,19,1,1.5,São Paulo Futebol Clube
 980853,2024,21,4,2.8,APOEL Nicosia
 980853,2025,22,24,12.5,APOEL Nicosia
@@ -14568,7 +14563,7 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 465815,2023,22,21,3.5,Montevideo Wanderers
 465815,2024,23,23,3.0,Montevideo Wanderers / Club Deportivo Maldonado
 465815,2025,24,26,1.8,CA Fénix
-465815,2026,25,17,2.3,CA Atenas de San Carlos / Central Español FC
+465815,2026,25,19,2.5,CA Atenas de San Carlos / Central Español FC
 980866,2023,20,2,2.0,São Paulo Futebol Clube
 980866,2024,21,15,8.3,Avs Futebol / SC União Torreense
 980866,2025,22,17,4.0,AD Sanjoanense / SC União Torreense
@@ -14636,6 +14631,11 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 661239,2024,22,39,8.7,Sportivo Luqueño / Tacuary Football Club
 661239,2025,23,30,9.7,Club Guaraní
 661239,2026,24,42,9.6,Club Guaraní
+942644,2021,19,14,3.5,ADRC Icasa / SE Picos
+942644,2023,21,34,8.7,Ferroviário AC
+942644,2024,22,21,5.0,Ferroviário AC
+942644,2025,23,9,1.0,Manauara EC
+942644,2026,24,18,2.8,CA Piauiense / Clube Náutico Marcílio Dias (SC)
 1083883,2023,20,1,0.5,Clube de Regatas Vasco da Gama
 1083883,2024,21,2,1.0,Clube de Regatas Vasco da Gama
 1083883,2025,22,2,0.4,UD Santarém
@@ -14649,3 +14649,906 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 1100474,2026,21,5,1.0,ACD Potiguar (RN)
 987717,2025,22,7,0.6,Anadia FC
 973392,2022,21,3,0.4,Tacuary Football Club
+1086631,2024,20,1,0.6,América Futebol Clube (MG)
+1086631,2025,21,37,15.5,América Futebol Clube (MG)
+1086631,2026,22,15,5.6,RB Omiya Ardija
+1082692,2023,19,2,1.1,América Futebol Clube (MG)
+1082692,2024,20,2,1.1,América Futebol Clube (MG)
+1082692,2025,21,24,10.2,América Futebol Clube (MG)
+1082692,2026,22,22,8.3,América Futebol Clube (MG)
+1085182,2025,21,6,2.5,América Futebol Clube (MG)
+1085182,2026,22,37,11.5,América Futebol Clube (MG)
+997863,2023,19,1,0.7,América Futebol Clube (MG)
+997863,2025,21,7,2.9,América Futebol Clube (MG)
+997863,2026,22,18,4.8,Uberlândia EC / América Futebol Clube (MG)
+985358,2023,21,20,2.2,North Texas SC
+1085346,2026,21,7,2.1,Aruko Sports Brasil
+985349,2023,19,8,1.7,FC Kharkiv
+985349,2025,21,1,0.1,Lagarto FC
+985364,2026,24,7,1.4,União Rondonópolis EC (MT)
+902123,2026,22,3,0.8,América Futebol Clube (MG)
+743586,2024,20,28,34.3,Club Athletico Paranaense
+743586,2025,21,34,16.5,Club Athletico Paranaense
+743586,2026,22,16,14.1,Club Athletico Paranaense
+1082519,2023,19,3,1.9,Esporte Clube Vitória / Hellas Verona
+1082519,2024,20,20,17.8,Cosenza Calcio / Hellas Verona
+1082519,2025,21,24,20.4,AC Reggiana 1919 / Cosenza Calcio
+1082519,2026,22,24,17.0,AC Reggiana 1919 / Inter U23
+1082523,2025,21,18,17.4,Fortaleza Esporte Clube
+1082523,2026,22,33,17.2,Fortaleza Esporte Clube
+1052819,2025,20,22,12.0,Club Athletico Paranaense
+1052819,2026,21,18,18.6,Club Athletico Paranaense
+1056019,2025,21,23,8.8,Londrina Esporte Clube (PR) / Maricá Futebol Clube
+1056019,2026,22,35,10.5,Londrina Esporte Clube (PR)
+960584,2023,19,2,0.8,Bolivia / Bolivia U23
+960584,2024,20,3,4.2,Bolivia U23
+960584,2025,21,35,6.7,Club Deportivo Oriente Petrolero / Bolivia
+960584,2026,22,22,7.3,Club Always Ready / Bolivia
+627213,2025,23,10,5.2,APOEL Nicosia
+627213,2026,24,9,4.3,APOEL Nicosia / Omonia Aradippou
+933619,2021,19,6,1.2,Montevideo City Torque
+933619,2022,20,1,0.2,Montevideo City Torque
+933619,2023,21,5,0.3,Tacuarembó FC
+933619,2024,22,4,0.4,CA Fénix
+933619,2025,23,25,1.9,CA Fénix
+933619,2026,24,14,1.3,CA Fénix
+1036474,2025,21,7,2.8,Athletic Club
+1036474,2026,22,7,2.5,EC Democrata
+1082526,2024,21,19,3.5,Democrata FC / Villa Nova AC
+802644,2025,21,11,3.0,Brusque Futebol Clube (SC)
+802644,2026,22,3,0.2,Azuriz FC
+1082521,2025,21,3,3.0,Red Bull Bragantino
+1082517,2026,22,11,1.7,Inhumas EC
+1082520,2025,22,4,0.8,Tocantinópolis EC
+1082520,2026,23,1,0.2,Tocantinópolis EC
+1038805,2025,21,5,1.0,ABC Futebol Clube (RN)
+1092857,2024,19,3,1.8,Atlético Clube Goianiense
+1092857,2025,20,12,6.5,Goiás EC
+1092857,2026,21,49,21.6,Goiás EC
+1082528,2024,22,23,4.9,AA Aparecidense / Aruko Sports Brasil
+1082528,2025,23,18,4.3,Portuguesa / AE Velo Clube Rioclarense (SP)
+1082528,2026,24,18,3.8,Portuguesa
+992529,2020,19,3,0.6,Capital CF
+992529,2021,20,3,0.6,Capital CF
+992529,2022,21,17,2.1,GE Anápolis / Capital CF
+992529,2023,22,6,1.2,Capital CF
+992529,2024,23,10,2.0,Capital CF
+992529,2025,24,17,2.1,Central SC / Rio Branco SC
+992529,2026,25,9,0.7,Central SC
+1100830,2023,21,2,0.4,GE Anápolis
+1100830,2024,22,7,1.9,Ceilândia EC
+1100830,2025,23,10,2.0,AE Jataiense
+1100830,2026,24,24,4.6,Uberlândia EC
+1082531,2023,20,21,2.5,Iporá Esporte Clube / Inhumas EC
+1082531,2026,23,9,1.8,Agro Esporte Clube
+1086634,2021,18,4,2.8,Aquidauanense FC
+1086634,2026,23,7,1.3,Primavera AC
+1082536,2021,18,4,0.1,Jaraguá Esporte Clube (GO)
+1082536,2024,21,7,1.4,AA Araguaia
+1082536,2025,22,10,1.0,Sleza Wroclaw
+1082536,2026,23,8,1.6,EC Cruzeiro / AA Guarany (SE)
+1086261,2021,18,9,1.1,Palmas FR
+1086261,2023,20,1,0.1,Camboriú FC
+1086261,2025,22,6,1.2,Batalhão FC
+1086261,2026,23,7,1.3,Capital FC (TO)
+977724,2021,18,2,1.4,Vila Nova Futebol Clube (GO)
+977724,2025,22,2,0.4,Gurupi EC
+977724,2026,23,9,1.8,Gurupi EC
+1082529,2023,19,3,1.3,Atlético Clube Goianiense
+1082529,2024,20,2,0.4,FC Cascavel (PR)
+1082529,2025,21,4,0.3,FC Cascavel (PR)
+1082529,2026,22,6,1.4,FC Cascavel (PR)
+867814,2021,17,2,1.0,Botafogo FC
+867814,2024,20,15,1.0,Zabbar St. Patrick FC
+867814,2025,21,11,1.3,Zabbar St. Patrick FC
+828478,2020,18,2,0.3,Esporte Clube São Bento (SP)
+828478,2025,23,3,1.5,Guarani Futebol Clube (SP)
+1103168,2023,19,2,0.6,FC Atlético Cearense
+1103168,2024,20,3,0.9,Floresta Esporte Clube (CE)
+1082888,2025,21,1,0.4,SC Farense
+1082888,2026,22,6,0.7,Imortal DC
+1082532,2023,19,4,0.8,Inhumas EC
+1261283,2025,21,2,0.4,Bela Vista Futebol Cachoeirense
+980979,2022,19,1,0.2,Atlético Clube Goianiense
+980979,2025,22,2,0.2,NEROCA FC
+1083073,2023,19,3,4.9,Clube Atlético Mineiro
+1083073,2024,20,32,33.7,Clube Atlético Mineiro
+1083073,2025,21,1,1.0,Clube Atlético Mineiro
+1083073,2026,22,39,19.1,Goiás EC / Clube Atlético Mineiro
+1083069,2023,19,3,4.7,Clube Atlético Mineiro
+1083069,2024,20,18,11.1,CD Nacional / Clube Atlético Mineiro
+1083069,2025,21,14,8.9,CD Nacional / Clube Atlético Mineiro
+1083069,2026,22,12,5.8,NK Istra 1961 / Hellas Verona
+1083077,2025,22,7,1.0,SC Salgueiros / AA Maguary
+1083077,2026,23,10,0.9,SC Salgueiros
+800608,2020,16,2,0.6,Londrina Esporte Clube (PR)
+800608,2021,17,4,1.2,Londrina Esporte Clube (PR)
+834461,2025,21,6,1.1,Amora FC
+834461,2026,22,4,0.3,SC Salgueiros
+1083082,2026,24,8,1.0,Blumenau Esporte Clube (SC)
+908236,2021,19,2,1.3,Avaí FC
+908236,2022,20,5,2.9,Avaí FC
+908236,2023,21,26,9.8,Avaí FC / Gil Vicente FC
+908236,2024,22,20,9.0,FC Porto B / Gil Vicente FC
+908236,2025,23,32,13.1,FC Porto B
+908236,2026,24,20,9.7,FC Porto B / Casa Pia AC
+997076,2022,20,1,0.7,Avaí FC
+997076,2023,21,22,7.5,Avaí FC
+997076,2024,22,25,9.1,Avaí FC / Clube Náutico Capibaribe
+997076,2025,23,19,8.8,Avaí FC
+997076,2026,24,10,4.0,Avs Futebol / CD Santa Clara
+1076794,2022,20,2,1.3,Avaí FC
+1076794,2023,21,33,12.1,Avaí FC
+1076794,2024,22,29,9.3,Tombense Futebol Clube (MG) / Botafogo FC
+1076794,2026,24,14,5.0,Tombense Futebol Clube (MG)
+886754,2021,19,3,0.9,Avaí FC
+886754,2022,20,7,2.8,Avaí FC
+886754,2023,21,16,5.7,Avaí FC
+886754,2024,22,30,8.2,FC Differdange 03 / Sampaio Corrêa FC (MA)
+886754,2025,23,12,1.3,FC Differdange 03
+886754,2026,24,17,5.7,Ypiranga FC
+797924,2020,19,5,1.1,Sociedade Imperatriz de Desportos (MA)
+797924,2021,20,6,1.2,SE Santa Maria
+797924,2022,21,15,2.4,SE Santa Maria / Ceilândia EC
+797924,2023,22,8,1.6,SE Santa Maria
+797924,2024,23,4,0.8,Sociedade Esportiva do Gama (DF)
+797924,2025,24,6,1.2,SE Ceilandense
+797924,2026,25,16,2.5,Clube Sociedade Esportiva (AL)
+1091913,2024,21,9,2.7,Internacional de Lages
+1091913,2026,23,12,6.2,Operário Ferroviário Esporte Clube (PR) / Portimonense SAD
+991846,2022,19,1,0.3,Avaí FC
+991846,2024,21,7,2.7,Nação Esportes FC / Atlético Clube Goianiense
+991846,2025,22,15,4.3,Centro Sportivo Alagoano (AL) / Paraná Clube
+1091915,2024,23,7,1.4,CE Operário Várzea-Grandense
+1091915,2025,24,4,1.2,AD Iguatu
+1091915,2026,25,16,3.6,EC Democrata
+1091912,2025,23,16,2.2,Goiatuba EC
+1091912,2026,24,4,0.8,Centro Oeste FC (GO)
+1091924,2025,23,3,0.6,CS Sergipe
+1092103,2023,21,3,0.5,Iporá Esporte Clube
+1083095,2023,18,2,0.6,Esporte Clube Bahia
+1083095,2024,19,7,5.5,Esporte Clube Bahia
+1083095,2025,20,43,43.8,Esporte Clube Bahia
+1083095,2026,21,24,17.2,Orlando City SC
+1083109,2023,19,2,0.6,Esporte Clube Bahia
+1083109,2024,20,1,0.7,Esporte Clube Bahia
+1083109,2025,21,7,3.3,Esporte Clube Bahia
+1083109,2026,22,31,7.8,Santa Cruz FC (PE) / FC Paços de Ferreira
+1082838,2023,19,12,3.0,STK 1914 Samorin / Esporte Clube Bahia
+1082838,2024,20,13,2.7,STK 1914 Samorin
+1082838,2025,21,5,1.2,Ituano Futebol Clube (SP)
+1082838,2026,22,11,1.8,FC Hegelmann / AA Maguary
+1082840,2024,20,1,0.7,Esporte Clube Bahia
+1082840,2025,21,15,5.1,Esporte Clube Bahia / FCI Levadia
+1082840,2026,22,12,2.1,FCI Levadia
+1083094,2023,19,1,0.3,Esporte Clube Bahia
+1083094,2024,20,20,3.5,Valmiera FC II / Valmiera FC
+1083094,2026,22,6,1.3,Cianorte Futebol Clube (PR)
+1082843,2023,18,1,0.3,Esporte Clube Bahia
+1082843,2025,20,6,1.8,Londrina Esporte Clube (PR)
+1082843,2026,21,15,1.2,Azuriz FC / EC São Luiz
+1083098,2025,21,5,1.5,Londrina Esporte Clube (PR)
+1083093,2023,21,4,0.8,GE Anápolis
+1082842,2025,22,2,0.4,Inhumas EC
+1082842,2026,23,1,0.2,EC Novo Hamburgo
+1086371,2024,21,10,5.6,RWDM Brussels / Botafogo de Futebol e Regatas
+1086371,2025,22,15,9.0,RWDM Brussels
+1086371,2026,23,37,15.1,FC Sheriff Tiraspol / RWDM Brussels
+942568,2020,18,1,0.5,Resende FC
+942568,2021,19,8,4.0,Resende FC
+942568,2022,20,13,6.5,Resende FC
+942568,2023,21,8,0.5,Resende FC
+942568,2024,22,15,1.9,AA Internacional de Limeira / Madureira EC
+942568,2025,23,17,4.5,Azuriz FC / Bangu Atlético Clube (RJ)
+942568,2026,24,18,2.4,Manaus Futebol Clube / Azuriz FC
+973484,2021,19,5,2.5,Resende FC
+973484,2022,20,13,6.5,Resende FC
+973484,2023,21,4,0.3,Resende FC
+973484,2024,22,15,5.2,Nação Esportes FC / Paysandu SC
+973484,2025,23,9,2.7,Clube Náutico Marcílio Dias (SC)
+1083615,2024,21,23,5.5,América FC
+1083615,2025,22,19,5.5,América FC
+1083615,2026,23,20,6.0,América FC
+939252,2020,18,2,0.6,Horizonte FC
+939252,2021,19,7,1.2,Bangu Atlético Clube (RJ)
+939252,2022,20,4,2.0,Botafogo de Futebol e Regatas / Bangu Atlético Clube (RJ)
+939252,2024,22,15,5.5,Bangu Atlético Clube (RJ) / AA Internacional de Limeira
+939252,2025,23,23,4.7,IF São Joseense / Azuriz FC
+939252,2026,24,6,1.8,Azuriz FC
+992533,2023,21,5,1.7,ABC Futebol Clube (RN) / Boavista SC
+992533,2024,22,19,4.8,SC Lusitânia dos Açores / Grêmio Esportivo Brasil (RS)
+992533,2025,23,14,1.6,SC Lusitânia dos Açores
+973490,2022,20,1,0.5,Resende FC
+973490,2023,21,10,2.8,Resende FC
+973490,2024,22,9,2.7,Flamengo de Arcoverde
+973490,2025,23,2,1.0,Bangu Atlético Clube (RJ)
+996691,2022,19,1,0.5,Botafogo de Futebol e Regatas
+996691,2024,21,2,1.0,Botafogo de Futebol e Regatas
+996691,2025,22,8,3.7,Botafogo de Futebol e Regatas / Esporte Clube Juventude
+996691,2026,23,4,1.0,Clube do Remo (PA) / EC XV de Piracicaba
+1083608,2023,20,10,2.7,Londrina Esporte Clube (PR)
+1083608,2026,23,4,1.6,Boavista SC
+1083611,2026,23,9,3.6,União Recreativa dos Trabalhadores (MG)
+1083612,2025,21,4,1.2,IF São Joseense
+1083606,2024,22,2,0.6,Santa Rosa EC
+1083606,2025,23,1,0.2,Inhumas EC
+1084354,2024,22,6,0.5,EC Avenida
+794707,2020,16,1,0.1,Inter Miami CF II
+794707,2024,20,1,0.2,Boyacá Chicó FC
+1084081,2023,19,39,40.1,Red Bull Bragantino
+1084081,2024,20,48,43.3,Red Bull Bragantino
+1084081,2025,21,26,22.5,Red Bull Bragantino
+1084081,2026,22,32,33.3,Red Bull Bragantino
+661136,2021,19,11,7.4,Club Atlético Platense
+661136,2022,20,23,18.1,Red Bull Bragantino / CA Lanús
+661136,2023,21,4,2.2,Red Bull Bragantino / Club Atlético Tigre
+661136,2024,22,27,17.7,CA Independiente / Club Atlético Tigre
+661136,2025,23,11,9.8,CA Independiente
+661136,2026,24,2,1.2,CA Independiente / Elche CF
+1084074,2023,21,10,12.0,Red Bull Bragantino
+1084074,2024,22,29,24.1,Red Bull Bragantino / Ceará Sporting Club
+1084074,2025,23,24,10.4,Criciúma EC / Atlético Clube Goianiense
+1084074,2026,24,16,7.1,FC Rapid 1923 / Avaí FC
+1015962,2022,17,5,4.2,Red Bull Bragantino
+1015962,2023,18,4,2.6,Red Bull Bragantino
+1015962,2025,20,30,14.3,Guarani Futebol Clube (SP) / Clube do Remo (PA)
+1015962,2026,21,33,19.4,Vila Nova Futebol Clube (GO)
+1071760,2022,19,1,0.8,Red Bull Bragantino
+1071760,2023,20,1,0.2,Figueirense Futebol Clube
+1071760,2024,21,17,4.3,Figueirense Futebol Clube
+1071760,2025,22,21,5.5,Figueirense Futebol Clube
+1071760,2026,23,32,8.6,Figueirense Futebol Clube
+1084073,2025,21,1,1.0,Red Bull Bragantino
+1084073,2026,22,15,17.4,Red Bull Bragantino
+1044572,2024,20,15,3.0,St. Louis CITY SC 2
+1044572,2025,21,24,8.2,Philadelphia Union II
+1044572,2026,22,26,6.5,Philadelphia Union II
+1084075,2023,20,2,0.8,SC Dnipro-1 ( - 2024)
+1084075,2024,21,13,3.2,AC Oulu
+1084075,2025,22,16,3.3,AA Maguary / EC Água Santa (SP)
+1084075,2026,23,27,6.8,GD Chaves / AA Maguary
+1084622,2025,21,14,4.5,Cherno More Varna
+1084622,2026,22,22,8.3,Istanbulspor
+1084078,2025,21,36,5.5,FC Hegelmann / FC Hegelmann B
+1084078,2026,22,33,5.8,FC Hegelmann
+898441,2021,18,4,0.8,Clube de Regatas Brasil (AL)
+898441,2023,20,1,0.2,Clube de Regatas Brasil (AL)
+898441,2024,21,6,2.2,Clube de Regatas Brasil (AL)
+898441,2025,22,10,5.6,Clube de Regatas Brasil (AL)
+898441,2026,23,6,1.6,Clube de Regatas Brasil (AL) / Anápolis FC
+1084621,2024,20,1,0.4,Villa Nova AC
+1084621,2025,21,22,7.4,Ferroviário AC
+1084621,2026,22,1,0.3,Ferroviário AC
+1084068,2026,23,19,6.5,Anápolis FC
+1084066,2023,20,4,0.5,Retrô FC Brasil
+1084066,2024,21,10,2.0,Internacional de Lages / Retrô FC Brasil
+1084066,2025,22,15,2.7,CS Sergipe / AA Maguary
+1084066,2026,23,6,1.2,Treze FC
+1084070,2024,21,2,1.8,Red Bull Bragantino
+1084070,2026,23,12,3.6,Londrina Esporte Clube (PR)
+1084623,2025,21,4,1.3,Cherno More Varna
+1084623,2026,22,16,3.8,Cherno More Varna
+973500,2021,19,1,0.5,Resende FC
+973500,2022,20,3,1.5,Resende FC
+973500,2026,24,6,1.2,EC Democrata
+1072796,2023,20,10,1.8,Red Bull New York II
+1072796,2025,22,4,1.0,Ituano Futebol Clube (SP)
+1072796,2026,23,1,0.1,EC XV de Piracicaba
+1084079,2026,24,12,2.4,Corumbaense FC
+950375,2025,22,11,0.9,GD Samora Correia
+950375,2026,23,10,0.8,GD Samora Correia
+1086577,2026,22,10,1.6,FC Oliveira do Hospital
+1084625,2026,24,8,1.6,ACD Potiguar (RN)
+1084080,2026,23,1,0.2,FC Oliveira do Hospital
+985172,2021,19,8,2.1,Fluminense EC
+985172,2022,20,8,4.6,Ceará Sporting Club / Fluminense EC
+985172,2023,21,47,22.1,Ceará Sporting Club
+985172,2024,22,46,26.5,Ceará Sporting Club
+985172,2025,23,29,39.8,Botafogo de Futebol e Regatas
+985172,2026,24,27,16.7,Dynamo Moscow
+1083207,2023,19,2,0.9,Ceará Sporting Club
+1083207,2024,20,18,13.2,Ceará Sporting Club / Cruzeiro Esporte Clube
+1083207,2025,21,31,37.5,Cruzeiro Esporte Clube
+1083207,2026,22,42,58.9,Cruzeiro Esporte Clube
+1079283,2022,18,1,0.7,Ceará Sporting Club
+1079283,2025,21,9,2.8,Treze FC
+1079283,2026,22,6,1.2,Sampaio Corrêa FC (MA)
+896997,2024,21,5,1.4,Floresta Esporte Clube (CE)
+896997,2025,22,8,2.4,Floresta Esporte Clube (CE)
+902526,2020,18,3,0.4,Palmas FR
+902526,2021,19,9,0.6,Esportivo
+902526,2023,21,7,2.2,Grêmio Esportivo Brasil (RS)
+902526,2025,23,1,0.3,FK Sabail
+741100,2022,21,3,0.4,FC Cascavel (PR)
+741100,2023,22,4,1.0,Athletic Club
+741100,2024,23,11,0.9,Costa Rica EC
+741100,2025,24,3,0.7,FC Yala / Muang Trang United
+795952,2020,17,4,0.5,Associação Olímpica de Itabaiana (SE)
+795952,2021,18,1,0.7,AD Confiança
+1083214,2025,23,4,1.2,Cariri FC (CE)
+1083215,2025,21,1,0.3,Floresta Esporte Clube (CE)
+1082820,2024,22,19,7.3,Associação Chapecoense de Futebol / Aruko Sports Brasil
+1082820,2025,23,49,24.8,Associação Chapecoense de Futebol
+1082820,2026,24,50,22.1,Associação Chapecoense de Futebol / Jeonbuk Hyundai Motors
+1033501,2022,19,1,0.4,Associação Chapecoense de Futebol
+1033501,2024,21,18,4.3,Internacional de Lages / Centro Sportivo Alagoano (AL)
+1033501,2025,22,37,16.1,Cuiabá Esporte Clube (MT)
+1033501,2026,23,45,17.8,Cuiabá Esporte Clube (MT)
+1084629,2024,19,1,0.4,Associação Chapecoense de Futebol
+1084629,2025,20,5,2.9,Associação Chapecoense de Futebol
+1084629,2026,21,20,10.5,Associação Chapecoense de Futebol
+1082705,2024,20,1,0.4,Associação Chapecoense de Futebol
+1082705,2025,21,9,0.6,EC São Luiz
+1082705,2026,22,27,6.5,AD Confiança / CS Sergipe
+1082706,2024,20,2,1.4,Vila Nova Futebol Clube (GO)
+1082706,2025,21,11,2.6,ABC Futebol Clube (RN) / Luverdense EC (MT)
+1082706,2026,22,11,2.6,Piauí EC (PI)
+978139,2026,23,18,5.0,Ypiranga FC / Associação Chapecoense de Futebol
+1084945,2025,21,1,0.4,Villa Nova AC
+1029227,2024,19,44,53.1,Sport Club Corinthians Paulista
+1029227,2025,20,56,59.3,Sport Club Corinthians Paulista
+1029227,2026,21,54,50.6,Sport Club Corinthians Paulista
+1007378,2022,17,4,4.5,Sport Club Corinthians Paulista
+1007378,2023,18,34,35.2,Sport Club Corinthians Paulista
+1007378,2024,19,56,57.5,Sport Club Corinthians Paulista / Al-Nassr FC
+1007378,2025,20,26,19.1,Al-Nassr FC
+1007378,2026,21,22,27.4,Cruzeiro Esporte Clube / Real Sociedad
+1004741,2023,17,21,22.3,Sport Club Corinthians Paulista
+1004741,2024,18,41,27.0,Zenit St. Petersburg
+1004741,2025,19,35,25.7,Zenit St. Petersburg
+1004741,2026,20,28,20.8,Zenit St. Petersburg
+668237,2021,18,10,6.0,Sport Club Corinthians Paulista
+668237,2022,19,14,3.0,Akritas Chloraka / Associação Chapecoense de Futebol
+668237,2023,20,21,11.1,América Futebol Clube (MG)
+668237,2024,21,7,2.8,América Futebol Clube (MG)
+668237,2025,22,6,1.6,Amazonas FC / Retrô FC Brasil
+668237,2026,23,3,0.3,Borneo FC Samarinda
+1082700,2024,20,3,2.7,Sport Club Corinthians Paulista
+1082700,2025,21,9,8.8,Sport Club Corinthians Paulista
+1082700,2026,22,14,11.8,Sport Club Corinthians Paulista
+970339,2025,21,11,5.7,APOEL Nicosia
+970339,2026,22,26,13.2,APOEL Nicosia / Iraklis Thessaloniki
+1082702,2025,22,12,4.8,Grêmio Esportivo Brasil (RS)
+1082702,2026,23,14,2.0,Alagoinhas AC
+1005653,2025,21,1,1.0,Sport Club Corinthians Paulista
+1005653,2026,22,5,4.2,Sport Club Corinthians Paulista
+1084128,2025,19,1,0.7,Ferencvárosi TC
+1084128,2026,20,10,3.3,Atlético Clube Goianiense
+823543,2024,22,1,0.3,Ituano Futebol Clube (SP)
+823543,2026,24,5,1.0,Ituano Futebol Clube (SP)
+1086638,2026,23,6,1.2,Centro Oeste FC (GO)
+1086635,2026,22,6,1.2,Capital FC (TO)
+849408,2026,22,1,0.4,Pouso Alegre FC
+766258,2023,19,36,18.0,Coritiba Foot Ball Club
+766258,2024,20,44,42.0,Vitória Guimarães SC
+766258,2025,21,38,33.8,Al-Hilal SFC / Vitória Guimarães SC
+766258,2026,22,40,38.9,Sport Club Corinthians Paulista / Al-Hilal SFC
+1090819,2023,19,2,1.1,Coritiba Foot Ball Club
+1090819,2024,20,44,19.4,Coritiba Foot Ball Club
+1090819,2025,21,39,21.6,Coritiba Foot Ball Club
+1090819,2026,22,26,20.9,Coritiba Foot Ball Club
+1090422,2023,19,7,3.9,Coritiba Foot Ball Club
+1090422,2024,20,20,7.0,Karpaty Lviv / Coritiba Foot Ball Club
+1090422,2025,21,23,7.6,Karpaty Lviv
+1090422,2026,22,19,6.6,Karpaty Lviv
+1056021,2023,21,16,2.6,Pouso Alegre FC
+1056021,2024,22,22,8.8,Coritiba Foot Ball Club
+1056021,2025,23,16,7.0,APOEL Nicosia / Coritiba Foot Ball Club
+1056021,2026,24,12,4.9,APOEL Nicosia / Londrina Esporte Clube (PR)
+1090823,2023,19,4,2.2,Coritiba Foot Ball Club
+1090823,2025,21,11,5.3,Coritiba Foot Ball Club
+1090823,2026,22,18,7.5,Athletic Club / Avs Futebol
+1090821,2024,20,2,0.9,Coritiba Foot Ball Club
+1090821,2025,21,10,4.0,Coritiba Foot Ball Club
+1090821,2026,22,16,7.4,Atlético Clube Goianiense / Coritiba Foot Ball Club
+1003423,2020,18,6,0.7,Clube Atlético Tubarão (SC)
+1003423,2024,22,5,1.0,Luverdense EC (MT)
+1003423,2025,23,21,4.2,Luverdense EC (MT)
+1003423,2026,24,29,4.1,Luverdense EC (MT)
+1024601,2023,22,2,0.8,Pouso Alegre FC
+1024601,2024,23,9,3.3,Grêmio Esportivo Brasil (RS)
+1024601,2026,25,1,0.2,CE Operário Várzea-Grandense
+974489,2024,21,3,0.6,Clube Recreativo e Atlético Catalano (GO)
+974489,2026,23,7,2.1,Aruko Sports Brasil
+1088070,2024,21,1,0.3,Coritiba Foot Ball Club
+1088070,2026,23,8,2.2,Coritiba Foot Ball Club / Figueirense Futebol Clube
+1083542,2025,22,4,1.2,Coritiba Foot Ball Club
+961805,2025,22,5,1.0,Batalhão FC
+1027713,2024,21,20,9.2,Criciúma EC
+1027713,2025,22,10,3.1,Criciúma EC / SER Caxias do Sul (RS)
+940149,2023,21,12,2.4,Seleção brasileira
+940149,2024,22,24,4.7,Iporá Esporte Clube / Samambaia FC
+940149,2025,23,8,1.6,Samambaia FC
+940149,2026,24,13,2.5,Guaporé FC / Clube Recreativo e Atlético Catalano (GO)
+1237887,2024,22,11,2.2,Nova Mutum EC
+1237887,2025,23,6,2.4,Manaus Futebol Clube
+1237887,2026,24,5,2.4,Agremiação Sportiva Arapiraquense (AL)
+940148,2021,19,1,0.3,Criciúma EC
+940148,2025,23,21,3.1,Clube Laguna (RN) / SD Juazeirense (BA)
+940148,2026,24,14,2.0,AA Aparecidense / CS Sergipe
+1144937,2023,20,3,1.7,Esporte Clube Juventude
+1144937,2026,23,9,1.8,Várzea Grande EC (MT)
+692663,2025,24,6,1.8,Concórdia AC
+692663,2026,25,8,1.1,Blumenau Esporte Clube (SC) / Piauí EC (PI)
+1008160,2024,22,2,0.6,Criciúma EC
+1008160,2025,23,6,1.8,Santa Catarina Clube (SC)
+1008160,2026,24,2,0.4,AD Bahia de Feira (BA) / Madureira EC
+1075074,2022,20,2,1.4,Cuiabá Esporte Clube (MT)
+838057,2024,21,3,0.9,Criciúma EC
+838057,2026,23,1,0.3,Criciúma EC
+1074868,2023,21,1,0.2,Real SC
+1084714,2023,18,9,7.8,Cruzeiro Esporte Clube
+1084714,2024,19,38,29.7,Cruzeiro Esporte Clube / FC Copenhagen
+1084714,2025,20,40,51.0,FC Copenhagen
+1084714,2026,21,34,26.0,FC Copenhagen
+432157,2023,19,7,6.1,Cruzeiro Esporte Clube
+432157,2024,20,15,13.0,Cruzeiro Esporte Clube
+432157,2025,21,5,7.3,Cruzeiro Esporte Clube
+432157,2026,22,19,16.9,Cruzeiro Esporte Clube / Mirassol Futebol Clube (SP)
+1084065,2023,19,16,6.5,Polissya Zhytomyr
+1084065,2024,20,3,0.7,Karpaty Lviv
+1084065,2025,21,12,6.8,SC União Torreense
+1084065,2026,22,17,3.4,Damac FC / Al-Dhafra FC
+637809,2022,18,3,1.6,Cruzeiro Esporte Clube
+637809,2024,20,1,1.0,Cruzeiro Esporte Clube
+637809,2025,21,13,5.5,América Futebol Clube (MG)
+637809,2026,22,21,5.1,ABC Futebol Clube (RN)
+1019701,2022,18,2,1.5,Cruzeiro Esporte Clube
+1019701,2025,21,22,9.4,Avaí FC / Pafos FC
+1019701,2026,22,2,0.7,Avaí FC
+1069905,2022,18,3,2.3,Cruzeiro Esporte Clube
+1069905,2025,21,9,3.8,Ferroviário AC
+981494,2022,19,3,1.2,Guarany de Bagé FC
+981494,2023,20,3,1.2,Avaí FC
+981494,2024,21,9,3.1,Ferroviária
+981494,2026,23,2,0.5,Ferroviária
+1083235,2024,21,21,5.2,Figueirense Futebol Clube
+1083235,2026,23,6,0.4,Ceilândia EC
+1083249,2025,22,8,1.4,Tombense Futebol Clube (MG)
+1083249,2026,23,6,3.6,Capivariano FC / Cuiabá Esporte Clube (MT)
+1009280,2022,19,1,0.2,Volta Redonda Futebol Clube (RJ)
+1009280,2024,21,11,2.5,Porto Vitória FC / Volta Redonda Futebol Clube (RJ)
+1009280,2025,22,3,0.5,Capital CF
+1083248,2025,21,7,1.2,Amora FC
+1083248,2026,22,5,0.9,Amora FC
+668224,2023,20,3,0.3,Athletic Club
+668224,2024,21,2,0.8,Athletic Club
+668224,2025,22,2,0.4,Joinville Esporte Clube (SC)
+668224,2026,23,1,0.3,Joinville Esporte Clube (SC)
+744881,2026,22,3,1.5,Bangu Atlético Clube (RJ)
+668264,2026,23,2,0.8,Betim Futebol
+1083242,2025,21,10,0.5,Itabirito FC
+1083243,2026,23,1,0.2,Ivinhema FC
+1083240,2024,20,1,0.1,União Rondonópolis EC (MT)
+931007,2022,19,1,0.5,Volta Redonda Futebol Clube (RJ)
+931007,2023,20,3,1.5,CR Flamengo
+931007,2024,21,25,33.5,CR Flamengo
+931007,2025,22,36,61.5,CR Flamengo
+931007,2026,23,35,61.7,CR Flamengo
+961046,2022,17,3,3.5,CR Flamengo
+961046,2023,18,26,27.3,CR Flamengo / Red Bull Bragantino
+961046,2024,19,23,30.2,CR Flamengo
+961046,2025,20,32,30.7,Al-Ahli SFC / CR Flamengo
+961046,2026,21,27,18.3,Al-Ahli SFC
+997867,2022,20,1,0.2,SC Lusitânia dos Açores
+997867,2024,22,11,3.5,Portimonense SAD / SC Lusitânia dos Açores
+997867,2025,23,42,21.5,Qarabağ FK / Portimonense SAD
+997867,2026,24,32,28.4,Qarabağ FK / Celtic FC
+997861,2024,21,7,12.6,Eintracht Frankfurt
+997861,2025,22,12,19.8,Eintracht Frankfurt
+997861,2026,23,12,15.2,Eintracht Frankfurt
+603898,2020,18,7,2.4,Beitar Jerusalem
+603898,2021,19,13,5.0,Beitar Jerusalem
+603898,2024,22,13,7.0,Operário Ferroviário Esporte Clube (PR) / CR Flamengo
+603898,2025,23,27,5.5,Sportivo Luqueño
+603898,2026,24,23,4.4,Sportivo Luqueño
+978057,2022,18,4,3.8,CR Flamengo
+978057,2023,19,2,1.0,CR Flamengo
+978057,2024,20,7,3.4,CF Estrela Amadora / CR Flamengo
+978057,2025,21,19,6.8,Paysandu SC / Esporte Clube Juventude
+978057,2026,22,27,7.1,Brusque Futebol Clube (SC)
+1012174,2024,19,1,0.5,CR Flamengo
+1012174,2025,20,1,1.6,CR Flamengo
+1012174,2026,21,28,19.3,Orlando City SC / CR Flamengo
+997864,2024,21,17,3.9,SC Braga B
+997864,2025,22,15,3.4,SC Braga B
+997864,2026,23,10,1.8,SC Braga B / SC São João de Ver
+997862,2026,22,15,4.9,AA Aparecidense / Botafogo FC
+1069871,2024,20,2,1.0,CR Flamengo
+1069871,2025,21,4,2.0,CR Flamengo
+1069871,2026,22,4,0.7,Al-Dhafra FC
+1082543,2025,21,5,3.6,CR Flamengo
+997866,2022,19,3,0.9,Mirassol Futebol Clube (SP)
+978051,2022,19,1,0.5,CR Flamengo
+1082600,2025,21,3,0.3,Joinville Esporte Clube (SC)
+1086381,2024,20,27,15.3,Cercle Brugge / Jong Cercle
+1086381,2025,21,33,21.6,Cercle Brugge
+1086381,2026,22,13,13.5,Cercle Brugge
+1084667,2023,19,12,12.3,Fluminense Football Club
+1084667,2024,20,16,13.1,Fluminense Football Club
+1084667,2025,21,25,11.7,Club Athletico Paranaense
+1084667,2026,22,9,6.0,Maccabi Netanya / Club Athletico Paranaense
+1086449,2021,19,3,0.9,Crato EC
+1086449,2024,22,43,13.2,FC Differdange 03 / Costa Rica EC
+1086449,2025,23,10,1.1,FC Differdange 03 / CS Sergipe
+1086449,2026,24,15,2.0,AA Maguary
+1083669,2023,19,1,1.0,Fluminense Football Club
+1083669,2024,20,5,2.5,Fluminense Football Club
+1083669,2025,21,16,6.2,Amazonas FC / Fluminense Football Club
+1083669,2026,22,16,4.8,Londrina Esporte Clube (PR)
+1084668,2024,20,2,0.8,Leixões SC
+1084668,2025,21,8,2.2,CD Trofense / Leixões SC
+1084668,2026,22,18,4.1,CD Trofense / AD Marco 09
+1086260,2025,21,9,4.0,Krasava ENY / Fluminense Football Club
+1086260,2026,22,7,3.0,Krasava ENY
+1083635,2025,21,4,3.7,Fluminense Football Club
+1083635,2026,22,5,1.9,Avs Futebol / Fluminense Football Club
+942591,2021,19,11,1.2,Madureira EC
+942591,2024,22,5,2.5,Madureira EC
+942591,2025,23,2,0.2,Xaghra United FC
+830453,2024,22,4,0.8,AA Coruripe
+830453,2025,23,2,0.6,Caravaggio Futebol Clube (SC)
+830453,2026,24,15,2.3,União Rondonópolis EC (MT) / AE Jataiense
+997720,2024,22,1,0.3,MFK Snina
+997720,2026,24,14,3.2,Itabirito FC / Grêmio Esportivo Brasil (RS)
+1084951,2025,21,4,0.8,AD Senador Guiomard
+1084951,2026,22,6,1.2,AD Senador Guiomard
+1083668,2026,23,4,1.1,Caldas SC / SC União Torreense
+1074486,2022,19,1,0.7,Goiás EC
+1008634,2021,18,2,0.6,Hercílio Luz FC
+1083671,2026,23,1,0.4,NK Granicar Kotoriba
+1084661,2024,22,1,0.2,ACD Potiguar (RN)
+1086419,2026,22,1,0.2,ABC Futebol Clube (RN)
+1082774,2023,18,2,2.5,Fortaleza Esporte Clube
+1082774,2025,20,45,22.1,Athletic Club / FC Alverca
+1082774,2026,21,22,19.8,Genoa CFC / FC Alverca
+793590,2020,19,3,0.9,Volta Redonda Futebol Clube (RJ)
+793590,2021,20,15,6.0,Volta Redonda Futebol Clube (RJ)
+793590,2023,22,13,4.5,Volta Redonda Futebol Clube (RJ) / CE Operário Várzea-Grandense
+793590,2024,23,6,1.8,AD Jequié
+793590,2025,24,8,1.2,FC Oliveira do Hospital
+793590,2026,25,27,4.1,FC Oliveira do Hospital
+1082770,2023,19,3,0.3,FC Atlético Cearense
+1082770,2024,20,15,4.0,FC Atlético Cearense / IF Karlstad Fotboll
+1082770,2026,22,16,2.4,CEFAT Tirol
+973592,2022,20,5,1.1,Esporte Clube Jacuipense (BA)
+973592,2023,21,2,0.1,Esporte Clube Jacuipense (BA)
+973592,2024,22,9,1.7,Associação Jaguaré EC / Esporte Clube Jacuipense (BA)
+973592,2025,23,3,0.6,Murici Futebol Clube (AL)
+973592,2026,24,6,1.2,Santa Cruz Acre EC
+491537,2017,16,2,0.2,Internacional de Palmira
+491537,2019,18,1,0.2,Internacional de Palmira
+491537,2023,22,3,0.5,FK Kukësi
+1082730,2026,22,2,0.4,Nacional AC
+796726,2021,19,14,9.2,Portimonense SAD
+796726,2022,20,22,18.1,Goiás EC / Portimonense SAD
+796726,2023,21,32,18.1,Viborg FF / EC Água Santa (SP)
+796726,2024,22,27,17.0,Viborg FF
+796726,2025,23,25,14.6,Viborg FF / Al-Wasl SC
+796726,2026,24,26,11.1,Al-Wasl SC
+1022057,2022,18,13,11.3,Goiás EC
+1022057,2023,19,4,2.8,Goiás EC
+1022057,2024,20,19,7.8,Goiás EC
+1022057,2025,21,42,19.4,Goiás EC
+1022057,2026,22,21,7.5,Goiás EC
+933879,2022,20,6,5.0,Goiás EC
+933879,2023,21,4,1.6,Paysandu SC
+933879,2024,22,17,7.0,Santa Cruz FC (PE) / Cuiabá Esporte Clube (MT)
+933879,2025,23,9,4.1,AA Internacional de Limeira
+989591,2023,19,1,0.7,Goiás EC
+989591,2025,21,13,2.3,AA Aparecidense
+989591,2026,22,22,8.2,Tombense Futebol Clube (MG)
+924550,2022,21,6,0.5,Iporá Esporte Clube
+924550,2025,24,10,1.0,Cianorte Futebol Clube (PR)
+924550,2026,25,22,6.3,Cianorte Futebol Clube (PR)
+985073,2022,21,1,0.1,Agremiação Sportiva Arapiraquense (AL)
+985073,2024,23,20,3.4,Porto Velho EC
+985073,2025,24,9,2.4,Amazonas FC / Porto Velho EC
+788138,2020,19,1,0.5,Boavista SC
+788138,2023,22,2,0.4,Capital FC (TO)
+788138,2024,23,2,0.1,Capital FC (TO)
+788138,2025,24,13,1.8,Trem DC
+788138,2026,25,10,2.1,Trem DC
+1245910,2024,22,8,2.6,FC Majd
+1245910,2025,23,6,0.8,Luverdense EC (MT) / SE Ceilandense
+989593,2022,19,5,1.5,Goiás EC
+871752,2021,19,1,0.5,Boavista SC
+871752,2022,20,9,0.7,Iporá Esporte Clube
+1011069,2022,20,1,0.2,FC Atlético Cearense
+1083600,2023,18,11,13.8,Grêmio Foot-Ball Porto Alegrense
+1083600,2024,19,38,33.9,Grêmio Foot-Ball Porto Alegrense
+1083600,2025,20,16,24.0,Botafogo de Futebol e Regatas
+1083600,2026,21,17,11.3,Botafogo de Futebol e Regatas / Ludogorets Razgrad
+950393,2025,20,12,9.5,Grêmio Foot-Ball Porto Alegrense
+950393,2026,21,38,28.0,Grêmio Foot-Ball Porto Alegrense / ACF Fiorentina
+980806,2023,20,9,11.1,Grêmio Foot-Ball Porto Alegrense
+980806,2025,22,21,4.0,Tombense Futebol Clube (MG)
+980806,2026,23,35,11.5,Anápolis FC
+1082968,2023,21,11,4.4,SER Caxias do Sul (RS)
+1082968,2024,22,17,6.0,Central Coast Mariners
+1082968,2025,23,8,1.0,Cianorte Futebol Clube (PR) / Maringá FC
+1082968,2026,24,26,14.4,Grêmio Novorizontino / Esporte Clube São José (RS)
+1084816,2024,19,9,8.5,Grêmio Foot-Ball Porto Alegrense
+1084816,2025,20,7,6.5,Esporte Clube Bahia
+1084816,2026,21,11,9.6,Esporte Clube Bahia
+798448,2020,18,4,1.6,Esportivo
+798448,2021,19,9,3.3,Esportivo
+798448,2022,20,7,4.5,Grêmio Foot-Ball Porto Alegrense
+798448,2023,21,1,0.1,Pouso Alegre FC
+798448,2024,22,21,3.6,Esporte Clube São José (RS) / Samambaia FC
+798448,2025,23,26,5.8,Guarany de Bagé FC / EC Pelotas
+977125,2022,19,3,0.6,EC Cruzeiro
+977125,2025,22,12,3.6,Santa Catarina Clube (SC)
+977125,2026,23,34,12.7,Athletic Club / Santa Catarina Clube (SC)
+1082970,2024,21,15,4.0,SU 1º Dezembro / SC União Torreense
+1082970,2025,22,30,7.4,SU 1º Dezembro / Varzim SC
+1082970,2026,23,27,5.1,Varzim SC / KF Vora
+997467,2023,18,9,2.3,SC Braga B / Grêmio Foot-Ball Porto Alegrense
+997467,2024,19,26,5.7,SC Braga B
+997467,2025,20,20,4.6,SC Braga B
+997467,2026,21,13,2.2,SC Braga B
+976951,2022,17,1,0.2,CS Maruinense
+976951,2024,19,1,0.2,Grêmio Foot-Ball Porto Alegrense
+976951,2025,20,6,6.6,Grêmio Foot-Ball Porto Alegrense
+976951,2026,21,8,5.5,Grêmio Novorizontino
+1082969,2023,19,1,1.3,Grêmio Foot-Ball Porto Alegrense
+1082969,2024,20,4,3.0,Grêmio Foot-Ball Porto Alegrense
+1082969,2025,21,2,0.5,Figueirense Futebol Clube
+1082969,2026,22,17,4.3,Figueirense Futebol Clube / Agremiação Sportiva Arapiraquense (AL)
+997489,2024,20,2,0.3,FC Noah Erewan II
+997489,2025,21,8,1.4,FC Noah Erewan II / FC Noah Yerevan
+997489,2026,22,20,5.7,FC Noah Yerevan
+1084936,2023,19,1,1.3,Grêmio Foot-Ball Porto Alegrense
+1084936,2024,20,3,0.7,Club Olimpia / CA Boston River
+1084936,2025,21,18,3.8,CA Boston River / Club Cerro Porteño
+1084936,2026,22,5,1.5,Club Cerro Porteño
+997469,2024,21,13,4.0,São Bernardo FC
+997469,2025,22,6,2.2,Ferroviária
+997469,2026,23,6,0.6,Piauí EC (PI)
+1083595,2025,22,7,2.8,Monsoon Futebol Clube
+1083595,2026,23,9,3.6,EC Avenida
+1086376,2025,21,10,3.4,Esporte Clube São José (RS)
+1086376,2026,22,19,2.0,Esporte Clube São José (RS)
+997463,2024,20,3,3.1,Cruzeiro Esporte Clube
+997463,2025,21,8,0.7,Ehime FC
+997463,2026,22,6,0.4,CD Feirense
+982547,2023,21,3,1.6,Centro Sportivo Alagoano (AL)
+982547,2024,22,7,1.5,SER Caxias do Sul (RS)
+982547,2025,23,22,7.1,Lokomotiv Plovdiv / Paraná Clube
+982547,2026,24,31,7.2,Lokomotiv Plovdiv
+1083674,2024,21,15,2.7,AA Aparecidense
+1083674,2025,22,36,7.0,AA Aparecidense / Vila Nova Futebol Clube (GO)
+1083674,2026,23,16,7.5,Vila Nova Futebol Clube (GO)
+1015281,2024,21,19,3.1,FK Metta
+1015281,2025,22,2,0.2,FC Osaka
+1015281,2026,23,24,8.0,FC Osaka
+1086723,2024,21,7,0.9,Audax Rio de Janeiro EC
+1086723,2025,22,10,5.0,Bangu Atlético Clube (RJ)
+1086723,2026,23,11,2.5,América Football Club (RJ) / AA Portuguesa
+1083672,2025,21,23,4.0,Deportes La Serena
+1083672,2026,22,7,2.8,Pouso Alegre FC
+980767,2024,20,11,3.4,Al-Fayha FC
+980767,2025,21,4,1.0,Al-Fayha FC / Al-Dhafra FC
+980767,2026,22,14,1.8,Al-Fujairah SC / Al-Dhafra FC
+982544,2024,21,6,1.2,Academia FC
+982544,2025,22,6,0.5,Guarany de Bagé FC
+982544,2026,23,4,1.6,EC Avenida
+1083677,2024,20,1,0.5,Vila Nova Futebol Clube (GO)
+1083677,2025,21,5,1.0,Luverdense EC (MT)
+1083677,2026,22,15,1.4,Cheonan City
+1519051,2026,22,10,2.0,Santos FC
+867811,2021,17,1,0.5,Botafogo FC
+867811,2023,19,1,0.4,Botafogo FC
+867811,2025,21,2,0.8,Botafogo FC
+1084941,2024,20,11,1.1,STK 1914 Samorin
+1083678,2026,22,6,0.5,Hatta Club
+950392,2026,22,2,0.4,Santos FC
+982548,2024,20,1,0.2,FC Maia Lidador
+982548,2026,22,8,0.1,Tochigi City U25
+1053933,2022,17,11,4.6,Esporte Clube Juventude
+1053933,2023,18,33,18.8,Esporte Clube Juventude
+1053933,2024,19,26,12.9,Portimonense SAD / Esporte Clube Juventude
+1053933,2025,20,35,14.7,Portimonense SAD / Alanyaspor
+1053933,2026,21,30,16.0,Alanyaspor
+1096266,2023,19,1,0.4,Esporte Clube Juventude
+1096266,2024,20,1,0.9,Esporte Clube Juventude
+1096266,2025,21,19,4.4,Barra FC
+1096266,2026,22,29,6.6,Barra FC
+1003436,2021,19,10,0.7,Esportivo
+1003436,2022,20,2,0.8,Esporte Clube Juventude
+1003436,2023,21,11,3.5,Vorskla Poltava
+1003436,2024,22,2,0.5,Vorskla Poltava
+1003436,2025,23,15,6.4,Ferroviário AC / Volta Redonda Futebol Clube (RJ)
+1079284,2022,17,1,0.4,Esporte Clube Juventude
+1079284,2023,18,12,6.8,Esporte Clube Juventude
+1079284,2026,21,4,0.8,Clube Náutico Marcílio Dias (SC) / FTC Filakovo
+1036607,2024,22,1,0.3,Nação Esportes FC
+1036607,2025,23,6,2.2,Monsoon Futebol Clube
+747322,2025,21,2,0.6,Slovan Duslo Sala
+747322,2026,22,7,0.8,Gandzasar Kapan
+1082631,2025,21,54,101.5,Sociedade Esportiva Palmeiras
+1082631,2026,22,48,85.1,Sociedade Esportiva Palmeiras / Manchester City
+1085060,2023,20,32,15.6,América Futebol Clube (MG)
+1085060,2024,21,38,19.5,Shabab Al-Ahli Club
+1085060,2025,22,36,18.8,Shabab Al-Ahli Club
+1085060,2026,23,31,16.7,Shabab Al-Ahli Club
+1082538,2023,19,1,1.3,Sociedade Esportiva Palmeiras
+1082538,2024,20,17,9.0,Shabab Al-Ahli Club
+1082538,2025,21,32,16.5,Shabab Al-Ahli Club
+1082538,2026,22,31,16.4,Shabab Al-Ahli Club
+1082639,2024,20,17,9.0,SC União Torreense
+1082639,2025,21,33,18.2,SC União Torreense
+1082639,2026,22,27,14.0,SC União Torreense / Sharjah FC
+1082637,2024,20,4,1.6,Esporte Clube Bahia
+1082637,2025,21,5,2.3,Esporte Clube Bahia
+1082637,2026,22,38,16.4,Athletic Club / Esporte Clube Bahia
+1082539,2025,21,14,6.9,Portimonense SAD / CD Santa Clara
+1082539,2026,22,31,11.3,Portimonense SAD
+1082625,2025,21,10,9.7,Clube Atlético Mineiro
+1082625,2026,22,2,2.1,Red Bull Bragantino
+1082633,2024,20,4,1.4,Polissya Zhytomyr
+1082633,2025,21,20,3.5,FCI Levadia / NK Veres Rivne
+1082633,2026,22,35,6.5,FCI Levadia
+1082586,2025,21,13,2.1,Louletano DC
+1082586,2026,22,21,3.1,Louletano DC
+983980,2025,21,6,0.8,Portuguesa
+983980,2026,22,13,3.1,Portuguesa
+1082585,2025,22,10,1.7,Manaus Futebol Clube
+1082585,2026,23,5,2.0,Itabirito FC
+743826,2026,22,2,0.5,AA Internacional de Limeira
+1115489,2020,19,3,0.4,São Raimundo EC
+1115489,2021,20,1,0.7,São Raimundo EC
+1115489,2023,22,31,11.4,Associação Atlética Ponte Preta
+1115489,2024,23,37,26.9,Club Athletico Paranaense / Associação Atlética Ponte Preta
+1115489,2025,24,50,26.2,Club Athletico Paranaense
+1115489,2026,25,14,15.1,Club Athletico Paranaense
+1035650,2022,19,4,1.9,Associação Atlética Ponte Preta
+1035650,2023,20,33,12.2,Associação Atlética Ponte Preta
+1035650,2024,21,42,23.1,Cuiabá Esporte Clube (MT)
+1035650,2025,22,25,6.7,Londrina Esporte Clube (PR) / Paysandu SC
+1035650,2026,23,27,9.9,Cuiabá Esporte Clube (MT)
+921863,2021,17,1,0.5,Associação Atlética Ponte Preta
+921863,2022,18,9,4.7,Associação Atlética Ponte Preta / Red Bull Bragantino
+921863,2023,19,10,1.8,FC Liefering
+921863,2024,20,32,28.5,Red Bull Bragantino
+921863,2025,21,9,2.8,FC Liefering / Red Bull Salzburg
+921863,2026,22,15,9.1,Vila Nova Futebol Clube (GO)
+1072630,2024,20,24,26.5,Cruzeiro Esporte Clube
+1072630,2025,21,25,10.2,Goiás EC / Clube Náutico Capibaribe
+1072630,2026,22,12,9.3,Clube Náutico Capibaribe / CD Santa Clara
+1103839,2023,21,9,3.6,Villa Nova AC
+1103839,2024,22,14,3.7,Villa Nova AC / Democrata FC
+1103839,2025,23,30,7.8,Brusque Futebol Clube (SC) / FC Cascavel (PR)
+1103839,2026,24,17,4.7,Brusque Futebol Clube (SC)
+982615,2022,21,4,1.9,Esporte Clube Bahia / AA Altos
+982615,2023,22,2,0.8,Villa Nova AC
+982615,2026,25,3,0.5,AA Altos
+1117283,2024,21,6,0.9,EC Santo André / Associação Atlética Ponte Preta
+1184104,2023,22,2,0.3,Louletano DC
+1184104,2024,23,5,0.3,FC Barreirense
+1063811,2022,18,4,2.9,Bolivia / Santos FC
+1063811,2023,19,13,12.3,Santos FC / Bolivia
+1063811,2024,20,17,27.7,Bolivia / Santos FC
+1063811,2025,21,39,31.6,América Futebol Clube (MG) / Bolivia
+1063811,2026,22,31,29.1,Santos FC / Bolivia
+1086258,2024,18,9,5.6,Santos FC
+1086258,2025,19,29,26.5,Santos FC
+1086258,2026,20,7,11.3,Tottenham Hotspur / FC Porto
+1084192,2023,19,1,0.6,Bolivia
+1084192,2024,20,5,11.8,Bolivia / Santos FC
+1084192,2025,21,45,15.3,FK Auda / Bolivia
+1084192,2026,22,9,0.9,Chungbuk Cheongju FC
+1032891,2023,19,18,14.7,Santos FC
+1032891,2024,20,3,1.5,Santos FC
+1032891,2025,21,12,5.2,Sport Club do Recife / Santos FC
+1032891,2026,22,23,4.4,Associação Atlética Ponte Preta
+661852,2020,18,1,2.8,Bolivia
+661852,2023,21,1,0.6,Bolivia
+661852,2024,22,2,0.6,Cancún FC
+661852,2025,23,24,10.2,Cancún FC / Bolivia
+661852,2026,24,23,9.7,Cancún FC / Bolívar La Paz
+805412,2026,22,2,1.4,Amazonas FC
+1087725,2023,20,36,19.3,Sport Club do Recife
+1087725,2024,21,34,18.6,Sport Club do Recife
+1087725,2025,22,39,21.2,Grêmio Novorizontino
+1087725,2026,23,7,3.7,Sport Club do Recife
+1090777,2024,20,7,0.7,AD Sanjoanense
+1090777,2025,21,15,2.0,Benfica Castelo Branco
+1090777,2026,22,21,2.9,Benfica Castelo Branco / Varzim SC
+1087728,2025,21,14,2.6,AA Altos / AA Maguary
+1087728,2026,22,15,2.4,AA Maguary
+942577,2021,17,10,0.9,Boavista SC
+942577,2026,22,2,1.0,Bangu Atlético Clube (RJ)
+743593,2022,18,4,4.6,São Paulo Futebol Clube
+743593,2023,19,14,14.7,São Paulo Futebol Clube
+743593,2024,20,7,9.1,São Paulo Futebol Clube
+743593,2025,21,28,32.6,São Paulo Futebol Clube
+743593,2026,22,28,33.5,Red Bull Bragantino
+980854,2024,20,25,3.1,Toronto FC II
+980854,2025,21,25,6.2,Toronto FC II
+980854,2026,22,7,6.3,Botafogo de Futebol e Regatas
+838385,2025,21,7,1.1,FC Alverca B
+838385,2026,22,22,3.4,FC Alverca B / O Elvas CAD
+980855,2023,21,1,0.1,EC XV de Piracicaba
+980855,2026,24,17,4.0,Operário FC
+1027018,2025,21,9,1.9,FC Oleksandriya
+1027018,2026,22,9,1.1,FC Oleksandriya / Duqara Club
+1027019,2026,22,8,2.2,Maracanã EC
+846572,2026,22,10,1.9,Santa Cruz FC (RN) / ABC Futebol Clube (RN)
+1027024,2024,20,11,1.0,Hwaseong FC
+1027024,2025,21,2,0.4,Inhumas EC
+978277,2023,20,1,0.3,Operário Ferroviário Esporte Clube (PR)
+978277,2024,21,3,0.8,NK Croatia Zmijavci
+1082813,2025,21,3,0.1,Boavista SC
+1082813,2026,22,12,0.9,Manaus Futebol Clube / Luverdense EC (MT)
+1027014,2025,21,1,0.1,Atlético Monte Azul (SP)
+1082815,2025,21,2,0.1,Boavista SC
+1012564,2023,17,8,6.0,Clube de Regatas Vasco da Gama
+1012564,2024,18,33,31.0,Clube de Regatas Vasco da Gama
+1012564,2025,19,57,55.9,Clube de Regatas Vasco da Gama
+1012564,2026,20,40,91.3,AFC Bournemouth / Clube de Regatas Vasco da Gama
+1033963,2022,18,18,10.9,Clube de Regatas Vasco da Gama
+1033963,2023,19,21,14.4,Clube de Regatas Vasco da Gama / Shakhtar Donetsk
+1033963,2024,20,32,19.4,Shakhtar Donetsk
+1033963,2025,21,32,16.9,Shakhtar Donetsk
+1033963,2026,22,11,5.7,Shakhtar Donetsk
+1083885,2024,19,23,22.0,Clube de Regatas Vasco da Gama
+1083885,2025,20,14,8.9,Al-Shabab FC / Clube de Regatas Vasco da Gama
+1083885,2026,21,19,5.8,Sharjah FC
+1083962,2023,18,2,1.0,Clube de Regatas Vasco da Gama
+1083962,2024,19,4,4.0,Clube de Regatas Vasco da Gama
+1083962,2025,20,16,14.6,Clube de Regatas Vasco da Gama
+1083962,2026,21,13,6.5,Clube de Regatas Vasco da Gama / GD Chaves
+1083960,2023,19,2,1.0,Clube de Regatas Vasco da Gama
+1083960,2024,20,32,11.2,Polissya Zhytomyr / América FC
+1083960,2025,21,1,0.4,Polissya Zhytomyr
+1083960,2026,22,24,6.7,Connecticut United FC
+1083104,2023,20,6,1.9,Amazonas FC / Esporte Clube Bahia
+1083104,2024,21,22,6.6,ABC Futebol Clube (RN) / Tikves Kavadarci
+1083104,2025,22,17,5.1,Bangu Atlético Clube (RJ) / Pouso Alegre FC
+1083104,2026,23,18,5.5,Amazonas FC / Azuriz FC
+1083969,2024,19,3,3.0,Clube de Regatas Vasco da Gama
+1083969,2025,20,3,3.3,Clube de Regatas Vasco da Gama
+1083969,2026,21,16,9.3,Clube de Regatas Brasil (AL) / Clube de Regatas Vasco da Gama
+886565,2025,22,23,5.6,Torpedo-BelAZ Zhodino / FC Zimbru Chisinau
+886565,2026,23,28,5.9,FC Zimbru Chisinau
+1083974,2025,21,14,3.3,Pouso Alegre FC / Nova Iguaçu FC (RJ)
+1083974,2026,22,11,6.6,Esporte Clube Juventude
+841910,2024,20,2,1.0,Clube de Regatas Vasco da Gama
+841910,2025,21,21,4.2,Pouso Alegre FC
+841910,2026,22,15,3.1,Pouso Alegre FC
+1083888,2023,18,2,1.3,Clube de Regatas Vasco da Gama
+1083888,2024,19,2,1.0,Clube de Regatas Vasco da Gama
+1083888,2025,20,2,1.0,Clube de Regatas Vasco da Gama
+1083888,2026,21,4,2.7,Fortaleza Esporte Clube
+1082839,2023,19,1,0.3,Esporte Clube Bahia
+1082839,2025,21,6,3.0,Bangu Atlético Clube (RJ)
+1082839,2026,22,10,1.8,Azuriz FC
+1074477,2023,19,7,1.7,MFK Skalica
+1074477,2024,20,7,1.5,Spartak Myjava
+1083891,2023,20,1,0.3,Al-Dhaid SC
+1083891,2024,21,8,1.2,FC Noah Erewan II
+1083891,2025,22,7,0.8,SC Lusitânia dos Açores
+1083891,2026,23,1,0.2,CS Sergipe
+1083890,2025,21,3,1.2,EC Água Santa (SP) / Figueirense Futebol Clube
+1083890,2026,22,8,0.8,EC Água Santa (SP)
+1082581,2024,20,17,12.4,Juventus Next Gen
+1082581,2025,21,12,5.1,Juventus Next Gen
+1082581,2026,22,13,9.3,Racing Santander / Juventus Next Gen
+1091893,2024,20,11,2.6,Itabuna EC / Esporte Clube Vitória
+1091893,2025,21,21,6.1,Londrina Esporte Clube (PR)
+1091893,2026,22,12,6.2,Esporte Clube Vitória / SC União Torreense
+1091898,2023,20,22,5.1,Athletic Club / Esporte Clube Vitória
+1091898,2024,21,13,2.1,Itabuna EC / Sociedade Esportiva do Gama (DF)
+1091898,2025,22,15,3.4,Manaus Futebol Clube / Amazonas FC
+1091898,2026,23,10,1.9,Mixto EC (MT)
+974041,2023,20,1,0.7,Esporte Clube Vitória
+974041,2024,21,13,0.5,North District
+974041,2025,22,13,0.5,North District
+974041,2026,23,7,2.2,Nova Iguaçu FC (RJ)
+891316,2026,24,9,2.7,Barcelona FC (BA)
+974028,2024,22,7,1.4,Atlético Cajazeirense
+974028,2025,23,3,0.6,EC de Patos (PB)
+1091895,2023,20,1,0.3,Itabuna EC
+1091895,2024,21,2,0.3,Manauara EC
+1091894,2024,22,1,0.2,Porto Vitória FC
