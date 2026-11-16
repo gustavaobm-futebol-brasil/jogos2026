@@ -1773,7 +1773,7 @@ tm_id,nome,coorte,clube,posicao_coorte,posicao_clube,pontos,jogos_pro,primeiro_j
 798687,Antony,2001,Corinthians-SP,37,3,129.0,186,2019-01-16,"Portland Timbers (109), FC Arouca (63), Joinville Esporte Clube (SC) (11)",2019: sub20 | 2020: sub20 | 2021: sub20,https://www.transfermarkt.com.br/-/profil/spieler/798687
 740501,Gabriel Xavier,2001,Bahia-BA,38,1,125.1,152,2019-04-08,"Esporte Clube Bahia (135), Shenzhen Peng City (16), Mirassol Futebol Clube (SP) (1)",2020: sub20 | 2021: sub20,https://www.transfermarkt.com.br/-/profil/spieler/740501
 740271,Juninho,2001,Vasco-RJ,39,3,122.4,234,2020-01-23,"Clube de Regatas Vasco da Gama (84), Grêmio Novorizontino (49), Goiás EC (44)","2019: sub20 | 2020: copinha, serie_a | 2021: sub20, serie_b",https://www.transfermarkt.com.br/-/profil/spieler/740271
-892091,Mandaca,2001,Corinthians-SP,40,4,122.3,206,2019-01-28,"Esporte Clube Juventude (155), Londrina Esporte Clube (PR) (31), CSP (17)",2020: sub20 | 2021: sub20,https://www.transfermarkt.com.br/-/profil/spieler/892091
+892091,Mandaca,2001,Corinthians-SP,40,4,122.3,206,2019-01-28,"Esporte Clube Juventude (155), Londrina Esporte Clube (PR) (31), CSP (17)",2020: sub20 | 2021: sub20 | 2022: copinha,https://www.transfermarkt.com.br/-/profil/spieler/892091
 973569,Rwan Cruz,2001,Santos-SP,41,4,120.5,180,2022-02-20,"Ludogorets Razgrad (115), Santos FC (37), Botafogo de Futebol e Regatas (14)",2021: sub20 | 2022: copinha,https://www.transfermarkt.com.br/-/profil/spieler/973569
 859135,Léo Naldi,2001,Ponte Preta-SP,42,2,119.8,219,2021-01-29,"Associação Atlética Ponte Preta (115), Grêmio Novorizontino (42), Esporte Clube Vitória (28)",2020: serie_b | 2021: serie_b,https://www.transfermarkt.com.br/-/profil/spieler/859135
 736954,Gabriel Pereira,2001,Corinthians-SP,43,5,119.1,198,2020-08-11,"Al-Rayyan SC (95), New York City FC (56), Sport Club Corinthians Paulista (47)","2019: sub20 | 2020: copinha, serie_a | 2021: serie_a",https://www.transfermarkt.com.br/-/profil/spieler/736954
@@ -1832,7 +1832,7 @@ tm_id,nome,coorte,clube,posicao_coorte,posicao_clube,pontos,jogos_pro,primeiro_j
 867483,Geovane Jesus,2001,Cruzeiro-MG,96,6,45.5,64,2021-04-25,"Cruzeiro Esporte Clube (40), FC Dallas (24)",2019: sub20 | 2020: sub20 | 2022: copinha,https://www.transfermarkt.com.br/-/profil/spieler/867483
 752552,Vitor Leque,2001,Cruzeiro-MG,97,7,44.0,120,2020-03-14,"AA Internacional de Limeira (24), Cruzeiro Esporte Clube (24), Centro Sportivo Alagoano (AL) (18)","2019: sub20 | 2020: serie_a | 2021: sub20, serie_b",https://www.transfermarkt.com.br/-/profil/spieler/752552
 1110258,Vinícius Nogueira,2001,Atlético-MG,98,3,43.5,116,2023-02-18,"Halmstads BK (35), Vålerenga Fotball Elite (27), Ludogorets Razgrad (25)","2019: sub20 | 2020: copinha, sub20 | 2021: sub20",https://www.transfermarkt.com.br/-/profil/spieler/1110258
-965630,Habraão,2001,Flamengo-RJ,99,11,42.2,89,2022-06-22,"ABC Futebol Clube (RN) (25), Club Athletico Paranaense (21), Associação Chapecoense de Futebol (18)",2019: sub20,https://www.transfermarkt.com.br/-/profil/spieler/965630
+965630,Habraão,2001,Flamengo-RJ,99,11,42.2,89,2022-06-22,"ABC Futebol Clube (RN) (25), Club Athletico Paranaense (21), Associação Chapecoense de Futebol (18)",2019: sub20 | 2022: copinha,https://www.transfermarkt.com.br/-/profil/spieler/965630
 664425,Newton Williams,2001,Palmeiras-SP,100,4,41.5,96,2018-07-29,"Hapoel Raanana (31), Antigua GFC (29), Deportivo Saprissa (22)",2021: sub20,https://www.transfermarkt.com.br/-/profil/spieler/664425
 740087,Michel Costa,2001,Botafogo-RJ,101,7,40.8,116,2021-04-17,"New England Revolution II (45), FC Felgueiras 1932 (39), GD Estoril Praia (19)","2019: copinha, sub20 | 2020: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/740087
 920618,Juan Torres,2001,Corinthians-SP,102,6,40.4,91,2023-02-18,"Charleston Battery (60), Sport Boys Association (14), Phoenix Rising FC (9)",2019: sub20 | 2020: sub20 | 2021: sub20,https://www.transfermarkt.com.br/-/profil/spieler/920618
@@ -2039,7 +2039,7 @@ tm_id,nome,coorte,clube,posicao_coorte,posicao_clube,pontos,jogos_pro,primeiro_j
 977466,Rodolfo Moisés,2001,América-MG,303,9,5.3,21,2023-01-21,"CS Sinop (9), US Vibonese (5), US Triestina (5)",2019: sub20 | 2020: sub20 | 2021: sub20 | 2022: copinha,https://www.transfermarkt.com.br/-/profil/spieler/977466
 739437,Caio Rosa,2001,Cruzeiro-MG,304,17,5.2,21,2020-01-28,"Rasisalai United (5), Sharjah FC (5), Cruzeiro Esporte Clube (4)","2018: sub20 | 2019: copinha, sub20 | 2020: copinha, sub20, serie_b",https://www.transfermarkt.com.br/-/profil/spieler/739437
 886752,Adiel,2001,Avaí-SC,305,5,5.1,21,2021-04-22,"IF São Joseense (10), Guarany de Bagé FC (5), Centro Sportivo Alagoano (AL) (2)",2020: copinha | 2022: copinha,https://www.transfermarkt.com.br/-/profil/spieler/886752
-876675,Ewerton,2001,Botafogo-RJ,306,21,5.1,8,2021-07-24,"Fluminense EC (6), Botafogo de Futebol e Regatas (2)","2020: sub20 | 2021: sub20, serie_b",https://www.transfermarkt.com.br/-/profil/spieler/876675
+876675,Ewerton,2001,Botafogo-RJ,306,21,5.1,8,2021-07-24,"Fluminense EC (6), Botafogo de Futebol e Regatas (2)","2020: sub20 | 2021: sub20, serie_b | 2022: copinha",https://www.transfermarkt.com.br/-/profil/spieler/876675
 876744,Thiaguinho,2001,Ponte Preta-SP,307,8,5.1,19,2021-05-06,"Santa Cruz FC (RN) (6), IAPE FC (6), Lleida CF (5)",2017: copinha | 2019: copinha | 2022: copinha,https://www.transfermarkt.com.br/-/profil/spieler/876744
 788138,Luiz Felipe,2001,Goiás-GO,308,7,4.9,28,2020-07-01,"Trem DC (23), Capital FC (TO) (4), Boavista SC (1)",2022: copinha,https://www.transfermarkt.com.br/-/profil/spieler/788138
 994624,Cauã Aguiar,2001,Fluminense-RJ,309,18,4.8,23,2024-04-22,"Esporte Clube Noroeste (SP) (12), Ferroviária (11)",2020: sub20 | 2021: sub20 | 2022: copinha,https://www.transfermarkt.com.br/-/profil/spieler/994624
@@ -2296,7 +2296,7 @@ tm_id,nome,coorte,clube,posicao_coorte,posicao_clube,pontos,jogos_pro,primeiro_j
 913286,Gustavo Modesto,2002,Avaí-SC,145,6,18.0,67,2021-07-28,"Avaí FC (29), Goiânia EC (12), Clube Recreativo e Atlético Catalano (GO) (11)",2021: serie_b | 2022: copinha,https://www.transfermarkt.com.br/-/profil/spieler/913286
 933879,Juan Tavares,2002,Goiás-GO,146,2,17.8,36,2022-05-15,"Santa Cruz FC (PE) (12), AA Internacional de Limeira (9), Goiás EC (6)","2022: copinha, serie_a",https://www.transfermarkt.com.br/-/profil/spieler/933879
 800648,Riquelmo,2002,Cruzeiro-MG,147,7,17.8,66,2020-08-11,"AD Confiança (24), Clube Recreativo e Atlético Catalano (GO) (12), Agro Esporte Clube (9)","2020: copinha, sub20, serie_b | 2021: sub20 | 2022: sub20",https://www.transfermarkt.com.br/-/profil/spieler/800648
-986895,Felipe Pará,2002,Bahia-BA,148,6,17.5,56,2022-08-29,"Amazonas FC (23), Joinville Esporte Clube (SC) (11), EC Santo André (10)",2020: sub20,https://www.transfermarkt.com.br/-/profil/spieler/986895
+986895,Felipe Pará,2002,Bahia-BA,148,6,17.5,56,2022-08-29,"Amazonas FC (23), Joinville Esporte Clube (SC) (11), EC Santo André (10)",2020: sub20 | 2022: copinha,https://www.transfermarkt.com.br/-/profil/spieler/986895
 982547,Lucas Ryan,2002,Internacional-RS,149,11,17.4,63,2023-01-28,"Lokomotiv Plovdiv (47), SER Caxias do Sul (RS) (7), Paraná Clube (6)","2022: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/982547
 973484,Brendon Sobral,2002,Botafogo-RJ,150,5,17.2,46,2021-03-20,"Resende FC (22), Nação Esportes FC (11), Clube Náutico Marcílio Dias (SC) (9)",2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/973484
 1086449,Rychelmy Rocha,2002,Fluminense-RJ,151,6,17.2,71,2021-05-06,"FC Differdange 03 (26), AA Maguary (24), Costa Rica EC (14)",2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1086449
@@ -2398,147 +2398,149 @@ tm_id,nome,coorte,clube,posicao_coorte,posicao_clube,pontos,jogos_pro,primeiro_j
 940148,João Varolo,2002,Criciúma-SC,247,4,5.4,36,2021-09-25,"Clube Laguna (RN) (11), SD Juazeirense (BA) (10), AA Aparecidense (9)",2022: copinha,https://www.transfermarkt.com.br/-/profil/spieler/940148
 933619,Matías Cabrera,2002,Athletico-PR,248,17,5.4,55,2021-10-03,"CA Fénix (43), Montevideo City Torque (7), Tacuarembó FC (5)",2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/933619
 1094954,Figueredo,2002,Vitória-BA,249,6,5.3,28,2020-01-22,"SE Decisão Futebol Clube (10), Esporte Clube Vitória (8), Santa Cruz FC (RN) (6)",2020: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1094954
-1096517,Matheus Alisson,2002,Atlético-MG,250,13,5.3,39,2024-01-20,"FK Kukësi (26), Luverdense EC (MT) (7), SC Gjilani (6)",2020: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1096517
+1096517,Matheus Alisson,2002,Atlético-MG,250,13,5.3,39,2024-01-20,"FK Kukësi (26), Luverdense EC (MT) (7), SC Gjilani (6)",2020: sub20 | 2022: copinha,https://www.transfermarkt.com.br/-/profil/spieler/1096517
 574759,Yago Taborda,2002,Grêmio-RS,251,17,5.3,21,2021-10-10,"Luverdense EC (MT) (7), SER Caxias do Sul (RS) (6), Racing Ferrol (5)",2020: sub20 | 2021: sub20,https://www.transfermarkt.com.br/-/profil/spieler/574759
 1109412,Robert,2002,Grêmio-RS,252,18,5.0,23,2023-02-11,"Maracanã EC (20), Bangu Atlético Clube (RJ) (3)","2020: copinha, sub20 | 2021: sub20",https://www.transfermarkt.com.br/-/profil/spieler/1109412
 965636,Jean Carlos,2002,Atlético-GO,253,8,5.0,16,2022-02-02,"Operário Ferroviário Esporte Clube (PR) (10), Atlético Clube Goianiense (6)",2021: sub20 | 2022: copinha,https://www.transfermarkt.com.br/-/profil/spieler/965636
-1017151,Igor Lemos,2002,Cruzeiro-MG,254,12,4.9,24,2023-05-08,"EC Democrata (11), Associação Olímpica de Itabaiana (SE) (8), Nova Iguaçu FC (RJ) (5)","2020: sub20 | 2021: sub20 | 2022: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/1017151
-876001,Euller,2002,Ponte Preta-SP,255,7,4.7,28,2024-05-05,"Cianorte Futebol Clube (PR) (20), Atlético Monte Azul (SP) (8)",2020: copinha | 2022: copinha,https://www.transfermarkt.com.br/-/profil/spieler/876001
-973592,Júlio César,2002,Fortaleza-CE,256,5,4.7,25,2022-03-05,"Esporte Clube Jacuipense (BA) (8), Associação Jaguaré EC (8), Santa Cruz Acre EC (6)",2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/973592
-829954,Matheus Araújo,2002,Atlético-MG,257,14,4.6,39,2020-10-29,"DFK Dainava Alytus (31), Floresta Esporte Clube (CE) (6), Ituano Futebol Clube (SP) (2)","2021: sub20 | 2022: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/829954
-950394,Wesllen,2002,Ceará-CE,258,7,4.5,21,2020-08-05,"Porto Vitória FC (11), CE Aimoré (8), Clube Atlético Tubarão (SC) (2)",2020: sub20 | 2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/950394
-1212304,Álvaro,2002,Cruzeiro-MG,259,13,4.5,19,2026-01-17,"Rondoniense SC (14), Porto Velho EC (5)",2020: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1212304
-1001018,Gustavo Moreira,2002,Santos-SP,260,12,4.4,17,2023-01-11,"S. E. R. São José (AP) (7), AA Maguary (6), Cametá SC (4)","2019: sub20 | 2020: copinha, sub20 | 2021: sub20",https://www.transfermarkt.com.br/-/profil/spieler/1001018
-868054,Jonathan Nascimento,2002,Internacional-RS,261,18,4.1,18,2024-01-17,"Clube Andraus Brasil (12), Monte Roraima FC (6), Atlético Monte Azul (SP) (5)",2020: sub20 | 2021: sub20 | 2022: copinha,https://www.transfermarkt.com.br/-/profil/spieler/868054
-980855,Mateus Petri,2002,São Paulo-SP,262,13,4.1,18,2023-06-07,"Operário FC (17), EC XV de Piracicaba (1)","2022: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/980855
-942591,Guilherme Xuxa,2002,Fluminense-RJ,263,15,3.9,18,2021-03-24,"Madureira EC (16), Xaghra United FC (2)",2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/942591
-813123,João Pedro,2002,Palmeiras-SP,264,18,3.8,37,2022-08-27,"Vilaverdense FC (18), Vitória Guimarães SC B (11), GD Chaves B (5)","2020: copinha, sub20 | 2022: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/813123
-719647,Rodrigo Rosa,2002,Botafogo-RJ,265,11,3.8,23,2022-09-11,"CS Sergipe (16), CF Canelas 2010 (7)",2020: sub20,https://www.transfermarkt.com.br/-/profil/spieler/719647
-866636,Vinicius Taquini,2002,Bahia-BA,266,7,3.8,22,2024-03-06,"Manaus Futebol Clube (16), Sampaio Corrêa FC (MA) (6)",2020: sub20 | 2021: sub20,https://www.transfermarkt.com.br/-/profil/spieler/866636
-1084950,Willian Barbosa,2002,Atlético-GO,267,9,3.8,18,2026-01-17,"Rondoniense SC (14), Porto Velho EC (4)",2019: sub20 | 2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1084950
-830453,Mateus Goiano,2002,Fluminense-RJ,268,16,3.7,21,2024-02-10,"União Rondonópolis EC (MT) (9), AE Jataiense (6), AA Coruripe (4)",2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/830453
-828124,Brayan Kruger,2002,Santos-SP,269,13,3.6,11,2023-05-06,"EC Avenida (6), Ituano Futebol Clube (SP) (3), Atlético Monte Azul (SP) (2)",2020: sub20 | 2021: sub20,https://www.transfermarkt.com.br/-/profil/spieler/828124
-902526,Afonso,2002,Ceará-CE,270,8,3.5,20,2020-11-13,"Esportivo (9), Grêmio Esportivo Brasil (RS) (7), Palmas FR (3)","2022: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/902526
-997720,Givigi,2002,Fluminense-RJ,271,17,3.5,15,2024-10-16,"Grêmio Esportivo Brasil (RS) (7), Itabirito FC (7), MFK Snina (1)","2022: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/997720
-1245910,Gustavão,2002,Goiás-GO,272,4,3.5,14,2024-01-20,"Brasiliense FC (DF) (7), Luverdense EC (MT) (4), SE Ceilandense (2)",2022: copinha,https://www.transfermarkt.com.br/-/profil/spieler/1245910
-980980,Jota,2002,Atlético-GO,273,10,3.5,13,2024-10-19,"Pouso Alegre FC (7), Associação Atlética Ponte Preta (3), UD Santarém (3)",2021: sub20 | 2022: copinha,https://www.transfermarkt.com.br/-/profil/spieler/980980
-1042363,Léo,2002,Atlético-GO,274,11,3.5,16,2024-01-18,"Goiânia EC (15), Atlético Clube Goianiense (1)","2021: sub20 | 2022: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/1042363
-981502,Lucão,2002,Grêmio-RS,275,19,3.5,12,2022-02-03,"Dourados AC (6), CE Aimoré (5), IF São Joseense (1)",2020: sub20 | 2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/981502
-1082836,Vinicius Barcellos,2002,Bahia-BA,276,8,3.3,11,2025-01-15,"Caravaggio Futebol Clube (SC) (10), AA Maguary (1)","2020: copinha, sub20 | 2021: sub20 | 2022: copinha",https://www.transfermarkt.com.br/-/profil/spieler/1082836
-866891,Ed,2002,Sport-PE,277,11,3.2,16,2025-01-20,"Real Noroeste CFC (9), Clube Sociedade Esportiva (AL) (7)",2020: sub20 | 2021: sub20,https://www.transfermarkt.com.br/-/profil/spieler/866891
-1094385,Gustavo Braga,2002,Athletico-PR,278,18,3.2,12,2024-02-01,"Castanhal EC (9), Azuriz FC (3)",2019: sub20 | 2020: sub20 | 2021: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1094385
-973500,Henrique Halls,2002,Bragantino-SP,279,4,3.2,10,2021-04-24,"EC Democrata (6), Resende FC (4)",2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/973500
-980816,Pajé,2002,São Paulo-SP,280,14,3.2,17,2023-06-14,"Clube Laguna (RN) (6), Clube Andraus Brasil (6), EC XV de Piracicaba (3)","2021: sub20 | 2022: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/980816
-1118234,João Moreira,2002,Ceará-CE,281,9,3.2,16,2023-01-22,"Aquidauanense FC (8), CE Operário Várzea-Grandense (8)","2020: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/1118234
-894532,Young,2002,São Paulo-SP,282,15,3.2,3,2025-08-16,São Paulo Futebol Clube (3),2020: sub20 | 2021: sub20 | 2022: copinha,https://www.transfermarkt.com.br/-/profil/spieler/894532
-815678,João Tavares,2002,Vasco-RJ,283,12,3.1,21,2024-09-14,"UD Oliveirense (11), Stal Stalowa Wola (10)","2019: sub20 | 2020: sub20 | 2021: sub20 | 2022: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/815678
-792485,Patrick,2002,Fortaleza-CE,284,6,3.1,19,2024-08-11,"Anadia FC (12), Guarda FC (7)","2020: copinha | 2021: sub20 | 2022: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/792485
-1005644,Riquelme,2002,Corinthians-SP,285,9,3.1,14,2023-03-04,"ETO FC (22), STK 1914 Samorin (10), DAC Dunajska Streda (2)","2019: sub20 | 2020: sub20 | 2021: sub20 | 2022: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/1005644
-1086380,Deivisson Hulk,2002,Fluminense-RJ,286,18,3.0,12,2023-01-15,"22 de Julio FC (5), SE Decisão Futebol Clube (3), Azuriz FC (3)",2021: sub20 | 2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1086380
-1091912,João Vitor,2002,Avaí-SC,287,8,3.0,20,2025-02-01,"Goiatuba EC (16), Centro Oeste FC (GO) (4)",2022: copinha,https://www.transfermarkt.com.br/-/profil/spieler/1091912
-997462,Messias,2002,Grêmio-RS,288,20,3.0,10,2023-01-14,IF São Joseense (10),"2020: copinha | 2022: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/997462
-798110,Welberty Batata,2002,Sport-PE,289,12,2.9,14,2020-08-05,"AA Oeirense (6), AA Coruripe (5), AA Altos (2)",2019: sub20 | 2021: sub20 | 2022: copinha,https://www.transfermarkt.com.br/-/profil/spieler/798110
-687678,Cadu,2002,Santos-SP,290,14,2.8,5,2023-06-29,"MSK Rimavska Sobota (2), Santos FC (2), Kotwica Kolobrzeg (1)",2019: sub20 | 2020: sub20 | 2021: sub20 | 2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/687678
-1082785,Douglas Cunha,2002,Internacional-RS,291,19,2.8,19,2020-06-02,"Ipatinga FC (11), Madureira EC (8)","2020: sub20 | 2022: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/1082785
-1008160,Guilherme,2002,Criciúma-SC,292,5,2.8,10,2024-01-31,"Santa Catarina Clube (SC) (6), Criciúma EC (2), Madureira EC (1)",2022: copinha,https://www.transfermarkt.com.br/-/profil/spieler/1008160
-662334,Marcelo Pitaluga,2002,Fluminense-RJ,293,19,2.7,11,2021-10-05,"St. Patrick's Athletic (7), FC Liverpool Sub-18 (4), Livingston FC (2)",2019: sub20 | 2020: copinha,https://www.transfermarkt.com.br/-/profil/spieler/662334
-752727,Odair Marciano,2002,Atlético-GO,294,12,2.7,10,2025-09-24,Muang Loei United (10),2021: sub20,https://www.transfermarkt.com.br/-/profil/spieler/752727
-891316,Pedro Antônio,2002,Vitória-BA,295,7,2.7,9,2026-01-12,Barcelona FC (BA) (9),2022: copinha,https://www.transfermarkt.com.br/-/profil/spieler/891316
-1091897,Israel,2002,Cruzeiro-MG,296,14,2.6,13,2025-01-25,"Quinho FC (10), Real Brasília FC (3)",2020: sub20 | 2022: copinha,https://www.transfermarkt.com.br/-/profil/spieler/1091897
-1083087,Léo Simoni,2002,Atlético-MG,297,15,2.6,10,2025-04-12,"NK Croatia Zmijavci (6), FK Zeljeznicar Sarajevo (4)","2020: copinha, sub20 | 2021: sub20 | 2022: copinha",https://www.transfermarkt.com.br/-/profil/spieler/1083087
-990155,Lucas Bonete,2002,Athletico-PR,298,19,2.6,13,2022-02-24,"Vilavelhense FC (11), Clube de Regatas Brasil (AL) (2)",2020: sub20,https://www.transfermarkt.com.br/-/profil/spieler/990155
-997471,Mateo Velasco,2002,Grêmio-RS,299,21,2.6,8,2023-01-22,"Deportes Quindío (7), CE Aimoré (5)",2020: sub20 | 2021: sub20 | 2022: copinha,https://www.transfermarkt.com.br/-/profil/spieler/997471
-1083241,Edgar,2002,Cruzeiro-MG,300,15,2.5,13,2020-09-20,Atlético Cajazeirense (13),"2021: sub20 | 2022: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/1083241
-980857,Guilherme Matheus,2002,Ceará-CE,301,10,2.5,9,2023-01-29,"FC Petrocub Hincesti (5), NK Jarun (2), Azuriz FC (2)","2020: sub20 | 2021: sub20 | 2022: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/980857
-1036607,Jeder,2002,Juventude-RS,302,5,2.5,7,2024-02-11,"Monsoon Futebol Clube (6), Nação Esportes FC (1)",2022: copinha,https://www.transfermarkt.com.br/-/profil/spieler/1036607
-872452,Léo Gonçalves,2002,Criciúma-SC,303,6,2.5,13,2021-04-04,"CE Operário Várzea-Grandense (7), Criciúma EC (6)",2020: copinha | 2022: copinha,https://www.transfermarkt.com.br/-/profil/spieler/872452
-871651,Ruan,2002,Chapecoense-SC,304,4,2.5,12,2021-03-14,"Nova Mutum EC (10), Sociedade Imperatriz de Desportos (MA) (1), Associação Chapecoense de Futebol (1)",2020: sub20 | 2021: sub20,https://www.transfermarkt.com.br/-/profil/spieler/871651
-1084079,Cauã Andrade,2002,Bragantino-SP,305,5,2.4,12,2026-01-24,Corumbaense FC (12),2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1084079
-1105514,Breno Boeno,2002,Atlético-GO,306,13,2.3,21,2024-06-02,"EC Novo Hamburgo (15), Agro Esporte Clube (6)",2021: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1105514
-1083609,Carlos,2002,Botafogo-RJ,307,12,2.2,11,2025-01-29,Sport Club Capixaba (11),"2019: sub20 | 2020: copinha, sub20 | 2021: sub20 | 2022: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/1083609
-1085124,Daniel Fagundes,2002,Botafogo-RJ,308,13,2.2,9,2025-01-18,Itabirito FC (9),2020: sub20 | 2021: sub20 | 2022: copinha,https://www.transfermarkt.com.br/-/profil/spieler/1085124
-1082782,Nycollas Queiroz,2002,Cruzeiro-MG,309,16,2.2,14,2024-01-28,"Grêmio Esportivo Brasil (RS) (11), Corumbaense FC (3)","2021: sub20 | 2022: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/1082782
-985358,Théo Henrique,2002,América-MG,310,7,2.2,20,2023-04-03,North Texas SC (20),"2022: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/985358
-1095334,Gustavo Vieira,2002,América-MG,311,8,2.1,30,2024-02-24,"Calcio Leinfelden-Echterdingen (25), SV 1890 Westerhausen (15), FK Jedinstvo Ub (7)",2020: sub20 | 2021: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1095334
-1018700,Marcos Eduardo,2002,Atlético-GO,312,14,2.1,13,2022-02-13,"EC Águia Negra (MS) (6), GE Anápolis (4), Anápolis FC (3)",2020: copinha | 2021: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1018700
-964597,Paulinho,2002,Chapecoense-SC,313,5,2.1,7,2022-01-22,"Associação Chapecoense de Futebol (6), Santa Catarina Clube (SC) (1)",2021: sub20 | 2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/964597
-813118,Ramon Cirino,2002,Palmeiras-SP,314,19,2.1,13,2023-05-07,"CE Aimoré (10), AA Maguary (2), Al-Ahli SC (Bahrain) (1)",2020: sub20 | 2021: sub20,https://www.transfermarkt.com.br/-/profil/spieler/813118
-1091896,Ronaldo Mendes,2002,Vitória-BA,315,8,2.1,7,2024-01-18,Flamengo de Arcoverde (7),2020: sub20 | 2022: copinha,https://www.transfermarkt.com.br/-/profil/spieler/1091896
-818841,Carlos Daniel,2002,Atlético-MG,316,16,2.0,5,2023-02-04,Ipatinga FC (5),"2020: copinha, sub20 | 2021: sub20 | 2022: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/818841
-936122,Miguel Augusto,2002,São Paulo-SP,317,16,2.0,11,2021-08-07,"Várzea Grande EC (MT) (9), Portuguesa (2)",2019: sub20 | 2020: sub20,https://www.transfermarkt.com.br/-/profil/spieler/936122
-990532,Reydson,2002,Botafogo-RJ,318,14,2.0,10,2022-03-13,"Resende FC (7), Madureira EC (2), Botafogo de Futebol e Regatas (1)","2020: sub20 | 2021: sub20 | 2022: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/990532
-974028,Ronald,2002,Vitória-BA,319,9,2.0,10,2024-01-21,"Atlético Cajazeirense (7), EC de Patos (PB) (3)",2022: copinha,https://www.transfermarkt.com.br/-/profil/spieler/974028
-875555,Lucas Gabriel,2002,América-MG,320,9,1.9,6,2021-03-03,"América Futebol Clube (MG) (4), Louletano DC (2)","2020: copinha, sub20 | 2021: sub20 | 2022: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/875555
-828478,Daniel,2002,Atlético-GO,321,15,1.8,5,2020-10-26,"Guarani Futebol Clube (SP) (3), Esporte Clube São Bento (SP) (2)",2022: copinha,https://www.transfermarkt.com.br/-/profil/spieler/828478
-984095,Edu Araújo,2002,Santos-SP,322,15,1.8,9,2025-01-12,Nacional AC (9),2021: sub20 | 2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/984095
-984090,Kaio Castro,2002,Santos-SP,323,16,1.8,6,2023-01-29,"Cianorte Futebol Clube (PR) (5), Santa Cruz FC (PE) (1)",2021: sub20 | 2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/984090
-1236510,Rander,2002,Bahia-BA,324,9,1.8,9,2024-02-08,"América FC (7), Nova Venécia FC (2)",2021: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1236510
-894775,Denilson,2002,Ceará-CE,325,11,1.7,19,2021-05-02,"1.FCA Darmstadt (14), Baré EC (11), Ceará Sporting Club (4)",2020: sub20 | 2021: sub20,https://www.transfermarkt.com.br/-/profil/spieler/894775
-868070,Pedrinho,2002,Internacional-RS,326,20,1.7,12,2025-01-12,"Auto Esporte Clube (7), Azuriz FC (5)",2019: sub20 | 2020: sub20 | 2021: sub20 | 2022: copinha,https://www.transfermarkt.com.br/-/profil/spieler/868070
-975459,Pedro Borges,2002,Bahia-BA,327,10,1.7,6,2024-02-10,Real Noroeste CFC (6),"2020: sub20 | 2021: sub20 | 2022: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/975459
-997075,Riquelme,2002,Chapecoense-SC,328,6,1.7,14,2024-02-18,"Petrolina Social Futebol Clube (PE) (8), SC Penedense (4), Internacional de Lages (2)",2020: sub20 | 2021: sub20 | 2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/997075
-996689,Jadson,2002,Chapecoense-SC,329,7,1.6,4,2023-02-17,CE Aimoré (4),2020: sub20,https://www.transfermarkt.com.br/-/profil/spieler/996689
-983979,Cássio,2002,América-MG,330,10,1.6,4,2023-04-01,"América Futebol Clube (MG) (3), Clube Náutico Capibaribe (1)","2021: sub20 | 2022: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/983979
-1082767,Marcondes,2002,Fortaleza-CE,331,7,1.6,6,2021-09-19,"Belo Jardim FC (5), Retrô FC Brasil (1)","2020: sub20 | 2022: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/1082767
-1084625,Ryan Weber,2002,Bragantino-SP,332,6,1.6,8,2026-01-14,ACD Potiguar (RN) (8),2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1084625
-1236951,James,2002,Atlético-MG,333,17,1.5,5,2024-02-09,Real Brasília FC (5),2020: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1236951
-862594,Rodrigues,2002,Atlético-GO,334,16,1.5,5,2021-02-04,Atlético Clube Goianiense (5),2020: copinha | 2021: sub20,https://www.transfermarkt.com.br/-/profil/spieler/862594
-1368496,Gabriel Borges,2002,Atlético-GO,335,17,1.4,7,2025-01-25,"Ceilândia EC (4), Associação Atlética Anapolina (GO) (3)",2021: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1368496
-1075074,Guilherme Sonego,2002,Criciúma-SC,336,7,1.4,2,2022-10-29,Cuiabá Esporte Clube (MT) (2),2022: copinha,https://www.transfermarkt.com.br/-/profil/spieler/1075074
-985364,Pedro Libardoni,2002,América-MG,337,11,1.4,7,2026-01-14,União Rondonópolis EC (MT) (7),2022: copinha,https://www.transfermarkt.com.br/-/profil/spieler/985364
-823543,Wesley Borges,2002,Corinthians-SP,338,10,1.3,6,2024-11-23,Ituano Futebol Clube (SP) (6),2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/823543
-871752,Everton,2002,Goiás-GO,339,5,1.2,10,2021-03-07,"Iporá Esporte Clube (9), Boavista SC (1)",2022: copinha,https://www.transfermarkt.com.br/-/profil/spieler/871752
-1084077,Kleberson,2002,Atlético-GO,340,18,1.2,10,2026-04-04,AA Aparecidense (10),"2021: sub20 | 2022: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/1084077
-1093174,Rodrigo Bomfim,2002,Athletico-PR,341,20,1.2,4,2026-01-07,Joinville Esporte Clube (SC) (4),2020: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1093174
-1083214,Romero,2002,Ceará-CE,342,12,1.2,4,2025-01-27,Cariri FC (CE) (4),2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1083214
-795618,João Goes,2002,Bragantino-SP,343,7,1.1,6,2021-03-21,AA Caldense (6),2019: copinha,https://www.transfermarkt.com.br/-/profil/spieler/795618
-627233,Kaká,2002,Fluminense-RJ,344,20,1.0,5,2026-01-11,"Santa Cruz FC (RN) (5), Brazil U16 (4)",2020: sub20 | 2022: copinha,https://www.transfermarkt.com.br/-/profil/spieler/627233
-1083082,Zé Mendes,2002,Atlético-MG,345,18,1.0,8,2026-04-04,Blumenau Esporte Clube (SC) (8),2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1083082
-1091183,Juan Mello,2002,Botafogo-RJ,346,15,1.0,5,2025-01-15,"Desportiva Aracaju (3), Pombal EC (2)",2021: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1091183
-1225548,Ítalo,2002,Fortaleza-CE,347,8,1.0,5,2025-01-12,CE Força e Luz (5),2021: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1225548
-1033500,Thiago Henrique,2002,Chapecoense-SC,348,8,1.0,3,2024-04-20,"Azuriz FC (2), Associação Chapecoense de Futebol (1)",2019: sub20 | 2021: sub20 | 2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1033500
-700788,Pedro Arthur,2002,Flamengo-RJ,349,12,0.9,7,2025-04-14,"Joinville Esporte Clube (SC) (4), FC Kharkiv (3), Brazil U16 (3)","2019: sub20 | 2021: sub20 | 2022: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/700788
-1084713,André Damaceno,2002,Fluminense-RJ,350,21,0.8,4,2025-01-15,CS Sinop (4),2020: sub20 | 2021: sub20 | 2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1084713
-876750,Bruno Guimarães,2002,Flamengo-RJ,351,13,0.8,6,2025-10-05,"CF Os Marialvas (3), O Elvas CAD (3)","2021: sub20 | 2022: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/876750
-1083093,Flávio,2002,Bahia-BA,352,11,0.8,4,2023-01-12,GE Anápolis (4),2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1083093
-989592,Lincon,2002,Goiás-GO,353,6,0.8,4,2021-01-13,"Clube Recreativo e Atlético Catalano (GO) (3), Goiás EC (1)","2020: copinha, sub20 | 2022: copinha",https://www.transfermarkt.com.br/-/profil/spieler/989592
-1083606,Lucas Goiano,2002,Botafogo-RJ,354,16,0.8,3,2024-01-20,"Santa Rosa EC (2), Inhumas EC (1)",2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1083606
-1096721,Marquinhos,2002,Cruzeiro-MG,355,17,0.8,2,2026-02-28,Esporte Clube Internacional (RS) (2),2020: sub20 | 2021: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1096721
-1465847,Nicolas,2002,Goiás-GO,356,7,0.8,4,2026-02-01,Forte Futebol Clube (4),2020: sub20 | 2022: copinha,https://www.transfermarkt.com.br/-/profil/spieler/1465847
-984094,Pedrinho,2002,Santos-SP,357,17,0.8,5,2024-09-29,"CF Rayo Majadahonda (4), CE Operário Várzea-Grandense (1)","2019: sub20 | 2020: sub20 | 2022: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/984094
-740158,Breno,2002,Botafogo-RJ,358,17,0.6,3,2026-01-10,Real Brasília FC (3),2020: sub20,https://www.transfermarkt.com.br/-/profil/spieler/740158
-1077155,Amorim,2002,Fluminense-RJ,359,22,0.6,6,2025-02-26,"Centro Sportivo Alagoano (AL) (5), CA Votuporanguense (SP) (1)",2019: sub20 | 2020: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1077155
-872438,Deividy,2002,Criciúma-SC,360,8,0.6,2,2021-03-14,Criciúma EC (2),2020: copinha,https://www.transfermarkt.com.br/-/profil/spieler/872438
-1093695,Guizão,2002,América-MG,361,12,0.6,2,2023-02-16,Foz do Iguaçu FC (2),2020: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1093695
-1466270,Hebert,2002,Vitória-BA,362,10,0.6,2,2026-01-20,Barcelona FC (BA) (2),"2020: copinha, sub20 | 2022: copinha",https://www.transfermarkt.com.br/-/profil/spieler/1466270
-574767,Hiago,2002,Bahia-BA,363,12,0.6,8,2024-08-17,"Vilaverdense FC (8), Brazil U16 (3)","2020: copinha, sub20 | 2021: sub20 | 2022: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/574767
-1095650,João Stein,2002,Chapecoense-SC,364,9,0.6,2,2023-02-11,Hercílio Luz FC (2),2021: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1095650
-887814,João Lucas,2002,Goiás-GO,365,8,0.6,3,2021-04-15,Goiás EC (3),"2020: copinha, sub20 | 2022: copinha",https://www.transfermarkt.com.br/-/profil/spieler/887814
-1091924,Dutra,2002,Avaí-SC,366,9,0.6,3,2025-01-25,CS Sergipe (3),2022: copinha,https://www.transfermarkt.com.br/-/profil/spieler/1091924
-1084354,Gabriel Toebe,2002,Botafogo-RJ,367,18,0.5,6,2024-06-19,EC Avenida (6),2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1084354
-627234,Iago André,2002,Athletico-PR,368,21,0.5,1,2023-01-15,"Brazil U17 (2), Botafogo de Futebol e Regatas (1)","2019: sub20 | 2020: copinha, sub20 | 2021: sub20 | 2022: copinha",https://www.transfermarkt.com.br/-/profil/spieler/627234
-1092103,Léo Xavier,2002,Avaí-SC,369,10,0.5,3,2023-01-15,Iporá Esporte Clube (3),2022: copinha,https://www.transfermarkt.com.br/-/profil/spieler/1092103
-1080984,Lucas Barreto,2002,Botafogo-RJ,370,19,0.5,1,2025-05-31,Atlético Clube Goianiense (1),"2021: sub20 | 2022: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/1080984
-1265072,Diego Rodrigues,2002,Atlético-GO,371,19,0.4,3,2024-06-15,Audax Rio de Janeiro EC (3),2021: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1265072
-1037321,Italo Hugo,2002,Criciúma-SC,372,9,0.4,3,2021-07-11,Tocantinópolis EC (3),2020: copinha,https://www.transfermarkt.com.br/-/profil/spieler/1037321
-868055,João Pedro,2002,Internacional-RS,373,21,0.4,1,2021-02-27,Sport Club Internacional (1),"2017: sub20 | 2019: sub20 | 2020: sub20 | 2021: sub20 | 2022: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/868055
-1529092,Robert,2002,Chapecoense-SC,374,10,0.4,2,2025-01-26,Costa Rica EC (2),2020: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1529092
-733337,Davi Schneider,2002,Ceará-CE,375,13,0.3,2,2024-08-24,"Grêmio Esportivo Brasil (RS) (1), Tombense Futebol Clube (MG) (1)","2021: sub20 | 2022: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/733337
-884069,Gustavo Ramalho,2002,Fluminense-RJ,376,23,0.3,2,2026-08-29,Varzim SC (2),2019: sub20,https://www.transfermarkt.com.br/-/profil/spieler/884069
-871652,Lorhan,2002,Chapecoense-SC,377,11,0.3,1,2021-03-14,Associação Chapecoense de Futebol (1),2020: sub20 | 2021: sub20,https://www.transfermarkt.com.br/-/profil/spieler/871652
-813121,Mateus,2002,Palmeiras-SP,378,20,0.3,2,2026-09-13,FC Alverca B (2),"2020: sub20 | 2021: sub20 | 2022: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/813121
-980563,Rubens,2002,Ceará-CE,379,14,0.3,1,2021-05-06,Ceará Sporting Club (1),"2020: copinha, sub20 | 2021: sub20 | 2022: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/980563
-1084661,Antony Kennedy,2002,Fluminense-RJ,380,24,0.2,1,2024-01-25,ACD Potiguar (RN) (1),2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1084661
-830370,Edilton,2002,Atlético-GO,381,20,0.2,2,2020-11-21,Alagoinhas AC (2),2021: sub20,https://www.transfermarkt.com.br/-/profil/spieler/830370
-1011069,Eduardo,2002,Goiás-GO,382,9,0.2,1,2022-04-09,FC Atlético Cearense (1),2022: copinha,https://www.transfermarkt.com.br/-/profil/spieler/1011069
-1074868,Gabriel Saalfeld,2002,Criciúma-SC,383,10,0.2,1,2023-09-10,Real SC (1),2022: copinha,https://www.transfermarkt.com.br/-/profil/spieler/1074868
-1091894,Wilker,2002,Vitória-BA,384,11,0.2,1,2024-02-05,Porto Vitória FC (1),2022: copinha,https://www.transfermarkt.com.br/-/profil/spieler/1091894
-1272748,Maicon,2002,Cruzeiro-MG,385,18,0.2,7,2024-06-12,CA Patrocinense (7),2020: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1272748
-1306819,Victor Hugo,2002,Chapecoense-SC,386,12,0.2,1,2021-03-10,Atlético Clube Goianiense (1),2021: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1306819
-1007698,Bruno Henrique,2002,Bragantino-SP,387,8,0.1,2,2022-04-17,AA Caldense (2),2019: copinha,https://www.transfermarkt.com.br/-/profil/spieler/1007698
-1092434,Tarik,2002,Santos-SP,388,18,0.1,3,2023-06-14,Nova Iguaçu FC (RJ) (3),2020: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1092434
-1220556,Victor Bessa,2002,Goiás-GO,389,10,0.1,1,2023-04-07,Al-Rams SC (1),2020: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1220556
-1007694,Felipe Garrido,2002,Bragantino-SP,390,9,0.0,1,2022-04-17,AA Caldense (1),2019: copinha,https://www.transfermarkt.com.br/-/profil/spieler/1007694
+1117282,Pedro China,2002,Botafogo-RJ,254,11,5.0,10,2020-02-15,"Bangu Atlético Clube (RJ) (6), Nova Iguaçu FC (RJ) (4)",2022: copinha,https://www.transfermarkt.com.br/-/profil/spieler/1117282
+1017151,Igor Lemos,2002,Cruzeiro-MG,255,12,4.9,24,2023-05-08,"EC Democrata (11), Associação Olímpica de Itabaiana (SE) (8), Nova Iguaçu FC (RJ) (5)","2020: sub20 | 2021: sub20 | 2022: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/1017151
+876001,Euller,2002,Ponte Preta-SP,256,7,4.7,28,2024-05-05,"Cianorte Futebol Clube (PR) (20), Atlético Monte Azul (SP) (8)",2020: copinha | 2022: copinha,https://www.transfermarkt.com.br/-/profil/spieler/876001
+973592,Júlio César,2002,Fortaleza-CE,257,5,4.7,25,2022-03-05,"Esporte Clube Jacuipense (BA) (8), Associação Jaguaré EC (8), Santa Cruz Acre EC (6)",2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/973592
+829954,Matheus Araújo,2002,Atlético-MG,258,14,4.6,39,2020-10-29,"DFK Dainava Alytus (31), Floresta Esporte Clube (CE) (6), Ituano Futebol Clube (SP) (2)","2021: sub20 | 2022: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/829954
+950394,Wesllen,2002,Ceará-CE,259,7,4.5,21,2020-08-05,"Porto Vitória FC (11), CE Aimoré (8), Clube Atlético Tubarão (SC) (2)",2020: sub20 | 2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/950394
+1212304,Álvaro,2002,Cruzeiro-MG,260,13,4.5,19,2026-01-17,"Rondoniense SC (14), Porto Velho EC (5)",2020: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1212304
+1001018,Gustavo Moreira,2002,Santos-SP,261,12,4.4,17,2023-01-11,"S. E. R. São José (AP) (7), AA Maguary (6), Cametá SC (4)","2019: sub20 | 2020: copinha, sub20 | 2021: sub20",https://www.transfermarkt.com.br/-/profil/spieler/1001018
+868054,Jonathan Nascimento,2002,Internacional-RS,262,18,4.1,18,2024-01-17,"Clube Andraus Brasil (12), Monte Roraima FC (6), Atlético Monte Azul (SP) (5)",2020: sub20 | 2021: sub20 | 2022: copinha,https://www.transfermarkt.com.br/-/profil/spieler/868054
+980855,Mateus Petri,2002,São Paulo-SP,263,13,4.1,18,2023-06-07,"Operário FC (17), EC XV de Piracicaba (1)","2022: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/980855
+942591,Guilherme Xuxa,2002,Fluminense-RJ,264,15,3.9,18,2021-03-24,"Madureira EC (16), Xaghra United FC (2)",2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/942591
+813123,João Pedro,2002,Palmeiras-SP,265,18,3.8,37,2022-08-27,"Vilaverdense FC (18), Vitória Guimarães SC B (11), GD Chaves B (5)","2020: copinha, sub20 | 2022: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/813123
+719647,Rodrigo Rosa,2002,Botafogo-RJ,266,12,3.8,23,2022-09-11,"CS Sergipe (16), CF Canelas 2010 (7)",2020: sub20,https://www.transfermarkt.com.br/-/profil/spieler/719647
+866636,Vinicius Taquini,2002,Bahia-BA,267,7,3.8,22,2024-03-06,"Manaus Futebol Clube (16), Sampaio Corrêa FC (MA) (6)",2020: sub20 | 2021: sub20,https://www.transfermarkt.com.br/-/profil/spieler/866636
+1084950,Willian Barbosa,2002,Atlético-GO,268,9,3.8,18,2026-01-17,"Rondoniense SC (14), Porto Velho EC (4)",2019: sub20 | 2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1084950
+830453,Mateus Goiano,2002,Fluminense-RJ,269,16,3.7,21,2024-02-10,"União Rondonópolis EC (MT) (9), AE Jataiense (6), AA Coruripe (4)",2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/830453
+828124,Brayan Kruger,2002,Santos-SP,270,13,3.6,11,2023-05-06,"EC Avenida (6), Ituano Futebol Clube (SP) (3), Atlético Monte Azul (SP) (2)",2020: sub20 | 2021: sub20,https://www.transfermarkt.com.br/-/profil/spieler/828124
+902526,Afonso,2002,Ceará-CE,271,8,3.5,20,2020-11-13,"Esportivo (9), Grêmio Esportivo Brasil (RS) (7), Palmas FR (3)","2022: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/902526
+997720,Givigi,2002,Fluminense-RJ,272,17,3.5,15,2024-10-16,"Grêmio Esportivo Brasil (RS) (7), Itabirito FC (7), MFK Snina (1)","2022: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/997720
+1245910,Gustavão,2002,Goiás-GO,273,4,3.5,14,2024-01-20,"Brasiliense FC (DF) (7), Luverdense EC (MT) (4), SE Ceilandense (2)",2022: copinha,https://www.transfermarkt.com.br/-/profil/spieler/1245910
+980980,Jota,2002,Atlético-GO,274,10,3.5,13,2024-10-19,"Pouso Alegre FC (7), Associação Atlética Ponte Preta (3), UD Santarém (3)",2021: sub20 | 2022: copinha,https://www.transfermarkt.com.br/-/profil/spieler/980980
+1042363,Léo,2002,Atlético-GO,275,11,3.5,16,2024-01-18,"Goiânia EC (15), Atlético Clube Goianiense (1)","2021: sub20 | 2022: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/1042363
+981502,Lucão,2002,Grêmio-RS,276,19,3.5,12,2022-02-03,"Dourados AC (6), CE Aimoré (5), IF São Joseense (1)",2020: sub20 | 2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/981502
+1082836,Vinicius Barcellos,2002,Bahia-BA,277,8,3.3,11,2025-01-15,"Caravaggio Futebol Clube (SC) (10), AA Maguary (1)","2020: copinha, sub20 | 2021: sub20 | 2022: copinha",https://www.transfermarkt.com.br/-/profil/spieler/1082836
+866891,Ed,2002,Sport-PE,278,11,3.2,16,2025-01-20,"Real Noroeste CFC (9), Clube Sociedade Esportiva (AL) (7)",2020: sub20 | 2021: sub20,https://www.transfermarkt.com.br/-/profil/spieler/866891
+1094385,Gustavo Braga,2002,Athletico-PR,279,18,3.2,12,2024-02-01,"Castanhal EC (9), Azuriz FC (3)",2019: sub20 | 2020: sub20 | 2021: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1094385
+973500,Henrique Halls,2002,Bragantino-SP,280,4,3.2,10,2021-04-24,"EC Democrata (6), Resende FC (4)",2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/973500
+980816,Pajé,2002,São Paulo-SP,281,14,3.2,17,2023-06-14,"Clube Laguna (RN) (6), Clube Andraus Brasil (6), EC XV de Piracicaba (3)","2021: sub20 | 2022: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/980816
+1118234,João Moreira,2002,Ceará-CE,282,9,3.2,16,2023-01-22,"Aquidauanense FC (8), CE Operário Várzea-Grandense (8)","2020: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/1118234
+894532,Young,2002,São Paulo-SP,283,15,3.2,3,2025-08-16,São Paulo Futebol Clube (3),2020: sub20 | 2021: sub20 | 2022: copinha,https://www.transfermarkt.com.br/-/profil/spieler/894532
+815678,João Tavares,2002,Vasco-RJ,284,12,3.1,21,2024-09-14,"UD Oliveirense (11), Stal Stalowa Wola (10)","2019: sub20 | 2020: sub20 | 2021: sub20 | 2022: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/815678
+792485,Patrick,2002,Fortaleza-CE,285,6,3.1,19,2024-08-11,"Anadia FC (12), Guarda FC (7)","2020: copinha | 2021: sub20 | 2022: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/792485
+1005644,Riquelme,2002,Corinthians-SP,286,9,3.1,14,2023-03-04,"ETO FC (22), STK 1914 Samorin (10), DAC Dunajska Streda (2)","2019: sub20 | 2020: sub20 | 2021: sub20 | 2022: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/1005644
+1086380,Deivisson Hulk,2002,Fluminense-RJ,287,18,3.0,12,2023-01-15,"22 de Julio FC (5), SE Decisão Futebol Clube (3), Azuriz FC (3)",2021: sub20 | 2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1086380
+1091912,João Vitor,2002,Avaí-SC,288,8,3.0,20,2025-02-01,"Goiatuba EC (16), Centro Oeste FC (GO) (4)",2022: copinha,https://www.transfermarkt.com.br/-/profil/spieler/1091912
+997462,Messias,2002,Grêmio-RS,289,20,3.0,10,2023-01-14,IF São Joseense (10),"2020: copinha | 2022: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/997462
+798110,Welberty Batata,2002,Sport-PE,290,12,2.9,14,2020-08-05,"AA Oeirense (6), AA Coruripe (5), AA Altos (2)",2019: sub20 | 2021: sub20 | 2022: copinha,https://www.transfermarkt.com.br/-/profil/spieler/798110
+687678,Cadu,2002,Santos-SP,291,14,2.8,5,2023-06-29,"MSK Rimavska Sobota (2), Santos FC (2), Kotwica Kolobrzeg (1)",2019: sub20 | 2020: sub20 | 2021: sub20 | 2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/687678
+1082785,Douglas Cunha,2002,Internacional-RS,292,19,2.8,19,2020-06-02,"Ipatinga FC (11), Madureira EC (8)","2020: sub20 | 2022: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/1082785
+1008160,Guilherme,2002,Criciúma-SC,293,5,2.8,10,2024-01-31,"Santa Catarina Clube (SC) (6), Criciúma EC (2), Madureira EC (1)",2022: copinha,https://www.transfermarkt.com.br/-/profil/spieler/1008160
+662334,Marcelo Pitaluga,2002,Fluminense-RJ,294,19,2.7,11,2021-10-05,"St. Patrick's Athletic (7), FC Liverpool Sub-18 (4), Livingston FC (2)",2019: sub20 | 2020: copinha,https://www.transfermarkt.com.br/-/profil/spieler/662334
+752727,Odair Marciano,2002,Atlético-GO,295,12,2.7,10,2025-09-24,Muang Loei United (10),2021: sub20,https://www.transfermarkt.com.br/-/profil/spieler/752727
+891316,Pedro Antônio,2002,Vitória-BA,296,7,2.7,9,2026-01-12,Barcelona FC (BA) (9),2022: copinha,https://www.transfermarkt.com.br/-/profil/spieler/891316
+1091897,Israel,2002,Cruzeiro-MG,297,14,2.6,13,2025-01-25,"Quinho FC (10), Real Brasília FC (3)",2020: sub20 | 2022: copinha,https://www.transfermarkt.com.br/-/profil/spieler/1091897
+1083087,Léo Simoni,2002,Atlético-MG,298,15,2.6,10,2025-04-12,"NK Croatia Zmijavci (6), FK Zeljeznicar Sarajevo (4)","2020: copinha, sub20 | 2021: sub20 | 2022: copinha",https://www.transfermarkt.com.br/-/profil/spieler/1083087
+990155,Lucas Bonete,2002,Athletico-PR,299,19,2.6,13,2022-02-24,"Vilavelhense FC (11), Clube de Regatas Brasil (AL) (2)",2020: sub20,https://www.transfermarkt.com.br/-/profil/spieler/990155
+997471,Mateo Velasco,2002,Grêmio-RS,300,21,2.6,8,2023-01-22,"Deportes Quindío (7), CE Aimoré (5)",2020: sub20 | 2021: sub20 | 2022: copinha,https://www.transfermarkt.com.br/-/profil/spieler/997471
+1083241,Edgar,2002,Cruzeiro-MG,301,15,2.5,13,2020-09-20,Atlético Cajazeirense (13),"2021: sub20 | 2022: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/1083241
+980857,Guilherme Matheus,2002,Ceará-CE,302,10,2.5,9,2023-01-29,"FC Petrocub Hincesti (5), NK Jarun (2), Azuriz FC (2)","2020: sub20 | 2021: sub20 | 2022: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/980857
+1036607,Jeder,2002,Juventude-RS,303,5,2.5,7,2024-02-11,"Monsoon Futebol Clube (6), Nação Esportes FC (1)",2022: copinha,https://www.transfermarkt.com.br/-/profil/spieler/1036607
+872452,Léo Gonçalves,2002,Criciúma-SC,304,6,2.5,13,2021-04-04,"CE Operário Várzea-Grandense (7), Criciúma EC (6)",2020: copinha | 2022: copinha,https://www.transfermarkt.com.br/-/profil/spieler/872452
+871651,Ruan,2002,Chapecoense-SC,305,4,2.5,12,2021-03-14,"Nova Mutum EC (10), Sociedade Imperatriz de Desportos (MA) (1), Associação Chapecoense de Futebol (1)",2020: sub20 | 2021: sub20,https://www.transfermarkt.com.br/-/profil/spieler/871651
+1084079,Cauã Andrade,2002,Bragantino-SP,306,5,2.4,12,2026-01-24,Corumbaense FC (12),2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1084079
+1105514,Breno Boeno,2002,Atlético-GO,307,13,2.3,21,2024-06-02,"EC Novo Hamburgo (15), Agro Esporte Clube (6)",2021: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1105514
+1083609,Carlos,2002,Botafogo-RJ,308,13,2.2,11,2025-01-29,Sport Club Capixaba (11),"2019: sub20 | 2020: copinha, sub20 | 2021: sub20 | 2022: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/1083609
+1085124,Daniel Fagundes,2002,Botafogo-RJ,309,14,2.2,9,2025-01-18,Itabirito FC (9),2020: sub20 | 2021: sub20 | 2022: copinha,https://www.transfermarkt.com.br/-/profil/spieler/1085124
+1082782,Nycollas Queiroz,2002,Cruzeiro-MG,310,16,2.2,14,2024-01-28,"Grêmio Esportivo Brasil (RS) (11), Corumbaense FC (3)","2021: sub20 | 2022: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/1082782
+985358,Théo Henrique,2002,América-MG,311,7,2.2,20,2023-04-03,North Texas SC (20),"2022: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/985358
+1095334,Gustavo Vieira,2002,América-MG,312,8,2.1,30,2024-02-24,"Calcio Leinfelden-Echterdingen (25), SV 1890 Westerhausen (15), FK Jedinstvo Ub (7)",2020: sub20 | 2021: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1095334
+1018700,Marcos Eduardo,2002,Atlético-GO,313,14,2.1,13,2022-02-13,"EC Águia Negra (MS) (6), GE Anápolis (4), Anápolis FC (3)",2020: copinha | 2021: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1018700
+964597,Paulinho,2002,Chapecoense-SC,314,5,2.1,7,2022-01-22,"Associação Chapecoense de Futebol (6), Santa Catarina Clube (SC) (1)",2021: sub20 | 2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/964597
+813118,Ramon Cirino,2002,Palmeiras-SP,315,19,2.1,13,2023-05-07,"CE Aimoré (10), AA Maguary (2), Al-Ahli SC (Bahrain) (1)",2020: sub20 | 2021: sub20,https://www.transfermarkt.com.br/-/profil/spieler/813118
+1091896,Ronaldo Mendes,2002,Vitória-BA,316,8,2.1,7,2024-01-18,Flamengo de Arcoverde (7),2020: sub20 | 2022: copinha,https://www.transfermarkt.com.br/-/profil/spieler/1091896
+818841,Carlos Daniel,2002,Atlético-MG,317,16,2.0,5,2023-02-04,Ipatinga FC (5),"2020: copinha, sub20 | 2021: sub20 | 2022: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/818841
+936122,Miguel Augusto,2002,São Paulo-SP,318,16,2.0,11,2021-08-07,"Várzea Grande EC (MT) (9), Portuguesa (2)",2019: sub20 | 2020: sub20,https://www.transfermarkt.com.br/-/profil/spieler/936122
+990532,Reydson,2002,Botafogo-RJ,319,15,2.0,10,2022-03-13,"Resende FC (7), Madureira EC (2), Botafogo de Futebol e Regatas (1)","2020: sub20 | 2021: sub20 | 2022: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/990532
+974028,Ronald,2002,Vitória-BA,320,9,2.0,10,2024-01-21,"Atlético Cajazeirense (7), EC de Patos (PB) (3)",2022: copinha,https://www.transfermarkt.com.br/-/profil/spieler/974028
+875555,Lucas Gabriel,2002,América-MG,321,9,1.9,6,2021-03-03,"América Futebol Clube (MG) (4), Louletano DC (2)","2020: copinha, sub20 | 2021: sub20 | 2022: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/875555
+828478,Daniel,2002,Atlético-GO,322,15,1.8,5,2020-10-26,"Guarani Futebol Clube (SP) (3), Esporte Clube São Bento (SP) (2)",2022: copinha,https://www.transfermarkt.com.br/-/profil/spieler/828478
+984095,Edu Araújo,2002,Santos-SP,323,15,1.8,9,2025-01-12,Nacional AC (9),2021: sub20 | 2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/984095
+984090,Kaio Castro,2002,Santos-SP,324,16,1.8,6,2023-01-29,"Cianorte Futebol Clube (PR) (5), Santa Cruz FC (PE) (1)","2021: sub20 | 2022: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/984090
+1236510,Rander,2002,Bahia-BA,325,9,1.8,9,2024-02-08,"América FC (7), Nova Venécia FC (2)",2021: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1236510
+894775,Denilson,2002,Ceará-CE,326,11,1.7,19,2021-05-02,"1.FCA Darmstadt (14), Baré EC (11), Ceará Sporting Club (4)",2020: sub20 | 2021: sub20,https://www.transfermarkt.com.br/-/profil/spieler/894775
+868070,Pedrinho,2002,Internacional-RS,327,20,1.7,12,2025-01-12,"Auto Esporte Clube (7), Azuriz FC (5)",2019: sub20 | 2020: sub20 | 2021: sub20 | 2022: copinha,https://www.transfermarkt.com.br/-/profil/spieler/868070
+975459,Pedro Borges,2002,Bahia-BA,328,10,1.7,6,2024-02-10,Real Noroeste CFC (6),"2020: sub20 | 2021: sub20 | 2022: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/975459
+997075,Riquelme,2002,Chapecoense-SC,329,6,1.7,14,2024-02-18,"Petrolina Social Futebol Clube (PE) (8), SC Penedense (4), Internacional de Lages (2)",2020: sub20 | 2021: sub20 | 2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/997075
+996689,Jadson,2002,Chapecoense-SC,330,7,1.6,4,2023-02-17,CE Aimoré (4),2020: sub20,https://www.transfermarkt.com.br/-/profil/spieler/996689
+983979,Cássio,2002,América-MG,331,10,1.6,4,2023-04-01,"América Futebol Clube (MG) (3), Clube Náutico Capibaribe (1)","2021: sub20 | 2022: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/983979
+1082767,Marcondes,2002,Fortaleza-CE,332,7,1.6,6,2021-09-19,"Belo Jardim FC (5), Retrô FC Brasil (1)","2020: sub20 | 2022: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/1082767
+1084625,Ryan Weber,2002,Bragantino-SP,333,6,1.6,8,2026-01-14,ACD Potiguar (RN) (8),2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1084625
+1236951,James,2002,Atlético-MG,334,17,1.5,5,2024-02-09,Real Brasília FC (5),2020: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1236951
+862594,Rodrigues,2002,Atlético-GO,335,16,1.5,5,2021-02-04,Atlético Clube Goianiense (5),2020: copinha | 2021: sub20,https://www.transfermarkt.com.br/-/profil/spieler/862594
+1368496,Gabriel Borges,2002,Atlético-GO,336,17,1.4,7,2025-01-25,"Ceilândia EC (4), Associação Atlética Anapolina (GO) (3)",2021: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1368496
+1075074,Guilherme Sonego,2002,Criciúma-SC,337,7,1.4,2,2022-10-29,Cuiabá Esporte Clube (MT) (2),2022: copinha,https://www.transfermarkt.com.br/-/profil/spieler/1075074
+985364,Pedro Libardoni,2002,América-MG,338,11,1.4,7,2026-01-14,União Rondonópolis EC (MT) (7),2022: copinha,https://www.transfermarkt.com.br/-/profil/spieler/985364
+823543,Wesley Borges,2002,Corinthians-SP,339,10,1.3,6,2024-11-23,Ituano Futebol Clube (SP) (6),2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/823543
+871752,Everton,2002,Goiás-GO,340,5,1.2,10,2021-03-07,"Iporá Esporte Clube (9), Boavista SC (1)",2022: copinha,https://www.transfermarkt.com.br/-/profil/spieler/871752
+1084077,Kleberson,2002,Atlético-GO,341,18,1.2,10,2026-04-04,AA Aparecidense (10),"2021: sub20 | 2022: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/1084077
+1093174,Rodrigo Bomfim,2002,Athletico-PR,342,20,1.2,4,2026-01-07,Joinville Esporte Clube (SC) (4),2020: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1093174
+1083214,Romero,2002,Ceará-CE,343,12,1.2,4,2025-01-27,Cariri FC (CE) (4),2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1083214
+795618,João Goes,2002,Bragantino-SP,344,7,1.1,6,2021-03-21,AA Caldense (6),2019: copinha,https://www.transfermarkt.com.br/-/profil/spieler/795618
+627233,Kaká,2002,Fluminense-RJ,345,20,1.0,5,2026-01-11,"Santa Cruz FC (RN) (5), Brazil U16 (4)",2020: sub20 | 2022: copinha,https://www.transfermarkt.com.br/-/profil/spieler/627233
+1083082,Zé Mendes,2002,Atlético-MG,346,18,1.0,8,2026-04-04,Blumenau Esporte Clube (SC) (8),2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1083082
+1091183,Juan Mello,2002,Botafogo-RJ,347,16,1.0,5,2025-01-15,"Desportiva Aracaju (3), Pombal EC (2)",2021: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1091183
+1225548,Ítalo,2002,Fortaleza-CE,348,8,1.0,5,2025-01-12,CE Força e Luz (5),2021: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1225548
+1033500,Thiago Henrique,2002,Chapecoense-SC,349,8,1.0,3,2024-04-20,"Azuriz FC (2), Associação Chapecoense de Futebol (1)",2019: sub20 | 2021: sub20 | 2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1033500
+700788,Pedro Arthur,2002,Flamengo-RJ,350,12,0.9,7,2025-04-14,"Joinville Esporte Clube (SC) (4), FC Kharkiv (3), Brazil U16 (3)","2019: sub20 | 2021: sub20 | 2022: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/700788
+982543,Ryan,2002,Internacional-RS,351,21,0.9,9,2024-08-25,FC Tirsense (9),"2022: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/982543
+1084713,André Damaceno,2002,Fluminense-RJ,352,21,0.8,4,2025-01-15,CS Sinop (4),2020: sub20 | 2021: sub20 | 2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1084713
+876750,Bruno Guimarães,2002,Flamengo-RJ,353,13,0.8,6,2025-10-05,"CF Os Marialvas (3), O Elvas CAD (3)","2021: sub20 | 2022: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/876750
+1083093,Flávio,2002,Bahia-BA,354,11,0.8,4,2023-01-12,GE Anápolis (4),2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1083093
+989592,Lincon,2002,Goiás-GO,355,6,0.8,4,2021-01-13,"Clube Recreativo e Atlético Catalano (GO) (3), Goiás EC (1)","2020: copinha, sub20 | 2022: copinha",https://www.transfermarkt.com.br/-/profil/spieler/989592
+1083606,Lucas Goiano,2002,Botafogo-RJ,356,17,0.8,3,2024-01-20,"Santa Rosa EC (2), Inhumas EC (1)",2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1083606
+1096721,Marquinhos,2002,Cruzeiro-MG,357,17,0.8,2,2026-02-28,Esporte Clube Internacional (RS) (2),2020: sub20 | 2021: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1096721
+1465847,Nicolas,2002,Goiás-GO,358,7,0.8,4,2026-02-01,Forte Futebol Clube (4),2020: sub20 | 2022: copinha,https://www.transfermarkt.com.br/-/profil/spieler/1465847
+984094,Pedrinho,2002,Santos-SP,359,17,0.8,5,2024-09-29,"CF Rayo Majadahonda (4), CE Operário Várzea-Grandense (1)","2019: sub20 | 2020: sub20 | 2022: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/984094
+740158,Breno,2002,Botafogo-RJ,360,18,0.6,3,2026-01-10,Real Brasília FC (3),2020: sub20,https://www.transfermarkt.com.br/-/profil/spieler/740158
+1077155,Amorim,2002,Fluminense-RJ,361,22,0.6,6,2025-02-26,"Centro Sportivo Alagoano (AL) (5), CA Votuporanguense (SP) (1)",2019: sub20 | 2020: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1077155
+872438,Deividy,2002,Criciúma-SC,362,8,0.6,2,2021-03-14,Criciúma EC (2),2020: copinha,https://www.transfermarkt.com.br/-/profil/spieler/872438
+1093695,Guizão,2002,América-MG,363,12,0.6,2,2023-02-16,Foz do Iguaçu FC (2),2020: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1093695
+1466270,Hebert,2002,Vitória-BA,364,10,0.6,2,2026-01-20,Barcelona FC (BA) (2),"2020: copinha, sub20 | 2022: copinha",https://www.transfermarkt.com.br/-/profil/spieler/1466270
+574767,Hiago,2002,Bahia-BA,365,12,0.6,8,2024-08-17,"Vilaverdense FC (8), Brazil U16 (3)","2020: copinha, sub20 | 2021: sub20 | 2022: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/574767
+1095650,João Stein,2002,Chapecoense-SC,366,9,0.6,2,2023-02-11,Hercílio Luz FC (2),2021: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1095650
+887814,João Lucas,2002,Goiás-GO,367,8,0.6,3,2021-04-15,Goiás EC (3),"2020: copinha, sub20 | 2022: copinha",https://www.transfermarkt.com.br/-/profil/spieler/887814
+1091924,Dutra,2002,Avaí-SC,368,9,0.6,3,2025-01-25,CS Sergipe (3),2022: copinha,https://www.transfermarkt.com.br/-/profil/spieler/1091924
+1084354,Gabriel Toebe,2002,Botafogo-RJ,369,19,0.5,6,2024-06-19,EC Avenida (6),2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1084354
+627234,Iago André,2002,Athletico-PR,370,21,0.5,1,2023-01-15,"Brazil U17 (2), Botafogo de Futebol e Regatas (1)","2019: sub20 | 2020: copinha, sub20 | 2021: sub20 | 2022: copinha",https://www.transfermarkt.com.br/-/profil/spieler/627234
+1092103,Léo Xavier,2002,Avaí-SC,371,10,0.5,3,2023-01-15,Iporá Esporte Clube (3),2022: copinha,https://www.transfermarkt.com.br/-/profil/spieler/1092103
+1080984,Lucas Barreto,2002,Botafogo-RJ,372,20,0.5,1,2025-05-31,Atlético Clube Goianiense (1),"2021: sub20 | 2022: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/1080984
+1265072,Diego Rodrigues,2002,Atlético-GO,373,19,0.4,3,2024-06-15,Audax Rio de Janeiro EC (3),2021: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1265072
+1037321,Italo Hugo,2002,Criciúma-SC,374,9,0.4,3,2021-07-11,Tocantinópolis EC (3),2020: copinha,https://www.transfermarkt.com.br/-/profil/spieler/1037321
+868055,João Pedro,2002,Internacional-RS,375,22,0.4,1,2021-02-27,Sport Club Internacional (1),"2017: sub20 | 2019: sub20 | 2020: sub20 | 2021: sub20 | 2022: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/868055
+1529092,Robert,2002,Chapecoense-SC,376,10,0.4,2,2025-01-26,Costa Rica EC (2),2020: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1529092
+733337,Davi Schneider,2002,Ceará-CE,377,13,0.3,2,2024-08-24,"Grêmio Esportivo Brasil (RS) (1), Tombense Futebol Clube (MG) (1)","2021: sub20 | 2022: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/733337
+884069,Gustavo Ramalho,2002,Fluminense-RJ,378,23,0.3,2,2026-08-29,Varzim SC (2),2019: sub20,https://www.transfermarkt.com.br/-/profil/spieler/884069
+871652,Lorhan,2002,Chapecoense-SC,379,11,0.3,1,2021-03-14,Associação Chapecoense de Futebol (1),2020: sub20 | 2021: sub20,https://www.transfermarkt.com.br/-/profil/spieler/871652
+813121,Mateus,2002,Palmeiras-SP,380,20,0.3,2,2026-09-13,FC Alverca B (2),"2020: sub20 | 2021: sub20 | 2022: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/813121
+980563,Rubens,2002,Ceará-CE,381,14,0.3,1,2021-05-06,Ceará Sporting Club (1),"2020: copinha, sub20 | 2021: sub20 | 2022: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/980563
+1084661,Antony Kennedy,2002,Fluminense-RJ,382,24,0.2,1,2024-01-25,ACD Potiguar (RN) (1),2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1084661
+830370,Edilton,2002,Atlético-GO,383,20,0.2,2,2020-11-21,Alagoinhas AC (2),2021: sub20,https://www.transfermarkt.com.br/-/profil/spieler/830370
+1011069,Eduardo,2002,Goiás-GO,384,9,0.2,1,2022-04-09,FC Atlético Cearense (1),2022: copinha,https://www.transfermarkt.com.br/-/profil/spieler/1011069
+1074868,Gabriel Saalfeld,2002,Criciúma-SC,385,10,0.2,1,2023-09-10,Real SC (1),2022: copinha,https://www.transfermarkt.com.br/-/profil/spieler/1074868
+1091894,Wilker,2002,Vitória-BA,386,11,0.2,1,2024-02-05,Porto Vitória FC (1),2022: copinha,https://www.transfermarkt.com.br/-/profil/spieler/1091894
+1272748,Maicon,2002,Cruzeiro-MG,387,18,0.2,7,2024-06-12,CA Patrocinense (7),2020: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1272748
+1306819,Victor Hugo,2002,Chapecoense-SC,388,12,0.2,1,2021-03-10,Atlético Clube Goianiense (1),2021: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1306819
+1007698,Bruno Henrique,2002,Bragantino-SP,389,8,0.1,2,2022-04-17,AA Caldense (2),2019: copinha,https://www.transfermarkt.com.br/-/profil/spieler/1007698
+1092434,Tarik,2002,Santos-SP,390,18,0.1,3,2023-06-14,Nova Iguaçu FC (RJ) (3),2020: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1092434
+1220556,Victor Bessa,2002,Goiás-GO,391,10,0.1,1,2023-04-07,Al-Rams SC (1),2020: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1220556
+1007694,Felipe Garrido,2002,Bragantino-SP,392,9,0.0,1,2022-04-17,AA Caldense (1),2019: copinha,https://www.transfermarkt.com.br/-/profil/spieler/1007694
 964580,Wesley,2003,Flamengo-RJ,1,1,315.9,198,2021-12-10,"CR Flamengo (136), AS Roma (53)","2021: sub20, serie_a | 2022: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/964580
 668267,Marcos Leonardo,2003,Santos-SP,2,1,272.2,291,2020-08-20,"Santos FC (168), Al-Hilal SFC (82), SL Benfica (24)","2019: copinha, sub20 | 2020: copinha, serie_a | 2021: serie_a | 2022: serie_a",https://www.transfermarkt.com.br/-/profil/spieler/668267
 872171,Lucas Beraldo,2003,São Paulo-SP,3,1,262.8,157,2022-05-25,"Paris Saint-Germain (100), São Paulo Futebol Clube (52)","2020: sub20 | 2021: sub20 | 2022: copinha, serie_a",https://www.transfermarkt.com.br/-/profil/spieler/872171
@@ -2742,81 +2744,86 @@ tm_id,nome,coorte,clube,posicao_coorte,posicao_clube,pontos,jogos_pro,primeiro_j
 984063,Miguel,2003,Palmeiras-SP,201,15,2.9,8,2023-03-05,"Clube Náutico Marcílio Dias (SC) (6), Mirassol Futebol Clube (SP) (2)","2020: sub20 | 2021: sub20 | 2022: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/984063
 974489,Iruan,2003,Coritiba-PR,202,2,2.7,10,2024-02-15,"Aruko Sports Brasil (7), Clube Recreativo e Atlético Catalano (GO) (3)",2022: copinha,https://www.transfermarkt.com.br/-/profil/spieler/974489
 1091182,Hugo Iglesias,2003,Botafogo-RJ,203,7,2.6,6,2025-01-11,AA Portuguesa (6),2021: sub20 | 2022: copinha,https://www.transfermarkt.com.br/-/profil/spieler/1091182
-1088070,Jean Gabriel,2003,Coritiba-PR,204,3,2.5,9,2024-03-09,"Coritiba Foot Ball Club (6), Figueirense Futebol Clube (3)",2022: copinha,https://www.transfermarkt.com.br/-/profil/spieler/1088070
-1083891,Kaylan,2003,Vasco-RJ,205,9,2.5,17,2023-11-11,"FC Noah Erewan II (8), SC Lusitânia dos Açores (7), CS Sergipe (1)",2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1083891
-1096202,Pedro Henz,2003,Bahia-BA,206,7,2.4,15,2025-01-25,"Santa Cruz FC (RN) (14), Blumenau Esporte Clube (SC) (1)",2021: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1096202
-987055,João Pedro,2003,Bahia-BA,207,8,2.3,11,2022-03-12,"FK Suduva Marijampole (6), Alagoinhas AC (5)",2020: copinha,https://www.transfermarkt.com.br/-/profil/spieler/987055
-1022310,Pedro Cella,2003,Chapecoense-SC,208,7,2.2,13,2023-05-28,Concórdia AC (13),2019: sub20 | 2020: copinha | 2021: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1022310
-796788,Danilo Magalhães,2003,Internacional-RS,209,9,2.1,14,2025-08-23,"Várzea Grande EC (MT) (8), Melaka FC (6)",2020: sub20,https://www.transfermarkt.com.br/-/profil/spieler/796788
-1095227,Felipe,2003,São Paulo-SP,210,12,2.0,9,2022-04-23,"North Texas SC (7), AAD Vitória das Tabocas (PE) (2)",2021: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1095227
-1083792,Thomas Bueno,2003,Santos-SP,211,14,2.0,10,2025-01-12,Clube Laguna (RN) (10),2021: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1083792
-1083077,Vitinho,2003,Atlético-MG,212,9,1.9,17,2025-02-02,"SC Salgueiros (15), AA Maguary (2)",2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1083077
-668225,João Henrique,2003,Atlético-MG,213,10,1.8,9,2025-01-20,"Associação Jaguaré EC (9), Brazil U16 (7)",2020: sub20 | 2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/668225
-950375,Vasco Djú,2003,Bragantino-SP,214,11,1.8,21,2025-08-17,GD Samora Correia (21),2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/950375
-668224,Rodrigo Bazilio,2003,Cruzeiro-MG,215,11,1.8,8,2023-05-06,"Brazil U16 (6), Athletic Club (5), Joinville Esporte Clube (SC) (3)",2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/668224
-997719,Joilson,2003,Fluminense-RJ,216,11,1.7,9,2025-10-18,Young Lions (9),2021: sub20 | 2022: copinha,https://www.transfermarkt.com.br/-/profil/spieler/997719
-1095654,Kauan Galhardo,2003,Ceará-CE,217,11,1.7,25,2025-08-17,FC Wolfurt (37),2021: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1095654
-862569,Alisson Índio,2003,Atlético-GO,218,8,1.6,8,2024-02-21,"Araguaína FR (7), Joinville Esporte Clube (SC) (1)",2020: copinha | 2021: sub20 | 2022: copinha,https://www.transfermarkt.com.br/-/profil/spieler/862569
-1082749,João Henrique,2003,Fortaleza-CE,219,7,1.6,8,2024-02-07,ACEC Baraúnas (8),"2021: sub20 | 2022: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/1082749
-977701,Patrick Paixão,2003,Vasco-RJ,220,10,1.6,8,2025-02-02,Galvez EC (8),2020: sub20,https://www.transfermarkt.com.br/-/profil/spieler/977701
-1027016,Brian Carvalho,2003,São Paulo-SP,221,13,1.5,10,2026-01-06,IF São Joseense (10),2021: sub20 | 2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1027016
-989593,Reginaldo,2003,Goiás-GO,222,1,1.5,5,2022-02-20,Goiás EC (5),2022: copinha,https://www.transfermarkt.com.br/-/profil/spieler/989593
-997491,Victor Lustosa,2003,Grêmio-RS,223,14,1.5,13,2022-05-14,"EC São Luiz (6), Concórdia AC (5), Esporte Clube Bahia (2)","2021: sub20 | 2022: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/997491
-902118,Ighor Gabryel,2003,América-MG,224,7,1.4,8,2023-11-26,"EC Santo André (6), América Futebol Clube (MG) (2)","2020: sub20 | 2021: sub20 | 2022: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/902118
-1097777,Luan Caranhato,2003,Chapecoense-SC,225,8,1.4,11,2024-02-02,"SC Humaitá (10), SE Ceilandense (1)",2019: sub20 | 2020: copinha | 2021: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1097777
-1083105,Luan Freitas,2003,Bahia-BA,226,9,1.4,7,2025-01-20,Associação Jaguaré EC (7),2020: sub20 | 2021: sub20 | 2022: copinha,https://www.transfermarkt.com.br/-/profil/spieler/1083105
-1086638,Abimael,2003,Corinthians-SP,227,9,1.2,6,2026-01-11,Centro Oeste FC (GO) (7),2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1086638
-1018610,Dijalma,2003,Vasco-RJ,228,11,1.2,11,2024-01-23,"Porto SC (7), Porto Vitória FC (4)",2021: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1018610
-838057,Eliel Costa,2003,Criciúma-SC,229,3,1.2,4,2024-01-31,Criciúma EC (4),2022: copinha,https://www.transfermarkt.com.br/-/profil/spieler/838057
-1083542,Jorge Vinícius,2003,Coritiba-PR,230,4,1.2,4,2025-01-22,Coritiba Foot Ball Club (4),2022: copinha,https://www.transfermarkt.com.br/-/profil/spieler/1083542
-1083679,Kevin Quiñónes,2003,Internacional-RS,231,10,1.2,14,2025-03-08,Colón FC de Uruguay (14),2021: sub20 | 2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1083679
-795952,Pedro Paraguai,2003,Ceará-CE,232,12,1.2,5,2020-10-26,"Associação Olímpica de Itabaiana (SE) (4), AD Confiança (1)",2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/795952
-964599,Arthur Vanzela,2003,Chapecoense-SC,233,9,1.1,8,2021-12-10,"Goiânia EC (5), Associação Chapecoense de Futebol (3)",2019: sub20 | 2020: copinha | 2021: serie_a | 2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/964599
-1083668,Caio Amaral,2003,Fluminense-RJ,234,12,1.1,4,2026-03-22,"Caldas SC (3), SC União Torreense (1)",2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1083668
-1093495,Cris,2003,Ceará-CE,235,13,1.1,7,2024-06-15,"Audax Rio de Janeiro EC (4), Santa Cruz FC (RN) (3)",2020: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1093495
-1523272,Gabriel,2003,Atlético-MG,236,11,1.1,6,2026-08-03,Olympia Erewan (6),2021: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1523272
-978277,Kayky Alves,2003,São Paulo-SP,237,14,1.1,4,2023-02-16,"NK Croatia Zmijavci (3), Operário Ferroviário Esporte Clube (PR) (1)",2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/978277
-1083636,Allan Aniz,2003,Bahia-BA,238,10,1.0,2,2024-10-19,"Central & Western District (26), Kui Tan (5), Miami FC (2)","2020: sub20 | 2021: sub20 | 2022: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/1083636
-1083106,Felipe Redaelli,2003,Bahia-BA,239,11,1.0,3,2025-08-17,Clube Náutico Capibaribe (3),"2021: sub20 | 2022: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/1083106
-599262,Stevanato,2003,América-MG,240,8,1.0,3,2023-07-22,"Ituano Futebol Clube (SP) (2), Marshall Thundering Herd (Marshall University) (1), Hercílio Luz FC (1)",2020: sub20 | 2021: sub20 | 2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/599262
-1082520,João Paulo,2003,Athletico-PR,241,10,1.0,5,2025-12-20,Tocantinópolis EC (5),2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1082520
-961805,Nathan Oliveira,2003,Coritiba-PR,242,5,1.0,5,2025-02-04,Batalhão FC (5),2022: copinha,https://www.transfermarkt.com.br/-/profil/spieler/961805
-1084353,Paulo Henrique,2003,Botafogo-RJ,243,8,1.0,5,2025-02-08,Rio Branco Football Club (AC) (5),"2020: sub20 | 2021: sub20 | 2022: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/1084353
-1117283,André Henrique,2003,Ponte Preta-SP,244,3,0.9,6,2024-01-28,"EC Santo André (5), Associação Atlética Ponte Preta (1)",2022: copinha,https://www.transfermarkt.com.br/-/profil/spieler/1117283
-997866,Cassiano,2003,Flamengo-RJ,245,16,0.9,3,2022-04-10,Mirassol Futebol Clube (SP) (3),2022: copinha,https://www.transfermarkt.com.br/-/profil/spieler/997866
-1093631,Souza,2003,Fluminense-RJ,246,13,0.9,5,2023-02-16,"Clube Recreativo e Atlético Catalano (GO) (4), Volta Redonda Futebol Clube (RJ) (1)",2021: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1093631
-668264,Danilo,2003,Cruzeiro-MG,247,12,0.8,2,2026-01-17,"Brazil U16 (6), Betim Futebol (2)",2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/668264
-1043005,Guilherme Rosa,2003,América-MG,248,9,0.8,4,2024-01-27,Nova Venécia FC (4),2021: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1043005
-1083071,Kaian,2003,Atlético-MG,249,12,0.8,4,2024-01-14,Samambaia FC (4),2021: sub20 | 2022: copinha,https://www.transfermarkt.com.br/-/profil/spieler/1083071
-1083963,Marlon Santos,2003,Vasco-RJ,250,12,0.8,4,2023-01-14,"Bulgan SP Falcons (4), Clube de Regatas Vasco da Gama (1)","2020: sub20 | 2021: sub20 | 2022: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/1083963
-1130651,Robert,2003,Corinthians-SP,251,10,0.8,4,2026-01-22,SC Genus (4),2021: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1130651
-959088,Thiago Beltrame,2003,Grêmio-RS,252,15,0.8,1,2026-05-30,Grêmio Foot-Ball Porto Alegrense (1),2021: sub20 | 2022: copinha,https://www.transfermarkt.com.br/-/profil/spieler/959088
-831129,Victor Michell,2003,Palmeiras-SP,253,16,0.8,5,2025-01-22,Betim Futebol (5),"2020: sub20 | 2022: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/831129
-1095494,Wesley,2003,Cruzeiro-MG,254,13,0.8,7,2023-08-26,"Siheung City FC (6), Betim Futebol (1)",2020: sub20 | 2021: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1095494
-1074486,Daniel Ghiggino,2003,Fluminense-RJ,255,14,0.7,1,2022-10-27,Goiás EC (1),2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1074486
-1031313,Gabriel Lira,2003,Fluminense-RJ,256,15,0.7,10,2024-01-24,"Ipatinga FC (9), Figueirense Futebol Clube (1)",2021: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1031313
-1008634,Diego,2003,Fluminense-RJ,257,16,0.6,2,2021-04-18,Hercílio Luz FC (2),2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1008634
-1094566,João Cominetti,2003,Chapecoense-SC,258,10,0.6,3,2023-02-15,Academia FC (3),2020: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1094566
-987717,Marcos Paulo,2003,Vasco-RJ,259,13,0.6,7,2025-08-24,Anadia FC (7),2021: sub20 | 2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/987717
-1091895,Patricio,2003,Vitória-BA,260,4,0.6,3,2023-03-18,"Manauara EC (2), Itabuna EC (1)",2022: copinha,https://www.transfermarkt.com.br/-/profil/spieler/1091895
-1090788,Ronald,2003,Sport-PE,261,7,0.6,2,2025-02-15,"Atlético Rio Negro (7), Cariri FC (CE) (2)",2020: sub20 | 2021: sub20 | 2022: copinha,https://www.transfermarkt.com.br/-/profil/spieler/1090788
-1082842,Vinícius Amaral,2003,Bahia-BA,262,12,0.6,3,2025-02-20,"Gombak Football Club (14), Inhumas EC (2), EC Novo Hamburgo (1)",2022: copinha,https://www.transfermarkt.com.br/-/profil/spieler/1082842
-997860,Breninho,2003,Fortaleza-CE,263,8,0.5,1,2024-02-20,Bangu Atlético Clube (RJ) (1),"2021: sub20 | 2022: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/997860
-1083887,Pablo,2003,Vasco-RJ,264,14,0.5,1,2025-01-11,Clube de Regatas Vasco da Gama (1),"2020: sub20 | 2021: sub20 | 2022: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/1083887
-978051,Richard,2003,Flamengo-RJ,265,17,0.5,1,2022-01-29,CR Flamengo (1),"2022: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/978051
-1082829,Brenno Klippel,2003,Bahia-BA,266,13,0.4,1,2024-08-03,Botafogo FC (1),2021: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1082829
-1005648,Cauan,2003,Corinthians-SP,267,11,0.4,4,2024-07-20,Manaus Futebol Clube (4),"2021: sub20 | 2022: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/1005648
-999245,Diego Almeida,2003,Sport-PE,268,8,0.4,2,2022-03-26,CS Sergipe (2),2021: sub20 | 2022: copinha,https://www.transfermarkt.com.br/-/profil/spieler/999245
-980979,Lucas,2003,Atlético-GO,269,9,0.4,3,2022-01-30,"NEROCA FC (2), Atlético Clube Goianiense (1)","2022: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/980979
-997468,Marcão,2003,Grêmio-RS,270,16,0.4,1,2024-01-27,Ypiranga FC (1),2021: sub20 | 2022: copinha,https://www.transfermarkt.com.br/-/profil/spieler/997468
-1083671,Pedro Rocha,2003,Fluminense-RJ,271,17,0.4,1,2026-08-26,NK Granicar Kotoriba (1),2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1083671
-1014750,Lucas Bauru,2003,Flamengo-RJ,272,18,0.3,1,2026-01-24,"FC Finnkurd (2), IF São Joseense (1)",2020: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1014750
-1083243,Guilherme Malheiro,2003,Cruzeiro-MG,273,14,0.2,1,2026-02-04,Ivinhema FC (1),2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1083243
-1084080,Kauã Alves,2003,Bragantino-SP,274,12,0.2,1,2026-10-25,FC Oliveira do Hospital (1),2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1084080
-1107623,Lyedson,2003,Grêmio-RS,275,17,0.2,1,2023-03-12,Treze FC (1),2021: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1107623
-1082534,Marcos Daniel,2003,Atlético-GO,276,10,0.2,1,2024-09-08,FC Maia Lidador (1),"2021: sub20 | 2022: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/1082534
-1083603,Vinícius,2003,Atlético-MG,277,13,0.1,1,2026-02-18,Baré EC (10),2021: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1083603
-1237704,João Gabriel,2003,Ceará-CE,278,14,0.0,2,2024-02-25,1.FCA Darmstadt (2),2021: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1237704
+1086545,Renan Araújo,2003,Bragantino-SP,204,11,2.6,6,2025-01-26,Esporte Clube Noroeste (SP) (6),2022: copinha,https://www.transfermarkt.com.br/-/profil/spieler/1086545
+997716,Cayo Felipe,2003,Fluminense-RJ,205,11,2.5,9,2025-01-29,"IF São Joseense (8), Azuriz FC (1)",2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/997716
+1088070,Jean Gabriel,2003,Coritiba-PR,206,3,2.5,9,2024-03-09,"Coritiba Foot Ball Club (6), Figueirense Futebol Clube (3)",2022: copinha,https://www.transfermarkt.com.br/-/profil/spieler/1088070
+1083891,Kaylan,2003,Vasco-RJ,207,9,2.5,17,2023-11-11,"FC Noah Erewan II (8), SC Lusitânia dos Açores (7), CS Sergipe (1)",2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1083891
+1096202,Pedro Henz,2003,Bahia-BA,208,7,2.4,15,2025-01-25,"Santa Cruz FC (RN) (14), Blumenau Esporte Clube (SC) (1)",2021: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1096202
+987055,João Pedro,2003,Bahia-BA,209,8,2.3,11,2022-03-12,"FK Suduva Marijampole (6), Alagoinhas AC (5)",2020: copinha,https://www.transfermarkt.com.br/-/profil/spieler/987055
+1022310,Pedro Cella,2003,Chapecoense-SC,210,7,2.2,13,2023-05-28,Concórdia AC (13),2019: sub20 | 2020: copinha | 2021: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1022310
+796788,Danilo Magalhães,2003,Internacional-RS,211,9,2.1,14,2025-08-23,"Várzea Grande EC (MT) (8), Melaka FC (6)",2020: sub20,https://www.transfermarkt.com.br/-/profil/spieler/796788
+1095227,Felipe,2003,São Paulo-SP,212,12,2.0,9,2022-04-23,"North Texas SC (7), AAD Vitória das Tabocas (PE) (2)",2021: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1095227
+1083792,Thomas Bueno,2003,Santos-SP,213,14,2.0,10,2025-01-12,Clube Laguna (RN) (10),2021: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1083792
+1083077,Vitinho,2003,Atlético-MG,214,9,1.9,17,2025-02-02,"SC Salgueiros (15), AA Maguary (2)",2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1083077
+668225,João Henrique,2003,Atlético-MG,215,10,1.8,9,2025-01-20,"Associação Jaguaré EC (9), Brazil U16 (7)",2020: sub20 | 2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/668225
+950375,Vasco Djú,2003,Bragantino-SP,216,12,1.8,21,2025-08-17,GD Samora Correia (21),2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/950375
+668224,Rodrigo Bazilio,2003,Cruzeiro-MG,217,11,1.8,8,2023-05-06,"Brazil U16 (6), Athletic Club (5), Joinville Esporte Clube (SC) (3)",2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/668224
+997719,Joilson,2003,Fluminense-RJ,218,12,1.7,9,2025-10-18,Young Lions (9),2021: sub20 | 2022: copinha,https://www.transfermarkt.com.br/-/profil/spieler/997719
+1095654,Kauan Galhardo,2003,Ceará-CE,219,11,1.7,25,2025-08-17,FC Wolfurt (37),2021: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1095654
+862569,Alisson Índio,2003,Atlético-GO,220,8,1.6,8,2024-02-21,"Araguaína FR (7), Joinville Esporte Clube (SC) (1)",2020: copinha | 2021: sub20 | 2022: copinha,https://www.transfermarkt.com.br/-/profil/spieler/862569
+1082749,João Henrique,2003,Fortaleza-CE,221,7,1.6,8,2024-02-07,ACEC Baraúnas (8),"2021: sub20 | 2022: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/1082749
+977701,Patrick Paixão,2003,Vasco-RJ,222,10,1.6,8,2025-02-02,Galvez EC (8),2020: sub20,https://www.transfermarkt.com.br/-/profil/spieler/977701
+1027016,Brian Carvalho,2003,São Paulo-SP,223,13,1.5,10,2026-01-06,IF São Joseense (10),2021: sub20 | 2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1027016
+989593,Reginaldo,2003,Goiás-GO,224,1,1.5,5,2022-02-20,Goiás EC (5),2022: copinha,https://www.transfermarkt.com.br/-/profil/spieler/989593
+997491,Victor Lustosa,2003,Grêmio-RS,225,14,1.5,13,2022-05-14,"EC São Luiz (6), Concórdia AC (5), Esporte Clube Bahia (2)","2021: sub20 | 2022: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/997491
+902118,Ighor Gabryel,2003,América-MG,226,7,1.4,8,2023-11-26,"EC Santo André (6), América Futebol Clube (MG) (2)","2020: sub20 | 2021: sub20 | 2022: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/902118
+1097777,Luan Caranhato,2003,Chapecoense-SC,227,8,1.4,11,2024-02-02,"SC Humaitá (10), SE Ceilandense (1)",2019: sub20 | 2020: copinha | 2021: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1097777
+1083105,Luan Freitas,2003,Bahia-BA,228,9,1.4,7,2025-01-20,Associação Jaguaré EC (7),2020: sub20 | 2021: sub20 | 2022: copinha,https://www.transfermarkt.com.br/-/profil/spieler/1083105
+1086638,Abimael,2003,Corinthians-SP,229,9,1.2,6,2026-01-11,Centro Oeste FC (GO) (7),2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1086638
+1018610,Dijalma,2003,Vasco-RJ,230,11,1.2,11,2024-01-23,"Porto SC (7), Porto Vitória FC (4)",2021: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1018610
+838057,Eliel Costa,2003,Criciúma-SC,231,3,1.2,4,2024-01-31,Criciúma EC (4),2022: copinha,https://www.transfermarkt.com.br/-/profil/spieler/838057
+1083542,Jorge Vinícius,2003,Coritiba-PR,232,4,1.2,4,2025-01-22,Coritiba Foot Ball Club (4),2022: copinha,https://www.transfermarkt.com.br/-/profil/spieler/1083542
+1083679,Kevin Quiñónes,2003,Internacional-RS,233,10,1.2,14,2025-03-08,Colón FC de Uruguay (14),2021: sub20 | 2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1083679
+795952,Pedro Paraguai,2003,Ceará-CE,234,12,1.2,5,2020-10-26,"Associação Olímpica de Itabaiana (SE) (4), AD Confiança (1)",2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/795952
+964599,Arthur Vanzela,2003,Chapecoense-SC,235,9,1.1,8,2021-12-10,"Goiânia EC (5), Associação Chapecoense de Futebol (3)",2019: sub20 | 2020: copinha | 2021: serie_a | 2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/964599
+1083668,Caio Amaral,2003,Fluminense-RJ,236,13,1.1,4,2026-03-22,"Caldas SC (3), SC União Torreense (1)",2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1083668
+1093495,Cris,2003,Ceará-CE,237,13,1.1,7,2024-06-15,"Audax Rio de Janeiro EC (4), Santa Cruz FC (RN) (3)",2020: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1093495
+1523272,Gabriel,2003,Atlético-MG,238,11,1.1,6,2026-08-03,Olympia Erewan (6),2021: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1523272
+978277,Kayky Alves,2003,São Paulo-SP,239,14,1.1,4,2023-02-16,"NK Croatia Zmijavci (3), Operário Ferroviário Esporte Clube (PR) (1)",2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/978277
+1083636,Allan Aniz,2003,Bahia-BA,240,10,1.0,2,2024-10-19,"Central & Western District (26), Kui Tan (5), Miami FC (2)","2020: sub20 | 2021: sub20 | 2022: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/1083636
+1083106,Felipe Redaelli,2003,Bahia-BA,241,11,1.0,3,2025-08-17,Clube Náutico Capibaribe (3),"2021: sub20 | 2022: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/1083106
+599262,Stevanato,2003,América-MG,242,8,1.0,3,2023-07-22,"Ituano Futebol Clube (SP) (2), Marshall Thundering Herd (Marshall University) (1), Hercílio Luz FC (1)",2020: sub20 | 2021: sub20 | 2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/599262
+1082520,João Paulo,2003,Athletico-PR,243,10,1.0,5,2025-12-20,Tocantinópolis EC (5),2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1082520
+961805,Nathan Oliveira,2003,Coritiba-PR,244,5,1.0,5,2025-02-04,Batalhão FC (5),2022: copinha,https://www.transfermarkt.com.br/-/profil/spieler/961805
+1084353,Paulo Henrique,2003,Botafogo-RJ,245,8,1.0,5,2025-02-08,Rio Branco Football Club (AC) (5),"2020: sub20 | 2021: sub20 | 2022: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/1084353
+1117283,André Henrique,2003,Ponte Preta-SP,246,3,0.9,6,2024-01-28,"EC Santo André (5), Associação Atlética Ponte Preta (1)",2022: copinha,https://www.transfermarkt.com.br/-/profil/spieler/1117283
+738411,Adriano,2003,Sport-PE,247,7,0.9,3,2026-01-10,Sport Club do Recife (3),2022: copinha,https://www.transfermarkt.com.br/-/profil/spieler/738411
+997866,Cassiano,2003,Flamengo-RJ,248,16,0.9,3,2022-04-10,Mirassol Futebol Clube (SP) (3),2022: copinha,https://www.transfermarkt.com.br/-/profil/spieler/997866
+1093631,Souza,2003,Fluminense-RJ,249,14,0.9,5,2023-02-16,"Clube Recreativo e Atlético Catalano (GO) (4), Volta Redonda Futebol Clube (RJ) (1)",2021: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1093631
+668264,Danilo,2003,Cruzeiro-MG,250,12,0.8,2,2026-01-17,"Brazil U16 (6), Betim Futebol (2)",2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/668264
+1043005,Guilherme Rosa,2003,América-MG,251,9,0.8,4,2024-01-27,Nova Venécia FC (4),2021: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1043005
+1083071,Kaian,2003,Atlético-MG,252,12,0.8,4,2024-01-14,Samambaia FC (4),2021: sub20 | 2022: copinha,https://www.transfermarkt.com.br/-/profil/spieler/1083071
+1083963,Marlon Santos,2003,Vasco-RJ,253,12,0.8,4,2023-01-14,"Bulgan SP Falcons (4), Clube de Regatas Vasco da Gama (1)","2020: sub20 | 2021: sub20 | 2022: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/1083963
+1130651,Robert,2003,Corinthians-SP,254,10,0.8,4,2026-01-22,SC Genus (4),2021: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1130651
+959088,Thiago Beltrame,2003,Grêmio-RS,255,15,0.8,1,2026-05-30,Grêmio Foot-Ball Porto Alegrense (1),2021: sub20 | 2022: copinha,https://www.transfermarkt.com.br/-/profil/spieler/959088
+831129,Victor Michell,2003,Palmeiras-SP,256,16,0.8,5,2025-01-22,Betim Futebol (5),"2020: sub20 | 2022: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/831129
+1095494,Wesley,2003,Cruzeiro-MG,257,13,0.8,7,2023-08-26,"Siheung City FC (6), Betim Futebol (1)",2020: sub20 | 2021: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1095494
+1074486,Daniel Ghiggino,2003,Fluminense-RJ,258,15,0.7,1,2022-10-27,Goiás EC (1),2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1074486
+1031313,Gabriel Lira,2003,Fluminense-RJ,259,16,0.7,10,2024-01-24,"Ipatinga FC (9), Figueirense Futebol Clube (1)",2021: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1031313
+1058450,Jackson Henrique,2003,Criciúma-SC,260,4,0.7,2,2022-09-08,"AD Confiança (1), Criciúma EC (1)",2022: copinha,https://www.transfermarkt.com.br/-/profil/spieler/1058450
+1008634,Diego,2003,Fluminense-RJ,261,17,0.6,2,2021-04-18,Hercílio Luz FC (2),2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1008634
+1094566,João Cominetti,2003,Chapecoense-SC,262,10,0.6,3,2023-02-15,Academia FC (3),2020: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1094566
+987717,Marcos Paulo,2003,Vasco-RJ,263,13,0.6,7,2025-08-24,Anadia FC (7),2021: sub20 | 2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/987717
+1091895,Patricio,2003,Vitória-BA,264,4,0.6,3,2023-03-18,"Manauara EC (2), Itabuna EC (1)",2022: copinha,https://www.transfermarkt.com.br/-/profil/spieler/1091895
+1090788,Ronald,2003,Sport-PE,265,8,0.6,2,2025-02-15,"Atlético Rio Negro (7), Cariri FC (CE) (2)",2020: sub20 | 2021: sub20 | 2022: copinha,https://www.transfermarkt.com.br/-/profil/spieler/1090788
+1082842,Vinícius Amaral,2003,Bahia-BA,266,12,0.6,3,2025-02-20,"Gombak Football Club (14), Inhumas EC (2), EC Novo Hamburgo (1)",2022: copinha,https://www.transfermarkt.com.br/-/profil/spieler/1082842
+997860,Breninho,2003,Fortaleza-CE,267,8,0.5,1,2024-02-20,Bangu Atlético Clube (RJ) (1),"2021: sub20 | 2022: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/997860
+1083887,Pablo,2003,Vasco-RJ,268,14,0.5,1,2025-01-11,Clube de Regatas Vasco da Gama (1),"2020: sub20 | 2021: sub20 | 2022: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/1083887
+978051,Richard,2003,Flamengo-RJ,269,17,0.5,1,2022-01-29,CR Flamengo (1),"2022: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/978051
+1082829,Brenno Klippel,2003,Bahia-BA,270,13,0.4,1,2024-08-03,Botafogo FC (1),2021: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1082829
+1005648,Cauan,2003,Corinthians-SP,271,11,0.4,4,2024-07-20,Manaus Futebol Clube (4),"2021: sub20 | 2022: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/1005648
+999245,Diego Almeida,2003,Sport-PE,272,9,0.4,2,2022-03-26,CS Sergipe (2),2021: sub20 | 2022: copinha,https://www.transfermarkt.com.br/-/profil/spieler/999245
+980979,Lucas,2003,Atlético-GO,273,9,0.4,3,2022-01-30,"NEROCA FC (2), Atlético Clube Goianiense (1)","2022: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/980979
+997468,Marcão,2003,Grêmio-RS,274,16,0.4,1,2024-01-27,Ypiranga FC (1),2021: sub20 | 2022: copinha,https://www.transfermarkt.com.br/-/profil/spieler/997468
+1083671,Pedro Rocha,2003,Fluminense-RJ,275,18,0.4,1,2026-08-26,NK Granicar Kotoriba (1),2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1083671
+1014750,Lucas Bauru,2003,Flamengo-RJ,276,18,0.3,1,2026-01-24,"FC Finnkurd (2), IF São Joseense (1)",2020: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1014750
+1083243,Guilherme Malheiro,2003,Cruzeiro-MG,277,14,0.2,1,2026-02-04,Ivinhema FC (1),2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1083243
+1084080,Kauã Alves,2003,Bragantino-SP,278,13,0.2,1,2026-10-25,FC Oliveira do Hospital (1),2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1084080
+1107623,Lyedson,2003,Grêmio-RS,279,17,0.2,1,2023-03-12,Treze FC (1),2021: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1107623
+1082534,Marcos Daniel,2003,Atlético-GO,280,10,0.2,1,2024-09-08,FC Maia Lidador (1),"2021: sub20 | 2022: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/1082534
+973802,Mauro,2003,Santos-SP,281,15,0.1,1,2025-02-26,Barcelona FC (RO) (1),2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/973802
+1083603,Vinícius,2003,Atlético-MG,282,13,0.1,1,2026-02-18,Baré EC (10),2021: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1083603
+1237704,João Gabriel,2003,Ceará-CE,283,14,0.0,2,2024-02-25,1.FCA Darmstadt (2),2021: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1237704
 743591,Sávio,2004,Atlético-MG,1,1,391.5,196,2020-09-20,"Manchester City (84), Girona FC (41), Clube Atlético Mineiro (35)","2020: serie_a | 2021: sub20, serie_a | 2022: serie_a",https://www.transfermarkt.com.br/-/profil/spieler/743591
 749559,Victor Hugo,2004,Flamengo-RJ,2,1,225.6,197,2022-05-01,"CR Flamengo (106), Clube Atlético Mineiro (47), Göztepe (35)","2020: sub20 | 2022: copinha, serie_a",https://www.transfermarkt.com.br/-/profil/spieler/749559
 743600,Andrey Santos,2004,Vasco-RJ,3,1,216.8,168,2021-03-07,"Clube de Regatas Vasco da Gama (49), Chelsea FC (47), RC Strasbourg Alsace (45)","2020: sub20 | 2021: sub20, serie_b | 2022: copinha, serie_b",https://www.transfermarkt.com.br/-/profil/spieler/743600
@@ -2879,143 +2886,150 @@ tm_id,nome,coorte,clube,posicao_coorte,posicao_clube,pontos,jogos_pro,primeiro_j
 960584,Fernando Nava,2004,Athletico-PR,60,6,19.0,62,2023-08-27,"Club Deportivo Oriente Petrolero (32), Club Always Ready (15), Bolivia (9)",2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/960584
 970339,Vitor Meer,2004,Corinthians-SP,61,5,18.8,37,2025-01-12,"APOEL Nicosia (31), Iraklis Thessaloniki (6)",2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/970339
 1084073,Marcelinho Braz,2004,Bragantino-SP,62,2,18.5,16,2025-08-06,Red Bull Bragantino (16),"2022: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/1084073
-1038907,Patrick Verhon,2004,Bahia-BA,63,1,18.4,43,2022-07-29,"Oita Trinita (19), Esporte Clube Bahia (10), FC Imabari (7)","2020: sub20 | 2021: sub20 | 2022: copinha, sub20, serie_b",https://www.transfermarkt.com.br/-/profil/spieler/1038907
-1082539,Edney,2004,Palmeiras-SP,64,6,18.1,45,2025-05-10,"Portimonense SAD (42), CD Santa Clara (3)",2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1082539
-1044572,Óscar Benítez,2004,Bragantino-SP,65,3,17.7,65,2024-05-12,"Philadelphia Union II (50), St. Louis CITY SC 2 (15)",2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1044572
-1084065,Arielson,2004,Cruzeiro-MG,66,2,17.4,48,2023-08-18,"Polissya Zhytomyr (16), SC União Torreense (12), Damac FC (10)",2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1084065
-980854,Ythallo,2004,São Paulo-SP,67,4,15.6,57,2024-03-17,"Toronto FC II (50), Botafogo de Futebol e Regatas (7)","2022: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/980854
-1090823,Ruan Assis,2004,Coritiba-PR,68,4,15.0,33,2023-05-27,"Coritiba Foot Ball Club (16), Athletic Club (14), Avs Futebol (3)",2022: copinha,https://www.transfermarkt.com.br/-/profil/spieler/1090823
-1091893,Zé Breno,2004,Vitória-BA,69,2,14.9,44,2024-02-15,"Londrina Esporte Clube (PR) (21), Esporte Clube Vitória (12), Itabuna EC (9)",2022: copinha,https://www.transfermarkt.com.br/-/profil/spieler/1091893
-1083669,Rafael Monteiro,2004,Fluminense-RJ,70,3,14.5,38,2023-10-31,"Londrina Esporte Clube (PR) (16), Amazonas FC (13), Fluminense Football Club (9)",2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1083669
-1085182,Rafa Barcelos,2004,América-MG,71,3,14.0,43,2025-02-06,América Futebol Clube (MG) (43),2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1085182
-637809,Jhosefer,2004,Cruzeiro-MG,72,3,13.2,38,2022-03-13,"ABC Futebol Clube (RN) (21), América Futebol Clube (MG) (13), Cruzeiro Esporte Clube (4)",2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/637809
-1084622,Phellipe,2004,Bragantino-SP,73,4,12.8,36,2025-07-24,"Istanbulspor (22), Cherno More Varna (14)",2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1084622
-1090821,Felipe Guimarães,2004,Coritiba-PR,74,5,12.4,28,2024-06-07,"Coritiba Foot Ball Club (18), Atlético Clube Goianiense (10)",2022: copinha,https://www.transfermarkt.com.br/-/profil/spieler/1090821
-1083109,Vitinho,2004,Bahia-BA,75,2,12.4,41,2023-02-11,"Santa Cruz FC (PE) (25), Esporte Clube Bahia (10), FC Paços de Ferreira (6)",2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1083109
-1096266,Da Rocha,2004,Juventude-RS,76,1,12.3,50,2023-02-09,"Barra FC (48), Esporte Clube Juventude (2)","2022: copinha, serie_a",https://www.transfermarkt.com.br/-/profil/spieler/1096266
-1082625,Patrick,2004,Palmeiras-SP,77,7,11.8,12,2025-02-15,"Clube Atlético Mineiro (10), Red Bull Bragantino (2)",2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1082625
-1019701,Pedrão,2004,Cruzeiro-MG,78,4,11.6,26,2022-06-04,"Avaí FC (22), Pafos FC (2), Cruzeiro Esporte Clube (2)","2022: sub20, serie_b",https://www.transfermarkt.com.br/-/profil/spieler/1019701
-1082633,Wendell,2004,Palmeiras-SP,79,8,11.5,59,2024-11-03,"FCI Levadia (49), PFC Zvyagel (11), Polissya-2 Zhytomyr (10)",2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1082633
-1084078,Wesley,2004,Bragantino-SP,80,5,11.3,69,2025-03-01,"FC Hegelmann (68), FC Hegelmann B (1)",2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1084078
-989591,Xavier,2004,Goiás-GO,81,2,11.1,36,2023-12-06,"Tombense Futebol Clube (MG) (22), AA Aparecidense (13), Goiás EC (1)",2022: copinha,https://www.transfermarkt.com.br/-/profil/spieler/989591
-743830,Léo Ataíde,2004,Athletico-PR,82,7,10.9,31,2022-01-23,"Cuiabá Esporte Clube (MT) (16), Brusque Futebol Clube (SC) (11), Club Athletico Paranaense (4)","2020: copinha, sub20 | 2021: sub20 | 2022: sub20",https://www.transfermarkt.com.br/-/profil/spieler/743830
-834445,Serafim,2004,Palmeiras-SP,83,9,10.9,43,2025-01-11,"Al-Dhafra FC (34), Botafogo de Futebol e Regatas (9)",2020: sub20,https://www.transfermarkt.com.br/-/profil/spieler/834445
-834898,Vitinho,2004,Atlético-MG,84,6,10.8,48,2023-09-24,"UCSA Tarasivka (13), Blumenau Esporte Clube (SC) (11), FC RFS II (8)","2021: sub20 | 2022: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/834898
-1012166,Caio Rafael,2004,Ceará-CE,85,3,10.5,34,2022-11-13,"Londrina Esporte Clube (PR) (17), FC Paços de Ferreira (10), Ceará Sporting Club (7)","2020: sub20 | 2021: sub20 | 2022: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/1012166
-1082852,Hyan,2004,Santos-SP,86,6,10.4,22,2024-07-05,"Avaí FC (19), Santos FC (3)",2020: sub20 | 2021: sub20 | 2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1082852
-1083974,Ray Breno,2004,Vasco-RJ,87,6,9.9,25,2025-01-18,"Esporte Clube Juventude (11), Pouso Alegre FC (8), Nova Iguaçu FC (RJ) (6)",2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1083974
-965613,Isaac,2004,Atlético-GO,88,2,9.3,36,2022-01-26,"SU 1º Dezembro (25), CD Feirense (6), Atlético Clube Goianiense (3)","2021: sub20 | 2022: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/965613
-1082969,Wesley Costa,2004,Grêmio-RS,89,1,9.0,24,2023-10-21,"Figueirense Futebol Clube (12), Agremiação Sportiva Arapiraquense (AL) (7), Grêmio Foot-Ball Porto Alegrense (5)",2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1082969
-1082838,Nathan Silva,2004,Bahia-BA,90,3,8.7,41,2023-02-11,"STK 1914 Samorin (23), FC Hegelmann (7), Ituano Futebol Clube (SP) (5)",2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1082838
-997863,Samuel Alves,2004,América-MG,91,4,8.4,26,2023-08-31,"Uberlândia EC (13), América Futebol Clube (MG) (13)","2022: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/997863
-841910,Victão,2004,Vasco-RJ,92,7,8.4,38,2024-01-18,"Pouso Alegre FC (36), Clube de Regatas Vasco da Gama (2)","2022: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/841910
-1084621,Jeffão,2004,Bragantino-SP,93,6,8.1,24,2024-03-02,"Ferroviário AC (23), Villa Nova AC (1)","2022: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/1084621
-1082840,Kauã Davi,2004,Bahia-BA,94,4,7.9,28,2024-03-28,"FCI Levadia (17), Esporte Clube Bahia (11)","2022: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/1082840
-997489,Arthur Coneglian,2004,Grêmio-RS,95,2,7.4,30,2024-08-14,"FC Noah Yerevan (23), FC Noah Erewan II (7)",2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/997489
-1082705,Paulo Henrique,2004,Chapecoense-SC,96,2,7.4,37,2024-11-24,"AD Confiança (15), CS Sergipe (12), EC São Luiz (9)",2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1082705
-1084936,Freddy Noguera,2004,Grêmio-RS,97,3,7.2,27,2023-07-23,"CA Boston River (18), Club Cerro Porteño (6), Club Olimpia (2)",2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1084936
-1084668,Gustavo Lobo,2004,Fluminense-RJ,98,4,7.2,28,2024-08-24,"CD Trofense (17), AD Marco 09 (7), Leixões SC (4)",2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1084668
-980823,Kayque,2004,São Paulo-SP,99,5,7.2,36,2020-10-10,"Barra FC (30), Clube Atlético Mineiro (3), AD Bahia de Feira (BA) (3)",2021: sub20,https://www.transfermarkt.com.br/-/profil/spieler/980823
-1086260,Thiago Henrique,2004,Fluminense-RJ,100,5,7.0,16,2025-01-12,"Krasava ENY (14), Fluminense Football Club (2)",2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1086260
-1083672,Jhonatan Kauan,2004,Internacional-RS,101,3,6.8,30,2025-01-27,"Deportes La Serena (23), Pouso Alegre FC (7)","2022: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/1083672
-1082770,Yuri,2004,Fortaleza-CE,102,2,6.7,34,2023-07-15,"FC Atlético Cearense (17), CEFAT Tirol (16), IF Karlstad Fotboll (10)",2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1082770
-1082706,Islan,2004,Chapecoense-SC,103,3,6.6,24,2024-04-17,"Piauí EC (PI) (11), ABC Futebol Clube (RN) (10), Vila Nova Futebol Clube (GO) (2)",2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1082706
-980968,Renan Silva,2004,Atlético-GO,104,3,6.6,41,2023-06-03,"Goiatuba EC (21), Goiânia EC (6), Atlético Clube Goianiense (6)","2021: sub20 | 2022: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/980968
-980767,Rangel,2004,Internacional-RS,105,4,6.2,29,2024-09-23,"Al-Fayha FC (13), Al-Fujairah SC (12), Al-Dhafra FC (4)","2022: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/980767
-1069905,Matheus Xavier,2004,Cruzeiro-MG,106,5,6.1,12,2022-10-09,"Ferroviário AC (9), Cruzeiro Esporte Clube (3)","2022: sub20, serie_b",https://www.transfermarkt.com.br/-/profil/spieler/1069905
-1083635,Davi Schuindt,2004,Fluminense-RJ,107,6,5.6,9,2025-01-12,"Fluminense Football Club (5), Avs Futebol (4)",2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1083635
-1090777,David Peres,2004,Sport-PE,108,2,5.6,43,2024-08-03,"Benfica Castelo Branco (28), Varzim SC (8), AD Sanjoanense (7)",2022: copinha,https://www.transfermarkt.com.br/-/profil/spieler/1090777
-1083971,Lucas Eduardo,2004,Vasco-RJ,109,8,5.6,11,2023-01-14,"Avaí FC (6), Clube de Regatas Vasco da Gama (4), Cuiabá Esporte Clube (MT) (1)","2021: sub20 | 2022: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/1083971
-1005645,Pedrinho,2004,Corinthians-SP,110,6,5.6,13,2023-03-12,"Wydad Casablanca (12), Sport Club Corinthians Paulista (1)",2020: sub20 | 2021: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1005645
-1086376,Gustavo Bagatini,2004,Grêmio-RS,111,4,5.5,29,2025-02-02,Esporte Clube São José (RS) (29),2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1086376
-1036474,Léo Dourado,2004,Athletico-PR,112,8,5.3,14,2025-01-29,"EC Democrata (7), Athletic Club (7)","2022: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/1036474
-1082586,Carlinhos,2004,Palmeiras-SP,113,10,5.2,34,2025-08-10,Louletano DC (34),2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1082586
-1005653,Kauê,2004,Corinthians-SP,114,7,5.2,6,2025-12-07,Sport Club Corinthians Paulista (6),2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1005653
-1087728,Francisco,2004,Sport-PE,115,3,5.1,29,2025-01-12,"AA Maguary (20), AA Altos (9)",2022: copinha,https://www.transfermarkt.com.br/-/profil/spieler/1087728
-1082839,Hygor,2004,Vasco-RJ,116,9,5.1,17,2023-02-11,"Azuriz FC (10), Bangu Atlético Clube (RJ) (6), Esporte Clube Bahia (1)",2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1082839
-1084623,Bandaró,2004,Bragantino-SP,117,7,5.1,20,2025-10-29,Cherno More Varna (20),"2022: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/1084623
-1083094,Lucas Aruba,2004,Bahia-BA,118,5,5.1,27,2023-02-26,"Valmiera FC II (15), Cianorte Futebol Clube (PR) (6), Valmiera FC (3)","2022: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/1083094
-985208,Carlão,2004,América-MG,119,5,5.0,11,2026-08-21,CD Tondela (11),"2021: sub20 | 2022: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/985208
-997862,Darlan,2004,Flamengo-RJ,120,5,4.9,15,2026-01-11,"AA Aparecidense (10), Botafogo FC (7)",2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/997862
-1079283,Daniel Mazerochi,2004,Ceará-CE,121,4,4.7,16,2022-11-13,"Treze FC (9), Sampaio Corrêa FC (MA) (6), Ceará Sporting Club (1)",2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1079283
-1082703,Gerson,2004,Chapecoense-SC,122,4,4.6,17,2025-01-24,"CA Carlos Renaux (8), Clube Náutico Marcílio Dias (SC) (7), CE Operário Várzea-Grandense (2)",2021: sub20 | 2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1082703
-997473,Hiago,2004,Grêmio-RS,123,5,4.5,10,2026-08-15,"Avs Futebol (9), CD Santa Clara (1)","2021: sub20 | 2022: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/997473
-838385,João Douglas,2004,São Paulo-SP,124,6,4.4,29,2025-09-14,"FC Alverca B (19), O Elvas CAD (10)",2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/838385
-997463,Arthur Viana,2004,Grêmio-RS,125,6,4.2,17,2024-06-16,"Ehime FC (8), CD Feirense (6), Cruzeiro Esporte Clube (3)","2022: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/997463
-1026669,Eli Júnior,2004,Chapecoense-SC,126,5,4.2,13,2024-08-11,"Aruko Sports Brasil (6), Concórdia AC (6), Atlético Clube Goianiense (1)","2019: sub20 | 2020: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/1026669
-994229,Gabriel Souza,2004,Bahia-BA,127,6,3.9,14,2025-01-12,"Santa Cruz FC (PE) (11), Esporte Clube Bahia (3)","2021: sub20 | 2022: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/994229
-983980,Gustavo Sciencia,2004,Palmeiras-SP,128,11,3.9,19,2025-05-24,Portuguesa (19),2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/983980
-1069871,Zé Welinton,2004,Flamengo-RJ,129,6,3.7,10,2024-01-21,"CR Flamengo (6), Al-Dhafra FC (4), Brazil U16 (1)",2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1069871
-1082831,Rafael Soares,2004,Bahia-BA,130,7,3.7,11,2024-01-18,"Londrina Esporte Clube (PR) (8), Esporte Clube Bahia (3)","2021: sub20 | 2022: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/1082831
-1082543,Dyogo Alves,2004,Flamengo-RJ,131,7,3.6,5,2025-01-12,CR Flamengo (5),2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1082543
-963727,Caio Matheus,2004,São Paulo-SP,132,7,3.5,7,2022-01-30,"Coritiba Foot Ball Club (5), São Paulo Futebol Clube (2)",2021: sub20 | 2022: copinha,https://www.transfermarkt.com.br/-/profil/spieler/963727
-980981,Thiago Medeiros,2004,Atlético-GO,133,4,3.5,19,2022-01-30,"Atlético Clube Goianiense (13), CD Santa Clara B (5), Operário Ferroviário Esporte Clube (PR) (1)","2021: sub20 | 2022: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/980981
-1082529,Renan Cosenza,2004,Atlético-GO,134,5,3.4,15,2023-02-11,"FC Cascavel (PR) (12), Atlético Clube Goianiense (3)",2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1082529
-867814,João Pedro,2004,Atlético-GO,135,6,3.3,28,2021-02-28,"Zabbar St. Patrick FC (26), Botafogo FC (2)",2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/867814
-802644,Carlos Biro,2004,Athletico-PR,136,9,3.2,14,2025-02-12,"Brusque Futebol Clube (SC) (11), Azuriz FC (3)","2022: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/802644
-1074477,Kaua Moura,2004,Vasco-RJ,137,10,3.2,14,2023-07-29,"Spartak Myjava (7), MFK Skalica (7)",2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1074477
-1082521,Athyrson,2004,Athletico-PR,138,10,3.0,3,2025-02-27,Red Bull Bragantino (3),2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1082521
-1027018,Mateus Amaral,2004,São Paulo-SP,139,8,3.0,18,2025-03-07,"FC Oleksandriya-2 (17), FC Oleksandriya (16), Duqara Club (2)",2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1027018
-981161,Samuel,2004,Atlético-GO,140,7,2.9,14,2023-01-25,"Goiânia EC (8), FC Felgueiras 1932 (6)",2021: sub20 | 2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/981161
-1083677,Gustavo Sarjani,2004,Internacional-RS,141,5,2.9,21,2024-11-24,"Cheonan City (15), Luverdense EC (MT) (5), Vila Nova Futebol Clube (GO) (1)",2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1083677
-834462,David,2004,Ceará-CE,142,5,2.4,7,2021-05-02,"Ceará Sporting Club (4), Ferroviária (3)","2020: sub20 | 2021: sub20 | 2022: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/834462
-1083637,Samuel Bastos,2004,Internacional-RS,143,6,2.4,10,2025-01-29,Pouso Alegre FC (10),"2021: sub20 | 2022: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/1083637
-1018288,Yan Costa,2004,Fortaleza-CE,144,3,2.3,10,2022-05-08,"Caucaia Esporte Clube (CE) (5), FC Atlético Cearense (5)",2021: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1018288
-1027019,João Gabriel,2004,São Paulo-SP,145,9,2.2,8,2026-01-06,Maracanã EC (8),2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1027019
-1083248,Wendel,2004,Cruzeiro-MG,146,6,2.1,12,2025-10-26,Amora FC (12),2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1083248
-1519051,Adriel,2004,Internacional-RS,147,7,2.0,10,2026-02-12,Santos FC (10),2022: copinha,https://www.transfermarkt.com.br/-/profil/spieler/1519051
-1084951,Pedro Careca,2004,Fluminense-RJ,148,7,2.0,10,2025-02-08,AD Senador Guiomard (10),2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1084951
-1083890,Roger Fellipo,2004,Vasco-RJ,149,11,2.0,11,2025-01-22,"EC Água Santa (SP) (10), Figueirense Futebol Clube (1)",2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1083890
-846572,Luis Felipe,2004,São Paulo-SP,150,10,1.9,10,2026-01-11,"Santa Cruz FC (RN) (9), ABC Futebol Clube (RN) (1)",2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/846572
-942577,Marcelo Henrique,2004,Sport-PE,151,4,1.9,12,2021-06-06,"Boavista SC (10), Bangu Atlético Clube (RJ) (2)",2022: copinha,https://www.transfermarkt.com.br/-/profil/spieler/942577
-1083222,Pablo,2004,Ceará-CE,152,6,1.9,5,2024-02-04,"Santa Catarina Clube (SC) (3), Ceará Sporting Club (2)",2021: sub20 | 2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1083222
-985349,Igor Nogueira,2004,América-MG,153,6,1.8,9,2023-03-05,"FC Kharkiv (8), Lagarto FC (1)",2022: copinha,https://www.transfermarkt.com.br/-/profil/spieler/985349
-867811,Tortello,2004,Internacional-RS,154,8,1.7,4,2021-02-28,Botafogo FC (4),2022: copinha,https://www.transfermarkt.com.br/-/profil/spieler/867811
-1082517,Waltinho,2004,Athletico-PR,155,11,1.7,11,2026-01-22,Inhumas EC (11),2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1082517
-800608,Wilker,2004,Atlético-MG,156,7,1.7,6,2020-09-27,Londrina Esporte Clube (PR) (6),2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/800608
-1086577,Gabriel Amaral,2004,Bragantino-SP,157,8,1.6,10,2026-08-16,FC Oliveira do Hospital (10),2022: copinha,https://www.transfermarkt.com.br/-/profil/spieler/1086577
-1088852,Gabriel Morais,2004,Athletico-PR,158,12,1.5,4,2022-02-24,"Figueirense Futebol Clube (2), Clube de Regatas Brasil (AL) (2)",2019: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1088852
-1083098,Ícaro,2004,Bahia-BA,159,8,1.5,5,2025-01-18,Londrina Esporte Clube (PR) (5),2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1083098
-744881,Ítalo Isaac,2004,Cruzeiro-MG,160,7,1.5,3,2026-01-15,Bangu Atlético Clube (RJ) (3),2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/744881
-1103168,Dagoberto,2004,Atlético-GO,161,8,1.5,5,2023-02-01,"Floresta Esporte Clube (CE) (3), FC Atlético Cearense (2)",2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1103168
-805412,Alison Matheus,2004,Santos-SP,162,7,1.4,2,2026-03-26,Amazonas FC (2),2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/805412
-834461,Caio Ribas,2004,Atlético-MG,163,8,1.4,10,2025-09-14,"Amora FC (6), SC Salgueiros (4)",2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/834461
-1027024,Eduardo Brito,2004,São Paulo-SP,164,11,1.4,13,2024-03-24,"Hwaseong FC (11), Inhumas EC (2)",2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1027024
-747322,Lucca,2004,Juventude-RS,165,2,1.4,9,2025-08-27,"Gandzasar Kapan (7), US Carrarese Primavera (4), Slovan Duslo Sala (2)",2022: copinha,https://www.transfermarkt.com.br/-/profil/spieler/747322
-978212,Gabriel Ribeiro,2004,Atlético-GO,166,9,1.3,4,2022-01-26,"Atlético Clube Goianiense (3), AA Aparecidense (1)",2021: sub20 | 2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/978212
-1086635,Mindinho,2004,Corinthians-SP,167,8,1.2,6,2026-02-01,Capital FC (TO) (6),2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1086635
-838386,Leandro Mathias,2004,São Paulo-SP,168,12,1.2,3,2026-04-22,Botafogo FC (3),"2021: sub20 | 2022: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/838386
-1083612,Esquerdinha,2004,Botafogo-RJ,169,3,1.2,4,2025-01-12,IF São Joseense (4),2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1083612
-1084941,Guilherme Varjão,2004,Internacional-RS,170,9,1.1,11,2024-07-28,STK 1914 Samorin (11),"2022: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/1084941
-1082813,Cauã Lucca,2004,São Paulo-SP,171,13,1.0,15,2025-05-31,"Manaus Futebol Clube (8), Luverdense EC (MT) (4), Boavista SC (3)",2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1082813
-1083216,Dieguinho,2004,Ceará-CE,172,7,1.0,13,2024-09-16,"FC Atlético Cearense (8), Sociedade Imperatriz de Desportos (MA) (4), Ferroviária (1)",2021: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1083216
-1083097,Gustavo Kawã,2004,Bahia-BA,173,9,1.0,4,2023-02-11,"Porto SC (2), Esporte Clube Bahia (2)",2021: sub20 | 2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1083097
-1038805,Marcos Vinicius,2004,Athletico-PR,174,13,1.0,5,2025-01-15,ABC Futebol Clube (RN) (5),"2022: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/1038805
-1082888,Matheus Rodrigues,2004,Atlético-GO,175,10,1.0,7,2025-08-24,"Imortal DC (6), SC Farense (1)",2022: copinha,https://www.transfermarkt.com.br/-/profil/spieler/1082888
-902123,Heitor,2004,América-MG,176,7,0.8,3,2026-08-24,América Futebol Clube (MG) (3),"2022: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/902123
-1082532,Jesus Garcia,2004,Atlético-GO,177,11,0.8,4,2023-02-04,Inhumas EC (4),2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1082532
-1083242,Artur,2004,Cruzeiro-MG,178,8,0.5,10,2025-04-19,Itabirito FC (10),2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1083242
-1083678,Kaua Bastian,2004,Internacional-RS,179,10,0.5,6,2026-08-22,Hatta Club (6),2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1083678
-743826,Luiz Guilherme,2004,Palmeiras-SP,180,12,0.5,2,2026-04-18,"Brazil U16 (6), AA Internacional de Limeira (2)",2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/743826
-1083096,Abraão,2004,Bahia-BA,181,10,0.4,2,2025-01-19,Agro Esporte Clube (2),2020: sub20 | 2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1083096
-1083220,Kadu,2004,Ceará-CE,182,8,0.4,2,2025-01-29,Serra Branca EC (2),2020: sub20 | 2021: sub20 | 2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1083220
-1261283,Diego Coelho,2004,Atlético-GO,183,12,0.4,2,2025-02-22,Bela Vista Futebol Cachoeirense (2),2022: copinha,https://www.transfermarkt.com.br/-/profil/spieler/1261283
-1082730,Gustavo Nobre,2004,Fortaleza-CE,184,4,0.4,2,2026-02-05,Nacional AC (2),2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1082730
-1084945,João Vitor,2004,Chapecoense-SC,185,6,0.4,1,2025-01-29,Villa Nova AC (1),2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1084945
-950392,Robert,2004,Internacional-RS,186,11,0.4,2,2026-02-23,Santos FC (2),2022: copinha,https://www.transfermarkt.com.br/-/profil/spieler/950392
-849408,Thomás Agustín,2004,Corinthians-SP,187,9,0.4,1,2026-01-31,"Pouso Alegre FC (1), Argentina U16 (1)","2022: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/849408
-794707,Dylan Talero,2004,Botafogo-RJ,188,4,0.3,2,2020-08-08,"Apollon Smyrni (1), Boyacá Chicó FC (1), Inter Miami CF II (1)",2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/794707
-1082600,Jean Carlos,2004,Flamengo-RJ,189,8,0.3,3,2025-05-10,Joinville Esporte Clube (SC) (3),2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1082600
-1083215,João Vitor,2004,Ceará-CE,190,9,0.3,1,2025-02-21,Floresta Esporte Clube (CE) (1),2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1083215
-982548,Leonardo,2004,Internacional-RS,191,12,0.3,9,2024-09-08,"Tochigi City U25 (8), FC Maia Lidador (1)","2022: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/982548
-1107080,Tabika,2004,Corinthians-SP,192,10,0.3,1,2025-02-12,AD Jaguar (PE) (1),2020: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1107080
-1122596,Yuri Lima,2004,Botafogo-RJ,193,5,0.3,1,2025-02-15,Londrina Esporte Clube (PR) (1),2021: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1122596
-1086419,Mateus Bernardo,2004,Fluminense-RJ,194,8,0.2,1,2026-02-04,ABC Futebol Clube (RN) (1),2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1086419
-1083211,Mateus Jatobá,2004,Ceará-CE,195,10,0.2,1,2025-01-29,América FC (1),"2021: sub20 | 2022: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/1083211
-1027014,Kaiky,2004,São Paulo-SP,196,14,0.1,1,2025-04-19,Atlético Monte Azul (SP) (1),2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1027014
-1082815,Mateus Manso,2004,São Paulo-SP,197,15,0.1,2,2025-07-12,"FC Magpies (10), Boavista SC (2)",2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1082815
-1226330,Mateus Pereira,2004,Vasco-RJ,198,12,0.1,1,2025-06-29,Horizonte FC (1),2020: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1226330
-1083240,Mayan,2004,Cruzeiro-MG,199,9,0.1,1,2024-07-20,União Rondonópolis EC (MT) (1),2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1083240
+1082638,Thauan,2004,Palmeiras-SP,63,6,18.5,49,2024-07-20,"América Futebol Clube (MG) (36), Londrina Esporte Clube (PR) (13)",2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1082638
+1038907,Patrick Verhon,2004,Bahia-BA,64,1,18.4,43,2022-07-29,"Oita Trinita (19), Esporte Clube Bahia (10), FC Imabari (7)","2020: sub20 | 2021: sub20 | 2022: copinha, sub20, serie_b",https://www.transfermarkt.com.br/-/profil/spieler/1038907
+1082539,Edney,2004,Palmeiras-SP,65,7,18.1,45,2025-05-10,"Portimonense SAD (42), CD Santa Clara (3)",2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1082539
+1044572,Óscar Benítez,2004,Bragantino-SP,66,3,17.7,65,2024-05-12,"Philadelphia Union II (50), St. Louis CITY SC 2 (15)",2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1044572
+1084065,Arielson,2004,Cruzeiro-MG,67,2,17.4,48,2023-08-18,"Polissya Zhytomyr (16), SC União Torreense (12), Damac FC (10)",2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1084065
+1090822,Guilherme Aquino,2004,Coritiba-PR,68,4,17.0,33,2025-04-05,"Avaí FC (21), Coritiba Foot Ball Club (12)",2022: copinha,https://www.transfermarkt.com.br/-/profil/spieler/1090822
+980854,Ythallo,2004,São Paulo-SP,69,4,15.6,57,2024-03-17,"Toronto FC II (50), Botafogo de Futebol e Regatas (7)","2022: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/980854
+1090823,Ruan Assis,2004,Coritiba-PR,70,5,15.0,33,2023-05-27,"Coritiba Foot Ball Club (16), Athletic Club (14), Avs Futebol (3)",2022: copinha,https://www.transfermarkt.com.br/-/profil/spieler/1090823
+1091893,Zé Breno,2004,Vitória-BA,71,2,14.9,44,2024-02-15,"Londrina Esporte Clube (PR) (21), Esporte Clube Vitória (12), Itabuna EC (9)",2022: copinha,https://www.transfermarkt.com.br/-/profil/spieler/1091893
+1083669,Rafael Monteiro,2004,Fluminense-RJ,72,3,14.5,38,2023-10-31,"Londrina Esporte Clube (PR) (16), Amazonas FC (13), Fluminense Football Club (9)",2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1083669
+1085182,Rafa Barcelos,2004,América-MG,73,3,14.0,43,2025-02-06,América Futebol Clube (MG) (43),2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1085182
+637809,Jhosefer,2004,Cruzeiro-MG,74,3,13.2,38,2022-03-13,"ABC Futebol Clube (RN) (21), América Futebol Clube (MG) (13), Cruzeiro Esporte Clube (4)",2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/637809
+1084622,Phellipe,2004,Bragantino-SP,75,4,12.8,36,2025-07-24,"Istanbulspor (22), Cherno More Varna (14)",2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1084622
+1090821,Felipe Guimarães,2004,Coritiba-PR,76,6,12.4,28,2024-06-07,"Coritiba Foot Ball Club (18), Atlético Clube Goianiense (10)",2022: copinha,https://www.transfermarkt.com.br/-/profil/spieler/1090821
+1083109,Vitinho,2004,Bahia-BA,77,2,12.4,41,2023-02-11,"Santa Cruz FC (PE) (25), Esporte Clube Bahia (10), FC Paços de Ferreira (6)",2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1083109
+1096266,Da Rocha,2004,Juventude-RS,78,1,12.3,50,2023-02-09,"Barra FC (48), Esporte Clube Juventude (2)","2022: copinha, serie_a",https://www.transfermarkt.com.br/-/profil/spieler/1096266
+1082625,Patrick,2004,Palmeiras-SP,79,8,11.8,12,2025-02-15,"Clube Atlético Mineiro (10), Red Bull Bragantino (2)",2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1082625
+1019701,Pedrão,2004,Cruzeiro-MG,80,4,11.6,26,2022-06-04,"Avaí FC (22), Pafos FC (2), Cruzeiro Esporte Clube (2)","2022: sub20, serie_b",https://www.transfermarkt.com.br/-/profil/spieler/1019701
+1082633,Wendell,2004,Palmeiras-SP,81,9,11.5,59,2024-11-03,"FCI Levadia (49), PFC Zvyagel (11), Polissya-2 Zhytomyr (10)",2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1082633
+1084078,Wesley,2004,Bragantino-SP,82,5,11.3,69,2025-03-01,"FC Hegelmann (68), FC Hegelmann B (1)",2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1084078
+989591,Xavier,2004,Goiás-GO,83,2,11.1,36,2023-12-06,"Tombense Futebol Clube (MG) (22), AA Aparecidense (13), Goiás EC (1)",2022: copinha,https://www.transfermarkt.com.br/-/profil/spieler/989591
+743830,Léo Ataíde,2004,Athletico-PR,84,7,10.9,31,2022-01-23,"Cuiabá Esporte Clube (MT) (16), Brusque Futebol Clube (SC) (11), Club Athletico Paranaense (4)","2020: copinha, sub20 | 2021: sub20 | 2022: sub20",https://www.transfermarkt.com.br/-/profil/spieler/743830
+834445,Serafim,2004,Palmeiras-SP,85,10,10.9,43,2025-01-11,"Al-Dhafra FC (34), Botafogo de Futebol e Regatas (9)",2020: sub20,https://www.transfermarkt.com.br/-/profil/spieler/834445
+834898,Vitinho,2004,Atlético-MG,86,6,10.8,48,2023-09-24,"UCSA Tarasivka (13), Blumenau Esporte Clube (SC) (11), FC RFS II (8)","2021: sub20 | 2022: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/834898
+1012166,Caio Rafael,2004,Ceará-CE,87,3,10.5,34,2022-11-13,"Londrina Esporte Clube (PR) (17), FC Paços de Ferreira (10), Ceará Sporting Club (7)","2020: sub20 | 2021: sub20 | 2022: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/1012166
+1082852,Hyan,2004,Santos-SP,88,6,10.4,22,2024-07-05,"Avaí FC (19), Santos FC (3)",2020: sub20 | 2021: sub20 | 2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1082852
+1083974,Ray Breno,2004,Vasco-RJ,89,6,9.9,25,2025-01-18,"Esporte Clube Juventude (11), Pouso Alegre FC (8), Nova Iguaçu FC (RJ) (6)",2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1083974
+965613,Isaac,2004,Atlético-GO,90,2,9.3,36,2022-01-26,"SU 1º Dezembro (25), CD Feirense (6), Atlético Clube Goianiense (3)","2021: sub20 | 2022: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/965613
+1082969,Wesley Costa,2004,Grêmio-RS,91,1,9.0,24,2023-10-21,"Figueirense Futebol Clube (12), Agremiação Sportiva Arapiraquense (AL) (7), Grêmio Foot-Ball Porto Alegrense (5)",2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1082969
+1082838,Nathan Silva,2004,Bahia-BA,92,3,8.7,41,2023-02-11,"STK 1914 Samorin (23), FC Hegelmann (7), Ituano Futebol Clube (SP) (5)",2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1082838
+997863,Samuel Alves,2004,América-MG,93,4,8.4,26,2023-08-31,"Uberlândia EC (13), América Futebol Clube (MG) (13)","2022: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/997863
+841910,Victão,2004,Vasco-RJ,94,7,8.4,38,2024-01-18,"Pouso Alegre FC (36), Clube de Regatas Vasco da Gama (2)","2022: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/841910
+1084621,Jeffão,2004,Bragantino-SP,95,6,8.1,24,2024-03-02,"Ferroviário AC (23), Villa Nova AC (1)","2022: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/1084621
+1082840,Kauã Davi,2004,Bahia-BA,96,4,7.9,28,2024-03-28,"FCI Levadia (17), Esporte Clube Bahia (11)","2022: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/1082840
+997489,Arthur Coneglian,2004,Grêmio-RS,97,2,7.4,30,2024-08-14,"FC Noah Yerevan (23), FC Noah Erewan II (7)",2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/997489
+1082705,Paulo Henrique,2004,Chapecoense-SC,98,2,7.4,37,2024-11-24,"AD Confiança (15), CS Sergipe (12), EC São Luiz (9)",2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1082705
+1084936,Freddy Noguera,2004,Grêmio-RS,99,3,7.2,27,2023-07-23,"CA Boston River (18), Club Cerro Porteño (6), Club Olimpia (2)",2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1084936
+1084668,Gustavo Lobo,2004,Fluminense-RJ,100,4,7.2,28,2024-08-24,"CD Trofense (17), AD Marco 09 (7), Leixões SC (4)",2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1084668
+980823,Kayque,2004,São Paulo-SP,101,5,7.2,36,2020-10-10,"Barra FC (30), Clube Atlético Mineiro (3), AD Bahia de Feira (BA) (3)",2021: sub20,https://www.transfermarkt.com.br/-/profil/spieler/980823
+1086260,Thiago Henrique,2004,Fluminense-RJ,102,5,7.0,16,2025-01-12,"Krasava ENY (14), Fluminense Football Club (2)",2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1086260
+1083672,Jhonatan Kauan,2004,Internacional-RS,103,3,6.8,30,2025-01-27,"Deportes La Serena (23), Pouso Alegre FC (7)","2022: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/1083672
+1082770,Yuri,2004,Fortaleza-CE,104,2,6.7,34,2023-07-15,"FC Atlético Cearense (17), CEFAT Tirol (16), IF Karlstad Fotboll (10)",2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1082770
+1082706,Islan,2004,Chapecoense-SC,105,3,6.6,24,2024-04-17,"Piauí EC (PI) (11), ABC Futebol Clube (RN) (10), Vila Nova Futebol Clube (GO) (2)",2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1082706
+980968,Renan Silva,2004,Atlético-GO,106,3,6.6,41,2023-06-03,"Goiatuba EC (21), Goiânia EC (6), Atlético Clube Goianiense (6)","2021: sub20 | 2022: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/980968
+980767,Rangel,2004,Internacional-RS,107,4,6.2,29,2024-09-23,"Al-Fayha FC (13), Al-Fujairah SC (12), Al-Dhafra FC (4)","2022: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/980767
+1069905,Matheus Xavier,2004,Cruzeiro-MG,108,5,6.1,12,2022-10-09,"Ferroviário AC (9), Cruzeiro Esporte Clube (3)","2022: sub20, serie_b",https://www.transfermarkt.com.br/-/profil/spieler/1069905
+1083635,Davi Schuindt,2004,Fluminense-RJ,109,6,5.6,9,2025-01-12,"Fluminense Football Club (5), Avs Futebol (4)",2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1083635
+1090777,David Peres,2004,Sport-PE,110,2,5.6,43,2024-08-03,"Benfica Castelo Branco (28), Varzim SC (8), AD Sanjoanense (7)",2022: copinha,https://www.transfermarkt.com.br/-/profil/spieler/1090777
+1083971,Lucas Eduardo,2004,Vasco-RJ,111,8,5.6,11,2023-01-14,"Avaí FC (6), Clube de Regatas Vasco da Gama (4), Cuiabá Esporte Clube (MT) (1)","2021: sub20 | 2022: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/1083971
+1005645,Pedrinho,2004,Corinthians-SP,112,6,5.6,13,2023-03-12,"Wydad Casablanca (12), Sport Club Corinthians Paulista (1)","2020: sub20 | 2021: sub20 | 2022: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/1005645
+1086376,Gustavo Bagatini,2004,Grêmio-RS,113,4,5.5,29,2025-02-02,Esporte Clube São José (RS) (29),2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1086376
+1036474,Léo Dourado,2004,Athletico-PR,114,8,5.3,14,2025-01-29,"EC Democrata (7), Athletic Club (7)","2022: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/1036474
+1082586,Carlinhos,2004,Palmeiras-SP,115,11,5.2,34,2025-08-10,Louletano DC (34),2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1082586
+1005653,Kauê,2004,Corinthians-SP,116,7,5.2,6,2025-12-07,Sport Club Corinthians Paulista (6),2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1005653
+1087728,Francisco,2004,Sport-PE,117,3,5.1,29,2025-01-12,"AA Maguary (20), AA Altos (9)",2022: copinha,https://www.transfermarkt.com.br/-/profil/spieler/1087728
+1082839,Hygor,2004,Vasco-RJ,118,9,5.1,17,2023-02-11,"Azuriz FC (10), Bangu Atlético Clube (RJ) (6), Esporte Clube Bahia (1)",2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1082839
+1084623,Bandaró,2004,Bragantino-SP,119,7,5.1,20,2025-10-29,Cherno More Varna (20),"2022: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/1084623
+1083094,Lucas Aruba,2004,Bahia-BA,120,5,5.1,27,2023-02-26,"Valmiera FC II (15), Cianorte Futebol Clube (PR) (6), Valmiera FC (3)","2022: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/1083094
+985208,Carlão,2004,América-MG,121,5,5.0,11,2026-08-21,CD Tondela (11),"2021: sub20 | 2022: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/985208
+997862,Darlan,2004,Flamengo-RJ,122,5,4.9,15,2026-01-11,"AA Aparecidense (10), Botafogo FC (7)",2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/997862
+1079283,Daniel Mazerochi,2004,Ceará-CE,123,4,4.7,16,2022-11-13,"Treze FC (9), Sampaio Corrêa FC (MA) (6), Ceará Sporting Club (1)",2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1079283
+1082703,Gerson,2004,Chapecoense-SC,124,4,4.6,17,2025-01-24,"CA Carlos Renaux (8), Clube Náutico Marcílio Dias (SC) (7), CE Operário Várzea-Grandense (2)",2021: sub20 | 2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1082703
+997473,Hiago,2004,Grêmio-RS,125,5,4.5,10,2026-08-15,"Avs Futebol (9), CD Santa Clara (1)","2021: sub20 | 2022: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/997473
+838385,João Douglas,2004,São Paulo-SP,126,6,4.4,29,2025-09-14,"FC Alverca B (19), O Elvas CAD (10)",2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/838385
+997463,Arthur Viana,2004,Grêmio-RS,127,6,4.2,17,2024-06-16,"Ehime FC (8), CD Feirense (6), Cruzeiro Esporte Clube (3)","2022: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/997463
+1026669,Eli Júnior,2004,Chapecoense-SC,128,5,4.2,13,2024-08-11,"Aruko Sports Brasil (6), Concórdia AC (6), Atlético Clube Goianiense (1)","2019: sub20 | 2020: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/1026669
+994229,Gabriel Souza,2004,Bahia-BA,129,6,3.9,14,2025-01-12,"Santa Cruz FC (PE) (11), Esporte Clube Bahia (3)","2021: sub20 | 2022: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/994229
+983980,Gustavo Sciencia,2004,Palmeiras-SP,130,12,3.9,19,2025-05-24,Portuguesa (19),2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/983980
+1069871,Zé Welinton,2004,Flamengo-RJ,131,6,3.7,10,2024-01-21,"CR Flamengo (6), Al-Dhafra FC (4), Brazil U16 (1)",2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1069871
+1082831,Rafael Soares,2004,Bahia-BA,132,7,3.7,11,2024-01-18,"Londrina Esporte Clube (PR) (8), Esporte Clube Bahia (3)","2021: sub20 | 2022: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/1082831
+1082543,Dyogo Alves,2004,Flamengo-RJ,133,7,3.6,5,2025-01-12,CR Flamengo (5),2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1082543
+963727,Caio Matheus,2004,São Paulo-SP,134,7,3.5,7,2022-01-30,"Coritiba Foot Ball Club (5), São Paulo Futebol Clube (2)",2021: sub20 | 2022: copinha,https://www.transfermarkt.com.br/-/profil/spieler/963727
+980981,Thiago Medeiros,2004,Atlético-GO,135,4,3.5,19,2022-01-30,"Atlético Clube Goianiense (13), CD Santa Clara B (5), Operário Ferroviário Esporte Clube (PR) (1)","2021: sub20 | 2022: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/980981
+1082529,Renan Cosenza,2004,Atlético-GO,136,5,3.4,15,2023-02-11,"FC Cascavel (PR) (12), Atlético Clube Goianiense (3)",2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1082529
+867814,João Pedro,2004,Atlético-GO,137,6,3.3,28,2021-02-28,"Zabbar St. Patrick FC (26), Botafogo FC (2)",2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/867814
+802644,Carlos Biro,2004,Athletico-PR,138,9,3.2,14,2025-02-12,"Brusque Futebol Clube (SC) (11), Azuriz FC (3)","2022: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/802644
+1074477,Kaua Moura,2004,Vasco-RJ,139,10,3.2,14,2023-07-29,"Spartak Myjava (7), MFK Skalica (7)",2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1074477
+1082521,Athyrson,2004,Athletico-PR,140,10,3.0,3,2025-02-27,Red Bull Bragantino (3),2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1082521
+1027018,Mateus Amaral,2004,São Paulo-SP,141,8,3.0,18,2025-03-07,"FC Oleksandriya-2 (17), FC Oleksandriya (16), Duqara Club (2)",2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1027018
+981161,Samuel,2004,Atlético-GO,142,7,2.9,14,2023-01-25,"Goiânia EC (8), FC Felgueiras 1932 (6)",2021: sub20 | 2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/981161
+1083677,Gustavo Sarjani,2004,Internacional-RS,143,5,2.9,21,2024-11-24,"Cheonan City (15), Luverdense EC (MT) (5), Vila Nova Futebol Clube (GO) (1)",2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1083677
+834462,David,2004,Ceará-CE,144,5,2.4,7,2021-05-02,"Ceará Sporting Club (4), Ferroviária (3)","2020: sub20 | 2021: sub20 | 2022: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/834462
+1083637,Samuel Bastos,2004,Internacional-RS,145,6,2.4,10,2025-01-29,Pouso Alegre FC (10),"2021: sub20 | 2022: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/1083637
+1018288,Yan Costa,2004,Fortaleza-CE,146,3,2.3,10,2022-05-08,"Caucaia Esporte Clube (CE) (5), FC Atlético Cearense (5)",2021: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1018288
+1027019,João Gabriel,2004,São Paulo-SP,147,9,2.2,8,2026-01-06,Maracanã EC (8),2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1027019
+1083248,Wendel,2004,Cruzeiro-MG,148,6,2.1,12,2025-10-26,Amora FC (12),2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1083248
+1519051,Adriel,2004,Internacional-RS,149,7,2.0,10,2026-02-12,Santos FC (10),2022: copinha,https://www.transfermarkt.com.br/-/profil/spieler/1519051
+1084951,Pedro Careca,2004,Fluminense-RJ,150,7,2.0,10,2025-02-08,AD Senador Guiomard (10),2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1084951
+1083890,Roger Fellipo,2004,Vasco-RJ,151,11,2.0,11,2025-01-22,"EC Água Santa (SP) (10), Figueirense Futebol Clube (1)",2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1083890
+846572,Luis Felipe,2004,São Paulo-SP,152,10,1.9,10,2026-01-11,"Santa Cruz FC (RN) (9), ABC Futebol Clube (RN) (1)",2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/846572
+942577,Marcelo Henrique,2004,Sport-PE,153,4,1.9,12,2021-06-06,"Boavista SC (10), Bangu Atlético Clube (RJ) (2)",2022: copinha,https://www.transfermarkt.com.br/-/profil/spieler/942577
+1083222,Pablo,2004,Ceará-CE,154,6,1.9,5,2024-02-04,"Santa Catarina Clube (SC) (3), Ceará Sporting Club (2)",2021: sub20 | 2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1083222
+985349,Igor Nogueira,2004,América-MG,155,6,1.8,9,2023-03-05,"FC Kharkiv (8), Lagarto FC (1)",2022: copinha,https://www.transfermarkt.com.br/-/profil/spieler/985349
+1463963,Pedro Sulzbacher,2004,Juventude-RS,156,2,1.7,9,2026-01-17,Capital FC (TO) (9),2022: copinha,https://www.transfermarkt.com.br/-/profil/spieler/1463963
+867811,Tortello,2004,Internacional-RS,157,8,1.7,4,2021-02-28,Botafogo FC (4),2022: copinha,https://www.transfermarkt.com.br/-/profil/spieler/867811
+1082517,Waltinho,2004,Athletico-PR,158,11,1.7,11,2026-01-22,Inhumas EC (11),2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1082517
+800608,Wilker,2004,Atlético-MG,159,7,1.7,6,2020-09-27,Londrina Esporte Clube (PR) (6),2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/800608
+1086577,Gabriel Amaral,2004,Bragantino-SP,160,8,1.6,10,2026-08-16,FC Oliveira do Hospital (10),2022: copinha,https://www.transfermarkt.com.br/-/profil/spieler/1086577
+1088852,Gabriel Morais,2004,Athletico-PR,161,12,1.5,4,2022-02-24,"Figueirense Futebol Clube (2), Clube de Regatas Brasil (AL) (2)",2019: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1088852
+1083098,Ícaro,2004,Bahia-BA,162,8,1.5,5,2025-01-18,Londrina Esporte Clube (PR) (5),2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1083098
+744881,Ítalo Isaac,2004,Cruzeiro-MG,163,7,1.5,3,2026-01-15,Bangu Atlético Clube (RJ) (3),2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/744881
+1103168,Dagoberto,2004,Atlético-GO,164,8,1.5,5,2023-02-01,"Floresta Esporte Clube (CE) (3), FC Atlético Cearense (2)",2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1103168
+805412,Alison Matheus,2004,Santos-SP,165,7,1.4,2,2026-03-26,Amazonas FC (2),2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/805412
+834461,Caio Ribas,2004,Atlético-MG,166,8,1.4,10,2025-09-14,"Amora FC (6), SC Salgueiros (4)",2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/834461
+1027024,Eduardo Brito,2004,São Paulo-SP,167,11,1.4,13,2024-03-24,"Hwaseong FC (11), Inhumas EC (2)",2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1027024
+747322,Lucca,2004,Juventude-RS,168,3,1.4,9,2025-08-27,"Gandzasar Kapan (7), US Carrarese Primavera (4), Slovan Duslo Sala (2)",2022: copinha,https://www.transfermarkt.com.br/-/profil/spieler/747322
+978212,Gabriel Ribeiro,2004,Atlético-GO,169,9,1.3,4,2022-01-26,"Atlético Clube Goianiense (3), AA Aparecidense (1)",2021: sub20 | 2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/978212
+1086635,Mindinho,2004,Corinthians-SP,170,8,1.2,6,2026-02-01,Capital FC (TO) (6),2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1086635
+838386,Leandro Mathias,2004,São Paulo-SP,171,12,1.2,3,2026-04-22,Botafogo FC (3),"2021: sub20 | 2022: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/838386
+1082809,Lucas Inácio,2004,São Paulo-SP,172,13,1.2,6,2026-01-24,Real Brasília FC (6),2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1082809
+1083612,Esquerdinha,2004,Botafogo-RJ,173,3,1.2,4,2025-01-12,IF São Joseense (4),2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1083612
+1084941,Guilherme Varjão,2004,Internacional-RS,174,9,1.1,11,2024-07-28,STK 1914 Samorin (11),"2022: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/1084941
+1082813,Cauã Lucca,2004,São Paulo-SP,175,14,1.0,15,2025-05-31,"Manaus Futebol Clube (8), Luverdense EC (MT) (4), Boavista SC (3)",2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1082813
+1083216,Dieguinho,2004,Ceará-CE,176,7,1.0,13,2024-09-16,"FC Atlético Cearense (8), Sociedade Imperatriz de Desportos (MA) (4), Ferroviária (1)",2021: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1083216
+1086453,Eliseu Manuel,2004,Grêmio-RS,177,7,1.0,2,2025-01-15,Guarani Futebol Clube (SP) (2),2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1086453
+1083097,Gustavo Kawã,2004,Bahia-BA,178,9,1.0,4,2023-02-11,"Porto SC (2), Esporte Clube Bahia (2)",2021: sub20 | 2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1083097
+1038805,Marcos Vinicius,2004,Athletico-PR,179,13,1.0,5,2025-01-15,ABC Futebol Clube (RN) (5),"2022: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/1038805
+1082888,Matheus Rodrigues,2004,Atlético-GO,180,10,1.0,7,2025-08-24,"Imortal DC (6), SC Farense (1)",2022: copinha,https://www.transfermarkt.com.br/-/profil/spieler/1082888
+1083599,Erick Monteiro,2004,Grêmio-RS,181,8,0.9,7,2023-05-27,"Goiatuba EC (3), Ferroviária (3), AA Aparecidense (1)",2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1083599
+902123,Heitor,2004,América-MG,182,7,0.8,3,2026-08-24,América Futebol Clube (MG) (3),"2022: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/902123
+1082532,Jesus Garcia,2004,Atlético-GO,183,11,0.8,4,2023-02-04,Inhumas EC (4),2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1082532
+1219295,Robson,2004,Juventude-RS,184,4,0.6,10,2025-08-27,"Gandzasar Kapan (9), Pramen Kovacova (1)",2022: copinha,https://www.transfermarkt.com.br/-/profil/spieler/1219295
+1083242,Artur,2004,Cruzeiro-MG,185,8,0.5,10,2025-04-19,Itabirito FC (10),2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1083242
+1083678,Kaua Bastian,2004,Internacional-RS,186,10,0.5,6,2026-08-22,Hatta Club (6),2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1083678
+743826,Luiz Guilherme,2004,Palmeiras-SP,187,13,0.5,2,2026-04-18,"Brazil U16 (6), AA Internacional de Limeira (2)",2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/743826
+1083096,Abraão,2004,Bahia-BA,188,10,0.4,2,2025-01-19,Agro Esporte Clube (2),2020: sub20 | 2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1083096
+1083220,Kadu,2004,Ceará-CE,189,8,0.4,2,2025-01-29,Serra Branca EC (2),2020: sub20 | 2021: sub20 | 2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1083220
+1261283,Diego Coelho,2004,Atlético-GO,190,12,0.4,2,2025-02-22,Bela Vista Futebol Cachoeirense (2),2022: copinha,https://www.transfermarkt.com.br/-/profil/spieler/1261283
+1082730,Gustavo Nobre,2004,Fortaleza-CE,191,4,0.4,2,2026-02-05,Nacional AC (2),2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1082730
+1084945,João Vitor,2004,Chapecoense-SC,192,6,0.4,1,2025-01-29,Villa Nova AC (1),2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1084945
+950392,Robert,2004,Internacional-RS,193,11,0.4,2,2026-02-23,Santos FC (2),2022: copinha,https://www.transfermarkt.com.br/-/profil/spieler/950392
+849408,Thomás Agustín,2004,Corinthians-SP,194,9,0.4,1,2026-01-31,"Pouso Alegre FC (1), Argentina U16 (1)","2022: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/849408
+794707,Dylan Talero,2004,Botafogo-RJ,195,4,0.3,2,2020-08-08,"Apollon Smyrni (1), Boyacá Chicó FC (1), Inter Miami CF II (1)",2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/794707
+1082600,Jean Carlos,2004,Flamengo-RJ,196,8,0.3,3,2025-05-10,Joinville Esporte Clube (SC) (3),2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1082600
+1083215,João Vitor,2004,Ceará-CE,197,9,0.3,1,2025-02-21,Floresta Esporte Clube (CE) (1),2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1083215
+982548,Leonardo,2004,Internacional-RS,198,12,0.3,9,2024-09-08,"Tochigi City U25 (8), FC Maia Lidador (1)","2022: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/982548
+1107080,Tabika,2004,Corinthians-SP,199,10,0.3,1,2025-02-12,AD Jaguar (PE) (1),2020: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1107080
+1122596,Yuri Lima,2004,Botafogo-RJ,200,5,0.3,1,2025-02-15,Londrina Esporte Clube (PR) (1),2021: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1122596
+1086419,Mateus Bernardo,2004,Fluminense-RJ,201,8,0.2,1,2026-02-04,ABC Futebol Clube (RN) (1),2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1086419
+1083211,Mateus Jatobá,2004,Ceará-CE,202,10,0.2,1,2025-01-29,América FC (1),"2021: sub20 | 2022: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/1083211
+1027014,Kaiky,2004,São Paulo-SP,203,15,0.1,1,2025-04-19,Atlético Monte Azul (SP) (1),2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1027014
+1082815,Mateus Manso,2004,São Paulo-SP,204,16,0.1,2,2025-07-12,"FC Magpies (10), Boavista SC (2)",2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1082815
+1226330,Mateus Pereira,2004,Vasco-RJ,205,12,0.1,1,2025-06-29,Horizonte FC (1),2020: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1226330
+1083240,Mayan,2004,Cruzeiro-MG,206,9,0.1,1,2024-07-20,União Rondonópolis EC (MT) (1),2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1083240
 943837,Vitor Roque,2005,Cruzeiro-MG,1,1,344.9,246,2021-10-13,"Sociedade Esportiva Palmeiras (97), Club Athletico Paranaense (81), Real Betis Balompié (33)","2021: serie_b | 2022: copinha, serie_a, serie_b",https://www.transfermarkt.com.br/-/profil/spieler/943837
 1029227,Breno Bidon,2005,Corinthians-SP,2,1,163.0,154,2024-03-10,Sport Club Corinthians Paulista (152),2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1029227
 1007378,Wesley,2005,Corinthians-SP,3,2,143.7,142,2022-04-20,"Sport Club Corinthians Paulista (84), Al-Nassr FC (40), Cruzeiro Esporte Clube (13)","2022: sub20, serie_a",https://www.transfermarkt.com.br/-/profil/spieler/1007378
@@ -3025,31 +3039,48 @@ tm_id,nome,coorte,clube,posicao_coorte,posicao_clube,pontos,jogos_pro,primeiro_j
 1083600,Nathan Fernandes,2005,Grêmio-RS,7,1,83.1,82,2023-05-27,"Grêmio Foot-Ball Porto Alegrense (49), Botafogo de Futebol e Regatas (29), Ludogorets Razgrad (4)",2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1083600
 1083095,Tiago,2005,Bahia-BA,8,1,67.2,76,2023-02-11,"Esporte Clube Bahia (52), Orlando City SC (24)",2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1083095
 1053933,Ruan,2005,Juventude-RS,9,1,67.1,135,2022-09-03,"Esporte Clube Juventude (54), Alanyaspor (44), Portimonense SAD (37)","2022: copinha, serie_a",https://www.transfermarkt.com.br/-/profil/spieler/1053933
-1082774,Amorim,2005,Fortaleza-CE,10,1,44.4,69,2023-04-26,"Athletic Club (27), FC Alverca (21), Genoa CFC (19)",2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1082774
-1015962,Nathan Camargo,2005,Bragantino-SP,11,1,40.4,72,2022-05-14,"Vila Nova Futebol Clube (GO) (33), Guarani Futebol Clube (SP) (17), Clube do Remo (PA) (13)","2022: copinha, sub20, serie_a",https://www.transfermarkt.com.br/-/profil/spieler/1015962
-1082850,Deivid Washington,2005,Santos-SP,12,2,38.8,42,2023-04-11,"Santos FC (36), Chelsea FC (3)",2021: sub20 | 2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1082850
-950393,Viery,2005,Grêmio-RS,13,2,37.5,50,2025-01-26,"Grêmio Foot-Ball Porto Alegrense (39), ACF Fiorentina (11)",2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/950393
-1083885,Leandrinho,2005,Vasco-RJ,14,1,36.7,56,2024-01-18,"Clube de Regatas Vasco da Gama (26), Sharjah FC (19), Al-Shabab FC (11)","2022: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/1083885
-977467,Adyson Soares,2005,América-MG,15,1,35.4,84,2022-01-26,"América Futebol Clube (MG) (70), Al-Bataeh CSC (9), Kalba FC (5)","2021: sub20 | 2022: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/977467
-1052819,Léo Derik,2005,Athletico-PR,16,1,30.7,40,2025-01-14,Club Athletico Paranaense (40),2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1052819
-1092857,Jean Carlos,2005,Atlético-GO,17,1,30.0,64,2024-09-29,"Goiás EC (61), Atlético Clube Goianiense (3)",2022: copinha,https://www.transfermarkt.com.br/-/profil/spieler/1092857
-1083962,GB,2005,Vasco-RJ,18,2,26.1,35,2023-01-20,"Clube de Regatas Vasco da Gama (28), GD Chaves (4), Fortaleza Esporte Clube (3)",2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1083962
-1084816,Zé Guilherme,2005,Grêmio-RS,19,3,24.7,27,2024-02-14,"Esporte Clube Bahia (18), Grêmio Foot-Ball Porto Alegrense (9)",2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1084816
-1012174,Iago Teodoro,2005,Flamengo-RJ,20,2,21.4,30,2024-01-27,"Orlando City SC (25), CR Flamengo (5)",2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1012174
-1083969,Guilherme Estrella,2005,Vasco-RJ,21,3,15.6,22,2024-06-23,"Clube de Regatas Brasil (AL) (15), Clube de Regatas Vasco da Gama (7)",2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1083969
-997467,Kauan Kelvin,2005,Grêmio-RS,22,4,14.7,68,2023-02-18,"SC Braga B (66), Grêmio Foot-Ball Porto Alegrense (2)","2022: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/997467
-1084629,David Antunes,2005,Chapecoense-SC,23,1,13.8,26,2024-11-24,Associação Chapecoense de Futebol (26),2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1084629
-976951,Jardiel,2005,Grêmio-RS,24,5,12.5,16,2022-01-16,"Grêmio Novorizontino (8), Grêmio Foot-Ball Porto Alegrense (7), CS Maruinense (1)",2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/976951
-1115721,Gabriel Vareta,2005,Palmeiras-SP,25,1,12.1,32,2025-02-07,"Al-Wasl SC (20), Al-Fayha FC (12)",2020: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1115721
-1079284,Guilherme Gehring,2005,Juventude-RS,26,2,8.1,17,2022-11-13,"Esporte Clube Juventude (13), Clube Náutico Marcílio Dias (SC) (3), FTC Filakovo (1)",2022: serie_a,https://www.transfermarkt.com.br/-/profil/spieler/1079284
-1083888,Paulinho,2005,Vasco-RJ,27,4,6.0,10,2023-02-08,"Clube de Regatas Vasco da Gama (6), Fortaleza Esporte Clube (4)",2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1083888
-1082843,Daniel Bolt,2005,Bahia-BA,28,2,3.3,22,2023-02-26,"Azuriz FC (10), Londrina Esporte Clube (PR) (6), EC São Luiz (5)",2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1082843
-1085346,Guilherme Papaléo,2005,América-MG,29,2,2.1,7,2026-01-06,Aruko Sports Brasil (7),2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1085346
-1082746,Guilherme Moura,2005,Fortaleza-CE,30,2,1.7,3,2026-02-08,Fortaleza Esporte Clube (3),2021: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1082746
-1100474,Renanzinho,2005,Vasco-RJ,31,5,1.0,5,2026-01-11,ACD Potiguar (RN) (5),2021: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1100474
-1222223,Ronald,2005,Fortaleza-CE,32,3,0.5,4,2026-04-26,SC Humaitá (4),2021: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1222223
+1082823,Newerton,2005,São Paulo-SP,10,1,60.4,100,2023-07-29,Shakhtar Donetsk (100),2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1082823
+1082774,Amorim,2005,Fortaleza-CE,11,1,44.4,69,2023-04-26,"Athletic Club (27), FC Alverca (21), Genoa CFC (19)",2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1082774
+1015962,Nathan Camargo,2005,Bragantino-SP,12,1,40.4,72,2022-05-14,"Vila Nova Futebol Clube (GO) (33), Guarani Futebol Clube (SP) (17), Clube do Remo (PA) (13)","2022: copinha, sub20, serie_a",https://www.transfermarkt.com.br/-/profil/spieler/1015962
+1082850,Deivid Washington,2005,Santos-SP,13,2,38.8,42,2023-04-11,"Santos FC (36), Chelsea FC (3)",2021: sub20 | 2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1082850
+950393,Viery,2005,Grêmio-RS,14,2,37.5,50,2025-01-26,"Grêmio Foot-Ball Porto Alegrense (39), ACF Fiorentina (11)",2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/950393
+1083885,Leandrinho,2005,Vasco-RJ,15,1,36.7,56,2024-01-18,"Clube de Regatas Vasco da Gama (26), Sharjah FC (19), Al-Shabab FC (11)","2022: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/1083885
+977467,Adyson Soares,2005,América-MG,16,1,35.4,84,2022-01-26,"América Futebol Clube (MG) (70), Al-Bataeh CSC (9), Kalba FC (5)","2021: sub20 | 2022: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/977467
+1052819,Léo Derik,2005,Athletico-PR,17,1,30.7,40,2025-01-14,Club Athletico Paranaense (40),2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1052819
+1092857,Jean Carlos,2005,Atlético-GO,18,1,30.0,64,2024-09-29,"Goiás EC (61), Atlético Clube Goianiense (3)",2022: copinha,https://www.transfermarkt.com.br/-/profil/spieler/1092857
+1083962,GB,2005,Vasco-RJ,19,2,26.1,35,2023-01-20,"Clube de Regatas Vasco da Gama (28), GD Chaves (4), Fortaleza Esporte Clube (3)",2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1083962
+1084816,Zé Guilherme,2005,Grêmio-RS,20,3,24.7,27,2024-02-14,"Esporte Clube Bahia (18), Grêmio Foot-Ball Porto Alegrense (9)",2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1084816
+1012174,Iago Teodoro,2005,Flamengo-RJ,21,2,21.4,30,2024-01-27,"Orlando City SC (25), CR Flamengo (5)",2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1012174
+1027026,Maik,2005,São Paulo-SP,22,2,20.8,27,2025-07-31,"São Paulo Futebol Clube (19), MFK Dukla Banska Bystrica (8)",2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1027026
+743585,Arthur Wenderroscky,2005,Fluminense-RJ,23,1,18.3,33,2021-03-05,"Wydad Casablanca (19), Fluminense Football Club (14), Brazil U16 (6)","2022: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/743585
+1083238,Gui Meira,2005,Cruzeiro-MG,24,3,15.8,47,2025-04-19,"CD Feirense (39), AA Aparecidense (8)",2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1083238
+1083969,Guilherme Estrella,2005,Vasco-RJ,25,3,15.6,22,2024-06-23,"Clube de Regatas Brasil (AL) (15), Clube de Regatas Vasco da Gama (7)",2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1083969
+997467,Kauan Kelvin,2005,Grêmio-RS,26,4,14.7,68,2023-02-18,"SC Braga B (66), Grêmio Foot-Ball Porto Alegrense (2)","2022: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/997467
+1084629,David Antunes,2005,Chapecoense-SC,27,1,13.8,26,2024-11-24,Associação Chapecoense de Futebol (26),2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1084629
+976951,Jardiel,2005,Grêmio-RS,28,5,12.5,16,2022-01-16,"Grêmio Novorizontino (8), Grêmio Foot-Ball Porto Alegrense (7), CS Maruinense (1)",2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/976951
+1115721,Gabriel Vareta,2005,Palmeiras-SP,29,1,12.1,32,2025-02-07,"Al-Wasl SC (20), Al-Fayha FC (12)",2020: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1115721
+1083099,Lawan,2005,Bahia-BA,30,2,10.1,28,2024-01-31,"Esporte Clube Vitória (12), Itabuna EC (9), Campinense Clube (PB) (5)",2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1083099
+1079284,Guilherme Gehring,2005,Juventude-RS,31,2,8.1,17,2022-11-13,"Esporte Clube Juventude (13), Clube Náutico Marcílio Dias (SC) (3), FTC Filakovo (1)",2022: serie_a,https://www.transfermarkt.com.br/-/profil/spieler/1079284
+1084815,Josué Souza,2005,Grêmio-RS,32,6,7.7,22,2023-10-18,"Houston Dynamo FC 2 (12), EC Democrata (5), Grêmio Foot-Ball Porto Alegrense (4)",2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1084815
+1083888,Paulinho,2005,Vasco-RJ,33,4,6.0,10,2023-02-08,"Clube de Regatas Vasco da Gama (6), Fortaleza Esporte Clube (4)",2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1083888
+1027023,Pedro Andrade,2005,São Paulo-SP,34,3,4.7,36,2026-03-07,Paide Linnameeskond (36),2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1027023
+1027027,Ryan Couto,2005,São Paulo-SP,35,4,4.5,15,2025-01-26,"Boavista SC (8), América Football Club (RJ) (6), Botafogo de Futebol e Regatas (1)",2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1027027
+1082843,Daniel Bolt,2005,Bahia-BA,36,3,3.3,22,2023-02-26,"Azuriz FC (10), Londrina Esporte Clube (PR) (6), EC São Luiz (5)",2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1082843
+1084628,Cacá,2005,Chapecoense-SC,37,2,3.0,11,2023-01-18,"Associação Chapecoense de Futebol (5), Concórdia AC (4), CD Ñublense (2)",2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1084628
+994029,Bernardo,2005,Juventude-RS,38,3,2.5,4,2025-12-07,"Esporte Clube Juventude (4), US Carrarese Primavera (3)",2022: copinha,https://www.transfermarkt.com.br/-/profil/spieler/994029
+1083250,Matheus Streit,2005,Cruzeiro-MG,39,4,2.5,15,2025-02-22,"Grêmio Esportivo Brasil (RS) (9), Concórdia AC (5), Criciúma EC (1)",2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1083250
+1085346,Guilherme Papaléo,2005,América-MG,40,2,2.1,7,2026-01-06,Aruko Sports Brasil (7),2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1085346
+1085468,Keven Coloni,2005,Cruzeiro-MG,41,5,1.8,7,2023-02-04,"Portuguesa (5), Inhumas EC (2)",2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1085468
+1082746,Guilherme Moura,2005,Fortaleza-CE,42,2,1.7,3,2026-02-08,Fortaleza Esporte Clube (3),2021: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1082746
+1084666,Luis Fernando,2005,Fluminense-RJ,43,2,1.2,2,2026-01-14,"SER Caxias do Sul (RS) (1), Fluminense Football Club (1)",2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1084666
+1025717,Weliton,2005,Juventude-RS,44,4,1.2,6,2022-09-03,"CD Trofense (4), CR Flamengo (1), Esporte Clube Juventude (1)",2022: copinha,https://www.transfermarkt.com.br/-/profil/spieler/1025717
+1100474,Renanzinho,2005,Vasco-RJ,45,5,1.0,5,2026-01-11,ACD Potiguar (RN) (5),2021: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1100474
+1222223,Ronald,2005,Fortaleza-CE,46,3,0.5,4,2026-04-26,SC Humaitá (4),2021: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1222223
+1086633,Léo Agostinho,2005,Corinthians-SP,47,3,0.3,1,2026-10-11,FK Zeleznicar Pancevo (1),2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1086633
 971570,Endrick,2006,Palmeiras-SP,1,1,353.6,182,2022-10-06,"Sociedade Esportiva Palmeiras (82), Real Madrid (47), Olympique Lyon (21)","2021: sub20 | 2022: copinha, sub20, serie_a",https://www.transfermarkt.com.br/-/profil/spieler/971570
 1012564,Rayan,2006,Vasco-RJ,2,1,184.2,138,2023-01-20,"Clube de Regatas Vasco da Gama (99), AFC Bournemouth (31), Brazil U17 (14)","2022: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/1012564
-1004741,Pedro,2006,Corinthians-SP,3,1,95.8,125,2023-03-04,"Zenit St. Petersburg (104), Sport Club Corinthians Paulista (21), Brazil U17 (4)","2022: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/1004741
-1086258,Souza,2006,Santos-SP,4,1,43.4,45,2024-02-11,"Santos FC (38), Brazil U17 (12), Tottenham Hotspur (4)",2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1086258
-1084128,Guilherme Henrique,2006,Corinthians-SP,5,2,4.0,11,2025-05-18,"Atlético Clube Goianiense (10), Ferencvárosi TC (1)",2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1084128
+991800,Luís Guilherme,2006,Palmeiras-SP,3,2,128.2,94,2023-04-12,"Sociedade Esportiva Palmeiras (45), Sporting CP (31), West Ham United (18)",2022: copinha,https://www.transfermarkt.com.br/-/profil/spieler/991800
+1004741,Pedro,2006,Corinthians-SP,4,1,95.8,125,2023-03-04,"Zenit St. Petersburg (104), Sport Club Corinthians Paulista (21), Brazil U17 (4)","2022: copinha, sub20",https://www.transfermarkt.com.br/-/profil/spieler/1004741
+1086258,Souza,2006,Santos-SP,5,1,43.4,45,2024-02-11,"Santos FC (38), Brazil U17 (12), Tottenham Hotspur (4)",2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1086258
+1006569,Rafael Juninho,2006,Corinthians-SP,6,2,7.8,44,2025-03-29,"ML Vitebsk (33), FK IMT Belgrad (11), Brazil U16 (3)",2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1006569
+1084128,Guilherme Henrique,2006,Corinthians-SP,7,3,4.0,11,2025-05-18,"Atlético Clube Goianiense (10), Ferencvárosi TC (1)",2022: sub20,https://www.transfermarkt.com.br/-/profil/spieler/1084128
