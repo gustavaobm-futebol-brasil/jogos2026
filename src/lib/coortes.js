@@ -90,7 +90,7 @@ export function pontosPorIdade() {
   return out;
 }
 
-/** Pontos de cada jogador em cada idade, com o clube do ano (nome do TM), para o gráfico empilhado de /base/idade:
+/** Pontos de cada jogador em cada idade, com o clube do ano (rótulo do site para clube brasileiro, nome do TM para clube de fora), para o gráfico empilhado de /base/idade:
  *  { clubes: [nomes], linhas: [[tm, idade, pontos, jogos, índice do clube]] }. */
 export function pontosJogadorAno() {
   const clubes = [], idx = new Map();
@@ -102,7 +102,7 @@ export function pontosJogadorAno() {
   return { clubes, linhas };
 }
 
-/** Carreira de cada jogador para /base/jogador: pontos de cada ano civil divididos pelo clube dos jogos (nome do TM;
+/** Carreira de cada jogador para /base/jogador: pontos de cada ano civil divididos pelo clube dos jogos (rótulo do site, "Botafogo-SP", para clube brasileiro; nome do TM para clube de fora;
  *  seleções ("Seleção brasileira", "Seleção paraguaia"...) e "Clube não informado" à parte). Só jogadores publicados e anos com ponto.
  *  { clubes: [nomes], j: { tm: [[ano, [[índice do clube, pontos, jogos], ...]], ...] } }. */
 export function carreirasPorClube() {
