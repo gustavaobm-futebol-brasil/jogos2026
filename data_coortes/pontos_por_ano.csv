@@ -1041,9 +1041,9 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 699249,2021,23,27,3.5,Gzira United FC
 699249,2022,24,35,4.3,Gzira United FC
 699249,2023,25,25,2.8,Gzira United FC
-699249,2024,26,30,3.1,Gzira United FC / Malta
-699249,2025,27,31,7.1,Gzira United FC / Malta
-699249,2026,28,27,2.6,Gzira United FC / Malta
+699249,2024,26,30,3.1,Gzira United FC
+699249,2025,27,31,7.1,Gzira United FC
+699249,2026,28,27,2.6,Gzira United FC
 610416,2019,22,4,2.7,Botafogo de Futebol e Regatas / GD Estoril Praia
 610416,2020,23,1,0.5,Botafogo de Futebol e Regatas
 610416,2021,24,22,3.9,Joinville Esporte Clube (SC)
@@ -5428,8 +5428,8 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 527394,2022,22,37,13.3,Sharjah FC
 527394,2023,23,38,13.9,Sharjah FC
 527394,2024,24,31,12.6,Sharjah FC
-527394,2025,25,43,35.0,Sharjah FC / United Arab Emirates
-527394,2026,26,25,11.7,Sharjah FC / United Arab Emirates
+527394,2025,25,43,35.0,Sharjah FC
+527394,2026,26,25,11.7,Sharjah FC
 595125,2019,21,2,0.6,Avaí FC
 595125,2022,24,1,0.3,Camboriú FC
 595125,2023,25,12,2.4,Dourados AC
@@ -5824,7 +5824,7 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 688676,2023,24,15,3.6,Svay Rieng
 688676,2024,25,19,3.2,Boeung Ket / Svay Rieng
 688676,2025,26,26,3.1,Boeung Ket
-688676,2026,27,28,4.5,Boeung Ket / Camboja
+688676,2026,27,28,4.5,Boeung Ket
 593069,2019,22,6,1.0,Esporte Clube Tupy / Foz do Iguaçu FC
 593069,2020,23,7,2.1,Castanhal EC
 593069,2021,24,6,2.9,Coritiba Foot Ball Club
@@ -7514,9 +7514,9 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 393339,2021,24,12,1.9,SHB Da Nang FC
 393339,2022,25,25,4.5,Quy Nhon United FC
 393339,2023,26,28,4.7,Quy Nhon United FC / Thep Xanh Nam Dinh FC
-393339,2024,27,35,10.6,Thep Xanh Nam Dinh FC / Vietnam
-393339,2025,28,5,2.2,Thep Xanh Nam Dinh FC / Vietnam
-393339,2026,29,29,11.0,Thep Xanh Nam Dinh FC / Vietnam
+393339,2024,27,35,10.6,Thep Xanh Nam Dinh FC
+393339,2025,28,5,2.2,Thep Xanh Nam Dinh FC
+393339,2026,29,29,11.0,Thep Xanh Nam Dinh FC
 666503,2019,20,3,1.1,Esporte Clube Vitória
 666503,2020,21,7,2.1,Esporte Clube Vitória
 666503,2021,22,7,1.1,AD Bahia de Feira (BA)
@@ -7925,8 +7925,8 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 681120,2022,22,24,8.7,Al-Wahda FC
 681120,2023,23,29,10.5,Al-Wahda FC
 681120,2024,24,24,8.5,Al-Wahda FC
-681120,2025,25,47,45.4,Al-Wahda FC / United Arab Emirates
-681120,2026,26,30,14.5,Al-Wahda FC / United Arab Emirates
+681120,2025,25,47,45.4,Al-Wahda FC
+681120,2026,26,30,14.5,Al-Wahda FC
 610417,2021,20,1,0.8,Gil Vicente FC
 610417,2022,21,23,16.2,Gil Vicente FC
 610417,2023,22,29,18.0,Gil Vicente FC
@@ -8484,7 +8484,7 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 663585,2023,23,31,13.8,Shabab Al-Ahli Club
 663585,2024,24,40,20.5,Shabab Al-Ahli Club
 663585,2025,25,41,21.1,Shabab Al-Ahli Club
-663585,2026,26,28,15.3,Shabab Al-Ahli Club / United Arab Emirates
+663585,2026,26,28,15.3,Shabab Al-Ahli Club
 589911,2018,18,2,1.0,CR Flamengo
 589911,2020,20,8,3.3,Leixões SC / CR Flamengo
 589911,2021,21,25,9.9,Leixões SC / SC Covilhã
@@ -8847,8 +8847,8 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 680551,2022,21,31,12.3,Al-Ain FC
 680551,2023,22,41,16.5,Al-Ain FC
 680551,2024,23,35,17.0,Al-Ain FC
-680551,2025,24,28,14.9,Al-Ain FC / United Arab Emirates
-680551,2026,25,30,15.3,Al-Ain FC / United Arab Emirates
+680551,2025,24,28,14.9,Al-Ain FC
+680551,2026,25,30,15.3,Al-Ain FC
 813229,2021,21,1,0.7,GD Estoril Praia
 813229,2022,22,21,8.8,UD Oliveirense / GD Estoril Praia
 813229,2023,23,35,16.1,UD Oliveirense / GD Estoril Praia
@@ -9023,8 +9023,8 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 709443,2021,21,27,9.3,Sharjah FC
 709443,2022,22,31,10.9,Sharjah FC
 709443,2023,23,31,10.9,Sharjah FC
-709443,2024,24,38,28.4,Sharjah FC / United Arab Emirates
-709443,2025,25,48,42.3,Sharjah FC / United Arab Emirates
+709443,2024,24,38,28.4,Sharjah FC
+709443,2025,25,48,42.3,Sharjah FC
 709443,2026,26,32,15.9,Al-Jazira Club / Sharjah FC
 587328,2018,19,6,5.7,Sociedade Esportiva Palmeiras
 587328,2019,20,11,10.4,Clube Atlético Mineiro / Goiás EC
@@ -10301,12 +10301,12 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 1033500,2025,23,2,0.6,Azuriz FC
 780613,2021,21,2,0.6,Concórdia AC
 552912,2017,18,4,0.8,Montevideo Wanderers
-552912,2018,19,25,5.3,Montevideo Wanderers / Uruguay
+552912,2018,19,25,5.3,Montevideo Wanderers
 552912,2019,20,6,6.5,Sport Club Corinthians Paulista
 552912,2020,21,11,9.7,Sport Club Corinthians Paulista
 552912,2021,22,49,48.4,Sport Club Internacional / Sport Club Corinthians Paulista
 552912,2022,23,43,56.8,Sport Club Corinthians Paulista / Sport Club Internacional
-552912,2023,24,57,59.6,Sport Club Corinthians Paulista / Uruguay
+552912,2023,24,57,59.6,Sport Club Corinthians Paulista
 552912,2024,25,30,20.0,Granada CF / Deportivo Toluca
 552912,2025,26,37,38.4,Deportivo Toluca
 552912,2026,27,35,37.3,Deportivo Toluca
@@ -10498,7 +10498,7 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 678439,2023,22,49,48.4,Sport Club Internacional
 678439,2024,23,45,70.3,Sociedade Esportiva Palmeiras / Sport Club Internacional
 678439,2025,24,53,95.9,Sociedade Esportiva Palmeiras
-678439,2026,25,61,119.7,Sociedade Esportiva Palmeiras / Paraguay
+678439,2026,25,61,119.7,Sociedade Esportiva Palmeiras
 739443,2020,19,26,13.0,Cruzeiro Esporte Clube
 739443,2021,20,30,14.4,Cruzeiro Esporte Clube
 739443,2022,21,46,26.8,Ludogorets Razgrad / Cruzeiro Esporte Clube
@@ -10632,9 +10632,9 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 735573,2021,21,9,5.5,Mazatlán FC / CR Flamengo
 735573,2022,22,10,5.3,Guarani Futebol Clube (SP) / Mazatlán FC
 735573,2023,23,67,99.4,Sociedade Esportiva Palmeiras / Guarani Futebol Clube (SP)
-735573,2024,24,65,124.4,Sociedade Esportiva Palmeiras / Colombia
+735573,2024,24,65,124.4,Sociedade Esportiva Palmeiras
 735573,2025,25,74,139.0,Sociedade Esportiva Palmeiras / SL Benfica
-735573,2026,26,43,93.5,SL Benfica / Colombia
+735573,2026,26,43,93.5,SL Benfica / Al-Ittihad Club
 594226,2018,18,15,5.9,Londrina Esporte Clube (PR)
 594226,2019,19,5,1.5,Londrina Esporte Clube (PR)
 594226,2020,20,18,23.2,CR Flamengo
@@ -10684,7 +10684,7 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 735572,2023,22,24,10.2,Shabab Al-Ahli Club
 735572,2024,23,37,18.7,Shabab Al-Ahli Club
 735572,2025,24,33,17.7,Shabab Al-Ahli Club
-735572,2026,25,31,19.1,Shabab Al-Ahli Club / United Arab Emirates
+735572,2026,25,31,19.1,Shabab Al-Ahli Club
 965630,2022,21,7,7.2,Fortaleza Esporte Clube
 965630,2023,22,26,6.3,ABC Futebol Clube (RN) / Fortaleza Esporte Clube
 965630,2024,23,19,7.6,Associação Chapecoense de Futebol / CD Santa Clara
@@ -11145,13 +11145,13 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 432159,2023,22,8,2.7,ABC Futebol Clube (RN)
 432159,2024,23,3,0.4,Audax Rio de Janeiro EC
 689505,2019,18,1,1.1,Sport Club Internacional
-689505,2020,19,17,21.6,Sport Club Internacional / Estados Unidos
-689505,2021,20,45,49.3,Sport Club Internacional / Estados Unidos U23
-689505,2022,21,40,47.2,Sport Club Internacional / Estados Unidos
-689505,2023,22,54,62.2,Sport Club Internacional / Estados Unidos
-689505,2024,23,47,63.0,Real Betis Balompié / Estados Unidos
+689505,2020,19,17,21.6,Sport Club Internacional
+689505,2021,20,45,49.3,Sport Club Internacional
+689505,2022,21,40,47.2,Sport Club Internacional
+689505,2023,22,54,62.2,Sport Club Internacional
+689505,2024,23,47,63.0,Real Betis Balompié
 689505,2025,24,37,53.7,Real Betis Balompié / Atlético de Madrid
-689505,2026,25,33,67.3,Atlético de Madrid / Estados Unidos
+689505,2026,25,33,67.3,Atlético de Madrid
 574765,2020,18,25,30.9,Sport Club Internacional
 574765,2021,19,56,63.1,Sport Club Internacional / Red Bull Bragantino
 574765,2022,20,31,24.6,Red Bull Bragantino
@@ -11294,7 +11294,7 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 627221,2026,24,17,8.0,CD Nacional / FC Porto B
 498686,2017,18,12,1.4,Envigado FC
 498686,2018,19,21,4.3,Envigado FC
-498686,2020,21,8,11.3,Colômbia U23 / Botafogo de Futebol e Regatas
+498686,2020,21,8,11.3,Botafogo de Futebol e Regatas / Cruzeiro Esporte Clube
 498686,2021,22,20,12.8,Portimonense SAD / Botafogo de Futebol e Regatas
 498686,2022,23,30,19.9,Portimonense SAD / Orlando City SC
 498686,2023,24,43,48.5,Orlando City SC
@@ -11491,14 +11491,14 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 813107,2024,22,43,39.5,D.C. United
 813107,2025,23,29,11.5,D.C. United
 813107,2026,24,24,14.4,San Diego FC / D.C. United
-491616,2019,19,1,0.8,Ecuador
-491616,2020,20,4,6.6,Ecuador U23 / Boavista FC
-491616,2021,21,26,16.6,Boavista FC / Ecuador
+491616,2019,19,1,0.8,Seleção equatoriana
+491616,2020,20,4,6.6,Boavista FC
+491616,2021,21,26,16.6,Boavista FC
 491616,2022,22,31,32.8,Boavista FC / ESTAC Troyes
 491616,2023,23,20,14.9,ESTAC Troyes / Olympiacos Piraeus
 491616,2024,24,17,14.1,Kasimpasa / CD Leganés
 491616,2025,25,34,21.6,Club Tijuana
-491616,2026,26,37,34.0,Club Tijuana / Ecuador
+491616,2026,26,37,34.0,Club Tijuana
 743589,2021,17,37,45.0,Santos FC
 743589,2022,18,27,21.6,Santos FC / UD Almería
 743589,2023,19,14,8.1,UD Almería
@@ -12032,9 +12032,9 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 957874,2026,24,31,52.8,RB Leipzig
 659804,2022,20,11,5.7,Centro Sportivo Alagoano (AL) / Club Athletico Paranaense
 659804,2023,21,31,14.8,Avs Futebol / UD Vilafranquense
-659804,2024,22,40,37.2,Avs Futebol / Ecuador U23
+659804,2024,22,40,37.2,Avs Futebol
 659804,2025,23,45,32.1,AC Sparta Praha / Avs Futebol
-659804,2026,24,36,31.6,AC Sparta Praha / Ecuador
+659804,2026,24,36,31.6,AC Sparta Praha
 802646,2021,19,1,0.9,Club Athletico Paranaense
 802646,2022,20,8,2.4,Club Athletico Paranaense
 802646,2023,21,16,5.2,Tombense Futebol Clube (MG)
@@ -12048,7 +12048,7 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 739445,2025,23,14,5.4,Clube Náutico Capibaribe / Amazonas FC
 739445,2026,24,35,9.5,Brusque Futebol Clube (SC)
 661266,2022,20,18,3.5,Club Nacional Asunción
-661266,2023,21,11,2.7,Club Nacional Asunción / Paraguay U23
+661266,2023,21,11,2.7,Club Nacional Asunción
 661266,2024,22,17,7.4,Club Nacional Asunción / Club Sol de América
 661266,2025,23,35,9.4,Club Nacional Asunción
 661266,2026,24,17,4.5,Club Nacional Asunción
@@ -12128,7 +12128,7 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 662453,2020,18,9,10.1,Clube Atlético Mineiro
 662453,2021,19,27,41.0,Clube Atlético Mineiro
 662453,2022,20,25,14.7,New England Revolution / Clube Atlético Mineiro
-662453,2023,21,12,11.4,New England Revolution / Colombia
+662453,2023,21,12,11.4,New England Revolution
 662453,2024,22,17,8.2,New England Revolution
 662453,2025,23,32,9.9,CD América de Cali / Fortaleza Esporte Clube
 662453,2026,24,17,7.0,CD América de Cali / Associação Chapecoense de Futebol
@@ -12400,21 +12400,21 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 459115,2017,17,3,3.1,Deportivo Táchira
 459115,2018,18,14,5.3,Club de Gimnasia y Esgrima La Plata
 459115,2019,19,35,21.8,CA Boca Juniors / Club de Gimnasia y Esgrima La Plata
-459115,2020,20,19,21.2,Red Bull Bragantino / Venezuela U23
-459115,2021,21,48,65.2,Red Bull Bragantino / Venezuela
+459115,2020,20,19,21.2,Red Bull Bragantino
+459115,2021,21,48,65.2,Red Bull Bragantino
 459115,2022,22,22,19.1,Red Bull Bragantino
 459115,2023,23,8,4.0,LDU Quito
 459115,2024,24,30,21.4,Atlético Clube Goianiense / LDU Quito
-459115,2025,25,4,8.2,Venezuela / Club de Gimnasia y Esgrima La Plata
+459115,2025,25,4,8.2,Club de Gimnasia y Esgrima La Plata
 459115,2026,26,18,5.3,Volos FC
 656409,2019,18,10,4.0,Independiente del Valle
 656409,2020,19,7,6.0,Red Bull Bragantino
 656409,2021,20,14,12.5,Red Bull Bragantino
 656409,2022,21,13,10.3,Red Bull Bragantino
-656409,2023,22,32,37.6,Red Bull Bragantino / Ecuador
-656409,2024,23,9,5.2,Red Bull Bragantino / Ecuador
+656409,2023,22,32,37.6,Red Bull Bragantino
+656409,2024,23,9,5.2,Red Bull Bragantino
 656409,2025,24,21,18.3,FC Famalicão
-656409,2026,25,21,15.8,FC Famalicão / Ecuador
+656409,2026,25,21,15.8,FC Famalicão
 595168,2018,18,2,0.8,Grêmio Esportivo Brasil (RS)
 595168,2020,20,3,3.0,Red Bull Bragantino
 595168,2021,21,14,14.9,Red Bull Bragantino / América Futebol Clube (MG)
@@ -12717,9 +12717,9 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 879217,2024,21,25,31.5,Cruzeiro Esporte Clube
 879217,2025,22,51,63.0,Cruzeiro Esporte Clube
 879217,2026,23,44,65.6,Cruzeiro Esporte Clube / Como 1907
-661856,2024,22,55,23.9,Club Always Ready / Bolivia
-661856,2025,23,52,36.8,Bolívar La Paz / Bolivia
-661856,2026,24,38,11.6,Bolívar La Paz / Bolivia
+661856,2024,22,55,23.9,Club Always Ready
+661856,2025,23,52,36.8,Bolívar La Paz
+661856,2026,24,38,11.6,Bolívar La Paz
 792249,2020,20,23,10.3,Cruzeiro Esporte Clube / Ferroviária
 792249,2021,21,30,14.1,Cruzeiro Esporte Clube
 792249,2022,22,27,12.1,Associação Chapecoense de Futebol / Mirassol Futebol Clube (SP)
@@ -13328,7 +13328,7 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 663319,2022,20,18,17.4,CF Pachuca
 663319,2023,21,28,24.8,CF Pachuca
 663319,2024,22,43,32.9,Columbus Crew / Atlético Nacional
-663319,2025,23,51,22.9,Atlético Nacional / Colombia
+663319,2025,23,51,22.9,Atlético Nacional
 663319,2026,24,35,36.6,Clube de Regatas Vasco da Gama
 900195,2021,18,2,2.6,Sociedade Esportiva Palmeiras
 900195,2023,20,9,14.3,Sociedade Esportiva Palmeiras
@@ -13365,8 +13365,8 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 749560,2026,22,25,10.2,Al-Sadd SC
 659801,2021,19,1,0.2,Orense SC
 659801,2022,20,28,6.3,Orense SC
-659801,2023,21,31,8.2,Orense SC / Ecuador U23
-659801,2024,22,22,14.2,Orense SC / Ecuador U23
+659801,2023,21,31,8.2,Orense SC
+659801,2024,22,22,14.2,Orense SC
 659801,2026,24,17,3.9,Orense SC
 816135,2023,20,1,2.6,Sociedade Esportiva Palmeiras
 816135,2024,21,19,6.2,NK Osijek
@@ -13644,8 +13644,8 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 661269,2021,19,36,18.0,Clube de Regatas Vasco da Gama
 661269,2022,20,19,13.5,Coritiba Foot Ball Club / Clube de Regatas Vasco da Gama
 661269,2023,21,27,21.7,Clube de Regatas Vasco da Gama / CA Talleres
-661269,2024,22,42,36.9,CA Talleres / Paraguay
-661269,2025,23,16,31.7,Paraguay / CA Talleres
+661269,2024,22,42,36.9,CA Talleres
+661269,2025,23,16,31.7,CA Talleres / CA River Plate
 661269,2026,24,32,51.5,Atlanta United FC / Inter Miami CF
 668235,2022,19,18,10.9,Clube de Regatas Vasco da Gama
 668235,2023,20,28,22.0,Clube de Regatas Vasco da Gama
@@ -14219,7 +14219,7 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 978037,2024,21,31,26.9,CR Flamengo / CF Estrela Amadora
 978037,2025,22,37,42.6,Los Angeles FC / CF Estrela Amadora
 978037,2026,23,8,6.3,Los Angeles FC
-661270,2023,21,17,5.5,Club Cerro Porteño / Paraguay U23
+661270,2023,21,17,5.5,Club Cerro Porteño
 661270,2024,22,40,34.1,Club Cerro Porteño / Cruzeiro Esporte Clube
 661270,2025,23,15,5.8,Club Cerro Porteño / Cruzeiro Esporte Clube
 661270,2026,24,16,5.1,Club Cerro Porteño
@@ -14455,12 +14455,12 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 959106,2024,21,38,23.1,Santos FC / Maccabi Tel Aviv
 959106,2025,22,45,32.1,Maccabi Tel Aviv / AZ Alkmaar
 959106,2026,23,34,34.1,AZ Alkmaar
-642721,2020,18,21,5.1,Academia Puerto Cabello / Venezuela U23
+642721,2020,18,21,5.1,Academia Puerto Cabello
 642721,2021,19,12,4.7,Academia Puerto Cabello / Santos FC
-642721,2022,20,27,10.4,CD Tondela / Venezuela U21
+642721,2022,20,27,10.4,CD Tondela
 642721,2023,21,32,17.3,FC Vizela / CD Tondela
 642721,2024,22,32,28.7,FC Vizela / Atlético Clube Goianiense
-642721,2025,23,36,13.7,Ulsan HD FC / Venezuela
+642721,2025,23,36,13.7,Ulsan HD FC
 642721,2026,24,24,11.1,FC Vizela
 984096,2023,18,2,1.6,Santos FC
 984096,2024,19,22,13.8,Santos FC
@@ -14694,10 +14694,10 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 1052819,2026,21,18,18.6,Club Athletico Paranaense
 1056019,2025,21,23,8.8,Londrina Esporte Clube (PR) / Maricá Futebol Clube
 1056019,2026,22,35,10.5,Londrina Esporte Clube (PR)
-960584,2023,19,2,0.8,Bolivia / Bolivia U23
-960584,2024,20,3,4.2,Bolivia U23
-960584,2025,21,35,6.7,Club Deportivo Oriente Petrolero / Bolivia
-960584,2026,22,22,7.3,Club Always Ready / Bolivia
+960584,2023,19,2,0.8,Seleção boliviana
+960584,2024,20,3,4.2,Seleção boliviana
+960584,2025,21,35,6.7,Club Deportivo Oriente Petrolero
+960584,2026,22,22,7.3,Club Always Ready / CD Nacional
 627213,2025,23,10,5.2,APOEL Nicosia
 627213,2026,24,9,4.3,APOEL Nicosia / Omonia Aradippou
 933619,2021,19,6,1.2,Montevideo City Torque
@@ -15497,26 +15497,26 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 1117283,2024,21,6,0.9,EC Santo André / Associação Atlética Ponte Preta
 1184104,2023,22,2,0.3,Louletano DC
 1184104,2024,23,5,0.3,FC Barreirense
-1063811,2022,18,4,2.9,Bolivia / Santos FC
-1063811,2023,19,13,12.3,Santos FC / Bolivia
-1063811,2024,20,17,27.7,Bolivia / Santos FC
-1063811,2025,21,39,31.6,América Futebol Clube (MG) / Bolivia
-1063811,2026,22,31,29.1,Santos FC / Bolivia
+1063811,2022,18,4,2.9,Santos FC
+1063811,2023,19,13,12.3,Santos FC
+1063811,2024,20,17,27.7,Santos FC
+1063811,2025,21,39,31.6,América Futebol Clube (MG) / Santos FC
+1063811,2026,22,31,29.1,Santos FC
 1086258,2024,18,9,5.6,Santos FC
 1086258,2025,19,29,26.5,Santos FC
 1086258,2026,20,7,11.3,Tottenham Hotspur / FC Porto
-1084192,2023,19,1,0.6,Bolivia
-1084192,2024,20,5,11.8,Bolivia / Santos FC
-1084192,2025,21,45,15.3,FK Auda / Bolivia
+1084192,2023,19,1,0.6,Seleção boliviana
+1084192,2024,20,5,11.8,Santos FC
+1084192,2025,21,45,15.3,FK Auda
 1084192,2026,22,9,0.9,Chungbuk Cheongju FC
 1032891,2023,19,18,14.7,Santos FC
 1032891,2024,20,3,1.5,Santos FC
 1032891,2025,21,12,5.2,Sport Club do Recife / Santos FC
 1032891,2026,22,23,4.4,Associação Atlética Ponte Preta
-661852,2020,18,1,2.8,Bolivia
-661852,2023,21,1,0.6,Bolivia
+661852,2020,18,1,2.8,Seleção boliviana
+661852,2023,21,1,0.6,Seleção boliviana
 661852,2024,22,2,0.6,Cancún FC
-661852,2025,23,24,10.2,Cancún FC / Bolivia
+661852,2025,23,24,10.2,Cancún FC
 661852,2026,24,23,9.7,Cancún FC / Bolívar La Paz
 805412,2026,22,2,1.4,Amazonas FC
 973802,2025,22,1,0.1,Barcelona FC (RO)
@@ -16674,8 +16674,8 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 1253817,2026,20,5,0.4,North District
 896338,2021,16,10,0.9,Deportivo La Guaira
 896338,2022,17,24,3.9,Deportivo La Guaira
-896338,2023,18,17,2.1,Deportivo La Guaira / Venezuela U23
-896338,2024,19,39,49.2,Fortaleza Esporte Clube / Venezuela
+896338,2023,18,17,2.1,Deportivo La Guaira
+896338,2024,19,39,49.2,Fortaleza Esporte Clube
 896338,2025,20,36,25.0,Maccabi Tel Aviv / Fortaleza Esporte Clube
 896338,2026,21,26,12.6,Maccabi Tel Aviv / Sport Club do Recife
 1219689,2025,19,12,8.2,Moreirense FC
@@ -16781,7 +16781,7 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 849582,2023,19,41,30.0,CA San Lorenzo de Almagro
 849582,2024,20,36,39.4,CA San Lorenzo de Almagro / Sociedade Esportiva Palmeiras
 849582,2025,21,49,93.1,Sociedade Esportiva Palmeiras
-849582,2026,22,54,95.2,Sociedade Esportiva Palmeiras / Argentina
+849582,2026,22,54,95.2,Sociedade Esportiva Palmeiras
 1253807,2025,19,12,14.1,Sociedade Esportiva Palmeiras
 1253807,2026,20,9,9.0,Sociedade Esportiva Palmeiras
 1268048,2025,17,2,3.2,Sociedade Esportiva Palmeiras
@@ -16822,7 +16822,7 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 1210697,2026,21,3,2.6,531 / CA Aldosivi
 1098654,2026,21,4,2.6,São Bernardo FC
 1279319,2026,18,1,1.1,Santos FC
-1087335,2023,17,1,0.3,Venezuela U23
+1087335,2023,17,1,0.3,Seleção venezuelana
 1193867,2024,18,28,17.6,Sport Club do Recife / Wolverhampton Wanderers
 1193867,2025,19,13,9.2,FC Porto B / Wolverhampton Wanderers
 1193867,2026,20,20,15.6,Wolverhampton Wanderers / São Paulo Futebol Clube
@@ -16900,10 +16900,10 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 1355395,2026,19,2,0.5,América Futebol Clube (MG)
 1388409,2025,19,21,16.9,Club Athletico Paranaense / Cruzeiro Esporte Clube
 1388409,2026,20,19,26.4,Cruzeiro Esporte Clube
-1101761,2023,18,9,7.6,CD Árabe Unido / Panama U23
+1101761,2023,18,9,7.6,CD Árabe Unido
 1101761,2024,19,8,7.3,CD Árabe Unido
-1101761,2025,20,4,3.3,CD Árabe Unido / Panama
-1101761,2026,21,31,11.6,Kryvbas Kryvyi Rig / Panama
+1101761,2025,20,4,3.3,CD Árabe Unido
+1101761,2026,21,31,11.6,Kryvbas Kryvyi Rig
 1223243,2026,21,16,13.2,Club Athletico Paranaense
 1275070,2026,19,14,6.2,Avaí FC / Esporte Clube Bahia
 1355817,2026,19,3,1.8,Club Athletico Paranaense
@@ -16922,9 +16922,9 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 1096970,2026,20,1,0.3,Ceará Sporting Club
 1101447,2023,17,2,0.4,CD Palestino
 1101447,2024,18,39,8.3,CD Palestino
-1101447,2025,19,20,22.9,Clube Atlético Mineiro / Chile
+1101447,2025,19,20,22.9,Clube Atlético Mineiro / CD Palestino
 1101447,2026,20,24,15.1,CSD Colo-Colo / Clube Atlético Mineiro
-1410674,2026,19,38,41.9,Clube Atlético Mineiro / Guinea
+1410674,2026,19,38,41.9,Clube Atlético Mineiro
 1344099,2024,19,1,0.3,Guarani Futebol Clube (SP)
 1344099,2025,20,22,18.5,Guarani Futebol Clube (SP) / Clube Atlético Mineiro
 1344099,2026,21,9,5.8,Shabab Al-Ahli Club
@@ -16968,7 +16968,7 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 1228194,2025,18,30,46.8,Botafogo de Futebol e Regatas / CA Vélez Sarsfield
 1228194,2026,19,44,45.9,Botafogo de Futebol e Regatas
 1464878,2025,18,6,7.9,Botafogo de Futebol e Regatas
-1464878,2026,19,34,35.2,Botafogo de Futebol e Regatas / Panama
+1464878,2026,19,34,35.2,Botafogo de Futebol e Regatas
 1087334,2023,17,8,0.9,Barranquilla FC / Junior FC
 1087334,2024,18,15,1.0,Barranquilla FC
 1087334,2025,19,21,11.0,Junior FC / Botafogo de Futebol e Regatas
@@ -17028,9 +17028,9 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 1351007,2025,20,1,0.3,Al-Ittifaq FC
 1351007,2026,21,5,0.3,Al-Ittifaq FC
 1074584,2023,17,1,0.3,Independiente del Valle
-1074584,2024,18,43,29.0,Independiente del Valle / Ecuador
+1074584,2024,18,43,29.0,Independiente del Valle
 1074584,2025,19,29,33.7,Cruzeiro Esporte Clube / Beşiktaş JK
-1074584,2026,20,55,71.8,Cruzeiro Esporte Clube / Ecuador
+1074584,2026,20,55,71.8,Cruzeiro Esporte Clube
 1360820,2026,18,8,10.2,Cruzeiro Esporte Clube
 1268054,2026,19,26,10.5,Cuiabá Esporte Clube (MT)
 1362092,2025,20,9,3.9,Cuiabá Esporte Clube (MT) / Azuriz FC
@@ -17176,14 +17176,14 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 1355385,2025,18,15,14.7,Santos FC
 1355385,2026,19,13,12.5,Santos FC / Genoa CFC
 1143336,2023,18,10,3.5,SD Aucas
-1143336,2024,19,2,4.0,Ecuador U23
+1143336,2024,19,2,4.0,Seleção equatoriana
 1143336,2026,21,9,3.3,Barcelona SC Guayaquil
 1077154,2022,17,1,0.5,Guarani Futebol Clube (SP)
 1077154,2023,18,8,4.0,Guarani Futebol Clube (SP)
 1077154,2024,19,6,1.9,Guarani Futebol Clube (SP)
 1077154,2026,21,2,0.5,Guarani Futebol Clube (SP)
-1124521,2025,19,3,1.7,Bolivia
-1124521,2026,20,6,3.3,Bolivia
+1124521,2025,19,3,1.7,Seleção boliviana
+1124521,2026,20,6,3.3,Seleção boliviana
 1355384,2026,20,35,3.7,Jalgpallikool Tammeka / Jalgpallikool Tammeka U21
 1355386,2026,17,2,1.6,Santos FC
 1365897,2025,17,34,13.1,Sport Club do Recife
