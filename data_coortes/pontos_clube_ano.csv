@@ -691,7 +691,7 @@ tm_id,ano,clube,jogos_pro,pontos
 674730,2024,AA Internacional de Limeira,18,4.2
 640301,2019,Villa Nova AC,6,2.4
 640301,2021,Unaí EC,9,1.8
-640301,2021,Seleção brasileira,2,0.2
+640301,2021,Brasiliense FC (DF),2,0.2
 640301,2022,Ceilândia EC,13,2.3
 640301,2023,Brasília FC,9,1.8
 640301,2025,Tombense Futebol Clube (MG),1,0.1
@@ -2835,7 +2835,7 @@ tm_id,ano,clube,jogos_pro,pontos
 312686,2024,Ferroviário AC,1,0.7
 312686,2025,Sampaio Corrêa Futebol e Esporte (RJ),5,2.5
 312686,2025,Mixto EC (MT),18,1.9
-312686,2026,Seleção brasileira,13,1.8
+312686,2026,Brasiliense FC (DF),13,1.8
 346863,2014,Esporte Clube Vitória,1,1.0
 346863,2015,Esporte Clube Vitória,1,0.5
 346863,2016,Esporte Clube Vitória,8,5.0
@@ -3717,8 +3717,8 @@ tm_id,ano,clube,jogos_pro,pontos
 606729,2026,Birkirkara FC,6,0.7
 606729,2026,América Football Club (RJ),8,0.5
 549632,2019,STK 1914 Samorin,13,1.6
-549632,2020,Seleção brasileira,17,2.6
-549632,2021,Seleção brasileira,30,9.0
+549632,2020,Brasiliense FC (DF),17,2.6
+549632,2021,Brasiliense FC (DF),30,9.0
 549632,2022,Vila Nova Futebol Clube (GO),1,0.5
 549632,2023,Azuriz FC,5,1.5
 744052,2019,Americano FC (RJ),2,1.0
@@ -4132,7 +4132,7 @@ tm_id,ano,clube,jogos_pro,pontos
 351903,2022,Avaí FC,23,15.2
 351903,2024,Ituano Futebol Clube (SP),7,3.0
 351903,2025,Ypiranga FC,25,7.1
-351903,2026,Seleção brasileira,12,1.6
+351903,2026,Brasiliense FC (DF),12,1.6
 520629,2017,Grêmio Foot-Ball Porto Alegrense,7,7.8
 520629,2018,Boa EC,22,6.8
 520629,2019,Esporte Clube São José (RS),17,4.7
@@ -5280,7 +5280,7 @@ tm_id,ano,clube,jogos_pro,pontos
 871636,2025,AD Iguatu,8,2.4
 871636,2025,Ceilândia EC,15,1.8
 871636,2026,Samambaia FC,8,1.6
-871636,2026,Seleção brasileira,6,0.5
+871636,2026,Brasiliense FC (DF),6,0.5
 936102,2020,EC São Luiz,2,0.8
 936102,2020,Clube Atlético Tubarão (SC),13,0.4
 936102,2021,Esportivo,15,1.1
@@ -5912,7 +5912,7 @@ tm_id,ano,clube,jogos_pro,pontos
 378177,2016,Sport Club do Recife,6,3.1
 378177,2017,Sport Club do Recife,5,1.9
 378177,2018,NK Rudes,5,0.6
-378177,2020,Seleção brasileira,1,0.2
+378177,2020,Brasiliense FC (DF),1,0.2
 378177,2023,AA Maguary,9,2.7
 545155,2016,Sport Club do Recife,1,0.1
 545155,2024,Madureira EC,7,3.5
@@ -6503,7 +6503,7 @@ tm_id,ano,clube,jogos_pro,pontos
 432978,2021,EC Santo André,2,1.0
 432978,2022,Cong An Ho Chi Minh City FC,6,0.6
 432978,2023,Madureira EC,8,4.0
-432978,2023,Seleção brasileira,10,1.0
+432978,2023,Brasiliense FC (DF),10,1.0
 432978,2024,Rio Branco AC,14,3.3
 432978,2026,Vigor Lamezia Calcio,14,1.8
 432978,2026,US Vibonese,8,1.6
@@ -7330,9 +7330,9 @@ tm_id,ano,clube,jogos_pro,pontos
 1021099,2020,AD Bahia de Feira (BA),4,1.2
 1021099,2021,Desportiva Aliança,12,2.4
 1021099,2021,Murici Futebol Clube (AL),12,1.5
-1021099,2023,Seleção brasileira,24,4.2
+1021099,2023,Brasiliense FC (DF),24,4.2
 1021099,2023,Jacobinense EC,9,2.7
-1021099,2024,Seleção brasileira,2,0.9
+1021099,2024,Brasiliense FC (DF),2,0.9
 1021099,2025,Associação Olímpica de Itabaiana (SE),17,3.5
 1021099,2026,EC São Luiz,10,2.9
 1021099,2026,CS Sergipe,6,0.5
@@ -8028,8 +8028,8 @@ tm_id,ano,clube,jogos_pro,pontos
 323923,2021,Unaí EC,9,1.8
 323923,2021,Criciúma EC,2,0.6
 323923,2022,Ceilândia EC,16,2.9
-323923,2022,Seleção brasileira,6,2.0
-323923,2023,Seleção brasileira,14,4.0
+323923,2022,Brasiliense FC (DF),6,2.0
+323923,2023,Brasiliense FC (DF),14,4.0
 323923,2023,AA Altos,3,0.4
 323923,2024,Goianésia Esporte Clube (GO),13,2.6
 323923,2024,Associação Olímpica de Itabaiana (SE),8,0.9
@@ -8598,7 +8598,7 @@ tm_id,ano,clube,jogos_pro,pontos
 810527,2022,AE Jataiense,3,0.6
 810527,2023,Athletic Club,10,1.2
 810527,2024,Sociedade Esportiva do Gama (DF),11,2.2
-810527,2024,Seleção brasileira,4,0.6
+810527,2024,Brasiliense FC (DF),4,0.6
 810527,2025,CS Sergipe,13,1.3
 810527,2026,Tombense Futebol Clube (MG),24,6.2
 640263,2020,CE Dom Bosco,11,2.2
@@ -9841,8 +9841,8 @@ tm_id,ano,clube,jogos_pro,pontos
 546214,2022,Rio Branco SC,10,3.0
 546214,2022,Clube do Remo (PA),3,0.7
 546214,2023,Cianorte Futebol Clube (PR),11,3.3
-546214,2024,Seleção brasileira,31,5.5
-546214,2025,Seleção brasileira,14,4.8
+546214,2024,Brasiliense FC (DF),31,5.5
+546214,2025,Brasiliense FC (DF),14,4.8
 546214,2025,Volta Redonda Futebol Clube (RJ),13,4.3
 546214,2025,Ypiranga FC,17,4.2
 546214,2026,Botafogo FC,27,7.4
@@ -10314,7 +10314,7 @@ tm_id,ano,clube,jogos_pro,pontos
 936776,2023,Manauara EC,11,2.2
 936776,2024,Botafogo FC,21,8.7
 936776,2024,Centro Sportivo Alagoano (AL),4,1.0
-936776,2024,Seleção brasileira,3,0.4
+936776,2024,Brasiliense FC (DF),3,0.4
 936776,2025,Guarany de Bagé FC,23,4.5
 936776,2026,Guarany de Bagé FC,17,4.2
 692675,2017,Atlético Clube Goianiense,2,0.4
@@ -10529,7 +10529,7 @@ tm_id,ano,clube,jogos_pro,pontos
 677803,2021,Bangu Atlético Clube (RJ),21,4.5
 677803,2022,Bangu Atlético Clube (RJ),10,5.0
 677803,2023,São Francisco FC,5,1.5
-677803,2023,Seleção brasileira,2,0.4
+677803,2023,Brasiliense FC (DF),2,0.4
 677803,2026,São Raimundo EC,10,1.2
 857182,2021,Partizan Bardejov,20,1.6
 857182,2022,Santa Lucia FC,12,0.5
@@ -14584,7 +14584,7 @@ tm_id,ano,clube,jogos_pro,pontos
 599528,2026,Capital CF,2,0.8
 984365,2024,Nova Iguaçu FC (RJ),14,6.2
 984365,2024,Coritiba Foot Ball Club,5,2.4
-984365,2025,Seleção brasileira,11,3.7
+984365,2025,Brasiliense FC (DF),11,3.7
 997715,2023,Clube Náutico Capibaribe,17,8.2
 997715,2024,América FC,8,2.4
 997715,2025,América FC,2,1.4
@@ -14702,7 +14702,7 @@ tm_id,ano,clube,jogos_pro,pontos
 844808,2025,Treze FC,4,0.2
 844808,2026,AA Portuguesa,4,1.2
 740269,2021,Sociedade Esportiva do Gama (DF),10,1.9
-740269,2022,Seleção brasileira,3,0.6
+740269,2022,Brasiliense FC (DF),3,0.6
 740269,2023,Foz do Iguaçu FC,5,1.5
 740269,2023,Samambaia FC,4,0.8
 740269,2025,Villa Nova AC,8,3.2
@@ -15354,7 +15354,7 @@ tm_id,ano,clube,jogos_pro,pontos
 722613,2025,Batalhão FC,2,0.4
 722613,2026,Goiatuba EC,14,1.6
 722613,2026,Uthai Thani FC,4,0.8
-722613,2026,Seleção brasileira,4,0.8
+722613,2026,Brasiliense FC (DF),4,0.8
 969596,2020,Bangu Atlético Clube (RJ),11,0.9
 969596,2022,SC Dnipro-1 ( - 2024),4,1.9
 969596,2022,Grêmio Esportivo Brasil (RS),2,0.3
@@ -16551,7 +16551,7 @@ tm_id,ano,clube,jogos_pro,pontos
 815670,2022,Botafogo de Futebol e Regatas,4,2.0
 815670,2024,ABC Futebol Clube (RN),15,6.0
 815670,2025,Ypiranga FC,23,6.7
-815670,2026,Seleção brasileira,9,1.2
+815670,2026,Brasiliense FC (DF),9,1.2
 815670,2026,Anápolis FC,3,0.6
 878742,2022,Botafogo de Futebol e Regatas,5,2.5
 878742,2023,Londrina Esporte Clube (PR),2,0.6
@@ -16990,7 +16990,7 @@ tm_id,ano,clube,jogos_pro,pontos
 983297,2022,Clube Sociedade Esportiva (AL),1,0.2
 983297,2023,Anápolis FC,22,3.3
 983297,2024,Anápolis FC,36,4.8
-983297,2025,Seleção brasileira,9,3.8
+983297,2025,Brasiliense FC (DF),9,3.8
 983297,2025,Anápolis FC,2,0.5
 983297,2025,Joinville Esporte Clube (SC),4,0.4
 983297,2026,Nacional FC,11,5.3
@@ -17063,9 +17063,9 @@ tm_id,ano,clube,jogos_pro,pontos
 677340,2022,AA Internacional de Limeira,5,1.3
 677340,2022,AA Aparecidense,1,0.2
 677340,2023,Athletic Club,15,2.6
-677340,2024,Seleção brasileira,15,2.1
+677340,2024,Brasiliense FC (DF),15,2.1
 677340,2024,Sociedade Esportiva do Gama (DF),9,1.8
-677340,2025,Seleção brasileira,10,3.0
+677340,2025,Brasiliense FC (DF),10,3.0
 677340,2026,Rio Branco AC,24,5.9
 800648,2020,Cruzeiro Esporte Clube,3,1.6
 800648,2023,AD Confiança,13,3.4
@@ -17311,7 +17311,7 @@ tm_id,ano,clube,jogos_pro,pontos
 994618,2024,Ferroviário AC,26,5.5
 994618,2025,Ypiranga FC,9,2.2
 994618,2025,Clube do Remo (PA),3,1.4
-994618,2026,Seleção brasileira,3,0.5
+994618,2026,Brasiliense FC (DF),3,0.5
 994622,2023,Red Bull Bragantino,1,1.1
 994622,2024,APOEL Nicosia,6,4.9
 994622,2025,Esporte Clube Juventude,7,3.8
@@ -17582,7 +17582,7 @@ tm_id,ano,clube,jogos_pro,pontos
 980276,2022,GE Juventus (SC),7,2.1
 980276,2022,CE Aimoré,8,1.1
 980276,2023,CE Aimoré,8,3.2
-980276,2024,Seleção brasileira,5,1.5
+980276,2024,Brasiliense FC (DF),5,1.5
 574759,2021,Racing Ferrol,3,1.1
 574759,2022,Racing Ferrol,2,0.7
 574759,2023,SER Caxias do Sul (RS),6,1.5
@@ -20087,8 +20087,8 @@ tm_id,ano,clube,jogos_pro,pontos
 1027713,2024,Criciúma EC,20,9.2
 1027713,2025,SER Caxias do Sul (RS),5,1.6
 1027713,2025,Criciúma EC,5,1.5
-940149,2023,Seleção brasileira,12,2.4
-940149,2024,Seleção brasileira,3,2.1
+940149,2023,Brasiliense FC (DF),12,2.4
+940149,2024,Brasiliense FC (DF),3,2.1
 940149,2024,Samambaia FC,8,1.6
 940149,2024,Iporá Esporte Clube,13,1.0
 940149,2025,Samambaia FC,8,1.6
@@ -20372,7 +20372,7 @@ tm_id,ano,clube,jogos_pro,pontos
 788138,2024,Capital FC (TO),2,0.1
 788138,2025,Trem DC,13,1.8
 788138,2026,Trem DC,10,2.1
-1245910,2024,Seleção brasileira,7,2.3
+1245910,2024,Brasiliense FC (DF),7,2.3
 1245910,2024,FC Majd,1,0.3
 1245910,2025,Luverdense EC (MT),4,0.4
 1245910,2025,SE Ceilandense,2,0.4
@@ -20406,7 +20406,7 @@ tm_id,ano,clube,jogos_pro,pontos
 798448,2023,Pouso Alegre FC,1,0.1
 798448,2024,Samambaia FC,8,1.6
 798448,2024,Esporte Clube São José (RS),12,1.3
-798448,2024,Seleção brasileira,1,0.7
+798448,2024,Brasiliense FC (DF),1,0.7
 798448,2025,EC Pelotas,11,4.4
 798448,2025,Guarany de Bagé FC,13,1.2
 798448,2025,Joinville Esporte Clube (SC),2,0.2

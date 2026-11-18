@@ -512,7 +512,7 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 674730,2023,26,25,5.0,FC Cascavel (PR) / AA Internacional de Limeira
 674730,2024,27,18,4.2,AA Internacional de Limeira
 640301,2019,23,6,2.4,Villa Nova AC
-640301,2021,25,11,2.0,Unaí EC
+640301,2021,25,11,2.0,Unaí EC / Brasiliense FC (DF)
 640301,2022,26,13,2.3,Ceilândia EC
 640301,2023,27,9,1.8,Brasília FC
 640301,2025,29,1,0.1,Tombense Futebol Clube (MG)
@@ -2106,7 +2106,7 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 312686,2023,27,22,7.6,ABC Futebol Clube (RN)
 312686,2024,28,14,2.3,Mixto EC (MT) / Ferroviário AC
 312686,2025,29,23,4.3,Mixto EC (MT) / Sampaio Corrêa Futebol e Esporte (RJ)
-312686,2026,30,13,1.8,Seleção brasileira
+312686,2026,30,13,1.8,Brasiliense FC (DF)
 346863,2014,17,1,1.0,Esporte Clube Vitória
 346863,2015,18,1,0.5,Esporte Clube Vitória
 346863,2016,19,8,5.0,Esporte Clube Vitória
@@ -2756,8 +2756,8 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 606729,2025,28,10,1.5,Sobradinho Esporte Clube (DF) / AD Jequié
 606729,2026,29,18,3.2,América Football Club (RJ) / Birkirkara FC
 549632,2019,21,13,1.6,STK 1914 Samorin
-549632,2020,22,17,2.6,Seleção brasileira
-549632,2021,23,30,9.0,Seleção brasileira
+549632,2020,22,17,2.6,Brasiliense FC (DF)
+549632,2021,23,30,9.0,Brasiliense FC (DF)
 549632,2022,24,1,0.5,Vila Nova Futebol Clube (GO)
 549632,2023,25,5,1.5,Azuriz FC
 744052,2019,22,2,1.0,Americano FC (RJ)
@@ -3084,7 +3084,7 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 351903,2022,24,23,15.2,Avaí FC
 351903,2024,26,7,3.0,Ituano Futebol Clube (SP)
 351903,2025,27,25,7.1,Ypiranga FC
-351903,2026,28,12,1.6,Seleção brasileira
+351903,2026,28,12,1.6,Brasiliense FC (DF)
 520629,2017,21,7,7.8,Grêmio Foot-Ball Porto Alegrense
 520629,2018,22,22,6.8,Boa EC
 520629,2019,23,17,4.7,Esporte Clube São José (RS)
@@ -3945,7 +3945,7 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 871636,2023,25,11,2.2,Brasília FC / GE Anápolis
 871636,2024,26,11,2.5,Real Brasília FC
 871636,2025,27,23,4.2,Ceilândia EC / AD Iguatu
-871636,2026,28,14,2.1,Samambaia FC
+871636,2026,28,14,2.1,Samambaia FC / Brasiliense FC (DF)
 936102,2020,24,15,1.2,Clube Atlético Tubarão (SC) / EC São Luiz
 936102,2021,25,15,1.1,Esportivo
 936102,2022,26,19,4.0,Manaus Futebol Clube
@@ -4409,7 +4409,7 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 378177,2016,19,6,3.1,Sport Club do Recife
 378177,2017,20,5,1.9,Sport Club do Recife
 378177,2018,21,5,0.6,NK Rudes
-378177,2020,23,1,0.2,Seleção brasileira
+378177,2020,23,1,0.2,Brasiliense FC (DF)
 378177,2023,26,9,2.7,AA Maguary
 545155,2016,19,1,0.1,Sport Club do Recife
 545155,2024,27,7,3.5,Madureira EC
@@ -4854,7 +4854,7 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 432978,2020,23,5,2.0,Clube de Regatas Brasil (AL)
 432978,2021,24,2,1.0,EC Santo André
 432978,2022,25,6,0.6,Cong An Ho Chi Minh City FC
-432978,2023,26,18,5.0,Madureira EC
+432978,2023,26,18,5.0,Brasiliense FC (DF) / Madureira EC
 432978,2024,27,14,3.3,Rio Branco AC
 432978,2026,29,22,3.4,Vigor Lamezia Calcio / US Vibonese
 447660,2018,20,1,0.5,Clube de Regatas Vasco da Gama
@@ -5473,8 +5473,8 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 1091616,2026,27,24,6.6,Brusque Futebol Clube (SC)
 1021099,2020,23,4,1.2,AD Bahia de Feira (BA)
 1021099,2021,24,24,3.9,Desportiva Aliança / Murici Futebol Clube (AL)
-1021099,2023,26,33,7.0,Jacobinense EC
-1021099,2024,27,2,0.9,Seleção brasileira
+1021099,2023,26,33,7.0,Brasiliense FC (DF) / Jacobinense EC
+1021099,2024,27,2,0.9,Brasiliense FC (DF)
 1021099,2025,28,17,3.5,Associação Olímpica de Itabaiana (SE)
 1021099,2026,29,16,3.4,EC São Luiz / CS Sergipe
 802607,2019,21,3,0.9,AD Jequié
@@ -5988,8 +5988,8 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 517518,2026,27,1,0.3,Tuna Luso Brasileira
 323923,2019,21,2,0.7,Criciúma EC
 323923,2021,23,11,2.4,Unaí EC / Criciúma EC
-323923,2022,24,22,4.9,Ceilândia EC
-323923,2023,25,17,4.4,AA Altos
+323923,2022,24,22,4.9,Ceilândia EC / Brasiliense FC (DF)
+323923,2023,25,17,4.4,Brasiliense FC (DF) / AA Altos
 323923,2024,26,21,3.5,Goianésia Esporte Clube (GO) / Associação Olímpica de Itabaiana (SE)
 323923,2025,27,27,5.3,Singha Chiangrai United / Associação Olímpica de Itabaiana (SE)
 323923,2026,28,15,2.8,Singha Chiangrai United
@@ -6398,7 +6398,7 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 810527,2021,22,1,0.2,Vila Nova Futebol Clube (GO)
 810527,2022,23,3,0.6,AE Jataiense
 810527,2023,24,10,1.2,Athletic Club
-810527,2024,25,15,2.8,Sociedade Esportiva do Gama (DF)
+810527,2024,25,15,2.8,Sociedade Esportiva do Gama (DF) / Brasiliense FC (DF)
 810527,2025,26,13,1.3,CS Sergipe
 810527,2026,27,24,6.2,Tombense Futebol Clube (MG)
 640263,2020,22,11,2.2,CE Dom Bosco
@@ -7326,8 +7326,8 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 631808,2026,29,16,3.0,Betim Futebol
 546214,2022,24,13,3.7,Rio Branco SC / Clube do Remo (PA)
 546214,2023,25,11,3.3,Cianorte Futebol Clube (PR)
-546214,2024,26,31,5.5,Seleção brasileira
-546214,2025,27,44,13.4,Ypiranga FC / Volta Redonda Futebol Clube (RJ)
+546214,2024,26,31,5.5,Brasiliense FC (DF)
+546214,2025,27,44,13.4,Ypiranga FC / Brasiliense FC (DF)
 546214,2026,28,27,7.4,Botafogo FC
 574903,2019,20,5,5.8,São Paulo Futebol Clube
 574903,2023,24,8,3.4,Esporte Clube Juventude
@@ -7851,7 +7851,7 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 677803,2020,22,21,1.6,Yeoncheon FC
 677803,2021,23,21,4.5,Bangu Atlético Clube (RJ)
 677803,2022,24,10,5.0,Bangu Atlético Clube (RJ)
-677803,2023,25,7,1.9,São Francisco FC
+677803,2023,25,7,1.9,São Francisco FC / Brasiliense FC (DF)
 677803,2026,28,10,1.2,São Raimundo EC
 857182,2021,23,20,1.6,Partizan Bardejov
 857182,2022,24,12,0.5,Santa Lucia FC
@@ -10862,7 +10862,7 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 599528,2023,23,1,0.3,Al-Hamriyah Club
 599528,2026,26,10,4.0,União Recreativa dos Trabalhadores (MG) / Capital CF
 984365,2024,23,19,8.6,Nova Iguaçu FC (RJ) / Coritiba Foot Ball Club
-984365,2025,24,11,3.7,Seleção brasileira
+984365,2025,24,11,3.7,Brasiliense FC (DF)
 997715,2023,21,17,8.2,Clube Náutico Capibaribe
 997715,2024,22,8,2.4,América FC
 997715,2025,23,2,1.4,América FC
@@ -10954,7 +10954,7 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 844808,2025,25,11,3.0,Betim Futebol / Treze FC
 844808,2026,26,4,1.2,AA Portuguesa
 740269,2021,22,10,1.9,Sociedade Esportiva do Gama (DF)
-740269,2022,23,3,0.6,Seleção brasileira
+740269,2022,23,3,0.6,Brasiliense FC (DF)
 740269,2023,24,9,2.3,Foz do Iguaçu FC / Samambaia FC
 740269,2025,26,13,3.6,Villa Nova AC / Grêmio Esportivo Brasil (RS)
 740269,2026,27,5,1.0,Rio Branco de Venda Nova FC (ES)
@@ -11435,7 +11435,7 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 722613,2022,21,25,5.7,Ferroviária / Clube Náutico Capibaribe
 722613,2023,22,16,5.7,EC Santo André / Ferroviária
 722613,2025,24,18,2.0,Goiatuba EC / Batalhão FC
-722613,2026,25,22,3.2,Goiatuba EC / Uthai Thani FC
+722613,2026,25,22,3.2,Goiatuba EC / Brasiliense FC (DF)
 969596,2020,21,11,0.9,Bangu Atlético Clube (RJ)
 969596,2022,23,6,2.2,SC Dnipro-1 ( - 2024) / Grêmio Esportivo Brasil (RS)
 969596,2023,24,19,2.4,Metalist Kharkiv / SC Dnipro-1 ( - 2024)
@@ -12349,7 +12349,7 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 815670,2022,21,4,2.0,Botafogo de Futebol e Regatas
 815670,2024,23,15,6.0,ABC Futebol Clube (RN)
 815670,2025,24,23,6.7,Ypiranga FC
-815670,2026,25,12,1.8,Anápolis FC
+815670,2026,25,12,1.8,Brasiliense FC (DF) / Anápolis FC
 878742,2022,21,5,2.5,Botafogo de Futebol e Regatas
 878742,2023,22,2,0.6,Londrina Esporte Clube (PR)
 878742,2024,23,19,3.9,AA Internacional de Limeira / Madureira EC
@@ -12698,7 +12698,7 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 983297,2022,21,1,0.2,Clube Sociedade Esportiva (AL)
 983297,2023,22,22,3.3,Anápolis FC
 983297,2024,23,36,4.8,Anápolis FC
-983297,2025,24,15,4.6,Joinville Esporte Clube (SC) / Anápolis FC
+983297,2025,24,15,4.6,Brasiliense FC (DF) / Joinville Esporte Clube (SC)
 983297,2026,25,29,8.1,Nacional FC / Anápolis FC
 1044157,2023,21,7,2.4,Sampaio Corrêa FC (MA) / Criciúma EC
 1044157,2024,22,3,1.1,FK Velez Mostar / AD Confiança
@@ -12748,8 +12748,8 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 677340,2021,21,11,1.1,AA Internacional de Limeira
 677340,2022,22,6,1.5,AA Internacional de Limeira / AA Aparecidense
 677340,2023,23,15,2.6,Athletic Club
-677340,2024,24,24,3.9,Sociedade Esportiva do Gama (DF)
-677340,2025,25,10,3.0,Seleção brasileira
+677340,2024,24,24,3.9,Brasiliense FC (DF) / Sociedade Esportiva do Gama (DF)
+677340,2025,25,10,3.0,Brasiliense FC (DF)
 677340,2026,26,24,5.9,Rio Branco AC
 800648,2020,18,3,1.6,Cruzeiro Esporte Clube
 800648,2023,21,19,5.4,AD Confiança / Sampaio Corrêa FC (MA)
@@ -12924,7 +12924,7 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 994618,2023,22,30,7.6,Ferroviário AC / Bangu Atlético Clube (RJ)
 994618,2024,23,26,5.5,Ferroviário AC
 994618,2025,24,12,3.7,Ypiranga FC / Clube do Remo (PA)
-994618,2026,25,3,0.5,Seleção brasileira
+994618,2026,25,3,0.5,Brasiliense FC (DF)
 994622,2023,21,1,1.1,Red Bull Bragantino
 994622,2024,22,6,4.9,APOEL Nicosia
 994622,2025,23,7,3.8,Esporte Clube Juventude
@@ -13143,7 +13143,7 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 976237,2026,24,10,2.4,Operário FC
 980276,2022,21,15,3.2,CE Aimoré / GE Juventus (SC)
 980276,2023,22,8,3.2,CE Aimoré
-980276,2024,23,5,1.5,Seleção brasileira
+980276,2024,23,5,1.5,Brasiliense FC (DF)
 574759,2021,19,3,1.1,Racing Ferrol
 574759,2022,20,2,0.7,Racing Ferrol
 574759,2023,21,6,1.5,SER Caxias do Sul (RS)
@@ -15091,7 +15091,7 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 961805,2025,22,5,1.0,Batalhão FC
 1027713,2024,21,20,9.2,Criciúma EC
 1027713,2025,22,10,3.1,Criciúma EC / SER Caxias do Sul (RS)
-940149,2023,21,12,2.4,Seleção brasileira
+940149,2023,21,12,2.4,Brasiliense FC (DF)
 940149,2024,22,24,4.7,Iporá Esporte Clube / Samambaia FC
 940149,2025,23,8,1.6,Samambaia FC
 940149,2026,24,13,2.5,Guaporé FC / Clube Recreativo e Atlético Catalano (GO)
@@ -15314,7 +15314,7 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 788138,2024,23,2,0.1,Capital FC (TO)
 788138,2025,24,13,1.8,Trem DC
 788138,2026,25,10,2.1,Trem DC
-1245910,2024,22,8,2.6,FC Majd
+1245910,2024,22,8,2.6,Brasiliense FC (DF) / FC Majd
 1245910,2025,23,6,0.8,Luverdense EC (MT) / SE Ceilandense
 989593,2022,19,5,1.5,Goiás EC
 871752,2021,19,1,0.5,Boavista SC
