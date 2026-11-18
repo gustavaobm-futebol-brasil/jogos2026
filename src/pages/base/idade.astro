@@ -12,7 +12,10 @@ for (const r of clubesGeracao) {
   (nJog[r.ger] ??= { '': 0 })[r.clube] = r.jogadores;
   nJog[r.ger][''] += r.jogadores;
 }
-const dados = { porIdade: pontosPorIdade(), nJog, geracoes, clubes, anoIncompleto: metaCoortes.ano_incompleto };
+// clubes de cada geração, do que mais somou ao que menos somou (atalhos "Vários clubes numa geração")
+const ranking = {};
+for (const r of [...clubesGeracao].sort((a, b) => b.pts - a.pts)) (ranking[r.ger] ??= []).push([r.clube, r.pts]);
+const dados = { porIdade: pontosPorIdade(), nJog, ranking, geracoes, clubes, anoIncompleto: metaCoortes.ano_incompleto };
 const padrao = completas.slice(-4).map((g) => g.ano);
 ---
 <BaseLayout titulo="Base: pontos por idade" descricao="Compare gerações e clubes pela idade dos jogadores: quantos pontos de carreira profissional cada geração somou até cada idade.">
@@ -38,6 +41,14 @@ const padrao = completas.slice(-4).map((g) => g.ano);
     </label>
   </div>
   <div class="filtros">
+    <label class="montar-modo">Comparar
+      <select id="f-montar">
+        <option value="livre">Linha a linha (geração e clube)</option>
+        <option value="clube">Um clube em várias gerações</option>
+        <option value="ger">Vários clubes numa geração</option>
+      </select>
+    </label>
+    <div class="montar" id="montar" hidden></div>
     <div class="series" id="series"></div>
     <div><button type="button" class="acao" id="mais-serie">+ comparar outra linha</button></div>
   </div>
@@ -60,15 +71,98 @@ const padrao = completas.slice(-4).map((g) => g.ano);
     import { serieIdade } from '../../scripts/coortes_calc.js';
     const D = JSON.parse(document.getElementById('dados-idade').textContent);
     const $ = (id) => document.getElementById(id);
-    const MAX = 4;
+    const MAX = 6;
     const params = new URLSearchParams(location.search);
-    // séries: [{ ger, clube }]; na URL: ?s=1997&s=1998:Palmeiras
-    let series = params.getAll('s').map((x) => { const [g, c = ''] = x.split(':'); return { ger: Number(g), clube: c }; }).filter((x) => D.porIdade[x.ger]);
+    // séries: [{ ger, clube }]; na URL: ?s=1997&s=1998:Palmeiras (+ m=clube | m=ger para o jeito de montar)
+    let series = params.getAll('s').map((x) => { const [g, c = ''] = x.split(':'); return { ger: Number(g), clube: c }; }).filter((x) => D.porIdade[x.ger]).slice(0, MAX);
     if (!series.length) series = D.padrao.map((g) => ({ ger: g, clube: '' }));
     if (params.get('modo')) $('f-modo').value = params.get('modo');
     if (params.get('escala')) $('f-escala').value = params.get('escala');
+    // o jeito de montar só vale se as linhas da URL couberem nele (mesmo clube em todas / mesma geração em todas)
+    const m0 = params.get('m');
+    if (m0 === 'clube' && series.every((x) => x.clube === series[0].clube)) $('f-montar').value = 'clube';
+    if (m0 === 'ger' && series.every((x) => x.ger === series[0].ger && x.clube)) $('f-montar').value = 'ger';
+
+    const rotGer = (g) => `${g.ano}${g.completa ? '' : ' (em andamento)'}`;
+    const temClube = (ger, clube) => !clube || D.nJog[ger]?.[clube] != null;
+    const topClubes = (ger, n) => (D.ranking[ger] || []).slice(0, n).map(([c]) => c);
+    const ultimasCompletas = (clube, n) => D.geracoes.filter((g) => g.completa && temClube(g.ano, clube)).slice(-n).map((g) => g.ano);
+
+    /** Atalhos: um clube (ou todos) com as gerações marcadas, ou uma geração com os clubes marcados. */
+    function montar() {
+      const modo = $('f-montar').value;
+      $('montar').hidden = modo === 'livre';
+      $('series').hidden = modo !== 'livre';
+      $('mais-serie').parentElement.hidden = modo !== 'livre';
+      if (modo === 'livre') return;
+      const cheio = series.length >= MAX;
+      const chip = (texto, marcado, desligado, ao, sub) => {
+        const cb = h('input', { type: 'checkbox' });
+        cb.checked = marcado; cb.disabled = desligado;
+        cb.addEventListener('change', () => ao(cb.checked));
+        return h('label', { class: `chip${desligado ? ' off' : ''}` }, cb, texto, sub ? h('small', { text: sub }) : null);
+      };
+      const aviso = h('span', { class: 'muted small', text: `${series.length} de ${MAX} linhas${cheio ? ': desmarque uma para trocar' : ''}` });
+      if (modo === 'clube') {
+        const clube = series[0]?.clube ?? '';
+        const sel = h('select', { 'aria-label': 'Clube' }, h('option', { value: '', text: 'Todos os clubes' }), D.clubes.map((c) => h('option', { value: c, text: c })));
+        sel.value = clube;
+        sel.addEventListener('change', () => {
+          const gs = series.map((x) => x.ger).filter((g) => temClube(g, sel.value));
+          series = (gs.length ? gs : ultimasCompletas(sel.value, 4)).map((g) => ({ ger: g, clube: sel.value }));
+          atualizar();
+        });
+        const marcadas = new Set(series.map((x) => x.ger));
+        const chips = D.geracoes.map((g) => chip(rotGer(g), marcadas.has(g.ano), !temClube(g.ano, clube) || (cheio && !marcadas.has(g.ano)), (on) => {
+          series = on ? [...series, { ger: g.ano, clube }] : series.filter((x) => x.ger !== g.ano);
+          series.sort((a, b) => a.ger - b.ger);
+          if (!series.length) series = [{ ger: g.ano, clube }];
+          atualizar();
+        }));
+        const atalho = h('button', { type: 'button', class: 'acao pequeno', text: `Últimas ${MAX} gerações completas` });
+        atalho.addEventListener('click', () => { series = ultimasCompletas(clube, MAX).map((g) => ({ ger: g, clube })); atualizar(); });
+        $('montar').replaceChildren(h('label', null, 'Clube', sel),
+          h('div', { class: 'chips-campo' }, h('span', { class: 'rot' }, 'Gerações ', aviso), h('div', { class: 'chips' }, chips), h('div', null, atalho)));
+      } else {
+        const ger = series[0].ger;
+        const sel = h('select', { 'aria-label': 'Geração' }, D.geracoes.map((g) => h('option', { value: g.ano, text: rotGer(g) })));
+        sel.value = ger;
+        sel.addEventListener('change', () => {
+          const g = Number(sel.value);
+          const cs = series.map((x) => x.clube).filter((c) => c && temClube(g, c));
+          series = (cs.length ? cs : topClubes(g, 4)).map((c) => ({ ger: g, clube: c }));
+          atualizar();
+        });
+        const marcados = new Set(series.map((x) => x.clube));
+        const chips = (D.ranking[ger] || []).map(([c, pts]) => chip(c, marcados.has(c), cheio && !marcados.has(c), (on) => {
+          series = on ? [...series, { ger, clube: c }] : series.filter((x) => x.clube !== c);
+          if (!series.length) series = [{ ger, clube: c }];
+          atualizar();
+        }, `${fmtInt.format(pts)} pts`));
+        const atalho = h('button', { type: 'button', class: 'acao pequeno', text: `Os ${MAX} que mais somaram` });
+        atalho.addEventListener('click', () => { series = topClubes(ger, MAX).map((c) => ({ ger, clube: c })); atualizar(); });
+        $('montar').replaceChildren(h('label', null, 'Geração', sel),
+          h('div', { class: 'chips-campo' }, h('span', { class: 'rot' }, 'Clubes, do que mais somou ao que menos somou ', aviso), h('div', { class: 'chips' }, chips), h('div', null, atalho)));
+      }
+    }
+    function atualizar() { controles(); desenhar(); }
+
+    $('f-montar').addEventListener('change', () => {
+      const modo = $('f-montar').value;
+      if (modo === 'clube') {
+        const clube = series.find((x) => x.clube)?.clube ?? '';
+        const gs = [...new Set(series.filter((x) => x.clube === clube).map((x) => x.ger))].sort((a, b) => a - b);
+        series = (gs.length > 1 ? gs : ultimasCompletas(clube, 4)).map((g) => ({ ger: g, clube }));
+      } else if (modo === 'ger') {
+        const ger = series[0].ger;
+        const cs = [...new Set(series.filter((x) => x.ger === ger && x.clube).map((x) => x.clube))];
+        series = (cs.length > 1 ? cs : topClubes(ger, 4)).map((c) => ({ ger, clube: c }));
+      }
+      atualizar();
+    });
 
     function controles() {
+      montar();
       $('series').replaceChildren(...series.map((sr, i) => {
         const ger = h('select', { 'aria-label': `Geração da linha ${i + 1}` }, D.geracoes.map((g) => h('option', { value: g.ano, text: `${g.ano}${g.completa ? '' : ' (em andamento)'}` })));
         ger.value = sr.ger;
@@ -97,7 +191,7 @@ const padrao = completas.slice(-4).map((g) => g.ano);
       const acumulado = $('f-modo').value === 'acum', media = $('f-escala').value === 'media';
       const p = new URLSearchParams();
       series.forEach((sr) => p.append('s', sr.clube ? `${sr.ger}:${sr.clube}` : String(sr.ger)));
-      if (!acumulado) p.set('modo', 'ano'); if (media) p.set('escala', 'media');
+      if (!acumulado) p.set('modo', 'ano'); if (media) p.set('escala', 'media'); if ($('f-montar').value !== 'livre') p.set('m', $('f-montar').value);
       history.replaceState(null, '', `?${p}`);
 
       const idadeMax = Math.max(...series.map((sr) => D.anoIncompleto - sr.ger));

@@ -86,3 +86,27 @@ td.principais { font-size: .82rem; color: var(--muted); max-width: 30ch; }
 .leg-clubes { display: flex; flex-wrap: wrap; gap: 4px 16px; margin: 0 0 8px; font-size: .82rem; color: var(--muted); }
 .leg-clubes .item { display: inline-flex; align-items: center; gap: 6px; }
 .leg-clubes .sw { border-radius: 2px; }
+
+/* cores das linhas na seção Base: as 6 primeiras da paleta categórica validada (claro e escuro), para até 6 linhas (2026-11-18) */
+:root { --s0: #2a78d6; --s1: #eb6834; --s2: #1baf7a; --s3: #eda100; --s4: #e87ba4; --s5: #008300; }
+@media (prefers-color-scheme: dark) { :root { --s0: #3987e5; --s1: #d95926; --s2: #199e70; --s3: #c98500; --s4: #d55181; --s5: #0ca30c; } }
+.sw.s4 { background: var(--s4); } .sw.s5 { background: var(--s5); }
+.gr-ponto.s4 { fill: var(--s4); } .gr-ponto.s5 { fill: var(--s5); }
+.gr-linha.s4 { stroke: var(--s4); } .gr-linha.s5 { stroke: var(--s5); }
+.gr-ponto.vazado.s4 { stroke: var(--s4); } .gr-ponto.vazado.s5 { stroke: var(--s5); }
+.gr-ponto.vazado { fill: var(--card); }
+
+/* atalhos de /base/idade: um clube em várias gerações, vários clubes numa geração */
+.montar { grid-column: 1 / -1; display: grid; grid-template-columns: minmax(0, 240px) minmax(0, 1fr); gap: 10px 16px; align-items: start; }
+.montar[hidden] { display: none; }
+.filtros > .series[hidden], .filtros > div[hidden] { display: none; }
+.chips-campo { display: flex; flex-direction: column; gap: 6px; font-size: .8rem; color: var(--muted); }
+.chips-campo .rot { display: flex; flex-wrap: wrap; gap: 4px 10px; align-items: baseline; }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; max-height: 210px; overflow-y: auto; }
+.filtros .chips label.chip { flex-direction: row; align-items: center; gap: 6px; font-size: .88rem; color: var(--fg); border: 1px solid var(--border); border-radius: 999px; padding: 3px 10px 3px 7px; background: var(--bg); cursor: pointer; }
+.filtros .chips label.chip:has(input:checked) { border-color: var(--accent); background: var(--accent-soft); }
+.filtros .chips label.chip.off { opacity: .45; cursor: default; }
+.filtros .chips label.chip small { color: var(--muted); font-size: .74rem; }
+.filtros .chips label.chip input { margin: 0; accent-color: var(--accent); }
+@media (max-width: 640px) { .montar { grid-template-columns: 1fr; } }
+.filtros > label.montar-modo { grid-column: 1 / -1; max-width: 340px; }
