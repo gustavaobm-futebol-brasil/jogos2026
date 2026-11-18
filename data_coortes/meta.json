@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-11-17T17:24",
+ "gerado_em": "2026-11-18T05:57",
  "bases": [
   2016,
   2017,
@@ -9,7 +9,8 @@
   2021,
   2022,
   2023,
-  2024
+  2024,
+  2025
  ],
  "ano_incompleto": 2026,
  "regra_pesos": {
@@ -153,78 +154,93 @@
    ],
    "bases_que_faltam": [],
    "bases_antes_da_coleta": [],
-   "jogadores": 458,
-   "com_jogo_pro": 346,
-   "pontos": 6384.6
+   "jogadores": 465,
+   "com_jogo_pro": 350,
+   "pontos": 6394.1
   },
   "2005": {
-   "situacao": "em andamento",
+   "situacao": "completa",
    "bases": [
     2021,
     2022,
     2023,
-    2024
-   ],
-   "bases_que_faltam": [
+    2024,
     2025
    ],
+   "bases_que_faltam": [],
    "bases_antes_da_coleta": [],
-   "jogadores": 376,
-   "com_jogo_pro": 241,
-   "pontos": 3772.9
+   "jogadores": 446,
+   "com_jogo_pro": 288,
+   "pontos": 4124.3
   },
   "2006": {
    "situacao": "em andamento",
    "bases": [
     2022,
     2023,
-    2024
+    2024,
+    2025
    ],
    "bases_que_faltam": [
-    2025,
     2026
    ],
    "bases_antes_da_coleta": [],
-   "jogadores": 302,
-   "com_jogo_pro": 158,
-   "pontos": 2538.6
+   "jogadores": 413,
+   "com_jogo_pro": 213,
+   "pontos": 3017.1
   },
   "2007": {
    "situacao": "em andamento",
    "bases": [
     2023,
-    2024
+    2024,
+    2025
    ],
    "bases_que_faltam": [
-    2025,
     2026,
     2027
    ],
    "bases_antes_da_coleta": [],
-   "jogadores": 74,
-   "com_jogo_pro": 40,
-   "pontos": 856.4
+   "jogadores": 299,
+   "com_jogo_pro": 123,
+   "pontos": 1382.0
   },
   "2008": {
    "situacao": "em andamento",
    "bases": [
-    2024
+    2024,
+    2025
    ],
    "bases_que_faltam": [
-    2025,
     2026,
     2027,
     2028
    ],
    "bases_antes_da_coleta": [],
-   "jogadores": 21,
-   "com_jogo_pro": 12,
-   "pontos": 133.8
+   "jogadores": 106,
+   "com_jogo_pro": 38,
+   "pontos": 330.8
+  },
+  "2009": {
+   "situacao": "em andamento",
+   "bases": [
+    2025
+   ],
+   "bases_que_faltam": [
+    2026,
+    2027,
+    2028,
+    2029
+   ],
+   "bases_antes_da_coleta": [],
+   "jogadores": 12,
+   "com_jogo_pro": 6,
+   "pontos": 16.5
   }
  },
  "totais": {
-  "jogadores_publicados": 3701,
-  "linhas_pontos_por_ano": 16897,
+  "jogadores_publicados": 3922,
+  "linhas_pontos_por_ano": 17240,
   "avisos_internos": 9
  }
 }
