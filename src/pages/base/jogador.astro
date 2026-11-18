@@ -1,0 +1,315 @@
+---
+// Página de um jogador (/base/jogador?id=<tm_id>, e ?vs=<tm_id> para comparar): uma página só, que monta o jogador no navegador
+// a partir de /base/jogadores.json e /base/carreiras.json (assim não são geradas milhares de páginas).
+import BaseLayout from '../../layouts/Base.astro';
+import Secao from './_Secao.astro';
+import { BASE } from '../../config.js';
+import { jsonEmbutido, metaCoortes, temDados } from '../../lib/coortes.js';
+
+if (!BASE || !temDados) return Astro.redirect('/404');
+---
+<BaseLayout titulo="Base: jogador" descricao="A carreira profissional de um jogador revelado na base, idade a idade e clube a clube, com comparação com outro jogador.">
+  <Secao atual="/base/jogadores" />
+  <p class="voltar small"><a href="/base/jogadores">← Todos os jogadores</a></p>
+  <h1 id="titulo">Jogador</h1>
+  <p class="muted small" id="estado" role="status">carregando…</p>
+  <div class="perfis" id="perfis"></div>
+
+  <div class="filtros">
+    <label>Mostrar
+      <select id="f-modo">
+        <option value="ano">Pontos na idade (ano a ano)</option>
+        <option value="acum">Pontos acumulados até a idade</option>
+      </select>
+    </label>
+    <div class="multi-campo">
+      <label for="f-busca" id="rot-busca">Comparar com</label>
+      <div class="combo">
+        <input type="text" id="f-busca" placeholder="Nome de outro jogador" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="sugestoes" autocomplete="off" />
+        <ul id="sugestoes" role="listbox" aria-label="Jogadores sugeridos" hidden></ul>
+      </div>
+      <div class="vs-atual" id="vs-atual" hidden></div>
+    </div>
+  </div>
+
+  <div id="graficos"></div>
+  <p class="legenda">
+    Pontos: a mesma regra da seção (peso de cada jogo pela competição; ver <a href="/base/metodologia">Como é feito</a>). Idade é o ano do jogo
+    menos o ano de nascimento. Os clubes são os do Transfermarkt, jogo a jogo; jogos pela seleção aparecem à parte. Cada clube mantém a
+    mesma cor em todas as idades; os clubes além dos 8 com mais pontos ficam em "Outros clubes". * {metaCoortes.ano_incompleto} ainda não terminou.
+  </p>
+
+  <script type="application/json" id="dados-jog" set:html={jsonEmbutido({ anoIncompleto: metaCoortes.ano_incompleto })}></script>
+  <script>
+    import { h, s, fmtInt, fmtDec, semAcento, mostrarDica, esconderDica, escalaBonita, comDica } from '../../scripts/util.js';
+    import { cartao } from '../../scripts/graficos.js';
+    const CFG = JSON.parse(document.getElementById('dados-jog').textContent);
+    const $ = (id) => document.getElementById(id);
+    const NCORES = 8, SEL = 'Seleção brasileira', SEM = 'Clube não informado';
+    const params = new URLSearchParams(location.search);
+    let idA = params.get('id'), idB = params.get('vs');
+    if (params.get('modo') === 'acum') $('f-modo').value = 'acum';
+    let JOG = null, CAR = null;
+
+    /** Carreira de um jogador: anos com pontos divididos por clube, e a categoria (cor) de cada clube. */
+    function carreira(tm) {
+      const j = JOG.get(tm);
+      const anos = (CAR.j[tm] || []).map(([ano, cs]) => ({ ano, idade: ano - j.ger, partes: cs.map(([ic, p, n]) => ({ clube: CAR.clubes[ic], p, n })) }));
+      const total = new Map(), primeiro = new Map();
+      anos.forEach((a, k) => a.partes.forEach((x) => {
+        total.set(x.clube, (total.get(x.clube) || 0) + x.p);
+        if (!primeiro.has(x.clube)) primeiro.set(x.clube, k * 100 - x.p);   // ordem de chegada (no mesmo ano, o de mais pontos antes)
+      }));
+      const clubes = [...total.keys()].filter((c) => c !== SEL && c !== SEM);
+      const comCor = new Set([...clubes].sort((a, b) => total.get(b) - total.get(a)).slice(0, NCORES));
+      const cats = [];   // [{ chave, nome, cls }] na ordem da pilha (de baixo para cima) e da legenda
+      clubes.filter((c) => comCor.has(c)).sort((a, b) => primeiro.get(a) - primeiro.get(b))
+        .forEach((c, i) => cats.push({ chave: c, nome: c, cls: `k${i}` }));
+      if (clubes.some((c) => !comCor.has(c)) || total.has(SEM)) cats.push({ chave: '_outros', nome: 'Outros clubes', cls: 'outros' });
+      if (total.has(SEL)) cats.push({ chave: SEL, nome: SEL, cls: 'sel' });
+      const cat = (c) => (c === SEL ? SEL : comCor.has(c) ? c : '_outros');
+      let acc = 0;
+      const porIdade = new Map();
+      const accCat = new Map();
+      for (const a of anos) {
+        const soma = a.partes.reduce((t, x) => t + x.p, 0);
+        acc += soma;
+        for (const x of a.partes) accCat.set(cat(x.clube), (accCat.get(cat(x.clube)) || 0) + x.p);
+        const noAno = new Map();
+        for (const x of a.partes) noAno.set(cat(x.clube), (noAno.get(cat(x.clube)) || 0) + x.p);
+        porIdade.set(a.idade, { ...a, soma, acc, jogos: a.partes.reduce((t, x) => t + x.n, 0), noAno, acumCat: new Map(accCat) });
+      }
+      return { j, anos, cats, porIdade, idadeAtual: CFG.anoIncompleto - j.ger };
+    }
+
+    /** Valor de uma idade (no ano ou acumulado); idades sem jogo valem 0 no ano e repetem o acumulado anterior. */
+    function valor(c, idade, acumulado) {
+      if (!acumulado) return c.porIdade.get(idade)?.soma || 0;
+      let v = 0;
+      for (const [i, x] of c.porIdade) if (i <= idade) v = x.acc;
+      return v;
+    }
+
+    function faixaIdades(cs) {
+      const comPonto = cs.flatMap((c) => [...c.porIdade.keys()]);
+      const ini = Math.min(...comPonto, ...cs.map((c) => c.idadeAtual));
+      const fim = Math.max(...cs.map((c) => c.idadeAtual));
+      const out = [];
+      for (let i = ini; i <= fim; i++) out.push(i);
+      return out;
+    }
+
+    const medidas = (alvo) => {
+      const largura = Math.max(300, Math.min(alvo.clientWidth || 700, 1060) - 34);
+      return { largura, altura: 300, mt: 14, mb: 36, mr: 10 };
+    };
+    function eixoY(svg, { largura, mr }, ml, Y, max, passo) {
+      for (let v = 0; v <= max + 1e-9; v += passo) svg.append(s('line', { class: v === 0 ? 'gr-eixo' : 'gr-grade', x1: ml, x2: largura - mr, y1: Y(v), y2: Y(v) }),
+        s('text', { class: 'gr-txt', x: ml - 8, y: Y(v) + 4, 'text-anchor': 'end' }, fmtInt.format(v)));
+    }
+    const rotIdade = (c, i) => `${i}${c.some((x) => x.idadeAtual === i) ? '*' : ''}`;
+
+    /** Barras empilhadas por clube, uma por idade. */
+    function barrasClubes(c, idades, max, passo, acumulado, alvo) {
+      const m = medidas(alvo), { largura, altura, mt, mb, mr } = m;
+      const ml = String(fmtInt.format(max)).length * 7 + 16;
+      const larg = (largura - ml - mr) / idades.length, bw = Math.max(3, Math.min(larg * 0.72, 34));
+      const Y = (v) => mt + (1 - v / max) * (altura - mt - mb);
+      const svg = s('svg', { class: 'gr-svg', width: largura, height: altura, role: 'img',
+        'aria-label': `Barras por idade de ${c.j.nome}, divididas por clube; os mesmos números estão na tabela` });
+      eixoY(svg, m, ml, Y, max, passo);
+      const passoRot = Math.max(1, Math.ceil(26 / larg));
+      idades.forEach((idade, k) => {
+        const xc = ml + k * larg + larg / 2;
+        if (k % passoRot === 0) svg.append(s('text', { class: 'gr-txt', x: xc, y: altura - 18, 'text-anchor': 'middle' }, rotIdade([c], idade)));
+        if (idade > c.idadeAtual) return;
+        const ano = c.j.ger + idade, a = c.porIdade.get(idade);
+        let base = 0;
+        for (const ct of c.cats) {
+          let v;
+          if (acumulado) { let u = null; for (const [i, x] of c.porIdade) if (i <= idade) u = x; v = u?.acumCat.get(ct.chave) || 0; }
+          else v = a?.noAno.get(ct.chave) || 0;
+          if (v <= 0) continue;
+          const y0 = Y(base), y1 = Y(base + v);
+          base += v;
+          const partes = a ? a.partes.filter((x) => (ct.chave === '_outros' ? x.clube !== SEL && !c.cats.some((q) => q.chave === x.clube) : x.clube === ct.chave)) : [];
+          const linhas = acumulado
+            ? [`${fmtDec.format(v)} pontos até os ${idade} anos`, ct.nome, `total até ${ano}: ${fmtDec.format(valor(c, idade, true))}`]
+            : [`${fmtDec.format(v)} pontos aos ${idade} anos`, ct.nome + (ct.chave === '_outros' ? `: ${partes.map((x) => x.clube).join(', ')}` : ''),
+              `${fmtInt.format(partes.reduce((t, x) => t + x.n, 0))} jogos em ${ano}${idade === c.idadeAtual ? ' (ano em curso)' : ''}`];
+          svg.append(comDica(s('rect', { class: `cl-seg ${ct.cls}`, x: xc - bw / 2, y: y1, width: bw, height: Math.max(0.5, y0 - y1), tabindex: 0 }), linhas));
+        }
+      });
+      svg.append(s('text', { class: 'gr-txt', x: (ml + largura - mr) / 2, y: altura - 2, 'text-anchor': 'middle' }, 'idade'));
+      return svg;
+    }
+
+    function tabelaCarreira(c) {
+      return { colunas: ['Ano', 'Idade', 'Clubes (pontos)', 'Jogos', 'Pontos', 'Acumulado'],
+        linhas: c.anos.map((a) => { const x = c.porIdade.get(a.idade); return [String(a.ano), String(a.idade),
+          a.partes.map((p) => `${p.clube} (${fmtDec.format(p.p)})`).join(' · '), fmtInt.format(x.jogos), fmtDec.format(x.soma), fmtDec.format(x.acc)]; }) };
+    }
+
+    /** Linhas dos dois jogadores no mesmo eixo de idade, com mira e dica por idade. */
+    function linhasComparacao(cs, idades, acumulado, alvo) {
+      const m = medidas(alvo), { largura, altura, mt, mb, mr } = m;
+      const serie = cs.map((c) => idades.filter((i) => i <= c.idadeAtual).map((i) => ({ i, v: valor(c, i, acumulado) })));
+      const { max, passo } = escalaBonita(Math.max(1, ...serie.flat().map((q) => q.v)), 5);
+      const ml = String(fmtInt.format(max)).length * 7 + 16;
+      const X = (i) => ml + ((i - idades[0]) / Math.max(1, idades.length - 1)) * (largura - ml - mr);
+      const Y = (v) => mt + (1 - v / max) * (altura - mt - mb);
+      const svg = s('svg', { class: 'gr-svg', width: largura, height: altura, role: 'img', 'aria-label': 'Linhas: pontos por idade dos dois jogadores; os mesmos números estão na tabela' });
+      eixoY(svg, m, ml, Y, max, passo);
+      const passoRot = Math.max(1, Math.ceil(26 / ((largura - ml - mr) / Math.max(1, idades.length - 1))));
+      idades.forEach((i, k) => { if (k % passoRot === 0) svg.append(s('text', { class: 'gr-txt', x: X(i), y: altura - 18, 'text-anchor': 'middle' }, rotIdade(cs, i))); });
+      svg.append(s('text', { class: 'gr-txt', x: (ml + largura - mr) / 2, y: altura - 2, 'text-anchor': 'middle' }, 'idade'));
+      const mira = s('line', { class: 'gr-mira', x1: 0, x2: 0, y1: mt, y2: altura - mb, visibility: 'hidden' });
+      const semMira = () => { mira.setAttribute('visibility', 'hidden'); esconderDica(); };
+      svg.append(mira);
+      serie.forEach((pts, k) => {
+        svg.append(s('path', { class: `gr-linha s${k}`, d: pts.map((q, n) => `${n ? 'L' : 'M'}${X(q.i)},${Y(q.v)}`).join(' ') }));
+        pts.forEach((q, n) => {
+          const ult = n === pts.length - 1;
+          if (ult || pts.length <= 20) svg.append(s('circle', { class: `gr-ponto s${k} ${ult ? 'vazado' : ''}`, cx: X(q.i), cy: Y(q.v), r: ult ? 4.5 : 3.5 }));
+        });
+      });
+      const dica = (e, i) => {
+        mira.setAttribute('x1', X(i)); mira.setAttribute('x2', X(i)); mira.setAttribute('visibility', 'visible');
+        mostrarDica(e.clientX, e.clientY, [`${acumulado ? 'Até os' : 'Aos'} ${i} anos`, ...cs.map((c) => {
+          if (i > c.idadeAtual) return `${c.j.nome}: ainda não tem ${i} anos`;
+          const a = c.porIdade.get(i);
+          return `${c.j.nome}: ${fmtDec.format(valor(c, i, acumulado))} pts${!acumulado && a ? ` em ${a.ano} (${a.partes.map((x) => x.clube).join(', ')})` : ''}`;
+        })]);
+      };
+      svg.addEventListener('pointermove', (e) => {
+        const r = svg.getBoundingClientRect(), px = e.clientX - r.left;
+        if (px < ml - 10) { semMira(); return; }
+        const i = idades.reduce((b, q) => (Math.abs(X(q) - px) < Math.abs(X(b) - px) ? q : b), idades[0]);
+        dica(e, i);
+      });
+      svg.addEventListener('pointerleave', semMira);
+      const tabela = { colunas: ['Idade', ...cs.map((c) => c.j.nome)],
+        linhas: idades.map((i) => [String(i), ...cs.map((c) => (i > c.idadeAtual ? '—' : fmtDec.format(valor(c, i, acumulado))))]) };
+      return { svg, tabela };
+    }
+
+    function ficha(c, k, comparando) {
+      const j = c.j;
+      const nome = comparando ? h('a', { href: `/base/jogador?id=${j.tm}`, text: j.nome }) : j.nome;
+      return h('div', { class: 'perfil' },
+        comparando ? h('h2', null, h('span', { class: `sw s${k}` }), nome) : null,
+        h('p', { class: 'muted' }, `Geração ${j.ger} · base: `, h('a', { href: `/base/jogadores?ger=${j.ger}&clube=${encodeURIComponent(j.clube)}`, text: j.clube })),
+        h('div', { class: 'nums' },
+          h('div', null, h('b', { text: fmtDec.format(j.pts) }), h('span', { text: 'pontos' })),
+          h('div', null, h('b', { text: `${j.posGer}º` }), h('span', { text: `na geração ${j.ger}` })),
+          h('div', null, h('b', { text: `${j.posClube}º` }), h('span', { text: 'no clube de base' })),
+          h('div', null, h('b', { text: fmtInt.format(j.jogos) }), h('span', { text: `jogos pro${j.estreia ? ` desde ${j.estreia}` : ''}` }))),
+        h('p', { class: 'muted', text: j.bases }),
+        j.principais ? h('p', null, h('span', { class: 'muted', text: 'Principais clubes: ' }), j.principais) : null,
+        h('p', null, h('a', { href: `https://www.transfermarkt.com.br/-/profil/spieler/${j.tm}`, target: '_blank', rel: 'noopener', text: 'Perfil no Transfermarkt ↗' })));
+    }
+
+    function desenhar() {
+      esconderDica();
+      const acumulado = $('f-modo').value === 'acum';
+      const p = new URLSearchParams();
+      if (idA) p.set('id', idA); if (idB) p.set('vs', idB); if (acumulado) p.set('modo', 'acum');
+      history.replaceState(null, '', p.size ? `?${p}` : location.pathname);
+      const temA = idA && JOG.has(idA);
+      if (idB && (!JOG.has(idB) || idB === idA)) idB = null;
+      $('rot-busca').textContent = temA ? 'Comparar com' : 'Escolha um jogador';
+      $('f-busca').placeholder = temA ? 'Nome de outro jogador' : 'ex.: Raphinha';
+      if (!temA) {
+        $('titulo').textContent = 'Jogador';
+        $('estado').textContent = idA ? 'Jogador não encontrado nesta base. Busque pelo nome abaixo.' : 'Busque um jogador pelo nome abaixo.';
+        $('perfis').replaceChildren(); $('graficos').replaceChildren(); $('vs-atual').hidden = true;
+        return;
+      }
+      const cs = [carreira(idA), ...(idB ? [carreira(idB)] : [])];
+      const comparando = cs.length > 1;
+      $('titulo').textContent = comparando ? `${cs[0].j.nome} x ${cs[1].j.nome}` : cs[0].j.nome;
+      document.title = `${$('titulo').textContent} · Base · Jogos 2026`;
+      $('estado').textContent = '';
+      $('perfis').replaceChildren(...cs.map((c, k) => ficha(c, k, comparando)));
+      $('vs-atual').hidden = !comparando;
+      if (comparando) {
+        const inverter = h('button', { type: 'button', class: 'acao', text: '⇄ Inverter' });
+        inverter.addEventListener('click', () => { [idA, idB] = [idB, idA]; desenhar(); });
+        const tirar = h('button', { type: 'button', class: 'acao', text: '× Tirar comparação' });
+        tirar.addEventListener('click', () => { idB = null; desenhar(); });
+        $('vs-atual').replaceChildren(h('span', null, 'Comparando com ', h('b', { text: cs[1].j.nome })), inverter, tirar);
+      }
+
+      const idades = faixaIdades(cs);
+      const alvo = $('graficos');
+      const blocos = [];
+      if (comparando) {
+        const { svg, tabela } = linhasComparacao(cs, idades, acumulado, alvo);
+        const legenda = h('div', { class: 'gr-legenda' }, cs.map((c, k) => h('span', { class: 'item' }, h('span', { class: `sw s${k}` }), `${c.j.nome} (${c.j.ger})`)));
+        blocos.push(cartao(`${acumulado ? 'Pontos acumulados' : 'Pontos no ano'} por idade`,
+          'Os dois jogadores na mesma idade, mesmo de gerações diferentes. O ponto vazado é o ano em curso.', h('div', null, legenda, svg), tabela));
+      }
+      // barras por clube: mesma escala para os dois jogadores, para as alturas serem comparáveis
+      const maxV = Math.max(1, ...cs.flatMap((c) => idades.map((i) => valor(c, i, acumulado))));
+      const { max, passo } = escalaBonita(maxV, 5);
+      for (const c of cs) {
+        const legenda = h('div', { class: 'leg-clubes' }, c.cats.map((ct) => h('span', { class: 'item' }, h('span', { class: `sw ${ct.cls}` }), ct.nome)));
+        const corpo = c.anos.length ? h('div', null, legenda, barrasClubes(c, idades, max, passo, acumulado, alvo)) : h('p', { class: 'muted small', text: 'Sem pontos na carreira profissional.' });
+        blocos.push(cartao(`${comparando ? `${c.j.nome}: ` : ''}${acumulado ? 'pontos acumulados' : 'pontos'} por idade, clube a clube`.replace(/^p/, 'P'),
+          acumulado ? 'Cada barra soma a carreira até aquela idade, dividida pelos clubes em que os pontos foram feitos.'
+            : 'Cada barra é um ano da carreira, dividida pelos clubes em que ele jogou naquele ano. Passe o mouse para ver os números.',
+          corpo, tabelaCarreira(c)));
+      }
+      alvo.replaceChildren(...blocos);
+    }
+
+    // ── busca de jogador (sem acento): escolhe o jogador da página ou o da comparação ──
+    let ativa = -1, itens = [];
+    function sugerir() {
+      const n = semAcento($('f-busca').value.trim());
+      ativa = -1;
+      if (!n || !JOG) return fechar();
+      itens = [...JOG.values()].filter((j) => j.tm !== idA && j.tm !== idB && j.busca.includes(n))
+        .sort((a, b) => (b.busca.startsWith(n) - a.busca.startsWith(n)) || b.pts - a.pts).slice(0, 8);
+      if (!itens.length) return fechar();
+      $('sugestoes').replaceChildren(...itens.map((j, i) => h('li', { role: 'option', id: `sug-${i}`, dataset: { i } },
+        h('span', { text: j.nome }), h('small', { text: `${j.ger} · ${j.clube} · ${fmtDec.format(j.pts)} pts` }))));
+      $('sugestoes').hidden = false;
+      $('f-busca').setAttribute('aria-expanded', 'true');
+    }
+    function fechar() { $('sugestoes').hidden = true; $('f-busca').setAttribute('aria-expanded', 'false'); $('f-busca').removeAttribute('aria-activedescendant'); ativa = -1; }
+    function escolher(i) {
+      const j = itens[i];
+      if (!j) return;
+      if (idA && JOG.has(idA)) idB = j.tm; else idA = j.tm;
+      $('f-busca').value = '';
+      fechar(); desenhar();
+    }
+    function marcar(i) {
+      document.querySelectorAll('#sugestoes li').forEach((li, k) => li.setAttribute('aria-selected', k === i ? 'true' : 'false'));
+      ativa = i;
+      $('f-busca').setAttribute('aria-activedescendant', `sug-${i}`);
+    }
+    $('f-busca').addEventListener('input', sugerir);
+    $('f-busca').addEventListener('focus', () => { if ($('f-busca').value.trim()) sugerir(); });
+    $('f-busca').addEventListener('blur', () => setTimeout(fechar, 120));
+    $('sugestoes').addEventListener('mousedown', (e) => { const li = e.target.closest('li'); if (li) { e.preventDefault(); escolher(Number(li.dataset.i)); } });
+    $('f-busca').addEventListener('keydown', (e) => {
+      if ($('sugestoes').hidden) return;
+      if (e.key === 'ArrowDown') { e.preventDefault(); marcar((ativa + 1) % itens.length); }
+      else if (e.key === 'ArrowUp') { e.preventDefault(); marcar((ativa - 1 + itens.length) % itens.length); }
+      else if (e.key === 'Enter') { e.preventDefault(); escolher(ativa >= 0 ? ativa : 0); }
+      else if (e.key === 'Escape') fechar();
+    });
+    $('f-modo').addEventListener('change', () => { if (JOG) desenhar(); });
+    let larguraAnterior = innerWidth, t;
+    addEventListener('resize', () => { clearTimeout(t); t = setTimeout(() => { if (JOG && innerWidth !== larguraAnterior) desenhar(); larguraAnterior = innerWidth; }, 150); });
+
+    Promise.all([fetch('/base/jogadores.json').then((r) => r.json()), fetch('/base/carreiras.json').then((r) => r.json())]).then(([ls, car]) => {
+      JOG = new Map(ls.map(([tm, nome, ger, clube, posGer, posClube, pts, jogos, estreia, principais, bases]) =>
+        [tm, { tm, nome, ger, clube, posGer, posClube, pts, jogos, estreia, principais, bases, busca: semAcento(nome) }]));
+      CAR = car;
+      desenhar();
+    }).catch(() => { $('estado').textContent = 'Não foi possível carregar os dados. Recarregue a página.'; });
+  </script>
+</BaseLayout>

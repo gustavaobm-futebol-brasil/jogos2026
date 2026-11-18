@@ -66,7 +66,7 @@ const nClubes = (ger) => clubesGeracao.filter((r) => r.ger === ger).length;
             <td><a class="time" href={`/base/jogadores?clube=${encodeURIComponent(r.clube)}`} set:html={nomeComEscudo(r.clube)} /></td>
             <td class="n pts-barra">{fmtInt.format(r.pts)}<span class="tr"><i style={`width:${(100 * r.pts / maxPts).toFixed(1)}%`}></i></span></td>
             <td class="n">{fmtInt.format(r.comPro)}<small>de {fmtInt.format(r.jogadores)}</small></td>
-            <td class="esconde-celular">{r.melhor && <span>{r.melhor.nome}<small>{r.melhor.ger} · {fmtDec.format(r.melhor.pts)} pts</small></span>}</td>
+            <td class="esconde-celular">{r.melhor && <span><a href={`/base/jogador?id=${r.melhor.tm}`}>{r.melhor.nome}</a><small>{r.melhor.ger} · {fmtDec.format(r.melhor.pts)} pts</small></span>}</td>
           </tr>
         ))}
       </tbody>
@@ -128,7 +128,7 @@ const nClubes = (ger) => clubesGeracao.filter((r) => r.ger === ger).length;
           h('td', null, link),
           h('td', { class: 'n pts-barra' }, fmtInt.format(r.pts), h('span', { class: 'tr' }, h('i', { style: `width:${(100 * r.pts / max).toFixed(1)}%` }))),
           h('td', { class: 'n' }, fmtInt.format(r.comPro), h('small', { text: `de ${fmtInt.format(r.jogadores)}` })),
-          h('td', { class: 'esconde-celular' }, r.melhor ? h('span', null, r.melhor.nome, h('small', { text: `${r.melhor.ger} · ${fmtDec.format(r.melhor.pts)} pts` })) : ''));
+          h('td', { class: 'esconde-celular' }, r.melhor ? h('span', null, h('a', { href: `/base/jogador?id=${r.melhor.tm}`, text: r.melhor.nome }), h('small', { text: `${r.melhor.ger} · ${fmtDec.format(r.melhor.pts)} pts` })) : ''));
       }));
     }
     fGer.addEventListener('change', desenhar);

@@ -48,7 +48,7 @@ if (!BASE || !temDados) return Astro.redirect('/404');
   <div class="paginacao"><button type="button" class="acao" id="mais" hidden>Mostrar mais 100</button></div>
   <p class="legenda">
     #: posição do jogador na sua geração. Clube: o clube em que ele tem mais minutos no Brasileiro Sub-20 (sem Sub-20, na Copinha; sem os dois,
-    o primeiro clube em que jogou nas Séries A/B). Jogos pro e principais clubes: carreira no Transfermarkt (o nome leva ao perfil).
+    o primeiro clube em que jogou nas Séries A/B). Jogos pro e principais clubes: carreira no Transfermarkt. O nome leva à página do jogador, com os pontos idade a idade e a comparação com outro jogador.
   </p>
 
   <script type="application/json" id="dados-escudos" set:html={jsonEmbutido(escudosDosClubes)}></script>
@@ -86,7 +86,7 @@ if (!BASE || !temDados) return Astro.redirect('/404');
         const cl = h('span'); cl.innerHTML = nomeComEscudo(j.clube, 'p');
         return h('tr', null,
           h('td', { class: 'n', text: `${j.posGer}º` }),
-          h('td', { class: 'jog-nome' }, h('a', { href: `https://www.transfermarkt.com.br/-/profil/spieler/${j.tm}`, target: '_blank', rel: 'noopener', text: j.nome }),
+          h('td', { class: 'jog-nome' }, h('a', { href: `/base/jogador?id=${j.tm}`, text: j.nome }),
             h('small', { text: j.bases })),
           h('td', { class: 'n', text: j.ger }),
           h('td', null, cl),

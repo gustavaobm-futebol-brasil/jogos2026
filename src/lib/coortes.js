@@ -102,6 +102,24 @@ export function pontosJogadorAno() {
   return { clubes, linhas };
 }
 
+/** Carreira de cada jogador para /base/jogador: pontos de cada ano civil divididos pelo clube dos jogos (nome do TM;
+ *  "Seleção brasileira" e "Clube não informado" à parte). Só jogadores publicados e anos com ponto.
+ *  { clubes: [nomes], j: { tm: [[ano, [[índice do clube, pontos, jogos], ...]], ...] } }. */
+export function carreirasPorClube() {
+  const quem = new Set(jogadores.map((j) => j.tm));
+  const clubes = [], idx = new Map(), j = {};
+  for (const r of csv(ler('pontos_clube_ano.csv'))) {
+    if (!quem.has(r.tm_id)) continue;
+    if (!idx.has(r.clube)) { idx.set(r.clube, clubes.length); clubes.push(r.clube); }
+    const anos = (j[r.tm_id] ??= []), ano = Number(r.ano);
+    let a = anos.find((x) => x[0] === ano);
+    if (!a) anos.push((a = [ano, []]));
+    a[1].push([idx.get(r.clube), Number(r.pontos), Number(r.jogos_pro)]);
+  }
+  for (const anos of Object.values(j)) anos.sort((x, y) => x[0] - y[0]);
+  return { clubes, j };
+}
+
 export const fmtInt = new Intl.NumberFormat('pt-BR', { maximumFractionDigits: 0 });
 export const fmtDec = new Intl.NumberFormat('pt-BR', { maximumFractionDigits: 1 });
 export const rotuloGeracao = (g) => `${g.ano}${g.completa ? '' : ' (em andamento)'}`;
