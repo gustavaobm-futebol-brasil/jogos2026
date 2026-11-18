@@ -58,17 +58,17 @@ td.principais { font-size: .82rem; color: var(--muted); max-width: 30ch; }
 }
 
 /* página do jogador: cores dos clubes da carreira (paleta categórica validada na ordem, claro e escuro; 2026-11-18).
-   Cada clube fica com a cor da ordem em que apareceu na carreira; seleção em tinta escura; o resto em cinza. */
-:root { --k0: #2a78d6; --k1: #eb6834; --k2: #1baf7a; --k3: #eda100; --k4: #e87ba4; --k5: #008300; --k6: #6250d6; --k7: #e34948; --k-sel: #33413a; }
-@media (prefers-color-scheme: dark) { :root { --k0: #3987e5; --k1: #d95926; --k2: #199e70; --k3: #c98500; --k4: #d55181; --k5: #0ca30c; --k6: #9085e9; --k7: #e66767; --k-sel: #dfe6e1; } }
+   Cada clube fica com a cor da ordem em que apareceu na carreira; seleção brasileira em tinta escura, seleção de outro país em tinta média; o resto em cinza claro. */
+:root { --k0: #2a78d6; --k1: #eb6834; --k2: #1baf7a; --k3: #eda100; --k4: #e87ba4; --k5: #008300; --k6: #6250d6; --k7: #e34948; --k-sel: #33413a; --k-sel2: #7c8a83; }
+@media (prefers-color-scheme: dark) { :root { --k0: #3987e5; --k1: #d95926; --k2: #199e70; --k3: #c98500; --k4: #d55181; --k5: #0ca30c; --k6: #9085e9; --k7: #e66767; --k-sel: #dfe6e1; --k-sel2: #a3b0a9; } }
 .cl-seg { stroke: var(--card); stroke-width: 1.5; outline: none; }
 .cl-seg:hover, .cl-seg:focus-visible { stroke: var(--fg); stroke-width: 2; }
 .cl-seg.k0 { fill: var(--k0); } .cl-seg.k1 { fill: var(--k1); } .cl-seg.k2 { fill: var(--k2); } .cl-seg.k3 { fill: var(--k3); }
 .cl-seg.k4 { fill: var(--k4); } .cl-seg.k5 { fill: var(--k5); } .cl-seg.k6 { fill: var(--k6); } .cl-seg.k7 { fill: var(--k7); }
-.cl-seg.sel { fill: var(--k-sel); } .cl-seg.outros { fill: var(--muted); opacity: .4; }
+.cl-seg.sel { fill: var(--k-sel); } .cl-seg.sel2 { fill: var(--k-sel2); } .cl-seg.outros { fill: var(--muted); opacity: .4; }
 .sw.k0 { background: var(--k0); } .sw.k1 { background: var(--k1); } .sw.k2 { background: var(--k2); } .sw.k3 { background: var(--k3); }
 .sw.k4 { background: var(--k4); } .sw.k5 { background: var(--k5); } .sw.k6 { background: var(--k6); } .sw.k7 { background: var(--k7); }
-.sw.sel { background: var(--k-sel); } .sw.outros { background: var(--muted); opacity: .5; }
+.sw.sel { background: var(--k-sel); } .sw.sel2 { background: var(--k-sel2); } .sw.outros { background: var(--muted); opacity: .5; }
 .gr-mira { stroke: var(--muted); stroke-width: 1; stroke-dasharray: 3 3; }
 
 .voltar { margin: 0 0 4px; }

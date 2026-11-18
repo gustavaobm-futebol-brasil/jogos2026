@@ -35,7 +35,7 @@ if (!BASE || !temDados) return Astro.redirect('/404');
   <div id="graficos"></div>
   <p class="legenda">
     Pontos: a mesma regra da seção (peso de cada jogo pela competição; ver <a href="/base/metodologia">Como é feito</a>). Idade é o ano do jogo
-    menos o ano de nascimento. Os clubes são os do Transfermarkt, jogo a jogo; jogos pela seleção aparecem à parte. Cada clube mantém a
+    menos o ano de nascimento. Os clubes são os do Transfermarkt, jogo a jogo; jogos por seleções (a brasileira ou a de outro país) aparecem à parte. Cada clube mantém a
     mesma cor em todas as idades; os clubes além dos 8 com mais pontos ficam em "Outros clubes". * {metaCoortes.ano_incompleto} ainda não terminou.
   </p>
 
@@ -46,6 +46,7 @@ if (!BASE || !temDados) return Astro.redirect('/404');
     const CFG = JSON.parse(document.getElementById('dados-jog').textContent);
     const $ = (id) => document.getElementById(id);
     const NCORES = 8, SEL = 'Seleção brasileira', SEM = 'Clube não informado';
+    const eSel = (c) => c.startsWith('Seleção ');   // "Seleção brasileira", "Seleção paraguaia"...
     const params = new URLSearchParams(location.search);
     let idA = params.get('id'), idB = params.get('vs');
     if (params.get('modo') === 'acum') $('f-modo').value = 'acum';
@@ -60,14 +61,16 @@ if (!BASE || !temDados) return Astro.redirect('/404');
         total.set(x.clube, (total.get(x.clube) || 0) + x.p);
         if (!primeiro.has(x.clube)) primeiro.set(x.clube, k * 100 - x.p);   // ordem de chegada (no mesmo ano, o de mais pontos antes)
       }));
-      const clubes = [...total.keys()].filter((c) => c !== SEL && c !== SEM);
+      const clubes = [...total.keys()].filter((c) => !eSel(c) && c !== SEM);
       const comCor = new Set([...clubes].sort((a, b) => total.get(b) - total.get(a)).slice(0, NCORES));
       const cats = [];   // [{ chave, nome, cls }] na ordem da pilha (de baixo para cima) e da legenda
       clubes.filter((c) => comCor.has(c)).sort((a, b) => primeiro.get(a) - primeiro.get(b))
         .forEach((c, i) => cats.push({ chave: c, nome: c, cls: `k${i}` }));
       if (clubes.some((c) => !comCor.has(c)) || total.has(SEM)) cats.push({ chave: '_outros', nome: 'Outros clubes', cls: 'outros' });
-      if (total.has(SEL)) cats.push({ chave: SEL, nome: SEL, cls: 'sel' });
-      const cat = (c) => (c === SEL ? SEL : comCor.has(c) ? c : '_outros');
+      // seleções à parte, a brasileira primeiro (tinta escura); outra seleção (ex.: naturalizado) em tinta média
+      [...total.keys()].filter(eSel).sort((a, b) => (b === SEL) - (a === SEL) || total.get(b) - total.get(a))
+        .forEach((c) => cats.push({ chave: c, nome: c, cls: c === SEL ? 'sel' : 'sel2' }));
+      const cat = (c) => (eSel(c) ? c : comCor.has(c) ? c : '_outros');
       let acc = 0;
       const porIdade = new Map();
       const accCat = new Map();
@@ -132,7 +135,7 @@ if (!BASE || !temDados) return Astro.redirect('/404');
           if (v <= 0) continue;
           const y0 = Y(base), y1 = Y(base + v);
           base += v;
-          const partes = a ? a.partes.filter((x) => (ct.chave === '_outros' ? x.clube !== SEL && !c.cats.some((q) => q.chave === x.clube) : x.clube === ct.chave)) : [];
+          const partes = a ? a.partes.filter((x) => (ct.chave === '_outros' ? !eSel(x.clube) && !c.cats.some((q) => q.chave === x.clube) : x.clube === ct.chave)) : [];
           const linhas = acumulado
             ? [`${fmtDec.format(v)} pontos até os ${idade} anos`, ct.nome, `total até ${ano}: ${fmtDec.format(valor(c, idade, true))}`]
             : [`${fmtDec.format(v)} pontos aos ${idade} anos`, ct.nome + (ct.chave === '_outros' ? `: ${partes.map((x) => x.clube).join(', ')}` : ''),

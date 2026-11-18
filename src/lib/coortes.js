@@ -103,7 +103,7 @@ export function pontosJogadorAno() {
 }
 
 /** Carreira de cada jogador para /base/jogador: pontos de cada ano civil divididos pelo clube dos jogos (nome do TM;
- *  "Seleção brasileira" e "Clube não informado" à parte). Só jogadores publicados e anos com ponto.
+ *  seleções ("Seleção brasileira", "Seleção paraguaia"...) e "Clube não informado" à parte). Só jogadores publicados e anos com ponto.
  *  { clubes: [nomes], j: { tm: [[ano, [[índice do clube, pontos, jogos], ...]], ...] } }. */
 export function carreirasPorClube() {
   const quem = new Set(jogadores.map((j) => j.tm));
