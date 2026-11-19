@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-11-19T13:22",
+ "gerado_em": "2026-11-19T13:55",
  "bases": [
   2016,
   2017,
@@ -170,8 +170,8 @@
    "bases_que_faltam": [],
    "bases_antes_da_coleta": [],
    "jogadores": 455,
-   "com_jogo_pro": 291,
-   "pontos": 4129.9
+   "com_jogo_pro": 292,
+   "pontos": 4134.8
   },
   "2006": {
    "situacao": "em andamento",
@@ -239,8 +239,8 @@
   }
  },
  "totais": {
-  "jogadores_publicados": 3969,
-  "linhas_pontos_por_ano": 17303,
+  "jogadores_publicados": 3970,
+  "linhas_pontos_por_ano": 17305,
   "avisos_internos": 11
  }
 }
