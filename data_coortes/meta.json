@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-11-18T18:25",
+ "gerado_em": "2026-11-19T13:22",
  "bases": [
   2016,
   2017,
@@ -169,9 +169,9 @@
    ],
    "bases_que_faltam": [],
    "bases_antes_da_coleta": [],
-   "jogadores": 446,
-   "com_jogo_pro": 288,
-   "pontos": 4124.3
+   "jogadores": 455,
+   "com_jogo_pro": 291,
+   "pontos": 4129.9
   },
   "2006": {
    "situacao": "em andamento",
@@ -185,9 +185,9 @@
     2026
    ],
    "bases_antes_da_coleta": [],
-   "jogadores": 413,
-   "com_jogo_pro": 213,
-   "pontos": 3017.1
+   "jogadores": 446,
+   "com_jogo_pro": 231,
+   "pontos": 3045.9
   },
   "2007": {
    "situacao": "em andamento",
@@ -201,9 +201,9 @@
     2027
    ],
    "bases_antes_da_coleta": [],
-   "jogadores": 299,
-   "com_jogo_pro": 123,
-   "pontos": 1382.0
+   "jogadores": 345,
+   "com_jogo_pro": 145,
+   "pontos": 1437.7
   },
   "2008": {
    "situacao": "em andamento",
@@ -217,9 +217,9 @@
     2028
    ],
    "bases_antes_da_coleta": [],
-   "jogadores": 106,
-   "com_jogo_pro": 38,
-   "pontos": 330.8
+   "jogadores": 117,
+   "com_jogo_pro": 41,
+   "pontos": 336.5
   },
   "2009": {
    "situacao": "em andamento",
@@ -233,14 +233,14 @@
     2029
    ],
    "bases_antes_da_coleta": [],
-   "jogadores": 12,
-   "com_jogo_pro": 6,
-   "pontos": 16.5
+   "jogadores": 13,
+   "com_jogo_pro": 7,
+   "pontos": 16.8
   }
  },
  "totais": {
-  "jogadores_publicados": 3922,
-  "linhas_pontos_por_ano": 17240,
-  "avisos_internos": 9
+  "jogadores_publicados": 3969,
+  "linhas_pontos_por_ano": 17303,
+  "avisos_internos": 11
  }
 }
