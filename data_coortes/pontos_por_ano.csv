@@ -394,6 +394,7 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 972380,2021,25,3,0.6,Iporá EC / SE Santa Maria
 972380,2022,26,2,0.2,Iporá EC
 972380,2026,30,2,0.3,Guaporé
+1386953,2018,20,6,0.8,Iporá EC
 380990,2020,23,2,0.2,Tocantinópolis
 468247,2018,21,1,0.4,Atlético-MG
 468247,2019,22,40,37.5,Atlético-MG
@@ -6112,6 +6113,7 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 1151639,2021,23,8,1.0,Caucaia
 723207,2019,20,2,0.6,Juazeirense
 723207,2020,21,1,0.3,Jacobina
+692775,2017,19,2,0.8,Passo Fundo
 371998,2017,17,37,42.5,Flamengo
 371998,2018,18,47,63.4,Flamengo / Real Madrid
 371998,2019,19,37,74.9,Real Madrid
@@ -7556,6 +7558,7 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 671142,2025,25,2,0.4,Lagarto
 730286,2020,21,9,4.3,Imperatriz
 730286,2023,24,4,1.0,Foz do Iguaçu / Grêmio Anápolis
+1366169,2025,24,7,1.4,Guarany-SE
 672618,2019,19,14,8.5,América-MG
 672618,2020,20,24,15.0,América-MG
 672618,2021,21,30,15.3,Cruzeiro / América-MG
@@ -9243,6 +9246,10 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 1115624,2026,28,8,2.4,Iguatu
 729249,2018,20,6,1.2,CSP
 729249,2019,21,6,1.2,CSP
+734521,2021,22,2,0.4,CS Maruinense
+734521,2022,23,31,1.6,FC Bizau / FC Lustenau
+734521,2023,24,14,0.2,FV Rot-Weiß Weiler
+734521,2024,25,2,0.0,FV Rot-Weiß Weiler
 675123,2018,19,1,0.3,Sport
 602105,2018,18,3,3.8,São Paulo
 602105,2019,19,51,48.6,São Paulo
@@ -9494,7 +9501,6 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 830369,2021,21,3,0.7,Vitória-BA / Caldense
 830369,2023,23,8,1.5,Vitória-ES
 830369,2025,25,3,0.6,Penedense
-1366169,2025,24,7,1.4,Guarany-SE
 676041,2019,20,1,0.7,Vitória-BA
 676041,2020,21,1,0.2,Jacuipense
 676041,2021,22,1,0.1,Bahia de Feira
@@ -11890,6 +11896,7 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 703323,2021,22,3,1.5,Botafogo-SP
 703323,2022,23,1,0.5,Madureira
 740272,2025,24,2,1.0,Vitória-BA
+1288584,2024,23,20,1.0,1.FCA Darmstadt
 978388,2022,22,5,1.0,Manaus
 1100025,2023,22,1,0.5,Boavista
 973123,2024,24,2,0.4,Estrela do Norte
@@ -13569,6 +13576,7 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 900204,2023,22,11,1.9,Globo / Afogados
 900204,2024,23,2,0.2,Fluminense-PI
 976113,2025,22,22,4.1,Águia de Marabá
+866897,2021,19,7,3.8,Sport
 866891,2025,23,9,1.8,Real Noroeste
 866891,2026,24,7,1.4,CSE
 866910,2021,21,2,1.0,Sport
@@ -13971,6 +13979,9 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 925861,2023,22,6,1.8,Atlético-CE
 925861,2025,24,7,1.4,Oeirense
 925861,2026,25,3,0.6,Parnahyba
+1099746,2021,20,2,0.9,Atlético-GO
+1099746,2023,22,9,4.5,Portuguesa-RJ
+1099746,2024,23,2,0.6,Flamengo-PE
 738508,2020,19,1,0.2,Ituano
 738508,2021,20,4,1.2,Bahia
 738508,2023,22,1,0.2,Real Brasília
@@ -16194,6 +16205,7 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 1096263,2026,22,15,1.2,São José-RS
 1096272,2025,21,2,0.1,Brasil de Pelotas
 1096272,2026,22,2,1.4,Juventude
+1096274,2026,21,2,1.4,Juventude
 1056993,2023,16,1,1.3,Palmeiras
 1056993,2024,17,49,90.2,Palmeiras
 1056993,2025,18,67,122.0,Palmeiras / Chelsea FC
@@ -16253,7 +16265,6 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 1092569,2024,21,36,2.9,FC Samgurali Tskaltubo
 1092569,2025,22,36,3.0,FC Samgurali Tskaltubo
 1092569,2026,23,33,3.0,FC Samgurali Tskaltubo
-866897,2021,19,7,3.8,Sport
 1101123,2025,20,3,0.9,Sport
 1092570,2026,20,2,0.6,Sport
 1004725,2023,17,3,2.9,São Paulo
@@ -17191,7 +17202,6 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 1355352,2026,20,3,2.1,Chapecoense
 1355351,2026,20,3,2.1,Juventude
 1224807,2026,19,3,2.1,Juventude
-1096274,2026,21,2,1.4,Juventude
 1226334,2024,17,2,1.3,Juventude
 1355358,2026,20,1,0.7,Juventude
 1355355,2026,20,1,0.7,Juventude

@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-11-19T13:55",
+ "gerado_em": "2026-11-19T16:02",
  "bases": [
   2016,
   2017,
@@ -63,9 +63,9 @@
     2014,
     2015
    ],
-   "jogadores": 399,
-   "com_jogo_pro": 372,
-   "pontos": 19514.6
+   "jogadores": 401,
+   "com_jogo_pro": 374,
+   "pontos": 19516.2
   },
   "1999": {
    "situacao": "completa",
@@ -79,9 +79,9 @@
    "bases_antes_da_coleta": [
     2015
    ],
-   "jogadores": 445,
-   "com_jogo_pro": 416,
-   "pontos": 21336.5
+   "jogadores": 446,
+   "com_jogo_pro": 417,
+   "pontos": 21338.7
   },
   "2000": {
    "situacao": "completa",
@@ -109,9 +109,9 @@
    ],
    "bases_que_faltam": [],
    "bases_antes_da_coleta": [],
-   "jogadores": 492,
-   "com_jogo_pro": 415,
-   "pontos": 18628.6
+   "jogadores": 494,
+   "com_jogo_pro": 417,
+   "pontos": 18635.6
   },
   "2002": {
    "situacao": "completa",
@@ -124,7 +124,7 @@
    ],
    "bases_que_faltam": [],
    "bases_antes_da_coleta": [],
-   "jogadores": 490,
+   "jogadores": 491,
    "com_jogo_pro": 407,
    "pontos": 11735.5
   },
@@ -239,8 +239,8 @@
   }
  },
  "totais": {
-  "jogadores_publicados": 3970,
-  "linhas_pontos_por_ano": 17305,
+  "jogadores_publicados": 3975,
+  "linhas_pontos_por_ano": 17315,
   "avisos_internos": 11
  }
 }
