@@ -16849,6 +16849,8 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 1130056,2025,20,2,0.6,Sport
 1223635,2026,22,9,0.4,Atlético-CE
 1223679,2025,20,1,0.3,Sport
+1219849,2025,19,42,37.4,São Paulo / Shakhtar Donetsk
+1219849,2026,20,19,11.7,Shakhtar Donetsk
 1009031,2024,18,1,1.2,São Paulo
 1009031,2025,19,20,16.3,CSKA Moscow / São Paulo
 1009031,2026,20,24,14.1,CSKA Moscow
@@ -17271,8 +17273,6 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 1459871,2025,17,1,0.3,Sport
 1355332,2026,18,1,0.3,Sport
 1355312,2026,18,1,0.3,Sport
-1219849,2025,19,42,37.4,São Paulo / Shakhtar Donetsk
-1219849,2026,20,19,11.7,Shakhtar Donetsk
 1383716,2026,19,15,16.5,São Paulo
 1362701,2025,18,2,2.1,São Paulo
 1362701,2026,19,12,11.5,São Paulo
