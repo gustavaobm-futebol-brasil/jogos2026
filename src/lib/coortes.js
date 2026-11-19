@@ -48,7 +48,7 @@ export const jogadores = csv(ler('jogadores.csv')).map((r) => ({
 
 /** "2016: copinha, sub20 | 2017: serie_a" -> "Copinha e Sub-20 2016 · Série A 2017". */
 function textoBases(s) {
-  const nomes = { copinha: 'Copinha', sub20: 'Sub-20', serie_a: 'Série A', serie_b: 'Série B' };
+  const nomes = { copinha: 'Copinha', sub20: 'Sub-20', sub20b: 'Sub-20 B', serie_a: 'Série A', serie_b: 'Série B' };
   return s.split(' | ').filter(Boolean).map((p) => {
     const [ano, fs] = p.split(': ');
     const ns = (fs || '').split(', ').map((f) => nomes[f] || f);

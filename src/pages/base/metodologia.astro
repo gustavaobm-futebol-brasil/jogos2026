@@ -18,7 +18,8 @@ const dataGerado = metaCoortes.gerado_em ? metaCoortes.gerado_em.slice(0, 10).sp
     <p>Para cada ano entre {bases[0]} e {bases[bases.length - 1]}, entram todos os jogadores dos {clubes.length} clubes acompanhados que:</p>
     <ul>
       <li>jogaram pelo menos um minuto na <b>Copa São Paulo de Futebol Júnior</b> (Copinha), segundo as súmulas da Federação Paulista;</li>
-      <li>jogaram pelo menos um minuto no <b>Campeonato Brasileiro Sub-20</b>, segundo as súmulas da CBF;</li>
+      <li>jogaram pelo menos um minuto no <b>Campeonato Brasileiro Sub-20</b>, segundo as súmulas da CBF (desde 2025 também na Série B
+        do Sub-20, que a CBF criou naquele ano: em 2025, 9 dos clubes acompanhados jogaram a Série B);</li>
       <li>entraram em campo nas <b>Séries A ou B</b> com idade de Sub-20 (o "jovem que subiu direto").</li>
     </ul>
     <p>
@@ -38,7 +39,7 @@ const dataGerado = metaCoortes.gerado_em ? metaCoortes.gerado_em.slice(0, 10).sp
     <h2>A que clube o jogador pertence</h2>
     <p>Cada jogador pertence a um único clube, o mesmo em todos os anos em que aparece:</p>
     <ol>
-      <li>se jogou o Brasileiro Sub-20, o clube em que tem mais minutos nessa competição (somando todas as edições);</li>
+      <li>se jogou o Brasileiro Sub-20, o clube em que tem mais minutos nessa competição (somando todas as edições e as duas séries);</li>
       <li>se não jogou o Sub-20 mas jogou a Copinha, o clube em que tem mais minutos na Copinha;</li>
       <li>se só jogou as Séries A/B, o primeiro clube pelo qual entrou em campo.</li>
     </ol>
