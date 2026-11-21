@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-11-19T16:11",
+ "gerado_em": "2026-11-20T22:16",
  "bases": [
   2016,
   2017,
@@ -31,9 +31,9 @@
     2014,
     2015
    ],
-   "jogadores": 257,
-   "com_jogo_pro": 247,
-   "pontos": 20678.7
+   "jogadores": 312,
+   "com_jogo_pro": 283,
+   "pontos": 21610.9
   },
   "1997": {
    "situacao": "completa",
@@ -47,9 +47,9 @@
     2014,
     2015
    ],
-   "jogadores": 348,
-   "com_jogo_pro": 324,
-   "pontos": 29568.3
+   "jogadores": 409,
+   "com_jogo_pro": 374,
+   "pontos": 30919.3
   },
   "1998": {
    "situacao": "completa",
@@ -63,9 +63,9 @@
     2014,
     2015
    ],
-   "jogadores": 401,
-   "com_jogo_pro": 374,
-   "pontos": 19516.2
+   "jogadores": 451,
+   "com_jogo_pro": 416,
+   "pontos": 20765.8
   },
   "1999": {
    "situacao": "completa",
@@ -79,9 +79,9 @@
    "bases_antes_da_coleta": [
     2015
    ],
-   "jogadores": 446,
-   "com_jogo_pro": 417,
-   "pontos": 21338.7
+   "jogadores": 516,
+   "com_jogo_pro": 478,
+   "pontos": 22834.0
   },
   "2000": {
    "situacao": "completa",
@@ -94,9 +94,9 @@
    ],
    "bases_que_faltam": [],
    "bases_antes_da_coleta": [],
-   "jogadores": 425,
-   "com_jogo_pro": 376,
-   "pontos": 17895.3
+   "jogadores": 519,
+   "com_jogo_pro": 440,
+   "pontos": 18677.0
   },
   "2001": {
    "situacao": "completa",
@@ -109,9 +109,9 @@
    ],
    "bases_que_faltam": [],
    "bases_antes_da_coleta": [],
-   "jogadores": 494,
-   "com_jogo_pro": 417,
-   "pontos": 18635.6
+   "jogadores": 585,
+   "com_jogo_pro": 467,
+   "pontos": 19514.4
   },
   "2002": {
    "situacao": "completa",
@@ -124,9 +124,9 @@
    ],
    "bases_que_faltam": [],
    "bases_antes_da_coleta": [],
-   "jogadores": 491,
-   "com_jogo_pro": 407,
-   "pontos": 11735.5
+   "jogadores": 590,
+   "com_jogo_pro": 454,
+   "pontos": 12258.2
   },
   "2003": {
    "situacao": "completa",
@@ -139,9 +139,9 @@
    ],
    "bases_que_faltam": [],
    "bases_antes_da_coleta": [],
-   "jogadores": 445,
-   "com_jogo_pro": 347,
-   "pontos": 7069.2
+   "jogadores": 533,
+   "com_jogo_pro": 398,
+   "pontos": 7371.6
   },
   "2004": {
    "situacao": "completa",
@@ -154,9 +154,9 @@
    ],
    "bases_que_faltam": [],
    "bases_antes_da_coleta": [],
-   "jogadores": 465,
-   "com_jogo_pro": 350,
-   "pontos": 6394.1
+   "jogadores": 539,
+   "com_jogo_pro": 392,
+   "pontos": 6588.8
   },
   "2005": {
    "situacao": "completa",
@@ -169,9 +169,9 @@
    ],
    "bases_que_faltam": [],
    "bases_antes_da_coleta": [],
-   "jogadores": 455,
-   "com_jogo_pro": 292,
-   "pontos": 4134.8
+   "jogadores": 516,
+   "com_jogo_pro": 317,
+   "pontos": 4236.0
   },
   "2006": {
    "situacao": "em andamento",
@@ -185,9 +185,9 @@
     2026
    ],
    "bases_antes_da_coleta": [],
-   "jogadores": 445,
-   "com_jogo_pro": 231,
-   "pontos": 3045.9
+   "jogadores": 498,
+   "com_jogo_pro": 253,
+   "pontos": 3096.8
   },
   "2007": {
    "situacao": "em andamento",
@@ -201,9 +201,9 @@
     2027
    ],
    "bases_antes_da_coleta": [],
-   "jogadores": 345,
-   "com_jogo_pro": 145,
-   "pontos": 1437.7
+   "jogadores": 369,
+   "com_jogo_pro": 151,
+   "pontos": 1451.4
   },
   "2008": {
    "situacao": "em andamento",
@@ -217,9 +217,9 @@
     2028
    ],
    "bases_antes_da_coleta": [],
-   "jogadores": 117,
-   "com_jogo_pro": 41,
-   "pontos": 336.5
+   "jogadores": 126,
+   "com_jogo_pro": 42,
+   "pontos": 337.2
   },
   "2009": {
    "situacao": "em andamento",
@@ -233,14 +233,14 @@
     2029
    ],
    "bases_antes_da_coleta": [],
-   "jogadores": 13,
-   "com_jogo_pro": 7,
-   "pontos": 16.8
+   "jogadores": 16,
+   "com_jogo_pro": 8,
+   "pontos": 18.2
   }
  },
  "totais": {
-  "jogadores_publicados": 3975,
-  "linhas_pontos_por_ano": 17315,
-  "avisos_internos": 11
+  "jogadores_publicados": 4473,
+  "linhas_pontos_por_ano": 19000,
+  "avisos_internos": 24
  }
 }

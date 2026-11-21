@@ -650,12 +650,6 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 443045,2023,26,11,0.8,Iporá EC
 443045,2025,28,32,4.4,Goiatuba / Ceilândia
 443045,2026,29,13,2.4,CRAC
-480232,2016,19,8,4.0,Avaí
-480232,2017,20,7,3.1,Avaí
-480232,2020,23,6,0.5,Zejtun Corinthians FC
-480232,2021,24,17,1.6,Sirens FC / Zejtun Corinthians FC
-480232,2022,25,27,3.5,Najran SC / Sirens FC
-480232,2023,26,4,0.6,Najran SC
 524405,2017,21,1,0.3,Avaí
 524405,2019,23,1,0.2,ASA
 524405,2021,25,9,1.8,Dourados
@@ -1965,16 +1959,17 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 468249,2024,25,38,47.3,Burnley FC / Botafogo-RJ
 468249,2025,26,61,97.0,Botafogo-RJ
 468249,2026,27,46,47.8,Botafogo-RJ
-515638,2017,20,45,17.2,Náutico / SC Braga B
-515638,2018,21,25,16.4,Vitória-BA / SC Braga B
-515638,2019,22,24,16.3,Vitória-BA / Gil Vicente FC
-515638,2020,23,44,19.4,Náutico
-515638,2021,24,40,25.7,Náutico / Ceará
-515638,2022,25,43,32.4,Ceará
-515638,2023,26,52,24.6,Ceará
-515638,2024,27,37,43.2,São Paulo
-515638,2025,28,46,42.2,Vitória-BA / São Paulo
-515638,2026,29,53,41.9,Vitória-BA
+480225,2016,17,3,1.3,Paraná
+480225,2017,18,4,1.2,Paraná
+480225,2018,19,7,3.2,Paraná
+480225,2019,20,32,15.1,Paraná
+480225,2020,21,23,13.4,Bahia
+480225,2021,22,59,39.3,Vila Nova / Bahia
+480225,2022,23,40,26.2,Cuiabá
+480225,2023,24,53,32.7,Goiás
+480225,2024,25,56,25.4,Vila Nova
+480225,2025,26,33,38.4,Mirassol / Torpedo Moscow
+480225,2026,27,46,46.1,Mirassol
 445101,2017,20,15,5.5,ABC
 445101,2018,21,22,9.3,ABC
 445101,2019,22,9,11.0,Grêmio
@@ -2509,6 +2504,13 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 552247,2024,27,34,6.4,Svay Rieng
 552247,2025,28,33,5.0,Svay Rieng / Terengganu FC
 552247,2026,29,26,2.5,Arema FC
+542219,2018,21,19,5.0,Joinville / Académico Viseu FC
+542219,2019,22,10,3.7,Académico Viseu FC
+542219,2020,23,6,1.8,Joinville
+542219,2021,24,13,3.5,Retrô
+542219,2022,25,16,4.5,Ferroviário
+542219,2023,26,10,3.0,Joinville
+542219,2024,27,7,0.6,Hercílio Luz
 547553,2018,22,2,1.4,CD Santa Clara
 547553,2019,23,4,3.1,CD Santa Clara
 547553,2022,26,12,1.7,Portuguesa-RJ / Guarani
@@ -3284,19 +3286,6 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 520468,2024,27,29,27.9,Bahia / FC Augsburg
 520468,2025,28,28,33.0,Bahia
 520468,2026,29,26,24.6,São Paulo / Bahia
-294804,2014,18,1,0.4,Internacional
-294804,2015,19,4,4.0,Internacional
-294804,2016,20,25,14.4,Náutico / Internacional
-294804,2017,21,16,10.6,Atlético-GO / Internacional
-294804,2018,22,34,13.9,Figueirense
-294804,2019,23,24,12.4,Paraná
-294804,2020,24,29,16.7,América-MG
-294804,2021,25,55,48.1,América-MG
-294804,2022,26,58,49.9,Santos
-294804,2023,27,20,13.9,Santos
-294804,2024,28,18,3.0,CD Everton
-294804,2025,29,42,32.7,CF Pachuca
-294804,2026,30,37,29.1,CF Pachuca
 348264,2014,18,2,2.0,Internacional
 348264,2016,20,33,27.1,Internacional
 348264,2017,21,14,11.9,Bahia / Internacional
@@ -3492,6 +3481,13 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 636672,2024,27,1,0.2,Samambaia
 636672,2025,28,10,1.6,Ceilândia
 636672,2026,29,8,1.6,Brasília
+729745,2019,21,5,1.3,Ypiranga
+729745,2020,22,1,0.3,Ypiranga
+729745,2021,23,4,1.2,Criciúma
+729745,2023,25,16,2.9,Patrocinense / Atlético Catarinense
+729745,2024,26,20,2.5,Patrocinense / Itabuna EC
+729745,2025,27,28,4.3,Goiatuba / Sergipe
+729745,2026,28,23,3.1,Goiatuba
 553730,2017,21,10,3.5,Tombense / Macaé
 553730,2018,22,9,4.5,Macaé
 553730,2019,23,3,0.6,Grêmio Anápolis
@@ -3519,6 +3515,65 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 432907,2020,24,1,0.2,Jaraguá EC-GO
 294812,2018,22,5,0.6,Real Ariquemes EC
 749072,2021,23,6,0.6,Caldense
+542598,2016,20,4,1.2,Joinville
+542598,2017,21,28,7.7,Joinville
+542598,2018,22,27,5.6,Joinville
+542598,2019,23,48,16.5,Juventude / Figueirense
+542598,2020,24,40,27.7,Juventude / Palmeiras
+542598,2021,25,47,63.6,Palmeiras
+542598,2022,26,44,66.3,Palmeiras
+542598,2023,27,60,74.4,Palmeiras
+542598,2024,28,45,59.1,Fortaleza / Palmeiras
+542598,2025,29,52,47.2,Fortaleza
+542598,2026,30,37,32.7,Coritiba
+542597,2017,20,22,6.2,Joinville
+542597,2018,21,23,5.3,Joinville
+542597,2019,22,8,4.2,Ponte Preta / Paraná
+542597,2020,23,9,1.3,Boa
+542597,2021,24,17,3.9,FC Kharkiv / Figueirense
+542597,2022,25,21,6.3,Vorskla Poltava / Figueirense
+542597,2024,27,27,2.2,Zweigen Kanazawa
+542597,2025,28,29,7.4,Figueirense
+542597,2026,29,31,7.7,Noroeste / Brusque
+383434,2015,19,3,3.0,Joinville
+383434,2017,21,9,2.1,Joinville / Internacional de Lages
+383434,2018,22,4,1.2,Internacional de Lages
+383434,2019,23,9,1.8,Sobradinho
+383434,2021,25,33,6.8,FC Van / Marcílio Dias
+383434,2022,26,21,5.7,Brasil de Pelotas
+383434,2023,27,21,3.6,Novo Hamburgo / Paranoá
+383434,2024,28,6,1.8,Concórdia
+383434,2025,29,27,5.7,Altos / Avenida
+383434,2026,30,6,0.3,Real Noroeste
+542603,2017,20,32,8.8,Joinville
+542603,2018,21,3,0.6,Joinville
+542603,2021,24,10,3.0,Metropolitano
+542603,2023,26,12,2.4,Treze
+542603,2024,27,16,6.5,Treze
+936166,2016,19,1,0.3,Joinville
+936166,2017,20,2,0.2,Internacional de Lages
+936166,2018,21,1,0.2,Murici
+936166,2019,22,11,1.8,Itabaiana / Jaciobá
+936166,2021,24,20,2.7,4 de Julho / Coruripe
+936166,2022,25,4,0.5,Juventude-MA
+936166,2023,26,10,0.9,Trem / Manauara
+936166,2024,27,7,2.1,Central
+936166,2025,28,18,3.2,Central / ASA
+936166,2026,29,23,3.3,Sergipe
+542604,2017,20,12,3.3,Joinville
+542604,2018,21,8,2.0,Joinville
+542604,2020,23,8,2.4,Joinville
+366480,2017,21,11,2.1,Metropolitano / Joinville
+366480,2022,26,4,1.3,Capital-DF / Costa Rica
+1213578,2016,20,1,0.3,Joinville
+1213578,2017,21,1,0.2,Joinville
+1213578,2018,22,11,2.2,Real Brasília / Grêmio Anápolis
+729790,2022,25,13,1.8,Humaitá
+729790,2024,27,1,0.7,Humaitá
+542602,2017,20,6,1.6,Joinville
+881624,2022,26,13,1.3,Paju Frontier
+1216367,2017,20,6,0.9,Metropolitano / Joinville
+1264537,2017,20,2,0.5,Joinville
 527047,2016,20,13,2.8,Juventude
 527047,2017,21,13,5.9,Juventude
 527047,2018,22,26,9.3,Juventude
@@ -3601,6 +3656,167 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 979683,2022,26,5,1.0,Brasília
 1205402,2019,22,3,0.9,Foz do Iguaçu
 1611092,2017,20,1,0.2,SC Coimbrões
+555277,2017,20,2,1.0,Mirassol
+555277,2018,21,14,4.8,Mirassol
+555277,2020,23,34,18.1,Ponte Preta / Mirassol
+555277,2021,24,42,27.3,Botafogo-RJ / Mirassol
+555277,2022,25,45,31.4,Botafogo-RJ / RWDM Brussels
+555277,2023,26,20,13.7,Goiás / RWDM Brussels
+555277,2024,27,35,26.0,Juventude
+555277,2025,28,50,27.1,Novorizontino
+555277,2026,29,49,29.8,Novorizontino
+882916,2018,20,3,0.4,Mirassol
+882916,2019,21,4,2.0,Mirassol
+882916,2021,23,50,27.8,CSA / Grêmio Esportivo Juventus
+882916,2022,24,37,41.6,Athletico-PR
+882916,2023,25,19,17.6,Athletico-PR
+882916,2024,26,37,20.9,Ceará
+882916,2025,27,29,9.4,Atlético-GO / Cong An Ho Chi Minh City FC
+882916,2026,28,19,5.1,Cong An Ho Chi Minh City FC / Remo
+442424,2016,20,7,8.9,CD Tondela
+442424,2017,21,32,29.0,CD Tondela
+442424,2018,22,13,9.0,CD Tondela / Rio Ave FC
+442424,2019,23,22,17.9,FC Paços de Ferreira / Rio Ave FC
+442424,2020,24,13,9.4,GD Estoril Praia / FC Paços de Ferreira
+442424,2021,25,37,17.8,GD Estoril Praia / Varzim SC
+442424,2022,26,32,11.1,Varzim SC / CD Mafra
+442424,2023,27,31,7.8,Chapecoense / Chonburi FC
+442424,2024,28,8,1.2,Chonburi FC
+533728,2018,20,4,2.5,Kerkyraikos
+533728,2021,23,10,2.8,Maringá / Portuguesa-SP
+533728,2022,24,37,21.1,FC Shkupi
+533728,2023,25,30,4.9,FC Shkupi
+533728,2024,26,24,10.3,FC Ballkani
+533728,2025,27,26,5.9,FC Ballkani / Chonburi FC
+533728,2026,28,20,3.4,Chonburi FC / Bali United FC
+646676,2019,20,12,6.0,Mirassol
+646676,2021,22,7,1.3,Mirassol
+646676,2022,23,12,3.4,Hercílio Luz / Caxias
+646676,2023,24,6,1.8,Hercílio Luz
+646676,2024,25,27,5.0,Hercílio Luz
+646676,2025,26,30,6.8,Tombense
+646676,2026,27,15,6.0,Tombense / Chapecoense
+726361,2019,23,9,1.8,AD Perilima de Campina Grande
+726361,2020,24,24,4.8,Campinense / Bytovia Bytow
+726361,2021,25,26,4.0,Bytovia Bytow / KSZO Ostrowiec Swietokrzyski
+726361,2022,26,32,2.6,KSZO Ostrowiec Swietokrzyski
+726361,2023,27,2,1.9,Nona FC
+1100060,2020,24,11,1.4,Ji-Paraná-RO
+1100060,2023,27,11,4.1,Nova Iguaçu
+1100060,2024,28,20,3.4,Serra-ES / Caeté
+1100060,2025,29,24,3.9,Imperatriz / Cametá
+555282,2021,24,10,2.6,Inter de Limeira
+555282,2022,25,1,0.7,Tocantinópolis
+555282,2023,26,3,0.6,UA Carmolandense
+555282,2024,27,18,3.2,Imperatriz / Tocantinópolis
+555282,2025,28,16,2.8,UA Carmolandense
+555282,2026,29,11,2.2,UA Carmolandense
+1150250,2023,26,8,1.2,Interporto / UA Carmolandense
+1150250,2024,27,9,0.3,Capital-TO
+1150250,2025,28,18,3.5,UA Carmolandense / Araguaína
+1150250,2026,29,13,2.1,Araguaína
+1495811,2025,25,2,0.4,PT Satun FC / Uttaradit FC
+1495811,2026,26,10,2.7,Uttaradit FC
+1140400,2020,24,1,0.1,Cabofriense
+1140400,2023,27,4,0.8,Aparecidense
+742083,2020,23,6,0.4,St. George's FC
+515638,2017,20,45,17.2,Náutico / SC Braga B
+515638,2018,21,25,16.4,Vitória-BA / SC Braga B
+515638,2019,22,24,16.3,Vitória-BA / Gil Vicente FC
+515638,2020,23,44,19.4,Náutico
+515638,2021,24,40,25.7,Náutico / Ceará
+515638,2022,25,43,32.4,Ceará
+515638,2023,26,52,24.6,Ceará
+515638,2024,27,37,43.2,São Paulo
+515638,2025,28,46,42.2,Vitória-BA / São Paulo
+515638,2026,29,53,41.9,Vitória-BA
+294804,2014,18,1,0.4,Internacional
+294804,2015,19,4,4.0,Internacional
+294804,2016,20,25,14.4,Náutico / Internacional
+294804,2017,21,16,10.6,Atlético-GO / Internacional
+294804,2018,22,34,13.9,Figueirense
+294804,2019,23,24,12.4,Paraná
+294804,2020,24,29,16.7,América-MG
+294804,2021,25,55,48.1,América-MG
+294804,2022,26,58,49.9,Santos
+294804,2023,27,20,13.9,Santos
+294804,2024,28,18,3.0,CD Everton
+294804,2025,29,42,32.7,CF Pachuca
+294804,2026,30,37,29.1,CF Pachuca
+663244,2019,20,5,0.8,SC Espinho
+663244,2020,21,12,4.2,Leixões SC / SC Espinho
+663244,2021,22,40,20.4,Casa Pia AC / Leixões SC
+663244,2022,23,39,28.6,Vitória Guimarães SC / Casa Pia AC
+663244,2023,24,39,37.8,Vitória Guimarães SC
+663244,2024,25,44,61.5,Vitória Guimarães SC / Nottingham Forest
+663244,2025,26,27,41.1,Nottingham Forest / Beşiktaş JK
+663244,2026,27,30,32.3,Olympiacos Piraeus / Beşiktaş JK
+519867,2017,21,7,2.2,Náutico
+519867,2018,22,15,6.2,Náutico
+519867,2019,23,16,6.1,Náutico
+519867,2020,24,33,14.1,Náutico
+519867,2021,25,24,12.3,Náutico / Fluminense
+519867,2022,26,14,6.4,Náutico / Vitória-BA
+519867,2023,27,12,4.1,Chapecoense
+519867,2024,28,20,5.3,Figueirense
+519867,2025,29,14,5.8,Velo Clube / Sporting Club Delhi
+519867,2026,30,16,1.4,Sporting Club Delhi / Isenmulang Kalteng FC
+519871,2017,20,21,6.7,Náutico
+519871,2018,21,18,3.1,Cianorte
+519871,2019,22,6,3.2,Salgueiro / Cianorte
+519871,2020,23,9,3.5,Santa Cruz
+519871,2022,25,9,4.5,Madureira
+519871,2023,26,11,3.3,Maguary
+519871,2024,27,4,0.8,Campinense
+519871,2025,28,7,2.8,Aymorés
+519871,2026,29,28,3.9,Luverdense
+444568,2016,20,3,1.3,Náutico
+444568,2017,21,24,8.7,Náutico
+444568,2018,22,5,1.9,Náutico
+444568,2019,23,10,4.5,Ferroviário / Enosis Neon Paralimni
+444568,2020,24,3,1.8,Enosis Neon Paralimni
+444568,2021,25,6,1.8,Afogados
+444568,2022,26,22,3.8,Grêmio Esportivo Juventus / Salgueiro
+444568,2023,27,7,1.4,Treze
+444568,2024,28,9,2.7,Flamengo-PE
+444568,2025,29,9,1.8,Serra Branca
+460764,2016,20,1,0.5,Náutico
+460764,2017,21,19,5.2,Belo Jardim / Bangu
+460764,2018,22,7,3.3,Náutico
+460764,2020,24,10,3.4,Atlético-CE / América SAF-RN
+460764,2021,25,21,5.5,Central / Treze
+460764,2022,26,23,3.8,Real Noroeste / Afogados
+460764,2023,27,8,1.6,CSE
+460764,2026,30,8,2.4,Galícia
+725314,2017,21,7,2.1,Cianorte
+725314,2018,22,7,1.2,Maringá
+725314,2019,23,9,2.7,Maringá
+725314,2020,24,23,6.6,Brusque
+725314,2022,26,9,1.8,Luverdense
+725314,2023,27,9,1.8,Dourados
+725314,2024,28,13,2.6,Dourados
+725314,2025,29,7,1.3,Rio Branco de Venda Nova
+725314,2026,30,14,2.8,Serra-ES
+866833,2021,24,4,1.2,Vera Cruz-PE
+866833,2022,25,19,4.5,Vera Cruz-PE / Afogados
+866833,2023,26,17,3.7,Íbis / Parnahyba
+866833,2024,27,2,0.4,Cordino
+680554,2019,21,7,0.8,América-PE
+680554,2020,22,1,0.2,Treze
+680554,2022,24,2,0.6,Náutico
+680554,2023,25,9,1.8,River-PI
+680554,2025,27,11,1.6,Barcelona-BA / Atlético de Alagoinhas
+680554,2026,28,9,1.8,Moto Club
+1179760,2024,27,4,2.4,La Fiorita 1967
+1179760,2025,28,2,1.2,La Fiorita 1967
+1179760,2026,29,1,0.6,La Fiorita 1967
+1286031,2017,21,5,0.6,América-PE
+1286031,2018,22,6,1.8,Flamengo-PE
+527421,2019,22,4,1.2,Flamengo-PE
+527421,2020,23,1,0.3,Salgueiro
+555632,2018,21,3,0.9,Belo Jardim
+530287,2019,22,2,0.4,Jaciobá
+1545333,2019,22,2,0.4,Atlético-PB
 363205,2015,18,39,26.1,Palmeiras
 363205,2016,19,59,101.2,Palmeiras
 363205,2017,20,45,127.6,Manchester City
@@ -3821,6 +4037,42 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 875875,2021,25,1,0.7,Palmas
 875875,2022,26,1,0.2,SE Santa Maria
 1237624,2024,27,7,1.4,AA Araguaia
+520484,2017,20,22,11.6,Athletico-PR / Paraná
+520484,2018,21,30,13.3,Santa Cruz / CRB
+520484,2019,22,45,23.6,Paraná
+520484,2020,23,20,10.2,Botafogo-RJ
+520484,2021,24,25,9.8,Tombense / Botafogo-RJ
+520484,2022,25,19,4.8,Confiança / Barra
+520484,2023,26,27,10.0,Sampaio Correa-MA / Confiança
+520484,2024,27,26,6.7,Confiança / Azuriz
+520484,2025,28,40,13.6,Confiança
+520484,2026,29,25,11.7,Cuiabá / Velo Clube
+602185,2018,21,12,2.6,NK Galeb Ankaran
+602185,2019,22,14,3.1,NK Galeb Ankaran / Dunarea Calarasi
+602185,2022,25,1,0.7,Pogon Grodzisk Mazowiecki
+602185,2024,27,19,3.9,Pogon Grodzisk Mazowiecki
+602185,2025,28,13,2.7,Pogon Grodzisk Mazowiecki
+602185,2026,29,2,0.5,Pogon Grodzisk Mazowiecki
+977005,2021,25,4,1.2,Toledo / Cascavel CR
+977005,2022,26,8,2.4,Doce Mel EC
+977005,2023,27,5,1.1,Associação Desportiva Freipaulistano / Doce Mel EC
+977005,2024,28,8,1.6,Operário-MS
+977005,2025,29,17,2.6,Operário-MS
+380067,2015,18,4,2.0,Paraná
+380067,2016,19,1,0.5,Paraná
+380067,2017,20,3,1.2,Paraná
+380067,2018,21,3,0.9,Internacional de Lages
+380067,2021,24,6,1.3,Rio Branco-PR
+742301,2016,20,1,0.3,Paraná
+742301,2019,23,3,0.4,Interporto
+742301,2020,24,9,2.4,Toledo
+742301,2021,25,4,0.8,Nacional de Patos
+742301,2022,26,1,0.2,Jaciobá
+443154,2016,20,3,0.9,Paraná
+443154,2019,23,5,1.5,Metropolitano
+530387,2016,20,1,0.6,CA Douglas Haig
+530387,2017,21,2,0.6,Paraná
+530387,2019,23,2,0.6,Cascavel CR
 294789,2013,17,1,0.1,Ponte Preta
 294789,2014,18,2,1.0,Ponte Preta
 294789,2015,19,14,8.1,Ponte Preta
@@ -3976,6 +4228,78 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 723469,2017,20,3,0.6,Bragantino-SP
 1616519,2021,23,1,0.2,Águia Negra
 1232342,2014,18,1,0.1,Ponte Preta
+537386,2015,19,2,0.5,Portuguesa-SP
+537386,2016,20,11,2.6,Portuguesa-SP
+537386,2017,21,3,1.1,Portuguesa-SP / Sport
+537386,2018,22,10,5.2,Guarani
+537386,2019,23,19,8.2,Osasco Sporting / Desportivo Aves (- 2020)
+537386,2020,24,8,2.9,Paraná / Juventude
+537386,2021,25,24,8.2,Inter de Limeira / Mirassol
+537386,2022,26,22,6.0,Ferroviária / Santo André
+537386,2023,27,22,10.1,Água Santa / Ituano
+537386,2024,28,40,15.1,Ituano / Água Santa
+537386,2025,29,30,13.8,Vila Nova / Vitória-BA
+537386,2026,30,11,7.0,Vila Nova
+552810,2016,20,2,0.5,Portuguesa-SP
+552810,2017,21,2,0.2,Portuguesa-SP
+552810,2018,22,6,1.4,Central
+552810,2019,23,19,4.1,Central
+552810,2020,24,2,0.4,Brasiliense
+552810,2022,26,23,6.5,NK Siroki Brijeg / São Joseense
+552810,2023,27,24,6.4,NK Siroki Brijeg / FK Velez Mostar
+552810,2024,28,7,1.9,Gwangju FC / FK Velez Mostar
+552810,2025,29,9,3.5,Gwangju FC / Gangwon FC
+552810,2026,30,7,1.7,FC Ballkani
+480232,2016,19,8,4.0,Avaí
+480232,2017,20,7,3.1,Avaí
+480232,2020,23,6,0.5,Zejtun Corinthians FC
+480232,2021,24,17,1.6,Sirens FC / Zejtun Corinthians FC
+480232,2022,25,27,3.5,Najran SC / Sirens FC
+480232,2023,26,4,0.6,Najran SC
+742306,2015,19,8,2.0,Portuguesa-SP
+742306,2016,20,14,3.2,Portuguesa-SP
+742306,2019,23,18,3.3,Foz do Iguaçu
+742306,2020,24,6,1.8,Toledo
+873519,2019,23,8,2.4,Castanhal
+873519,2021,25,11,1.4,Fast Clube
+873519,2022,26,11,2.1,Amazonas
+638299,2016,19,1,0.2,Portuguesa-SP
+638299,2018,21,9,3.1,Salgueiro
+638299,2019,22,2,0.4,Salgueiro / River-PI
+638299,2026,29,4,0.8,Teresina
+906202,2017,20,2,0.2,Portuguesa-SP
+906202,2021,24,17,2.5,Patrocinense / Águia de Marabá
+906202,2022,25,1,0.4,Patrocinense
+906202,2024,27,7,1.4,Paranoá
+735153,2020,24,5,1.5,Juazeirense
+735153,2025,29,3,1.2,Villa Nova
+735153,2026,30,4,0.8,Falcon
+1481633,2017,21,1,0.1,Portuguesa-SP
+1481633,2018,22,6,0.8,Baré-RR
+626110,2016,19,1,1.0,Santa Cruz
+626110,2018,21,1,0.2,Rio Verde
+626110,2019,22,33,10.6,Santa Cruz / Vitória-BA
+626110,2020,23,35,18.1,Vitória-BA
+626110,2021,24,30,13.4,Vitória-BA
+626110,2022,25,36,18.0,Guarani
+626110,2023,26,23,14.2,Vitória-BA
+626110,2024,27,40,24.8,Mirassol / Vitória-BA
+626110,2025,28,45,53.0,Mirassol
+626110,2026,29,47,45.7,Mirassol
+445103,2015,18,2,0.6,Santa Cruz
+445103,2016,19,5,1.0,Gama
+445103,2017,20,3,0.8,Santa Cruz / Sergipe
+445103,2018,21,1,0.3,Santa Cruz
+445103,2020,23,4,1.2,Decisão
+445103,2021,24,15,3.8,Sete de Setembro-PE / ASA
+445103,2022,25,6,1.2,Oeirense
+555627,2019,23,8,2.4,Petrolina
+555627,2021,25,11,2.1,Picos
+555627,2023,27,5,1.5,Caruaru City SC
+1209982,2018,21,9,2.7,América-PE
+1209979,2014,18,1,0.3,América-PE
+1209979,2017,21,2,0.6,América-PE
+723662,2020,21,1,0.2,Goiás
 244275,2013,17,13,11.2,Santos
 244275,2014,18,56,40.9,Santos
 244275,2015,19,58,38.8,Santos
@@ -4423,6 +4747,37 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 992241,2023,26,2,0.4,América-SE
 552580,2018,22,6,1.7,Treze
 1286053,2018,20,2,0.6,América-PE
+565232,2019,22,5,2.0,FC Arouca / Rio Ave FC
+565232,2020,23,8,4.7,FC Arouca
+565232,2021,24,40,22.6,FC Arouca
+565232,2022,25,30,19.6,FC Arouca / Vitória Guimarães SC
+565232,2023,26,37,35.7,Vitória Guimarães SC
+565232,2024,27,53,69.6,São Paulo / Vitória Guimarães SC
+565232,2025,28,43,45.6,São Paulo
+565232,2026,29,27,30.5,São Paulo
+522090,2017,21,4,1.6,FC ViOn Zlate Moravce-Vrable
+522090,2021,25,24,9.0,Nova Iguaçu / Bangu
+522090,2022,26,18,6.9,Bangu / Confiança
+522090,2023,27,8,1.7,Bahia de Feira
+522090,2024,28,16,1.3,Costa Rica
+522090,2025,29,18,2.2,São Luiz / Serra Branca
+522090,2026,30,27,3.6,Velo Clube / Anapolina
+802993,2024,22,17,5.1,Septemvri Sofia
+802993,2025,23,19,4.7,Septemvri Sofia / Montana
+802993,2026,24,8,0.9,Montana / Sreenidi Deccan FC
+671645,2017,21,1,0.1,São Bernardo
+671645,2020,24,10,3.0,PSTC
+671645,2021,25,10,2.0,Aquidauanense
+1257217,2017,21,8,3.2,São Bernardo
+1257217,2024,28,11,0.5,Ipatinga
+1099231,2020,24,1,0.3,PSTC
+1099231,2023,27,9,2.7,Foz do Iguaçu / Maringá
+1145409,2020,24,6,1.8,PSTC
+1534771,2019,23,6,1.8,Tapajós Futebol Clube
+675095,2023,25,7,1.4,Inhumas
+1245348,2015,19,2,1.0,São Bernardo
+981034,2022,24,2,0.8,Patrocinense
+1617321,2020,24,3,0.6,Comercial-MS
 401530,2017,19,22,20.8,São Paulo
 401530,2018,20,56,68.4,São Paulo / FC Porto
 401530,2019,21,42,73.5,FC Porto / Real Madrid
@@ -4925,6 +5280,64 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 537727,2018,19,2,0.2,F91 Dudelange
 537727,2026,27,1,0.1,FC Jeunesse Junglinster
 1590519,2019,22,1,0.2,USC Paredes
+415728,2014,17,1,0.5,Vila Nova
+415728,2016,19,19,7.5,Vila Nova
+415728,2017,20,1,1.0,Grêmio
+415728,2018,21,17,4.6,Vila Nova / Remo
+415728,2019,22,1,0.1,Votuporanguense
+415728,2020,23,24,6.9,Vila Nova / Jaraguá EC-GO
+415728,2021,24,58,25.4,Vila Nova
+415728,2022,25,6,2.0,Júbilo Iwata
+415728,2023,26,40,9.5,Júbilo Iwata
+415728,2024,27,21,4.3,JEF United Chiba
+415728,2025,28,28,7.6,JEF United Chiba
+415728,2026,29,23,7.7,JEF United Chiba
+520463,2016,19,8,2.1,Formosa-GO / Vila Nova
+520463,2017,20,26,10.9,Vila Nova
+520463,2018,21,13,3.6,Vila Nova
+520463,2019,22,1,0.2,Vila Nova
+520463,2020,23,25,11.1,FC Arouca / Vila Nova
+520463,2021,24,14,8.2,FC Arouca
+520463,2022,25,10,3.1,Leixões SC
+520463,2023,26,34,11.8,Turan-Tovuz IK / Leixões SC
+520463,2024,27,15,5.6,Turan-Tovuz IK
+520463,2025,28,20,3.4,Azuriz
+520463,2026,29,14,2.0,Azuriz
+530413,2017,20,2,0.4,Vila Nova
+530413,2018,21,13,2.6,Formosa-GO
+530413,2019,22,3,0.5,Aparecidense
+530413,2020,23,21,3.0,Aparecidense
+530413,2021,24,36,15.4,Aparecidense / Goiás
+530413,2022,25,20,3.9,Goiás / Remo
+530413,2023,26,24,4.9,Retrô
+530413,2024,27,28,6.3,Inter de Limeira
+530413,2025,28,42,16.9,Ferroviária / Inter de Limeira
+530413,2026,29,22,5.8,Ferroviária
+1011082,2016,19,3,1.1,Vila Nova
+1011082,2017,20,12,1.9,Anápolis
+1011082,2018,21,11,2.2,Anápolis
+1011082,2019,22,13,2.6,Costa Rica
+1011082,2020,23,27,4.5,Gama
+1011082,2021,24,32,6.0,Aparecidense / Capital-DF
+1011082,2022,25,13,1.9,Capital-DF / Iporá EC
+1011082,2023,26,8,1.6,Capital-DF
+1011082,2024,27,12,2.4,Pantanal
+979923,2016,20,3,0.6,Formosa-GO
+979923,2017,21,5,1.0,Iporá EC
+979923,2018,22,6,1.2,Grêmio Anápolis
+979923,2019,23,6,1.2,Novo Horizonte-GO
+979923,2021,25,9,1.5,Aparecidense / Capital-DF
+979923,2024,28,6,1.2,Academia FC
+979923,2025,29,5,1.0,Abecat
+670065,2016,19,2,0.9,Vila Nova
+670065,2018,21,2,0.3,Iporá EC
+670065,2019,22,8,1.6,Iporá EC / Vila Nova
+670065,2020,23,7,1.4,Anápolis / Costa Rica
+670065,2023,26,11,2.2,Costa Rica
+541291,2018,21,11,2.2,Formosa-GO
+541291,2024,27,1,0.2,Morrinhos
+1215422,2016,20,6,1.2,Formosa-GO
+1215422,2017,21,4,0.8,Vila Nova
 373191,2015,19,46,21.5,Vitória-BA
 373191,2016,20,17,12.4,Vitória-BA
 373191,2017,21,9,4.4,Ferroviária / Vitória-BA
@@ -5172,6 +5585,13 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 653349,2024,24,42,13.8,Remo
 653349,2025,25,40,20.1,Remo
 653349,2026,26,20,12.6,Remo
+658664,2020,20,10,7.2,Athletico-PR
+658664,2021,21,22,13.0,Athletico-PR
+658664,2022,22,35,13.0,Tombense / Mirassol
+658664,2023,23,30,17.8,Bahia / Operário-PR
+658664,2024,24,26,21.0,Moreirense FC / Operário-PR
+658664,2025,25,43,17.1,Operário-PR
+658664,2026,26,12,5.9,Operário-PR
 520623,2017,19,18,11.4,Athletico-PR
 520623,2018,20,12,5.4,Athletico-PR / Guarani
 520623,2019,21,30,13.4,Paraná / Athletico-PR
@@ -5332,6 +5752,15 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 516722,2024,25,41,26.5,Spartak Moscou / Ferencvárosi TC
 516722,2025,26,35,21.6,Spartak Moscou
 516722,2026,27,33,19.8,Spartak Moscou
+726005,2017,18,1,0.5,Mirassol
+726005,2018,19,11,3.2,Mirassol
+726005,2020,21,18,8.0,Confiança
+726005,2021,22,51,38.8,Juventude / Confiança
+726005,2022,23,24,18.1,Ceará / Atlético-MG
+726005,2023,24,46,21.3,Ceará
+726005,2024,25,39,20.4,Ceará / FC Juárez
+726005,2025,26,37,24.7,FC Juárez
+726005,2026,27,31,12.9,FC Juárez
 584083,2018,18,9,8.9,Atlético-MG
 584083,2019,19,16,14.2,Atlético-MG
 584083,2020,20,21,14.2,Sport / Atlético-MG
@@ -5380,6 +5809,15 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 646362,2024,25,21,5.5,São José-RS
 646362,2025,26,11,2.0,São Luiz / Itabirito
 646362,2026,27,8,2.2,São Joseense / Cianorte
+547948,2016,17,1,0.5,Paraná
+547948,2018,19,5,1.7,Paraná
+547948,2019,20,1,0.3,Paraná
+547948,2020,21,21,7.5,Paraná
+547948,2021,22,22,6.0,Paraná
+547948,2022,23,9,1.8,Barra / FC Osaka
+547948,2023,24,12,2.3,Altos / Cianorte
+547948,2024,25,2,0.6,São Joseense
+547948,2026,27,8,1.7,Vitória das Tabocas / Central
 589862,2018,19,4,4.7,Atlético-MG
 589862,2019,20,7,3.9,Atlético-MG
 589862,2020,21,13,3.8,FC Porto B / Paraná
@@ -5679,6 +6117,12 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 553077,2021,24,24,5.6,Azuriz / Paraná
 553077,2022,25,16,3.3,Azuriz
 553077,2023,26,10,2.0,Aparecidense
+658090,2020,22,1,0.3,Retrô
+658090,2021,23,13,3.5,Vera Cruz-PE / Retrô
+658090,2022,24,14,1.8,Resistencia Sport Club / Marcílio Dias
+658090,2023,25,18,2.4,Resistencia Sport Club
+658090,2024,26,7,2.1,Ipatinga
+658090,2025,27,3,0.5,Goianésia / Jataiense
 650230,2019,21,12,5.2,Chapecoense
 650230,2020,22,7,2.5,Chapecoense
 650230,2022,24,4,0.6,Azuriz / Chapecoense
@@ -5709,6 +6153,16 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 585982,2024,25,37,87.7,Inter de Milão
 585982,2025,26,57,142.8,Inter de Milão
 585982,2026,27,36,78.0,Inter de Milão
+670940,2017,18,1,0.2,Joinville
+670940,2018,19,5,0.8,Joinville
+670940,2019,20,21,23.1,Corinthians
+670940,2020,21,39,34.3,Atlético-GO / Corinthians
+670940,2021,22,66,62.2,Atlético-GO
+670940,2022,23,40,22.0,Grêmio
+670940,2023,24,55,25.8,Ceará
+670940,2024,25,38,21.7,Atlético-GO / Ceará
+670940,2025,26,45,20.2,Remo / Atlético-GO
+670940,2026,27,45,25.2,Vila Nova
 582301,2018,21,19,6.5,Bragantino-SP / Bangu
 582301,2019,22,25,11.8,Ponte Preta
 582301,2020,23,39,26.3,Sport
@@ -5732,6 +6186,16 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 726472,2024,24,58,25.3,CRB
 726472,2025,25,41,22.2,Sport / CRB
 726472,2026,26,33,12.9,CSKA Sofia
+554300,2017,18,1,0.2,Joinville
+554300,2018,19,33,7.4,Joinville
+554300,2019,20,12,2.4,Atlético-GO
+554300,2020,21,16,6.7,Osasco Sporting / Fortaleza
+554300,2021,22,37,11.5,Santa Cruz / CF Estrela Amadora
+554300,2022,23,32,15.6,CF Estrela Amadora / Moreirense FC
+554300,2023,24,32,26.1,Moreirense FC
+554300,2024,25,29,23.3,Moreirense FC
+554300,2025,26,37,24.8,FC Juárez / Moreirense FC
+554300,2026,27,24,8.6,FC Juárez
 733578,2019,21,8,2.4,Águia de Marabá
 733578,2020,22,32,17.6,Juventude
 733578,2021,23,55,36.5,Coritiba / Ceará
@@ -5852,6 +6316,7 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 981270,2024,26,8,1.6,Porto Vitória
 631396,2018,19,1,0.3,Coritiba
 631396,2020,21,5,1.1,Campinense / Concórdia
+1210972,2016,18,4,1.2,Paraná
 554986,2017,20,1,0.2,Ypiranga
 554986,2018,21,7,1.7,Ypiranga
 554986,2019,22,8,2.1,Ypiranga
@@ -5890,17 +6355,6 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 547733,2017,19,2,1.0,Criciúma
 1264601,2017,19,1,0.5,Criciúma
 692668,2016,18,1,0.3,Criciúma
-480225,2016,17,3,1.3,Paraná
-480225,2017,18,4,1.2,Paraná
-480225,2018,19,7,3.2,Paraná
-480225,2019,20,32,15.1,Paraná
-480225,2020,21,23,13.4,Bahia
-480225,2021,22,59,39.3,Vila Nova / Bahia
-480225,2022,23,40,26.2,Cuiabá
-480225,2023,24,53,32.7,Goiás
-480225,2024,25,56,25.4,Vila Nova
-480225,2025,26,33,38.4,Mirassol / Torpedo Moscow
-480225,2026,27,46,46.1,Mirassol
 603122,2018,19,2,2.1,Cruzeiro
 603122,2019,20,20,13.8,Cruzeiro
 603122,2020,21,32,15.8,Cruzeiro
@@ -5910,6 +6364,15 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 603122,2024,25,39,48.2,Corinthians
 603122,2025,26,31,28.5,Corinthians
 603122,2026,27,40,33.5,Vitória-BA / Corinthians
+625617,2018,20,1,1.1,Cruzeiro
+625617,2019,21,2,1.4,Cruzeiro
+625617,2020,22,8,4.5,Cruzeiro / Chapecoense
+625617,2021,23,37,18.7,Ponte Preta / Inter de Limeira
+625617,2022,24,45,30.4,Cruzeiro / Coritiba
+625617,2023,25,34,37.6,Orlando City SC
+625617,2024,26,43,36.6,Orlando City SC
+625617,2025,27,26,19.8,Orlando City SC / Colorado Rapids
+625617,2026,28,19,16.3,St. Louis CITY SC
 560903,2017,20,14,3.9,Tupi FC
 560903,2018,21,13,5.3,Ceará
 560903,2019,22,27,18.4,Vila Nova / FC Famalicão
@@ -6022,6 +6485,15 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 1105754,2025,26,6,1.8,Cariri
 638011,2023,25,5,1.0,Corisabba
 638011,2024,26,11,0.6,Rio Branco-AC
+671292,2018,19,3,0.8,Novorizontino
+671292,2019,20,2,0.6,Figueirense
+671292,2020,21,33,15.6,Brasil de Pelotas / Novorizontino
+671292,2021,22,39,11.8,Brasil de Pelotas
+671292,2022,23,28,15.3,Sport
+671292,2023,24,44,15.6,CSA / Tombense
+671292,2024,25,33,15.5,Vila Nova / Mirassol
+671292,2025,26,39,18.6,Chapecoense
+671292,2026,27,16,7.9,Chapecoense
 595526,2018,19,11,4.9,Osasco Sporting
 595526,2019,20,9,3.7,Osasco Sporting
 595526,2020,21,32,8.4,Criciúma / Osasco Sporting
@@ -6208,21 +6680,14 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 603137,2024,26,18,9.2,Leixões SC / CD Santa Clara
 603137,2025,27,24,10.8,Leixões SC
 603137,2026,28,7,1.6,Bac Ninh FC / Leixões SC
-542219,2018,21,19,5.0,Joinville / Académico Viseu FC
-542219,2019,22,10,3.7,Académico Viseu FC
-542219,2020,23,6,1.8,Joinville
-542219,2021,24,13,3.5,Retrô
-542219,2022,25,16,4.5,Ferroviário
-542219,2023,26,10,3.0,Joinville
-542219,2024,27,7,0.6,Hercílio Luz
 657887,2019,21,18,2.1,Isloch Minsk Region
 657887,2022,24,7,1.4,Nacional-AM
 657887,2023,25,12,1.3,Falcon
 657887,2024,26,9,0.3,Capital-TO
 657887,2025,27,20,3.2,Falcon / Lagarto
-899164,2021,22,13,1.2,Central / 83340
-899164,2022,23,7,1.6,83340 / União-PR
-899164,2023,24,21,1.8,FC Džiugas Telšiai / 83340
+899164,2021,22,13,1.2,Central / Associação Desportiva Freipaulistano
+899164,2022,23,7,1.6,Associação Desportiva Freipaulistano / União-PR
+899164,2023,24,21,1.8,FC Džiugas Telšiai / Associação Desportiva Freipaulistano
 899164,2024,25,5,1.5,Afogados
 899164,2025,26,8,1.6,Penedense
 588220,2019,21,1,0.5,Americano
@@ -6573,18 +7038,6 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 555012,2024,25,24,7.8,ABC / Inter de Limeira
 555012,2025,26,28,9.3,CSA / Inter de Limeira
 555012,2026,27,21,6.6,Caxias
-415728,2014,17,1,0.5,Vila Nova
-415728,2016,19,19,7.5,Vila Nova
-415728,2017,20,1,1.0,Grêmio
-415728,2018,21,17,4.6,Vila Nova / Remo
-415728,2019,22,1,0.1,Votuporanguense
-415728,2020,23,24,6.9,Vila Nova / Jaraguá EC-GO
-415728,2021,24,58,25.4,Vila Nova
-415728,2022,25,6,2.0,Júbilo Iwata
-415728,2023,26,40,9.5,Júbilo Iwata
-415728,2024,27,21,4.3,JEF United Chiba
-415728,2025,28,28,7.6,JEF United Chiba
-415728,2026,29,23,7.7,JEF United Chiba
 555018,2020,21,2,2.6,Grêmio
 555018,2021,22,26,20.9,Bahia / Grêmio
 555018,2022,23,38,19.0,Sampaio Correa-MA / Bahia
@@ -6784,6 +7237,25 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 868055,2021,19,1,0.4,Internacional
 904973,2021,23,1,0.1,Aimoré
 1113034,2023,25,1,0.1,Marília
+554298,2017,20,6,1.0,Metropolitano / Joinville
+554298,2018,21,27,6.6,Joinville
+554298,2019,22,19,7.4,Brasil de Pelotas / Joinville
+554298,2020,23,23,11.0,Guarani
+554298,2021,24,1,0.6,Guarani
+554298,2022,25,28,14.0,Guarani
+554298,2023,26,39,16.2,Ituano
+554298,2024,27,25,10.4,Ituano
+554298,2025,28,13,5.0,Chapecoense
+554298,2026,29,28,8.9,América-MG
+695177,2017,18,1,0.2,Joinville
+695177,2019,20,1,0.3,Joinville
+695177,2024,25,9,1.8,Porto Vitória
+695177,2025,26,16,5.9,Náutico / Guarani
+695177,2026,27,15,3.0,Ituano
+1215535,2015,18,4,1.2,Metropolitano
+1215535,2017,20,1,0.3,Joinville
+1264604,2017,18,1,0.2,Joinville
+1264605,2017,18,1,0.2,Joinville
 520090,2016,19,12,2.8,Juventude
 520090,2017,20,34,16.1,Juventude
 520090,2018,21,9,3.5,Juventude
@@ -6830,6 +7302,183 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 873891,2021,24,1,0.0,Atlético Acreano
 873891,2022,25,3,0.6,Associação Grêmio Sorriso
 592315,2018,19,1,0.3,Juventude
+594550,2018,20,3,1.4,Londrina
+594550,2019,21,39,15.9,Londrina / Portimonense SAD
+594550,2020,22,17,10.5,Portimonense SAD
+594550,2021,23,32,19.7,Portimonense SAD
+594550,2022,24,18,11.0,Portimonense SAD
+594550,2023,25,21,15.1,Goiás
+594550,2024,26,40,13.0,Suwon FC / Goiás
+594550,2025,27,42,13.9,FC Seoul / Suwon FC
+594550,2026,28,36,21.5,FC Seoul
+527192,2018,19,5,1.7,Londrina
+527192,2019,20,35,12.7,Londrina
+527192,2021,22,27,11.5,Londrina
+527192,2022,23,22,10.3,Londrina
+527192,2023,24,25,12.1,Vitória-BA / Londrina
+527192,2024,25,2,0.8,Chapecoense
+527192,2026,27,19,8.2,Botafogo-SP / Vitória-BA
+527193,2018,20,8,1.7,Prudentópolis
+527193,2019,21,6,1.6,Remo / Berço SC
+527193,2020,22,1,0.2,Berço SC
+527193,2021,23,12,2.9,Vitória Guimarães SC B
+527193,2022,24,29,7.7,Vitória Guimarães SC B / FC Felgueiras 1932
+527193,2023,25,32,12.1,FC Paços de Ferreira / FC Felgueiras 1932
+527193,2024,26,27,10.7,FC Paços de Ferreira
+527193,2025,27,27,8.7,FC Paços de Ferreira / FC Ararat-Armenia
+527193,2026,28,28,5.8,FC Ararat-Armenia / Dinamo Tbilisi
+527191,2017,19,1,0.6,Londrina
+527191,2019,21,26,9.2,Londrina
+527191,2020,22,13,3.8,Londrina
+527191,2021,23,13,2.3,Joinville / Londrina
+527191,2022,24,25,4.2,Grêmio Esportivo Juventus / Joinville
+527191,2023,25,21,3.0,CRAC
+527191,2024,26,11,2.2,Serra Branca
+527191,2025,27,13,3.5,ASA
+527191,2026,28,16,5.1,Portuguesa-RJ
+538101,2020,22,2,0.6,Paragominas
+538101,2021,23,7,2.1,Tuna Luso
+538101,2022,24,27,6.1,Tuna Luso
+538101,2023,25,11,3.1,Tuna Luso
+538101,2024,26,20,3.9,Cametá / Santa Rosa
+538101,2025,27,11,3.0,Capitão Poço / Trem
+538101,2026,28,18,4.2,Trem
+1226339,2023,25,11,2.2,Ivinhema
+1226339,2024,26,22,5.7,Brasil de Pelotas / Ferroviário
+1226339,2025,27,13,2.7,Inter de Limeira / Hercílio Luz
+1617122,2019,21,11,2.2,Operário-MS
+1145377,2020,23,5,1.5,Cascavel CR
+1496216,2021,21,6,1.2,Pinheiros-ES
+606136,2018,20,26,9.8,Mirassol / SC Braga B
+606136,2019,21,2,0.6,SC Braga B
+606136,2020,22,23,5.5,Mirassol / Athletico-PR
+606136,2021,23,40,28.5,Santos / Mirassol
+606136,2022,24,30,15.6,Vasco / Juventude
+606136,2023,25,50,26.6,Juventude
+606136,2024,26,49,37.6,Juventude
+606136,2025,27,43,22.6,Urawa Red Diamonds / Juventude
+606136,2026,28,24,10.3,Urawa Red Diamonds
+646677,2018,20,9,2.2,Mirassol
+646677,2019,21,27,21.9,Mirassol / FC Famalicão
+646677,2020,22,27,26.6,FC Famalicão
+646677,2021,23,28,18.8,FC Famalicão
+646677,2022,24,33,22.9,FC Famalicão
+646677,2023,25,36,26.1,FC Famalicão
+646677,2024,26,24,18.8,FC Famalicão
+646677,2025,27,31,4.5,Qingdao West Coast
+646677,2026,28,5,2.7,Vitória-BA
+608943,2017,18,1,0.5,Mirassol
+608943,2018,19,9,2.6,Mirassol
+608943,2019,20,16,9.9,CD Mafra / Moreirense FC
+608943,2020,21,14,7.8,CD Mafra / Moreirense FC
+608943,2021,22,15,10.3,Moreirense FC / Casa Pia AC
+608943,2022,23,21,8.4,CD Mafra / Casa Pia AC
+608943,2023,24,37,17.4,CS Marítimo / CD Mafra
+608943,2024,25,31,14.9,CS Marítimo / FC Seoul
+608943,2025,26,39,14.2,FC Seoul
+608943,2026,27,17,13.2,Vitória-BA
+525257,2017,19,1,0.5,Vitória Guimarães SC B
+525257,2018,20,7,2.0,Vitória Guimarães SC B
+525257,2019,21,2,0.5,Vitória Guimarães SC B
+525257,2021,23,5,2.5,Resende
+525257,2022,24,5,2.5,Resende
+525257,2025,27,16,1.6,Mixto
+525257,2026,28,27,3.5,Mixto
+555280,2018,21,8,2.1,Mirassol
+555280,2019,22,7,1.4,Comercial-MS
+555280,2021,24,1,0.2,Comercial-MS
+1147888,2019,21,2,0.3,LGC Moncarapachense
+1147888,2022,24,5,1.0,Academia FC
+1158917,2021,23,1,0.3,Icasa
+537928,2017,17,2,1.0,Novorizontino
+537928,2018,18,1,0.5,Novorizontino
+537928,2019,19,5,1.6,Real Madrid Castilla
+537928,2020,20,7,1.9,CF Talavera de la Reina / Real Madrid Castilla
+537928,2021,21,25,5.9,CF Talavera de la Reina
+537928,2022,22,31,6.3,CF Talavera de la Reina / Valencia Mestalla
+537928,2023,23,30,8.9,Valencia Mestalla
+537928,2024,24,35,17.1,Operário-PR / Valencia Mestalla
+537928,2025,25,49,19.9,Operário-PR
+537928,2026,26,32,14.6,Cuiabá / Mirassol
+688670,2020,21,29,9.9,Paraná
+688670,2021,22,20,6.8,Paraná / Ferroviário
+688670,2023,24,11,3.0,Náutico / Criciúma
+688670,2024,25,24,4.2,Barra
+688670,2025,26,27,7.5,Floresta / São Joseense
+688670,2026,27,11,2.2,CRAC
+739251,2019,20,1,0.1,Novorizontino
+739251,2020,21,5,1.4,Novorizontino
+739251,2021,22,14,4.3,Novorizontino / Iporá EC
+739251,2022,23,8,3.2,Patrocinense
+739251,2025,26,11,1.6,Ceilândia
+739251,2026,27,2,0.4,Inhumas
+746396,2020,22,11,2.5,FC Nitra
+746396,2021,23,22,2.0,VPK-Agro / Novorizontino
+746396,2023,25,2,1.0,Castanhal
+746396,2024,26,23,3.9,Mixto
+746396,2025,27,3,0.9,Colo Colo FR
+1204046,2024,24,11,2.6,Morrinhos / Patrocinense
+1204046,2025,25,19,3.1,Goianésia / CSE
+1204046,2026,26,10,1.1,Brasiliense
+726126,2020,21,2,0.3,Novorizontino
+726126,2022,23,6,2.6,Novorizontino
+726126,2024,25,12,3.2,Cianorte / Inter de Limeira
+726126,2025,26,1,0.1,Inter de Limeira
+796743,2018,20,1,0.1,Novorizontino
+796743,2019,21,4,0.7,Grêmio Anápolis / Novorizontino
+796743,2020,22,5,1.4,Novorizontino
+796743,2021,23,3,0.8,Ypiranga
+796743,2022,24,4,0.5,Santo André
+796743,2024,26,6,0.6,Princesa do Solimões
+796743,2025,27,3,0.6,Paranoá
+979660,2022,23,9,1.8,Brasília
+1173750,2021,24,3,0.6,Jataiense
+808448,2018,20,2,0.2,SD Sparta
+808448,2019,21,1,0.2,SC Mirandela
+808448,2020,22,1,0.2,UD Santarém
+1256639,2019,20,1,0.2,Costa Rica
+638269,2019,21,3,1.3,Náutico
+638269,2020,22,42,18.9,Náutico
+638269,2021,23,49,23.1,Náutico
+638269,2022,24,34,16.5,Náutico / Atlético-GO
+638269,2023,25,52,24.1,Atlético-GO
+638269,2024,26,53,25.8,Atlético-GO
+638269,2025,27,43,22.3,Atlético-GO / Göztepe
+638269,2026,28,28,18.5,Göztepe / FC Alverca
+530289,2017,20,1,0.3,Náutico
+530289,2018,21,28,10.1,Náutico / Bahia
+530289,2019,22,40,18.8,Náutico / Moreirense FC
+530289,2020,23,8,2.9,UD Oliveirense / Moreirense FC
+530289,2021,24,29,13.0,Náutico / UD Oliveirense
+530289,2022,25,23,10.0,CSA
+530289,2023,26,11,3.2,Brusque
+530289,2024,27,5,2.0,Athletic-MG
+530289,2025,28,15,2.0,São Luiz
+530289,2026,29,20,5.6,Retrô
+638270,2019,19,8,3.3,Náutico
+638270,2020,20,10,3.8,Náutico
+638270,2021,21,2,0.8,Retrô
+638270,2022,22,25,9.4,Náutico / Ferroviário
+638270,2023,23,8,0.8,Santa Cruz
+638270,2024,24,10,5.0,Madureira
+638270,2025,25,22,10.1,Madureira / CSKA 1948
+638270,2026,26,34,12.3,Volta Redonda
+638268,2019,21,11,5.3,Náutico
+638268,2020,22,9,4.3,Náutico
+638268,2021,23,1,0.5,Náutico
+638268,2022,24,2,0.6,Náutico
+638268,2023,25,6,3.0,Náutico
+638268,2025,27,3,1.5,Madureira
+680556,2019,20,7,0.8,América-PE
+680556,2020,21,7,0.9,Guarany de Sobral
+680556,2022,23,12,3.4,Íbis / Afogados
+680556,2023,24,20,3.9,Íbis / Cruzeiro-AL
+680556,2024,25,6,1.2,Cruzeiro-AL
+680556,2026,27,14,2.0,CSE
+555630,2019,21,7,0.8,América-PE
+555630,2020,22,4,0.2,Operário-MT
+555630,2021,23,5,1.0,Tiradentes-PA
+1204989,2019,22,2,0.4,Santa Cruz-RN
 428783,2019,19,1,0.5,Palmeiras
 428783,2020,20,9,6.0,Shakhtar Donetsk
 428783,2021,21,27,17.7,Shakhtar Donetsk
@@ -6958,6 +7607,14 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 547947,2020,20,3,0.5,Kalba FC
 547947,2022,22,2,0.6,Paraná
 1012147,2022,23,2,1.0,Ponte Preta
+738527,2020,20,13,4.3,Paraná / APOEL Nicosia
+738527,2021,21,19,5.6,PAEEK Kyrenia / APOEL Nicosia
+738527,2022,22,13,3.3,PAEEK Kyrenia
+738527,2023,23,3,0.5,Al-Fujairah SC
+738527,2025,25,7,2.2,PAEEK Kyrenia / Paraná
+813445,2020,20,1,0.4,Paraná
+813445,2021,21,14,2.8,Paraná
+813445,2022,22,1,0.2,Grêmio Anápolis
 476344,2017,18,6,3.9,Ponte Preta
 476344,2018,19,42,37.0,Atlético-MG / Ponte Preta
 476344,2019,20,29,27.1,Real Betis Balompié
@@ -7041,6 +7698,70 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 636284,2020,23,2,0.6,Criciúma
 1617389,2020,22,1,0.2,Corumbaense
 351901,2021,23,2,0.1,Patrocinense
+670021,2019,20,4,1.8,Guarani
+670021,2020,21,37,17.5,Guarani
+670021,2021,22,49,28.3,Guarani
+670021,2022,23,39,27.6,Cruzeiro
+670021,2023,24,38,39.0,Corinthians
+670021,2024,25,33,39.2,Corinthians
+670021,2025,26,49,46.6,Corinthians
+670021,2026,27,51,47.4,Corinthians
+670522,2019,20,30,13.2,Guarani
+670522,2020,21,7,5.8,Corinthians
+670522,2021,22,23,13.5,Guarani / Philadelphia Union
+670522,2022,23,52,30.3,Bahia / São Bernardo
+670522,2023,24,14,8.0,Pafos FC / Cruzeiro
+670522,2024,25,16,8.8,América-MG
+670522,2025,26,37,18.2,Maccabi Netanya / Remo
+670522,2026,27,25,8.2,Maccabi Netanya
+633960,2017,18,1,0.1,Portuguesa-SP
+633960,2018,19,2,1.0,Guarani
+633960,2019,20,14,6.6,Guarani
+633960,2020,21,28,12.9,Vitória-BA / Guarani
+633960,2021,22,4,1.7,Vitória-BA
+633960,2022,23,14,3.2,Londrina / Brasil de Pelotas
+633960,2023,24,19,2.6,Inter de Limeira / Confiança
+633960,2024,25,13,1.9,FC Dornbirn
+633960,2025,26,24,2.8,Sukhothai FC / Chungbuk Cheongju FC
+633960,2026,27,21,2.5,Sukhothai FC / Terengganu FC
+722625,2019,20,2,0.4,Itumbiara
+722625,2021,22,1,0.3,Novorizontino
+722625,2022,23,4,2.0,São Bernardo
+722625,2024,25,11,2.2,Pouso Alegre / Itabirito
+980177,2017,20,9,1.8,Brasília
+980177,2019,22,4,0.8,Bolamense Futebol Clube
+980177,2021,24,3,0.6,SE Santa Maria
+980177,2022,25,4,0.8,SE Santa Maria
+980177,2023,26,1,0.2,SE Santa Maria
+1197790,2019,21,3,0.9,Horizonte
+1197790,2023,25,1,0.2,Atlético dos Arcos
+1197790,2024,26,3,0.2,Atlético dos Arcos
+1197790,2025,27,1,0.1,Atlético dos Arcos
+799200,2022,23,1,0.1,União Recreativa dos Trabalhadores
+799200,2023,24,1,0.2,ABC
+1618446,2021,23,1,0.2,Moimenta da Beira
+555629,2017,19,4,1.2,América-PE
+555629,2018,20,42,15.9,Náutico / Goiás
+555629,2019,21,30,16.0,Náutico / Bragantino-SP
+555629,2020,22,15,10.0,CRB / Bragantino-SP
+555629,2021,23,27,8.5,Paysandu / CRB
+555629,2022,24,30,11.9,Náutico
+555629,2023,25,24,7.2,CSA
+555629,2024,26,20,5.2,Caxias
+555629,2025,27,21,5.0,Itabaiana / ABC
+555629,2026,28,3,0.8,Inter de Limeira
+1216373,2015,18,2,0.2,Internacional de Lages
+1216373,2017,20,2,0.2,Internacional de Lages
+1216373,2018,21,10,1.6,Internacional de Lages
+1216373,2019,22,2,0.4,Atlético de Alagoinhas / Fluminense de Feira
+731530,2025,26,9,1.8,AD Picuiense
+723660,2020,21,6,1.8,Decisão
+1489161,2014,16,3,0.9,Porto-PE
+1016632,2022,23,2,0.6,Sete de Setembro-PE
+520080,2020,23,1,0.3,Vitória das Tabocas
+520080,2021,24,1,0.3,Vitória das Tabocas
+993115,2021,22,1,0.2,Bacabal Esporte Clube
+993115,2022,23,2,0.4,Atlético Acreano
 489893,2017,16,2,2.4,Santos
 489893,2018,17,16,15.0,Santos
 489893,2019,18,2,1.0,Santos
@@ -7217,10 +7938,32 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 691509,2021,22,3,0.9,Maringá
 691509,2023,24,3,1.2,Novo Hamburgo
 691509,2026,27,16,2.5,Ceilândia
+729249,2018,20,6,1.2,CSP
+729249,2019,21,6,1.2,CSP
 977139,2022,23,7,2.1,Íbis
 977139,2026,27,2,0.1,Atlético-CE
 990283,2017,18,1,0.3,Sport
 990283,2022,23,4,0.8,Corisabba
+522091,2017,20,5,2.0,FC ViOn Zlate Moravce-Vrable
+522091,2018,21,9,1.3,Mosta FC
+522091,2019,22,30,4.7,PFC Lviv / San Gwann FC
+522091,2020,23,22,9.8,PFC Lviv / Gil Vicente FC
+522091,2021,24,28,7.7,PFC Lviv / Kolos Kovalivka
+522091,2022,25,48,10.5,FK Zalgiris Vilnius
+522091,2023,26,32,8.2,FK Sarajevo
+522091,2024,27,33,8.4,FK Sarajevo
+522091,2025,28,26,6.0,FK Sarajevo / Internacional de Bogotá
+522091,2026,29,27,25.1,FK Kauno Žalgiris / FK Sarajevo
+894357,2021,24,8,1.6,Grêmio Anápolis
+894357,2022,25,27,4.3,Ceilândia
+894357,2023,26,8,2.4,Goianésia / Democrata-SL
+894357,2024,27,8,2.4,Nação Araquari
+894357,2025,28,22,4.1,Água Santa / Rio Branco-PR
+642272,2018,21,5,0.7,ASA
+642272,2022,25,2,0.3,Sertanense FC
+1525009,2026,28,5,0.4,Bangladesh Police FC
+1314930,2018,21,2,0.1,Caldense
+1314930,2024,27,1,0.2,CD Estarreja
 553459,2018,19,2,2.5,São Paulo
 553459,2019,20,36,38.2,São Paulo
 553459,2020,21,51,71.3,São Paulo
@@ -7484,6 +8227,52 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 976929,2022,25,3,0.6,CS Maruinense
 976929,2023,26,1,0.2,Pinheiro-MA
 1125630,2023,24,1,0.2,Potyguar
+585346,2018,18,17,5.6,FC Sion / FC Sion U21
+585346,2019,19,19,3.4,FC Sion U21 / FC Sion
+585346,2020,20,21,8.4,FC Sion
+585346,2021,21,28,11.9,FC Sion
+585346,2022,22,32,11.4,FC Sion
+585346,2023,23,32,9.8,FC Sion / FC Sion U21
+585346,2024,24,39,17.0,FC Sion
+585346,2025,25,28,16.0,FC Sion
+585346,2026,26,38,22.1,FC Sion
+687347,2018,19,3,0.6,Vila Nova
+687347,2019,20,4,1.9,NK Lokomotiva Zagreb
+687347,2020,21,28,8.4,FC RFS
+687347,2021,22,35,11.9,FC RFS / NK Lokomotiva Zagreb
+687347,2022,23,50,12.9,FC RFS
+687347,2023,24,37,14.2,FC RFS
+687347,2024,25,29,13.1,FC RFS
+687347,2025,26,12,3.3,V-Varen Nagasaki
+687347,2026,27,3,0.7,V-Varen Nagasaki
+685803,2018,20,2,0.4,Vila Nova
+685803,2019,21,11,4.1,Vejle Boldklub
+685803,2021,23,11,2.0,IK Brage
+685803,2022,24,1,0.4,Vasalunds IF
+685803,2023,25,30,4.8,Oskarshamns AIK
+685803,2024,26,35,8.5,FC Haka
+685803,2025,27,23,5.5,FC Haka
+685803,2026,28,31,6.8,FC Lahti
+585347,2018,18,26,5.9,FC Sion U21 / Vila Nova
+585347,2019,19,20,2.5,FC Sion U21 / FC Sion
+585347,2021,21,3,1.1,Sharjah FC
+585347,2022,22,4,0.3,Grêmio Anápolis
+585347,2023,23,24,12.9,Goiás
+585347,2024,24,2,0.6,Joinville
+585347,2025,25,9,3.2,Nova Iguaçu
+585347,2026,26,2,0.1,Maguary
+703502,2020,21,2,0.4,Vila Nova
+703502,2021,22,27,13.5,Vila Nova
+703502,2022,23,20,2.6,Grêmio Anápolis
+703502,2023,24,16,3.4,Barcelona-BA / Aimoré
+703502,2024,25,4,1.1,Manauara
+703502,2026,27,8,2.4,Decisão
+689800,2018,20,1,0.2,Vila Nova
+689800,2020,22,2,0.4,Vila Nova
+689800,2022,24,6,1.2,Operário-MT
+689800,2023,25,7,1.4,CE Dom Bosco
+689800,2024,26,6,1.2,Nova Venécia FC
+1386943,2018,21,2,0.4,Anápolis
 645602,2019,21,1,0.5,Vitória-BA
 645602,2020,22,5,2.1,Vitória-BA
 645602,2021,23,47,21.5,Vitória-BA
@@ -7615,6 +8404,13 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 658678,2024,24,53,42.7,Athletico-PR
 658678,2025,25,47,58.9,Cruzeiro
 658678,2026,26,48,52.2,Cruzeiro / FK Krasnodar
+739477,2020,19,11,5.7,Athletico-PR
+739477,2021,20,37,19.9,CRB / Athletico-PR
+739477,2022,21,21,16.1,Cruzeiro
+739477,2023,22,22,9.7,Casa Pia AC / Torpedo Moscow
+739477,2024,23,48,32.5,Pafos FC / Casa Pia AC
+739477,2025,24,44,35.7,Pafos FC
+739477,2026,25,27,17.7,Pafos FC
 646256,2019,18,34,12.3,Criciúma
 646256,2020,19,16,12.8,Athletico-PR
 646256,2021,20,40,23.9,CSA / Athletico-PR
@@ -7632,13 +8428,6 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 593205,2024,23,55,41.6,Athletico-PR
 593205,2025,24,14,8.4,Athletico-PR
 593205,2026,25,19,17.9,Athletico-PR / Sharjah FC
-658664,2020,20,10,7.2,Athletico-PR
-658664,2021,21,22,13.0,Athletico-PR
-658664,2022,22,35,13.0,Tombense / Mirassol
-658664,2023,23,30,17.8,Bahia / Operário-PR
-658664,2024,24,26,21.0,Moreirense FC / Operário-PR
-658664,2025,25,43,17.1,Operário-PR
-658664,2026,26,12,5.9,Operário-PR
 645897,2019,21,1,0.3,Athletico-PR
 645897,2020,22,21,9.2,Guarani / Athletico-PR
 645897,2021,23,29,16.3,Guarani
@@ -7754,6 +8543,15 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 697845,2024,24,54,33.7,Criciúma
 697845,2025,25,31,24.9,Vitória-BA
 697845,2026,26,16,9.2,Sport / Vitória-BA
+372047,2018,19,11,2.5,Ohod Club
+372047,2019,20,2,0.5,Ohod Club
+372047,2020,21,18,6.8,Figueirense
+372047,2021,22,28,10.2,Ponte Preta / Botafogo-SP
+372047,2022,23,39,14.1,Botafogo-SP
+372047,2023,24,23,7.1,São Bernardo / Guarani
+372047,2024,25,25,8.6,Figueirense / Santo André
+372047,2025,26,31,8.2,FC Urartu Yerevan
+372047,2026,27,23,4.9,FC Urartu Yerevan
 686150,2019,21,12,2.9,Tsarsko Selo (-2022)
 686150,2020,22,27,6.6,Tsarsko Selo (-2022)
 686150,2021,23,35,20.9,CF Fuenlabrada / Tsarsko Selo (-2022)
@@ -7892,6 +8690,15 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 694606,2024,24,24,2.6,Shenzhen Peng City
 694606,2025,25,41,17.4,Cerezo Osaka
 694606,2026,26,29,11.9,Cerezo Osaka
+739249,2018,19,2,0.2,Novorizontino
+739249,2019,20,8,1.5,Novorizontino
+739249,2020,21,10,3.6,Novorizontino
+739249,2021,22,6,2.1,Novorizontino
+739249,2022,23,29,15.3,Novorizontino / Sampaio Correa-MA
+739249,2023,24,21,11.6,Novorizontino
+739249,2024,25,16,9.7,Novorizontino
+739249,2025,26,20,10.8,Novorizontino
+739249,2026,27,18,9.8,Atlético-GO / Noroeste
 869477,2020,20,14,1.9,Vitória da Conquista
 869477,2021,21,9,2.7,Vitória da Conquista
 869477,2022,22,7,2.1,Vitória da Conquista
@@ -8049,12 +8856,6 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 731057,2024,25,23,20.9,Athletico-PR
 731057,2025,26,25,11.1,Athletico-PR
 731057,2026,27,46,20.4,Ceará / Chapecoense
-658090,2020,22,1,0.3,Retrô
-658090,2021,23,13,3.5,Vera Cruz-PE / Retrô
-658090,2022,24,14,1.8,Resistencia Sport Club / Marcílio Dias
-658090,2023,25,18,2.4,Resistencia Sport Club
-658090,2024,26,7,2.1,Ipatinga
-658090,2025,27,3,0.5,Goianésia / Jataiense
 691311,2020,21,7,2.1,Concórdia
 691311,2022,23,11,3.3,EC Próspera
 691311,2023,24,2,0.4,Floresta
@@ -8082,16 +8883,6 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 670201,2024,24,52,47.0,Vasco
 670201,2025,25,55,50.5,Vasco
 670201,2026,26,40,38.1,Vasco
-670940,2017,18,1,0.2,Joinville
-670940,2018,19,5,0.8,Joinville
-670940,2019,20,21,23.1,Corinthians
-670940,2020,21,39,34.3,Atlético-GO / Corinthians
-670940,2021,22,66,62.2,Atlético-GO
-670940,2022,23,40,22.0,Grêmio
-670940,2023,24,55,25.8,Ceará
-670940,2024,25,38,21.7,Atlético-GO / Ceará
-670940,2025,26,45,20.2,Remo / Atlético-GO
-670940,2026,27,43,24.0,Vila Nova
 868891,2021,21,24,26.4,Corinthians
 868891,2022,22,49,59.4,Corinthians
 868891,2023,23,49,44.6,Corinthians / FC Nantes
@@ -8160,6 +8951,12 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 520401,2024,25,36,6.3,Busan IPark
 520401,2025,26,36,5.0,Busan IPark
 520401,2026,27,15,3.0,Suwon Samsung Bluewings
+678853,2021,19,1,0.5,Corinthians
+678853,2022,20,1,1.0,Corinthians
+678853,2023,21,31,31.2,Corinthians
+678853,2024,22,12,10.2,Corinthians
+678853,2025,23,25,17.6,Ceará
+678853,2026,24,41,17.1,Ceará
 546532,2020,21,33,12.3,Botafogo-SP
 546532,2021,22,27,13.8,Chapecoense / Ceará
 546532,2022,23,29,13.8,Tombense / Vila Nova
@@ -8196,6 +8993,11 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 541048,2023,25,5,0.5,Gimhae FC 2008 / ASA
 541048,2024,26,7,0.9,Potiguar
 541048,2025,27,13,2.5,Fluminense-PI / Maranhão
+607035,2022,21,17,2.5,Grêmio Esportivo Juventus
+607035,2023,22,13,2.4,AD Fafe
+607035,2024,23,6,1.0,AD Fafe / Leça FC
+607035,2025,24,26,4.0,Leça FC
+607035,2026,25,10,1.4,Leça FC
 1183368,2024,25,7,1.0,Amora FC / CD Portosantense
 1183368,2025,26,19,3.2,Amora FC
 1183368,2026,27,11,2.4,Amora FC / CF Os Belenenses
@@ -8285,7 +9087,6 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 1381429,2026,26,7,1.4,Barcelona-RO
 716577,2020,21,2,1.4,Ourense CF
 716577,2022,23,2,0.2,Ourense CF
-1210972,2016,18,4,1.2,Paraná
 631399,2020,22,5,1.0,Murici
 646255,2019,21,1,0.3,Criciúma
 646255,2021,23,2,0.6,Criciúma
@@ -8325,15 +9126,6 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 612162,2024,23,56,51.7,Bragantino-SP
 612162,2025,24,34,14.0,Al-Wahda FC / Bragantino-SP
 612162,2026,25,31,11.5,Al-Wahda FC
-625617,2018,20,1,1.1,Cruzeiro
-625617,2019,21,2,1.4,Cruzeiro
-625617,2020,22,8,4.5,Cruzeiro / Chapecoense
-625617,2021,23,37,18.7,Ponte Preta / Inter de Limeira
-625617,2022,24,45,30.4,Cruzeiro / Coritiba
-625617,2023,25,34,37.6,Orlando City SC
-625617,2024,26,43,36.6,Orlando City SC
-625617,2025,27,26,19.8,Orlando City SC / Colorado Rapids
-625617,2026,28,19,16.3,St. Louis CITY SC
 739438,2020,20,19,10.1,Cruzeiro
 739438,2021,21,42,19.7,Cruzeiro
 739438,2022,22,31,16.3,Guarani / FC Vizela
@@ -8391,15 +9183,6 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 687357,2025,25,9,2.3,Khon Kaen FC
 1480460,2019,20,5,1.0,Real Brasília
 1480460,2020,21,6,1.2,Ceilândia
-671292,2018,19,3,0.8,Novorizontino
-671292,2019,20,2,0.6,Figueirense
-671292,2020,21,33,15.6,Brasil de Pelotas / Novorizontino
-671292,2021,22,39,11.8,Brasil de Pelotas
-671292,2022,23,28,15.3,Sport
-671292,2023,24,44,15.6,CSA / Tombense
-671292,2024,25,33,15.5,Vila Nova / Mirassol
-671292,2025,26,39,18.6,Chapecoense
-671292,2026,27,16,7.9,Chapecoense
 642983,2019,20,10,3.2,Figueirense
 642983,2020,21,22,7.9,Figueirense
 642983,2021,22,16,4.8,DAC Dunajska Streda / STK 1914 Samorin
@@ -8451,6 +9234,15 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 976931,2023,24,9,0.1,FV Rot-Weiß Weiler
 692778,2018,20,4,1.3,Figueirense
 692778,2024,26,1,0.1,Real Noroeste
+594226,2018,18,15,5.9,Londrina
+594226,2019,19,5,1.5,Londrina
+594226,2020,20,18,23.2,Flamengo
+594226,2021,21,61,82.8,Flamengo
+594226,2022,22,47,53.5,Flamengo
+594226,2023,23,25,25.0,Flamengo
+594226,2024,24,52,60.5,Corinthians / Flamengo
+594226,2025,25,58,57.9,Corinthians
+594226,2026,26,55,51.2,Corinthians
 627226,2019,17,15,27.7,Flamengo
 627226,2020,18,19,32.0,Borussia Dortmund / Real Madrid Castilla
 627226,2021,19,29,66.2,Borussia Dortmund
@@ -8645,22 +9437,8 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 936545,2020,20,2,0.6,Atlético-CE
 936545,2021,21,4,1.1,Atlético-CE
 936545,2022,22,9,1.8,EC Iranduba / Atlético-CE
-1197790,2019,21,3,0.9,Horizonte
-1197790,2023,25,1,0.2,Atlético dos Arcos
-1197790,2024,26,3,0.2,Atlético dos Arcos
-1197790,2025,27,1,0.1,Atlético dos Arcos
 616416,2021,22,5,0.6,Caucaia
 722443,2019,20,1,0.2,KF Dardana Kamenicë (- 2021)
-555629,2017,19,4,1.2,América-PE
-555629,2018,20,42,15.9,Náutico / Goiás
-555629,2019,21,30,16.0,Náutico / Bragantino-SP
-555629,2020,22,15,10.0,CRB / Bragantino-SP
-555629,2021,23,27,8.5,Paysandu / CRB
-555629,2022,24,30,11.9,Náutico
-555629,2023,25,24,7.2,CSA
-555629,2024,26,20,5.2,Caxias
-555629,2025,27,21,5.0,Itabaiana / ABC
-555629,2026,28,3,0.8,Inter de Limeira
 697400,2019,19,15,13.8,Goiás
 697400,2020,20,31,18.6,Goiás
 697400,2021,21,27,15.8,Goiás
@@ -8871,6 +9649,15 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 681693,2024,23,3,0.9,Guarani
 681693,2025,24,27,5.0,Ludogorets Razgrad II / Al-Hussein SC (Irbid)
 681693,2026,25,22,5.9,Al-Hussein SC (Irbid)
+624630,2018,18,9,4.1,Paraná
+624630,2019,19,10,3.0,Paraná
+624630,2020,20,36,12.5,Paraná
+624630,2021,21,6,1.5,Khor Fakkan SSC / Paraná
+624630,2022,22,8,4.2,Sampaio Correa-MA
+624630,2023,23,9,2.4,Figueirense / Sampaio Correa-MA
+624630,2024,24,6,2.4,Itabirito
+624630,2025,25,10,3.0,Luverdense
+624630,2026,26,25,4.1,São José-RS
 832313,2021,21,5,2.9,Botafogo-RJ
 832313,2022,22,19,5.0,Ypiranga
 832313,2023,23,26,6.5,Figueirense / Concórdia
@@ -8884,13 +9671,6 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 852751,2024,26,35,4.9,KF Skënderbeu
 852751,2025,27,16,2.0,KF Skënderbeu
 852751,2026,28,16,5.0,North / Pouso Alegre
-729745,2019,21,5,1.3,Ypiranga
-729745,2020,22,1,0.3,Ypiranga
-729745,2021,23,4,1.2,Criciúma
-729745,2023,25,16,2.9,Patrocinense / Atlético Catarinense
-729745,2024,26,20,2.5,Patrocinense / Itabuna EC
-729745,2025,27,28,4.3,Goiatuba / Sergipe
-729745,2026,28,23,3.1,Goiatuba
 796587,2020,20,3,0.9,Bahia
 796587,2021,21,8,0.6,FC Osaka
 796587,2022,22,5,1.0,Gama
@@ -8928,6 +9708,34 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 950389,2023,22,9,1.8,Anápolis
 950389,2024,23,3,0.3,Anápolis
 1001119,2022,22,3,0.5,Glória
+744318,2016,17,2,0.2,Brusque
+744318,2017,18,2,0.4,Brusque
+744318,2019,20,13,3.5,Joinville
+744318,2020,21,9,2.6,Brusque
+744318,2021,22,12,2.2,Juventude-MA
+744318,2023,24,11,4.1,Caldense
+744318,2024,25,26,4.6,Cianorte / Internacional de Lages
+744318,2025,26,21,6.1,CSA
+744318,2026,27,30,7.6,Ponte Preta / Capivariano
+689975,2019,20,10,2.3,CE Força e Luz / FC ViOn Zlate Moravce-Vrable
+689975,2021,22,3,0.9,Fluminense de Feira
+689975,2022,23,9,1.8,Goiatuba
+689975,2023,24,11,0.8,Iguatu
+689975,2024,25,17,3.3,Barra
+689975,2025,26,22,4.1,Guarany de Bagé FC
+689975,2026,27,25,6.3,Ponte Preta / Guarany de Bagé FC
+1095224,2020,23,5,1.5,Horizonte
+1095224,2023,26,1,0.2,Altos
+1095224,2025,28,7,1.4,Real Noroeste
+1095224,2026,29,2,0.1,Tirol
+980012,2022,24,5,1.5,Concórdia
+1057221,2023,20,2,0.2,CD Portosantense
+1057221,2025,22,2,0.3,União Nogueirense FC
+1057221,2026,23,5,0.8,UD Sousense
+577835,2025,25,6,1.2,Coxim AC
+1152484,2019,20,1,0.4,Pelotas
+1152484,2020,21,1,0.1,Pelotas
+1003447,2020,18,1,0.3,Joinville
 593653,2018,19,29,10.2,Juventude
 593653,2019,20,33,10.6,Juventude
 593653,2020,21,29,15.5,Chapecoense / Athletico-PR
@@ -8984,6 +9792,109 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 1183367,2023,24,2,0.2,CD Portosantense
 1183367,2025,26,12,0.8,CD Ribeira Brava
 1183367,2026,27,14,0.9,CD Ribeira Brava
+634737,2019,21,19,6.7,Londrina
+634737,2020,22,25,7.1,Londrina
+634737,2021,23,49,19.1,Londrina
+634737,2022,24,47,18.5,Chapecoense / Maringá
+634737,2023,25,45,20.1,Coritiba / Maringá
+634737,2024,26,30,12.6,Coritiba
+634737,2025,27,23,21.5,Mirassol / Coritiba
+634737,2026,28,43,26.3,Novorizontino
+634738,2019,20,5,1.9,Londrina
+634738,2020,21,6,1.8,Londrina
+634738,2021,22,10,4.2,Londrina
+634738,2022,23,3,1.6,Londrina
+634738,2023,24,6,1.7,Londrina
+634738,2024,25,23,6.6,Londrina
+634738,2025,26,20,4.1,Hibernians FC / Velo Clube
+634738,2026,27,17,1.0,Mosta FC
+992531,2020,21,14,1.8,Nacional-PR
+992531,2021,22,13,3.9,Azuriz
+992531,2022,23,15,2.3,Azuriz
+992531,2023,24,10,1.4,São Joseense / Botafogo-RJ
+992531,2024,25,11,4.4,Brasil de Pelotas
+992531,2025,26,7,2.8,Avenida
+992531,2026,27,17,3.5,Águia de Marabá / Santa Cruz-AC
+602222,2020,20,10,2.8,Londrina
+602222,2021,21,3,0.9,Londrina
+602222,2022,22,5,1.3,Londrina / Azuriz
+602222,2023,23,14,3.4,Aruko Sports Brasil / Camboriú
+602222,2024,24,12,4.5,Brasil de Pelotas
+602222,2025,25,3,1.2,Guarany de Bagé FC
+602222,2026,26,7,2.8,Avenida
+740497,2020,20,13,3.7,Londrina
+740497,2021,21,17,5.7,Londrina
+740497,2022,22,10,1.1,Grêmio Esportivo Juventus / Londrina
+1471723,2019,20,2,0.6,Foz do Iguaçu
+1021212,2020,20,1,0.0,Tubarão
+796791,2020,20,19,3.4,Mirassol
+796791,2021,21,8,1.9,Mirassol
+796791,2022,22,2,0.6,Barra
+796791,2023,23,9,0.8,Santo André
+796791,2024,24,11,0.9,Água Santa
+796791,2025,25,18,4.4,Capital-DF / Tombense
+981348,2021,22,11,2.2,CE Dom Bosco
+981348,2022,23,12,2.4,CE Dom Bosco
+981348,2023,24,6,1.2,CE Dom Bosco
+981348,2024,25,3,0.6,Primavera-MT
+1261618,2019,20,1,0.5,Mirassol
+1481186,2018,18,1,0.1,Mirassol
+739250,2020,21,21,5.1,Novorizontino
+739250,2021,22,36,14.0,Novorizontino
+739250,2022,23,22,10.3,Novorizontino
+739250,2023,24,13,2.6,Figueirense
+739250,2024,25,23,6.5,Caxias
+739250,2025,26,21,5.0,Portuguesa-SP
+739250,2026,27,2,0.6,Barra
+603966,2018,20,1,0.2,NK Galeb Ankaran
+603966,2019,21,5,3.1,FC Pro Vercelli 1892
+603966,2020,22,3,0.6,Bangu / FC Pro Vercelli 1892
+603966,2021,23,3,1.5,Bangu
+1063691,2020,21,2,0.3,Moura AC
+1063691,2021,22,2,0.3,CA Macedo de Cavaleiros
+1063691,2022,23,3,0.5,GD Bragança
+1063691,2023,24,1,0.2,Atlético dos Arcos
+1063691,2024,25,9,0.6,Atlético dos Arcos
+1063691,2025,26,1,0.1,Atlético dos Arcos
+1063691,2026,27,6,0.6,AD Ponte da Barca
+1098122,2020,21,6,1.2,Unaí EC
+1098122,2021,22,1,0.2,Unaí EC
+746395,2020,21,3,0.6,FC Nitra
+634093,2018,20,21,7.6,Náutico
+634093,2019,21,16,3.6,Casa Pia AC / Náutico
+634093,2020,22,5,0.7,Casa Pia AC / GS Loures
+634093,2021,23,9,2.5,Episkopi Rethymno
+634093,2022,24,23,6.4,Episkopi Rethymno
+634093,2023,25,21,3.6,Marsa FC / Porto-PE
+634093,2024,26,12,1.5,Zejtun Corinthians FC
+723511,2020,20,1,0.3,Náutico
+723511,2021,21,10,4.5,Náutico
+723511,2022,22,26,9.5,Náutico / Akritas Chloraka
+723511,2023,23,9,1.3,Akritas Chloraka / Operário-MT
+723511,2025,25,9,1.2,Capital-DF / Barcelona-BA
+723511,2026,26,5,1.5,Vitória das Tabocas
+639889,2018,20,1,0.3,Náutico
+639889,2019,21,6,2.6,Salgueiro
+639889,2022,24,7,2.1,Paragominas
+639889,2023,25,2,0.9,Cordino
+639889,2024,26,11,2.2,Imperatriz
+639889,2025,27,16,2.3,Imperatriz
+639889,2026,28,1,0.2,Luminense-MA
+723542,2016,18,13,3.2,Guaratinguetá
+723542,2018,20,3,0.9,Náutico
+723542,2021,23,5,1.0,Unaí EC
+723542,2024,26,9,1.8,Nova Mutum
+723542,2025,27,6,1.2,Sport Sinop
+977370,2020,22,13,1.6,Atlético-PB / Palmeira-RN
+977370,2021,23,9,1.8,São Paulo Crystal
+977370,2025,27,9,2.2,Jaguar / Parnahyba
+977370,2026,28,7,2.1,Jaguar
+723539,2019,20,1,0.1,América-PE
+723539,2020,21,4,1.2,Petrolina
+723539,2021,22,3,0.9,Guarany de Sobral
+723539,2024,25,8,1.6,Pombal
+723539,2025,26,7,1.4,Potiguar
+723539,2026,27,3,0.9,Jaguar
 608216,2020,20,45,52.2,Palmeiras
 608216,2021,21,52,82.6,Palmeiras
 608216,2022,22,45,79.9,Palmeiras
@@ -9073,6 +9984,43 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 1021109,2026,27,23,3.8,Porto Vitória / Blumenau
 734519,2022,23,6,1.2,CE Dom Bosco
 935722,2026,26,5,1.2,Figueirense
+628222,2018,19,2,0.9,Paraná
+628222,2019,20,17,8.2,Paraná
+628222,2020,21,10,4.8,Vitória-BA
+628222,2021,22,23,7.1,Tombense
+628222,2022,23,19,6.2,Ypiranga
+628222,2023,24,19,4.8,Pouso Alegre / Santo André
+628222,2024,25,10,2.5,Rio Branco-ES
+628222,2025,26,12,1.1,Água Santa
+628222,2026,27,10,2.0,Rio Branco-ES
+637995,2018,19,1,0.3,Paraná
+637995,2019,20,2,0.9,Rio Branco-PR / Paraná
+637995,2020,21,13,2.8,Novorizontino / Concórdia
+637995,2021,22,16,4.7,Concórdia / Criciúma
+637995,2022,23,5,2.9,Sampaio Correa-MA / Bahia
+637995,2023,24,22,4.4,São Joseense / Sampaio Correa-MA
+637995,2024,25,33,10.6,Botafogo-PB / Joinville
+637995,2026,27,27,5.8,Barra
+633365,2018,19,1,0.5,Paraná
+633365,2020,21,7,2.2,Paraná
+633365,2021,22,14,1.5,Santo André
+633365,2022,23,14,4.2,Maringá
+633365,2025,26,15,1.6,Eastern District / Pelotas
+633365,2026,27,20,1.1,Eastern District
+719855,2020,22,10,2.0,São Bento / União-PR
+719855,2021,23,7,0.9,São Bento
+719855,2023,25,13,1.5,Resende / Mixto
+719855,2024,26,13,2.2,União Rondonópolis EC
+981124,2020,21,4,1.2,União-PR
+981124,2022,23,6,1.8,Rio Branco-PR
+981124,2023,24,6,1.2,CRAC
+981124,2026,27,4,1.3,Operário-MS
+599882,2019,20,6,1.8,Rio Branco-PR
+599882,2023,24,1,0.3,São Joseense
+599882,2024,25,8,2.4,Nação Araquari
+599882,2025,26,3,0.6,Serra Branca
+1226266,2024,25,9,1.8,Morrinhos
+1226266,2025,26,4,0.8,Primavera-MT
 646402,2019,19,20,14.8,Ponte Preta / Athletico-PR
 646402,2020,20,37,35.1,Athletico-PR
 646402,2021,21,53,59.2,Athletico-PR
@@ -9125,6 +10073,23 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 871635,2023,24,13,2.6,Real Brasília
 871635,2024,25,2,0.4,Gama
 722610,2021,22,2,1.4,Nova Mutum
+654384,2019,21,33,8.7,PFC Lviv
+654384,2020,22,18,3.3,Dinamo Tbilisi
+654384,2021,23,13,13.9,FK Bodø/Glimt
+654384,2022,24,35,13.3,FC Sheriff Tiraspol
+654384,2023,25,24,8.2,Diósgyőri VTK / Qyzyljar Petropavlovsk
+654384,2024,26,18,7.8,Diósgyőri VTK / Al-Dhafra FC
+654384,2025,27,11,5.7,Operário-PR / Juventude
+654384,2026,28,25,5.9,Selangor FC / Ponte Preta
+643172,2019,21,5,1.0,Itumbiara
+643172,2021,23,5,0.5,Caldense
+643172,2022,24,3,0.6,Morrinhos
+643172,2023,25,5,1.0,Parintins
+992209,2020,22,1,0.3,Jacobina
+992209,2021,23,9,0.6,Central / FC Rustavi
+992209,2022,24,1,0.7,Atlético de Alagoinhas
+975999,2021,21,3,0.9,Icasa
+1158916,2021,21,1,0.3,Icasa
 412363,2017,16,2,2.4,Santos
 412363,2018,17,58,60.0,Santos
 412363,2019,18,40,56.3,Santos / Real Madrid
@@ -9244,13 +10209,17 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 1115624,2024,26,8,1.9,Tocantinópolis
 1115624,2025,27,24,4.1,Tuntum / Sampaio Correa-MA
 1115624,2026,28,8,2.4,Iguatu
-729249,2018,20,6,1.2,CSP
-729249,2019,21,6,1.2,CSP
 734521,2021,22,2,0.4,CS Maruinense
 734521,2022,23,31,1.6,FC Bizau / FC Lustenau
 734521,2023,24,14,0.2,FV Rot-Weiß Weiler
 734521,2024,25,2,0.0,FV Rot-Weiß Weiler
 675123,2018,19,1,0.3,Sport
+939248,2021,21,9,1.5,Bangu
+939248,2023,23,9,2.7,Porto-PE
+939248,2024,24,7,1.4,Santa Cruz-RN
+612478,2018,20,1,0.3,CD Mafra
+612478,2020,22,1,0.4,Villa Nova
+612478,2022,24,8,1.6,Unaí EC
 602105,2018,18,3,3.8,São Paulo
 602105,2019,19,51,48.6,São Paulo
 602105,2020,20,27,46.2,Ajax Amsterdam / São Paulo
@@ -9405,6 +10374,25 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 1103171,2020,20,2,0.2,Palmas
 1103171,2024,24,5,0.9,Real Noroeste / Audax-RJ
 739111,2021,22,7,0.6,Boavista
+903050,2021,21,21,4.4,Iporá EC / Goianésia
+903050,2022,22,18,6.2,Vila Nova
+903050,2023,23,26,6.9,Vila Nova / Manaus
+903050,2024,24,34,15.9,Vila Nova
+903050,2025,25,26,6.8,Figueirense
+903050,2026,26,28,10.3,Caxias / Velo Clube
+671432,2019,20,1,0.4,Vila Nova
+671432,2023,24,1,0.2,SC Guadalupe
+671432,2025,26,22,6.2,Altos
+671432,2026,27,8,0.4,Mahasarakham CC FC
+842602,2022,22,8,1.6,Operário-MT
+842602,2023,23,11,2.2,Operário-MT
+842602,2026,26,11,1.2,Treze
+1436837,2025,27,12,0.2,Sparta Kazimierza Wielka
+1436837,2026,28,31,1.9,Naprzód Jedrzejów
+1507725,2019,20,1,0.2,Costa Rica
+1507725,2026,27,6,1.2,Palmas
+924754,2019,21,3,0.6,Rio Branco-ES
+924754,2021,23,1,0.2,ARC Oleiros
 740162,2020,20,16,6.9,Vitória-BA
 740162,2021,21,38,16.8,Vitória-BA
 740162,2022,22,33,8.8,Vitória-BA
@@ -9643,13 +10631,6 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 538978,2024,25,30,17.3,Santos
 538978,2025,26,17,6.1,Cuiabá
 538978,2026,27,36,18.6,São Bernardo
-739477,2020,19,11,5.7,Athletico-PR
-739477,2021,20,37,19.9,CRB / Athletico-PR
-739477,2022,21,21,16.1,Cruzeiro
-739477,2023,22,22,9.7,Casa Pia AC / Torpedo Moscow
-739477,2024,23,48,32.5,Pafos FC / Casa Pia AC
-739477,2025,24,44,35.7,Pafos FC
-739477,2026,25,27,17.7,Pafos FC
 658674,2020,18,4,1.2,Athletico-PR
 658674,2021,19,12,6.7,Athletico-PR
 658674,2022,20,21,14.7,América-MG / Athletico-PR
@@ -9674,6 +10655,12 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 659705,2024,23,23,10.7,GD Chaves
 659705,2025,24,13,4.0,GD Chaves / MFK Dukla Banska Bystrica
 659705,2026,25,42,13.3,América-MG
+739445,2021,19,18,8.8,Remo / Athletico-PR
+739445,2022,20,24,11.9,Atlanta United 2
+739445,2023,21,12,2.9,Atlanta United 2 / CD Nacional
+739445,2024,22,31,9.5,Remo
+739445,2025,23,14,5.4,Náutico / Amazonas
+739445,2026,24,35,9.5,Brusque
 898338,2021,21,5,1.1,Botafogo-SP
 898338,2022,22,15,2.6,Inter de Limeira / Botafogo-SP
 898338,2023,23,23,6.9,Pouso Alegre / Inter de Limeira
@@ -9741,12 +10728,6 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 1088852,2025,21,1,0.3,Figueirense
 658662,2023,23,4,0.8,CSE
 627234,2023,21,1,0.5,Botafogo-RJ
-796739,2021,21,1,0.3,Novorizontino
-796739,2022,22,8,4.1,CF Estrela Amadora
-796739,2023,23,14,7.7,CF Estrela Amadora
-796739,2024,24,25,12.9,CS Marítimo / CF Estrela Amadora
-796739,2025,25,15,7.2,CS Marítimo
-796739,2026,26,15,9.5,Sabah FK / CS Marítimo
 677679,2020,19,1,0.2,Atlético-GO
 677679,2021,20,10,3.5,Atlético-GO
 677679,2022,21,7,2.2,Atlético-GO
@@ -9768,15 +10749,6 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 867847,2024,24,42,38.0,Houston Dynamo FC
 867847,2025,25,28,49.9,Palmeiras
 867847,2026,26,30,31.0,Inter Miami CF
-726005,2017,18,1,0.5,Mirassol
-726005,2018,19,11,3.2,Mirassol
-726005,2020,21,18,8.0,Confiança
-726005,2021,22,51,38.8,Juventude / Confiança
-726005,2022,23,24,18.1,Ceará / Atlético-MG
-726005,2023,24,46,21.3,Ceará
-726005,2024,25,39,20.4,Ceará / FC Juárez
-726005,2025,26,37,24.7,FC Juárez
-726005,2026,27,30,12.6,FC Juárez
 808507,2021,20,16,2.4,Bangu
 808507,2022,21,23,14.8,Cuiabá / Bangu
 808507,2023,22,46,36.5,Cuiabá
@@ -9790,15 +10762,6 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 537599,2024,25,29,13.0,Kifisia FC / Renaissance de Berkane
 537599,2025,26,16,9.6,Renaissance de Berkane / Portimonense SAD
 537599,2026,27,22,6.1,Cuiabá / Anagennisi Karditsa
-372047,2018,19,11,2.5,Ohod Club
-372047,2019,20,2,0.5,Ohod Club
-372047,2020,21,18,6.8,Figueirense
-372047,2021,22,28,10.2,Ponte Preta / Botafogo-SP
-372047,2022,23,39,14.1,Botafogo-SP
-372047,2023,24,23,7.1,São Bernardo / Guarani
-372047,2024,25,25,8.6,Figueirense / Santo André
-372047,2025,26,31,8.2,FC Urartu Yerevan
-372047,2026,27,23,4.9,FC Urartu Yerevan
 1110258,2023,22,23,3.0,Varbergs BoIS
 1110258,2024,23,35,10.6,Halmstads BK
 1110258,2025,24,27,15.5,Vålerenga Fotball Elite
@@ -9846,15 +10809,6 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 738410,2024,22,25,6.6,Santo André / Volta Redonda
 738410,2025,23,16,2.9,Joinville
 738410,2026,24,36,5.1,Maguary / Al-Orooba FC
-547948,2016,17,1,0.5,Paraná
-547948,2018,19,5,1.7,Paraná
-547948,2019,20,1,0.3,Paraná
-547948,2020,21,21,7.5,Paraná
-547948,2021,22,22,6.0,Paraná
-547948,2022,23,9,1.8,Barra / FC Osaka
-547948,2023,24,12,2.3,Altos / Cianorte
-547948,2024,25,2,0.6,São Joseense
-547948,2026,27,8,1.7,Vitória das Tabocas / Central
 978120,2022,23,5,2.0,Villa Nova
 978120,2023,24,22,8.3,Botafogo-SP / Joinville
 978120,2024,25,14,4.7,Confiança / Botafogo-SP
@@ -9975,15 +10929,6 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 603423,2024,25,19,12.8,Grêmio / Guarani
 603423,2025,26,23,12.5,Novorizontino / Grêmio
 603423,2026,27,34,20.7,Remo / Novorizontino
-739249,2018,19,2,0.2,Novorizontino
-739249,2019,20,8,1.5,Novorizontino
-739249,2020,21,10,3.6,Novorizontino
-739249,2021,22,6,2.1,Novorizontino
-739249,2022,23,29,15.3,Novorizontino / Sampaio Correa-MA
-739249,2023,24,21,11.6,Novorizontino
-739249,2024,25,16,9.7,Novorizontino
-739249,2025,26,20,10.8,Novorizontino
-739249,2026,27,18,9.8,Atlético-GO / Noroeste
 647540,2019,17,2,0.6,Bahia
 647540,2021,19,6,2.8,Bahia
 647540,2022,20,34,19.2,Bahia
@@ -10026,6 +10971,10 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 800814,2023,24,2,0.6,Camboriú
 800814,2024,25,13,3.7,Moto Club / Audax-RJ
 800814,2025,26,37,9.2,Ferroviário / Hibernians FC
+688079,2022,21,17,5.7,FK Pardubice / FK Pardubice B
+688079,2023,22,29,6.7,FC Samgurali Tskaltubo / FK Pardubice B
+688079,2024,23,22,7.7,1.SK Prostejov / FK Pardubice B
+688079,2025,24,3,1.3,1.SK Prostejov
 692772,2019,18,3,0.6,Atlético-GO
 692772,2020,19,3,0.6,Anapolina
 692772,2021,20,10,2.0,Anápolis
@@ -10334,16 +11283,6 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 798687,2024,23,37,26.5,Portland Timbers
 798687,2025,24,34,22.7,Portland Timbers
 798687,2026,25,29,20.7,Portland Timbers
-554300,2017,18,1,0.2,Joinville
-554300,2018,19,33,7.4,Joinville
-554300,2019,20,12,2.4,Atlético-GO
-554300,2020,21,16,6.7,Osasco Sporting / Fortaleza
-554300,2021,22,37,11.5,Santa Cruz / CF Estrela Amadora
-554300,2022,23,32,15.6,CF Estrela Amadora / Moreirense FC
-554300,2023,24,32,26.1,Moreirense FC
-554300,2024,25,29,23.3,Moreirense FC
-554300,2025,26,37,24.8,FC Juárez / Moreirense FC
-554300,2026,27,23,8.3,FC Juárez
 792345,2021,22,14,13.5,Corinthians
 792345,2022,23,33,46.2,Corinthians
 792345,2023,24,18,11.0,Bahia
@@ -10385,6 +11324,14 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 1005639,2024,23,23,5.0,Hercílio Luz / Democrata-GV
 1005639,2025,24,25,3.5,Itabirito / Hercílio Luz
 1005639,2026,25,32,7.3,Inter de Limeira / Jataiense
+659732,2018,17,3,0.4,Belo Jardim
+659732,2019,18,3,0.6,Vila Nova
+659732,2020,19,3,0.6,Vila Nova
+659732,2022,21,29,4.7,Afogados / Moto Club
+659732,2023,22,23,3.8,Fujieda MYFC
+659732,2024,23,13,2.0,Fujieda MYFC
+659732,2025,24,23,3.5,Fujieda MYFC
+659732,2026,25,18,4.9,Botafogo-PB / Lamphun Warriors
 739487,2019,18,1,0.7,ABC
 739487,2020,19,2,1.0,Athletico-PR / ABC
 739487,2022,21,6,2.6,Tombense
@@ -10641,15 +11588,6 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 735573,2024,24,65,124.4,Palmeiras
 735573,2025,25,74,139.0,Palmeiras / SL Benfica
 735573,2026,26,43,93.5,SL Benfica / Al-Ittihad Club
-594226,2018,18,15,5.9,Londrina
-594226,2019,19,5,1.5,Londrina
-594226,2020,20,18,23.2,Flamengo
-594226,2021,21,61,82.8,Flamengo
-594226,2022,22,47,53.5,Flamengo
-594226,2023,23,25,25.0,Flamengo
-594226,2024,24,52,60.5,Corinthians / Flamengo
-594226,2025,25,58,57.9,Corinthians
-594226,2026,26,54,50.4,Corinthians
 735570,2020,19,6,12.1,Flamengo
 735570,2021,20,52,66.7,Flamengo
 735570,2022,21,64,78.5,Flamengo
@@ -10677,6 +11615,14 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 818495,2024,22,34,43.8,FC Porto / FC Famalicão
 818495,2025,23,28,35.1,FC Porto / Paris FC
 818495,2026,24,18,20.0,Paris FC
+638305,2019,18,39,15.6,Náutico
+638305,2020,19,16,6.7,Náutico
+638305,2021,20,7,5.3,Flamengo
+638305,2022,21,13,5.1,Houston Dynamo FC 2 / Houston Dynamo FC
+638305,2023,22,26,9.1,CSA / Sampaio Correa-MA
+638305,2024,23,31,6.9,Treze / Flamengo
+638305,2025,24,51,25.8,CRB / Flamengo
+638305,2026,25,37,17.6,CRB
 809716,2021,20,13,7.4,Real Valladolid Promesas / Palmeiras
 809716,2022,21,5,3.2,Moreirense FC
 809716,2023,22,26,10.0,Chapecoense / Moreirense FC
@@ -10766,7 +11712,7 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 800175,2023,22,41,52.9,Real Betis Balompié
 800175,2024,23,65,137.2,Botafogo-RJ / Real Betis Balompié
 800175,2025,24,38,37.7,Zenit St. Petersburg
-800175,2026,25,34,35.2,Zenit St. Petersburg
+800175,2026,25,35,35.9,Zenit St. Petersburg
 815558,2020,19,2,2.4,Fluminense
 815558,2021,20,66,76.2,Fluminense
 815558,2022,21,55,65.5,Fluminense
@@ -10959,6 +11905,12 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 844808,2024,24,8,1.0,Democrata-SL
 844808,2025,25,11,3.0,Betim / Treze
 844808,2026,26,4,1.2,Portuguesa-RJ
+825849,2020,19,1,0.7,Goiás
+825849,2021,20,16,5.1,Goiás
+825849,2023,22,1,0.1,São Joseense
+825849,2024,23,9,2.3,Vila Nova
+825849,2025,24,15,2.5,Goianésia
+825849,2026,25,4,1.6,Boavista
 740269,2021,22,10,1.9,Gama
 740269,2022,23,3,0.6,Brasiliense
 740269,2023,24,9,2.3,Foz do Iguaçu / Samambaia
@@ -10971,6 +11923,8 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 841191,2024,24,1,0.3,Maguary
 841191,2025,25,12,2.0,Penedense
 841191,2026,26,2,0.2,Oratório
+1366506,2025,24,8,1.6,Sport Sinop
+1366506,2026,25,10,2.5,Andraus / CSE
 882574,2022,23,8,1.6,Gama
 882574,2025,26,6,0.9,Goiânia
 1094177,2023,24,1,0.3,Central
@@ -11197,15 +12151,6 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 815677,2024,22,29,8.2,FK Cukaricki / Al-Jazira Club
 815677,2025,23,35,10.8,Al-Jazira Club
 815677,2026,24,31,12.6,Al-Jazira Club
-624630,2018,18,9,4.1,Paraná
-624630,2019,19,10,3.0,Paraná
-624630,2020,20,36,12.5,Paraná
-624630,2021,21,6,1.5,Khor Fakkan SSC / Paraná
-624630,2022,22,8,4.2,Sampaio Correa-MA
-624630,2023,23,9,2.4,Figueirense / Sampaio Correa-MA
-624630,2024,24,6,2.4,Itabirito
-624630,2025,25,10,3.0,Luverdense
-624630,2026,26,25,4.1,São José-RS
 723796,2021,20,2,0.8,Internacional
 723796,2022,21,22,10.5,Ponte Preta / Internacional
 723796,2023,22,17,4.7,Figueirense
@@ -11220,6 +12165,12 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 868073,2024,23,1,0.7,Vila Nova
 868073,2025,24,38,10.7,Azuriz / Lusitânia FC Lourosa
 868073,2026,25,25,11.0,Lusitânia FC Lourosa / Rio Ave FC
+796787,2020,19,3,1.5,Mirassol
+796787,2021,20,3,1.2,Internacional
+796787,2022,21,7,2.3,Operário-PR
+796787,2023,22,12,2.9,Hercílio Luz
+796787,2024,23,15,4.7,Villa Nova / AD Fafe
+796787,2025,24,11,3.0,AD Fafe
 734147,2020,21,4,1.3,Botafogo-SP
 734147,2021,22,18,6.0,Botafogo-SP
 734147,2022,23,1,0.5,Botafogo-SP
@@ -11283,6 +12234,127 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 722675,2021,21,6,1.8,Cianorte
 1536685,2020,21,2,0.4,Centro Esportivo Olhodaguense
 1536685,2021,22,4,0.8,Atlético-PB
+689940,2019,20,2,0.8,Londrina
+689940,2020,21,19,5.5,Londrina
+689940,2021,22,13,4.8,Londrina
+689940,2022,23,13,3.3,Cianorte / Audax-RJ
+689940,2023,24,10,3.0,Aruko Sports Brasil
+689940,2024,25,9,2.7,PSTC
+689940,2026,27,4,0.8,Sport Sinop
+867996,2021,20,2,0.2,Cianorte
+867996,2022,21,2,0.1,Cianorte
+867996,2023,22,7,2.1,Cianorte
+867996,2024,23,23,4.3,Cianorte
+867996,2025,24,17,3.0,Joinville
+867996,2026,25,30,4.5,São Joseense / Zabbar St. Patrick FC
+740496,2020,20,9,2.6,Londrina
+740496,2021,21,14,4.3,Londrina
+740496,2022,22,10,4.5,Londrina
+740496,2025,25,6,1.6,Concórdia
+1012510,2020,20,10,1.2,Vilhenense EC
+1012510,2022,22,3,0.4,Porto Velho EC
+1012510,2023,23,10,0.4,Fgura United FC
+742364,2020,20,5,1.5,Londrina
+742364,2021,21,1,0.3,Londrina
+740494,2020,20,3,0.9,Londrina
+911670,2022,21,2,0.8,Londrina
+712107,2020,19,6,4.0,FC Famalicão
+712107,2021,20,38,25.5,FC Famalicão
+712107,2022,21,37,25.7,FC Famalicão
+712107,2023,22,40,29.1,FC Famalicão
+712107,2024,23,25,22.7,FC Famalicão / Villarreal CF
+712107,2025,24,31,56.4,Villarreal CF
+712107,2026,25,21,29.2,Villarreal CF
+796784,2020,18,4,2.0,Mirassol
+796784,2021,19,4,0.7,Mirassol
+796784,2022,20,24,7.8,Mirassol
+796784,2023,21,30,15.8,Mirassol
+796784,2024,22,16,6.2,Náutico
+796783,2020,19,21,4.4,Mirassol
+796783,2021,20,10,2.9,Mirassol
+796783,2022,21,14,5.5,Mirassol
+796783,2023,22,15,3.0,Aparecidense / Botafogo-PB
+796783,2024,23,36,8.1,Aparecidense / Vila Nova
+796783,2025,24,5,1.9,Vila Nova / Volta Redonda
+796783,2026,25,1,0.7,Volta Redonda
+753322,2018,19,1,0.1,Inter de Limeira
+753322,2023,24,13,2.6,Grêmio Anápolis / Treze
+753322,2024,25,27,10.5,Treze / Athletic-MG
+753322,2025,26,18,3.1,Luverdense / Figueirense
+753322,2026,27,24,3.5,Sergipe
+940145,2021,20,1,0.2,Mirassol
+940145,2022,21,13,5.3,Juventude
+940145,2023,22,2,0.4,Ypiranga
+940145,2026,25,22,8.4,Botafogo-PB / Pouso Alegre
+798105,2020,19,5,0.7,Mirassol
+798105,2021,20,2,0.4,Mirassol
+798105,2022,21,11,2.6,Ferroviária / Mirassol
+798105,2025,24,11,1.1,Goiatuba / Votuporanguense
+798105,2026,25,23,2.9,Goiatuba
+1344859,2017,18,3,0.4,Internacional de Lages
+1344859,2018,19,11,1.9,Internacional de Lages
+1261619,2019,18,1,0.5,Mirassol
+796739,2021,21,1,0.3,Novorizontino
+796739,2022,22,8,4.1,CF Estrela Amadora
+796739,2023,23,14,7.7,CF Estrela Amadora
+796739,2024,24,25,12.9,CS Marítimo / CF Estrela Amadora
+796739,2025,25,15,7.2,CS Marítimo
+796739,2026,26,15,9.5,Sabah FK / CS Marítimo
+980009,2020,19,6,1.2,Unaí EC
+980009,2022,21,4,1.2,Concórdia
+980009,2025,24,5,1.0,Sobradinho
+940146,2020,19,1,0.1,Novorizontino
+940146,2023,22,6,1.2,Aquidauanense
+638301,2020,19,9,3.7,Náutico
+638301,2021,20,15,7.8,Náutico
+638301,2022,21,28,11.3,Náutico
+638301,2024,23,20,8.9,Paysandu
+638301,2025,24,26,10.5,Botafogo-SP / Inter de Limeira
+638301,2026,25,8,3.9,Botafogo-SP
+638304,2019,18,3,0.3,América-PE
+638304,2020,19,7,2.3,Ferroviário / Náutico
+638304,2021,20,1,0.3,Náutico
+638304,2022,21,20,6.0,Náutico
+638304,2023,22,35,11.9,Náutico / Maringá
+638304,2024,23,26,4.8,Maringá
+638304,2025,24,31,8.4,Maringá
+638304,2026,25,22,5.7,Uberlândia / Maringá
+737185,2020,20,3,0.9,Náutico
+737185,2021,21,5,1.7,Náutico
+737185,2022,22,9,1.6,Azuriz
+737185,2024,24,30,5.1,Inter de Limeira / Azuriz
+737185,2025,25,16,3.9,Azuriz
+737185,2026,26,22,3.9,Piauí
+977208,2022,22,9,2.7,Vera Cruz-PE
+977208,2023,23,11,3.3,Íbis
+977208,2024,24,9,1.8,Nacional de Patos
+977208,2025,25,2,0.6,Jaguar
+977208,2026,26,4,1.2,Jaguar
+371913,2015,17,5,0.6,Racing FC Union Luxembourg
+371913,2016,18,15,1.6,Racing FC Union Luxembourg
+371913,2017,19,16,1.6,Racing FC Union Luxembourg
+371913,2018,20,17,1.5,Racing FC Union Luxembourg
+371913,2019,21,10,1.1,FC Blue Boys Muhlenbach (- 2020) / Racing FC Union Luxembourg
+371913,2020,22,3,0.3,FC Blue Boys Muhlenbach (- 2020)
+371913,2023,25,17,1.9,FC Mondercange
+371913,2026,28,1,0.1,FC 72 Erpeldange
+638306,2019,18,1,0.1,América-PE
+638306,2020,19,1,0.3,Náutico
+638306,2022,21,10,2.8,Náutico
+638306,2023,22,5,1.9,Náutico
+638306,2024,23,8,1.6,Pombal
+638306,2025,24,3,0.6,Nacional de Patos
+680553,2019,20,7,0.8,América-PE
+680553,2022,23,11,3.3,Crato
+680553,2023,24,8,1.6,Atlético Gloriense
+740403,2020,19,2,0.6,Náutico
+740403,2024,23,9,1.8,Pombal
+740403,2025,24,4,0.8,Capital-TO
+740403,2026,25,5,1.0,Atlético-PB
+1383545,2025,20,1,0.2,Trem
+1383545,2026,21,2,0.3,Trem
+728476,2020,20,2,0.4,São Paulo Crystal
+723512,2018,18,1,0.3,Náutico
 808509,2020,19,24,34.6,Palmeiras
 808509,2021,20,59,93.1,Palmeiras
 808509,2022,21,58,94.0,Palmeiras
@@ -11345,12 +12417,6 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 1082630,2024,21,33,15.4,Paysandu
 1082630,2025,22,26,11.5,Vila Nova / Inter de Limeira
 1082630,2026,23,10,5.1,Vila Nova / Port FC
-688670,2020,21,29,9.9,Paraná
-688670,2021,22,20,6.8,Paraná / Ferroviário
-688670,2023,24,11,3.0,Náutico / Criciúma
-688670,2024,25,24,4.2,Barra
-688670,2025,26,27,7.5,Floresta / São Joseense
-688670,2026,27,11,2.2,CRAC
 1015098,2022,21,6,1.1,V-Varen Nagasaki
 1015098,2023,22,19,2.9,RB Omiya Ardija / V-Varen Nagasaki
 1015098,2024,23,34,6.3,Tokushima Vortis
@@ -11390,6 +12456,15 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 1112668,2023,24,8,1.5,Nova Mutum
 1112668,2025,26,1,0.1,Barcelona-RO
 1505830,2026,26,6,1.2,Desportiva Aracaju
+620365,2020,21,2,0.6,Paraná
+620365,2021,22,6,1.8,Cascavel CR
+620365,2023,24,4,0.3,Real Ariquemes EC
+727749,2020,20,1,0.3,Paraná
+727749,2021,21,13,2.3,Paraná
+995368,2021,20,1,0.1,Paraná
+995368,2022,21,1,0.3,Paraná
+1467625,2022,21,2,0.4,Comercial-MS
+1010979,2021,21,1,0.3,Paragominas
 646404,2019,18,4,2.0,Ponte Preta
 646404,2020,19,25,13.2,Ponte Preta
 646404,2021,20,42,35.2,Santos / Ferroviária
@@ -11484,6 +12559,50 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 606470,2024,24,4,0.6,Club Esportiu Carroi
 802648,2020,20,10,0.8,Bangu
 686921,2019,19,1,0.5,Ponte Preta
+936090,2021,22,13,1.6,Portuguesa-SP
+936090,2022,23,12,3.3,ABC
+936090,2023,24,6,3.0,Portuguesa-SP
+936090,2024,25,37,21.2,Novorizontino / Portuguesa-SP
+936090,2025,26,44,23.8,Novorizontino
+936090,2026,27,46,28.2,Novorizontino
+1122072,2023,23,5,1.0,Rio Negro-AM
+1122072,2024,24,7,1.4,Planaltina
+1122072,2025,25,7,1.4,Tocantins EC
+712594,2019,19,8,1.3,Khor Fakkan SSC
+712594,2021,21,1,0.3,Al-Fujairah SC
+712594,2026,26,3,0.6,AS Melfi
+975994,2022,23,5,1.5,Atlético-CE
+975994,2024,25,4,0.2,KS Lushnja
+1227002,2024,23,5,1.5,Nação Araquari
+1094898,2023,24,1,0.2,ADC Proença-a-Nova
+681627,2019,20,23,11.4,CSA / Santa Cruz
+681627,2020,21,14,7.1,Botafogo-RJ
+681627,2021,22,52,33.5,Botafogo-RJ
+681627,2022,23,26,16.7,Coritiba
+681627,2023,24,38,17.8,Ceará
+681627,2024,25,40,15.2,Mirassol / Torpedo Kutaisi
+681627,2025,26,30,3.6,Torpedo Kutaisi
+681627,2026,27,31,8.5,Torpedo Kutaisi / Atlético-GO
+731533,2021,22,10,4.6,Santa Cruz
+731533,2022,23,6,1.6,Santa Cruz
+731533,2023,24,35,11.4,Santa Cruz
+731533,2024,25,11,1.8,CRAC / Santa Cruz
+731533,2025,26,3,0.2,Azuriz
+731533,2026,27,1,0.2,Treze
+723170,2021,22,1,0.3,Vitória das Tabocas
+723170,2022,23,6,1.2,Potiguar
+723170,2023,24,17,2.8,Potiguar
+723170,2024,25,7,1.4,Coruripe
+723170,2025,26,8,1.5,Penedense
+723170,2026,27,7,2.1,Bahia de Feira
+740300,2021,20,6,3.4,Santa Cruz
+740300,2022,21,6,1.4,Treze / Vera Cruz-PE
+613883,2022,22,5,0.7,Pinheiro-MA / São José de Ribamar EC
+613883,2024,24,13,3.3,KF Dukagjini / KF Rahoveci
+613883,2026,26,8,0.6,Abu Salim SC
+977993,2022,21,10,3.0,Sete de Setembro-PE
+723651,2021,22,3,0.9,Icasa
+1467392,2024,24,4,0.8,Chapadinha FC
 668267,2020,17,16,19.3,Santos
 668267,2021,18,46,52.6,Santos
 668267,2022,19,57,47.7,Santos
@@ -11497,6 +12616,12 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 813107,2024,22,43,39.5,D.C. United
 813107,2025,23,29,11.5,D.C. United
 813107,2026,24,24,14.4,San Diego FC / D.C. United
+816144,2021,20,2,1.0,Santos
+816144,2022,21,41,36.7,Santos
+816144,2023,22,27,18.9,Santos / Coritiba
+816144,2024,23,56,42.9,Juventude
+816144,2025,24,40,39.0,Bragantino-SP
+816144,2026,25,47,50.4,Bragantino-SP
 491616,2019,19,1,0.8,Seleção equatoriana
 491616,2020,20,4,6.6,Boavista FC
 491616,2021,21,26,16.6,Boavista FC
@@ -11702,6 +12827,23 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 1623691,2020,21,2,0.4,Santa Cruz-RN
 1623691,2021,22,3,0.6,ASSU
 670944,2025,24,1,0.3,Rio Branco-PR
+1010016,2021,20,11,3.3,Azuriz
+1010016,2022,21,4,3.1,Cruzeiro
+1010016,2023,22,19,9.8,Vila Nova / Cruzeiro
+1010016,2024,23,39,18.5,Vila Nova / Alanyaspor
+1010016,2025,24,42,19.8,Cuiabá / Alanyaspor
+1010016,2026,25,36,14.3,Riga FC / Juventude
+894364,2021,22,15,2.5,Grêmio Anápolis / Goianésia
+894364,2023,24,5,0.4,Cascavel
+894364,2025,26,13,1.0,Pouso Alegre
+894364,2026,27,20,4.0,Pouso Alegre / Portuguesa-SP
+981061,2022,21,1,0.1,São Bernardo
+981061,2023,22,4,1.2,Caruaru City SC
+981061,2024,23,12,1.1,Santo André
+1093319,2023,24,5,0.5,Democrata-GV
+1093319,2024,25,2,0.6,Marcílio Dias
+1108826,2023,23,7,0.2,Attard FC
+676036,2025,25,1,0.2,Inhumas
 468304,2020,20,9,12.2,São Paulo
 468304,2021,21,56,56.2,São Paulo
 468304,2022,22,62,59.8,São Paulo
@@ -11900,6 +13042,22 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 978388,2022,22,5,1.0,Manaus
 1100025,2023,22,1,0.5,Boavista
 973123,2024,24,2,0.4,Estrela do Norte
+652565,2019,19,27,8.8,Vila Nova
+652565,2021,21,2,0.5,Al-Bataeh CSC
+652565,2022,22,1,0.1,Al-Dhaid SC
+652565,2023,23,2,0.4,Al-Dhaid SC / Al-Orooba FC
+652565,2024,24,1,0.3,Al-Hamriyah Club
+652565,2025,25,6,1.2,Anápolis
+652565,2026,26,4,0.8,Capital-DF
+692789,2021,21,7,1.1,Goianésia / Grêmio Anápolis
+692789,2022,22,18,2.5,Grêmio Anápolis
+692789,2023,23,5,0.4,XV de Piracicaba
+723206,2021,19,6,1.0,Goianésia
+723206,2024,22,2,0.8,NK Varteks (2011)
+723206,2025,23,3,0.6,Sobradinho
+1331242,2016,19,6,1.6,Icasa
+979608,2022,23,1,0.2,Luziânia
+979608,2025,26,1,0.2,Kamphaengphet FC
 858712,2021,19,46,26.7,Vitória-BA / Athletico-PR
 858712,2022,20,36,34.1,Athletico-PR
 858712,2023,21,24,17.4,Athletico-PR / Shakhtar Donetsk
@@ -12048,12 +13206,6 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 802646,2024,22,35,10.1,Tombense / Guarani
 802646,2025,23,44,24.0,Volta Redonda / Fortaleza
 802646,2026,24,44,24.3,Fortaleza
-739445,2021,19,18,8.8,Remo / Athletico-PR
-739445,2022,20,24,11.9,Atlanta United 2
-739445,2023,21,12,2.9,Atlanta United 2 / CD Nacional
-739445,2024,22,31,9.5,Remo
-739445,2025,23,14,5.4,Náutico / Amazonas
-739445,2026,24,35,9.5,Brusque
 661266,2022,20,18,3.5,Club Nacional Asunción
 661266,2023,21,11,2.7,Club Nacional Asunción
 661266,2024,22,17,7.4,Club Nacional Asunción / Club Sol de América
@@ -12093,6 +13245,10 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 980830,2024,22,7,0.3,KS Kastrioti
 980830,2025,23,16,6.2,Moto Club
 980830,2026,24,13,3.7,Fluminense-PI
+864986,2021,19,3,0.6,Vila Nova
+864986,2022,20,7,3.2,Vila Nova
+864986,2023,21,7,1.4,Goiânia
+864986,2026,24,12,5.4,Pouso Alegre / Botafogo-PB
 738499,2020,20,2,0.4,Anapolina
 738499,2022,22,3,0.6,Morrinhos
 738499,2025,25,8,1.6,Sport Sinop
@@ -12262,10 +13418,6 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 1036082,2024,23,24,10.6,FC Sheriff Tiraspol / SC Austria Lustenau
 1036082,2025,24,19,4.9,Port FC / FC Sheriff Tiraspol
 1036082,2026,25,21,6.5,Port FC
-688079,2022,21,17,5.7,FK Pardubice / FK Pardubice B
-688079,2023,22,29,6.7,FC Samgurali Tskaltubo / FK Pardubice B
-688079,2024,23,22,7.7,1.SK Prostejov / FK Pardubice B
-688079,2025,24,3,1.3,1.SK Prostejov
 1038907,2022,18,4,2.4,Bahia
 1038907,2023,19,6,4.0,Bahia
 1038907,2024,20,3,1.3,Kawasaki Frontale
@@ -12393,6 +13545,8 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 990532,2023,21,7,0.5,Resende
 990532,2024,22,2,1.0,Madureira
 1084353,2025,22,5,1.0,Rio Branco-AC
+1083606,2024,22,2,0.6,Santa Rosa
+1083606,2025,23,1,0.2,Inhumas
 740158,2026,24,3,0.6,Real Brasília
 503052,2017,17,7,5.6,Club Atlético Tucumán
 503052,2018,18,7,3.7,Club Atlético Tucumán
@@ -12530,6 +13684,7 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 791405,2025,27,1,0.3,Atlético de Alagoinhas
 1083220,2025,21,2,0.4,Serra Branca
 980563,2021,19,1,0.3,Ceará
+1114546,2026,25,1,0.2,Fluminense-PI
 942096,2021,19,8,2.4,Chapecoense
 942096,2022,20,3,0.9,Chapecoense
 942096,2023,21,31,9.7,Barra / Académico Viseu FC
@@ -12604,12 +13759,6 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 892091,2024,23,46,35.9,Juventude
 892091,2025,24,41,27.3,Juventude
 892091,2026,25,34,19.2,Juventude
-678853,2021,19,1,0.5,Corinthians
-678853,2022,20,1,1.0,Corinthians
-678853,2023,21,31,31.2,Corinthians
-678853,2024,22,12,10.2,Corinthians
-678853,2025,23,25,17.6,Ceará
-678853,2026,24,41,17.1,Ceará
 1005642,2023,20,2,3.2,Corinthians
 1005642,2024,21,22,24.0,Corinthians
 1005642,2025,22,34,28.0,Corinthians
@@ -12644,11 +13793,6 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 728267,2023,21,17,3.4,Aimoré / Camboriú
 728267,2025,23,13,3.3,Paraná / Santa Cruz
 728267,2026,24,20,4.6,Operário-MS
-607035,2022,21,17,2.5,Grêmio Esportivo Juventus
-607035,2023,22,13,2.4,AD Fafe
-607035,2024,23,6,1.0,AD Fafe / Leça FC
-607035,2025,24,26,4.0,Leça FC
-607035,2026,25,10,1.4,Leça FC
 983119,2022,22,4,1.6,Villa Nova
 983119,2023,23,6,1.8,Juazeirense
 983119,2024,24,9,1.8,Gama
@@ -12810,14 +13954,6 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 876343,2024,23,44,23.8,Cuiabá
 876343,2025,24,43,18.5,Cuiabá
 876343,2026,25,22,10.7,Sport / Chapecoense
-638305,2019,18,39,15.6,Náutico
-638305,2020,19,16,6.7,Náutico
-638305,2021,20,7,5.3,Flamengo
-638305,2022,21,13,5.1,Houston Dynamo FC 2 / Houston Dynamo FC
-638305,2023,22,26,9.1,CSA / Sampaio Correa-MA
-638305,2024,23,31,6.9,Treze / Flamengo
-638305,2025,24,51,25.8,CRB / Flamengo
-638305,2026,25,36,17.1,CRB
 876739,2022,21,2,1.0,Flamengo
 876739,2023,22,37,44.9,Flamengo
 876739,2024,23,12,11.7,Flamengo
@@ -12999,6 +14135,10 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 792654,2024,23,25,4.5,Atlético-CE / Horizonte
 792654,2025,24,23,3.4,Horizonte / Ferroviário
 792654,2026,25,7,2.1,Horizonte
+1003446,2020,18,2,0.6,Joinville
+1003446,2024,22,13,2.8,Brasil de Pelotas
+1003446,2025,23,12,2.9,Azuriz
+1003446,2026,24,15,5.0,Piauí
 792653,2025,23,16,2.9,Sergipe / Colo Colo FR
 792653,2026,24,22,6.3,Primavera-MT / Barcelona-BA
 792645,2020,20,2,0.6,Guarany de Sobral
@@ -13007,6 +14147,12 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 792645,2024,24,7,2.1,Barcelona-BA
 792645,2025,25,8,1.6,Associação Jaguaré EC
 792645,2026,26,7,2.1,Cametá
+723175,2020,19,1,0.3,Náutico
+723175,2021,20,1,0.4,Náutico
+723175,2022,21,2,0.4,Confiança
+723175,2023,22,6,1.8,Maguary
+723175,2025,24,17,4.0,Maguary / Manauara
+723175,2026,25,7,1.9,Maguary / Central
 668233,2025,22,9,4.2,Madureira / AD Marco 09
 668233,2026,23,19,4.3,Madureira
 985361,2024,21,19,1.5,FC Samgurali Tskaltubo
@@ -13060,12 +14206,6 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 863104,2023,22,7,1.9,Londrina
 863104,2024,23,15,2.6,Aparecidense
 863104,2026,25,3,0.3,CRAC
-825849,2020,19,1,0.7,Goiás
-825849,2021,20,16,5.1,Goiás
-825849,2023,22,1,0.1,São Joseense
-825849,2024,23,9,2.3,Vila Nova
-825849,2025,24,15,2.5,Goianésia
-825849,2026,25,4,1.6,Boavista
 838717,2020,20,3,2.1,Goiás
 838717,2021,21,10,5.4,Goiás / América SAF-RN
 838717,2023,23,11,2.0,Nova Mutum
@@ -13088,8 +14228,6 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 863119,2023,23,3,2.5,Goiás
 863119,2025,25,11,0.8,Southern District
 863119,2026,26,8,0.6,Southern District
-1366506,2025,24,8,1.6,Sport Sinop
-1366506,2026,25,10,2.5,Andraus / CSE
 1370292,2025,24,13,2.4,Imperatriz
 1370292,2026,25,8,0.7,Sampaio Correa-MA
 863120,2021,20,1,0.2,Goiás
@@ -13221,12 +14359,6 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 982545,2024,22,15,5.3,Ethnikos Achna
 982545,2025,23,21,7.5,Ethnikos Achna
 982545,2026,24,23,5.7,Ethnikos Achna / Dinamo Tbilisi
-796787,2020,19,3,1.5,Mirassol
-796787,2021,20,3,1.2,Internacional
-796787,2022,21,7,2.3,Operário-PR
-796787,2023,22,12,2.9,Hercílio Luz
-796787,2024,23,15,4.7,Villa Nova / AD Fafe
-796787,2025,24,11,3.0,AD Fafe
 868080,2021,19,3,1.2,Internacional
 868080,2022,20,10,3.1,Ypiranga / GD Estoril Praia
 868080,2023,21,8,1.7,Ypiranga
@@ -13281,6 +14413,35 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 796788,2025,22,6,0.5,Melaka FC
 796788,2026,23,8,1.6,Várzea Grande
 1083636,2024,21,2,1.0,Miami FC
+695232,2020,19,7,0.7,Joinville
+695232,2021,20,27,5.8,Joinville / Bahia
+695232,2022,21,41,16.5,Chapecoense / Joinville
+695232,2023,22,29,15.9,São Bernardo / Ceará
+695232,2024,23,46,27.8,Sport
+695232,2025,24,48,18.7,Sport
+695232,2026,25,47,24.1,Sport
+695234,2021,21,4,0.9,Joinville
+695234,2022,22,3,0.9,Joinville
+695234,2024,24,13,1.4,Princesa do Solimões
+695234,2025,25,14,1.5,Luverdense
+695234,2026,26,21,3.1,Luverdense
+695180,2020,20,3,0.9,Joinville
+695180,2021,21,1,0.3,Joinville
+695180,2022,22,7,0.9,Sport Sinop / Ação
+695180,2023,23,8,1.6,Cacerense
+695180,2024,24,1,0.3,Atlético de Alagoinhas
+695180,2025,25,7,1.2,Academia FC / Operário-MT
+695180,2026,26,6,1.2,Primavera-MT
+880120,2021,20,2,0.6,Joinville
+880120,2023,22,5,0.9,CD Trofense / Operário-MS
+880120,2024,23,8,1.5,CD Trofense
+880120,2025,24,3,0.7,CD Trofense
+878023,2022,20,1,0.3,Joinville
+878023,2024,22,3,0.7,Joinville / Cianorte
+1001065,2020,18,2,0.6,Joinville
+1001065,2021,19,1,0.3,Joinville
+878036,2021,21,2,0.6,Joinville
+494835,2026,27,3,0.2,Cascavel
 868101,2021,20,50,39.8,Juventude
 868101,2022,21,46,39.4,Bragantino-SP
 868101,2023,22,46,47.5,Bragantino-SP
@@ -13318,6 +14479,73 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 678855,2019,19,2,0.4,Real Noroeste
 678855,2022,22,1,0.1,Real Noroeste
 740409,2024,23,1,0.2,Primavera-MT
+740498,2020,20,16,3.1,Ferroviária / Londrina
+740498,2021,21,13,5.8,Ferroviária / Leixões SC
+740498,2022,22,19,8.5,Leixões SC / Portimonense SAD
+740498,2023,23,30,18.2,SC Farense
+740498,2024,24,32,18.2,SC Farense
+740498,2025,25,36,15.4,SC Farense / CSKA Sofia
+740498,2026,26,44,18.1,CSKA Sofia
+1091519,2023,21,7,0.9,São Joseense
+1091519,2024,22,21,4.2,Chornomorets Odesa / São Joseense
+1091519,2025,23,6,1.3,Chornomorets Odesa / Brusque
+1091519,2026,24,2,0.4,Treze
+743727,2020,20,4,1.1,Londrina
+743727,2023,23,5,1.5,Azuriz
+743727,2024,24,1,0.2,Porto Vitória
+743727,2025,25,5,1.5,Petrolina
+743727,2026,26,11,2.2,Chapada / Aquidauana
+677851,2020,20,1,0.3,Londrina
+677851,2023,23,8,1.6,Serra Branca
+677851,2024,24,2,0.6,Afogados
+677851,2025,25,12,1.4,FK Babrungas Plunge / Batalhão-TO
+677851,2026,26,12,0.6,KS Burreli / FK Babrungas Plunge
+1092339,2026,25,3,0.6,Inhumas
+980188,2022,22,3,0.6,Unaí EC
+980188,2023,23,3,0.9,Jacobinense EC
+980188,2025,25,8,1.6,Samambaia
+980188,2026,26,2,0.4,Samambaia
+741100,2022,21,3,0.4,Cascavel
+741100,2023,22,4,1.0,Athletic-MG
+741100,2024,23,11,0.9,Costa Rica
+741100,2025,24,3,0.7,FC Yala / Muang Trang United
+1093993,2026,24,7,1.4,Costa Rica
+892090,2021,19,4,1.1,Mirassol
+867461,2021,20,8,2.8,Novorizontino
+867461,2022,21,26,11.8,Novorizontino
+867461,2023,22,32,17.7,Novorizontino
+867461,2024,23,25,26.5,Novorizontino / Palmeiras
+867461,2025,24,41,25.7,Ceará / Novorizontino
+867461,2026,25,50,30.9,Novorizontino
+1096821,2025,23,13,2.6,Primavera-MT
+1096821,2026,24,3,0.4,Porto-BA
+796790,2020,19,4,1.6,Mirassol
+980910,2022,22,4,0.3,São Paulo Crystal
+980910,2023,23,1,0.2,Comercial-PI
+1468708,2025,24,1,0.2,Ivinhema
+740406,2020,20,2,0.6,Náutico
+740406,2021,21,4,0.4,Cianorte
+740406,2022,22,16,2.9,Portuguesa-RJ / Cianorte
+740406,2023,23,12,3.0,São Bernardo
+740406,2024,24,24,6.7,Sampaio Correa-MA / São José-RS
+740406,2025,25,12,2.6,Pouso Alegre / Velo Clube
+740406,2026,26,17,2.1,Sampaio Correa-MA / Atlético Piauiense
+1009131,2022,20,2,0.3,Atlético-CE
+1009131,2023,21,21,3.1,Atlético-CE
+1009131,2024,22,8,2.4,Maguary / Londrina
+1009131,2025,23,10,0.8,Iguatu
+1009131,2026,24,15,3.1,Quinho / América SAF-RN
+638302,2024,23,6,1.2,Vitória-ES
+638302,2025,24,3,0.6,Vitória-ES
+638302,2026,25,4,0.8,Santa Cruz-RN
+978853,2022,22,1,0.2,Nacional-AM
+978853,2024,24,4,0.8,Pombal
+978853,2025,25,5,1.0,Nacional de Patos
+978853,2026,26,3,0.6,Parnahyba / Real Noroeste
+1238698,2024,23,3,0.6,São Paulo Crystal
+1467928,2022,22,2,0.4,SERC
+894454,2021,20,1,0.3,Retrô
+1369661,2025,23,1,0.2,River-PI
 627230,2021,19,11,8.0,Palmeiras
 627230,2022,20,6,12.2,Palmeiras
 627230,2023,21,40,52.7,Palmeiras
@@ -13427,6 +14655,10 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 858077,2024,23,10,1.0,Cianorte
 858077,2025,24,6,1.8,Rio Branco-PR
 858077,2026,25,12,1.9,CRAC
+985397,2023,21,28,2.4,FC Gagra / Concórdia
+985397,2024,22,16,1.4,Novo Hamburgo / Santa Cruz
+985397,2025,23,31,2.0,FC Gagra / FC Samtredia
+985397,2026,24,36,2.6,FC Gagra
 796742,2021,18,2,2.6,Palmeiras
 796742,2023,20,5,3.6,Vålerenga Fotball Elite
 796742,2024,21,1,0.5,Novorizontino
@@ -13450,6 +14682,39 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 831129,2025,22,1,0.4,Betim
 831129,2026,23,4,0.4,Betim
 813121,2026,24,2,0.3,FC Alverca B
+887271,2021,20,22,4.8,Paraná
+887271,2022,21,21,10.7,CRB
+887271,2023,22,8,2.8,Madureira / São Joseense
+887271,2024,23,10,2.7,São Joseense / Ferroviário
+887271,2025,24,13,5.2,Pelotas
+887271,2026,25,19,4.2,Democrata-GV
+738525,2021,21,8,0.7,Rio Branco-PR / Paraná
+738525,2022,22,20,3.5,Aimoré / Rio Branco-PR
+738525,2023,23,16,5.6,Aimoré / Londrina
+738525,2024,24,5,2.6,Vila Nova
+738525,2025,25,11,1.0,Cascavel
+738525,2026,26,5,2.5,Boavista
+899061,2021,21,11,1.0,Rio Branco-PR / Paraná
+899061,2022,22,11,2.7,Paraná
+899061,2023,23,2,0.6,Aruko Sports Brasil
+899061,2024,24,11,2.1,Operário-MT
+899061,2025,25,14,2.6,Operário-MT
+899061,2026,26,13,1.1,Operário-MT
+580537,2018,18,1,0.2,Savona FBC
+580537,2021,21,5,0.9,Paraná
+580537,2022,22,1,0.1,Paraná
+580537,2023,23,1,0.3,Londrina
+580537,2024,24,5,1.1,1.SC Znojmo FK
+580537,2025,25,12,1.2,US Angri 1927 / Chieti FC 1922
+580537,2026,26,10,2.1,Chieti FC 1922
+1095651,2023,21,1,0.3,Hercílio Luz
+1095651,2025,23,10,4.0,Pelotas
+738523,2020,20,2,0.6,Paraná
+738523,2021,21,6,1.2,Paraná
+738523,2022,22,4,1.2,Paraná
+981151,2022,20,5,1.5,Concórdia
+981151,2024,22,9,1.3,Penya Encarnada d'Andorra
+931002,2021,20,1,0.1,Paraná
 859135,2021,20,28,14.1,Ponte Preta
 859135,2022,21,46,22.3,Ponte Preta
 859135,2023,22,30,11.1,Ponte Preta
@@ -13483,6 +14748,62 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 876001,2024,22,9,0.9,Cianorte
 876001,2025,23,16,2.9,Cianorte / Monte Azul
 876001,2026,24,3,0.9,Cianorte
+978317,2022,21,15,4.2,Figueirense
+978317,2023,22,9,1.8,Gama
+978317,2026,25,15,3.0,Bataguassu
+1015976,2021,21,8,1.0,Portuguesa-SP
+1015976,2023,23,15,5.9,Volta Redonda
+1015976,2024,24,2,1.0,Volta Redonda
+1238737,2024,24,5,1.0,Atlético-PB
+1238737,2025,25,17,3.1,Jequié / Porto-BA
+1238737,2026,26,8,1.9,Porto-BA
+934992,2021,20,9,3.0,Akritas Chloraka
+934992,2022,21,1,0.3,Akritas Chloraka
+1099078,2023,21,3,1.5,Portuguesa-SP
+1099078,2026,24,5,1.3,CRAC / Boavista
+1151305,2020,19,10,1.2,Nacional-PR
+1113618,2023,23,2,1.0,Portuguesa-SP
+1473682,2023,23,4,0.8,Comercial-MS
+1276794,2024,22,4,0.2,Ipatinga
+745349,2020,19,1,0.3,Santa Cruz
+745349,2021,20,27,9.3,Santa Cruz
+745349,2022,21,15,1.6,FK Spartaks Jurmala
+745349,2023,22,24,6.0,Valmiera FC / FC RFS II
+745349,2024,23,35,6.8,Borneo FC Samarinda / Valmiera FC
+745349,2025,24,25,11.5,Genclerbirligi Ankara / Operário-PR
+745349,2026,25,41,14.9,Fagiano Okayama / Operário-PR
+740299,2020,20,31,11.7,Santa Cruz
+740299,2021,21,16,8.7,Atlético-GO / Santa Cruz
+740299,2022,22,27,8.6,Operário-PR / Mirassol
+740299,2023,23,2,1.0,Ferroviária
+740299,2024,24,18,4.4,Confiança
+740299,2025,25,40,10.8,Paysandu / Confiança
+740299,2026,26,21,3.0,Ponte Preta
+745166,2019,18,2,0.2,São Raimundo-RR
+745166,2020,19,9,3.6,Santa Cruz
+745166,2021,20,13,4.4,Santa Cruz
+745166,2022,21,10,3.2,Santa Cruz / São Raimundo-RR
+745166,2023,22,4,0.3,São Raimundo-RR
+745166,2024,23,6,1.8,Central
+745166,2025,24,4,0.5,GA Sampaio
+745166,2026,25,14,3.5,GA Sampaio / São Raimundo-RR
+723171,2020,20,3,0.6,São Paulo Crystal / ASSU
+723171,2021,21,16,4.7,Santa Cruz
+723171,2022,22,6,1.4,Santa Cruz
+723171,2023,23,16,3.2,XV de Piracicaba / Ypiranga
+723171,2024,24,4,0.3,Novo Hamburgo
+723171,2025,25,15,1.6,Sergipe
+904196,2023,20,3,0.5,Santa Cruz / Belo Jardim
+904196,2024,21,1,0.3,Santa Cruz
+904196,2025,22,3,1.9,FC Slavia Karlovy Vary
+904196,2026,23,17,3.6,FK Teplice B
+723638,2020,18,3,1.7,Santa Cruz
+723638,2021,19,5,2.3,Santa Cruz
+723638,2022,20,1,0.3,Náutico
+864511,2020,20,1,0.2,São Paulo Crystal
+864511,2022,22,7,2.1,Sete de Setembro-PE
+864511,2025,25,8,1.0,Thanh Hoa FC
+1094859,2023,20,2,0.4,Globo
 743598,2020,16,3,3.1,Santos
 743598,2021,17,48,52.1,Santos
 743598,2022,18,46,38.7,Santos
@@ -13490,12 +14811,6 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 743598,2024,20,24,20.1,Al-Nassr FC / RC Strasbourg Alsace
 743598,2025,21,43,30.5,Al-Nassr FC
 743598,2026,22,34,24.4,Al-Nassr FC
-816144,2021,20,2,1.0,Santos
-816144,2022,21,41,36.7,Santos
-816144,2023,22,27,18.9,Santos / Coritiba
-816144,2024,23,56,42.9,Juventude
-816144,2025,24,40,39.0,Bragantino-SP
-816144,2026,25,47,50.4,Bragantino-SP
 978269,2021,21,11,3.3,Maringá
 978269,2022,22,48,21.4,Londrina / Maringá
 978269,2023,23,17,4.8,Maringá / Coritiba
@@ -13588,6 +14903,21 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 1090788,2025,22,2,0.6,Cariri
 984742,2021,21,9,0.5,Rio Branco-PR / Atlético Gloriense
 884126,2023,23,1,0.3,Sport
+818682,2021,20,26,5.5,US Levico Terme / Sona Calcio
+818682,2022,21,23,4.9,US Levico Terme
+818682,2023,22,4,0.8,US Levico Terme
+981358,2020,20,3,0.6,CE Dom Bosco
+981358,2021,21,9,1.8,CE Dom Bosco
+981358,2022,22,7,1.4,CE Dom Bosco
+986969,2022,21,12,1.9,São Bernardo
+986969,2023,22,1,0.5,São Bernardo
+986969,2026,25,4,0.8,Aquidauana
+1074465,2023,22,2,0.2,Operário-MT
+1074465,2024,23,5,0.8,Sousa
+1074465,2025,24,4,1.3,Sousa
+1074465,2026,25,1,0.7,Sousa
+1094714,2024,21,3,0.6,Rio Branco-ES
+1094714,2026,23,11,2.2,Quinho
 872171,2022,19,4,4.6,São Paulo
 872171,2023,20,48,46.2,São Paulo
 872171,2024,21,38,70.3,Paris Saint-Germain
@@ -13707,10 +15037,31 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 668229,2024,21,3,1.1,Bangu / Portuguesa-RJ
 668229,2026,23,12,1.8,Falcon / CD Santa Clara B
 977701,2025,22,8,1.6,Galvez
+978177,2022,21,3,1.0,Athletic-MG / Manauara
 1083963,2023,20,1,0.5,Vasco
 1083963,2025,22,3,0.3,Bulgan SP Falcons
 1083887,2025,22,1,0.5,Vasco
 1226330,2025,21,1,0.1,Horizonte
+740500,2020,20,25,6.3,Vila Nova / Operário-MT
+740500,2021,21,22,7.3,Tombense / Vila Nova
+740500,2022,22,5,2.1,Tombense / FC Porto B
+740500,2023,23,13,4.5,Tombense / Aparecidense
+740500,2024,24,5,1.6,Aparecidense / Vila Nova
+740500,2025,25,30,6.7,Cianorte / Avenida
+740500,2026,26,37,10.6,Maringá
+727750,2021,20,11,2.2,Operário-MS
+727750,2022,21,7,1.4,Águia Negra
+727750,2024,23,6,1.2,Coxim AC
+727750,2025,24,6,1.8,Capitão Poço
+727750,2026,25,6,1.2,Macapá
+1081282,2021,21,1,0.2,Vasco-AC
+1081282,2022,22,1,0.4,NK Medjimurje Cakovec
+1081282,2023,23,1,0.2,HNK Tomislav T.
+1081282,2024,24,1,0.2,HNK Tomislav T.
+1081282,2025,25,1,0.2,NK Jedinstvo Bihac
+1081282,2026,26,5,1.0,Rio Branco-AC
+723205,2021,20,10,1.9,Gama
+1075622,2022,21,1,0.4,NK Nedelisce
 830365,2021,19,12,5.7,Vitória-BA
 830365,2022,20,21,5.6,Vitória-BA
 830365,2023,21,25,8.2,Náutico / Vitória-BA
@@ -13809,10 +15160,6 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 1032452,2024,23,27,4.7,AD Nueve de Octubre
 1032452,2025,24,4,0.3,Universidad César Vallejo
 1032452,2026,25,13,2.3,AD Nueve de Octubre
-864986,2021,19,3,0.6,Vila Nova
-864986,2022,20,7,3.2,Vila Nova
-864986,2023,21,7,1.4,Goiânia
-864986,2026,24,12,5.4,Pouso Alegre / Botafogo-PB
 889487,2021,19,3,1.1,CSA
 889487,2023,21,13,4.8,CSA
 889487,2024,22,11,2.0,CSA / Santo André
@@ -13837,6 +15184,9 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 939295,2026,23,6,1.8,Bahia de Feira
 965636,2022,20,6,2.0,Atlético-GO
 965636,2023,21,10,3.0,Operário-PR
+977724,2021,18,2,1.4,Vila Nova
+977724,2025,22,2,0.4,Gurupi
+977724,2026,23,9,1.8,Gurupi
 1306820,2021,18,9,3.6,Atlético-GO
 980980,2024,22,3,0.6,UD Santarém
 980980,2025,23,7,2.5,Pouso Alegre
@@ -14116,7 +15466,6 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 1083216,2026,22,12,0.7,Atlético-CE / Imperatriz
 733337,2024,22,1,0.2,Tombense
 733337,2026,24,1,0.1,Brasil de Pelotas
-1114546,2026,25,1,0.2,Fluminense-PI
 1083211,2025,21,1,0.2,América SAF-RN
 1237704,2024,21,2,0.1,1.FCA Darmstadt
 964596,2021,18,2,0.6,Chapecoense
@@ -14162,14 +15511,6 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 722615,2024,23,34,8.8,América SAF-RN
 722615,2025,24,24,7.5,Caxias
 722615,2026,25,31,11.5,Volta Redonda
-659732,2018,17,3,0.4,Belo Jardim
-659732,2019,18,3,0.6,Vila Nova
-659732,2020,19,3,0.6,Vila Nova
-659732,2022,21,29,4.7,Afogados / Moto Club
-659732,2023,22,23,3.8,Fujieda MYFC
-659732,2024,23,13,2.0,Fujieda MYFC
-659732,2025,24,23,3.5,Fujieda MYFC
-659732,2026,25,18,4.9,Botafogo-PB / Lamphun Warriors
 1005641,2020,18,18,3.1,Globo
 1005641,2021,19,5,1.0,Globo
 1005641,2024,22,17,3.1,Santa Cruz-RN / Marcílio Dias
@@ -14181,6 +15522,10 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 1135708,2026,25,13,3.7,FK Csikszereda Miercurea Ciuc
 1130651,2026,23,4,0.8,Genus
 1005648,2024,21,4,0.4,Manaus
+1003423,2020,18,6,0.7,Tubarão
+1003423,2024,22,5,1.0,Luverdense
+1003423,2025,23,21,4.2,Luverdense
+1003423,2026,24,29,4.1,Luverdense
 943837,2021,16,5,2.5,Cruzeiro
 943837,2022,17,47,52.5,Athletico-PR / Cruzeiro
 943837,2023,18,47,51.8,Athletico-PR
@@ -14297,20 +15642,10 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 1001686,2024,23,30,9.2,Beroe
 1001686,2025,24,31,8.5,Beroe
 1001686,2026,25,11,2.1,Beroe
-1003446,2020,18,2,0.6,Joinville
-1003446,2024,22,13,2.8,Brasil de Pelotas
-1003446,2025,23,12,2.9,Azuriz
-1003446,2026,24,15,5.0,Piauí
 1093497,2023,20,8,1.7,Floresta
 1093497,2024,21,12,3.0,Floresta
 1093497,2025,22,7,2.1,Floresta
 1093497,2026,23,8,2.4,Floresta
-723175,2020,19,1,0.3,Náutico
-723175,2021,20,1,0.4,Náutico
-723175,2022,21,2,0.4,Confiança
-723175,2023,22,6,1.8,Maguary
-723175,2025,24,17,4.0,Maguary / Manauara
-723175,2026,25,7,1.9,Maguary / Central
 1082787,2024,21,3,0.8,Bahia de Feira / Baraúnas
 1082787,2025,22,22,3.6,Ivinhema / Operário-MS
 1082787,2026,23,15,2.7,Ivinhema / Volta Redonda
@@ -14452,10 +15787,6 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 991801,2024,21,13,6.9,Vila Nova
 991801,2025,22,2,0.3,Al-Bataeh CSC
 991801,2026,23,17,2.2,Al-Bataeh CSC
-985397,2023,21,28,2.4,FC Gagra / Concórdia
-985397,2024,22,16,1.4,Novo Hamburgo / Santa Cruz
-985397,2025,23,31,2.0,FC Gagra / FC Samtredia
-985397,2026,24,36,2.6,FC Gagra
 973569,2022,21,30,27.7,Santos
 973569,2023,22,38,19.4,Ludogorets Razgrad / Santos
 973569,2024,23,53,32.4,Ludogorets Razgrad
@@ -14484,7 +15815,7 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 990812,2023,22,25,3.4,FK Maktaaral
 990812,2024,23,27,5.5,Zhetysu Taldykorgan / Debreceni VSC
 990812,2025,24,29,6.4,Tobol Kostanay
-990812,2026,25,8,0.9,KF Skënderbeu
+990812,2026,25,9,1.0,KF Skënderbeu
 984093,2025,22,17,6.2,Vitória Guimarães SC B / Leixões SC
 984093,2026,23,23,13.8,Vitória Guimarães SC / Vitória Guimarães SC B
 1095566,2024,21,16,7.3,Operário-PR
@@ -14656,7 +15987,6 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 1083971,2025,21,8,4.1,Avaí / Vasco
 1018610,2024,21,4,0.8,Porto Vitória
 1018610,2026,23,7,0.4,Porto-BA
-978177,2022,21,3,1.0,Athletic-MG / Manauara
 1100474,2026,21,5,1.0,Potiguar
 987717,2025,22,7,0.6,Anadia FC
 973392,2022,21,3,0.4,Tacuary Football Club
@@ -14755,9 +16085,6 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 1086261,2023,20,1,0.1,Camboriú
 1086261,2025,22,6,1.2,Batalhão-TO
 1086261,2026,23,7,1.3,Capital-TO
-977724,2021,18,2,1.4,Vila Nova
-977724,2025,22,2,0.4,Gurupi
-977724,2026,23,9,1.8,Gurupi
 1082529,2023,19,3,1.3,Atlético-GO
 1082529,2024,20,2,0.4,Cascavel
 1082529,2025,21,4,0.3,Cascavel
@@ -14788,6 +16115,9 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 1083069,2024,20,18,11.1,CD Nacional / Atlético-MG
 1083069,2025,21,14,8.9,CD Nacional / Atlético-MG
 1083069,2026,22,12,5.8,NK Istra 1961 / Hellas Verona
+977723,2022,18,4,0.8,Vila Nova
+977723,2024,20,7,3.9,Vila Nova
+977723,2025,21,6,0.4,Goiânia
 1082521,2025,21,3,3.0,Bragantino-SP
 1083077,2025,22,7,1.0,SC Salgueiros / Maguary
 1083077,2026,23,10,0.9,SC Salgueiros
@@ -14914,8 +16244,6 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 1083608,2026,23,4,1.6,Boavista
 1083611,2026,23,9,3.6,União Recreativa dos Trabalhadores
 1083612,2025,21,4,1.2,São Joseense
-1083606,2024,22,2,0.6,Santa Rosa
-1083606,2025,23,1,0.2,Inhumas
 1084354,2024,22,6,0.5,Avenida
 794707,2020,16,1,0.1,Inter Miami CF II
 794707,2024,20,1,0.2,Boyacá Chicó FC
@@ -15003,10 +16331,6 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 902526,2021,19,9,0.6,Esportivo
 902526,2023,21,7,2.2,Brasil de Pelotas
 902526,2025,23,1,0.3,FK Sabail
-741100,2022,21,3,0.4,Cascavel
-741100,2023,22,4,1.0,Athletic-MG
-741100,2024,23,11,0.9,Costa Rica
-741100,2025,24,3,0.7,FC Yala / Muang Trang United
 795952,2020,17,4,0.5,Itabaiana
 795952,2021,18,1,0.7,Confiança
 1083214,2025,23,4,1.2,Cariri
@@ -15084,10 +16408,6 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 1090821,2024,20,2,0.9,Coritiba
 1090821,2025,21,10,4.0,Coritiba
 1090821,2026,22,16,7.4,Atlético-GO / Coritiba
-1003423,2020,18,6,0.7,Tubarão
-1003423,2024,22,5,1.0,Luverdense
-1003423,2025,23,21,4.2,Luverdense
-1003423,2026,24,29,4.1,Luverdense
 1024601,2023,22,2,0.8,Pouso Alegre
 1024601,2024,23,9,3.3,Brasil de Pelotas
 1024601,2026,25,1,0.2,Operário-MT
@@ -15176,6 +16496,8 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 1033501,2024,21,18,4.3,Internacional de Lages / CSA
 1033501,2025,22,37,16.1,Cuiabá
 1033501,2026,23,45,17.8,Cuiabá
+987944,2025,22,3,0.6,CRAC
+987944,2026,23,7,1.4,Centro Oeste
 1075074,2022,20,2,1.4,Cuiabá
 931007,2022,19,1,0.5,Volta Redonda
 931007,2023,20,3,1.5,Flamengo
@@ -15270,6 +16592,8 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 1082774,2023,18,2,2.5,Fortaleza
 1082774,2025,20,45,22.1,Athletic-MG / FC Alverca
 1082774,2026,21,22,19.8,Genoa CFC / FC Alverca
+1093927,2025,21,12,6.7,Novorizontino
+1093927,2026,22,32,19.2,Novorizontino
 793590,2020,19,3,0.9,Volta Redonda
 793590,2021,20,15,6.0,Volta Redonda
 793590,2023,22,13,4.5,Volta Redonda / Operário-MT
@@ -15426,6 +16750,11 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 950392,2026,22,2,0.4,Santos-AP
 982548,2024,20,1,0.2,FC Maia Lidador
 982548,2026,22,8,0.1,Tochigi City U25
+1144824,2021,20,4,1.2,Toledo
+1144824,2024,23,7,2.1,Ipatinga
+1144824,2026,25,22,5.6,Internacional-SM / Brasil de Pelotas
+1464329,2024,22,4,0.8,SE Santa Maria
+1093322,2026,24,1,0.2,Inter de Limeira
 1053933,2022,17,11,4.6,Juventude
 1053933,2023,18,33,18.8,Juventude
 1053933,2024,19,26,12.9,Portimonense SAD / Juventude
@@ -15451,6 +16780,117 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 747322,2026,22,7,0.8,Gandzasar Kapan
 1219295,2025,21,1,0.3,Pramen Kovacova
 1219295,2026,22,9,0.3,Gandzasar Kapan
+1042361,2022,19,14,7.3,Londrina
+1042361,2023,20,24,6.7,Londrina
+1042361,2024,21,28,5.9,Londrina / Cascavel
+1042361,2025,22,24,3.8,Cianorte / Cascavel
+1042361,2026,23,16,4.3,Paysandu / Ponte Preta
+1045599,2022,18,1,0.5,Londrina
+1045599,2023,19,18,5.1,Londrina
+1045599,2024,20,25,8.3,Londrina / Cascavel
+1045599,2025,21,15,5.6,Al-Taawoun FC / Amazonas
+1045599,2026,22,14,5.0,Al-Taawoun FC / Ajman Club
+983843,2023,20,21,5.7,Londrina
+983843,2024,21,19,5.4,Cascavel / Londrina
+983843,2025,22,3,1.7,CD Santa Clara
+983843,2026,23,4,3.9,CD Santa Clara / CD Santa Clara B
+983844,2022,20,1,0.3,Londrina
+983844,2023,21,3,0.9,Londrina
+983844,2024,22,44,5.0,FC Samtredia / PSTC
+983844,2025,23,23,2.6,Dinamo Tbilisi
+983844,2026,24,31,7.2,Okzhetpes Kokshetau
+906347,2020,18,10,0.6,Tubarão
+906347,2021,19,1,0.3,Londrina
+906347,2022,20,1,0.3,Londrina
+906347,2023,21,5,1.5,Londrina
+906347,2024,22,6,1.8,Andraus
+906347,2025,23,1,0.3,Barcelona-BA
+1091134,2026,22,23,4.1,Bataguassu / Operário-MS
+666962,2021,19,2,0.6,Londrina
+666962,2022,20,2,0.6,Londrina
+666962,2024,22,12,1.0,Guarda FC
+666962,2025,23,10,0.8,Guarda FC
+1223391,2025,23,8,2.3,São Francisco-PA / Tocantinópolis
+1223391,2026,24,3,0.6,Tocantinópolis
+1094761,2026,23,18,2.9,União Rondonópolis EC
+1091139,2023,21,5,0.7,São Joseense / Londrina
+1091139,2024,22,3,0.9,Londrina
+1091139,2026,24,3,0.9,Foz do Iguaçu
+1042362,2026,22,3,0.6,Bataguassu
+1004063,2025,23,14,1.7,Santa Cruz-RN / Laguna
+1004063,2026,24,15,3.6,Castanhal / Sousa
+1065802,2024,20,4,2.0,Mirassol
+1065802,2026,22,3,1.1,Noroeste
+1090809,2023,19,1,0.3,Porto-PE
+1090809,2024,20,4,1.2,Porto-PE
+1090809,2025,21,4,0.8,Nacional de Patos
+978386,2022,21,6,1.2,Manaus
+1037703,2022,20,9,0.3,SC Austria Lustenau II
+937344,2021,19,1,0.2,Mirassol
+1093922,2023,20,2,1.1,Novorizontino
+1093922,2024,21,41,23.8,Novorizontino
+1093922,2025,22,9,7.4,Santos
+1093922,2026,23,34,14.0,Goiás
+898976,2021,20,3,1.0,Novorizontino
+898976,2024,23,11,3.3,PSTC
+898976,2025,24,25,5.0,Ferroviário / Rio Branco-PR
+898976,2026,25,9,2.3,Ypiranga
+1093929,2024,21,21,2.8,Inter de Limeira / Novorizontino
+1093929,2025,22,26,3.5,Boavista / FC Van
+1093929,2026,23,35,4.8,Iberia 1999 Tbilisi
+1082603,2025,22,11,2.3,Tombense / Bragantino-SP
+1082603,2026,23,8,2.4,Londrina
+1052970,2023,19,1,0.4,Académico Viseu FC
+1052970,2024,20,1,0.4,Académico Viseu FC
+1052970,2025,21,4,1.8,Académico Viseu FC
+1052970,2026,22,8,1.6,Varzim SC / Académico Viseu FC
+1096813,2025,22,14,2.8,Pinheiro-MA
+1145197,2021,18,12,2.4,C.E.U. ABC
+1092121,2025,22,5,1.0,Laguna
+1092121,2026,23,7,1.4,Bataguassu
+1220351,2025,22,12,0.9,Brasil de Pelotas
+897012,2026,23,2,0.4,Capital-TO
+1093923,2025,22,2,0.4,Ivinhema
+867521,2023,20,13,5.0,Náutico
+867521,2024,21,11,2.3,FK Gomel / Treze
+867521,2025,22,13,3.5,FK Gomel / FC Sheriff Tiraspol
+1092863,2023,19,7,3.6,Náutico
+1092863,2025,21,8,0.5,Monte Azul
+1092863,2026,22,22,5.0,Decisão / IAPE
+976602,2022,21,2,0.4,Náutico / Al-Dhaid SC
+976602,2023,22,1,0.1,Al-Dhaid SC
+976602,2024,23,16,3.0,Afogados / Petrolina
+976602,2025,24,4,0.8,Tocantinópolis
+976602,2026,25,13,3.5,Tocantinópolis
+1010291,2022,20,1,0.3,Náutico
+1010291,2023,21,2,1.0,Náutico
+1010291,2026,24,18,6.2,Tombense
+1092865,2025,23,10,3.1,Jaguar / Náutico
+1092865,2026,24,6,1.8,Jaguar
+1091500,2023,20,4,1.2,Belo Jardim
+1091500,2024,21,5,1.0,Pombal
+1091500,2025,22,4,0.6,Bulgan SP Falcons / Jaguar
+1091500,2026,23,10,2.0,São José-AP
+1091490,2023,20,2,0.4,São Paulo Crystal
+1091490,2024,21,5,1.5,Flamengo-PE
+1091490,2025,22,5,1.5,Colo Colo FR
+1091490,2026,23,7,1.3,Vasco-AC
+987946,2022,19,6,2.2,Náutico
+987946,2024,21,3,0.6,Pombal
+987946,2025,22,8,1.6,Auto Esporte-PB
+1048798,2022,20,4,1.1,Náutico
+1048798,2023,21,1,0.7,Náutico
+1048798,2026,24,16,1.1,Maguary
+867520,2021,17,1,0.3,Náutico
+867520,2022,18,1,0.7,Náutico
+867520,2023,19,1,0.7,Náutico
+867520,2025,21,1,0.5,Nova Iguaçu
+867520,2026,22,1,0.1,Baré-RR
+1091488,2025,21,1,0.3,Náutico
+1091488,2026,22,11,1.4,Parnahyba
+969937,2023,19,2,0.6,Náutico
+969937,2026,22,4,0.2,Decisão
+1092861,2025,23,2,0.6,Jaguar
 1082631,2025,21,54,101.5,Palmeiras
 1082631,2026,22,48,85.1,Palmeiras / Manchester City
 991800,2023,17,27,37.4,Palmeiras
@@ -15505,6 +16945,44 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 1117283,2024,21,6,0.9,Santo André / Ponte Preta
 1184104,2023,22,2,0.3,Louletano DC
 1184104,2024,23,5,0.3,FC Barreirense
+993566,2021,20,1,0.1,Portuguesa-SP
+993566,2023,22,4,2.0,Portuguesa-SP
+993566,2024,23,18,6.8,Ponte Preta / Patrocinense
+993566,2025,24,19,10.7,Portuguesa-SP / Criciúma
+993566,2026,25,17,4.8,Portuguesa-SP
+1093749,2024,21,9,4.5,Portuguesa-SP / Avaí
+1093749,2025,22,16,4.4,Portuguesa-SP / Chapecoense
+942603,2021,19,7,0.5,Madureira
+942603,2026,24,8,1.6,Bataguassu
+1463323,2023,22,4,0.8,Operário-MS
+1463323,2026,25,7,1.0,Santa Catarina
+1102818,2020,19,6,0.5,União Rondonópolis EC
+1102818,2021,20,5,1.0,União Rondonópolis EC
+1102818,2023,22,1,0.2,Academia FC
+1363696,2026,22,4,0.8,Capital-TO
+1095214,2023,20,22,9.2,Santa Cruz
+1095214,2025,22,4,1.2,Cianorte
+939582,2021,19,1,0.1,Santa Cruz
+939582,2023,21,15,5.3,Santa Cruz
+939582,2024,22,9,1.8,Aparecidense
+939582,2025,23,15,2.7,SC Beira-Mar / Aparecidense
+939582,2026,24,2,0.2,SC Beira-Mar
+1097719,2023,21,10,3.0,Caruaru City SC
+1097719,2025,23,3,0.6,Oeirense
+1097719,2026,24,3,0.6,Confiança-PB
+1096695,2023,21,6,1.8,Belo Jardim
+1096695,2024,22,3,1.3,Santa Cruz
+1096695,2025,23,3,0.6,Nacional de Patos
+1084538,2023,20,1,0.3,Afogados
+1084538,2026,23,8,1.6,Costa Rica
+1083862,2024,20,3,1.1,Sampaio Correa-MA
+1083862,2025,21,3,0.4,Sampaio Correa-MA
+1083862,2026,22,2,0.4,Sampaio Correa-MA
+1105427,2019,16,1,0.1,Bahia de Feira
+1105427,2024,21,2,0.4,Serra Branca
+1118243,2023,21,2,0.4,CE Dom Bosco
+1463833,2023,21,1,0.2,Genus
+1096503,2025,20,1,0.2,CSE
 1063811,2022,18,4,2.9,Santos
 1063811,2023,19,13,12.3,Santos
 1063811,2024,20,17,27.7,Santos
@@ -15540,6 +17018,24 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 942577,2021,17,10,0.9,Boavista
 942577,2026,22,2,1.0,Bangu
 738411,2026,23,3,0.9,Sport
+1094948,2024,22,11,6.8,FC Vizela
+1094948,2025,23,14,6.9,FC Vizela
+1094948,2026,24,15,6.6,FC Vizela / Zorya Lugansk
+1037891,2022,20,1,0.1,São Bernardo
+1037891,2025,23,15,3.8,Ferroviário / Brasil de Pelotas
+1037891,2026,24,22,9.3,União Recreativa dos Trabalhadores / Athletic-MG
+1160373,2023,20,3,0.8,Londrina
+1160373,2024,21,3,0.9,Londrina
+1160373,2026,23,18,3.9,Decisão / Bataguassu
+997950,2022,20,13,2.0,São Bernardo
+997950,2023,21,5,2.0,São Bernardo
+1058866,2022,19,6,1.9,Ethnikos Achna
+1058866,2023,20,8,1.9,PAEEK Kyrenia
+1095317,2023,20,1,0.5,São Bernardo
+1095317,2025,22,16,1.7,FC Alpendorada
+1095317,2026,23,13,1.4,FC Alpendorada
+1125626,2023,21,6,1.2,Potyguar
+1125626,2025,23,1,0.2,Potiguar
 743593,2022,18,4,4.6,São Paulo
 743593,2023,19,14,14.7,São Paulo
 743593,2024,20,7,9.1,São Paulo
@@ -15610,6 +17106,20 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 1083891,2026,23,1,0.2,Sergipe
 1083890,2025,21,3,1.2,Água Santa / Figueirense
 1083890,2026,22,8,0.8,Água Santa
+1097028,2023,19,13,7.1,Vila Nova
+1097028,2024,20,10,3.3,Vila Nova
+1097028,2025,21,24,6.8,Ypiranga
+1097028,2026,22,4,1.0,Guarani
+963774,2022,20,5,1.0,AD Sanjoanense / Grêmio Anápolis
+963774,2023,21,1,0.2,AD Sanjoanense
+963774,2024,22,17,2.6,Goiânia / River-PI
+963774,2026,24,13,4.4,Retrô
+862356,2024,23,3,0.2,River-PI
+862356,2026,25,24,5.5,Tocantinópolis
+1422243,2025,23,5,0.6,Operário-MS
+1422243,2026,24,15,2.2,Operário-MT
+1093129,2023,20,7,1.4,Grêmio Anápolis / SC Braga B
+1093129,2024,21,1,0.2,SC Braga B
 1091893,2024,20,11,2.6,Itabuna EC / Vitória-BA
 1091893,2025,21,21,6.1,Londrina
 1091893,2026,22,12,6.2,Vitória-BA / SC União Torreense
@@ -15644,9 +17154,6 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 1004728,2024,18,2,1.6,Athletico-PR
 1004728,2025,19,23,13.8,Athletico-PR
 1004728,2026,20,33,34.0,Athletico-PR
-1095514,2024,19,3,1.9,Vila Nova
-1095514,2025,20,23,10.3,Vila Nova
-1095514,2026,21,27,15.1,Aris Limassol
 1031292,2024,19,2,0.6,Athletico-PR
 1031292,2026,21,34,18.0,Avaí / Gil Vicente FC
 1094387,2023,18,1,1.0,Athletico-PR
@@ -15676,6 +17183,7 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 1116366,2024,20,14,12.6,Atlético-MG
 1116366,2025,21,4,1.5,Atlético-MG / Criciúma
 1116366,2026,22,44,17.8,Avaí
+1093928,2026,21,27,16.7,Novorizontino
 964196,2021,18,9,0.8,Boavista
 964196,2022,19,6,3.0,Boavista
 964196,2023,20,6,3.0,Boavista
@@ -15683,9 +17191,6 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 964196,2026,23,18,5.2,Boavista / Maricá
 1127846,2025,21,12,5.1,Krasava ENY / Atlético-MG
 1127846,2026,22,20,7.5,Krasava ENY / Karmiotissa FC
-977723,2022,18,4,0.8,Vila Nova
-977723,2024,20,7,3.9,Vila Nova
-977723,2025,21,6,0.4,Goiânia
 1093865,2025,20,3,1.2,Atlético-MG
 1093865,2026,21,12,3.8,Cianorte
 1086534,2025,20,4,1.6,Atlético-MG / FC Felgueiras 1932
@@ -15951,8 +17456,6 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 940482,2026,22,2,0.4,Mixto
 979996,2021,19,1,0.3,EC Próspera
 979996,2022,20,13,3.4,EC Próspera / Cuiabá
-987944,2025,22,3,0.6,CRAC
-987944,2026,23,7,1.4,Centro Oeste
 982035,2022,18,9,1.6,Ação
 1095384,2025,21,4,0.3,Uberlândia
 1095384,2026,22,10,1.2,União Rondonópolis EC
@@ -15969,9 +17472,6 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 1094940,2024,21,22,6.0,Figueirense
 1094940,2025,22,28,4.7,Barra / Guarani
 1094940,2026,23,34,7.7,Barra
-1094948,2024,22,11,6.8,FC Vizela
-1094948,2025,23,14,6.9,FC Vizela
-1094948,2026,24,15,6.6,FC Vizela / Zorya Lugansk
 978335,2022,20,5,1.5,Figueirense
 978335,2024,22,8,3.2,Santa Cruz-RS
 978315,2022,20,6,1.7,Figueirense
@@ -16167,11 +17667,17 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 1089147,2024,20,2,0.6,Audax-RJ
 1089147,2025,21,18,4.9,Boavista
 1089147,2026,22,28,9.9,Volta Redonda / Boavista
+1093758,2024,20,3,1.5,Portuguesa-SP
+1093758,2025,21,7,1.7,Portuguesa-SP
+1093758,2026,22,26,4.9,Portuguesa-SP / Ponte Preta
 1116543,2024,19,17,7.4,Ituano
 1116543,2026,21,2,0.4,Ituano
 907837,2022,19,10,3.4,Club Villa Dálmine
 907837,2023,20,3,1.0,Club Villa Dálmine
 1094530,2026,23,4,3.5,Internacional
+1091501,2024,19,2,0.5,Náutico
+1091501,2025,20,1,0.7,Náutico
+1091501,2026,21,4,1.2,Retrô / Internacional
 977849,2023,19,2,0.7,Ituano
 977849,2024,20,2,1.0,Ituano
 977849,2025,21,3,0.6,Jataiense
@@ -16198,14 +17704,58 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 1096264,2024,21,2,0.4,Jacuipense
 1096264,2025,22,4,0.8,Guarany-SE
 1096264,2026,23,7,1.4,Dorense
-1092121,2025,22,5,1.0,Laguna
-1092121,2026,23,7,1.4,Bataguassu
 1090759,2026,21,3,2.1,Juventude
 1096263,2024,20,6,0.5,Concórdia / Portuguesa Santista
 1096263,2026,22,15,1.2,São José-RS
 1096272,2025,21,2,0.1,Brasil de Pelotas
 1096272,2026,22,2,1.4,Juventude
 1096274,2026,21,2,1.4,Juventude
+1090830,2023,19,11,3.0,Londrina
+1090830,2024,20,24,10.5,Coritiba
+1090830,2025,21,22,6.7,Danubio FC / FC Felgueiras 1932
+1090830,2026,22,28,4.0,Ponte Preta
+1095054,2023,20,5,1.5,Aruko Sports Brasil
+1095054,2024,21,4,1.2,Aruko Sports Brasil
+1095054,2025,22,16,2.7,Joinville
+1095054,2026,23,12,2.6,União Rondonópolis EC / Joinville
+899026,2025,20,9,1.8,Al-Khor SC
+899026,2026,21,6,0.7,Al-Khor SC
+1083793,2026,21,4,0.8,Brasília
+937347,2021,18,1,0.1,Osasco Sporting
+937347,2022,19,1,0.3,Mirassol
+1093926,2024,20,9,5.1,Novorizontino
+1093926,2025,21,36,19.6,Novorizontino
+1093926,2026,22,27,20.0,Novorizontino / Athletico-PR
+1093902,2024,22,11,3.3,Andraus
+1093902,2025,23,11,3.3,Andraus
+1093902,2026,24,30,8.0,Cianorte / Foz do Iguaçu
+1093907,2024,20,11,1.4,FC Dila Gori
+1093907,2025,21,37,5.3,FC Dila Gori
+1093907,2026,22,38,3.4,FC Dila Gori
+1099946,2024,20,14,1.0,FC Gagra
+1099946,2025,21,33,2.8,FC Gagra
+1099946,2026,22,32,2.3,FC Gagra
+795439,2021,18,1,0.2,Club Alianza Lima
+795439,2023,20,3,0.2,CD Unión Comercio
+795439,2024,21,22,0.8,CD Unión Comercio
+795439,2025,22,6,1.1,Vendsyssel FF / Alianza Atlético Sullana
+795439,2026,23,16,1.4,CD Unión Comercio
+1093931,2024,21,4,0.2,Ipatinga / Abu Salim SC
+1093931,2025,22,2,0.1,Abu Salim SC
+1093931,2026,23,8,0.7,FC Syunik
+1093930,2026,20,1,0.7,Novorizontino
+1091491,2025,20,15,6.7,Náutico
+1091491,2026,21,8,0.8,Treze
+987945,2025,21,7,3.0,Náutico
+987945,2026,22,5,1.8,Náutico
+1094361,2024,21,8,1.6,Pombal
+1094361,2025,22,13,2.0,Pombal / Barcelona-BA
+1091497,2020,17,4,0.5,Jacyobá Atlético Clube
+1091497,2021,18,9,1.1,Caucaia
+1091497,2024,21,1,0.2,São Paulo Crystal
+1091493,2025,21,2,1.1,Broke Boys Moscow
+1091489,2023,20,1,0.2,CSP
+1091492,2026,22,2,0.1,Atlético-CE
 1056993,2023,16,1,1.3,Palmeiras
 1056993,2024,17,49,90.2,Palmeiras
 1056993,2025,18,67,122.0,Palmeiras / Chelsea FC
@@ -16230,6 +17780,9 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 1116542,2026,21,18,6.2,Zalaegerszegi TE FC / Vitória-BA
 977835,2026,21,8,2.7,Houston Dynamo FC 2
 1004736,2025,19,1,0.5,Palmeiras
+1093694,2026,24,8,1.6,Gurupi
+1093679,2025,20,3,0.9,Paraná
+1093684,2026,21,2,0.2,União Rondonópolis EC
 838221,2020,17,3,1.0,Botafogo-SP
 838221,2021,18,12,4.6,Botafogo-SP
 838221,2022,19,27,10.7,Botafogo-SP
@@ -16250,6 +17803,28 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 937345,2023,21,1,0.4,Patrocinense
 937345,2026,24,6,0.8,Decisão
 1113343,2026,21,6,0.9,Ponte Preta
+1083778,2024,21,4,2.0,Portuguesa-SP
+1083778,2025,22,18,5.4,Portuguesa-SP
+1083778,2026,23,21,4.4,Betim
+1117359,2026,23,19,4.2,Democrata-GV
+1094956,2025,22,11,1.1,Lagarto
+1094956,2026,23,8,2.4,Atlético de Alagoinhas
+982658,2019,16,1,0.9,Tauro FC
+982658,2020,17,2,1.8,Tauro FC
+982658,2022,19,2,0.4,Academia FC
+1093763,2026,24,11,2.2,UA Carmolandense
+1093771,2023,20,10,2.1,Forza e Coraggio Avezzano
+1117358,2026,22,10,1.5,Inhumas / Naviraiense
+1093769,2026,22,3,0.9,Londrina
+1093766,2025,21,1,0.1,Portuguesa-SP
+1096477,2024,20,3,0.6,Pombal
+1096477,2025,21,7,1.5,Nacional de Patos / River-PI
+1096446,2024,21,6,1.8,Atlético-CE
+1096462,2025,21,4,1.2,Afogados
+1096462,2026,22,2,0.2,CSE
+1096478,2024,19,1,0.1,SC Coimbrões
+1096478,2025,20,10,0.5,SC Coimbrões / Desportivo Monção
+1096449,2024,21,1,0.3,Santa Cruz
 1089958,2025,20,37,31.0,Santos
 1089958,2026,21,52,59.2,Santos
 1089955,2024,18,36,22.4,Santos
@@ -16299,12 +17874,39 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 1083889,2026,21,22,11.8,CRB
 1159259,2024,19,1,0.4,Novo Hamburgo
 1083968,2025,21,1,0.2,AD Marco 09
+505653,2019,17,14,24.0,FC Porto
+505653,2020,18,23,28.6,Wolverhampton Wanderers / FC Porto
+505653,2021,19,34,45.1,Wolverhampton Wanderers
+505653,2022,20,49,46.0,RSC Anderlecht / Wolverhampton Wanderers
+505653,2023,21,32,35.5,PSV Eindhoven / Wolverhampton Wanderers
+505653,2024,22,21,14.8,UD Las Palmas / Rangers FC
+505653,2025,23,30,46.7,Borussia Dortmund / UD Las Palmas
+505653,2026,24,38,76.3,Borussia Dortmund
+1014555,2022,19,1,0.2,Taguatinga
+1014555,2023,20,51,24.1,Vila Nova
+1014555,2024,21,31,13.2,Coritiba
+1014555,2025,22,30,11.9,Athletic-MG / Coritiba
+1014555,2026,23,4,3.8,Coritiba
+1095514,2024,19,3,1.9,Vila Nova
+1095514,2025,20,23,10.3,Vila Nova
+1095514,2026,21,27,15.1,Aris Limassol
+1097103,2024,19,30,4.4,STK 1914 Samorin
+1097103,2025,20,27,4.8,STK 1914 Samorin
+1097103,2026,21,37,9.2,FK Liepaja / Karpaty Lviv
+1097025,2024,19,2,1.2,Vila Nova
+1097025,2025,20,2,1.4,Vila Nova
+1097025,2026,21,21,4.4,Operário-MS
+1097101,2025,20,1,0.3,Volta Redonda
+1097101,2026,21,5,3.5,Chapecoense
+1097027,2023,20,1,0.7,Vila Nova
+1097027,2026,23,2,0.4,Águia Negra
+1097029,2021,19,1,0.2,Capital-DF
+1097029,2026,24,1,0.2,Paranoá
+1097026,2021,18,1,0.1,Bahia de Feira
 1094958,2023,19,1,0.7,Vitória-BA
 1094958,2024,20,5,3.8,Vitória-BA
 1094958,2025,21,5,1.8,Ferroviária / Vitória-BA
 1094958,2026,22,20,5.3,Ferroviária
-1094956,2025,22,11,1.1,Lagarto
-1094956,2026,23,8,2.4,Atlético de Alagoinhas
 1362629,2026,22,3,2.1,Monte Roraima
 1094953,2020,16,10,1.2,Palmas
 1094953,2023,19,1,0.7,Vitória-BA
@@ -16319,8 +17921,6 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 972425,2025,22,1,0.5,Bangu
 972425,2026,23,10,1.9,Atlético-PB / Madureira
 1254135,2026,20,4,2.5,América-MG
-1255010,2025,19,3,1.3,Vila Nova
-1255010,2026,20,6,1.1,FC Zimbru Chisinau
 1270243,2025,19,1,0.4,América-MG
 1004738,2024,18,26,23.9,Athletico-PR
 1004738,2025,19,31,15.3,Athletico-PR
@@ -16376,7 +17976,6 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 1232329,2024,20,1,0.2,Morrinhos
 1220181,2025,20,21,14.6,Noroeste / Vitória-BA
 1220181,2026,21,34,21.0,Novorizontino
-1093928,2026,21,27,16.7,Novorizontino
 1124552,2025,20,1,0.4,Atlético-MG
 1124552,2026,21,19,9.1,Anápolis / Bangu
 1105587,2023,18,20,1.4,Monagas SC
@@ -16497,6 +18096,8 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 1219008,2026,20,1,0.3,Ceará
 1141141,2026,21,10,6.4,Chapecoense
 1223933,2026,21,28,4.2,FK Banga Gargzdai
+1110659,2023,17,2,0.2,Concórdia
+1110659,2026,20,2,1.4,Chapecoense
 1220402,2026,20,1,0.7,Novorizontino
 1220403,2026,21,2,0.4,Goiatuba
 1221818,2025,19,12,11.8,Corinthians
@@ -16518,10 +18119,6 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 1227689,2024,18,1,0.5,Corinthians
 1082634,2026,22,1,0.3,Ferroviária
 1221656,2024,18,1,0.1,FK Bylis
-1090830,2023,19,11,3.0,Londrina
-1090830,2024,20,24,10.5,Coritiba
-1090830,2025,21,22,6.7,Danubio FC / FC Felgueiras 1932
-1090830,2026,22,28,4.0,Ponte Preta
 1073549,2022,18,2,0.7,Brusque
 1073549,2025,21,7,1.9,Brusque
 1073549,2026,22,3,0.8,Primavera-SP
@@ -16557,7 +18154,6 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 980275,2022,18,13,2.0,Grêmio Esportivo Juventus
 980275,2025,21,5,0.4,Brasil de Pelotas
 1215637,2024,19,5,2.0,Criciúma
-1222018,2025,20,2,1.4,Vila Nova
 1222015,2026,21,3,0.9,Criciúma
 1222010,2026,20,1,0.6,Criciúma
 1253814,2024,18,5,5.7,Cruzeiro
@@ -16601,6 +18197,7 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 1222769,2024,19,2,0.4,Cuiabá
 1222769,2025,20,2,0.4,Cuiabá
 1222769,2026,21,17,3.0,Atlético de Alagoinhas
+1224985,2026,19,3,2.1,Cuiabá
 1100785,2023,18,2,0.4,Morrinhos
 1100785,2024,19,1,0.2,Cuiabá
 1100785,2025,20,2,0.4,Cuiabá
@@ -16661,11 +18258,6 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 909360,2026,22,34,10.1,CD América de Cali
 1219749,2025,18,22,19.5,Fluminense
 1219749,2026,19,9,9.8,Fluminense
-1045599,2022,18,1,0.5,Londrina
-1045599,2023,19,18,5.1,Londrina
-1045599,2024,20,25,8.3,Londrina / Cascavel
-1045599,2025,21,15,5.6,Al-Taawoun FC / Amazonas
-1045599,2026,22,14,5.0,Al-Taawoun FC / Ajman Club
 1004737,2023,17,1,2.1,Fluminense
 1004737,2024,18,8,9.2,Fluminense
 1004737,2025,19,12,7.0,Queens Park Rangers / Fluminense
@@ -16680,6 +18272,7 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 1219750,2026,20,13,1.7,SJK Seinäjoki
 1124296,2026,19,4,2.0,Fluminense
 1270259,2025,20,22,1.1,Dinamo Tbilisi II / Dinamo Tbilisi
+1222907,2026,21,2,0.9,Raja Club Athletic
 1277174,2026,20,2,0.8,Ceará
 1219753,2026,21,2,0.7,Fluminense / Central Español FC
 1116638,2025,20,1,0.5,CD Nacional
@@ -16692,8 +18285,6 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 896338,2026,21,26,12.6,Maccabi Tel Aviv / Sport
 1219689,2025,19,12,8.2,Moreirense FC
 1219689,2026,20,30,22.5,Moreirense FC
-1093927,2025,21,12,6.7,Novorizontino
-1093927,2026,22,32,19.2,Novorizontino
 1253990,2025,19,16,7.5,Vancouver FC
 1227004,2024,20,11,3.3,Nação Araquari
 1227004,2025,21,7,0.7,Azuriz
@@ -16723,11 +18314,6 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 1092910,2026,21,5,3.5,Vila Nova
 1082607,2025,21,6,1.9,Tombense
 1082607,2026,22,7,1.7,Confiança
-867520,2021,17,1,0.3,Náutico
-867520,2022,18,1,0.7,Náutico
-867520,2023,19,1,0.7,Náutico
-867520,2025,21,1,0.5,Nova Iguaçu
-867520,2026,22,1,0.1,Baré-RR
 1224605,2026,20,2,1.4,São Bernardo
 1224583,2025,21,2,0.9,Goiás
 1120129,2025,21,1,0.3,Jacobina
@@ -16760,9 +18346,6 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 1253921,2025,18,22,19.1,Internacional
 1253921,2026,19,31,22.1,Orlando City SC
 1220008,2026,20,25,16.3,Internacional
-1093758,2024,20,3,1.5,Portuguesa-SP
-1093758,2025,21,7,1.7,Portuguesa-SP
-1093758,2026,22,26,4.9,Portuguesa-SP / Ponte Preta
 1082818,2024,20,5,6.5,Internacional
 1253816,2026,21,25,5.0,Cianorte / FK Liepaja
 1220010,2025,18,6,3.4,Internacional
@@ -16778,6 +18361,16 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 1259705,2025,19,1,0.4,Internacional
 1253924,2026,20,1,0.4,Internacional
 1089138,2020,16,1,0.1,Galvez
+1112448,2025,21,8,0.9,Al-Najma SC
+1112448,2026,22,18,2.7,Al-Najma SC / Ajman Club
+1095016,2025,21,1,0.1,Joinville
+1095016,2026,22,5,1.5,Joinville
+1220622,2025,22,2,0.6,Caravaggio
+1220622,2026,23,3,0.9,São Raimundo-PA
+1220621,2026,21,5,0.8,Maricá
+1220624,2026,20,2,0.6,Joinville
+1093243,2024,20,1,0.3,Joinville
+1625203,2026,20,1,0.2,SC Beira-Mar
 1145660,2025,22,14,4.6,Monsoon / Ypiranga
 1145660,2026,23,24,6.0,Primavera-MT / Serra Branca
 1096275,2024,19,3,2.7,Juventude
@@ -16788,6 +18381,27 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 1224014,2026,21,7,2.3,Zalaegerszegi TE FC / Juventude
 1253933,2026,20,4,2.8,Juventude
 1253986,2026,20,2,1.4,Juventude
+1222574,2025,21,3,0.3,Monte Azul / Barcelona-RO
+1222574,2026,22,8,0.4,Decisão
+1219704,2026,21,8,5.6,Novorizontino
+1093924,2026,22,5,3.5,Novorizontino
+1219705,2025,20,5,2.6,Novorizontino
+1219705,2026,21,2,0.8,Pouso Alegre
+1221392,2026,20,4,2.8,Novorizontino
+1219706,2026,20,2,1.4,Novorizontino
+1101082,2023,18,3,0.9,Marcílio Dias
+1222898,2024,20,6,1.0,Águia de Marabá / Náutico
+1222898,2025,21,12,3.7,Náutico / Águia de Marabá
+1222898,2026,22,33,13.5,Náutico
+1222900,2024,19,24,10.1,Náutico
+1222900,2025,20,10,4.0,Náutico
+1222900,2026,21,12,2.5,ABC / Schwarz-Weiß Bregenz
+993004,2023,20,12,3.6,Íbis
+993004,2025,22,3,0.9,Afogados
+993004,2026,23,6,1.2,Nacional de Patos
+1096863,2025,22,9,1.8,Potiguar
+1222905,2025,19,1,0.7,Náutico
+1093270,2026,23,3,0.5,Sampaio Correa-MA
 849582,2022,18,23,15.4,CA San Lorenzo de Almagro
 849582,2023,19,41,30.0,CA San Lorenzo de Almagro
 849582,2024,20,36,39.4,CA San Lorenzo de Almagro / Palmeiras
@@ -16812,6 +18426,25 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 1222492,2024,18,2,0.7,Ponte Preta
 1222500,2026,20,3,0.4,Ponte Preta
 1219648,2025,21,1,0.1,Monte Azul
+1224074,2024,21,2,1.0,Portuguesa-SP
+1224074,2025,22,10,1.0,Lagarto
+1224074,2026,23,9,1.8,Atlético-PB
+1095535,2026,23,19,3.5,Santa Catarina
+1224075,2025,21,2,0.6,Portuguesa-SP
+1224075,2026,22,4,0.3,Portuguesa-RJ
+1095534,2025,21,2,0.8,NK Granicar Kotoriba
+1082819,2025,21,2,0.3,Portuguesa-SP
+1102308,2023,19,7,2.1,Íbis
+1102308,2025,21,4,1.6,Santa Cruz
+1102308,2026,22,25,8.3,Chapecoense / Decisão
+1224987,2025,20,8,1.5,Santa Cruz
+1224987,2026,21,22,3.7,Goiatuba / Santa Cruz
+1224990,2025,21,17,0.3,1.FCA Darmstadt
+1224990,2026,22,7,1.4,Humaitá
+1225033,2025,21,1,0.3,Santa Cruz
+1225033,2026,22,6,1.2,Luminense-MA
+1225034,2026,20,2,0.9,Náutico
+1096545,2025,21,2,0.4,Legião-DF
 1220143,2024,17,2,1.3,Santos
 1220143,2025,18,33,20.5,Shakhtar Donetsk / Santos
 1220143,2026,19,24,14.0,Shakhtar Donetsk
@@ -16887,6 +18520,23 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 1220468,2025,19,11,9.9,Vasco
 1220468,2026,20,5,1.5,Bahia
 1220462,2026,21,11,0.9,Sampaio Correa-MA
+1097241,2025,21,9,3.7,Altos / Colo Colo FR
+1097241,2026,22,19,5.8,Juazeirense
+1270237,2024,19,2,1.2,Vila Nova
+1270237,2025,20,3,2.1,Vila Nova
+1270237,2026,21,5,0.9,Concórdia / Porto-BA
+1255010,2025,19,3,1.3,Vila Nova
+1255010,2026,20,6,1.1,FC Zimbru Chisinau
+1096751,2024,20,1,0.7,Vila Nova
+1096751,2025,21,3,1.6,Vila Nova
+1220325,2024,19,2,0.4,Vila Nova
+1220325,2025,20,2,1.4,Vila Nova
+1220323,2025,21,2,1.4,Vila Nova
+1222018,2025,20,2,1.4,Vila Nova
+1220321,2024,21,1,0.2,Goianésia
+1220321,2025,22,3,0.6,Goianésia
+1220320,2026,20,1,0.2,Falcon
+1092621,2025,22,1,0.1,Goiânia
 1223829,2024,19,13,1.4,Itabuna EC
 1223829,2025,20,2,1.0,Vitória-BA
 1223829,2026,21,29,19.9,Vitória-BA
@@ -17030,8 +18680,6 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 1498460,2026,18,6,4.2,Chapecoense
 1498459,2026,20,6,4.2,Chapecoense
 1374547,2026,19,5,3.5,Chapecoense
-1110659,2023,17,2,0.2,Concórdia
-1110659,2026,20,2,1.4,Chapecoense
 1535507,2026,20,1,0.7,Chapecoense
 1498474,2026,19,1,0.7,Chapecoense
 1498478,2026,19,1,0.7,Chapecoense
@@ -17088,7 +18736,6 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 1362964,2025,18,8,4.0,Cuiabá
 1362964,2026,19,8,3.4,Cuiabá
 1223883,2026,19,7,3.9,Cuiabá
-1224985,2026,19,3,2.1,Cuiabá
 1416517,2026,19,3,1.6,Cuiabá
 1364337,2026,17,2,1.4,Cuiabá
 1220362,2026,19,2,1.4,Cuiabá
@@ -17135,7 +18782,6 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 1355366,2026,19,14,4.5,Zalaegerszegi TE FC
 1355364,2025,18,1,2.0,Fluminense
 1119754,2026,20,14,1.9,Paide Linnameeskond
-1222907,2026,21,2,0.9,Raja Club Athletic
 1089706,2024,19,34,14.4,Botafogo-SP
 1089706,2025,20,2,1.0,Botafogo-SP
 1089706,2026,21,15,2.4,Real Murcia Imperial
@@ -17188,9 +18834,6 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 1471677,2025,17,1,0.9,Internacional
 1471677,2026,18,4,1.6,Internacional
 1221837,2025,21,15,2.5,FC Van
-1091501,2024,19,2,0.5,Náutico
-1091501,2025,20,1,0.7,Náutico
-1091501,2026,21,4,1.2,Retrô / Internacional
 1312046,2026,20,5,2.3,Internacional
 1362490,2026,20,3,1.9,Internacional
 1096854,2024,18,1,0.2,ABC
@@ -17208,6 +18851,30 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 1355358,2026,20,1,0.7,Juventude
 1355355,2026,20,1,0.7,Juventude
 1355354,2026,20,2,0.2,CD Subiza
+1360654,2026,20,4,2.8,Vila Nova
+1360701,2026,19,4,2.8,Novorizontino
+1360657,2024,18,5,1.0,Corumbaense
+1591625,2026,19,5,0.1,SC Mineiro Aljustrelense
+1364072,2026,20,27,17.6,Novorizontino
+1137558,2023,18,9,0.8,Concórdia
+1137558,2024,19,7,2.1,Concórdia
+1137558,2026,21,8,5.6,Novorizontino
+1365257,2026,19,13,8.2,Novorizontino
+1226598,2024,20,10,3.0,PSTC
+1226598,2025,21,2,0.6,Rio Branco-PR
+1226598,2026,22,15,2.3,Cascavel
+1363046,2026,21,6,4.2,Novorizontino
+1365259,2026,20,5,3.5,Novorizontino
+1363047,2026,20,4,2.8,Novorizontino
+1226599,2024,18,2,0.6,PSTC
+1226599,2026,20,2,1.4,Novorizontino
+1095348,2026,22,7,1.4,Sport Sinop
+1226605,2024,17,2,1.0,Novorizontino
+1363037,2025,20,6,1.8,Cariri
+1363037,2026,21,22,4.4,Iguatu / Náutico
+1363038,2026,20,3,1.3,Náutico
+1363043,2026,19,2,0.9,Náutico
+1363042,2026,20,1,0.4,Náutico
 1225476,2026,21,23,10.9,Ceará / Viborg FF
 1380266,2026,19,5,9.3,Palmeiras
 1226590,2024,19,4,1.2,Azuriz
@@ -17232,6 +18899,13 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 1449803,2025,17,2,0.8,Ponte Preta
 1449803,2026,18,1,0.5,Ponte Preta
 1222482,2025,21,5,0.9,Oratório
+1362876,2025,21,6,2.2,Moto Club
+1362876,2026,22,8,2.4,Decisão
+1362870,2026,20,3,2.1,Vila Nova
+1094281,2026,21,1,0.2,Aquidauana
+1224591,2026,21,2,0.2,Portuguesa-SP
+1361332,2025,19,3,0.3,Santa Cruz
+1361332,2026,20,16,3.1,Cianorte
 1355385,2025,18,15,14.7,Santos
 1355385,2026,19,13,12.5,Santos / Genoa CFC
 1143336,2023,18,10,3.5,SD Aucas
@@ -17300,6 +18974,17 @@ tm_id,ano,idade,jogos_pro,pontos,clube_ano
 1418346,2026,19,1,0.7,Vila Nova
 1423022,2026,17,1,0.5,Vasco
 1355264,2026,19,1,0.1,América SAF-RN
+1091040,2025,21,4,2.3,Vila Nova
+1091040,2026,22,6,1.8,São Francisco-PA
+1355438,2025,19,2,1.4,Vila Nova
+1355438,2026,20,3,2.1,Vila Nova
+1220322,2025,19,2,1.4,Vila Nova
+1355437,2026,17,2,1.4,Vila Nova
+1220324,2025,19,2,1.4,Vila Nova
+1355436,2026,21,4,1.1,Figueirense
+1500830,2026,18,1,0.7,Vila Nova
+1355446,2025,18,1,0.7,Vila Nova
+1355448,2025,19,1,0.1,Birzebbuga St. Peter’s FC
 1261179,2024,19,10,1.1,Itabuna EC
 1261179,2025,20,6,2.2,Atlético de Alagoinhas / Vitória-BA
 1261179,2026,21,25,5.1,Juazeirense / Singha Chiangrai United
